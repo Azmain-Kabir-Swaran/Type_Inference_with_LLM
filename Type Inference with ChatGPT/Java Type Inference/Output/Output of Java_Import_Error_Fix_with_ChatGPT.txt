@@ -1,0 +1,1187 @@
+Total Android Codes: 50                                                                                            
+                                                                                                                   
+Total JDK Codes: 23                                                                                                
+                                                                                                                   
+Total Hibernate Codes: 51                                                                                          
+                                                                                                                   
+Total JodaTime Codes: 50                                                                                           
+                                                                                                                   
+Total GWT Codes: 50                                                                                                
+                                                                                                                   
+Total XStream Codes: 44                                                                                            
+                                                                                                                   
+                                                                                                                   
+Prediction for Android Classes:                                                                                    
+                                                                                                                   
+100%|¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 50/50 [10:29
+                                                                                                                   
+Predicted Import List: [['import android.app.Activity;', 'import android.os.Bundle;', 'import android.widget.TextVi
+ew;'], ['import android.app.Activity;', 'import android.os.Bundle;', 'import android.view.View;', 'import android.w
+idget.Button;', 'import android.widget.EditText;'], ['import android.graphics.drawable.Drawable;', 'import com.goog
+le.android.maps.ItemizedOverlay;', 'import com.google.android.maps.OverlayItem;', 'import com.google.android.maps.G
+eoPoint;'], ['import android.app.Activity;', 'import android.os.Bundle;', 'import android.widget.TextView;'], [], [
+'import android.view.Gravity;', 'import android.view.ViewGroup;', 'import android.widget.LinearLayout;'], ['import 
+android.app.Activity;', 'import android.os.Bundle;', 'import android.view.View;', 'import android.widget.ArrayAdapt
+er;'], ['import android.util.Log;', 'import java.io.IOException;', 'import java.net.Inet4Address;', 'import java.ne
+t.InetAddress;', 'import java.net.Socket;', 'import java.net.UnknownHostException;'], ['import android.app.Activity
+;', 'import android.os.Bundle;', 'import android.widget.TextView;', 'import java.util.Timer;', 'import java.util.Ti
+merTask;'], ['import android.os.SystemClock;', 'import android.util.Log;', 'import android.widget.Chronometer;'], [
+'import android.content.Context;', 'import android.graphics.Canvas;', 'import android.location.Location;', 'import 
+com.google.android.maps.GeoPoint;', 'import com.google.android.maps.MapView;', 'import com.google.android.maps.MyLo
+cationOverlay;'], ['import android.app.Activity;', 'import android.graphics.Color;', 'import android.os.Bundle;', '
+import android.view.ViewGroup;', 'import android.widget.LinearLayout;', 'import android.widget.TextView;'], ['impor
+t android.content.ContentResolver;', 'import android.graphics.Bitmap;', 'import android.net.Uri;', 'import android.
+provider.MediaStore.Images.Media;', 'import java.io.ByteArrayInputStream;', 'import java.io.ByteArrayOutputStream;'
+, 'import java.io.FileNotFoundException;', 'import java.io.IOException;'], ['import java.io.File;', 'import java.io
+.FileNotFoundException;', 'import java.io.FileOutputStream;', 'import java.io.IOException;', 'import java.io.InputS
+tream;', 'import java.net.HttpURLConnection;', 'import java.net.MalformedURLException;', 'import java.net.ProtocolE
+xception;', 'import java.net.URL;'], ['import android.content.Intent;', 'import android.net.Uri;'], ['import androi
+d.content.Context;', 'import android.graphics.Canvas;', 'import android.util.AttributeSet;', 'import android.util.L
+og;', 'import android.view.MotionEvent;', 'import android.view.View;', 'import android.widget.SeekBar;'], ['import 
+android.util.Log;', 'import java.io.IOException;', 'import java.io.InputStreamReader;', 'import java.net.URI;', 'im
+port java.net.URISyntaxException;', 'import org.apache.http.HttpEntity;', 'import org.apache.http.HttpResponse;', '
+import org.apache.http.client.HttpClient;', 'import org.apache.http.client.methods.HttpGet;', 'import org.apache.ht
+tp.impl.client.DefaultHttpClient;'], ['import android.app.Activity;', 'import android.content.DialogInterface;', 'i
+mport android.content.Intent;', 'import android.os.Bundle;', 'import android.view.View.OnClickListener;', 'import a
+ndroid.widget.Button;'], ['import android.content.Context;', 'import android.view.View;', 'import android.view.View
+Group;', 'import android.widget.GridView;', 'import android.widget.ImageView;'], ['import android.content.Context;'
+, 'import android.view.View;', 'import android.view.animation.ScaleAnimation;', 'import android.widget.TextView;'],
+ [], ['import android.app.ListActivity;', 'import android.content.Intent;', 'import android.database.Cursor;', 'imp
+ort android.os.Bundle;', 'import android.provider.Contacts.People;', 'import android.view.View;', 'import android.w
+idget.ListAdapter;', 'import android.widget.ListView;', 'import android.widget.SimpleCursorAdapter;'], ['import and
+roid.app.Activity;', 'import android.graphics.Bitmap;', 'import android.graphics.BitmapFactory;', 'import android.o
+s.Bundle;', 'import android.widget.ArrayAdapter;', 'import android.widget.ImageView;', 'import android.widget.ListV
+iew;', 'import java.io.IOException;', 'import java.net.HttpURLConnection;', 'import java.net.MalformedURLException;
+', 'import java.net.URL;', 'import java.util.ArrayList;', 'import java.util.Random;'], ['import android.app.Activit
+y;', 'import android.content.Context;', 'import android.location.LocationManager;', 'import android.os.Bundle;', 'i
+mport android.util.Log;', 'import java.util.Iterator;', 'import java.util.List;'], [], ['import android.content.Con
+text;', 'import android.view.KeyEvent;', 'import android.view.MotionEvent;', 'import android.view.View;', 'import a
+ndroid.widget.ScrollView;', 'import android.view.View.OnTouchListener;'], [], [], ['import android.app.Service;', '
+import android.content.Context;', 'import android.content.Intent;', 'import android.os.IBinder;', 'import android.o
+s.PowerManager;', 'import android.os.PowerManager.WakeLock;'], ['import org.apache.http.HttpEntity;', 'import org.a
+pache.http.HttpHost;', 'import org.apache.http.HttpResponse;', 'import org.apache.http.client.HttpClient;', 'import
+ org.apache.http.client.methods.HttpGet;', 'import org.apache.http.impl.client.DefaultHttpClient;', 'import org.apa
+che.http.util.EntityUtils;', 'import java.io.IOException;'], ['import android.content.Context;', 'import android.os
+.PowerManager;'], ['import android.media.MediaRecorder;', 'import android.os.Environment;', 'import java.io.File;',
+ 'import java.io.IOException;', 'import android.content.Context;'], ['import android.content.Context;', 'import and
+roid.graphics.PixelFormat;', 'import android.hardware.Camera;', 'import android.hardware.Camera.Parameters;', 'impo
+rt android.view.SurfaceHolder;', 'import java.io.IOException;'], [], ['import android.media.MediaRecorder;', 'impor
+t java.io.File;', 'import java.io.IOException;'], ['import android.content.ContentValues;', 'import android.databas
+e.sqlite.SQLiteDatabase;'], ['import android.app.Activity;', 'import android.app.ProgressDialog;', 'import android.
+os.Bundle;', 'import android.os.Handler;', 'import android.os.Message;'], ['import java.io.DataInputStream;', 'impo
+rt java.io.DataOutputStream;', 'import java.io.File;', 'import java.io.FileInputStream;', 'import java.io.IOExcepti
+on;', 'import java.io.InputStream;', 'import java.net.HttpURLConnection;', 'import java.net.MalformedURLException;'
+, 'import java.net.URL;'], ['import android.app.Activity;', 'import android.os.Bundle;', 'import android.widget.Lin
+earLayout;', 'import com.google.android.maps.MapActivity;', 'import com.google.android.maps.MapController;', 'impor
+t com.google.android.maps.MapView;', 'import com.google.android.maps.MyLocationOverlay;', 'import com.google.androi
+d.maps.Overlay;'], [], [], ['import android.app.Activity;', 'import android.content.Context;', 'import android.cont
+ent.Intent;', 'import android.content.pm.ActivityInfo;', 'import android.graphics.PixelFormat;', 'import android.me
+dia.MediaPlayer;', 'import android.net.Uri;', 'import android.os.Bundle;', 'import android.util.Log;', 'import andr
+oid.view.SurfaceHolder;', 'import android.view.SurfaceView;', 'import android.view.View;', 'import android.webkit.U
+RLUtil;', 'import android.widget.Button;', 'import java.io.File;', 'import java.io.FileOutputStream;', 'import java
+.io.IOException;', 'import java.io.InputStream;', 'import java.net.URL;', 'import java.net.URLConnection;', 'import
+ java.util.List;'], ['import java.io.IOException;', 'import org.apache.http.HttpEntity;', 'import org.apache.http.H
+ttpHost;', 'import org.apache.http.HttpResponse;', 'import org.apache.http.client.HttpClient;', 'import org.apache.
+http.client.methods.HttpGet;', 'import org.apache.http.impl.client.DefaultHttpClient;', 'import org.apache.http.uti
+l.EntityUtils;'], ['import android.app.Service;', 'import android.content.Intent;', 'import android.os.IBinder;'], 
+['import android.app.Activity;', 'import android.content.BroadcastReceiver;', 'import android.content.ComponentName
+;', 'import android.content.Context;', 'import android.content.Intent;', 'import android.content.IntentFilter;', 'i
+mport android.content.pm.ActivityInfo;', 'import android.net.ParseException;', 'import android.os.Bundle;', 'import
+ android.util.Log;', 'import android.webkit.MimeTypeMap;'], ['import android.app.Activity;', 'import android.conten
+t.Intent;', 'import android.os.Bundle;', 'import android.view.View;', 'import android.widget.Button;', 'import andr
+oid.widget.EditText;'], ['import java.io.IOException;', 'import org.apache.http.client.ClientProtocolException;', '
+import org.apache.http.client.methods.HttpGet;', 'import org.apache.http.impl.client.DefaultHttpClient;', 'import a
+ndroid.app.Activity;', 'import android.os.Bundle;', 'import android.widget.TextView;'], ['import android.app.AlertD
+ialog;', 'import android.app.Dialog;', 'import android.content.Context;', 'import android.graphics.Bitmap;', 'impor
+t android.graphics.BitmapFactory;', 'import android.hardware.Camera;', 'import android.hardware.Camera.Parameters;'
+, 'import android.hardware.Camera.PictureCallback;', 'import android.widget.ImageView;', 'import android.widget.Tex
+tView;'], [], ['import java.text.NumberFormat;', 'import android.app.Activity;', 'import android.os.Bundle;', 'impo
+rt android.util.Log;', 'import android.view.View;', 'import android.widget.Button;', 'import android.widget.EditTex
+t;', 'import android.widget.TextView;']]                                                                           
+                                                                                                                   
+Correct Import List: [['import android.app.Activity;', 'import android.os.Bundle;', 'import android.widget.TextView
+;'], ['import android.app.Activity;', 'import android.os.Bundle;'], ['import com.google.android.maps.GeoPoint;', 'i
+mport com.google.android.maps.ItemizedOverlay;', 'import com.google.android.maps.OverlayItem;', 'import android.gra
+phics.drawable.Drawable;'], ['import android.app.Activity;', 'import android.os.Bundle;', 'import android.widget.Te
+xtView;'], ['import android.graphics.drawable.Drawable;', 'import android.widget.TabHost;', 'import android.widget.
+TabHost.TabSpec;'], ['import android.view.Gravity;', 'import android.view.ViewGroup;', 'import android.widget.Linea
+rLayout;'], ['import android.app.Activity;', 'import android.os.Bundle;', 'import android.view.View;', 'import andr
+oid.widget.ArrayAdapter;'], ['import java.io.IOException;', 'import java.net.Inet4Address;', 'import java.net.InetA
+ddress;', 'import java.net.Socket;', 'import java.net.UnknownHostException;', 'import android.util.Log;'], ['import
+ java.util.Timer;', 'import java.util.TimerTask;', 'import android.os.Bundle;', 'import android.widget.TextView;'],
+ ['import android.os.SystemClock;', 'import android.util.Log;', 'import android.widget.Chronometer;'], ['import com
+.google.android.maps.GeoPoint;', 'import com.google.android.maps.MapView;', 'import com.google.android.maps.MyLocat
+ionOverlay;', 'import android.content.Context;', 'import android.graphics.Canvas;', 'import android.location.Locati
+on;'], ['import android.app.Activity;', 'import android.graphics.Color;', 'import android.os.Bundle;', 'import andr
+oid.view.ViewGroup;', 'import android.widget.LinearLayout;', 'import android.widget.TextView;'], ['import java.io.B
+yteArrayInputStream;', 'import java.io.ByteArrayOutputStream;', 'import java.io.FileNotFoundException;', 'import ja
+va.io.IOException;', 'import android.content.ContentResolver;', 'import android.graphics.Bitmap;', 'import android.
+net.Uri;', 'import android.provider.MediaStore.Images.Media;'], ['import java.io.File;', 'import java.io.FileNotFou
+ndException;', 'import java.io.FileOutputStream;', 'import java.io.IOException;', 'import java.io.InputStream;', 'i
+mport java.net.HttpURLConnection;', 'import java.net.MalformedURLException;', 'import java.net.ProtocolException;',
+ 'import java.net.URL;'], ['import android.content.Intent;', 'import android.net.Uri;'], ['import android.content.C
+ontext;', 'import android.graphics.Canvas;', 'import android.util.AttributeSet;', 'import android.util.Log;', 'impo
+rt android.view.MotionEvent;', 'import android.view.View;', 'import android.widget.SeekBar;'], ['import java.io.IOE
+xception;', 'import java.io.InputStreamReader;', 'import java.net.URI;', 'import java.net.URISyntaxException;', 'im
+port org.apache.http.HttpEntity;', 'import org.apache.http.HttpResponse;', 'import org.apache.http.client.HttpClien
+t;', 'import org.apache.http.client.methods.HttpGet;', 'import org.apache.http.impl.client.DefaultHttpClient;', 'im
+port android.util.Log;'], ['import android.app.Activity;', 'import android.content.DialogInterface;', 'import andro
+id.content.DialogInterface.OnClickListener;', 'import android.content.Intent;', 'import android.os.Bundle;'], ['imp
+ort android.content.Context;', 'import android.view.View;', 'import android.view.ViewGroup;', 'import android.widge
+t.GridView;', 'import android.widget.ImageView;'], ['import android.content.Context;', 'import android.view.View;',
+ 'import android.view.animation.ScaleAnimation;', 'import android.widget.TextView;'], ['import android.content.Cont
+ext;', 'import android.widget.ImageButton;', 'import android.widget.LinearLayout;'], ['import android.app.ListActiv
+ity;', 'import android.content.Intent;', 'import android.database.Cursor;', 'import android.os.Bundle;', 'import an
+droid.provider.Contacts.People;', 'import android.provider.ContactsContract.CommonDataKinds.Note;', 'import android
+.view.View;', 'import android.widget.ListAdapter;', 'import android.widget.ListView;', 'import android.widget.Simpl
+eCursorAdapter;', 'import android.widget.TextView;'], ['import java.io.IOException;', 'import java.net.HttpURLConne
+ction;', 'import java.net.MalformedURLException;', 'import java.net.URL;', 'import java.util.ArrayList;', 'import j
+ava.util.Random;', 'import android.app.Activity;', 'import android.graphics.Bitmap;', 'import android.graphics.Bitm
+apFactory;', 'import android.os.Bundle;', 'import android.widget.ArrayAdapter;', 'import android.widget.ImageView;'
+, 'import android.widget.ListView;'], ['import java.util.Iterator;', 'import java.util.List;', 'import android.app.
+Activity;', 'import android.content.Context;', 'import android.location.LocationManager;', 'import android.os.Bundl
+e;', 'import android.util.Log;'], ['import java.util.ArrayList;', 'import android.app.ListActivity;', 'import andro
+id.content.Context;', 'import android.database.sqlite.SQLiteDatabase;', 'import android.os.Bundle;'], ['import andr
+oid.content.Context;', 'import android.view.KeyEvent;', 'import android.view.MotionEvent;', 'import android.view.Vi
+ew;', 'import android.view.View.OnTouchListener;', 'import android.widget.ScrollView;'], ['import android.content.C
+ontext;', 'import android.view.View;', 'import android.view.ViewGroup;', 'import android.widget.BaseAdapter;', 'imp
+ort android.widget.GridView;', 'import android.widget.TextView;'], ['import android.content.Context;'], ['import an
+droid.app.Service;', 'import android.content.Context;', 'import android.content.Intent;', 'import android.os.IBinde
+r;', 'import android.os.PowerManager;', 'import android.os.PowerManager.WakeLock;'], ['import java.io.IOException;'
+, 'import org.apache.http.HttpEntity;', 'import org.apache.http.HttpHost;', 'import org.apache.http.HttpResponse;',
+ 'import org.apache.http.client.HttpClient;', 'import org.apache.http.client.methods.HttpGet;', 'import org.apache.
+http.impl.client.DefaultHttpClient;', 'import org.apache.http.util.EntityUtils;'], ['import android.content.Context
+;', 'import android.os.PowerManager;'], ['import java.io.File;', 'import java.io.IOException;', 'import android.med
+ia.MediaRecorder;', 'import android.os.Environment;'], ['import java.io.IOException;', 'import android.content.Cont
+ext;', 'import android.graphics.PixelFormat;', 'import android.hardware.Camera;', 'import android.hardware.Camera.P
+arameters;', 'import android.view.SurfaceHolder;'], ['import android.app.TabActivity;', 'import android.os.Bundle;'
+, 'import android.util.Log;', 'import android.view.View;', 'import android.view.View.OnClickListener;', 'import and
+roid.widget.ListView;', 'import android.widget.TabHost;', 'import android.widget.TabHost.OnTabChangeListener;', 'im
+port android.widget.TabHost.TabContentFactory;'], ['import java.io.File;', 'import java.io.IOException;', 'import a
+ndroid.media.MediaRecorder;'], ['import android.content.ContentValues;', 'import android.database.sqlite.SQLiteData
+base;'], ['import android.app.Activity;', 'import android.app.ProgressDialog;', 'import android.os.Handler;', 'impo
+rt android.os.Message;'], ['import java.io.DataInputStream;', 'import java.io.DataOutputStream;', 'import java.io.F
+ile;', 'import java.io.FileInputStream;', 'import java.io.IOException;', 'import java.io.InputStream;', 'import jav
+a.net.HttpURLConnection;', 'import java.net.MalformedURLException;', 'import java.net.URL;'], ['import java.util.Li
+st;', 'import android.os.Bundle;', 'import com.google.android.maps.MapActivity;', 'import com.google.android.maps.M
+apController;', 'import com.google.android.maps.MapView;', 'import com.google.android.maps.MyLocationOverlay;', 'im
+port com.google.android.maps.Overlay;'], ['import android.app.Activity;', 'import android.os.Bundle;', 'import andr
+oid.util.Log;', 'import android.view.View;', 'import android.view.View.OnClickListener;', 'import android.widget.Im
+ageView;', 'import android.widget.SlidingDrawer;'], ['import android.content.Context;', 'import android.graphics.Co
+lor;', 'import android.view.View;', 'import android.widget.TextView;'], ['import java.io.File;', 'import java.io.Fi
+leOutputStream;', 'import java.io.IOException;', 'import java.io.InputStream;', 'import java.net.URL;', 'import jav
+a.net.URLConnection;', 'import android.app.Activity;', 'import android.content.Intent;', 'import android.content.pm
+.ActivityInfo;', 'import android.graphics.PixelFormat;', 'import android.media.MediaPlayer;', 'import android.media
+.MediaPlayer.OnBufferingUpdateListener;', 'import android.media.MediaPlayer.OnCompletionListener;', 'import android
+.media.MediaPlayer.OnErrorListener;', 'import android.media.MediaPlayer.OnPreparedListener;', 'import android.os.Bu
+ndle;', 'import android.util.Log;', 'import android.view.SurfaceHolder;', 'import android.view.SurfaceView;', 'impo
+rt android.view.View;', 'import android.webkit.URLUtil;', 'import android.widget.Button;'], ['import java.io.IOExce
+ption;', 'import org.apache.http.HttpEntity;', 'import org.apache.http.HttpHost;', 'import org.apache.http.HttpResp
+onse;', 'import org.apache.http.client.HttpClient;', 'import org.apache.http.client.methods.HttpGet;', 'import org.
+apache.http.impl.client.DefaultHttpClient;', 'import org.apache.http.util.EntityUtils;'], ['import android.app.Serv
+ice;', 'import android.content.Intent;', 'import android.os.IBinder;'], ['import android.app.Activity;', 'import an
+droid.content.BroadcastReceiver;', 'import android.content.ComponentName;', 'import android.content.Context;', 'imp
+ort android.content.Intent;', 'import android.content.IntentFilter;', 'import android.content.IntentFilter.Malforme
+dMimeTypeException;', 'import android.os.Bundle;', 'import android.util.Log;'], ['import android.app.Activity;', 'i
+mport android.content.Intent;', 'import android.os.Bundle;', 'import android.view.View;', 'import android.widget.Bu
+tton;', 'import android.widget.EditText;'], ['import org.apache.http.impl.client.DefaultHttpClient;', 'import java.
+io.IOException;', 'import org.apache.http.client.ClientProtocolException;', 'import org.apache.http.client.methods.
+HttpGet;', 'import android.app.Activity;', 'import android.os.Bundle;', 'import android.widget.TextView;'], ['impor
+t android.app.AlertDialog;', 'import android.app.Dialog;', 'import android.content.Context;', 'import android.graph
+ics.Bitmap;', 'import android.graphics.BitmapFactory;', 'import android.hardware.Camera;', 'import android.hardware
+.Camera.PictureCallback;', 'import android.widget.ImageView;', 'import android.widget.TextView;'], ['import android
+.content.Context;', 'import android.util.AttributeSet;', 'import android.view.Gravity;', 'import android.view.Layou
+tInflater;', 'import android.widget.LinearLayout;'], ['import android.app.Activity;', 'import android.os.Bundle;', 
+'import android.widget.TextView;', 'import android.view.View;', 'import android.widget.Button;', 'import android.wi
+dget.EditText;', 'import java.text.NumberFormat;', 'import android.util.Log;']]                                    
+{                                                                                                                  
+  "accuracy": 0.7954545454545454,                                                                                  
+  "f1": 0.8860759493670887,                                                                                        
+  "precision": 0.8249158249158249,                                                                                 
+  "recall": 0.95703125                                                                                             
+}                                                                                                                  
+                                                                                                                   
+Prediction for JDK Classes:                                                                                        
+                                                                                                                   
+100%|¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 23/23 [03:24
+                                                                                                                   
+Predicted Import List: [['import java.applet.Applet;', 'import java.awt.Color;', 'import java.awt.Container;', 'imp
+ort java.awt.Dimension;', 'import java.awt.Frame;', 'import java.awt.Graphics;', 'import java.awt.Graphics2D;', 'im
+port java.awt.event.WindowAdapter;', 'import java.awt.event.WindowEvent;', 'import java.awt.image.BufferedImage;', 
+'import java.io.FileInputStream;', 'import java.io.FileOutputStream;', 'import java.io.IOException;', 'import java.
+io.ObjectInputStream;', 'import java.io.ObjectOutputStream;'], ['import java.awt.BorderLayout;', 'import java.awt.C
+olor;', 'import java.awt.Dimension;', 'import java.awt.FlowLayout;', 'import java.awt.GradientPaint;', 'import java
+.awt.Graphics;', 'import java.awt.Graphics2D;', 'import java.awt.GridBagLayout;', 'import java.awt.GridLayout;', 'i
+mport java.awt.event.ActionEvent;', 'import java.awt.event.ActionListener;', 'import java.awt.image.BufferedImage;'
+, 'import java.io.IOException;', 'import java.util.Properties;', 'import javax.swing.BorderFactory;', 'import javax
+.swing.ImageIcon;', 'import javax.swing.JButton;', 'import javax.swing.JCheckBox;', 'import javax.swing.JComboBox;'
+, 'import javax.swing.JFrame;', 'import javax.swing.JLabel;', 'import javax.swing.JList;', 'import javax.swing.JPan
+el;', 'import javax.swing.JScrollBar;', 'import javax.swing.JScrollPane;', 'import javax.swing.JSplitPane;', 'impor
+t javax.swing.JTable;', 'import javax.swing.JTextArea;', 'import javax.swing.JTextField;', 'import javax.swing.List
+SelectionModel;', 'import javax.swing.SwingUtilities;', 'import javax.swing.border.TitledBorder;', 'import javax.sw
+ing.table.DefaultTableModel;', 'import javax.swing.text.JTextComponent;'], ['import java.math.RoundingMode;', 'impo
+rt java.text.DecimalFormat;', 'import java.text.DecimalFormatSymbols;', 'import java.text.ParseException;', 'import
+ java.util.Locale;'], ['import java.util.regex.Matcher;', 'import java.util.regex.Pattern;', 'import java.util.List
+;', 'import java.util.ArrayList;'], ['import java.util.*;', 'import java.util.Map.Entry;'], ['import java.awt.Borde
+rLayout;', 'import java.awt.Color;', 'import java.awt.Component;', 'import java.awt.EventQueue;', 'import java.awt.
+Graphics;', 'import java.awt.Graphics2D;', 'import java.awt.RenderingHints;', 'import java.util.Observable;', 'impo
+rt java.util.Observer;', 'import java.util.Random;', 'import javax.swing.Icon;', 'import javax.swing.JButton;', 'im
+port javax.swing.JFrame;', 'import javax.swing.JLabel;', 'import javax.swing.JPanel;', 'import java.util.List;', 'i
+mport java.util.LinkedList;', 'import java.util.Collections;', 'import java.util.Comparator;', 'import java.util.Li
+nkedHashMap;', 'import java.util.Map;', 'import java.util.HashMap;', 'import java.util.regex.Matcher;', 'import jav
+a.util.regex.Pattern;', 'import java.util.ArrayList;', 'import java.awt.event.ActionEvent;', 'import java.awt.event
+.ActionListener;'], [], [], ['import java.sql.Connection;', 'import java.sql.DriverManager;', 'import java.sql.SQLE
+xception;', 'import java.util.Properties;'], ['import java.text.NumberFormat;', 'import java.util.Locale;'], ['impo
+rt java.io.BufferedWriter;', 'import java.io.File;', 'import java.io.FileWriter;', 'import javax.swing.JFileChooser
+;'], ['import java.text.ParseException;', 'import java.text.SimpleDateFormat;', 'import java.util.Calendar;', 'impo
+rt java.util.Date;', 'import java.util.GregorianCalendar;', 'import java.text.DateFormat;', 'import java.text.Parse
+Exception;', 'import java.text.SimpleDateFormat;', 'import java.util.Date;'], ['import java.awt.*;', 'import javax.
+swing.*;'], ['import java.lang.reflect.Method;', 'import java.lang.reflect.InvocationTargetException;', 'import jav
+a.lang.Class;'], [], [], ['import java.text.ParseException;', 'import java.text.SimpleDateFormat;', 'import java.ut
+il.Date;', 'import java.time.format.DateTimeFormatter;', 'import java.time.temporal.TemporalAccessor;'], ['import j
+ava.lang.reflect.Array;', 'import java.lang.reflect.Field;'], ['import java.util.Random;', 'import java.util.concur
+rent.ThreadLocalRandom;', 'import java.util.List;', 'import java.util.ArrayList;', 'import java.util.Collection;', 
+'import java.util.Iterator;', 'import java.util.NoSuchElementException;'], ['import java.io.BufferedInputStream;', 
+'import java.io.BufferedOutputStream;', 'import java.io.DataInputStream;', 'import java.io.DataOutputStream;', 'imp
+ort java.io.File;', 'import java.io.FileInputStream;', 'import java.io.FileOutputStream;', 'import java.io.IOExcept
+ion;', 'import java.util.ArrayList;'], ['import java.awt.Component;', 'import java.awt.event.ActionEvent;', 'import
+ java.awt.event.ActionListener;', 'import java.awt.event.InputEvent;', 'import java.awt.event.KeyEvent;', 'import j
+ava.awt.image.BufferedImage;', 'import java.io.File;', 'import javax.imageio.ImageIO;', 'import javax.swing.ImageIc
+on;', 'import javax.swing.JFrame;', 'import javax.swing.JLabel;', 'import javax.swing.JMenu;', 'import javax.swing.
+JMenuBar;', 'import javax.swing.JMenuItem;', 'import javax.swing.JOptionPane;', 'import javax.swing.JPanel;', 'impo
+rt javax.swing.JScrollPane;', 'import javax.swing.JTextArea;', 'import javax.swing.JTree;', 'import javax.swing.Key
+Stroke;', 'import javax.swing.SwingUtilities;', 'import javax.swing.border.TitledBorder;'], ['import java.awt.Borde
+rLayout;', 'import java.awt.Component;', 'import java.awt.Container;', 'import java.awt.GridLayout;', 'import java.
+awt.Image;', 'import java.awt.event.ActionEvent;', 'import java.awt.event.ActionListener;', 'import java.awt.event.
+InputEvent;', 'import java.awt.event.KeyEvent;', 'import java.beans.PropertyChangeEvent;', 'import java.beans.Prope
+rtyChangeListener;', 'import java.io.File;', 'import java.text.DecimalFormat;', 'import java.util.List;', 'import j
+avax.imageio.ImageIO;', 'import javax.swing.ImageIcon;', 'import javax.swing.JFrame;', 'import javax.swing.JLabel;'
+, 'import javax.swing.JMenu;', 'import javax.swing.JMenuBar;', 'import javax.swing.JMenuItem;', 'import javax.swing
+.JOptionPane;', 'import javax.swing.JPanel;', 'import javax.swing.JProgressBar;', 'import javax.swing.JScrollPane;'
+, 'import javax.swing.JTextArea;', 'import javax.swing.JTree;', 'import javax.swing.KeyStroke;', 'import javax.swin
+g.SwingUtilities;', 'import javax.swing.SwingWorker;'], []]                                                        
+                                                                                                                   
+Correct Import List: [['import java.applet.Applet;', 'import java.awt.Color;', 'import java.awt.Container;', 'impor
+t java.awt.Dimension;', 'import java.awt.Frame;', 'import java.awt.Graphics;', 'import java.awt.Graphics2D;', 'impo
+rt java.awt.event.WindowAdapter;', 'import java.awt.event.WindowEvent;', 'import java.awt.image.BufferedImage;', 'i
+mport java.io.FileInputStream;', 'import java.io.FileOutputStream;', 'import java.io.IOException;', 'import java.io
+.ObjectInputStream;', 'import java.io.ObjectOutputStream;'], ['import java.awt.BorderLayout;', 'import java.awt.Col
+or;', 'import java.awt.Dimension;', 'import java.awt.FlowLayout;', 'import java.awt.GradientPaint;', 'import java.a
+wt.Graphics2D;', 'import java.awt.GridBagLayout;', 'import java.awt.GridLayout;', 'import java.awt.event.ActionEven
+t;', 'import java.awt.event.ActionListener;', 'import java.awt.image.BufferedImage;', 'import javax.swing.ImageIcon
+;', 'import javax.swing.JButton;', 'import javax.swing.JCheckBox;', 'import javax.swing.JComboBox;', 'import javax.
+swing.JFrame;', 'import javax.swing.JLabel;', 'import javax.swing.JPanel;', 'import javax.swing.JScrollPane;', 'imp
+ort javax.swing.JSplitPane;', 'import javax.swing.JTable;', 'import javax.swing.SwingUtilities;', 'import javax.swi
+ng.UIManager;', 'import javax.swing.border.TitledBorder;', 'import javax.swing.table.DefaultTableModel;'], ['import
+ java.math.RoundingMode;', 'import java.text.DecimalFormat;', 'import java.text.DecimalFormatSymbols;', 'import jav
+a.text.ParseException;', 'import java.util.Locale;'], ['import java.util.regex.Pattern;', 'import java.util.ArrayLi
+st;', 'import java.util.List;', 'import java.util.regex.Matcher;'], ['import java.util.Collections;', 'import java.
+util.Comparator;', 'import java.util.HashMap;', 'import java.util.LinkedHashMap;', 'import java.util.LinkedList;', 
+'import java.util.List;', 'import java.util.Map;', 'import java.util.TreeMap;'], ['import java.awt.BorderLayout;', 
+'import java.awt.Color;', 'import java.awt.Component;', 'import java.awt.EventQueue;', 'import java.awt.Graphics;',
+ 'import java.awt.Graphics2D;', 'import java.awt.RenderingHints;', 'import java.awt.event.ActionEvent;', 'import ja
+va.awt.event.ActionListener;', 'import java.util.Observable;', 'import java.util.Observer;', 'import java.util.Rand
+om;', 'import javax.swing.Icon;', 'import javax.swing.JButton;', 'import javax.swing.JFrame;', 'import javax.swing.
+JLabel;', 'import javax.swing.JPanel;'], ['import java.text.ParseException;', 'import java.text.SimpleDateFormat;',
+ 'import java.util.ArrayList;', 'import java.util.Collections;', 'import java.util.Comparator;', 'import java.util.
+Date;'], [], ['import java.sql.Connection;', 'import java.sql.DriverManager;', 'import java.sql.SQLException;', 'im
+port java.util.Properties;'], ['import java.text.NumberFormat;', 'import java.util.Locale;'], ['import java.io.Buff
+eredWriter;', 'import java.io.File;', 'import java.io.FileWriter;', 'import javax.swing.JFileChooser;'], ['import j
+ava.text.DateFormat;', 'import java.text.ParseException;', 'import java.text.SimpleDateFormat;', 'import java.util.
+Calendar;', 'import java.util.Date;', 'import java.util.GregorianCalendar;'], ['import javax.swing.JFrame;', 'impor
+t javax.swing.JTextArea;', 'import javax.swing.SwingUtilities;', 'import javax.swing.UIManager;'], ['import java.la
+ng.reflect.Method;'], ['import java.util.HashMap;'], ['import java.lang.reflect.InvocationTargetException;', 'impor
+t java.lang.reflect.Method;', 'import java.util.HashMap;', 'import java.util.Map;', 'import java.util.ArrayList;', 
+'import java.util.List;', 'import java.util.prefs.Preferences;'], ['import java.text.SimpleDateFormat;', 'import ja
+va.time.format.DateTimeFormatter;', 'import java.time.temporal.TemporalAccessor;', 'import java.util.Date;', 'impor
+t java.text.ParseException;'], ['import java.lang.reflect.Array;', 'import java.lang.reflect.Field;'], ['import jav
+a.util.List;', 'import java.util.Collection;', 'import java.util.Iterator;', 'import java.util.Random;', 'import ja
+va.util.ArrayList;', 'import java.util.NoSuchElementException;', 'import java.util.concurrent.ThreadLocalRandom;'],
+ ['import java.io.BufferedInputStream;', 'import java.io.BufferedOutputStream;', 'import java.io.DataInputStream;',
+ 'import java.io.DataOutputStream;', 'import java.io.File;', 'import java.io.FileInputStream;', 'import java.io.Fil
+eOutputStream;', 'import java.io.IOException;', 'import java.util.ArrayList;'], ['import java.awt.BorderLayout;', '
+import java.awt.Component;', 'import java.awt.Image;', 'import java.awt.image.BufferedImage;', 'import java.awt.eve
+nt.ActionListener;', 'import java.awt.event.ActionEvent;', 'import java.awt.event.KeyEvent;', 'import java.awt.even
+t.InputEvent;', 'import javax.swing.ImageIcon;', 'import javax.swing.JFrame;', 'import javax.swing.JLabel;', 'impor
+t javax.swing.JMenu;', 'import javax.swing.JMenuBar;', 'import javax.swing.JMenuItem;', 'import javax.swing.JOption
+Pane;', 'import javax.swing.JPanel;', 'import javax.swing.JScrollPane;', 'import javax.swing.JTextArea;', 'import j
+avax.swing.JTree;', 'import javax.swing.KeyStroke;', 'import javax.swing.SwingUtilities;', 'import javax.swing.bord
+er.TitledBorder;', 'import javax.imageio.ImageIO;', 'import java.io.File;'], ['import java.awt.Container;', 'import
+ java.awt.EventQueue;', 'import java.awt.GridLayout;', 'import java.beans.PropertyChangeEvent;', 'import java.beans
+.PropertyChangeListener;', 'import java.text.DecimalFormat;', 'import java.util.List;', 'import javax.swing.JFrame;
+', 'import javax.swing.JLabel;', 'import javax.swing.JProgressBar;', 'import javax.swing.SwingWorker;'], []]       
+{                                                                                                                  
+  "accuracy": 0.6523809523809524,                                                                                  
+  "f1": 0.7896253602305475,                                                                                        
+  "precision": 0.8203592814371258,                                                                                 
+  "recall": 0.7611111111111111                                                                                     
+}                                                                                                                  
+                                                                                                                   
+Prediction for Hibernate Classes:                                                                                  
+                                                                                                                   
+100%|¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 51/51 [09:16
+                                                                                                                   
+Predicted Import List: [['import org.hibernate.SessionFactory;', 'import org.hibernate.cfg.AnnotationConfiguration;
+'], ['import org.hibernate.Session;', 'import org.hibernate.SessionFactory;', 'import org.hibernate.Transaction;', 
+'import org.hibernate.cfg.AnnotationConfiguration;', 'import hibernate.User;'], ['import java.io.Serializable;', 'i
+mport java.util.List;', 'import javax.persistence.Cacheable;', 'import javax.persistence.CacheConcurrencyStrategy;'
+, 'import javax.persistence.Column;', 'import javax.persistence.Entity;', 'import javax.persistence.Id;', 'import j
+avax.persistence.JoinColumn;', 'import javax.persistence.ManyToOne;', 'import javax.persistence.OneToMany;', 'impor
+t static javax.persistence.CascadeType.ALL;'], ['import java.sql.Types;', 'import org.hibernate.Hibernate;', 'impor
+t org.hibernate.dialect.Dialect;', 'import org.hibernate.dialect.function.SQLFunctionTemplate;', 'import org.hibern
+ate.dialect.function.StandardSQLFunction;', 'import org.hibernate.dialect.function.VarArgsSQLFunction;'], [], ['imp
+ort org.hibernate.SessionFactory;', 'import org.hibernate.cfg.Configuration;', 'import org.hibernate.HibernateExcep
+tion;', 'import org.hibernate.Session;'], [], ['import org.hibernate.Session;', 'import org.hibernate.SessionFactor
+y;', 'import org.hibernate.cfg.AnnotationConfiguration;'], [], ['import java.io.Serializable;', 'import java.util.L
+ist;', 'import org.hibernate.Session;'], ['import java.io.Serializable;', 'import java.util.List;', 'import org.hib
+ernate.Session;'], ['import javax.persistence.Entity;', 'import javax.persistence.Table;', 'import javax.persistenc
+e.Id;', 'import javax.persistence.Column;', 'import javax.persistence.ManyToOne;', 'import javax.persistence.JoinCo
+lumn;', 'import javax.persistence.FetchType;', 'import javax.persistence.ForeignKey;', 'import java.io.Serializable
+;'], ['import javax.faces.context.FacesContext;', 'import org.hibernate.Session;', 'import org.hibernate.SessionFac
+tory;', 'import org.hibernate.Transaction;', 'import org.hibernate.cfg.Configuration;'], ['import java.util.Collect
+ion;', 'import java.util.List;', 'import java.io.Serializable;', 'import javax.persistence.Entity;', 'import javax.
+persistence.Table;', 'import javax.persistence.Id;', 'import javax.persistence.Column;', 'import javax.persistence.
+ManyToOne;', 'import javax.persistence.JoinColumn;', 'import javax.persistence.ForeignKey;', 'import javax.persiste
+nce.ManyToMany;', 'import javax.persistence.CascadeType;', 'import javax.persistence.JoinTable;', 'import org.hiber
+nate.annotations.IndexColumn;', 'import javax.persistence.OneToMany;', 'import javax.persistence.FetchType;'], ['im
+port java.io.Serializable;', 'import java.util.Collection;', 'import javax.persistence.CascadeType;', 'import javax
+.persistence.Column;', 'import javax.persistence.Entity;', 'import javax.persistence.FetchType;', 'import javax.per
+sistence.ForeignKey;', 'import javax.persistence.Id;', 'import javax.persistence.JoinColumn;', 'import javax.persis
+tence.ManyToMany;', 'import javax.persistence.ManyToOne;', 'import javax.persistence.Table;'], ['import java.io.Byt
+eArrayOutputStream;', 'import java.io.IOException;', 'import java.io.InputStream;', 'import java.sql.Blob;', 'impor
+t java.sql.SQLException;', 'import java.util.Date;', 'import javax.persistence.Entity;', 'import javax.persistence.
+Id;', 'import javax.persistence.Table;', 'import org.hibernate.Hibernate;'], ['import org.hibernate.Session;', 'imp
+ort org.hibernate.SessionFactory;', 'import org.hibernate.Transaction;', 'import org.hibernate.cfg.Configuration;',
+ 'import java.util.List;'], ['import java.util.ArrayList;', 'import java.util.List;', 'import javax.naming.NamingEx
+ception;', 'import org.hibernate.SessionFactory;', 'import org.hibernate.cfg.Configuration;', 'import org.hibernate
+.shards.ShardId;', 'import org.hibernate.shards.ShardStrategyFactory;', 'import org.hibernate.shards.strategy.acces
+s.SequentialShardAccessStrategy;', 'import org.hibernate.shards.strategy.resolution.AllShardsShardResolutionStrateg
+y;', 'import org.hibernate.shards.strategy.selection.RoundRobinShardLoadBalancer;', 'import org.hibernate.shards.st
+rategy.selection.RoundRobinShardSelectionStrategy;', 'import org.hibernate.shards.strategy.ShardAccessStrategy;', '
+import org.hibernate.shards.strategy.ShardResolutionStrategy;', 'import org.hibernate.shards.strategy.ShardSelectio
+nStrategy;', 'import org.hibernate.shards.strategy.ShardStrategy;', 'import org.hibernate.shards.strategy.internal.
+ShardStrategyImpl;', 'import org.hibernate.shards.strategy.spi.ShardedConfiguration;', 'import org.hibernate.shards
+.util.ConfigurationToShardConfigurationAdapter;', 'import org.hibernate.shards.util.ShardConfiguration;'], ['import
+ org.hibernate.SessionFactory;', 'import org.hibernate.cfg.Configuration;'], ['import javax.persistence.Entity;', '
+import javax.persistence.Table;', 'import javax.persistence.Id;', 'import javax.persistence.GeneratedValue;', 'impo
+rt javax.persistence.Column;', 'import org.hibernate.annotations.Index;'], ['import org.hibernate.SessionFactory;',
+ 'import org.hibernate.cfg.AnnotationConfiguration;'], ['import org.hibernate.Session;', 'import org.hibernate.Sess
+ionFactory;', 'import org.hibernate.Transaction;', 'import org.hibernate.cfg.Configuration;'], ['import org.hiberna
+te.Session;', 'import org.hibernate.SessionFactory;', 'import org.hibernate.Query;', 'import org.hibernate.Transact
+ion;', 'import org.hibernate.cfg.Configuration;', 'import org.hibernate.JSONObject;'], ['import org.hibernate.Hiber
+nateException;', 'import org.hibernate.Session;', 'import org.hibernate.cfg.AnnotationConfiguration;', 'import org.
+hibernate.SessionFactory;', 'import org.hibernate.cfg.Configuration;'], ['import java.lang.reflect.InvocationHandle
+r;', 'import java.lang.reflect.Method;', 'import org.hibernate.SessionFactory;', 'import org.hibernate.cfg.Configur
+ation;'], ['import javax.persistence.Entity;', 'import javax.persistence.GeneratedValue;', 'import javax.persistenc
+e.Id;', 'import javax.persistence.OneToOne;', 'import javax.persistence.CascadeType;', 'import org.hibernate.annota
+tions.Fetch;', 'import org.hibernate.annotations.FetchMode;'], ['import java.util.List;', 'import org.hibernate.Ses
+sion;', 'import org.hibernate.SessionFactory;', 'import org.hibernate.Transaction;', 'import org.hibernate.cfg.Anno
+tationConfiguration;', 'import org.hibernate.cfg.Configuration;', 'import org.hibernate.tool.hbm2ddl.SchemaExport;'
+, 'import org.hibernate.Query;', 'import org.hibernate.annotations.Entity;', 'import org.hibernate.annotations.Fetc
+h;', 'import org.hibernate.annotations.FetchMode;', 'import javax.persistence.CascadeType;', 'import javax.persiste
+nce.GeneratedValue;', 'import javax.persistence.Id;', 'import javax.persistence.OneToOne;'], ['import java.util.Lis
+t;', 'import org.hibernate.Session;', 'import org.hibernate.Query;'], ['import java.io.Serializable;', 'import java
+.util.ArrayList;', 'import java.util.List;', 'import javax.persistence.Column;', 'import javax.persistence.Entity;'
+, 'import javax.persistence.GeneratedValue;', 'import javax.persistence.GenerationType;', 'import javax.persistence
+.Id;', 'import javax.persistence.IndexColumn;', 'import javax.persistence.JoinColumn;', 'import javax.persistence.M
+anyToOne;', 'import javax.persistence.OneToMany;'], ['import java.util.List;', 'import org.hibernate.Criteria;', 'i
+mport org.hibernate.Session;', 'import org.hibernate.SessionFactory;', 'import org.hibernate.criterion.Projections;
+'], [], ['import java.util.List;', 'import org.hibernate.Session;', 'import org.hibernate.SessionFactory;', 'import
+ org.hibernate.cfg.Configuration;', 'import org.hibernate.query.Query;', 'import hibernate.Users;'], ['import javax
+.persistence.Entity;', 'import javax.persistence.GeneratedValue;', 'import javax.persistence.Id;', 'import javax.pe
+rsistence.Table;', 'import org.hibernate.annotations.Index;', 'import javax.persistence.Column;'], ['import org.hib
+ernate.Session;', 'import org.hibernate.SessionFactory;', 'import org.hibernate.cfg.Configuration;'], ['import org.
+hibernate.Session;', 'import org.hibernate.Transaction;'], [], ['import org.hibernate.Session;', 'import org.hibern
+ate.SessionFactory;', 'import org.hibernate.Transaction;', 'import org.hibernate.cfg.Configuration;'], ['import org
+.hibernate.Session;', 'import org.hibernate.SessionFactory;', 'import org.hibernate.cfg.AnnotationConfiguration;', 
+'import org.hibernate.cfg.Configuration;'], [], ['import org.hibernate.Session;', 'import org.hibernate.SessionFact
+ory;', 'import org.hibernate.Transaction;', 'import org.springframework.transaction.annotation.Transactional;', 'im
+port java.io.Serializable;', 'import java.util.List;', 'import java.util.Map;'], ['import java.util.Iterator;', 'im
+port java.util.List;', 'import org.hibernate.Query;', 'import org.hibernate.Session;', 'import org.hibernate.Sessio
+nFactory;', 'import org.hibernate.cfg.Configuration;', 'import Example;'], ['import java.util.List;', 'import org.h
+ibernate.Criteria;', 'import org.hibernate.Session;', 'import org.hibernate.Transaction;', 'import org.hibernate.cr
+iterion.Restrictions;', 'import hibernate.HibernateUtil;'], ['import java.util.List;', 'import javax.naming.Initial
+Context;', 'import org.apache.commons.logging.Log;', 'import org.apache.commons.logging.LogFactory;', 'import org.h
+ibernate.SessionFactory;', 'import org.hibernate.criterion.Example;', 'import org.hibernate.criterion.Restrictions;
+', 'import org.hibernate.Session;', 'import org.hibernate.Transaction;'], ['import org.apache.log4j.Logger;', 'impo
+rt org.hibernate.Session;', 'import org.hibernate.SessionFactory;', 'import org.hibernate.cfg.Configuration;', 'imp
+ort java.util.Properties;'], ['import java.util.ArrayList;', 'import java.util.HashSet;', 'import java.util.Iterato
+r;', 'import java.util.List;', 'import java.util.Properties;', 'import javax.naming.InitialContext;', 'import javax
+.servlet.http.HttpServletRequest;', 'import javax.servlet.http.HttpServletResponse;', 'import javax.servlet.http.Ht
+tpSession;', 'import org.apache.log4j.Logger;', 'import org.apache.struts.action.ActionForm;', 'import org.apache.s
+truts.action.ActionForward;', 'import org.apache.struts.action.ActionMapping;', 'import org.apache.struts.actions.D
+ispatchAction;', 'import org.hibernate.Query;', 'import org.hibernate.Session;', 'import org.hibernate.SessionFacto
+ry;', 'import org.hibernate.Transaction;', 'import org.hibernate.cfg.Configuration;', 'import org.hibernate.criteri
+on.Example;', 'import org.hibernate.criterion.Restrictions;'], ['import org.hibernate.Session;', 'import org.hibern
+ate.SessionFactory;', 'import org.hibernate.cfg.AnnotationConfiguration;'], [], ['import org.hibernate.SessionFacto
+ry;', 'import org.hibernate.Session;', 'import org.hibernate.Transaction;', 'import hibernate.util.HibernateUtil;']
+, ['import org.hibernate.Session;', 'import org.hibernate.SessionFactory;', 'import org.hibernate.Transaction;', 'i
+mport net.sf.gilead.core.PersistentBeanManager;', 'import net.sf.gilead.core.hibernate.HibernateUtil;', 'import net
+.sf.gilead.core.store.stateless.StatelessProxyStore;', 'import com.google.gwt.user.server.rpc.RemoteServiceServlet;
+', 'import hibernate.GreetingService;'], ['import javax.persistence.Entity;', 'import javax.persistence.Version;', 
+'import org.hibernate.annotations.NaturalId;', 'import java.io.Serializable;'], ['import java.util.List;', 'import 
+org.hibernate.Session;', 'import org.hibernate.SessionFactory;', 'import hibernate.Name;']]                        
+                                                                                                                   
+Correct Import List: [['import org.hibernate.SessionFactory;', 'import org.hibernate.cfg.AnnotationConfiguration;']
+, ['import org.hibernate.Session;', 'import org.hibernate.SessionFactory;', 'import org.hibernate.Transaction;', 'i
+mport org.hibernate.cfg.AnnotationConfiguration;', 'import library.dao.UserDAO;', 'import library.model.User;'], ['
+import java.io.Serializable;', 'import java.util.List;', 'import javax.persistence.Column;', 'import javax.persiste
+nce.Id;', 'import javax.persistence.JoinColumn;', 'import javax.persistence.ManyToOne;', 'import javax.persistence.
+OneToMany;', 'import org.hibernate.annotations.Cache;', 'import org.hibernate.annotations.CacheConcurrencyStrategy;
+', 'import org.hibernate.annotations.Entity;'], ['import java.sql.Types;', 'import org.hibernate.dialect.Dialect;',
+ 'import org.hibernate.dialect.function.StandardSQLFunction;', 'import org.hibernate.dialect.function.SQLFunctionTe
+mplate;', 'import org.hibernate.dialect.function.VarArgsSQLFunction;', 'import org.hibernate.Hibernate;'], ['import
+ org.hibernate.SessionFactory;', 'import org.hibernate.HibernateException;', 'import org.hibernate.cfg.Configuratio
+n;'], ['import org.hibernate.SessionFactory;', 'import org.hibernate.cfg.Configuration;'], ['import java.io.File;',
+ 'import java.net.MalformedURLException;', 'import java.util.Iterator;', 'import java.util.List;', 'import org.dom4
+j.Document;', 'import org.dom4j.DocumentException;', 'import org.dom4j.io.SAXReader;', 'import org.hibernate.Entity
+Mode;', 'import org.hibernate.HibernateException;', 'import org.hibernate.Session;', 'import org.hibernate.SessionF
+actory;', 'import org.hibernate.Transaction;', 'import org.hibernate.cfg.Configuration;', 'import org.hibernate.too
+l.hbm2ddl.SchemaExport;'], ['import org.hibernate.Session;', 'import org.hibernate.SessionFactory;', 'import org.hi
+bernate.cfg.AnnotationConfiguration;'], ['import java.util.Date;', 'import javax.persistence.Column;', 'import java
+x.persistence.MappedSuperclass;', 'import javax.persistence.Temporal;', 'import javax.persistence.TemporalType;', '
+import javax.persistence.Transient;', 'import org.hibernate.validator.AssertTrue;', 'import org.hibernate.validator
+.NotNull;'], ['import java.io.Serializable;', 'import java.util.List;', 'import org.hibernate.Session;'], ['import 
+java.io.Serializable;', 'import java.util.List;', 'import org.hibernate.Session;'], ['import java.io.Serializable;'
+, 'import javax.persistence.Column;', 'import javax.persistence.Entity;', 'import javax.persistence.FetchType;', 'i
+mport javax.persistence.Id;', 'import javax.persistence.JoinColumn;', 'import javax.persistence.ManyToOne;', 'impor
+t javax.persistence.Table;', 'import org.apache.directory.api.ldap.aci.UserClass.UserGroup;', 'import org.hibernate
+.annotations.ForeignKey;'], ['import javax.faces.context.FacesContext;', 'import org.hibernate.Session;', 'import o
+rg.hibernate.SessionFactory;', 'import org.hibernate.Transaction;', 'import org.hibernate.cfg.Configuration;'], ['i
+mport java.util.List;', 'import java.util.Collection;', 'import java.io.Serializable;', 'import java.security.Permi
+ssion;', 'import javax.persistence.CascadeType;', 'import javax.persistence.Column;', 'import javax.persistence.Ent
+ity;', 'import javax.persistence.FetchType;', 'import javax.persistence.Id;', 'import javax.persistence.JoinColumn;
+', 'import javax.persistence.JoinTable;', 'import javax.persistence.ManyToMany;', 'import javax.persistence.ManyToO
+ne;', 'import javax.persistence.OneToMany;', 'import javax.persistence.Table;', 'import javax.persistence.Version;'
+, 'import org.hibernate.annotations.ForeignKey;', 'import org.hibernate.annotations.IndexColumn;'], ['import java.i
+o.Serializable;', 'import java.util.Collection;', 'import javax.persistence.CascadeType;', 'import javax.persistenc
+e.Column;', 'import javax.persistence.Entity;', 'import javax.persistence.FetchType;', 'import javax.persistence.Id
+;', 'import javax.persistence.JoinColumn;', 'import javax.persistence.ManyToMany;', 'import javax.persistence.ManyT
+oOne;', 'import javax.persistence.Table;', 'import org.hibernate.annotations.ForeignKey;', 'import org.hibernate.te
+st.cache.Item;', 'import library.model.User;'], ['import java.io.ByteArrayOutputStream;', 'import java.io.IOExcepti
+on;', 'import java.io.InputStream;', 'import java.sql.Blob;', 'import java.sql.SQLException;', 'import java.util.Da
+te;', 'import org.hibernate.Hibernate;'], ['import java.awt.Event;', 'import java.util.List;'], ['import java.util.
+ArrayList;', 'import java.util.List;', 'import javax.naming.NamingException;', 'import org.hibernate.SessionFactory
+;', 'import org.hibernate.cfg.Configuration;', 'import org.hibernate.shards.ShardId;', 'import org.hibernate.shards
+.ShardedConfiguration;', 'import org.hibernate.shards.cfg.ConfigurationToShardConfigurationAdapter;', 'import org.h
+ibernate.shards.cfg.ShardConfiguration;', 'import org.hibernate.shards.loadbalance.RoundRobinShardLoadBalancer;', '
+import org.hibernate.shards.strategy.ShardStrategy;', 'import org.hibernate.shards.strategy.ShardStrategyFactory;',
+ 'import org.hibernate.shards.strategy.ShardStrategyImpl;', 'import org.hibernate.shards.strategy.access.Sequential
+ShardAccessStrategy;', 'import org.hibernate.shards.strategy.access.ShardAccessStrategy;', 'import org.hibernate.sh
+ards.strategy.resolution.AllShardsShardResolutionStrategy;', 'import org.hibernate.shards.strategy.resolution.Shard
+ResolutionStrategy;', 'import org.hibernate.shards.strategy.selection.RoundRobinShardSelectionStrategy;', 'import o
+rg.hibernate.shards.strategy.selection.ShardSelectionStrategy;'], ['import org.hibernate.SessionFactory;', 'import 
+org.hibernate.cfg.Configuration;'], ['import org.hibernate.annotations.Index;', 'import javax.persistence.Column;',
+ 'import javax.persistence.Entity;', 'import javax.persistence.GeneratedValue;', 'import javax.persistence.Id;'], [
+'import org.hibernate.SessionFactory;', 'import org.hibernate.cfg.AnnotationConfiguration;'], ['import org.hibernat
+e.Session;', 'import org.hibernate.SessionFactory;', 'import org.hibernate.Transaction;', 'import org.hibernate.cfg
+.Configuration;'], ['import org.hibernate.Query;', 'import org.hibernate.Session;', 'import org.hibernate.SessionFa
+ctory;', 'import org.hibernate.cfg.Configuration;', 'import org.json.JSONObject;'], ['import org.hibernate.Hibernat
+eException;', 'import org.hibernate.Session;', 'import org.hibernate.cfg.AnnotationConfiguration;', 'import org.hib
+ernate.cfg.Configuration;'], ['import java.lang.reflect.InvocationHandler;', 'import java.lang.reflect.Method;', 'i
+mport org.hibernate.SessionFactory;', 'import org.hibernate.cfg.Configuration;'], ['import javax.persistence.Cascad
+eType;', 'import javax.persistence.Entity;', 'import javax.persistence.GeneratedValue;', 'import javax.persistence.
+Id;', 'import javax.persistence.OneToOne;', 'import org.hibernate.annotations.Fetch;', 'import org.hibernate.annota
+tions.FetchMode;'], ['import java.util.List;', 'import java.util.Map;', 'import javax.persistence.CascadeType;', 'i
+mport javax.persistence.Entity;', 'import javax.persistence.GeneratedValue;', 'import javax.persistence.Id;', 'impo
+rt javax.persistence.OneToOne;', 'import org.hibernate.FlushMode;', 'import org.hibernate.Query;', 'import org.hibe
+rnate.Session;', 'import org.hibernate.SessionFactory;', 'import org.hibernate.annotations.Fetch;', 'import org.hib
+ernate.annotations.FetchMode;', 'import org.hibernate.cfg.AnnotationConfiguration;', 'import org.hibernate.tool.hbm
+2ddl.SchemaExport;'], ['import java.util.List;', 'import org.hibernate.Query;', 'import org.hibernate.Session;'], [
+'import java.io.Serializable;', 'import java.util.ArrayList;', 'import java.util.List;', 'import javax.persistence.
+Column;', 'import javax.persistence.Entity;', 'import javax.persistence.GeneratedValue;', 'import javax.persistence
+.GenerationType;', 'import javax.persistence.Id;', 'import javax.persistence.JoinColumn;', 'import javax.persistenc
+e.ManyToOne;', 'import javax.persistence.OneToMany;', 'import org.hibernate.annotations.IndexColumn;', 'import libr
+ary.model.User;'], ['import java.util.List;', 'import org.hibernate.Criteria;', 'import org.hibernate.Session;', 'i
+mport org.hibernate.SessionFactory;', 'import org.hibernate.criterion.Projections;'], ['import java.io.Serializable
+;', 'import javax.persistence.Basic;', 'import javax.persistence.Column;', 'import javax.persistence.Entity;', 'imp
+ort javax.persistence.Id;', 'import org.hibernate.annotations.NamedQueries;', 'import org.hibernate.annotations.Nam
+edQuery;', 'import javax.persistence.Table;'], ['import org.hibernate.Session;', 'import org.hibernate.SessionFacto
+ry;', 'import org.hibernate.cfg.Configuration;', 'import org.hibernate.Query;', 'import java.util.List;'], ['import
+ javax.persistence.Table;', 'import javax.persistence.GeneratedValue;', 'import javax.persistence.Entity;', 'import
+ javax.persistence.Id;', 'import org.hibernate.annotations.Index;'], ['import org.hibernate.Session;', 'import org.
+hibernate.SessionFactory;', 'import org.hibernate.cfg.Configuration;'], ['import org.hibernate.Session;', 'import o
+rg.hibernate.Transaction;'], ['import java.util.Iterator;', 'import java.util.List;', 'import org.apache.log4j.Basi
+cConfigurator;', 'import org.hibernate.HibernateException;', 'import org.hibernate.Query;', 'import org.hibernate.S
+ession;', 'import org.hibernate.Transaction;'], ['import org.hibernate.Session;', 'import org.hibernate.SessionFact
+ory;', 'import org.hibernate.Transaction;', 'import org.hibernate.cfg.Configuration;'], ['import org.hibernate.Hibe
+rnateException;', 'import org.hibernate.Session;', 'import org.hibernate.SessionFactory;', 'import org.hibernate.cf
+g.AnnotationConfiguration;'], ['import org.hibernate.Session;', 'import org.hibernate.SessionFactory;', 'import org
+.hibernate.Transaction;', 'import org.hibernate.cfg.Configuration;'], ['import java.io.Serializable;', 'import java
+.util.List;', 'import java.util.Map;', 'import org.appfuse.dao.GenericDao;', 'import org.appfuse.dao.SearchExceptio
+n;', 'import org.hibernate.Session;', 'import org.hibernate.SessionFactory;', 'import org.hibernate.Transaction;', 
+'import org.springframework.transaction.annotation.Transactional;'], ['import java.util.Iterator;', 'import java.ut
+il.List;', 'import org.hibernate.Query;', 'import org.hibernate.Session;', 'import org.hibernate.SessionFactory;', 
+'import org.hibernate.cfg.Configuration;'], ['import org.hibernate.Criteria;', 'import org.hibernate.Session;', 'im
+port org.hibernate.Transaction;', 'import org.hibernate.criterion.Restrictions;', 'import org.hibernate.mapping.Lis
+t;'], ['import java.util.List;', 'import javax.naming.InitialContext;', 'import org.apache.commons.logging.Log;', '
+import org.apache.commons.logging.LogFactory;', 'import org.hibernate.SessionFactory;', 'import org.hibernate.crite
+rion.Example;'], ['import java.util.Properties;', 'import org.apache.log4j.Logger;', 'import org.hibernate.Session;
+', 'import org.hibernate.SessionFactory;', 'import org.hibernate.cfg.Configuration;'], ['import java.util.ArrayList
+;', 'import java.util.HashSet;', 'import java.util.Iterator;', 'import java.util.Set;', 'import javax.servlet.http.
+HttpServletRequest;', 'import javax.servlet.http.HttpServletResponse;', 'import javax.servlet.http.HttpSession;', '
+import org.apache.struts.action.ActionForm;', 'import org.apache.struts.action.ActionForward;', 'import org.apache.
+struts.action.ActionMapping;', 'import org.apache.struts.actions.DispatchAction;', 'import org.hibernate.Query;', '
+import org.hibernate.Session;', 'import org.hibernate.SessionFactory;', 'import org.hibernate.Transaction;'], ['imp
+ort org.hibernate.Session;', 'import org.hibernate.SessionFactory;', 'import org.hibernate.cfg.AnnotationConfigurat
+ion;'], ['import org.hibernate.CacheMode;', 'import org.hibernate.HibernateException;', 'import org.hibernate.JDBCE
+xception;', 'import org.hibernate.Session;', 'import org.hibernate.SessionFactory;'], ['import org.hibernate.Sessio
+n;', 'import org.hibernate.SessionFactory;', 'import org.hibernate.Transaction;'], ['import net.sf.gilead.core.Pers
+istentBeanManager;', 'import net.sf.gilead.core.hibernate.HibernateUtil;', 'import net.sf.gilead.core.store.statele
+ss.StatelessProxyStore;', 'import net.sf.gilead.gwt.PersistentRemoteService;', 'import org.hibernate.Session;', 'im
+port org.hibernate.SessionFactory;', 'import org.hibernate.Transaction;', 'import aQute.gwt.greeter.shared.Greeting
+Service;'], ['import java.io.Serializable;', 'import javax.persistence.Entity;', 'import javax.persistence.Id;', 'i
+mport javax.persistence.Version;', 'import org.hibernate.annotations.NaturalId;'], ['import java.util.List;', 'impo
+rt java.util.jar.Attributes.Name;', 'import org.hibernate.Session;', 'import org.hibernate.SessionFactory;']]      
+{                                                                                                                  
+  "accuracy": 0.6705202312138728,                                                                                  
+  "f1": 0.8027681660899655,                                                                                        
+  "precision": 0.725,                                                                                              
+  "recall": 0.8992248062015504                                                                                     
+}                                                                                                                  
+                                                                                                                   
+Prediction for Joda-Time Classes:                                                                                  
+                                                                                                                   
+100%|¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 50/50 [06:07
+                                                                                                                   
+Predicted Import List: [['import org.joda.time.DateTime;', 'import org.joda.time.DateTimeZone;', 'import org.joda.t
+ime.format.DateTimeFormatter;', 'import org.joda.time.format.ISODateTimeFormat;', 'import java.util.TimeZone;'], ['
+import org.joda.time.DateMidnight;', 'import org.joda.time.DateTime;', 'import org.joda.time.DateTimeZone;'], ['imp
+ort org.joda.time.Interval;', 'import org.joda.time.format.PeriodFormatter;', 'import org.joda.time.format.PeriodFo
+rmatterBuilder;'], ['import org.joda.time.Period;', 'import org.joda.time.ReadableInstant;'], ['import org.joda.tim
+e.Chronology;', 'import org.joda.time.DateTime;', 'import org.joda.time.DateTimeZone;', 'import org.joda.time.chron
+o.GJChronology;'], ['import org.joda.time.Duration;', 'import org.joda.time.Period;', 'import org.joda.time.PeriodT
+ype;', 'import org.joda.time.format.PeriodFormatterBuilder;'], ['import org.joda.time.DateTime;', 'import org.joda.
+time.Days;', 'import java.text.DateFormat;', 'import java.text.ParseException;', 'import java.text.SimpleDateFormat
+;', 'import java.util.Calendar;', 'import java.util.Date;'], ['import org.joda.time.Period;', 'import org.joda.time
+.PeriodType;', 'import java.util.concurrent.TimeUnit;'], ['import org.joda.time.DateTimeZone;', 'import java.util.T
+imeZone;'], ['import org.joda.time.DateTimeZone;', 'import org.joda.time.chrono.ISOChronology;', 'import java.io.IO
+Exception;', 'import java.io.ObjectInputStream;', 'import java.io.ObjectOutputStream;', 'import java.io.Serializabl
+e;'], ['import org.joda.time.format.DateTimeFormat;', 'import org.joda.time.format.DateTimeFormatter;', 'import jav
+a.text.ParseException;', 'import java.text.SimpleDateFormat;'], ['import java.text.ParseException;', 'import java.t
+ext.SimpleDateFormat;', 'import java.util.Date;', 'import org.joda.time.DateTime;'], ['import static org.junit.Asse
+rt.assertEquals;', 'import org.joda.time.Duration;', 'import org.joda.time.Period;', 'import org.joda.time.format.P
+eriodFormatter;', 'import org.joda.time.format.PeriodFormatterBuilder;', 'import org.junit.Test;'], ['import org.jo
+da.time.format.DateTimeFormat;', 'import org.joda.time.format.DateTimeFormatter;', 'import org.joda.time.DateTime;'
+], ['import org.joda.time.DateTime;', 'import org.joda.time.MutableDateTime;'], ['import org.joda.time.DateTime;', 
+'import org.joda.time.Period;', 'import org.joda.time.format.PeriodFormatter;', 'import org.joda.time.format.Period
+FormatterBuilder;'], ['import org.joda.time.DateTime;', 'import org.joda.time.format.DateTimeFormat;', 'import org.
+joda.time.format.DateTimeFormatter;'], ['import org.joda.time.DateTimeZone;', 'import org.joda.time.format.DateTime
+Formatter;', 'import org.joda.time.format.DateTimeFormatterBuilder;'], ['import org.joda.time.Instant;', 'import or
+g.joda.time.Interval;', 'import org.joda.time.ReadableInstant;'], ['import org.joda.time.DateTime;', 'import org.jo
+da.time.DateTimeZone;', 'import org.joda.time.format.DateTimeFormat;', 'import org.joda.time.format.DateTimeFormatt
+er;'], ['import org.joda.time.DateTime;', 'import org.joda.time.DateTimeZone;', 'import org.joda.time.LocalDateTime
+;', 'import java.text.DateFormat;', 'import java.text.ParseException;', 'import java.text.SimpleDateFormat;', 'impo
+rt java.util.Date;'], [], ['import org.joda.time.DateTimeConstants;', 'import org.joda.time.LocalDate;'], ['import 
+org.joda.time.DateTime;', 'import org.joda.time.Period;', 'import org.joda.time.PeriodType;', 'import org.joda.time
+.format.PeriodFormat;'], ['import org.joda.time.DateMidnight;', 'import org.joda.time.Days;', 'import org.joda.time
+.LocalDateTime;', 'import org.joda.time.DateTime;'], ['import org.joda.time.Duration;', 'import org.joda.time.Perio
+d;'], ['import java.util.ArrayList;', 'import org.joda.time.DateTime;'], ['import org.joda.time.LocalDate;'], ['imp
+ort org.joda.time.DateTime;', 'import org.joda.time.format.DateTimeFormat;', 'import org.joda.time.format.DateTimeF
+ormatter;'], ['import org.joda.time.DateTime;', 'import org.joda.time.DateTimeZone;'], ['import org.joda.time.DateT
+ime;', 'import org.joda.time.Weeks;'], [], ['import org.joda.time.*;', 'import org.joda.time.format.*;'], ['import 
+java.util.Locale;', 'import org.joda.time.Period;', 'import org.joda.time.format.PeriodFormat;', 'import org.joda.t
+ime.format.PeriodFormatter;', 'import org.joda.time.format.PeriodFormatterBuilder;'], ['import org.joda.time.DateTi
+me;', 'import org.joda.time.Period;', 'import org.joda.time.ReadablePeriod;', 'import org.joda.time.format.PeriodFo
+rmatter;', 'import org.joda.time.format.PeriodFormatterBuilder;'], ['import org.joda.time.format.PeriodFormatterBui
+lder;', 'import org.joda.time.format.ISOPeriodFormat;', 'import org.joda.time.Period;'], ['import org.joda.time.Dat
+eTime;', 'import org.joda.time.DateTimeZone;', 'import java.util.concurrent.TimeUnit;'], ['import org.joda.time.Dat
+eTime;', 'import org.joda.time.format.DateTimeFormat;', 'import org.joda.time.format.DateTimeFormatter;'], ['import
+ org.joda.time.DateTime;'], ['import org.joda.time.DateTime;', 'import org.joda.time.Days;'], ['import org.joda.tim
+e.DateTime;', 'import org.joda.time.format.DateTimeFormat;', 'import org.joda.time.format.DateTimeFormatter;'], [],
+ ['import org.joda.time.DateTime;', 'import org.joda.time.format.DateTimeFormat;', 'import org.joda.time.format.Dat
+eTimeFormatter;', 'import org.joda.time.format.DateTimeFormatterBuilder;', 'import org.joda.time.format.DateTimePar
+ser;'], ['import org.joda.time.Period;', 'import org.joda.time.format.PeriodFormatter;', 'import org.joda.time.form
+at.PeriodFormatterBuilder;'], [], ['import org.joda.time.DateTime;', 'import org.joda.time.DateTimeZone;'], ['impor
+t org.joda.time.DateTime;', 'import org.joda.time.format.DateTimeFormat;', 'import org.joda.time.format.DateTimeFor
+matter;'], [], ['import org.joda.time.DateTime;', 'import org.joda.time.LocalDate;', 'import org.joda.time.format.D
+ateTimeFormat;', 'import org.joda.time.format.DateTimeFormatter;'], ['import org.joda.time.DateTime;']]            
+                                                                                                                   
+Correct Import List: [['import java.util.TimeZone;', 'import org.joda.time.DateTime;', 'import org.joda.time.DateTi
+meZone;', 'import org.joda.time.format.DateTimeFormatter;', 'import org.joda.time.format.ISODateTimeFormat;'], ['im
+port org.joda.time.DateMidnight;', 'import org.joda.time.DateTime;', 'import org.joda.time.DateTimeZone;'], ['impor
+t org.joda.time.Interval;', 'import org.joda.time.format.PeriodFormatter;', 'import org.joda.time.format.PeriodForm
+atterBuilder;'], ['import org.joda.time.Period;', 'import org.joda.time.ReadableInstant;'], ['import org.joda.time.
+Chronology;', 'import org.joda.time.DateTime;', 'import org.joda.time.DateTimeZone;', 'import org.joda.time.chrono.
+GJChronology;'], ['import org.joda.time.Duration;', 'import org.joda.time.PeriodType;', 'import org.joda.time.forma
+t.PeriodFormatterBuilder;'], ['import java.text.DateFormat;', 'import java.text.ParseException;', 'import java.text
+.SimpleDateFormat;', 'import java.util.Calendar;', 'import java.util.Date;', 'import org.joda.time.DateTime;', 'imp
+ort org.joda.time.Days;'], ['import java.util.concurrent.TimeUnit;', 'import org.joda.time.Period;', 'import org.jo
+da.time.PeriodType;'], ['import java.util.TimeZone;', 'import org.joda.time.DateTimeZone;'], ['import java.io.IOExc
+eption;', 'import java.io.ObjectInputStream;', 'import java.io.ObjectOutputStream;', 'import java.io.Serializable;'
+, 'import org.joda.time.DateTimeZone;', 'import org.joda.time.chrono.ISOChronology;'], ['import java.text.ParseExce
+ption;', 'import java.text.SimpleDateFormat;', 'import org.joda.time.format.DateTimeFormat;', 'import org.joda.time
+.format.DateTimeFormatter;'], ['import java.text.ParseException;', 'import java.text.SimpleDateFormat;', 'import ja
+va.util.Date;', 'import org.joda.time.DateTime;'], ['import org.joda.time.Period;', 'import org.joda.time.format.Pe
+riodFormatter;', 'import org.joda.time.format.PeriodFormatterBuilder;', 'import org.junit.Test;'], ['import org.jod
+a.time.DateTime;', 'import org.joda.time.format.DateTimeFormat;', 'import org.joda.time.format.DateTimeFormatter;']
+, ['import org.joda.time.DateTime;', 'import org.joda.time.MutableDateTime;'], ['import org.joda.time.DateTime;', '
+import org.joda.time.Period;', 'import org.joda.time.format.PeriodFormatter;', 'import org.joda.time.format.PeriodF
+ormatterBuilder;'], ['import org.joda.time.DateTime;', 'import org.joda.time.format.DateTimeFormat;', 'import org.j
+oda.time.format.DateTimeFormatter;'], ['import org.joda.time.DateTimeZone;', 'import org.joda.time.format.DateTimeF
+ormatter;', 'import org.joda.time.format.DateTimeFormatterBuilder;'], ['import java.util.Date;', 'import org.joda.t
+ime.Instant;', 'import org.joda.time.Interval;', 'import org.joda.time.ReadableInstant;'], ['import org.joda.time.D
+ateTime;', 'import org.joda.time.DateTimeZone;', 'import org.joda.time.format.DateTimeFormat;', 'import org.joda.ti
+me.format.DateTimeFormatter;'], ['import java.text.DateFormat;', 'import java.text.ParseException;', 'import java.t
+ext.SimpleDateFormat;', 'import java.util.Date;', 'import org.joda.time.DateTime;', 'import org.joda.time.DateTimeZ
+one;', 'import org.joda.time.LocalDateTime;'], ['import org.joda.time.DateTime;', 'import org.joda.time.format.Date
+TimeFormat;', 'import org.joda.time.format.DateTimeFormatter;', 'import java.util.Date;', 'import java.text.ParseEx
+ception;'], ['import org.joda.time.DateTimeConstants;', 'import org.joda.time.LocalDate;'], ['import org.joda.time.
+Period;', 'import org.joda.time.PeriodType;', 'import org.joda.time.format.PeriodFormat;', 'import org.joda.time.Da
+teTime;'], ['import org.joda.time.DateMidnight;', 'import org.joda.time.Days;', 'import org.joda.time.LocalDateTime
+;'], ['import org.joda.time.Duration;', 'import org.joda.time.Period;'], ['import java.util.ArrayList;', 'import or
+g.joda.time.DateTime;'], ['import java.util.ArrayList;', 'import java.util.List;', 'import org.joda.time.DateTime;'
+, 'import org.joda.time.Days;', 'import org.joda.time.LocalDate;', 'import org.joda.time.format.DateTimeFormat;', '
+import org.joda.time.format.DateTimeFormatter;'], ['import org.joda.time.DateTime;', 'import org.joda.time.format.D
+ateTimeFormatter;'], ['import org.joda.time.DateTime;', 'import org.joda.time.DateTimeZone;'], ['import org.joda.ti
+me.DateTime;', 'import org.joda.time.Weeks;'], ['import org.joda.time.DateTime;', 'import org.joda.time.format.Date
+TimeFormatter;'], ['import org.joda.time.Period;', 'import org.joda.time.format.PeriodFormatter;', 'import org.joda
+.time.format.PeriodFormatterBuilder;'], ['import org.joda.time.Period;', 'import org.joda.time.format.PeriodFormat;
+', 'import org.joda.time.format.PeriodFormatter;', 'import java.util.Locale;'], ['import java.util.Date;', 'import 
+org.joda.time.DateTime;', 'import org.joda.time.Period;', 'import org.joda.time.ReadablePeriod;', 'import org.joda.
+time.format.PeriodFormatter;', 'import org.joda.time.format.PeriodFormatterBuilder;'], ['import org.joda.time.Perio
+d;', 'import org.joda.time.format.ISOPeriodFormat;', 'import org.joda.time.format.PeriodFormatter;', 'import org.jo
+da.time.format.PeriodFormatterBuilder;'], ['import java.util.concurrent.TimeUnit;', 'import org.joda.time.DateTime;
+', 'import org.joda.time.DateTimeZone;'], ['import org.joda.time.DateTime;', 'import org.joda.time.format.DateTimeF
+ormat;', 'import org.joda.time.format.DateTimeFormatter;'], ['import org.joda.time.DateTime;'], ['import java.util.
+Date;', 'import org.joda.time.DateTime;', 'import org.joda.time.Days;'], ['import org.joda.time.DateTime;', 'import
+ org.joda.time.format.DateTimeFormat;', 'import org.joda.time.format.DateTimeFormatter;'], ['import org.joda.time.L
+ocalDate;'], ['import org.joda.time.DateTime;', 'import org.joda.time.format.DateTimeFormat;', 'import org.joda.tim
+e.format.DateTimeFormatter;', 'import org.joda.time.format.DateTimeFormatterBuilder;', 'import org.joda.time.format
+.DateTimeParser;'], ['import org.joda.time.Period;', 'import org.joda.time.format.PeriodFormatter;', 'import org.jo
+da.time.format.PeriodFormatterBuilder;'], ['import java.util.Date;', 'import java.util.HashSet;', 'import java.util
+.Set;', 'import java.util.TimeZone;', 'import org.joda.time.DateTimeZone;', 'import org.joda.time.tz.Provider;'], [
+'import org.joda.time.DateTime;', 'import org.joda.time.DateTimeZone;'], ['import org.joda.time.DateTime;', 'import
+ org.joda.time.format.DateTimeFormat;', 'import org.joda.time.format.DateTimeFormatter;'], ['import org.joda.time.D
+ateTime;', 'import org.joda.time.DateTimeUtils.MillisProvider;'], ['import org.joda.time.DateTime;', 'import org.jo
+da.time.LocalDate;', 'import org.joda.time.format.DateTimeFormat;', 'import org.joda.time.format.DateTimeFormatter;
+'], ['import org.joda.time.DateTime;']]                                                                            
+{                                                                                                                  
+  "accuracy": 0.8011363636363636,                                                                                  
+  "f1": 0.8895899053627759,                                                                                        
+  "precision": 0.8294117647058824,                                                                                 
+  "recall": 0.9591836734693877                                                                                     
+}
+
+Prediction for GWT Classes:                                                                                        
+                                                                                                                   
+100%|¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 50/50 [09:04
+                                                                                                                   
+Predicted Import List: [[], ['import com.google.gwt.core.client.GWT;', 'import com.google.gwt.junit.client.GWTTestC
+ase;', 'import com.google.gwt.sample.stockwatcher.client.GreetingService;', 'import com.google.gwt.sample.stockwatc
+her.client.GreetingServiceAsync;', 'import com.google.gwt.user.client.rpc.AsyncCallback;'], ['import com.google.gwt
+.core.client.EntryPoint;', 'import com.google.gwt.user.client.rpc.AsyncCallback;', 'import com.google.gwt.user.clie
+nt.ui.Button;', 'import com.google.gwt.user.client.ui.RootPanel;', 'import com.google.gwt.user.client.ui.TextBox;',
+ 'import com.google.gwt.user.client.Window;'], [], [], ['import com.google.gwt.user.client.DOM;', 'import com.googl
+e.gwt.user.client.Element;', 'import com.google.gwt.user.client.ui.Widget;'], ['import com.google.gwt.core.client.E
+ntryPoint;', 'import com.google.gwt.user.client.Timer;', 'import com.google.gwt.user.client.ui.Panel;', 'import com
+.google.gwt.user.client.ui.RootPanel;', 'import com.google.gwt.user.client.ui.VerticalPanel;', 'import com.google.g
+wt.user.client.ui.Table;', 'import com.google.gwt.visualization.client.DataTable;', 'import com.google.gwt.visualiz
+ation.client.VisualizationUtils;', 'import com.google.gwt.visualization.client.DataTable;', 'import com.google.gwt.
+visualization.client.AbstractDataTable.ColumnType;', 'import com.google.gwt.visualization.client.visualizations.Tab
+le.Options;', 'import gwt.TestService;', 'import gwt.TestServiceAsync;', 'import gwt.ListItem;', 'import java.util.
+ArrayList;', 'import com.google.gwt.user.client.rpc.AsyncCallback;'], ['import com.google.gwt.http.client.Request;'
+, 'import com.google.gwt.http.client.RequestBuilder;', 'import com.google.gwt.http.client.RequestCallback;', 'impor
+t com.google.gwt.http.client.RequestException;', 'import com.google.gwt.http.client.Response;', 'import com.google.
+gwt.user.client.Window;'], [], ['import com.google.gwt.user.client.ui.FormPanel;', 'import com.google.gwt.user.clie
+nt.ui.VerticalPanel;', 'import com.google.gwt.user.client.ui.Label;', 'import com.google.gwt.user.client.ui.TextBox
+;', 'import com.google.gwt.user.client.ui.Button;', 'import com.google.gwt.event.dom.client.ClickListener;', 'impor
+t com.google.gwt.event.dom.client.ClickEvent;', 'import com.google.gwt.user.client.ui.Widget;'], [], ['import com.g
+oogle.gwt.user.client.ui.AbsolutePanel;', 'import com.google.gwt.user.client.ui.Label;', 'import com.google.gwt.use
+r.client.ui.RootPanel;', 'import com.google.gwt.user.client.ui.TextBox;', 'import com.google.gwt.user.client.ui.Ver
+ticalPanel;'], ['import com.google.gwt.user.client.ui.AbsolutePanel;', 'import com.google.gwt.user.client.ui.Button
+;', 'import com.google.gwt.user.client.ui.ClickListener;', 'import com.google.gwt.user.client.ui.RootPanel;'], ['im
+port com.google.gwt.http.client.Request;', 'import com.google.gwt.http.client.RequestBuilder;', 'import com.google.
+gwt.http.client.RequestCallback;', 'import com.google.gwt.http.client.Response;', 'import com.google.gwt.user.clien
+t.Window;', 'import com.google.gwt.core.client.GWT;'], ['import com.google.gwt.http.client.Request;', 'import com.g
+oogle.gwt.http.client.RequestBuilder;', 'import com.google.gwt.http.client.RequestCallback;', 'import com.google.gw
+t.http.client.Response;', 'import com.google.gwt.http.client.URL;'], ['import com.google.gwt.http.client.RequestBui
+lder;', 'import com.google.gwt.http.client.RequestCallback;', 'import com.google.gwt.http.client.RequestException;'
+, 'import com.google.gwt.http.client.Response;', 'import com.google.gwt.user.client.ui.HTML;', 'import com.google.g
+wt.user.client.ui.RootPanel;'], ['import com.google.gwt.core.client.GWT;', 'import com.google.gwt.event.dom.client.
+ClickEvent;', 'import com.google.gwt.event.dom.client.ClickHandler;', 'import com.google.gwt.event.dom.client.HasCl
+ickHandlers;', 'import com.google.gwt.i18n.client.DateTimeFormat;', 'import com.google.gwt.i18n.client.NumberFormat
+;', 'import com.google.gwt.user.client.rpc.AsyncCallback;', 'import com.google.gwt.user.client.ui.AbstractImageProt
+otype;', 'import com.google.gwt.user.client.ui.Button;', 'import com.google.gwt.user.client.ui.Composite;', 'import
+ com.google.gwt.user.client.ui.DockPanel;', 'import com.google.gwt.user.client.ui.HTML;', 'import com.google.gwt.us
+er.client.ui.HasHorizontalAlignment;', 'import com.google.gwt.user.client.ui.Image;', 'import com.google.gwt.user.c
+lient.ui.ImageBundle;', 'import com.google.gwt.user.client.ui.Label;', 'import com.google.gwt.user.client.ui.Vertic
+alPanel;', 'import com.google.gwt.user.client.ui.Widget;'], ['import com.google.gwt.core.client.GWT;', 'import com.
+google.gwt.uibinder.client.UiBinder;', 'import com.google.gwt.user.client.ui.Composite;', 'import com.google.gwt.us
+er.client.ui.Widget;'], ['import com.google.gwt.user.client.ui.Button;', 'import com.google.gwt.user.client.ui.Root
+Panel;', 'import com.google.gwt.user.client.ui.VerticalPanel;'], ['import com.google.gwt.user.client.ui.Button;', '
+import com.google.gwt.user.client.ui.ClickHandler;', 'import com.google.gwt.user.client.ui.RootPanel;', 'import com
+.google.gwt.user.client.ui.Widget;', 'import com.google.gwt.event.dom.client.ClickEvent;', 'import com.google.gwt.e
+vent.dom.client.ClickHandler;', 'import com.google.gwt.user.client.Window;', 'import com.google.gwt.core.client.Ent
+ryPoint;'], ['import com.google.gwt.user.client.ui.Button;', 'import com.google.gwt.user.client.ui.PopupPanel;', 'i
+mport com.google.gwt.user.client.ui.VerticalPanel;', 'import com.google.gwt.user.client.ui.Widget;'], ['import com.
+google.gwt.core.client.GWT;', 'import com.google.gwt.event.dom.client.ClickEvent;', 'import com.google.gwt.event.do
+m.client.ClickHandler;', 'import com.google.gwt.uibinder.client.UiBinder;', 'import com.google.gwt.uibinder.client.
+UiField;', 'import com.google.gwt.uibinder.client.UiHandler;', 'import com.google.gwt.user.client.ui.Button;', 'imp
+ort com.google.gwt.user.client.ui.Composite;', 'import com.google.gwt.user.client.ui.Label;', 'import com.google.gw
+t.user.client.ui.VerticalPanel;'], ['import java.util.UUID;', 'import com.google.gwt.http.client.Request;', 'import
+ com.google.gwt.http.client.RequestBuilder;', 'import com.google.gwt.http.client.RequestCallback;', 'import com.goo
+gle.gwt.http.client.RequestException;', 'import com.google.gwt.http.client.Response;', 'import java.util.UUID;', 'i
+mport com.google.gwt.http.client.Request;', 'import com.google.gwt.http.client.RequestBuilder;', 'import com.google
+.gwt.http.client.RequestCallback;', 'import com.google.gwt.http.client.RequestException;', 'import com.google.gwt.h
+ttp.client.Response;'], ['import com.google.gwt.event.dom.client.ClickEvent;', 'import com.google.gwt.event.dom.cli
+ent.ClickHandler;', 'import com.google.gwt.event.shared.HandlerRegistration;', 'import com.google.gwt.user.client.D
+OM;', 'import com.google.gwt.user.client.ui.Composite;', 'import com.google.gwt.user.client.ui.HasClickHandlers;', 
+'import com.google.gwt.user.client.ui.Widget;'], ['import com.google.gwt.core.client.EntryPoint;', 'import com.goog
+le.gwt.event.dom.client.ClickEvent;', 'import com.google.gwt.event.dom.client.ClickHandler;', 'import com.google.gw
+t.event.dom.client.KeyCodes;', 'import com.google.gwt.event.dom.client.KeyUpEvent;', 'import com.google.gwt.event.d
+om.client.KeyUpHandler;', 'import com.google.gwt.user.client.ui.Button;', 'import com.google.gwt.user.client.ui.Dia
+logBox;', 'import com.google.gwt.user.client.ui.HTML;', 'import com.google.gwt.user.client.ui.Label;', 'import com.
+google.gwt.user.client.ui.RootPanel;', 'import com.google.gwt.user.client.ui.TextBox;', 'import com.google.gwt.user
+.client.ui.VerticalPanel;'], ['import com.google.gwt.event.dom.client.ClickEvent;', 'import com.google.gwt.event.do
+m.client.ClickHandler;', 'import com.google.gwt.event.logical.shared.FormHandler;', 'import com.google.gwt.event.lo
+gical.shared.FormSubmitCompleteEvent;', 'import com.google.gwt.event.logical.shared.FormSubmitEvent;', 'import com.
+google.gwt.user.client.ui.Button;', 'import com.google.gwt.user.client.ui.FormPanel;', 'import com.google.gwt.user.
+client.ui.RootPanel;', 'import com.google.gwt.user.client.ui.TextBox;', 'import com.google.gwt.user.client.ui.Verti
+calPanel;', 'import com.google.gwt.user.client.ui.Widget;'], ['import com.google.gwt.core.client.EntryPoint;', 'imp
+ort com.google.gwt.dom.client.Document;', 'import com.google.gwt.dom.client.NodeList;', 'import com.google.gwt.user
+.client.ui.Button;', 'import com.google.gwt.user.client.ui.RootPanel;'], ['import com.google.gwt.core.client.EntryP
+oint;', 'import com.google.gwt.http.client.RequestBuilder;', 'import com.google.gwt.http.client.RequestCallback;', 
+'import com.google.gwt.http.client.RequestException;', 'import com.google.gwt.http.client.Response;', 'import com.g
+oogle.gwt.user.client.Window;'], ['import com.google.gwt.http.client.RequestBuilder;', 'import com.google.gwt.http.
+client.RequestCallback;', 'import com.google.gwt.http.client.RequestException;', 'import com.google.gwt.http.client
+.Response;', 'import com.google.gwt.jsonp.client.JsonpRequestBuilder;', 'import com.google.gwt.user.client.Window;'
+, 'import com.google.gwt.user.client.rpc.AsyncCallback;'], ['import com.google.gwt.user.client.ui.TextBox;', 'impor
+t com.google.gwt.user.client.ui.DialogBox;', 'import com.google.gwt.user.client.ui.Grid;', 'import com.google.gwt.u
+ser.client.ui.HTML;'], ['import com.google.gwt.http.client.Request;', 'import com.google.gwt.http.client.RequestBui
+lder;', 'import com.google.gwt.http.client.RequestCallback;', 'import com.google.gwt.http.client.RequestException;'
+, 'import com.google.gwt.http.client.Response;', 'import com.google.gwt.http.client.URL;'], ['import com.google.gwt
+.http.client.Request;', 'import com.google.gwt.http.client.RequestBuilder;', 'import com.google.gwt.http.client.Req
+uestCallback;', 'import com.google.gwt.http.client.Response;', 'import com.google.gwt.http.client.URL;', 'import co
+m.google.gwt.user.client.Window;'], ['import java.util.ArrayList;', 'import java.util.Iterator;', 'import java.util
+.List;', 'import com.google.gwt.core.client.EntryPoint;', 'import com.google.gwt.user.client.ui.Button;', 'import c
+om.google.gwt.user.client.ui.CheckBox;', 'import com.google.gwt.user.client.ui.DialogBox;', 'import com.google.gwt.
+user.client.ui.DockPanel;', 'import com.google.gwt.user.client.ui.Grid;', 'import com.google.gwt.user.client.ui.HTM
+L;', 'import com.google.gwt.user.client.ui.HorizontalPanel;', 'import com.google.gwt.user.client.ui.RadioButton;', 
+'import com.google.gwt.user.client.ui.RootPanel;', 'import com.google.gwt.user.client.ui.VerticalPanel;', 'import c
+om.google.gwt.user.client.ui.Widget;'], ['import com.google.gwt.event.dom.client.ClickEvent;', 'import com.google.g
+wt.event.dom.client.ClickHandler;', 'import com.google.gwt.event.dom.client.SubmitEvent;', 'import com.google.gwt.e
+vent.dom.client.SubmitHandler;', 'import com.google.gwt.event.shared.HandlerRegistration;', 'import com.google.gwt.
+user.client.DOM;', 'import com.google.gwt.user.client.ui.Button;', 'import com.google.gwt.user.client.ui.FormPanel;
+'], ['import com.google.gwt.animation.client.Animation;', 'import com.google.gwt.core.client.GWT;', 'import com.goo
+gle.gwt.dom.client.Element;', 'import com.google.gwt.dom.client.Style.Unit;', 'import com.google.gwt.user.client.ui
+.FlowPanel;'], ['import com.google.gwt.user.client.ui.AbsolutePanel;', 'import com.google.gwt.user.client.ui.RootPa
+nel;', 'import com.google.gwt.user.client.ui.SimplePanel;'], ['import com.google.gwt.core.client.EntryPoint;', 'imp
+ort com.google.gwt.core.client.JsArray;', 'import com.google.gwt.http.client.Request;', 'import com.google.gwt.http
+.client.RequestBuilder;', 'import com.google.gwt.http.client.RequestCallback;', 'import com.google.gwt.http.client.
+RequestException;', 'import com.google.gwt.http.client.Response;', 'import com.google.gwt.user.client.Window;', 'im
+port com.google.gwt.user.client.ui.HTML;', 'import com.google.gwt.user.client.ui.RootPanel;', 'import com.google.gw
+t.user.client.ui.Widget;'], ['import com.google.gwt.core.client.GWT;', 'import com.google.gwt.event.dom.client.HasC
+lickHandlers;', 'import com.google.gwt.event.dom.client.ClickHandler;', 'import com.google.gwt.user.client.ui.Compo
+site;', 'import com.google.gwt.user.client.ui.Hyperlink;', 'import com.google.gwt.user.client.ui.VerticalPanel;', '
+import com.google.gwt.user.client.ui.Widget;'], ['import java.io.DataInputStream;', 'import java.io.File;', 'import
+ java.io.FileInputStream;', 'import javax.servlet.ServletContext;', 'import javax.servlet.ServletOutputStream;', 'i
+mport javax.servlet.http.HttpServletResponse;', 'import com.google.gwt.user.server.rpc.RemoteServiceServlet;'], ['i
+mport com.extjs.gxt.ui.client.widget.LayoutContainer;', 'import com.google.gwt.user.client.ui.HorizontalPanel;', 'i
+mport com.google.gwt.user.client.ui.Label;'], ['import com.google.gwt.user.client.Element;', 'import com.google.gwt
+.user.client.ui.Button;', 'import com.google.gwt.user.client.ui.Composite;', 'import com.google.gwt.user.client.ui.
+Label;', 'import com.google.gwt.user.client.ui.RootPanel;', 'import com.google.gwt.user.client.ui.VerticalPanel;', 
+'import com.google.gwt.event.dom.client.ClickEvent;', 'import com.google.gwt.event.dom.client.ClickHandler;'], ['im
+port com.google.gwt.core.client.EntryPoint;', 'import com.google.gwt.http.client.Request;', 'import com.google.gwt.
+http.client.RequestBuilder;', 'import com.google.gwt.http.client.RequestCallback;', 'import com.google.gwt.http.cli
+ent.RequestException;', 'import com.google.gwt.http.client.Response;', 'import com.google.gwt.user.client.Window;',
+ 'import com.google.gwt.user.client.ui.RootPanel;', 'import com.google.gwt.user.client.ui.Widget;'], ['import com.g
+oogle.gwt.event.dom.client.ClickEvent;', 'import com.google.gwt.event.dom.client.ClickHandler;', 'import com.google
+.gwt.event.dom.client.MouseOutEvent;', 'import com.google.gwt.event.dom.client.MouseOutHandler;', 'import com.googl
+e.gwt.user.client.ui.Composite;', 'import com.google.gwt.user.client.ui.HorizontalPanel;', 'import com.google.gwt.u
+ser.client.ui.Label;', 'import com.google.gwt.user.client.ui.Widget;'], ['import com.google.gwt.core.client.GWT;', 
+'import com.google.gwt.user.client.rpc.AsyncCallback;', 'import com.google.gwt.user.client.ui.DockLayoutPanel;', 'i
+mport com.google.gwt.user.client.ui.Label;', 'import com.google.gwt.user.client.ui.ResizeComposite;', 'import com.g
+oogle.gwt.dom.client.Style.Unit;', 'import com.google.gwt.core.client.RunAsyncCallback;'], ['import com.google.gwt.
+core.client.EntryPoint;', 'import com.google.gwt.event.dom.client.ClickEvent;', 'import com.google.gwt.event.dom.cl
+ient.ClickHandler;', 'import com.google.gwt.user.client.Window;', 'import com.google.gwt.user.client.ui.Button;', '
+import com.google.gwt.user.client.ui.Label;', 'import com.google.gwt.user.client.ui.RootPanel;'], ['import com.goog
+le.gwt.user.client.ui.DialogBox;', 'import com.google.gwt.user.client.ui.HTML;', 'import com.google.gwt.user.client
+.ui.RootPanel;', 'import com.google.gwt.user.client.ui.VerticalPanel;'], ['import com.google.gwt.core.client.EntryP
+oint;', 'import com.google.gwt.dom.client.Style.Unit;', 'import com.google.gwt.user.client.ui.HTML;', 'import com.g
+oogle.gwt.user.client.ui.LayoutPanel;', 'import com.google.gwt.user.client.ui.RootLayoutPanel;', 'import com.google
+.gwt.user.client.ui.Widget;'], ['import com.google.gwt.user.client.Window;', 'import com.google.gwt.user.client.ui.
+RootLayoutPanel;', 'import com.google.gwt.user.client.ui.TabBar;', 'import com.google.gwt.event.logical.shared.Befo
+reSelectionEvent;', 'import com.google.gwt.event.logical.shared.BeforeSelectionHandler;', 'import com.google.gwt.ev
+ent.logical.shared.SelectionEvent;', 'import com.google.gwt.event.logical.shared.SelectionHandler;'], ['import com.
+google.gwt.core.client.EntryPoint;', 'import com.google.gwt.dom.client.BodyElement;', 'import com.google.gwt.dom.cl
+ient.Element;', 'import com.google.gwt.user.client.DOM;', 'import com.google.gwt.user.client.Window;', 'import java
+.util.ArrayList;'], ['import com.google.gwt.event.dom.client.BlurEvent;', 'import com.google.gwt.event.dom.client.B
+lurHandler;', 'import com.google.gwt.event.dom.client.ClickEvent;', 'import com.google.gwt.event.dom.client.ClickHa
+ndler;', 'import com.google.gwt.event.dom.client.HasBlurHandlers;', 'import com.google.gwt.event.dom.client.HasClic
+kHandlers;', 'import com.google.gwt.event.dom.client.HasKeyDownHandlers;', 'import com.google.gwt.event.dom.client.
+KeyDownEvent;', 'import com.google.gwt.event.dom.client.KeyDownHandler;', 'import com.google.gwt.user.client.DOM;',
+ 'import com.google.gwt.user.client.ui.ComplexPanel;', 'import com.google.gwt.user.client.ui.HasHTML;', 'import com
+.google.gwt.user.client.ui.HasText;', 'import com.google.gwt.user.client.ui.HandlerRegistration;', 'import com.goog
+le.gwt.user.client.ui.Widget;']]                                                                                   
+                                                                                                                   
+Correct Import List: [['import com.google.gwt.event.dom.client.MouseDownEvent;', 'import com.google.gwt.event.dom.c
+lient.MouseDownHandler;', 'import com.google.gwt.user.client.ui.AbsolutePanel;', 'import com.google.gwt.user.client
+.ui.Composite;'], ['import com.google.gwt.core.client.GWT;', 'import com.google.gwt.junit.client.GWTTestCase;', 'im
+port com.google.gwt.user.client.rpc.AsyncCallback;', 'import aQute.gwt.greeter.shared.GreetingService;', 'import aQ
+ute.gwt.greeter.shared.GreetingServiceAsync;'], ['import com.google.gwt.core.client.EntryPoint;', 'import com.googl
+e.gwt.user.client.Window;', 'import com.google.gwt.user.client.rpc.AsyncCallback;', 'import com.google.gwt.user.cli
+ent.ui.Button;', 'import com.google.gwt.user.client.ui.RootPanel;', 'import com.google.gwt.user.client.ui.TextBox;'
+], ['import com.google.gwt.user.client.ui.Composite;', 'import com.google.gwt.user.client.ui.HTML;', 'import com.go
+ogle.gwt.user.client.ui.VerticalSplitPanel;'], ['import com.google.gwt.core.client.JsArray;', 'import com.google.gw
+t.core.client.JsArrayInteger;'], ['import com.google.gwt.user.client.DOM;', 'import com.google.gwt.user.client.Elem
+ent;', 'import com.google.gwt.user.client.ui.Widget;'], ['import com.extjs.gxt.ui.client.widget.table.Table;', 'imp
+ort com.google.gwt.core.client.EntryPoint;', 'import com.google.gwt.user.client.Timer;', 'import com.google.gwt.use
+r.client.ui.Panel;', 'import com.google.gwt.user.client.ui.RootPanel;', 'import com.google.gwt.user.client.ui.Verti
+calPanel;'], ['import com.google.gwt.http.client.Request;', 'import com.google.gwt.http.client.RequestBuilder;', 'i
+mport com.google.gwt.http.client.RequestCallback;', 'import com.google.gwt.http.client.RequestException;', 'import 
+com.google.gwt.http.client.Response;', 'import com.google.gwt.user.client.Window;'], ['import com.google.gwt.user.c
+lient.Command;', 'import com.google.gwt.user.client.ui.MenuBar;', 'import com.google.gwt.user.client.ui.VerticalPan
+el;'], ['import com.google.gwt.user.client.ui.Button;', 'import com.google.gwt.user.client.ui.ClickListener;', 'imp
+ort com.google.gwt.user.client.ui.FormPanel;', 'import com.google.gwt.user.client.ui.Label;', 'import com.google.gw
+t.user.client.ui.TextBox;', 'import com.google.gwt.user.client.ui.VerticalPanel;', 'import com.google.gwt.user.clie
+nt.ui.Widget;'], ['import com.google.gwt.core.client.EntryPoint;', 'import com.google.gwt.user.client.ui.Horizontal
+Panel;', 'import com.google.gwt.user.client.ui.Label;', 'import com.google.gwt.user.client.ui.RootPanel;'], ['impor
+t com.google.gwt.core.client.EntryPoint;', 'import com.google.gwt.user.client.ui.AbsolutePanel;', 'import com.googl
+e.gwt.user.client.ui.Label;', 'import com.google.gwt.user.client.ui.RootPanel;', 'import com.google.gwt.user.client
+.ui.TextBox;', 'import com.google.gwt.user.client.ui.VerticalPanel;'], ['import com.google.gwt.core.client.EntryPoi
+nt;', 'import com.google.gwt.user.client.ui.AbsolutePanel;', 'import com.google.gwt.user.client.ui.Button;', 'impor
+t com.google.gwt.user.client.ui.ClickListener;', 'import com.google.gwt.user.client.ui.RootPanel;', 'import com.goo
+gle.gwt.user.client.ui.Widget;'], ['import com.google.gwt.core.client.GWT;', 'import com.google.gwt.http.client.Req
+uest;', 'import com.google.gwt.http.client.RequestBuilder;', 'import com.google.gwt.http.client.RequestCallback;', 
+'import com.google.gwt.http.client.Response;', 'import com.google.gwt.user.client.Window;'], ['import com.google.gw
+t.http.client.Request;', 'import com.google.gwt.http.client.RequestBuilder;', 'import com.google.gwt.http.client.Re
+questCallback;', 'import com.google.gwt.http.client.RequestException;', 'import com.google.gwt.http.client.Response
+;', 'import com.google.gwt.http.client.URL;'], ['import com.google.gwt.http.client.Request;', 'import com.google.gw
+t.http.client.RequestBuilder;', 'import com.google.gwt.http.client.RequestCallback;', 'import com.google.gwt.http.c
+lient.Response;', 'import com.google.gwt.user.client.ui.HTML;', 'import com.google.gwt.user.client.ui.RootPanel;'],
+ ['import com.google.gwt.core.client.GWT;', 'import com.google.gwt.user.client.ui.AbstractImagePrototype;', 'import
+ com.google.gwt.user.client.ui.Button;', 'import com.google.gwt.user.client.ui.Composite;', 'import com.google.gwt.
+user.client.ui.DockPanel;', 'import com.google.gwt.user.client.ui.HTML;', 'import com.google.gwt.user.client.ui.Ima
+ge;', 'import com.google.gwt.user.client.ui.ImageBundle;', 'import com.google.gwt.user.client.ui.VerticalPanel;'], 
+['import com.google.gwt.core.client.GWT;', 'import com.google.gwt.uibinder.client.UiBinder;', 'import com.google.gw
+t.user.client.ui.Composite;', 'import com.google.gwt.user.client.ui.Widget;'], ['import com.extjs.gxt.ui.client.wid
+get.VerticalPanel;', 'import com.extjs.gxt.ui.client.widget.button.Button;', 'import com.google.gwt.user.client.ui.
+RootPanel;'], ['import com.google.gwt.core.client.EntryPoint;', 'import com.google.gwt.event.dom.client.ClickEvent;
+', 'import com.google.gwt.event.dom.client.ClickHandler;', 'import com.google.gwt.user.client.Window;', 'import com
+.google.gwt.user.client.ui.Button;', 'import com.google.gwt.user.client.ui.RootPanel;'], ['import com.google.gwt.us
+er.client.ui.Button;', 'import com.google.gwt.user.client.ui.PopupPanel;', 'import com.google.gwt.user.client.ui.Ve
+rticalPanel;', 'import com.google.gwt.user.client.ui.Widget;'], ['import com.google.gwt.core.client.GWT;', 'import 
+com.google.gwt.event.dom.client.ClickEvent;', 'import com.google.gwt.uibinder.client.UiBinder;', 'import com.google
+.gwt.uibinder.client.UiField;', 'import com.google.gwt.uibinder.client.UiHandler;', 'import com.google.gwt.user.cli
+ent.ui.Button;', 'import com.google.gwt.user.client.ui.Composite;', 'import com.google.gwt.user.client.ui.Label;', 
+'import com.google.gwt.user.client.ui.VerticalPanel;'], ['import java.util.UUID;', 'import com.google.gwt.http.clie
+nt.Request;', 'import com.google.gwt.http.client.RequestBuilder;', 'import com.google.gwt.http.client.RequestCallba
+ck;', 'import com.google.gwt.http.client.RequestException;', 'import com.google.gwt.http.client.Response;'], ['impo
+rt com.google.gwt.event.dom.client.ClickEvent;', 'import com.google.gwt.event.dom.client.ClickHandler;', 'import co
+m.google.gwt.event.dom.client.HasClickHandlers;', 'import com.google.gwt.event.shared.HandlerRegistration;', 'impor
+t com.google.gwt.user.client.DOM;', 'import com.google.gwt.user.client.ui.Composite;', 'import com.google.gwt.user.
+client.ui.Widget;'], ['import com.google.gwt.event.dom.client.ClickEvent;', 'import com.google.gwt.event.dom.client
+.ClickHandler;', 'import com.google.gwt.event.dom.client.KeyCodes;', 'import com.google.gwt.event.dom.client.KeyUpE
+vent;', 'import com.google.gwt.event.dom.client.KeyUpHandler;', 'import com.google.gwt.user.client.ui.Button;', 'im
+port com.google.gwt.user.client.ui.DialogBox;', 'import com.google.gwt.user.client.ui.HTML;', 'import com.google.gw
+t.user.client.ui.Label;', 'import com.google.gwt.user.client.ui.RootPanel;', 'import com.google.gwt.user.client.ui.
+TextBox;', 'import com.google.gwt.user.client.ui.VerticalPanel;'], ['import com.google.gwt.user.client.ui.Button;',
+ 'import com.google.gwt.user.client.ui.ClickListener;', 'import com.google.gwt.user.client.ui.FormHandler;', 'impor
+t com.google.gwt.user.client.ui.FormPanel;', 'import com.google.gwt.user.client.ui.FormSubmitCompleteEvent;', 'impo
+rt com.google.gwt.user.client.ui.FormSubmitEvent;', 'import com.google.gwt.user.client.ui.RootPanel;', 'import com.
+google.gwt.user.client.ui.TextBox;', 'import com.google.gwt.user.client.ui.VerticalPanel;', 'import com.google.gwt.
+user.client.ui.Widget;'], ['import com.google.gwt.core.client.GWT;', 'import com.google.gwt.dom.client.Document;', 
+'import com.google.gwt.dom.client.NodeList;', 'import com.google.gwt.user.client.ui.Button;', 'import com.google.gw
+t.user.client.ui.RootPanel;'], ['import com.google.gwt.core.client.EntryPoint;', 'import com.google.gwt.http.client
+.Request;', 'import com.google.gwt.http.client.RequestBuilder;', 'import com.google.gwt.http.client.RequestCallback
+;', 'import com.google.gwt.http.client.RequestException;', 'import com.google.gwt.http.client.Response;', 'import c
+om.google.gwt.user.client.Window;'], ['import org.apache.commons.net.nntp.Article;', 'import com.google.gwt.jsonp.c
+lient.JsonpRequestBuilder;', 'import com.google.gwt.user.client.Window;', 'import com.google.gwt.user.client.rpc.As
+yncCallback;'], ['import com.google.gwt.user.client.ui.DialogBox;', 'import com.google.gwt.user.client.ui.Grid;', '
+import com.google.gwt.user.client.ui.HTML;', 'import com.google.gwt.user.client.ui.TextBox;'], ['import com.google.
+gwt.http.client.Request;', 'import com.google.gwt.http.client.RequestBuilder;', 'import com.google.gwt.http.client.
+RequestCallback;', 'import com.google.gwt.http.client.RequestException;', 'import com.google.gwt.http.client.Respon
+se;', 'import com.google.gwt.http.client.URL;'], ['import com.google.gwt.http.client.Request;', 'import com.google.
+gwt.http.client.RequestBuilder;', 'import com.google.gwt.http.client.RequestCallback;', 'import com.google.gwt.http
+.client.RequestException;', 'import com.google.gwt.http.client.Response;', 'import com.google.gwt.http.client.URL;'
+, 'import com.google.gwt.user.client.Window;'], ['import java.util.ArrayList;', 'import java.util.Iterator;', 'impo
+rt java.util.List;', 'import com.google.gwt.core.client.EntryPoint;', 'import com.google.gwt.user.client.ui.Button;
+', 'import com.google.gwt.user.client.ui.CheckBox;', 'import com.google.gwt.user.client.ui.ClickListener;', 'import
+ com.google.gwt.user.client.ui.DockPanel;', 'import com.google.gwt.user.client.ui.Grid;', 'import com.google.gwt.us
+er.client.ui.HTML;', 'import com.google.gwt.user.client.ui.HorizontalPanel;', 'import com.google.gwt.user.client.ui
+.RadioButton;', 'import com.google.gwt.user.client.ui.RootPanel;', 'import com.google.gwt.user.client.ui.VerticalPa
+nel;', 'import com.google.gwt.user.client.ui.Widget;'], ['import com.google.gwt.event.dom.client.ClickEvent;', 'imp
+ort com.google.gwt.event.dom.client.ClickHandler;', 'import com.google.gwt.event.shared.HandlerRegistration;', 'imp
+ort com.google.gwt.user.client.DOM;', 'import com.google.gwt.user.client.ui.Button;', 'import com.google.gwt.user.c
+lient.ui.FormPanel;', 'import com.google.gwt.user.client.ui.FormPanel.SubmitEvent;', 'import com.google.gwt.user.cl
+ient.ui.FormPanel.SubmitHandler;'], ['import com.google.gwt.animation.client.Animation;', 'import com.google.gwt.co
+re.client.GWT;', 'import com.google.gwt.dom.client.Element;', 'import com.google.gwt.dom.client.Style.Unit;', 'impo
+rt com.google.gwt.user.client.ui.FlowPanel;'], ['import com.google.gwt.user.client.ui.AbsolutePanel;', 'import com.
+google.gwt.user.client.ui.RootPanel;', 'import com.google.gwt.user.client.ui.SimplePanel;'], ['import com.google.gw
+t.core.client.EntryPoint;', 'import com.google.gwt.core.client.JsArray;', 'import com.google.gwt.http.client.Reques
+t;', 'import com.google.gwt.http.client.RequestBuilder;', 'import com.google.gwt.http.client.RequestCallback;', 'im
+port com.google.gwt.http.client.RequestException;', 'import com.google.gwt.http.client.Response;', 'import com.goog
+le.gwt.http.client.URL;', 'import com.google.gwt.user.client.Window;', 'import com.google.gwt.user.client.ui.HTML;'
+, 'import com.google.gwt.user.client.ui.RootPanel;', 'import com.google.gwt.user.client.ui.Widget;'], ['import com.
+google.gwt.event.dom.client.HasClickHandlers;', 'import com.google.gwt.user.client.ui.Composite;', 'import com.goog
+le.gwt.user.client.ui.Hyperlink;', 'import com.google.gwt.user.client.ui.VerticalPanel;', 'import com.google.gwt.us
+er.client.ui.Widget;'], ['import java.io.DataInputStream;', 'import java.io.File;', 'import java.io.FileInputStream
+;', 'import javax.servlet.ServletContext;', 'import javax.servlet.ServletOutputStream;', 'import javax.servlet.http
+.HttpServletResponse;', 'import com.google.gwt.user.server.rpc.RemoteServiceServlet;'], ['import com.extjs.gxt.ui.c
+lient.widget.LayoutContainer;', 'import com.google.gwt.user.client.ui.HorizontalPanel;', 'import com.google.gwt.use
+r.client.ui.Label;'], ['import com.google.gwt.dom.client.Element;', 'import com.google.gwt.event.dom.client.ClickEv
+ent;', 'import com.google.gwt.event.dom.client.ClickHandler;', 'import com.google.gwt.user.client.ui.Button;', 'imp
+ort com.google.gwt.user.client.ui.Composite;', 'import com.google.gwt.user.client.ui.Label;', 'import com.google.gw
+t.user.client.ui.RootPanel;', 'import com.google.gwt.user.client.ui.VerticalPanel;'], ['import com.google.gwt.core.
+client.EntryPoint;', 'import com.google.gwt.http.client.Request;', 'import com.google.gwt.http.client.RequestBuilde
+r;', 'import com.google.gwt.http.client.RequestCallback;', 'import com.google.gwt.http.client.RequestException;', '
+import com.google.gwt.http.client.Response;', 'import com.google.gwt.http.client.URL;', 'import com.google.gwt.user
+.client.Window;'], ['import com.google.gwt.event.dom.client.ClickEvent;', 'import com.google.gwt.event.dom.client.C
+lickHandler;', 'import com.google.gwt.event.dom.client.MouseOutEvent;', 'import com.google.gwt.event.dom.client.Mou
+seOutHandler;', 'import com.google.gwt.user.client.ui.Composite;', 'import com.google.gwt.user.client.ui.Horizontal
+Panel;', 'import com.google.gwt.user.client.ui.Label;', 'import com.google.gwt.user.client.ui.Widget;'], ['import c
+om.google.gwt.core.client.GWT;', 'import com.google.gwt.core.client.RunAsyncCallback;', 'import com.google.gwt.dom.
+client.Style.Unit;', 'import com.google.gwt.user.client.rpc.AsyncCallback;', 'import com.google.gwt.user.client.ui.
+DockLayoutPanel;', 'import com.google.gwt.user.client.ui.Label;', 'import com.google.gwt.user.client.ui.ResizeCompo
+site;'], ['import com.google.gwt.core.client.EntryPoint;', 'import com.google.gwt.event.dom.client.ClickEvent;', 'i
+mport com.google.gwt.event.dom.client.ClickHandler;', 'import com.google.gwt.user.client.Window;', 'import com.goog
+le.gwt.user.client.ui.Button;', 'import com.google.gwt.user.client.ui.Label;', 'import com.google.gwt.user.client.u
+i.RootPanel;'], ['import com.google.gwt.user.client.ui.DialogBox;', 'import com.google.gwt.user.client.ui.HTML;', '
+import com.google.gwt.user.client.ui.RootPanel;', 'import com.google.gwt.user.client.ui.VerticalPanel;'], ['import 
+com.google.gwt.core.client.EntryPoint;', 'import com.google.gwt.dom.client.Style.Unit;', 'import com.google.gwt.use
+r.client.ui.HTML;', 'import com.google.gwt.user.client.ui.LayoutPanel;', 'import com.google.gwt.user.client.ui.Root
+LayoutPanel;', 'import com.google.gwt.user.client.ui.Widget;'], ['import com.google.gwt.core.client.EntryPoint;', '
+import com.google.gwt.event.logical.shared.BeforeSelectionEvent;', 'import com.google.gwt.event.logical.shared.Befo
+reSelectionHandler;', 'import com.google.gwt.event.logical.shared.SelectionEvent;', 'import com.google.gwt.event.lo
+gical.shared.SelectionHandler;', 'import com.google.gwt.user.client.Window;', 'import com.google.gwt.user.client.ui
+.TabBar;'], ['import java.util.ArrayList;', 'import com.google.gwt.dom.client.BodyElement;', 'import com.google.gwt
+.dom.client.Document;', 'import com.google.gwt.user.client.DOM;', 'import com.google.gwt.user.client.Element;'], ['
+import com.google.gwt.event.dom.client.BlurEvent;', 'import com.google.gwt.event.dom.client.BlurHandler;', 'import 
+com.google.gwt.event.dom.client.ClickEvent;', 'import com.google.gwt.event.dom.client.ClickHandler;', 'import com.g
+oogle.gwt.event.dom.client.HasBlurHandlers;', 'import com.google.gwt.event.dom.client.HasClickHandlers;', 'import c
+om.google.gwt.event.dom.client.HasKeyDownHandlers;', 'import com.google.gwt.event.dom.client.KeyDownEvent;', 'impor
+t com.google.gwt.event.dom.client.KeyDownHandler;', 'import com.google.gwt.event.shared.HandlerRegistration;', 'imp
+ort com.google.gwt.user.client.DOM;', 'import com.google.gwt.user.client.ui.ComplexPanel;', 'import com.google.gwt.
+user.client.ui.HasHTML;', 'import com.google.gwt.user.client.ui.HasText;', 'import com.google.gwt.user.client.ui.Wi
+dget;']]                                                                                                           
+{                                                                                                                  
+  "accuracy": 0.7620396600566572,                                                                                  
+  "f1": 0.8649517684887459,                                                                                        
+  "precision": 0.8539682539682539,                                                                                 
+  "recall": 0.8762214983713354                                                                                     
+}                                                                                                                  
+ 
+Prediction for XStream Classes                                                                                     
+                                                                                                                   
+100%|¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 44/44 [07:36
+                                                                                                                   
+Predicted Import List: [['import com.thoughtworks.xstream.converters.Converter;', 'import com.thoughtworks.xstream.
+io.HierarchicalStreamReader;', 'import com.thoughtworks.xstream.io.HierarchicalStreamWriter;', 'import com.thoughtw
+orks.xstream.io.UnmarshallingContext;', 'import com.thoughtworks.xstream.io.MarshallingContext;'], ['import com.tho
+ughtworks.xstream.XStream;', 'import com.thoughtworks.xstream.io.xml.DomDriver;', 'import java.io.BufferedReader;',
+ 'import java.io.FileReader;', 'import java.io.IOException;'], ['import com.thoughtworks.xstream.XStream;', 'import
+ com.thoughtworks.xstream.io.HierarchicalStreamReader;', 'import com.thoughtworks.xstream.io.HierarchicalStreamWrit
+er;', 'import com.thoughtworks.xstream.io.xml.DomDriver;', 'import com.thoughtworks.xstream.io.json.JettisonMappedX
+mlDriver;', 'import com.thoughtworks.xstream.io.xml.MXParser;', 'import com.thoughtworks.xstream.converters.Convert
+er;', 'import com.thoughtworks.xstream.converters.MarshallingContext;', 'import com.thoughtworks.xstream.converters
+.UnmarshallingContext;', 'import java.util.ArrayList;', 'import java.util.List;', 'import java.io.BufferedReader;',
+ 'import java.io.FileReader;', 'import java.io.IOException;'], ['import com.thoughtworks.xstream.XStream;', 'import
+ java.util.ArrayList;', 'import java.util.List;'], ['import java.io.FileNotFoundException;', 'import java.io.PrintW
+riter;', 'import com.thoughtworks.xstream.XStream;', 'import com.thoughtworks.xstream.io.xml.DomDriver;'], ['import
+ java.io.File;', 'import java.io.FileOutputStream;', 'import java.io.OutputStream;', 'import com.thoughtworks.xstre
+am.XStream;', 'import com.thoughtworks.xstream.io.xml.DomDriver;'], ['import com.thoughtworks.xstream.annotations.X
+StreamAsAttribute;'], ['import android.app.Activity;', 'import android.os.Bundle;', 'import android.widget.TextView
+;', 'import org.ksoap2.SoapEnvelope;', 'import org.ksoap2.serialization.SoapObject;', 'import org.ksoap2.serializat
+ion.SoapSerializationEnvelope;', 'import org.ksoap2.transport.HttpTransportSE;', 'import com.thoughtworks.xstream.X
+Stream;', 'import com.thoughtworks.xstream.io.xml.DomDriver;'], ['import com.thoughtworks.xstream.XStream;', 'impor
+t com.thoughtworks.xstream.io.xml.DomDriver;', 'import java.io.FileInputStream;', 'import java.io.FileNotFoundExcep
+tion;'], [], ['import com.thoughtworks.xstream.XStream;', 'import com.thoughtworks.xstream.converters.collections.C
+ollectionConverter;', 'import com.thoughtworks.xstream.mapper.ClassAliasingMapper;', 'import java.util.ArrayList;',
+ 'import java.util.List;'], ['import com.thoughtworks.xstream.converters.Converter;', 'import com.thoughtworks.xstr
+eam.io.HierarchicalStreamReader;', 'import com.thoughtworks.xstream.io.HierarchicalStreamWriter;', 'import com.thou
+ghtworks.xstream.io.xml.PrettyPrintWriter;', 'import com.thoughtworks.xstream.io.xml.XppDriver;', 'import com.thoug
+htworks.xstream.mapper.ClassAliasingMapper;', 'import java.io.StringWriter;', 'import java.util.ArrayList;', 'impor
+t java.util.List;'], ['import com.thoughtworks.xstream.mapper.ClassAliasingMapper;', 'import com.thoughtworks.xstre
+am.mapper.Mapper;'], ['import com.thoughtworks.xstream.converters.SingleValueConverter;', 'import java.lang.Enum;']
+, ['import java.util.HashSet;', 'import org.hibernate.collection.PersistentSet;', 'import com.thoughtworks.xstream.
+XStream;', 'import com.thoughtworks.xstream.converters.CollectionConverter;', 'import com.thoughtworks.xstream.io.H
+ierarchicalStreamWriter;', 'import com.thoughtworks.xstream.io.xml.DomDriver;', 'import com.thoughtworks.xstream.io
+.xml.MXParser;', 'import com.thoughtworks.xstream.io.xml.PrettyPrintWriter;', 'import com.thoughtworks.xstream.io.x
+ml.XppDriver;', 'import com.thoughtworks.xstream.mapper.ClassAliasingMapper;', 'import com.thoughtworks.xstream.map
+per.Mapper;', 'import com.thoughtworks.xstream.converters.MarshallingContext;'], ['import com.thoughtworks.xstream.
+XStream;', 'import com.thoughtworks.xstream.mapper.MapperWrapper;'], [], ['import com.thoughtworks.xstream.converte
+rs.Converter;', 'import com.thoughtworks.xstream.io.HierarchicalStreamReader;', 'import com.thoughtworks.xstream.io
+.HierarchicalStreamWriter;', 'import com.thoughtworks.xstream.mapper.Mapper;', 'import com.thoughtworks.xstream.con
+verters.MarshallingContext;', 'import com.thoughtworks.xstream.converters.UnmarshallingContext;', 'import java.util
+.Map;', 'import java.util.HashMap;'], [], ['import java.io.File;', 'import java.io.FileInputStream;', 'import java.
+io.InputStream;', 'import java.io.InputStreamReader;', 'import java.io.Reader;', 'import java.nio.charset.Charset;'
+, 'import com.thoughtworks.xstream.XStream;'], ['import java.util.Map;', 'import com.thoughtworks.xstream.XStream;'
+, 'import com.thoughtworks.xstream.converters.Converter;', 'import com.thoughtworks.xstream.converters.reflection.R
+eflectionConverter;', 'import com.thoughtworks.xstream.mapper.Mapper;', 'import com.thoughtworks.xstream.converters
+.reflection.ReflectionProvider;', 'import com.thoughtworks.xstream.io.HierarchicalStreamReader;', 'import com.thoug
+htworks.xstream.io.HierarchicalStreamWriter;', 'import com.thoughtworks.xstream.converters.MarshallingContext;', 'i
+mport com.thoughtworks.xstream.converters.UnmarshallingContext;'], ['import com.thoughtworks.xstream.XStream;', 'im
+port com.thoughtworks.xstream.annotations.XStreamAlias;', 'import com.thoughtworks.xstream.annotations.XStreamConve
+rter;', 'import com.thoughtworks.xstream.annotations.XStreamImplicit;', 'import com.thoughtworks.xstream.converters
+.collections.ToAttributedValueConverter;', 'import java.io.File;', 'import java.util.Arrays;', 'import java.util.Li
+st;'], ['import com.thoughtworks.xstream.XStream;', 'import com.thoughtworks.xstream.annotations.XStreamAlias;', 'i
+mport com.thoughtworks.xstream.converters.Converter;', 'import com.thoughtworks.xstream.converters.javabean.JavaBea
+nConverter;', 'import com.thoughtworks.xstream.io.xml.XppDriver;'], [], ['import com.thoughtworks.xstream.annotatio
+ns.XStreamAlias;', 'import com.thoughtworks.xstream.annotations.XStreamConverter;', 'import com.thoughtworks.xstrea
+m.converters.extended.ToAttributedValueConverter;'], ['import com.thoughtworks.xstream.converters.SingleValueConver
+ter;', 'import java.util.Collection;', 'import java.util.ArrayList;', 'import java.util.List;'], ['import org.apach
+e.commons.text.WordUtils;', 'import com.example.Content;', 'import com.thoughtworks.xstream.XStream;', 'import com.
+thoughtworks.xstream.converters.Converter;', 'import com.thoughtworks.xstream.converters.MarshallingContext;', 'imp
+ort com.thoughtworks.xstream.converters.UnmarshallingContext;', 'import com.thoughtworks.xstream.io.HierarchicalStr
+eamReader;', 'import com.thoughtworks.xstream.io.HierarchicalStreamWriter;'], ['import java.util.Map;', 'import jav
+a.util.HashMap;', 'import java.util.Map.Entry;', 'import com.thoughtworks.xstream.XStream;', 'import com.thoughtwor
+ks.xstream.converters.Converter;', 'import com.thoughtworks.xstream.io.HierarchicalStreamReader;', 'import com.thou
+ghtworks.xstream.io.HierarchicalStreamWriter;', 'import com.thoughtworks.xstream.io.xml.XppDriver;', 'import com.th
+oughtworks.xstream.mapper.Mapper;', 'import com.thoughtworks.xstream.mapper.MapperWrapper;', 'import com.thoughtwor
+ks.xstream.converters.MarshallingContext;', 'import com.thoughtworks.xstream.converters.UnmarshallingContext;'], ['
+import com.thoughtworks.xstream.XStream;', 'import com.thoughtworks.xstream.annotations.XStreamAlias;', 'import com
+.thoughtworks.xstream.io.xml.DomDriver;', 'import java.util.ArrayList;', 'import java.util.List;'], ['import com.th
+oughtworks.xstream.convert.Converter;', 'import com.thoughtworks.xstream.convert.MarshallingContext;', 'import com.
+thoughtworks.xstream.convert.UnmarshallingContext;', 'import com.thoughtworks.xstream.io.HierarchicalStreamReader;'
+, 'import com.thoughtworks.xstream.io.HierarchicalStreamWriter;'], ['import com.thoughtworks.xstream.XStream;', 'im
+port com.thoughtworks.xstream.annotations.XStreamAlias;', 'import com.thoughtworks.xstream.annotations.XStreamAsAtt
+ribute;'], ['import com.thoughtworks.xstream.XStream;', 'import com.thoughtworks.xstream.mapper.MapperWrapper;', 'i
+mport com.thoughtworks.xstream.converters.collections.HibernatePersistentCollectionConverter;', 'import com.thought
+works.xstream.converters.collections.HibernatePersistentMapConverter;', 'import com.thoughtworks.xstream.converters
+.collections.HibernatePersistentSortedMapConverter;', 'import com.thoughtworks.xstream.converters.collections.Hiber
+natePersistentSortedSetConverter;', 'import com.thoughtworks.xstream.converters.reflection.ReflectionConverter;', '
+import com.thoughtworks.xstream.mapper.Mapper;', 'import com.thoughtworks.xstream.converters.Converter;'], [], ['im
+port java.util.ArrayList;', 'import java.util.Iterator;', 'import java.util.List;', 'import com.thoughtworks.xstrea
+m.XStream;', 'import com.thoughtworks.xstream.annotations.XStreamAlias;', 'import com.thoughtworks.xstream.annotati
+ons.XStreamImplicit;', 'import com.thoughtworks.xstream.mapper.MapperWrapper;'], ['import com.thoughtworks.xstream.
+XStream;', 'import com.thoughtworks.xstream.converters.Converter;', 'import com.thoughtworks.xstream.converters.Sin
+gleValueConverter;', 'import com.thoughtworks.xstream.mapper.Mapper;', 'import com.thoughtworks.xstream.mapper.Mapp
+erWrapper;', 'import com.thoughtworks.xstream.converters.reflection.ReflectionProvider;', 'import com.thoughtworks.
+xstream.converters.ConverterLookup;', 'import org.junit.Test;'], [], ['import java.util.ArrayList;', 'import com.th
+oughtworks.xstream.convert.Converter;', 'import com.thoughtworks.xstream.io.HierarchicalStreamReader;', 'import com
+.thoughtworks.xstream.io.HierarchicalStreamWriter;', 'import com.thoughtworks.xstream.io.xml.MarshallingContext;', 
+'import com.thoughtworks.xstream.io.xml.UnmarshallingContext;'], ['import java.util.ArrayList;', 'import java.util.
+List;', 'import com.thoughtworks.xstream.XStream;', 'import com.thoughtworks.xstream.annotations.XStreamAlias;'], [
+'import com.thoughtworks.xstream.XStream;', 'import com.thoughtworks.xstream.io.HierarchicalStreamWriter;', 'import
+ com.thoughtworks.xstream.io.QuickWriter;', 'import com.thoughtworks.xstream.io.xml.PrettyPrintWriter;', 'import co
+m.thoughtworks.xstream.io.xml.XppDriver;', 'import java.io.Writer;'], ['import com.thoughtworks.xstream.converters.
+Converter;', 'import com.thoughtworks.xstream.io.HierarchicalStreamReader;', 'import com.thoughtworks.xstream.io.Hi
+erarchicalStreamWriter;', 'import com.thoughtworks.xstream.converters.MarshallingContext;', 'import com.thoughtwork
+s.xstream.converters.UnmarshallingContext;'], ['import com.thoughtworks.xstream.XStream;', 'import com.thoughtworks
+.xstream.io.xml.StaxDriver;', 'import com.thoughtworks.xstream.annotations.XStreamAlias;', 'import com.thoughtworks
+.xstream.annotations.XStreamAsAttribute;', 'import com.thoughtworks.xstream.annotations.XStreamImplicit;', 'import 
+com.thoughtworks.xstream.converters.Converter;', 'import com.thoughtworks.xstream.converters.MarshallingContext;', 
+'import com.thoughtworks.xstream.converters.UnmarshallingContext;', 'import com.thoughtworks.xstream.converters.bas
+ic.IntConverter;', 'import com.thoughtworks.xstream.converters.basic.StringConverter;', 'import com.thoughtworks.xs
+tream.converters.collections.CollectionConverter;', 'import com.thoughtworks.xstream.converters.reflection.Reflecti
+onConverter;', 'import com.thoughtworks.xstream.converters.reflection.ReflectionProvider;', 'import com.thoughtwork
+s.xstream.core.util.QuickWriter;', 'import com.thoughtworks.xstream.io.HierarchicalStreamWriter;', 'import com.thou
+ghtworks.xstream.io.HierarchicalStreamReader;', 'import com.thoughtworks.xstream.io.xml.PrettyPrintWriter;'], ['imp
+ort com.thoughtworks.xstream.annotations.XStreamAlias;', 'import com.thoughtworks.xstream.annotations.XStreamImplic
+it;', 'import java.util.List;'], ['import java.util.ArrayList;', 'import java.util.List;', 'import com.thoughtworks
+.xstream.XStream;', 'import com.thoughtworks.xstream.io.xml.DomDriver;'], ['import java.io.File;', 'import java.io.
+FileOutputStream;', 'import com.thoughtworks.xstream.XStream;']]                                                   
+                                                                                                                   
+Correct Import List: [['import com.thoughtworks.xstream.converters.Converter;', 'import com.thoughtworks.xstream.co
+nverters.MarshallingContext;', 'import com.thoughtworks.xstream.converters.UnmarshallingContext;', 'import com.thou
+ghtworks.xstream.io.HierarchicalStreamReader;', 'import com.thoughtworks.xstream.io.HierarchicalStreamWriter;'], ['
+import java.io.BufferedReader;', 'import java.io.FileReader;', 'import java.io.IOException;', 'import com.thoughtwo
+rks.xstream.XStream;', 'import com.thoughtworks.xstream.io.xml.DomDriver;'], ['import java.util.ArrayList;', 'impor
+t java.util.List;', 'import com.thoughtworks.xstream.XStream;', 'import com.thoughtworks.xstream.io.json.JettisonMa
+ppedXmlDriver;'], ['import java.util.ArrayList;', 'import com.thoughtworks.xstream.XStream;'], ['import java.io.Fil
+eNotFoundException;', 'import java.io.PrintWriter;', 'import com.thoughtworks.xstream.XStream;', 'import com.though
+tworks.xstream.io.xml.DomDriver;'], ['import java.io.File;', 'import java.io.FileOutputStream;', 'import java.io.Ou
+tputStream;', 'import com.thoughtworks.xstream.XStream;', 'import com.thoughtworks.xstream.io.xml.DomDriver;'], ['i
+mport com.thoughtworks.xstream.annotations.XStreamAsAttribute;'], ['import org.ksoap2.SoapEnvelope;', 'import org.k
+soap2.serialization.SoapObject;', 'import org.ksoap2.serialization.SoapSerializationEnvelope;', 'import org.ksoap2.
+transport.HttpTransportSE;', 'import android.app.Activity;', 'import android.os.Bundle;', 'import android.widget.Te
+xtView;', 'import com.thoughtworks.xstream.XStream;', 'import com.thoughtworks.xstream.io.xml.DomDriver;'], ['impor
+t java.io.FileInputStream;', 'import java.io.FileNotFoundException;', 'import com.thoughtworks.xstream.XStream;', '
+import com.thoughtworks.xstream.io.xml.DomDriver;'], ['import java.io.StringWriter;', 'import com.thoughtworks.xstr
+eam.XStream;', 'import com.thoughtworks.xstream.io.xml.PrettyPrintWriter;'], ['import java.util.ArrayList;', 'impor
+t java.util.List;', 'import com.thoughtworks.xstream.XStream;', 'import com.thoughtworks.xstream.converters.collect
+ions.CollectionConverter;', 'import com.thoughtworks.xstream.mapper.ClassAliasingMapper;'], ['import java.util.List
+;', 'import com.thoughtworks.xstream.converters.Converter;', 'import com.thoughtworks.xstream.converters.Marshallin
+gContext;', 'import com.thoughtworks.xstream.converters.UnmarshallingContext;', 'import com.thoughtworks.xstream.io
+.HierarchicalStreamReader;', 'import com.thoughtworks.xstream.io.HierarchicalStreamWriter;'], ['import com.thoughtw
+orks.xstream.mapper.ClassAliasingMapper;', 'import com.thoughtworks.xstream.mapper.Mapper;'], ['import com.thoughtw
+orks.xstream.converters.basic.AbstractSingleValueConverter;'], ['import java.util.HashSet;', 'import com.thoughtwor
+ks.xstream.XStream;', 'import com.thoughtworks.xstream.converters.MarshallingContext;', 'import com.thoughtworks.xs
+tream.converters.collections.CollectionConverter;', 'import com.thoughtworks.xstream.io.HierarchicalStreamWriter;']
+, ['import com.thoughtworks.xstream.XStream;', 'import com.thoughtworks.xstream.mapper.MapperWrapper;'], ['import c
+om.thoughtworks.xstream.XStream;', 'import com.thoughtworks.xstream.annotations.XStreamAlias;', 'import com.thought
+works.xstream.converters.Converter;', 'import com.thoughtworks.xstream.converters.MarshallingContext;', 'import com
+.thoughtworks.xstream.converters.UnmarshallingContext;', 'import com.thoughtworks.xstream.io.HierarchicalStreamRead
+er;', 'import com.thoughtworks.xstream.io.HierarchicalStreamWriter;'], ['import java.util.HashMap;', 'import java.u
+til.Map;', 'import com.thoughtworks.xstream.converters.Converter;', 'import com.thoughtworks.xstream.converters.Mar
+shallingContext;', 'import com.thoughtworks.xstream.converters.UnmarshallingContext;', 'import com.thoughtworks.xst
+ream.io.HierarchicalStreamReader;', 'import com.thoughtworks.xstream.io.HierarchicalStreamWriter;'], ['import com.t
+houghtworks.xstream.converters.Converter;', 'import com.thoughtworks.xstream.converters.MarshallingContext;', 'impo
+rt com.thoughtworks.xstream.converters.UnmarshallingContext;', 'import com.thoughtworks.xstream.io.HierarchicalStre
+amReader;', 'import com.thoughtworks.xstream.io.HierarchicalStreamWriter;'], ['import java.io.File;', 'import java.
+io.InputStream;', 'import java.io.InputStreamReader;', 'import java.io.Reader;', 'import java.nio.charset.Charset;'
+, 'import com.thoughtworks.xstream.XStream;'], ['import java.util.Map;', 'import com.thoughtworks.xstream.converter
+s.Converter;', 'import com.thoughtworks.xstream.converters.MarshallingContext;', 'import com.thoughtworks.xstream.c
+onverters.UnmarshallingContext;', 'import com.thoughtworks.xstream.converters.reflection.ReflectionConverter;', 'im
+port com.thoughtworks.xstream.converters.reflection.ReflectionProvider;', 'import com.thoughtworks.xstream.io.Hiera
+rchicalStreamReader;', 'import com.thoughtworks.xstream.io.HierarchicalStreamWriter;', 'import com.thoughtworks.xst
+ream.mapper.Mapper;'], ['import com.thoughtworks.xstream.XStream;', 'import com.thoughtworks.xstream.annotations.XS
+treamAlias;', 'import com.thoughtworks.xstream.annotations.XStreamConverter;', 'import com.thoughtworks.xstream.ann
+otations.XStreamImplicit;', 'import com.thoughtworks.xstream.converters.extended.ToAttributedValueConverter;', 'imp
+ort java.util.List;', 'import java.util.Arrays;', 'import java.io.File;'], ['import com.thoughtworks.xstream.XStrea
+m;', 'import com.thoughtworks.xstream.annotations.XStreamAlias;', 'import com.thoughtworks.xstream.converters.javab
+ean.JavaBeanConverter;', 'import com.thoughtworks.xstream.io.xml.XppDriver;'], ['import com.thoughtworks.xstream.co
+nverters.MarshallingContext;', 'import com.thoughtworks.xstream.converters.UnmarshallingContext;', 'import com.thou
+ghtworks.xstream.converters.reflection.ReflectionConverter;', 'import com.thoughtworks.xstream.converters.reflectio
+n.ReflectionProvider;', 'import com.thoughtworks.xstream.io.HierarchicalStreamReader;', 'import com.thoughtworks.xs
+tream.io.HierarchicalStreamWriter;', 'import com.thoughtworks.xstream.mapper.Mapper;'], ['import com.thoughtworks.x
+stream.annotations.XStreamAlias;', 'import com.thoughtworks.xstream.annotations.XStreamConverter;', 'import com.tho
+ughtworks.xstream.converters.extended.ToAttributedValueConverter;'], ['import java.util.ArrayList;', 'import java.u
+til.Collection;', 'import java.util.List;', 'import com.thoughtworks.xstream.converters.SingleValueConverter;'], ['
+import org.apache.commons.lang.WordUtils;', 'import org.apache.http.client.fluent.Content;', 'import com.thoughtwor
+ks.xstream.XStream;', 'import com.thoughtworks.xstream.converters.Converter;', 'import com.thoughtworks.xstream.con
+verters.MarshallingContext;', 'import com.thoughtworks.xstream.converters.UnmarshallingContext;', 'import com.thoug
+htworks.xstream.io.HierarchicalStreamReader;', 'import com.thoughtworks.xstream.io.HierarchicalStreamWriter;'], ['i
+mport java.util.HashMap;', 'import java.util.Map;', 'import com.thoughtworks.xstream.converters.Converter;', 'impor
+t com.thoughtworks.xstream.converters.MarshallingContext;', 'import com.thoughtworks.xstream.converters.Unmarshalli
+ngContext;', 'import com.thoughtworks.xstream.io.HierarchicalStreamReader;', 'import com.thoughtworks.xstream.io.Hi
+erarchicalStreamWriter;'], ['import java.util.ArrayList;', 'import java.util.List;', 'import com.thoughtworks.xstre
+am.XStream;', 'import com.thoughtworks.xstream.io.xml.DomDriver;'], ['import com.thoughtworks.xstream.converters.Co
+nverter;', 'import com.thoughtworks.xstream.converters.MarshallingContext;', 'import com.thoughtworks.xstream.conve
+rters.UnmarshallingContext;', 'import com.thoughtworks.xstream.io.HierarchicalStreamReader;', 'import com.thoughtwo
+rks.xstream.io.HierarchicalStreamWriter;'], ['import com.thoughtworks.xstream.XStream;', 'import com.thoughtworks.x
+stream.annotations.XStreamAlias;'], ['import com.thoughtworks.xstream.XStream;', 'import com.thoughtworks.xstream.h
+ibernate.converter.HibernatePersistentCollectionConverter;', 'import com.thoughtworks.xstream.hibernate.converter.H
+ibernatePersistentMapConverter;', 'import com.thoughtworks.xstream.hibernate.converter.HibernatePersistentSortedMap
+Converter;', 'import com.thoughtworks.xstream.hibernate.converter.HibernatePersistentSortedSetConverter;', 'import 
+com.thoughtworks.xstream.hibernate.converter.HibernateProxyConverter;', 'import com.thoughtworks.xstream.hibernate.
+mapper.HibernateMapper;', 'import com.thoughtworks.xstream.mapper.MapperWrapper;'], ['import com.thoughtworks.xstre
+am.XStream;', 'import com.thoughtworks.xstream.io.xml.DomDriver;', 'import com.thoughtworks.xstream.mapper.Mapper;'
+, 'import flex.messaging.io.amf.ASObject;', 'import flex.messaging.io.amf.ActionMessage;', 'import flex.messaging.i
+o.amf.MessageBody;', 'import flex.messaging.io.amf.MessageHeader;', 'import flex.messaging.messages.AcknowledgeMess
+age;', 'import flex.messaging.messages.AcknowledgeMessageExt;', 'import flex.messaging.messages.AsyncMessage;', 'im
+port flex.messaging.messages.CommandMessage;', 'import flex.messaging.messages.CommandMessageExt;', 'import flex.me
+ssaging.messages.ErrorMessage;', 'import flex.messaging.messages.RemotingMessage;'], ['import java.util.ArrayList;'
+, 'import java.util.Iterator;', 'import java.util.List;', 'import com.cloudbees.api.config.Environment;', 'import c
+om.cloudbees.api.config.ParameterHolder;', 'import com.cloudbees.api.config.ResourceSettings;', 'import com.thought
+works.xstream.XStream;', 'import com.thoughtworks.xstream.annotations.XStreamAlias;', 'import com.thoughtworks.xstr
+eam.annotations.XStreamImplicit;', 'import com.thoughtworks.xstream.mapper.MapperWrapper;'], ['import org.junit.Tes
+t;', 'import com.thoughtworks.xstream.XStream;', 'import com.thoughtworks.xstream.converters.Converter;', 'import c
+om.thoughtworks.xstream.converters.ConverterLookup;', 'import com.thoughtworks.xstream.converters.SingleValueConver
+ter;', 'import com.thoughtworks.xstream.converters.reflection.ReflectionProvider;', 'import com.thoughtworks.xstrea
+m.mapper.Mapper;', 'import com.thoughtworks.xstream.mapper.MapperWrapper;'], ['import java.util.HashMap;', 'import 
+java.util.Map;', 'import com.thoughtworks.xstream.XStream;', 'import com.thoughtworks.xstream.io.xml.StaxDriver;'],
+ ['import java.util.ArrayList;', 'import com.thoughtworks.xstream.converters.Converter;', 'import com.thoughtworks.
+xstream.converters.MarshallingContext;', 'import com.thoughtworks.xstream.converters.UnmarshallingContext;', 'impor
+t com.thoughtworks.xstream.io.HierarchicalStreamReader;', 'import com.thoughtworks.xstream.io.HierarchicalStreamWri
+ter;'], ['import java.util.ArrayList;', 'import java.util.List;', 'import com.thoughtworks.xstream.XStream;', 'impo
+rt com.thoughtworks.xstream.annotations.XStreamAlias;'], ['import java.io.Writer;', 'import com.thoughtworks.xstrea
+m.XStream;', 'import com.thoughtworks.xstream.core.util.QuickWriter;', 'import com.thoughtworks.xstream.io.Hierarch
+icalStreamWriter;', 'import com.thoughtworks.xstream.io.xml.PrettyPrintWriter;', 'import com.thoughtworks.xstream.i
+o.xml.XppDriver;'], ['import com.thoughtworks.xstream.converters.Converter;', 'import com.thoughtworks.xstream.conv
+erters.MarshallingContext;', 'import com.thoughtworks.xstream.converters.UnmarshallingContext;', 'import com.though
+tworks.xstream.io.HierarchicalStreamReader;', 'import com.thoughtworks.xstream.io.HierarchicalStreamWriter;'], ['im
+port java.util.List;', 'import com.thoughtworks.xstream.XStream;', 'import com.thoughtworks.xstream.io.xml.StaxDriv
+er;'], ['import java.util.List;', 'import com.thoughtworks.xstream.annotations.XStreamAlias;', 'import com.thoughtw
+orks.xstream.annotations.XStreamImplicit;'], ['import java.util.ArrayList;', 'import java.util.List;', 'import com.
+thoughtworks.xstream.XStream;', 'import com.thoughtworks.xstream.io.xml.DomDriver;'], ['import java.io.File;', 'imp
+ort java.io.FileOutputStream;', 'import com.thoughtworks.xstream.XStream;']]                                       
+{                                                                                                                  
+  "accuracy": 0.5854545454545454,                                                                                  
+  "f1": 0.7385321100917431,                                                                                        
+  "precision": 0.7092511013215859,                                                                                 
+  "recall": 0.7703349282296651                                                                                     
+}                                                                                                                  
+(base) swaran@Azmains-Air Python VS Code %      
+
