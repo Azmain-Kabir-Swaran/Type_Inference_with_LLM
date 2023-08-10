@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-one-shot/xstream_class_16.java",
+    "java_code": "package xstream;\nimport com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.mapper.MapperWrapper;\n//ID = 5377380\n\npublic class xstream_class_16 {\n\tpublic static void main(String arg[]){\n\t\tXStream xstream = new XStream() {\n\t\t    @Override\n\t\t    protected MapperWrapper wrapMapper(MapperWrapper next) {\n\t\t        return new MapperWrapper(next) {\n\t\t            @Override\n\t\t            public boolean shouldSerializeMember(Class definedIn, String fieldName) {\n\t\t                if (definedIn == Object.class) {\n\t\t                    return false;\n\t\t                }\n\t\t                return super.shouldSerializeMember(definedIn, fieldName);\n\t\t            }\n\t\t        };\n\t\t    }\n\t\t};\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

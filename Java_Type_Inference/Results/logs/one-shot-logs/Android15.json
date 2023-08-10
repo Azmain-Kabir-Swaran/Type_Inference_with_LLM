@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-one-shot/Android15.java",
+    "java_code": "package androidExamples;\nimport android.content.Intent;\nimport android.net.Uri;\n//ID = 587917\n\npublic class Android15 {\n\n\tpublic static void main(String[] args) {\n\t\t// TODO Auto-generated method stub\n\n\t\tIntent sendIntent = new Intent(Intent.ACTION_SEND);\n\t\tsendIntent.setType(\"image/jpeg\");\n\t\tsendIntent.putExtra(Intent.EXTRA_SUBJECT, \"Photo\");\n\t\tsendIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse(\"file://sdcard/dcim/Camera/filename.jpg\"));\n\t\tsendIntent.putExtra(Intent.EXTRA_TEXT, \"Enjoy the photo\");\n\t\tstartActivity(Intent.createChooser(sendIntent, \"Email:\"));\n\t}\n\n\tprivate static void startActivity(Intent createChooser) {\n\t\t// TODO Auto-generated method stub\n\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-one-shot/JodaTime02.java",
+    "java_code": "package jodatime;\nimport org.joda.time.DateMidnight;\nimport org.joda.time.DateTimeZone;\nimport org.joda.time.DateTime;\n//ID = 581581\n\npublic class JodaTime02 {\n\n\tpublic static void main(String[] args) {\n\t\tDateMidnight today = new DateMidnight(2009, 2, 24);\n\t\tDateTimeZone zone = today.getZone();\n\n\t\tDateTime previousTransition =\n\t\t    new DateTime(zone.previousTransition(today.getMillis()));\n\t\t// 2008-10-26T02:59:59.999+02:00 for Europe/Berlin\n\t\tSystem.out.println(previousTransition);\n\n\t\tDateTime nextTransition =\n\t\t    new DateTime(zone.nextTransition(today.getMillis()));\n\t\t// 2009-03-29T03:00:00.000+02:00 for Europe/Berlin\n\t\tSystem.out.println(nextTransition);\n\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-one-shot/gwt_class_45.java",
+    "java_code": "package gwt;\nimport com.google.gwt.core.client.EntryPoint;\nimport com.google.gwt.event.dom.client.ClickEvent;\nimport com.google.gwt.event.dom.client.ClickHandler;\nimport com.google.gwt.user.client.Window;\nimport com.google.gwt.user.client.ui.Button;\nimport com.google.gwt.user.client.ui.Label;\nimport com.google.gwt.user.client.ui.RootPanel;\n//ID = 3353405\n\n\npublic class gwt_class_45  implements EntryPoint{\n\n    @Override\n    public void onModuleLoad(){\n        Label label=new Label(\"hello world\");\n        Button button=new Button(\"say something\");\n        button.addClickHandler(new ClickHandler(){\n     @Override\n     public void onClick (ClickEvent event){\n         Window.alert(\"hello again\");\n\n            }\n\n\n\n        });\n\n    RootPanel.get().add(label);\n    RootPanel.get().add(button);\n\n\n\n    }\n}",
+    "stdout": "",
+    "stderr": "Note: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n",
+    "return_code": 0
+}

@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-one-shot/gwt_class_19.java",
+    "java_code": "package gwt;\nimport com.google.gwt.user.client.ui.Button;\nimport com.google.gwt.user.client.ui.RootPanel;\nimport com.google.gwt.user.client.ui.VerticalPanel;\n//ID = 2155194\npublic class gwt_class_19{\n\tprivate void addStartupBox() {\n\t    VerticalPanel boxPanel = null;      \n\t    com.google.gwt.user.client.ui.Label title = null;        \n\n\t    // Create second panel for the content of a box     \n\t    com.google.gwt.user.client.ui.VerticalPanel boxContent = new com.google.gwt.user.client.ui.VerticalPanel();\n\t    boxContent.setSpacing(10);\n\t    boxContent.setHorizontalAlignment(com.google.gwt.user.client.ui.VerticalPanel.ALIGN_CENTER);\n\n\t    // Create content for the box\n\t    Button but1 = new Button(\"A\");\n\t    but1.setPixelSize(280, 25);     \n\n\t    Button but2 = new Button(\"B\");\n\t    but2.setPixelSize(280, 25);\n\n\t    Button but3 = new Button(\"C\");\n\t    but3.setPixelSize(280, 25);\n\n\t    // Add buttons to boxContent\n\t    boxContent.add(but1);\n\t    boxContent.add(but2);\n\t    boxContent.add(but3);\n\n\t    // Add title and boxContent to boxPanel     \n\t    boxPanel.add(title);\n\t    boxPanel.add(boxContent);\n\n\t    RootPanel.get(\"boxPanelContainer\").add(boxPanel);\n\t}\t\n}",
+    "stdout": "",
+    "stderr": "Note: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n",
+    "return_code": 0
+}

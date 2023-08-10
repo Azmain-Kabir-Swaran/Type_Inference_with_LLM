@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-one-shot/JodaTime28.java",
+    "java_code": "package jodatime;\nimport org.joda.time.DateTime;\nimport org.joda.time.Days;\nimport org.joda.time.LocalDate;\nimport org.joda.time.format.DateTimeFormat;\nimport org.joda.time.format.DateTimeFormatter;\nimport java.util.ArrayList;\nimport java.util.List;\n\n\n\n//ID = 9313151\npublic class JodaTime28 {\n\tpublic static void main(String[] args) {\n\t\t\tDateTimeFormatter dateFromatter= DateTimeFormat.forPattern(\"MM/dd/yyyy\");\n\n\t\t\tDateTime startDate= dateFromatter.parseDateTime(\"01/02/2012\");\n\t\t\tDateTime endDate= dateFromatter.parseDateTime(\"01/31/2012\");\n\n\t\t\t List<LocalDate> dates = new ArrayList<LocalDate>();\n\n\n\t\t\t  int days = Days.daysBetween(startDate, endDate).getDays();\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

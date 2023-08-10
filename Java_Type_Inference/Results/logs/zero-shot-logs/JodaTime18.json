@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-zero-shot/JodaTime18.java",
+    "java_code": "package jodatime;\nimport org.joda.time.format.DateTimeFormatterBuilder;\nimport org.joda.time.format.DateTimeFormatter;\nimport org.joda.time.DateTimeZone;\n\n\n//ID = 7423886\npublic class JodaTime18 \n{\n\n\t// default our time zone to the machine local one.\n\tprivate static final DateTimeZone LOCAL_TZ = DateTimeZone.getDefault();\n\n\t// format of date (i.e., timestamp) is yyyy-MM-dd HH:mm:ss.S\n\tprivate static final DateTimeFormatter YEAR_MONTH_DAY_HOUR_MINUTE_SECOND_MILLIS_FORMATTER =\n\t\t\tnew DateTimeFormatterBuilder()\n\t\t\t.appendYear(4,4)\n\t\t\t.appendLiteral('-')\n\t\t\t.appendMonthOfYear(1)\n\t\t\t.appendLiteral('-')\n\t\t\t.appendDayOfMonth(1)\n\t\t\t.appendLiteral(' ')\n\t\t\t.appendHourOfDay(2)\n\t\t\t.appendLiteral(':')\n\t\t\t.appendMinuteOfDay(1)\n\t\t\t.appendLiteral(':')\n\t\t\t.appendSecondOfDay(1)\n\t\t\t.appendLiteral('.')\n\t\t\t.appendMillisOfDay(1)\n\t\t\t.toFormatter().withZone(LOCAL_TZ);\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

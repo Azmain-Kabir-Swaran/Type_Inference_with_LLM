@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-one-shot/JodaTime36.java",
+    "java_code": "package jodatime;\nimport org.joda.time.Period;\nimport org.joda.time.format.ISOPeriodFormat;\nimport org.joda.time.format.PeriodFormatter;\nimport org.joda.time.format.PeriodFormatterBuilder;\n//ID = 10154428\n\npublic class JodaTime36 {\n\n\tpublic static void main(String[] args) {\n\t\t// TODO Auto-generated method stub\n\n\t\tPeriodFormatter pf = new PeriodFormatterBuilder().append(ISOPeriodFormat.standard()).toFormatter();\n\n\t\tPeriod period = pf.parsePeriod(\"PT01H00M\");\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

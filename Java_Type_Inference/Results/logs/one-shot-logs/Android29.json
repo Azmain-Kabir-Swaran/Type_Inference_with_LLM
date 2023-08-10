@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-one-shot/Android29.java",
+    "java_code": "package androidExamples;\nimport android.app.Service;\nimport android.content.Context;\nimport android.content.Intent;\nimport android.os.IBinder;\nimport android.os.PowerManager;\n//ID = 992508\n\npublic class Android29 extends Service {\n\n\t@Override\n\tpublic IBinder onBind(Intent arg0) {\n\t\t// TODO Auto-generated method stub\n\t\treturn null;\n\t}\n\t@Override\n\tpublic void onCreate() {\n\t\tPowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);\n\t\tPowerManager.WakeLock wl = pm.newWakeLock(PowerManager.FULL_WAKE_LOCK, \"My Tag\");\n\t\twl.acquire();\n\t}\n\n\t@Override\n\tpublic void onDestroy() {\n\t\tWakeLock wl = null;\n\t\twl.release();\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-one-shot/Android29.java:25: error: cannot find symbol\n\t\tWakeLock wl = null;\n\t\t^\n  symbol:   class WakeLock\n  location: class Android29\n1 error\n",
+    "return_code": 1
+}

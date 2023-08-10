@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-one-shot/xstream_class_10.java",
+    "java_code": "package xstream;\nimport java.io.StringWriter;\nimport com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.io.xml.PrettyPrintWriter;\n//ID=2008043\n\n\npublic class xstream_class_10 {\n\tprivate String generateResponse(final XStream xStream)\n\t{\n\t    StringWriter writer = new StringWriter();\n\t    xStream.marshal(this, new PrettyPrintWriter(writer) {\n\t        @Override\n\t        public void addAttribute(final String key, final String value)\n\t        {\n\t            if (!key.equals(\"class\"))\n\t            {\n\t                super.addAttribute(key, value);\n\t            }\n\t        }\n\t    });\n\t    return writer.toString();\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}
