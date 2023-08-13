@@ -1,8 +1,8 @@
 package hibernate;
-import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.Method;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import java.lang.reflect.Method;
+import java.lang.reflect.InvocationHandler;
 //ID = 2768511
 
 

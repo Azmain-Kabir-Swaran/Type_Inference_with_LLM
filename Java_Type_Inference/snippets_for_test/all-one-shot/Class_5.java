@@ -3,14 +3,14 @@
  URL: http://stackoverflow.com/questions/109383/sort-a-mapkey-value-by-values-java
  */
 package common_JDK;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.List;
-import java.util.LinkedList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.LinkedHashMap;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Comparator;
 import java.util.TreeMap;
+import java.util.Map;
+import java.util.List;
 
 public class Class_5
 {

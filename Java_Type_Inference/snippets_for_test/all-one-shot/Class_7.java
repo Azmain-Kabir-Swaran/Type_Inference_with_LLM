@@ -1,10 +1,10 @@
 package common_JDK;
+import java.util.Date;
+import java.util.Collections;
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Date;
 /*
  Date: 1/19/17
  URL: http://stackoverflow.com/questions/2784514/sort-arraylist-of-custom-objects-by-property

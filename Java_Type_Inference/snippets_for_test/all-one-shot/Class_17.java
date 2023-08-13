@@ -3,10 +3,10 @@ Date: 1/19/17 - Consider later
 URL: http://stackoverflow.com/questions/4772425/change-date-format-in-a-java-string
 */
 package common_JDK;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.TemporalAccessor;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Class_17{

@@ -1,8 +1,8 @@
 package hibernate;
-import java.util.List;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+import java.util.List;
 import hibernate.Event;
+import org.hibernate.SessionFactory;
 
 
 /**

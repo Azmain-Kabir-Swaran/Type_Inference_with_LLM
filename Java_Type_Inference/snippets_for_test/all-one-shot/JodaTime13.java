@@ -1,9 +1,9 @@
 package jodatime;
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
 import org.joda.time.Period;
 import org.joda.time.format.PeriodFormatter;
 import org.joda.time.format.PeriodFormatterBuilder;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.*;
 public class JodaTime13 {
 //	ID = 4585883

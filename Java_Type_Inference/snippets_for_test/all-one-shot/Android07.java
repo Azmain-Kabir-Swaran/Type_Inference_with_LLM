@@ -1,8 +1,8 @@
 package androidExamples;
 import android.app.Activity;
-import android.os.Bundle;
-import android.view.View;
 import android.widget.ArrayAdapter;
+import android.view.View;
+import android.os.Bundle;
 
 //ID = 288044
 public class Android07 extends Activity{

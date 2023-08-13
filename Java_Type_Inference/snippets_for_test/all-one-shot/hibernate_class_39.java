@@ -1,12 +1,11 @@
 package hibernate;
-import java.io.Serializable;
-import java.util.List;
-import java.util.Map;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
+import java.util.List;
 import org.springframework.transaction.annotation.Transactional;
-import org.hibernate.search.SearchException;
+import java.io.Serializable;
+import java.util.Map;
+import org.hibernate.Transaction;
+import org.hibernate.SessionFactory;
 //ID = 3573479
 
 public class hibernate_class_39 {

@@ -1,11 +1,12 @@
 package xstream;
-import java.io.File;
-import java.util.Arrays;
-import java.util.List;
-import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
+import java.util.List;
+import com.thoughtworks.xstream.annotations.XStreamImplicit;
+import java.util.Arrays;
+import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.converters.extended.ToAttributedValueConverter;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import java.io.File;
 //Id=17616142
 
 

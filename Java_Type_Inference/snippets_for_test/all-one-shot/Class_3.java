@@ -1,9 +1,9 @@
 package common_JDK;
+import java.util.Locale;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
 import java.text.ParseException;
-import java.util.Locale;
+import java.text.DecimalFormatSymbols;
 /*
  Date: 1/19/17
  URL: http://stackoverflow.com/questions/153724/how-to-round-a-number-to-n-decimal-places-in-java

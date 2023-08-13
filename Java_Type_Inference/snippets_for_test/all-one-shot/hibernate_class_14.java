@@ -1,18 +1,18 @@
 package hibernate;
-import java.io.Serializable;
-import java.util.Collection;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.ForeignKey;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import java.io.Serializable;
 import org.hibernate.annotations.Cache;
+import javax.persistence.ManyToOne;
+import javax.persistence.JoinColumn;
+import javax.persistence.ForeignKey;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
+import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import org.hibernate.annotations.CascadeType;
+import javax.persistence.FetchType;
+import javax.persistence.Column;
+import java.util.Collection;
 //ID = 1483026
 
 public class hibernate_class_14 {

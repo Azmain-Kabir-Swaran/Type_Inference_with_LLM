@@ -1,7 +1,7 @@
 package jodatime;
 import org.joda.time.DateTimeZone;
-import org.joda.time.format.DateTimeFormatter;
 import org.joda.time.format.DateTimeFormatterBuilder;
+import org.joda.time.format.DateTimeFormatter;
 
 
 //ID = 7423886

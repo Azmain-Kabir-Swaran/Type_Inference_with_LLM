@@ -3,13 +3,13 @@ Date: 1/19/17
 URL: http://stackoverflow.com/questions/62289/read-write-to-windows-registry-using-java
 */
 package common_JDK;
+import java.util.HashMap;
+import java.util.ArrayList;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.prefs.Preferences;
+import java.util.List;
 
 public class Class_16 {
   public static final int HKEY_CURRENT_USER = 0x80000001;

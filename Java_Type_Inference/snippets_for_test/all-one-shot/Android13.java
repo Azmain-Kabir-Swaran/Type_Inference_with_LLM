@@ -1,10 +1,10 @@
 package androidExamples;
-import android.content.ContentResolver;
-import android.graphics.Bitmap;
+import java.io.ByteArrayOutputStream;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.graphics.Bitmap;
 import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
+import android.content.ContentResolver;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 

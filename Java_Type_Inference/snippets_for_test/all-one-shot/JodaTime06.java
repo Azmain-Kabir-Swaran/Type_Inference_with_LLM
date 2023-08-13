@@ -1,7 +1,7 @@
 package jodatime;
 import org.joda.time.Duration;
-import org.joda.time.PeriodType;
 import org.joda.time.format.PeriodFormatterBuilder;
+import org.joda.time.PeriodType;
 //ID = 2780967
 
 public class JodaTime06 {

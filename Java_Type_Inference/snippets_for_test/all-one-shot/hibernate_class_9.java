@@ -1,7 +1,7 @@
 package hibernate;
-import java.io.Serializable;
-import java.util.List;
 import org.hibernate.Session;
+import java.util.List;
+import java.io.Serializable;
 //ID = 1262298
 
 public class hibernate_class_9 

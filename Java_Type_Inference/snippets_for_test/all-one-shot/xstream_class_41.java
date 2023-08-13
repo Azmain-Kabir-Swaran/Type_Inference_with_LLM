@@ -1,8 +1,7 @@
 package xstream;
-import java.util.List;
 import com.thoughtworks.xstream.XStream;
+import java.util.List;
 import com.thoughtworks.xstream.io.xml.StaxDriver;
-import java.util.ArrayList;
 //ID=40922380
 
 

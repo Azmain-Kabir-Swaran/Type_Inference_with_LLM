@@ -1,6 +1,6 @@
 package common_JDK;
-import java.text.NumberFormat;
 import java.util.Locale;
+import java.text.NumberFormat;
 /*
 
 Date: 1/19/17

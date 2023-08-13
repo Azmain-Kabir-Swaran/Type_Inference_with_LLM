@@ -1,8 +1,8 @@
 package hibernate;
-import java.io.Serializable;
 import javax.persistence.Entity;
+import javax.persistence.NaturalId;
+import java.io.Serializable;
 import javax.persistence.Version;
-import org.hibernate.annotations.NaturalId;
 //ID = 4530572
 
 

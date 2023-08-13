@@ -1,22 +1,4 @@
 package hibernate;
-import java.util.ArrayList;
-import java.util.List;
-import javax.naming.NamingException;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-import org.hibernate.shards.ShardConfiguration;
-import org.hibernate.shards.ShardId;
-import org.hibernate.shards.ShardResolutionStrategy;
-import org.hibernate.shards.ShardSelectionStrategy;
-import org.hibernate.shards.ShardStrategy;
-import org.hibernate.shards.ShardStrategyFactory;
-import org.hibernate.shards.access.SequentialShardAccessStrategy;
-import org.hibernate.shards.loadbalance.RoundRobinShardLoadBalancer;
-import org.hibernate.shards.strategy.AllShardsShardResolutionStrategy;
-import org.hibernate.shards.strategy.RoundRobinShardSelectionStrategy;
-import org.hibernate.shards.strategy.ShardedConfiguration;
-import org.hibernate.shards.strategy.ShardStrategyImpl;
-import org.hibernate.shards.util.ConfigurationToShardConfigurationAdapter;
 //ID = 1938476
 
 

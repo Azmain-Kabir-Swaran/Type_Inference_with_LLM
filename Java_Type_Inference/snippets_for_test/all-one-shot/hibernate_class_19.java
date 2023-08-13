@@ -1,10 +1,10 @@
 package hibernate;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import org.hibernate.annotations.Index;
+import javax.persistence.GeneratedValue;
 import org.hibernate.annotations.Table;
+import javax.persistence.Entity;
+import org.hibernate.annotations.Index;
+import javax.persistence.Column;
 //ID = 2182950
 
 

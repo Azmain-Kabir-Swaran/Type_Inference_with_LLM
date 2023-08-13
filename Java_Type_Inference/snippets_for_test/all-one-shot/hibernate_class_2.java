@@ -1,14 +1,15 @@
 package hibernate;
-import java.io.Serializable;
 import java.util.List;
-import javax.persistence.Cache;
-import javax.persistence.CacheConcurrencyStrategy;
-import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import java.io.Serializable;
 import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.JoinColumn;
+import javax.persistence.CacheConcurrencyStrategy;
+import javax.persistence.Entity;
+import static javax.persistence.CascadeType.ALL;
+import org.hibernate.annotations.Cache;
+import javax.persistence.Column;
 //ID = 643700
 
 

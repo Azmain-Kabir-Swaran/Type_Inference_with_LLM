@@ -1,9 +1,9 @@
 package hibernate;
-import org.apache.log4j.Logger;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 import java.util.Properties;
+import org.hibernate.cfg.Configuration;
+import org.apache.log4j.Logger;
+import org.hibernate.SessionFactory;
 //ID = 3816385
 
 

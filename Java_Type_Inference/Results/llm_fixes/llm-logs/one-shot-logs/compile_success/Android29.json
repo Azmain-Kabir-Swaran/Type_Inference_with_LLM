@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/one-shot-fix/Android29.java",
+    "java_code": "package androidExamples;\n\nimport android.app.Service;\nimport android.os.PowerManager;\nimport android.os.IBinder;\nimport android.content.Context;\nimport android.content.Intent;\n//ID = 992508\n\npublic class Android29 extends Service {\n\n    PowerManager.WakeLock wl;\n\n    @Override\n    public IBinder onBind(Intent arg0) {\n        // TODO Auto-generated method stub\n        return null;\n    }\n\n    @Override\n    public void onCreate() {\n        PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);\n        wl = pm.newWakeLock(PowerManager.FULL_WAKE_LOCK, \"My Tag\");\n        wl.acquire();\n    }\n\n    @Override\n    public void onDestroy() {\n        if (wl != null) {\n            wl.release();\n        }\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

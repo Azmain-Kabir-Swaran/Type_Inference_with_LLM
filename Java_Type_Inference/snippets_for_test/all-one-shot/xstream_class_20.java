@@ -1,11 +1,11 @@
 package xstream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
 import java.nio.charset.Charset;
 import com.thoughtworks.xstream.XStream;
+import java.io.InputStream;
+import java.io.FileInputStream;
+import java.io.File;
+import java.io.Reader;
+import java.io.InputStreamReader;
 //ID = 3623546
 
 

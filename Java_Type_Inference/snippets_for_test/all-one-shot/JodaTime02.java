@@ -1,7 +1,7 @@
 package jodatime;
+import org.joda.time.DateTime;
 import org.joda.time.DateMidnight;
 import org.joda.time.DateTimeZone;
-import org.joda.time.DateTime;
 //ID = 581581
 
 public class JodaTime02 {

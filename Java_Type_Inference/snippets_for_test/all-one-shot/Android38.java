@@ -1,13 +1,13 @@
 package androidExamples;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
+import java.io.File;
 import java.net.URL;
+import java.io.DataOutputStream;
+import java.io.DataInputStream;
+import java.net.HttpURLConnection;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.io.IOException;
 //ID = 1118447
 
 public class Android38

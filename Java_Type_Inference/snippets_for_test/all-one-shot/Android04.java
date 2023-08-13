@@ -1,7 +1,7 @@
 package androidExamples;
 import android.app.Activity;
-import android.os.Bundle;
 import android.widget.TextView;
+import android.os.Bundle;
 //ID = 151777
 
 public class Android04 extends Activity {

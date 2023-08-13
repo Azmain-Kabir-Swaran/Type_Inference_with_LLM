@@ -4,9 +4,9 @@ URL: http://stackoverflow.com/questions/7143287/how-to-best-position-swing-guis
 */
 package common_JDK;
 import javax.swing.JFrame;
+import javax.swing.UIManager;
 import javax.swing.JTextArea;
 import javax.swing.SwingUtilities;
-import javax.swing.UIManager;
 class WhereToPutTheGui {
 
     public static void initGui() {

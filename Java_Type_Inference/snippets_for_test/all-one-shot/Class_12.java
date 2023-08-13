@@ -4,11 +4,11 @@ URL: http://stackoverflow.com/questions/2201925/converting-iso-8601-compliant-st
 */
 package common_JDK;
 import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.GregorianCalendar;
+import java.text.ParseException;
+import java.util.Calendar;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * Helper class for handling a most common subset of ISO 8601 strings

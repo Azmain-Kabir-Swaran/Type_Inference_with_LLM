@@ -1,6 +1,6 @@
 package hibernate;
-import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.SessionFactory;
 //ID = 2029301
 
 public class hibernate_class_18 {

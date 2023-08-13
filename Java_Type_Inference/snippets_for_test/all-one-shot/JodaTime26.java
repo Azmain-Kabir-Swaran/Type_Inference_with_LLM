@@ -1,6 +1,6 @@
 package jodatime;
-import org.joda.time.Duration;
 import org.joda.time.Period;
+import org.joda.time.Duration;
 //ID = 9122641
 
 public class JodaTime26 {

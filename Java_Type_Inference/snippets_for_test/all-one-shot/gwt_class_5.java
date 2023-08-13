@@ -1,6 +1,6 @@
 package gwt;
-import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsArrayInteger;
+import com.google.gwt.core.client.JsArray;
 //ID = 1482513
 
 public class gwt_class_5 {

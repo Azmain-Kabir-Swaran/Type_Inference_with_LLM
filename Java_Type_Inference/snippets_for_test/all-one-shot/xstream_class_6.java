@@ -1,8 +1,8 @@
 package xstream;
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.OutputStream;
 import com.thoughtworks.xstream.XStream;
+import java.io.FileOutputStream;
+import java.io.File;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 //ID = 3642820
 

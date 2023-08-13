@@ -1,11 +1,11 @@
 package androidExamples;
-import android.app.Activity;
+import android.widget.SlidingDrawer;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
-import android.widget.SlidingDrawer;
+import android.app.Activity;
+import android.util.Log;
 //ID= 1163812
 public class Android40 extends Activity {
 

@@ -1,8 +1,8 @@
 package xstream;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.thoughtworks.xstream.io.xml.XppDriver;
 import com.thoughtworks.xstream.converters.extended.JavaBeanConverter;
+import com.thoughtworks.xstream.io.xml.XppDriver;
 //2456470
 
 public class xstream_class_23 {

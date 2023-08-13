@@ -1,10 +1,10 @@
 package hibernate;
-import org.hibernate.SessionFactory;
 import org.hibernate.Session;
+import hibernate.UserDAO;
+import hibernate.User;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.AnnotationConfiguration;
-import hibernate.User;
-import hibernate.UserDAO;
+import org.hibernate.SessionFactory;
 //ID = 520902
 
 public class hibernate_class_1{

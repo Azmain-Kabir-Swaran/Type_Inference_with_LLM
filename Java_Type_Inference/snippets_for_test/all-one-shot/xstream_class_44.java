@@ -1,8 +1,7 @@
 package xstream;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import com.thoughtworks.xstream.XStream;
+import java.io.File;
+import java.io.FileOutputStream;
 //http://xstream.10960.n7.nabble.com/java-lang-StackOverflowError-while-converting-an-object-to-XML-td5107.html
 
 

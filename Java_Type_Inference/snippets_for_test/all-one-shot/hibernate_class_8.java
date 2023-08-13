@@ -1,11 +1,11 @@
 package hibernate;
-import java.util.Date;
-import javax.persistence.Column;
-import javax.persistence.MappedSuperclass;
+import javax.validation.constraints.AssertTrue;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.constraints.AssertTrue;
+import java.util.Date;
+import javax.persistence.Column;
 import javax.validation.constraints.NotNull;
+import javax.persistence.MappedSuperclass;
 //ID = 1212669
 
 

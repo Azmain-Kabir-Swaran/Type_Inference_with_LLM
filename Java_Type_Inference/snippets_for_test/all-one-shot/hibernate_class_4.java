@@ -1,7 +1,7 @@
 package hibernate;
+import org.hibernate.cfg.Configuration;
 import org.hibernate.HibernateException;
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 //ID = 970573
 
 public class hibernate_class_4 {

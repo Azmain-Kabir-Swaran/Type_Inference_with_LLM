@@ -1,8 +1,8 @@
 package androidExamples;
-import android.os.Bundle;
-import android.widget.TextView;
-import java.util.Timer;
 import java.util.TimerTask;
+import android.widget.TextView;
+import android.os.Bundle;
+import java.util.Timer;
 //ID = 522800
 
 public class Android09 {

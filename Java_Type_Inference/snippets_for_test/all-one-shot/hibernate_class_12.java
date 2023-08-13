@@ -1,9 +1,9 @@
 package hibernate;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
 import javax.faces.context.FacesContext;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.Transaction;
+import org.hibernate.SessionFactory;
 //ID = 1443590
 
 

@@ -1,6 +1,6 @@
 {
     "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-one-shot/JodaTime25.java",
-    "java_code": "package jodatime;\nimport org.joda.time.DateTime;\nimport org.joda.time.Days;\nimport org.joda.time.DateMidnight;\nimport org.joda.time.LocalDateTime;\n\n\n//ID = 8654398\npublic class JodaTime25 \n{\n\t\t\tpublic static int getDaysBetweenTwoDates(final LocalDateTime oldDate,\n\t\t\t        final LocalDateTime newDate) {\n\t\t\t    System.out.println(\"--Calculate days between: \" + oldDate.toString()\n\t\t\t            + \"->\" + newDate);\n\t\t\t    Days days = Days.daysBetween(new DateMidnight(oldDate.toDateTime()),\n\t\t\t            new DateMidnight(newDate.toDateTime()));\n\t\t\t    System.out.println(\"----DIFF: \" + days.size());\n\t\t\t    return days.size();\n\t\t\t}\n}",
+    "java_code": "package jodatime;\nimport org.joda.time.DateMidnight;\nimport org.joda.time.LocalDateTime;\nimport org.joda.time.Days;\n\n\n//ID = 8654398\npublic class JodaTime25 \n{\n\t\t\tpublic static int getDaysBetweenTwoDates(final LocalDateTime oldDate,\n\t\t\t        final LocalDateTime newDate) {\n\t\t\t    System.out.println(\"--Calculate days between: \" + oldDate.toString()\n\t\t\t            + \"->\" + newDate);\n\t\t\t    Days days = Days.daysBetween(new DateMidnight(oldDate.toDateTime()),\n\t\t\t            new DateMidnight(newDate.toDateTime()));\n\t\t\t    System.out.println(\"----DIFF: \" + days.size());\n\t\t\t    return days.size();\n\t\t\t}\n}",
     "stdout": "",
     "stderr": "",
     "return_code": 0

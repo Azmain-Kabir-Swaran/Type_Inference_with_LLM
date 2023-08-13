@@ -1,7 +1,7 @@
 package common_JDK;
+import java.sql.SQLException;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
 import java.util.Properties;
 /*
  Date: 1/19/17

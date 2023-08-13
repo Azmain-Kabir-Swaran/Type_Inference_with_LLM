@@ -1,10 +1,10 @@
 package hibernate;
+import org.hibernate.Session;
 import java.util.Iterator;
 import java.util.List;
-import org.hibernate.Query;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.SessionFactory;
 //ID = 3681045
 
 

@@ -1,9 +1,10 @@
 package xstream;
+import com.thoughtworks.xstream.converters.CollectionConverter;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 import java.util.HashSet;
 import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.converters.CollectionConverter;
+import org.hibernate.collection.PersistentSet;
 import com.thoughtworks.xstream.converters.MarshallingContext;
-import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 //ID=328832
 
 

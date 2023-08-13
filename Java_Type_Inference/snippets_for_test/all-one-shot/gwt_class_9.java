@@ -1,7 +1,7 @@
 package gwt;
 import com.google.gwt.user.client.Command;
-import com.google.gwt.user.client.ui.MenuBar;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.client.ui.MenuBar;
 //ID = 1624218
 
 public class gwt_class_9 {

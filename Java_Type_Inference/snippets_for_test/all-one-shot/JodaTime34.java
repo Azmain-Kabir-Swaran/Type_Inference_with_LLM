@@ -1,7 +1,7 @@
 package jodatime;
-import java.util.Locale;
-import org.joda.time.Period;
 import org.joda.time.format.PeriodFormat;
+import org.joda.time.Period;
+import java.util.Locale;
 import org.joda.time.format.PeriodFormatter;
 
 //ID = 10106143

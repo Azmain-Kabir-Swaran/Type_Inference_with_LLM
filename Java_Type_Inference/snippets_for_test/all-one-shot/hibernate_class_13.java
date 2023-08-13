@@ -1,23 +1,23 @@
 package hibernate;
-import java.io.Serializable;
-import java.util.Collection;
 import java.util.List;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.ForeignKey;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-import org.hibernate.annotations.IndexColumn;
-import library.model.County;
-import library.model.Permission;
 import library.model.Version;
+import library.model.Permission;
+import javax.persistence.FetchType;
+import javax.persistence.CascadeType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.JoinColumn;
+import javax.persistence.Column;
+import javax.persistence.Table;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToOne;
+import javax.persistence.Entity;
+import java.util.Collection;
+import org.hibernate.annotations.IndexColumn;
+import java.io.Serializable;
+import library.model.County;
+import javax.persistence.ForeignKey;
+import javax.persistence.ManyToMany;
 //ID = 1483026
 
 

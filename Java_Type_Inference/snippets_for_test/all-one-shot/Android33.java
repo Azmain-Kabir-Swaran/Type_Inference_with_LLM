@@ -1,10 +1,10 @@
 package androidExamples;
-import android.content.Context;
-import android.graphics.PixelFormat;
 import android.hardware.Camera;
 import android.hardware.Camera.Parameters;
-import android.view.SurfaceHolder;
 import java.io.IOException;
+import android.view.SurfaceHolder;
+import android.content.Context;
+import android.graphics.PixelFormat;
 //ID = 1048739
 
 

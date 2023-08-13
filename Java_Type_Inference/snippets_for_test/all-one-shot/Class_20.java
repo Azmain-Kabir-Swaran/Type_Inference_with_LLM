@@ -3,15 +3,15 @@ Date: 1/19/17
 URL: http://stackoverflow.com/questions/10367698/java-multiple-file-transfer-over-socket
 */
 package common_JDK;
+import java.util.ArrayList;
+import java.io.FileInputStream;
+import java.io.File;
+import java.io.IOException;
+import java.io.FileOutputStream;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
-import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.ArrayList;
+import java.io.BufferedInputStream;
 
 class Class_20{
 public static void receive(){

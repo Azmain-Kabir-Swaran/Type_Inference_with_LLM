@@ -3,8 +3,8 @@ Date: 1/19/17 - Consider later
 URL: http://stackoverflow.com/questions/37628/what-is-reflection-and-why-is-it-useful
 */
 package common_JDK;
-import java.lang.reflect.Array;
 import java.lang.reflect.Field;
+import java.lang.reflect.Array;
 public class Class_18{
 	public static String dump(Object o, int callCount) {
 	    callCount++;

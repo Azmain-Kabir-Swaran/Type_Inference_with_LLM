@@ -1,7 +1,7 @@
 package androidExamples;
 import android.app.Activity;
-import android.os.Bundle;
 import android.widget.TextView;
+import android.os.Bundle;
 
 public class Android01 extends Activity {
     /** Called when the activity is first created. */

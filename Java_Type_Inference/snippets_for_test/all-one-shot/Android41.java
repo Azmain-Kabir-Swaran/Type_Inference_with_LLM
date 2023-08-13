@@ -1,8 +1,8 @@
 package androidExamples;
-import android.content.Context;
 import android.graphics.Color;
-import android.view.View;
 import android.widget.TextView;
+import android.view.View;
+import android.content.Context;
 //ID = 1182620
 
 public class Android41 extends View {

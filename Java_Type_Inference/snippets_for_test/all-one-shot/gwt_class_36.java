@@ -1,7 +1,7 @@
 package gwt;
 import com.google.gwt.user.client.ui.AbsolutePanel;
-import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.SimplePanel;
+import com.google.gwt.user.client.ui.RootPanel;
 //ID = 2679247
 
 public class gwt_class_36 {

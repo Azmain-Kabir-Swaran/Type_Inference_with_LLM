@@ -1,11 +1,4 @@
 package hibernate;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
-import com.google.gwt.user.server.rpc.RemoteServiceServlet;
-import com.example.client.GreetingService;
-import com.example.server.HibernateUtil;
 //ID = 4346254
 
 

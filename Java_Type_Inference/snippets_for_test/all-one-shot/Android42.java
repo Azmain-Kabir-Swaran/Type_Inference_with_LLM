@@ -1,27 +1,27 @@
 package androidExamples;
-import android.app.Activity;
-import android.content.Intent;
-import android.content.pm.ActivityInfo;
-import android.graphics.PixelFormat;
-import android.media.MediaPlayer;
-import android.media.MediaPlayer.OnBufferingUpdateListener;
-import android.media.MediaPlayer.OnCompletionListener;
-import android.media.MediaPlayer.OnErrorListener;
-import android.media.MediaPlayer.OnPreparedListener;
-import android.net.Uri;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
-import android.webkit.URLUtil;
-import android.widget.Button;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import android.media.MediaPlayer.OnCompletionListener;
 import java.io.InputStream;
+import android.media.MediaPlayer.OnPreparedListener;
+import java.io.File;
+import android.media.MediaPlayer.OnErrorListener;
+import android.media.MediaPlayer;
+import android.widget.Button;
 import java.net.URL;
+import android.net.Uri;
 import java.net.URLConnection;
+import android.content.Intent;
+import android.app.Activity;
+import java.io.IOException;
+import android.media.MediaPlayer.OnBufferingUpdateListener;
+import android.view.SurfaceHolder;
+import android.webkit.URLUtil;
+import android.util.Log;
+import android.graphics.PixelFormat;
+import android.os.Bundle;
+import java.io.FileOutputStream;
+import android.content.pm.ActivityInfo;
 //ID = 1188346
 public class Android42 extends Activity implements OnErrorListener, 
 

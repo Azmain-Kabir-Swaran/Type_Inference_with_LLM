@@ -1,8 +1,8 @@
 package androidExamples;
-import android.content.Context;
-import android.view.View;
 import android.view.animation.ScaleAnimation;
 import android.widget.TextView;
+import android.view.View;
+import android.content.Context;
 
 
 public class Android20 extends View {

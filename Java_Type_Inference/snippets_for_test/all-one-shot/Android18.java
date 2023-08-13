@@ -1,9 +1,9 @@
 package androidExamples;
-import android.app.Activity;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View.OnClickListener;
+import android.content.Intent;
+import android.app.Activity;
 //ID = 724419
 public class Android18 extends Activity implements OnClickListener {
     /** Called when the activity is first created. */

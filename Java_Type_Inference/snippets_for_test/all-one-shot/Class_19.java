@@ -3,13 +3,13 @@ Date: 1/19/17
 URL: http://stackoverflow.com/questions/1519736/random-shuffling-of-an-array
 */
 package common_JDK;
-import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.NoSuchElementException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.Random;
+import java.util.Collection;
+import java.util.List;
 
 class Test
 {

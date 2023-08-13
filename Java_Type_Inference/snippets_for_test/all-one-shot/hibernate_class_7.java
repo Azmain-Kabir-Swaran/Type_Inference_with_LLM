@@ -1,7 +1,7 @@
 package hibernate;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
+import org.hibernate.SessionFactory;
 //ID = 1205820
 
 public class hibernate_class_7 {

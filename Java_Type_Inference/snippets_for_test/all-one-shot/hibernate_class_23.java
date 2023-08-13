@@ -1,9 +1,9 @@
 package hibernate;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.HibernateException;
-import org.hibernate.cfg.Configuration;
+import org.hibernate.SessionFactory;
 //ID = 2724147
 
 public class hibernate_class_23 {

@@ -1,8 +1,8 @@
 package xstream;
+import com.thoughtworks.xstream.converters.SingleValueConverter;
+import java.util.List;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
-import com.thoughtworks.xstream.converters.SingleValueConverter;
 //ID=17871210
 
 

@@ -1,8 +1,8 @@
 package androidExamples;
-import android.view.Gravity;
-import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.Gravity;
 
 
 //ID = 263507

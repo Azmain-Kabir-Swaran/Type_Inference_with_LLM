@@ -1,6 +1,5 @@
 package jodatime;
 import org.joda.time.DateTime;
-import org.joda.time.MillisProvider;
 //id = 5622194
 
 public class JodaTime48 {

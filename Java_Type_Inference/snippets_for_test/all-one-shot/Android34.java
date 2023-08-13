@@ -1,12 +1,12 @@
 package androidExamples;
-import android.app.TabActivity;
+import android.widget.TabHost;
 import android.os.Bundle;
-import android.util.Log;
+import android.widget.TabHost.OnTabChangeListener;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.TabHost;
-import android.widget.TabHost.OnTabChangeListener;
+import android.util.Log;
 import android.widget.TabHost.TabContentFactory;
+import android.app.TabActivity;
 //ID = 1062476
 
 public class Android34 extends TabActivity 

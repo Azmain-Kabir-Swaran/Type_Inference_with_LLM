@@ -1,9 +1,9 @@
 package androidExamples;
+import android.view.LayoutInflater;
+import android.widget.LinearLayout;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.widget.LinearLayout;
 //ID = 1325576
 
 public class Android49 extends LinearLayout {

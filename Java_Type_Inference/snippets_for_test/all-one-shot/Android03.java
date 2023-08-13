@@ -1,7 +1,7 @@
 package androidExamples;
 import android.graphics.drawable.Drawable;
-import com.google.android.maps.ItemizedOverlay;
 import com.google.android.maps.OverlayItem;
+import com.google.android.maps.ItemizedOverlay;
 import com.google.android.maps.GeoPoint;
 //ID = 26362
 

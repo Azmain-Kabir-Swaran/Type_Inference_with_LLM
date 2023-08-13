@@ -1,10 +1,10 @@
 package androidExamples;
-import android.app.Activity;
-import android.graphics.Color;
-import android.os.Bundle;
-import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.os.Bundle;
+import android.widget.LinearLayout;
+import android.graphics.Color;
+import android.app.Activity;
+import android.view.ViewGroup;
 //ID = 549451
 
 public class Android12 extends Activity {

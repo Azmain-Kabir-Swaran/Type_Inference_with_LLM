@@ -1,9 +1,9 @@
 package xstream;
+import java.util.List;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.thoughtworks.xstream.io.xml.DomDriver;
-import java.util.List;
 import java.util.ArrayList;
+import com.thoughtworks.xstream.io.xml.DomDriver;
 //https://developmentality.wordpress.com/2010/07/13/xstream-introduction-and-java-collections-serialization-problem-workaround/
 
 

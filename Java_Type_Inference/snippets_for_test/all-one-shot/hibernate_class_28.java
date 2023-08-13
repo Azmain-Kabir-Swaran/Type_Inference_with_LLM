@@ -1,17 +1,16 @@
 package hibernate;
-import java.util.ArrayList;
 import java.util.List;
-import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import org.hibernate.annotations.Index;
-import org.hibernate.annotations.IndexColumn;
 import java.io.Serializable;
+import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.JoinColumn;
+import javax.persistence.IndexColumn;
+import javax.persistence.Entity;
 import javax.persistence.GenerationType;
+import java.util.ArrayList;
+import javax.persistence.Column;
 //ID = 3182759
 
 

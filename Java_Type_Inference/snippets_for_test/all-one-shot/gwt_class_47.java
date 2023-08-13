@@ -1,10 +1,10 @@
 package gwt;
-import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.dom.client.Style.Unit;
-import com.google.gwt.user.client.ui.HTML;
-import com.google.gwt.user.client.ui.LayoutPanel;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
 import com.google.gwt.user.client.ui.Widget;
+import com.google.gwt.user.client.ui.HTML;
+import com.google.gwt.dom.client.Style.Unit;
+import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.user.client.ui.LayoutPanel;
 //ID = 3618678
 
 public class gwt_class_47 implements EntryPoint{

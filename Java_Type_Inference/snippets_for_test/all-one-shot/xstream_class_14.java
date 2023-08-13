@@ -1,6 +1,6 @@
 package xstream;
-import com.thoughtworks.xstream.converters.SingleValueConverter;
 import com.thoughtworks.xstream.converters.enums.AbstractSingleValueConverter;
+import com.thoughtworks.xstream.converters.SingleValueConverter;
 //ID = 3533894
 
 public class xstream_class_14 {

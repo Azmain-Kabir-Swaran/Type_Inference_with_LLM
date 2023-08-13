@@ -1,6 +1,6 @@
 package androidExamples;
-import android.content.Intent;
 import android.net.Uri;
+import android.content.Intent;
 //ID = 587917
 
 public class Android15 {

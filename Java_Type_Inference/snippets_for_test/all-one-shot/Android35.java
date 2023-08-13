@@ -1,7 +1,7 @@
 package androidExamples;
+import java.io.IOException;
 import android.media.MediaRecorder;
 import java.io.File;
-import java.io.IOException;
 
 
 

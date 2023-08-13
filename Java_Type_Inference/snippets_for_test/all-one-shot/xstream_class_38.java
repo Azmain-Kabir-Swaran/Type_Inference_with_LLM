@@ -1,8 +1,8 @@
 package xstream;
-import java.util.ArrayList;
-import java.util.List;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+import java.util.List;
+import java.util.ArrayList;
 //ID=33088013
 
 

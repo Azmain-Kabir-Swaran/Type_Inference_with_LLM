@@ -1,13 +1,13 @@
 package androidExamples;
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.hardware.Camera;
-import android.hardware.Camera.PictureCallback;
-import android.widget.ImageView;
+import android.app.Dialog;
 import android.widget.TextView;
+import android.hardware.Camera.PictureCallback;
+import android.graphics.BitmapFactory;
+import android.app.AlertDialog;
+import android.graphics.Bitmap;
+import android.content.Context;
+import android.widget.ImageView;
 
 //ID = 1305388
 

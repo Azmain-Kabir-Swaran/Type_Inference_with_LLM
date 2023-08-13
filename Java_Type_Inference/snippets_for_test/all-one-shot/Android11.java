@@ -1,11 +1,11 @@
 package androidExamples;
-import android.content.Context;
-import android.graphics.Canvas;
-import android.location.Location;
-import android.view.MotionEvent;
-import com.google.android.maps.GeoPoint;
 import com.google.android.maps.MapView;
+import android.view.MotionEvent;
 import com.google.android.maps.MyLocationOverlay;
+import android.graphics.Canvas;
+import android.content.Context;
+import android.location.Location;
+import com.google.android.maps.GeoPoint;
 //ID = 531324
 
 

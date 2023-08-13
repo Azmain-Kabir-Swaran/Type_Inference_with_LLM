@@ -1,6 +1,6 @@
 package xstream;
-import java.util.List;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+import java.util.List;
 import com.thoughtworks.xstream.annotations.XStreamImplicit;
 //ID=30288175
 

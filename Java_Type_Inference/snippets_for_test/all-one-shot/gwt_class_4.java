@@ -1,7 +1,7 @@
 package gwt;
-import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.VerticalSplitPanel;
+import com.google.gwt.user.client.ui.HTML;
+import com.google.gwt.user.client.ui.Composite;
 //ID = 1318732
 public class gwt_class_4{
 	public class MyView extends Composite

@@ -3,17 +3,17 @@ Date: 1/19/17
 URL: http://stackoverflow.com/questions/4637215/can-a-progress-bar-be-used-in-a-class-outside-main
 */
 package common_JDK;
-import java.awt.Container;
-import java.awt.EventQueue;
-import java.awt.GridLayout;
-import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
-import java.text.DecimalFormat;
-import java.util.List;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JProgressBar;
+import java.awt.GridLayout;
+import java.text.DecimalFormat;
+import java.beans.PropertyChangeEvent;
+import java.awt.Container;
+import javax.swing.JLabel;
+import javax.swing.JFrame;
 import javax.swing.SwingWorker;
+import java.awt.EventQueue;
+import java.util.List;
 public class Class_22 {
 	/** @see http://stackoverflow.com/questions/4637215 */
 	public class TwoRoot extends JFrame {

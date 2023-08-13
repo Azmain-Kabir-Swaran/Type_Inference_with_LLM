@@ -1,7 +1,7 @@
 package androidExamples;
 import android.graphics.drawable.Drawable;
-import android.widget.TabHost;
 import android.widget.TabSpec;
+import android.widget.TabHost;
 //ID = 36881
 
 public class Android05 {

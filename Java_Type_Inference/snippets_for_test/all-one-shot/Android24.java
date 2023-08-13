@@ -1,11 +1,11 @@
 package androidExamples;
-import android.app.Activity;
-import android.content.Context;
-import android.location.LocationManager;
-import android.os.Bundle;
-import android.util.Log;
-import java.util.Iterator;
 import java.util.List;
+import android.os.Bundle;
+import java.util.Iterator;
+import android.content.Context;
+import android.app.Activity;
+import android.util.Log;
+import android.location.LocationManager;
 //ID = 896889
 
 

@@ -3,30 +3,30 @@ Date: 1/19/17
 URL: http://stackoverflow.com/questions/5853879/swing-obtain-image-of-jframe
 */
 package common_JDK;
-import java.awt.BorderLayout;
-import java.awt.Component;
-import java.awt.Image;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.InputEvent;
-import java.awt.event.KeyEvent;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
+import javax.swing.SwingUtilities;
 import javax.swing.JOptionPane;
+import java.awt.event.ActionListener;
+import java.awt.Image;
+import javax.swing.border.TitledBorder;
+import java.awt.event.InputEvent;
+import java.awt.event.ActionEvent;
+import java.awt.Component;
+import java.awt.event.KeyEvent;
+import javax.swing.JLabel;
+import javax.swing.JFrame;
+import javax.swing.JMenuItem;
+import java.awt.image.BufferedImage;
 import javax.swing.JPanel;
+import java.io.File;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JTree;
+import java.awt.BorderLayout;
+import javax.swing.ImageIcon;
+import javax.imageio.ImageIO;
+import javax.swing.KeyStroke;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
-import javax.swing.JTree;
-import javax.swing.KeyStroke;
-import javax.swing.SwingUtilities;
-import javax.swing.border.TitledBorder;
 
 /**
 Create a screenshot of a component.

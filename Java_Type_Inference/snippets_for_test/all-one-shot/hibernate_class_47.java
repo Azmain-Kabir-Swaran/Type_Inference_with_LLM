@@ -1,9 +1,9 @@
 package hibernate;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
+import hibernate.HibernateUtil;
 import org.hibernate.cfg.Configuration;
-import com.example.hibernate.HibernateUtil;
+import org.hibernate.Transaction;
+import org.hibernate.SessionFactory;
 //ID = 4323066
 
 

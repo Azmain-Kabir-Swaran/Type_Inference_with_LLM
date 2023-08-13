@@ -1,7 +1,7 @@
 package jodatime;
+import org.joda.time.format.PeriodFormat;
 import org.joda.time.DateTime;
 import org.joda.time.Period;
-import org.joda.time.PeriodFormat;
 import org.joda.time.PeriodType;
 //ID = 8525863
 

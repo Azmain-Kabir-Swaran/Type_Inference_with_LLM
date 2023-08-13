@@ -1,11 +1,11 @@
 package hibernate;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
-import org.hibernate.annotations.CascadeType;
+import javax.persistence.GeneratedValue;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
+import javax.persistence.OneToOne;
+import javax.persistence.Entity;
+import org.hibernate.annotations.CascadeType;
 //ID = 2931936
 
 public class hibernate_class_25{

@@ -1,9 +1,10 @@
 package xstream;
-import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.converters.collections.CollectionConverter;
-import com.thoughtworks.xstream.mapper.ClassAliasingMapper;
-import java.util.ArrayList;
+import com.thoughtworks.xstream.converters.CollectionConverter;
 import java.util.List;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import java.util.ArrayList;
+import com.thoughtworks.xstream.mapper.ClassAliasingMapper;
 //ID=1791178
 
 

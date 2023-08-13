@@ -1,13 +1,13 @@
 package androidExamples;
 import android.app.ListActivity;
-import android.content.Intent;
-import android.database.Cursor;
-import android.os.Bundle;
-import android.provider.Contacts.People;
-import android.view.View;
-import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.provider.Contacts.People;
+import android.database.Cursor;
 import android.widget.TextView;
+import android.os.Bundle;
+import android.widget.ListView;
+import android.view.View;
+import android.content.Intent;
 //ID = 866769
 
 public class Android22 extends ListActivity {

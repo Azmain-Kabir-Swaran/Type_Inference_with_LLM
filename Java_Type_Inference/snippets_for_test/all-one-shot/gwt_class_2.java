@@ -1,9 +1,9 @@
 package gwt;
-import com.google.gwt.core.client.GWT;
 import com.google.gwt.junit.client.GWTTestCase;
-import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.sample.stockwatcher.client.GreetingService;
+import com.google.gwt.core.client.GWT;
 import com.google.gwt.sample.stockwatcher.client.GreetingServiceAsync;
+import com.google.gwt.sample.stockwatcher.client.GreetingService;
+import com.google.gwt.user.client.rpc.AsyncCallback;
 //ID = 971712
 
 

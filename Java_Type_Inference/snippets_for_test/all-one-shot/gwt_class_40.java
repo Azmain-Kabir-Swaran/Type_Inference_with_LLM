@@ -1,7 +1,7 @@
 package gwt;
 import com.google.gwt.user.client.ui.HorizontalPanel;
-import com.google.gwt.user.client.ui.Label;
 import com.sencha.gxt.widget.core.client.container.LayoutContainer;
+import com.google.gwt.user.client.ui.Label;
 //ID = 2868845
 
 public class gwt_class_40 {

@@ -1,9 +1,10 @@
 package gwt;
-import com.google.gwt.user.client.ui.AbsolutePanel;
-import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.AbsolutePanel;
+import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.user.client.ui.Label;
 //ID = 1690154
 
 public class gwt_class_12 implements EntryPoint {

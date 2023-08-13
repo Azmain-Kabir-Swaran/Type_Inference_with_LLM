@@ -1,6 +1,6 @@
 {
     "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-one-shot/Android49.java",
-    "java_code": "package androidExamples;\nimport android.content.Context;\nimport android.util.AttributeSet;\nimport android.view.Gravity;\nimport android.view.LayoutInflater;\nimport android.widget.LinearLayout;\n//ID = 1325576\n\npublic class Android49 extends LinearLayout {\n    public Android49(Context context, AttributeSet attrs) {\n        super(context, attrs);\n        ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.main, this, true);\n        setGravity(Gravity.CENTER);\n    }\n\n    public Android49(Context context) {\n        this(context,null);\n    }\n}",
+    "java_code": "package androidExamples;\nimport android.view.LayoutInflater;\nimport android.widget.LinearLayout;\nimport android.content.Context;\nimport android.util.AttributeSet;\nimport android.view.Gravity;\n//ID = 1325576\n\npublic class Android49 extends LinearLayout {\n    public Android49(Context context, AttributeSet attrs) {\n        super(context, attrs);\n        ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.main, this, true);\n        setGravity(Gravity.CENTER);\n    }\n\n    public Android49(Context context) {\n        this(context,null);\n    }\n}",
     "stdout": "",
     "stderr": "No error (Ignored 'package R does not exist' errors)",
     "return_code": 1

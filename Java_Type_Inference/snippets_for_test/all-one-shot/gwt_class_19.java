@@ -1,7 +1,8 @@
 package gwt;
-import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.user.client.ui.Button;
 //ID = 2155194
 public class gwt_class_19{
 	private void addStartupBox() {

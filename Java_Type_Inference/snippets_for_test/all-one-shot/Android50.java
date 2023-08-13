@@ -1,13 +1,13 @@
 //ID = 1352950
 package androidExamples;
-import android.app.Activity;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
+import android.os.Bundle;
+import android.widget.EditText;
 import java.text.NumberFormat;
+import android.view.View;
+import android.app.Activity;
+import android.util.Log;
 
 
 public class Android50 extends Activity {

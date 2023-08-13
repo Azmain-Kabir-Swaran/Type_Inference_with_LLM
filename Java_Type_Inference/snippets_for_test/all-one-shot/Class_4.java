@@ -1,8 +1,8 @@
 package common_JDK;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.ArrayList;
+import java.util.List;
 /*
  Date: 1/19/17
  URL: http://stackoverflow.com/questions/3481828/how-to-split-a-string-in-java
