@@ -12,18 +12,9 @@
 │   │   └── Zero-shot_Prompt_Learning_with_ChatGPT_(GPT-3.5_Turbo).ipynb
 │   ├── Results
 │   │   ├── compiled-classes
-│   │   │   ├── one-shot-compiled
-│   │   │   └── zero-shot-compiled
 │   │   ├── final-benchmark
-│   │   │   ├── one-shot-json
-│   │   │   └── zero-shot-json
 │   │   ├── llm_fixes
-│   │   │   ├── fixed_codes
-│   │   │   ├── llm-compiled-classes
-│   │   │   └── llm-logs
 │   │   ├── logs
-│   │   │   ├── one-shot-logs
-│   │   │   └── zero-shot-logs
 │   │   ├── Result_Code_Fixing.ipynb
 │   │   ├── Result_Compilation_Rate.ipynb
 │   │   ├── Result_One-shot_Final_Benchmark.ipynb
@@ -32,15 +23,7 @@
 │   │   └── Result_Zero-shot_Prompt_Learning_with_ChatGPT_(GPT-3.5_Turbo).ipynb
 │   └── snippets_for_test
 │       ├── all-one-shot
-│       │   ├── Android01.java
-│       │   ├── ...
-│       │   ├── ...
-│       │   └── xstream_class_9.java
 │       └── all-zero-shot
-│           ├── Android01.java
-│           ├── ...
-│           ├── ...
-│           └── xstream_class_9.java
 └── README.md
 ```
 ### We used ChatGPT's GPT 3.5 Turbo model to do our experiment for Java Type Inference.
