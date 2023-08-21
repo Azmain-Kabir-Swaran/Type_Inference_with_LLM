@@ -1,0 +1,17 @@
+{
+    "filename": "hibernate_class_43",
+    "expected_output": [
+        "import java.util.Properties;",
+        "import org.apache.log4j.Logger;",
+        "import org.hibernate.Session;",
+        "import org.hibernate.SessionFactory;",
+        "import org.hibernate.cfg.Configuration;"
+    ],
+    "predicted_output": [
+        "import org.hibernate.SessionFactory;",
+        "import java.util.Properties;",
+        "import org.hibernate.cfg.Configuration;",
+        "import org.hibernate.Session;",
+        "import org.apache.log4j.Logger;"
+    ]
+}

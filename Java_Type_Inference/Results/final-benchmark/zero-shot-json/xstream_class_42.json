@@ -1,0 +1,13 @@
+{
+    "filename": "xstream_class_42",
+    "expected_output": [
+        "import java.util.List;",
+        "import com.thoughtworks.xstream.annotations.XStreamAlias;",
+        "import com.thoughtworks.xstream.annotations.XStreamImplicit;"
+    ],
+    "predicted_output": [
+        "import java.util.List;",
+        "import com.thoughtworks.xstream.annotations.XStreamAlias;",
+        "import com.thoughtworks.xstream.annotations.XStreamImplicit;"
+    ]
+}

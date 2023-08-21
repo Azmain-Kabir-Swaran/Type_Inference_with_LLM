@@ -1,0 +1,12 @@
+{
+    "filename": "hibernate_class_16",
+    "expected_output": [
+        "import java.awt.Event;",
+        "import java.util.List;"
+    ],
+    "predicted_output": [
+        "import java.util.List;",
+        "import hibernate.Event;",
+        "import org.hibernate.Session;"
+    ]
+}

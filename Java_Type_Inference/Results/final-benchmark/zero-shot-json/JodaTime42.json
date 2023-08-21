@@ -1,0 +1,9 @@
+{
+    "filename": "JodaTime42",
+    "expected_output": [
+        "import org.joda.time.LocalDate;"
+    ],
+    "predicted_output": [
+        "import org.joda.time.LocalDate;"
+    ]
+}

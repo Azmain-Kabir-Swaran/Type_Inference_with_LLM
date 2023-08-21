@@ -1,0 +1,17 @@
+{
+    "filename": "xstream_class_2",
+    "expected_output": [
+        "import java.io.BufferedReader;",
+        "import java.io.FileReader;",
+        "import java.io.IOException;",
+        "import com.thoughtworks.xstream.XStream;",
+        "import com.thoughtworks.xstream.io.xml.DomDriver;"
+    ],
+    "predicted_output": [
+        "import java.io.IOException;",
+        "import com.thoughtworks.xstream.XStream;",
+        "import java.io.FileReader;",
+        "import java.io.BufferedReader;",
+        "import com.thoughtworks.xstream.io.xml.DomDriver;"
+    ]
+}

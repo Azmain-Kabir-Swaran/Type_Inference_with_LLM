@@ -1,0 +1,14 @@
+{
+    "filename": "gwt_class_29",
+    "expected_output": [
+        "import org.apache.commons.net.nntp.Article;",
+        "import com.google.gwt.jsonp.client.JsonpRequestBuilder;",
+        "import com.google.gwt.user.client.Window;",
+        "import com.google.gwt.user.client.rpc.AsyncCallback;"
+    ],
+    "predicted_output": [
+        "import com.google.gwt.user.client.rpc.AsyncCallback;",
+        "import com.google.gwt.jsonp.client.JsonpRequestBuilder;",
+        "import com.google.gwt.user.client.Window;"
+    ]
+}

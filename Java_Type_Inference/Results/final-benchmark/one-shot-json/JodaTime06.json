@@ -1,0 +1,13 @@
+{
+    "filename": "JodaTime06",
+    "expected_output": [
+        "import org.joda.time.Duration;",
+        "import org.joda.time.PeriodType;",
+        "import org.joda.time.format.PeriodFormatterBuilder;"
+    ],
+    "predicted_output": [
+        "import org.joda.time.Duration;",
+        "import org.joda.time.format.PeriodFormatterBuilder;",
+        "import org.joda.time.PeriodType;"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "filename": "hibernate_class_50",
+    "expected_output": [
+        "import java.util.List;",
+        "import java.util.jar.Attributes.Name;",
+        "import org.hibernate.Session;",
+        "import org.hibernate.SessionFactory;"
+    ],
+    "predicted_output": [
+        "import java.util.List;",
+        "import org.hibernate.Session;",
+        "import org.hibernate.SessionFactory;"
+    ]
+}

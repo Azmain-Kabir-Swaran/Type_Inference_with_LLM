@@ -1,0 +1,15 @@
+{
+    "filename": "hibernate_class_29",
+    "expected_output": [
+        "import java.util.List;",
+        "import org.hibernate.Criteria;",
+        "import org.hibernate.Session;",
+        "import org.hibernate.SessionFactory;",
+        "import org.hibernate.criterion.Projections;"
+    ],
+    "predicted_output": [
+        "import org.hibernate.Criteria;",
+        "import org.hibernate.criterion.Projections;",
+        "import org.hibernate.SessionFactory;"
+    ]
+}

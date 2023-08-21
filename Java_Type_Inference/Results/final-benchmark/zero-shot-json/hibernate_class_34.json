@@ -1,0 +1,11 @@
+{
+    "filename": "hibernate_class_34",
+    "expected_output": [
+        "import org.hibernate.Session;",
+        "import org.hibernate.Transaction;"
+    ],
+    "predicted_output": [
+        "import org.hibernate.Session;",
+        "import org.hibernate.Transaction;"
+    ]
+}

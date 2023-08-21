@@ -1,0 +1,17 @@
+{
+    "filename": "gwt_class_38",
+    "expected_output": [
+        "import com.google.gwt.event.dom.client.HasClickHandlers;",
+        "import com.google.gwt.user.client.ui.Composite;",
+        "import com.google.gwt.user.client.ui.Hyperlink;",
+        "import com.google.gwt.user.client.ui.VerticalPanel;",
+        "import com.google.gwt.user.client.ui.Widget;"
+    ],
+    "predicted_output": [
+        "import com.google.gwt.user.client.ui.VerticalPanel;",
+        "import com.google.gwt.user.client.ui.Widget;",
+        "import com.google.gwt.user.client.ui.Composite;",
+        "import com.google.gwt.user.client.ui.Hyperlink;",
+        "import com.google.gwt.event.dom.client.HasClickHandlers;"
+    ]
+}

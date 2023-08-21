@@ -1,0 +1,13 @@
+{
+    "filename": "gwt_class_9",
+    "expected_output": [
+        "import com.google.gwt.user.client.Command;",
+        "import com.google.gwt.user.client.ui.MenuBar;",
+        "import com.google.gwt.user.client.ui.VerticalPanel;"
+    ],
+    "predicted_output": [
+        "import com.google.gwt.user.client.Command;",
+        "import com.google.gwt.user.client.ui.VerticalPanel;",
+        "import com.google.gwt.user.client.ui.MenuBar;"
+    ]
+}

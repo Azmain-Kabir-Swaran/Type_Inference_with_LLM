@@ -1,0 +1,19 @@
+{
+    "filename": "xstream_class_39",
+    "expected_output": [
+        "import java.io.Writer;",
+        "import com.thoughtworks.xstream.XStream;",
+        "import com.thoughtworks.xstream.core.util.QuickWriter;",
+        "import com.thoughtworks.xstream.io.HierarchicalStreamWriter;",
+        "import com.thoughtworks.xstream.io.xml.PrettyPrintWriter;",
+        "import com.thoughtworks.xstream.io.xml.XppDriver;"
+    ],
+    "predicted_output": [
+        "import com.thoughtworks.xstream.io.xml.XppDriver;",
+        "import com.thoughtworks.xstream.io.xml.PrettyPrintWriter;",
+        "import com.thoughtworks.xstream.XStream;",
+        "import java.io.Writer;",
+        "import com.thoughtworks.xstream.io.HierarchicalStreamWriter;",
+        "import com.thoughtworks.xstream.io.QuickWriter;"
+    ]
+}

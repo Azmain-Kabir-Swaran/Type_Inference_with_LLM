@@ -1,0 +1,17 @@
+{
+    "filename": "Android49",
+    "expected_output": [
+        "import android.content.Context;",
+        "import android.util.AttributeSet;",
+        "import android.view.Gravity;",
+        "import android.view.LayoutInflater;",
+        "import android.widget.LinearLayout;"
+    ],
+    "predicted_output": [
+        "import android.view.LayoutInflater;",
+        "import android.widget.LinearLayout;",
+        "import android.content.Context;",
+        "import android.util.AttributeSet;",
+        "import android.view.Gravity;"
+    ]
+}

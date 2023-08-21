@@ -1,0 +1,22 @@
+{
+    "filename": "Android39",
+    "expected_output": [
+        "import java.util.List;",
+        "import android.os.Bundle;",
+        "import com.google.android.maps.MapActivity;",
+        "import com.google.android.maps.MapController;",
+        "import com.google.android.maps.MapView;",
+        "import com.google.android.maps.MyLocationOverlay;",
+        "import com.google.android.maps.Overlay;"
+    ],
+    "predicted_output": [
+        "import android.widget.LinearLayout;",
+        "import com.google.android.maps.MapActivity;",
+        "import android.os.Bundle;",
+        "import com.google.android.maps.MyLocationOverlay;",
+        "import android.view.View;",
+        "import com.google.android.maps.MapController;",
+        "import com.google.android.maps.MapView;",
+        "import com.google.android.maps.Overlay;"
+    ]
+}

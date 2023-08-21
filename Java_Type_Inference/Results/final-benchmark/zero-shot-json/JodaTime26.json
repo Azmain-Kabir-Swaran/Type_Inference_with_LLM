@@ -1,0 +1,11 @@
+{
+    "filename": "JodaTime26",
+    "expected_output": [
+        "import org.joda.time.Duration;",
+        "import org.joda.time.Period;"
+    ],
+    "predicted_output": [
+        "import org.joda.time.Duration;",
+        "import org.joda.time.Period;"
+    ]
+}

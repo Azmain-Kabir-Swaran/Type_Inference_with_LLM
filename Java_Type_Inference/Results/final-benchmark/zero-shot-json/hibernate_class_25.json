@@ -1,0 +1,21 @@
+{
+    "filename": "hibernate_class_25",
+    "expected_output": [
+        "import javax.persistence.CascadeType;",
+        "import javax.persistence.Entity;",
+        "import javax.persistence.GeneratedValue;",
+        "import javax.persistence.Id;",
+        "import javax.persistence.OneToOne;",
+        "import org.hibernate.annotations.Fetch;",
+        "import org.hibernate.annotations.FetchMode;"
+    ],
+    "predicted_output": [
+        "import javax.persistence.Id;",
+        "import javax.persistence.CascadeType;",
+        "import javax.persistence.OneToOne;",
+        "import javax.persistence.Entity;",
+        "import org.hibernate.annotations.FetchMode;",
+        "import javax.persistence.GeneratedValue;",
+        "import org.hibernate.annotations.Fetch;"
+    ]
+}

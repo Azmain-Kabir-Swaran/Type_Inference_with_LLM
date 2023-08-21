@@ -1,0 +1,21 @@
+{
+    "filename": "hibernate_class_35",
+    "expected_output": [
+        "import java.util.Iterator;",
+        "import java.util.List;",
+        "import org.apache.log4j.BasicConfigurator;",
+        "import org.hibernate.HibernateException;",
+        "import org.hibernate.Query;",
+        "import org.hibernate.Session;",
+        "import org.hibernate.Transaction;"
+    ],
+    "predicted_output": [
+        "import org.hibernate.Session;",
+        "import java.util.Iterator;",
+        "import java.util.List;",
+        "import org.hibernate.Query;",
+        "import org.hibernate.Transaction;",
+        "import org.apache.log4j.BasicConfigurator;",
+        "import org.hibernate.HibernateException;"
+    ]
+}

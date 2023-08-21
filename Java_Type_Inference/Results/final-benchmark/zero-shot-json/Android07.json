@@ -1,0 +1,15 @@
+{
+    "filename": "Android07",
+    "expected_output": [
+        "import android.app.Activity;",
+        "import android.os.Bundle;",
+        "import android.view.View;",
+        "import android.widget.ArrayAdapter;"
+    ],
+    "predicted_output": [
+        "import android.widget.ArrayAdapter;",
+        "import android.os.Bundle;",
+        "import android.view.View;",
+        "import android.app.Activity;"
+    ]
+}

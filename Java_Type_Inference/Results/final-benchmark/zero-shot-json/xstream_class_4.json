@@ -1,0 +1,11 @@
+{
+    "filename": "xstream_class_4",
+    "expected_output": [
+        "import java.util.ArrayList;",
+        "import com.thoughtworks.xstream.XStream;"
+    ],
+    "predicted_output": [
+        "import java.util.ArrayList;",
+        "import com.thoughtworks.xstream.XStream;"
+    ]
+}

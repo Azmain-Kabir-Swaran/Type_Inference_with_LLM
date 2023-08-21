@@ -1,0 +1,11 @@
+{
+    "filename": "xstream_class_16",
+    "expected_output": [
+        "import com.thoughtworks.xstream.XStream;",
+        "import com.thoughtworks.xstream.mapper.MapperWrapper;"
+    ],
+    "predicted_output": [
+        "import com.thoughtworks.xstream.mapper.MapperWrapper;",
+        "import com.thoughtworks.xstream.XStream;"
+    ]
+}

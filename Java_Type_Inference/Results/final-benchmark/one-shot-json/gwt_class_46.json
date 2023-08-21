@@ -1,0 +1,15 @@
+{
+    "filename": "gwt_class_46",
+    "expected_output": [
+        "import com.google.gwt.user.client.ui.DialogBox;",
+        "import com.google.gwt.user.client.ui.HTML;",
+        "import com.google.gwt.user.client.ui.RootPanel;",
+        "import com.google.gwt.user.client.ui.VerticalPanel;"
+    ],
+    "predicted_output": [
+        "import com.google.gwt.user.client.ui.DialogBox;",
+        "import com.google.gwt.user.client.ui.RootPanel;",
+        "import com.google.gwt.user.client.ui.VerticalPanel;",
+        "import com.google.gwt.user.client.ui.HTML;"
+    ]
+}

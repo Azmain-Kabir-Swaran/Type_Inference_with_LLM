@@ -1,0 +1,18 @@
+{
+    "filename": "xstream_class_15",
+    "expected_output": [
+        "import java.util.HashSet;",
+        "import com.thoughtworks.xstream.XStream;",
+        "import com.thoughtworks.xstream.converters.MarshallingContext;",
+        "import com.thoughtworks.xstream.converters.collections.CollectionConverter;",
+        "import com.thoughtworks.xstream.io.HierarchicalStreamWriter;"
+    ],
+    "predicted_output": [
+        "import com.thoughtworks.xstream.converters.CollectionConverter;",
+        "import com.thoughtworks.xstream.io.HierarchicalStreamWriter;",
+        "import java.util.HashSet;",
+        "import com.thoughtworks.xstream.XStream;",
+        "import org.hibernate.collection.PersistentSet;",
+        "import com.thoughtworks.xstream.converters.MarshallingContext;"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "filename": "hibernate_class_10",
+    "expected_output": [
+        "import java.io.Serializable;",
+        "import java.util.List;",
+        "import org.hibernate.Session;"
+    ],
+    "predicted_output": [
+        "import org.hibernate.Session;",
+        "import java.util.List;",
+        "import java.io.Serializable;"
+    ]
+}

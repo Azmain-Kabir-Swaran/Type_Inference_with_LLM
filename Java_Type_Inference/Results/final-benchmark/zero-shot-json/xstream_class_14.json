@@ -1,0 +1,10 @@
+{
+    "filename": "xstream_class_14",
+    "expected_output": [
+        "import com.thoughtworks.xstream.converters.basic.AbstractSingleValueConverter;"
+    ],
+    "predicted_output": [
+        "import com.thoughtworks.xstream.converters.SingleValueConverter;",
+        "import com.thoughtworks.xstream.converters.enums.AbstractSingleValueConverter;"
+    ]
+}

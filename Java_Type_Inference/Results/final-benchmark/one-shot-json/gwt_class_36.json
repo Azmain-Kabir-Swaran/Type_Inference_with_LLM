@@ -1,0 +1,13 @@
+{
+    "filename": "gwt_class_36",
+    "expected_output": [
+        "import com.google.gwt.user.client.ui.AbsolutePanel;",
+        "import com.google.gwt.user.client.ui.RootPanel;",
+        "import com.google.gwt.user.client.ui.SimplePanel;"
+    ],
+    "predicted_output": [
+        "import com.google.gwt.user.client.ui.AbsolutePanel;",
+        "import com.google.gwt.user.client.ui.SimplePanel;",
+        "import com.google.gwt.user.client.ui.RootPanel;"
+    ]
+}

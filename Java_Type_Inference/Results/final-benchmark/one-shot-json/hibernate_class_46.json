@@ -1,0 +1,17 @@
+{
+    "filename": "hibernate_class_46",
+    "expected_output": [
+        "import org.hibernate.CacheMode;",
+        "import org.hibernate.HibernateException;",
+        "import org.hibernate.JDBCException;",
+        "import org.hibernate.Session;",
+        "import org.hibernate.SessionFactory;"
+    ],
+    "predicted_output": [
+        "import org.hibernate.Session;",
+        "import org.hibernate.CacheMode;",
+        "import org.hibernate.JDBCException;",
+        "import org.hibernate.HibernateException;",
+        "import org.hibernate.SessionFactory;"
+    ]
+}

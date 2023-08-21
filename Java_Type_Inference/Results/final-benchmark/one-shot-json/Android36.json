@@ -1,0 +1,11 @@
+{
+    "filename": "Android36",
+    "expected_output": [
+        "import android.content.ContentValues;",
+        "import android.database.sqlite.SQLiteDatabase;"
+    ],
+    "predicted_output": [
+        "import android.content.ContentValues;",
+        "import android.database.sqlite.SQLiteDatabase;"
+    ]
+}

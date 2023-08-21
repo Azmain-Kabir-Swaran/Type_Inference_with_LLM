@@ -1,0 +1,15 @@
+{
+    "filename": "xstream_class_23",
+    "expected_output": [
+        "import com.thoughtworks.xstream.XStream;",
+        "import com.thoughtworks.xstream.annotations.XStreamAlias;",
+        "import com.thoughtworks.xstream.converters.javabean.JavaBeanConverter;",
+        "import com.thoughtworks.xstream.io.xml.XppDriver;"
+    ],
+    "predicted_output": [
+        "import com.thoughtworks.xstream.XStream;",
+        "import com.thoughtworks.xstream.annotations.XStreamAlias;",
+        "import com.thoughtworks.xstream.converters.extended.JavaBeanConverter;",
+        "import com.thoughtworks.xstream.io.xml.XppDriver;"
+    ]
+}

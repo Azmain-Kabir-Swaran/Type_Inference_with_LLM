@@ -1,0 +1,13 @@
+{
+    "filename": "xstream_class_41",
+    "expected_output": [
+        "import java.util.List;",
+        "import com.thoughtworks.xstream.XStream;",
+        "import com.thoughtworks.xstream.io.xml.StaxDriver;"
+    ],
+    "predicted_output": [
+        "import com.thoughtworks.xstream.XStream;",
+        "import java.util.List;",
+        "import com.thoughtworks.xstream.io.xml.StaxDriver;"
+    ]
+}

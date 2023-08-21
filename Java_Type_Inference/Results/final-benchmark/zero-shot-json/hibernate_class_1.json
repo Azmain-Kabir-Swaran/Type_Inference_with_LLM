@@ -1,0 +1,19 @@
+{
+    "filename": "hibernate_class_1",
+    "expected_output": [
+        "import org.hibernate.Session;",
+        "import org.hibernate.SessionFactory;",
+        "import org.hibernate.Transaction;",
+        "import org.hibernate.cfg.AnnotationConfiguration;",
+        "import library.dao.UserDAO;",
+        "import library.model.User;"
+    ],
+    "predicted_output": [
+        "import hibernate.User;",
+        "import org.hibernate.SessionFactory;",
+        "import hibernate.UserDAO;",
+        "import org.hibernate.cfg.AnnotationConfiguration;",
+        "import org.hibernate.Session;",
+        "import org.hibernate.Transaction;"
+    ]
+}

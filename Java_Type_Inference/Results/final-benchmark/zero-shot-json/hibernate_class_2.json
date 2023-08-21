@@ -1,0 +1,28 @@
+{
+    "filename": "hibernate_class_2",
+    "expected_output": [
+        "import java.io.Serializable;",
+        "import java.util.List;",
+        "import javax.persistence.Column;",
+        "import javax.persistence.Id;",
+        "import javax.persistence.JoinColumn;",
+        "import javax.persistence.ManyToOne;",
+        "import javax.persistence.OneToMany;",
+        "import org.hibernate.annotations.Cache;",
+        "import org.hibernate.annotations.CacheConcurrencyStrategy;",
+        "import org.hibernate.annotations.Entity;"
+    ],
+    "predicted_output": [
+        "import java.io.Serializable;",
+        "import javax.persistence.Id;",
+        "import java.util.List;",
+        "import javax.persistence.JoinColumn;",
+        "import javax.persistence.ManyToOne;",
+        "import org.hibernate.annotations.CacheConcurrencyStrategy;",
+        "import javax.persistence.Column;",
+        "import javax.persistence.Cacheable;",
+        "import javax.persistence.OneToMany;",
+        "import javax.persistence.Entity;",
+        "import org.hibernate.annotations.Cache;"
+    ]
+}

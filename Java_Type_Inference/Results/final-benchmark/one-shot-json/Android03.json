@@ -1,0 +1,15 @@
+{
+    "filename": "Android03",
+    "expected_output": [
+        "import com.google.android.maps.GeoPoint;",
+        "import com.google.android.maps.ItemizedOverlay;",
+        "import com.google.android.maps.OverlayItem;",
+        "import android.graphics.drawable.Drawable;"
+    ],
+    "predicted_output": [
+        "import android.graphics.drawable.Drawable;",
+        "import com.google.android.maps.OverlayItem;",
+        "import com.google.android.maps.ItemizedOverlay;",
+        "import com.google.android.maps.GeoPoint;"
+    ]
+}
