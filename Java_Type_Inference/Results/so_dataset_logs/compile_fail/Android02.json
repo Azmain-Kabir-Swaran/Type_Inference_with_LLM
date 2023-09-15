@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset/Android02.java",
+    "java_code": "package androidExamples;\n\nimport android.app.Activity;\nimport android.os.Bundle;\n\nimport gen.R;\n\npublic class Android02 extends Activity\n{\n    /** Called when the activity is first created. */\n    @Override\n    public void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.main);\n    }\n}\n",
+    "stdout": "",
+    "stderr": "/home/azmain/GitHub Codes/so_dataset/Android02.java:6: error: package gen does not exist\nimport gen.R;\n          ^\n/home/azmain/GitHub Codes/so_dataset/Android02.java:14: error: package R does not exist\n        setContentView(R.layout.main);\n                        ^\n2 errors\n",
+    "return_code": 1
+}

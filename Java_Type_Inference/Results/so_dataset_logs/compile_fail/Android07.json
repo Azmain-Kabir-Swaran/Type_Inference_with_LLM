@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset/Android07.java",
+    "java_code": "package androidExamples;\n\nimport android.app.Activity;\nimport android.os.Bundle;\nimport android.view.View;\nimport android.widget.ArrayAdapter;\nimport gen.R;\n//ID = 288044\npublic class Android07 extends Activity{\n\n\t\t\tString[] mainItems = {\n\t\t\t    \"Inbox\", \"Projects\", \"Contexts\", \"Next Actions\"\n\t\t\t};\n\n\t\t\t@Override\n\t\t\tpublic void onCreate(Bundle icicle) {\n\t\t\t    super.onCreate(icicle);\n\t\t\t    setContentView(R.layout.main);\n\n\t\t\t    setListAdapter(new ArrayAdapter<String>(\n\t\t\t            this, android.R.layout.simple_list_item_1, mainItems));\n\t\t\t    registerForContextMenu(getListView());\n\t\t\t}\n\n\t\t\tprivate void setListAdapter(ArrayAdapter<String> arrayAdapter) {\n\t\t\t\t// TODO Auto-generated method stub\n\t\t\t\t\n\t\t\t}\n\n\t\t\tprivate View getListView() {\n\t\t\t\t// TODO Auto-generated method stub\n\t\t\t\treturn null;\n\t\t\t}\n\n}\n",
+    "stdout": "",
+    "stderr": "/home/azmain/GitHub Codes/so_dataset/Android07.java:7: error: package gen does not exist\nimport gen.R;\n          ^\n/home/azmain/GitHub Codes/so_dataset/Android07.java:18: error: package R does not exist\n\t\t\t    setContentView(R.layout.main);\n\t\t\t                    ^\n2 errors\n",
+    "return_code": 1
+}

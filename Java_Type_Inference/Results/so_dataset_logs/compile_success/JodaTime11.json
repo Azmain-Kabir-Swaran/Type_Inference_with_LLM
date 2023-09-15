@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset/JodaTime11.java",
+    "java_code": "package jodatime;\n//ID = 4498274\nimport java.text.ParseException;\nimport java.text.SimpleDateFormat;\n\nimport org.joda.time.format.DateTimeFormat;\nimport org.joda.time.format.DateTimeFormatter;\n\npublic class JodaTime11 {\n\tpublic static void main(String[] args) {\n\t\tDateTimeFormatter dtf = DateTimeFormat.forPattern(\"EEE MMM dd HH:mm:ss z yyyy\");\n\t\tSystem.out.println(dtf.parseDateTime(\"Fri Nov 11 12:13:14 JST 2010\"));\n\t\ttry {\n\t\t\tSystem.out.println(new SimpleDateFormat(\"EEE MMM dd HH:mm:ss z yyyy\").parse(\"Fri Nov 11 12:13:14 JST 2010\"));\n\t\t} catch (ParseException e) {\n\t\t\t// TODO Auto-generated catch block\n\t\t\te.printStackTrace();\n\t\t}\n\t}\n\t\n}\n",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

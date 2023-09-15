@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset/Android44.java",
+    "java_code": "package androidExamples;\n//ID = 1204012\nimport android.app.Service;\nimport android.content.Intent;\nimport android.os.IBinder;\n\npublic class Android44 extends Service {\n\tpublic volatile Thread runner;\n\n\t@Override\n\tpublic IBinder onBind(Intent intent) {\n\t\treturn null;\n\t}\n\n\t@Override\n\tpublic void onCreate() {\n\t\tsuper.onCreate();\n\n\t\tstartThread();\n\t}\n\n\t@Override\n\tpublic void onDestroy() {\n\t\tsuper.onDestroy();\n\t\tandroid.util.Log.v(\"@@@@@@@@@@@@@@@@@@@@\", \"DoScan.onDestroy\");\n\t\tstopThread();\n\t}\n\n\tpublic synchronized void startThread() {\n\t\tif (runner == null) {\n\t\t\tandroid.util.Log.v(\"@@@@@@@@@@@@@@@@@@@@\", \"DoScan.startthread\");\n\t\t\trunner.start();\n\t\t}\n\t}\n\t/*\n\t * use a handler in a loop cycling through most of oncreate. the\n\t * scanningthread does the work, then notifies the svc's uithread\n\t */\n\n\tpublic synchronized void stopThread() {\n\t\tif (runner != null) {\n\t\t\tandroid.util.Log.v(\"@@@@@@@@@@@@@@@@@@@@\", \"DoScan.stopthread\");\n\t\t\tThread moribund = runner;\n\t\t\trunner = null;\n\t\t\tmoribund.interrupt();\n\t\t\tandroid.util.Log.v(\"@@@@@@@@@@@@@@@@@@@@\", \"interrupted?\" + moribund.isInterrupted());\n\t\t}\n\t}\n}\n",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

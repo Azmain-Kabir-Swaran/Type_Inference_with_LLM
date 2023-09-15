@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset/HibernateUtil.java",
+    "java_code": "\n\nimport org.hibernate.SessionFactory;\nimport org.hibernate.cfg.AnnotationConfiguration;\n\npublic class HibernateUtil {\n    private static final SessionFactory sessionFactory;\n\n    static\n    {\n        try\n        {\n            // Create the SessionFactory from hibernate.cfg.xml\n            sessionFactory = new  AnnotationConfiguration().configure().buildSessionFactory();\n        } catch(Throwable e)\n        {\n            System.err.println(\"Initial sessionFactory creation failed.  \" + e);\n            throw new ExceptionInInitializerError(e);\n        }\n    }\n\n    public static SessionFactory getSessionFactory()\n    {\n        return sessionFactory;\n    }\n}\n",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset/xstream_class_10.java",
+    "java_code": "\n//ID=2008043\nimport java.io.StringWriter;\n\nimport com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.io.xml.PrettyPrintWriter;\n\npublic class xstream_class_10 {\n\tprivate String generateResponse(final XStream xStream)\n\t{\n\t    StringWriter writer = new StringWriter();\n\t    xStream.marshal(this, new PrettyPrintWriter(writer) {\n\t        @Override\n\t        public void addAttribute(final String key, final String value)\n\t        {\n\t            if (!key.equals(\"class\"))\n\t            {\n\t                super.addAttribute(key, value);\n\t            }\n\t        }\n\t    });\n\t    return writer.toString();\n\t}\n}\n",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

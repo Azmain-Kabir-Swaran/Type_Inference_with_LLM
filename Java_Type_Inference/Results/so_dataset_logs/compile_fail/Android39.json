@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset/Android39.java",
+    "java_code": "package androidExamples;\n//ID = 1153920\n\nimport java.util.List;\n\nimport android.os.Bundle;\nimport gen.R;\nimport com.google.android.maps.MapActivity;\nimport com.google.android.maps.MapController;\nimport com.google.android.maps.MapView;\nimport com.google.android.maps.MyLocationOverlay;\nimport com.google.android.maps.Overlay;\n\npublic class Android39 extends MapActivity {\n\n\tpublic void onCreate(Bundle icicle) {\n\t\tsuper.onCreate(icicle);\n\n\t\tsetContentView(R.layout.main);\n\n\t\tMapView myMapView = (MapView) findViewById(R.id.lay);\n\t\tMapController mapController = myMapView.getController();\n\n\t\tList<Overlay> overlays = myMapView.getOverlays();\n\t\tMyLocationOverlay myLocationOverlay = new MyLocationOverlay(this, myMapView);\n\t\toverlays.add(myLocationOverlay);\n\t\tmyLocationOverlay.enableMyLocation();\n\t}\n\n\tprotected boolean isRouteDisplayed() {\n\n\t\treturn false;\n\t}\n\n}\n",
+    "stdout": "",
+    "stderr": "/home/azmain/GitHub Codes/so_dataset/Android39.java:7: error: package gen does not exist\nimport gen.R;\n          ^\n/home/azmain/GitHub Codes/so_dataset/Android39.java:19: error: package R does not exist\n\t\tsetContentView(R.layout.main);\n\t\t                ^\n/home/azmain/GitHub Codes/so_dataset/Android39.java:21: error: package R does not exist\n\t\tMapView myMapView = (MapView) findViewById(R.id.lay);\n\t\t                                            ^\n3 errors\n",
+    "return_code": 1
+}

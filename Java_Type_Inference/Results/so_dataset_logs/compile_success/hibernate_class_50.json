@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset/hibernate_class_50.java",
+    "java_code": "\n//ID = 4562711\nimport java.util.List;\nimport java.util.jar.Attributes.Name;\n\nimport org.hibernate.Session;\nimport org.hibernate.SessionFactory;\n\npublic class hibernate_class_50 {\n    private SessionFactory sessionFactory;\n\n    public void setSessionFactory(SessionFactory sessionFactory) {\n        this.sessionFactory = sessionFactory;\n    }\n\n    public SessionFactory getSessionFactory() {\n        return sessionFactory;\n    }\n\n\n    @SuppressWarnings(\"unchecked\")\n    public List<Name> getAll() {\n        Session session = this.sessionFactory.getCurrentSession();\n        List<Name> names = (List<Name>)session.createQuery(\"from Name\").list();\n        return names;\n    }\n\n    public void save(Name name){\n        Session session = this.sessionFactory.getCurrentSession();\n        session.saveOrUpdate(name);\n        session.flush();\n    }\n}\n",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

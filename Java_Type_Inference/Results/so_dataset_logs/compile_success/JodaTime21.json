@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset/JodaTime21.java",
+    "java_code": "package jodatime;\n//ID = 7868105\nimport java.text.DateFormat;\nimport java.text.ParseException;\nimport java.text.SimpleDateFormat;\nimport java.util.Date;\n\nimport org.joda.time.DateTime;\nimport org.joda.time.DateTimeZone;\nimport org.joda.time.LocalDateTime;\n\npublic class JodaTime21 {\n\tpublic static void main(String[] args) {\n\tDateFormat formatter = new SimpleDateFormat(\"yyyy-MM-dd HH:mm:ss\");\n\tDate dt = null;\n\ttry {\n\t\tdt = formatter.parse(\"2011-10-23 12:00:00\");\n\t} catch (ParseException e) {\n\t\t// TODO Auto-generated catch block\n\t\te.printStackTrace();\n\t}\n\tLocalDateTime ldt = new DateTime(dt).withZone(DateTimeZone.UTC).toLocalDateTime();\n\tSystem.out.println(\"Original date: \" + ldt.toDateTime().toDate().toString());\n\tDateTime cvtldt = ldt.toDateTime(DateTimeZone.forID(\"-05:00\"));\n\tSystem.out.println(\"Converted date: \" + cvtldt.toLocalDateTime().toDateTime().toDate().toString());\n}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

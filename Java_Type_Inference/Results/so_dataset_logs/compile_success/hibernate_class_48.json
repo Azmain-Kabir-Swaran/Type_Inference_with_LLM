@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset/hibernate_class_48.java",
+    "java_code": "\n//ID = 4346254\nimport net.sf.gilead.core.PersistentBeanManager;\nimport net.sf.gilead.core.hibernate.HibernateUtil;\nimport net.sf.gilead.core.store.stateless.StatelessProxyStore;\n\nimport org.hibernate.Session;\nimport org.hibernate.SessionFactory;\nimport org.hibernate.Transaction;\n\n\n//import aQute.gwt.greeter.shared.GreetingService;\npublic abstract class hibernate_class_48{\n\n    private static final long serialVersionUID = 1L;\n    private HibernateUtil gileadHibernateUtil = new HibernateUtil();\n    public hibernate_class_48 ()\n    {\n    \tSessionFactory session = null;\n         gileadHibernateUtil.setSessionFactory(session);\n\n                PersistentBeanManager persistentBeanManager = new PersistentBeanManager();\n                persistentBeanManager.setPersistenceUtil(gileadHibernateUtil);\n                persistentBeanManager.setProxyStore(new StatelessProxyStore());\n\n    }\n\n    public String greetServer(String S) \n    {\n        Session session = gileadHibernateUtil.getSessionFactory().openSession();\n        Transaction tr= session.beginTransaction();\n        session.save(S);\n        tr.commit();\n        session.close();\n         return S;\n      }\n\n\n}\n",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

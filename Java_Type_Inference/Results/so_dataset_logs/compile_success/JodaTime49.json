@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset/JodaTime49.java",
+    "java_code": "package jodatime;\n//ID = 8746084\nimport org.joda.time.DateTime;\nimport org.joda.time.LocalDate;\nimport org.joda.time.format.DateTimeFormat;\nimport org.joda.time.format.DateTimeFormatter;\n\npublic class JodaTime49 {\n\n\tpublic static void main(String[] args) {\n\t\t// TODO Auto-generated method stub\n\t\tDateTimeFormatter FORMATTER = DateTimeFormat.forPattern(\"yyyy-MMM-dd\");\n\t\tDateTime dateTime = FORMATTER.parseDateTime(\"2005-nov-12\");\n\t\tLocalDate localDate = dateTime.toLocalDate();\n\t}\n\n}\n",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

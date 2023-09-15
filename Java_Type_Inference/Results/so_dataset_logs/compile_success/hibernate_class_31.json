@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset/hibernate_class_31.java",
+    "java_code": "\n//ID = 3218631\nimport org.hibernate.Session;\nimport org.hibernate.SessionFactory;\nimport org.hibernate.cfg.Configuration;\nimport org.hibernate.*;\nimport java.util.*;\n\npublic class hibernate_class_31\n{\n    public static List<?> getData ()\n    {\n        SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();\n        Session session = sessionFactory.getCurrentSession();\n        List<?> result = null;\n        try\n        {\n            session.beginTransaction();\n            Query query = session.createQuery(\"from Users\");\n            result = query.list();\n            session.getTransaction().commit();\n            query.setReadOnly(true);\n            query.setMaxResults(50);\n            session.flush();\n            session.close();\n        }\n        catch (Exception e)\n        {\n            e.printStackTrace();\n        }\n        return result;      \n    }\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

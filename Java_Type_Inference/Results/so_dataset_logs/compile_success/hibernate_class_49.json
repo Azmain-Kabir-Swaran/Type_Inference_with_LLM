@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset/hibernate_class_49.java",
+    "java_code": "\n\nimport java.io.Serializable;\n\nimport javax.persistence.Entity;\nimport javax.persistence.Id;\nimport javax.persistence.Version;\n\nimport org.hibernate.annotations.NaturalId;\n\n@Entity\npublic class hibernate_class_49 implements Serializable {\n    /**\n     * \n     */\n    private static final long serialVersionUID = 1L;\n    private String username;\n    private String password;\n    private Integer VERSION;\n\n    @Version\n    public Integer getVERSION() {\n        return VERSION;\n    }\n\n    public void setVERSION(Integer vERSION) {\n        VERSION = vERSION;\n    }\n    @NaturalId\n    public String getUsername() {\n        return username;\n    }\n\n\n    public void setUsername(String username) {\n        this.username = username;\n    }\n\n    public String getPassword() {\n        return password;\n    }\n\n    public void setPassword(String password) {\n        this.password = password;\n    }\n\n}\n",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

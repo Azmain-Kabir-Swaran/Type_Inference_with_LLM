@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset/hibernate_class_32.java",
+    "java_code": "\n//ID = 3287351\nimport javax.persistence.*;\nimport org.hibernate.annotations.Index;\n\n@Entity\n@Table(name=\"log_entries\")\n@org.hibernate.annotations.Table(appliesTo=\"log_entries\",\n    indexes = { @Index(name=\"idx\", columnNames = {\"job\", \"version\", \"schedule\", \"dttmRun\", \"pid\" } ) } )\npublic class hibernate_class_32 {\n  @Id @GeneratedValue\n  Long id;\n  String job;\n  String version;\n  String schedule;\n  String dttmRun;\n  int pid;\n  String command;\n  int duration;\n\n  // getters and setters...\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}
