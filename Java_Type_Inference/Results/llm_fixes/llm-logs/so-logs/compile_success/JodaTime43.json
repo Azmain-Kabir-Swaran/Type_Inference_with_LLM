@@ -1,0 +1,8 @@
+{
+    "attempt": 2,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime43.java",
+    "java_code": "import org.joda.time.*;\nimport org.joda.time.format.*;\n\npublic class JodaTime43 {\n\n    public static void main(String[] args) {\n        DateTimeParser[] parsers = {\n                DateTimeFormat.forPattern( \"yyyy-MM-dd HH\" ).getParser(),\n                DateTimeFormat.forPattern( \"yyyy-MM-dd\" ).getParser() };\n        DateTimeFormatter formatter = new DateTimeFormatterBuilder().append( null, parsers ).toFormatter();\n\n        DateTime date1 = formatter.parseDateTime( \"2010-01-01\" );\n        DateTime date2 = formatter.parseDateTime( \"2010-01-01 01\" );\n    }\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

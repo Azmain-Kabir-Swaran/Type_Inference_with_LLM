@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/so_dataset/hibernate_class_4.java",
-    "java_code": "\n//ID = 970573\nimport org.hibernate.SessionFactory;\nimport org.hibernate.HibernateException;\nimport org.hibernate.cfg.Configuration;\n\npublic class hibernate_class_4 {\n    private static final SessionFactory sessionFactory;\n\n    static {\n        try {\n            sessionFactory = new Configuration ().configure ().buildSessionFactory ();\n        } catch (HibernateException he) {\n            System.err.println (he);\n            throw new ExceptionInInitializerError (he);\n        }\n    }\n\n    public static SessionFactory getSessionFactory () {\n        return sessionFactory;\n    }\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

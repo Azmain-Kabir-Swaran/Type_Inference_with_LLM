@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/hibernate_class_49.java",
+    "java_code": "import java.io.Serializable;\nimport javax.persistence.Entity;\nimport javax.persistence.Id;\nimport org.hibernate.annotations.NaturalId;\nimport javax.persistence.Version;\n\n@Entity\npublic class hibernate_class_49 implements Serializable {\n    private static final long serialVersionUID = 1L;\n    \n    @Id\n    private String username;\n    private String password;\n    \n    @Version\n    private Integer VERSION;\n\n    public Integer getVERSION() {\n        return VERSION;\n    }\n\n    public void setVERSION(Integer vERSION) {\n        VERSION = vERSION;\n    }\n    \n    @NaturalId\n    public String getUsername() {\n        return username;\n    }\n\n    public void setUsername(String username) {\n        this.username = username;\n    }\n\n    public String getPassword() {\n        return password;\n    }\n\n    public void setPassword(String password) {\n        this.password = password;\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

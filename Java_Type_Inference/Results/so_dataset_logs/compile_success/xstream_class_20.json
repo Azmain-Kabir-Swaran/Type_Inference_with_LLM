@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/so_dataset/xstream_class_20.java",
-    "java_code": "\n//ID = 3623546\nimport java.io.File;\nimport java.io.InputStream;\nimport java.io.InputStreamReader;\nimport java.io.Reader;\nimport java.nio.charset.Charset;\n\nimport com.thoughtworks.xstream.XStream;\n\npublic class xstream_class_20 {\n\t@SuppressWarnings(\"unchecked\")\n\tpublic static <A> A fromXML(Class c, File file) {\n\t    // Don't ever try to use DomDriver. They are VERY slow.\n\t    XStream xStream = new XStream();\n\t    InputStream inputStream = null;\n\t    Reader reader = null;\n\n\t    try {\n\t        inputStream = new java.io.FileInputStream(file);\n\t        reader = new InputStreamReader(inputStream, Charset.forName(\"UTF-8\"));\n\t        Object object = xStream.fromXML(reader);\n\n\t        if (c.isInstance(object)) {\n\t            return (A)object;\n\t        }\n\t    }\n\t    catch (Exception exp) {\n\t    }\n\t    finally {\n\t        if (false) {\n\t            return null;\n\t        }\n\t        if (false) {\n\t            return null;\n\t        }\n\t        reader = null;\n\t        inputStream = null;\n\t    }\n\n\t    return null;\n\t}\n}\n",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

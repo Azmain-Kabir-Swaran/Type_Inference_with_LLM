@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset/hibernate_class_20.java",
+    "java_code": "public class hibernate_class_20\n{\n    private static final SessionFactory sessionFactory;\n\n    static\n    {\n        try\n        {\n            // Create the SessionFactory from hibernate.cfg.xml\n            sessionFactory = new  AnnotationConfiguration().configure().buildSessionFactory();\n        } catch(Throwable e)\n        {\n            System.err.println(\"Initial sessionFactory creation failed.  \" + e);\n            throw new ExceptionInInitializerError(e);\n        }\n    }\n\n    public static SessionFactory getSessionFactory()\n    {\n        return sessionFactory;\n    }\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/GitHub Codes/so_dataset/hibernate_class_20.java:3: error: cannot find symbol\n    private static final SessionFactory sessionFactory;\n                         ^\n  symbol:   class SessionFactory\n  location: class hibernate_class_20\n/home/azmain/GitHub Codes/so_dataset/hibernate_class_20.java:18: error: cannot find symbol\n    public static SessionFactory getSessionFactory()\n                  ^\n  symbol:   class SessionFactory\n  location: class hibernate_class_20\n/home/azmain/GitHub Codes/so_dataset/hibernate_class_20.java:10: error: cannot find symbol\n            sessionFactory = new  AnnotationConfiguration().configure().buildSessionFactory();\n                                  ^\n  symbol:   class AnnotationConfiguration\n  location: class hibernate_class_20\n3 errors\n",
+    "return_code": 1
+}

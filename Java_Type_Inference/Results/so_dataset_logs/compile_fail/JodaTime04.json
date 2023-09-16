@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset/JodaTime04.java",
+    "java_code": "package jodatime;\npublic class JodaTime04 {\n\tprivate ReadableInstant[] startTime;\n\tprivate ReadableInstant[] endTime;\n\n\tpublic String foobar(int dayIndex) {\n\t\tPeriod p = new Period(this.startTime[dayIndex], this.endTime[dayIndex]);\n\t\tlong hours = p.getHours();\n\t\tlong minutes = p.getMinutes();\n\n\t\tString format = String.format(\"%%0%dd\", 2);//Ensures that the minutes will always display as two digits.\n\n\t\treturn Long.toString(hours)+\":\"+String.format(format, minutes);\n\t}\n\n}\n",
+    "stdout": "",
+    "stderr": "/home/azmain/GitHub Codes/so_dataset/JodaTime04.java:3: error: cannot find symbol\n\tprivate ReadableInstant[] startTime;\n\t        ^\n  symbol:   class ReadableInstant\n  location: class JodaTime04\n/home/azmain/GitHub Codes/so_dataset/JodaTime04.java:4: error: cannot find symbol\n\tprivate ReadableInstant[] endTime;\n\t        ^\n  symbol:   class ReadableInstant\n  location: class JodaTime04\n/home/azmain/GitHub Codes/so_dataset/JodaTime04.java:7: error: cannot find symbol\n\t\tPeriod p = new Period(this.startTime[dayIndex], this.endTime[dayIndex]);\n\t\t^\n  symbol:   class Period\n  location: class JodaTime04\n/home/azmain/GitHub Codes/so_dataset/JodaTime04.java:7: error: cannot find symbol\n\t\tPeriod p = new Period(this.startTime[dayIndex], this.endTime[dayIndex]);\n\t\t               ^\n  symbol:   class Period\n  location: class JodaTime04\n4 errors\n",
+    "return_code": 1
+}

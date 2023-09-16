@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset/JodaTime39.java",
+    "java_code": "package jodatime;\npublic class JodaTime39 {\n\n\tpublic static void main(String[] args) {\n\t\t//Difference between two date times in minutes\n\t\tDateTime d1 = new DateTime();\n\t\tDateTime d2 = new DateTime();\n\n\t\tlong diffInMillis = d2.getMillis() - d1.getMillis();\n\t}\n\n}\n",
+    "stdout": "",
+    "stderr": "/home/azmain/GitHub Codes/so_dataset/JodaTime39.java:6: error: cannot find symbol\n\t\tDateTime d1 = new DateTime();\n\t\t^\n  symbol:   class DateTime\n  location: class JodaTime39\n/home/azmain/GitHub Codes/so_dataset/JodaTime39.java:6: error: cannot find symbol\n\t\tDateTime d1 = new DateTime();\n\t\t                  ^\n  symbol:   class DateTime\n  location: class JodaTime39\n/home/azmain/GitHub Codes/so_dataset/JodaTime39.java:7: error: cannot find symbol\n\t\tDateTime d2 = new DateTime();\n\t\t^\n  symbol:   class DateTime\n  location: class JodaTime39\n/home/azmain/GitHub Codes/so_dataset/JodaTime39.java:7: error: cannot find symbol\n\t\tDateTime d2 = new DateTime();\n\t\t                  ^\n  symbol:   class DateTime\n  location: class JodaTime39\n4 errors\n",
+    "return_code": 1
+}

@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime49.java",
+    "java_code": "import org.joda.time.DateTime;\nimport org.joda.time.LocalDate;\nimport org.joda.time.format.DateTimeFormat;\nimport org.joda.time.format.DateTimeFormatter;\n\npublic class JodaTime49 {\n\n    public static void main(String[] args) {\n        DateTimeFormatter FORMATTER = DateTimeFormat.forPattern(\"yyyy-MMM-dd\");\n        DateTime dateTime = FORMATTER.parseDateTime(\"2005-nov-12\");\n        LocalDate localDate = dateTime.toLocalDate();\n    }\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

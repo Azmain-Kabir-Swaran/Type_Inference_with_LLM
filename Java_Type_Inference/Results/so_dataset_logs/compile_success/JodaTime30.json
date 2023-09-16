@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/so_dataset/JodaTime30.java",
-    "java_code": "package jodatime;\n//ID = 9503771\nimport org.joda.time.DateTime;\nimport org.joda.time.DateTimeZone;\n\npublic class JodaTime30 {\n\n\tpublic static void main(String[] args) {\n\t\tDateTimeZone dtz = DateTimeZone.forOffsetHours(0);\n\n\t\tDateTime dt = new DateTime(dtz);\n\n\t\tSystem.out.println(dt);\n\t\tSystem.out.println(dt.toDate());\n\n\t}\n\n}\n",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

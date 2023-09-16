@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android12.java",
+    "java_code": "package androidExamples;\n\nimport android.app.Activity;\nimport android.graphics.Color;\nimport android.os.Bundle;\nimport android.view.ViewGroup;\nimport android.widget.LinearLayout;\nimport android.widget.TextView;\n\npublic class Android12 extends Activity {\n    /** Called when the activity is first created. */\n    @Override\n    public void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        LinearLayout l = new LinearLayout(this);\n        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(\n                LinearLayout.LayoutParams.FILL_PARENT,\n                LinearLayout.LayoutParams.WRAP_CONTENT);\n        LinearLayout.LayoutParams mlp = new LinearLayout.LayoutParams(\n                new ViewGroup.MarginLayoutParams(\n                        LinearLayout.LayoutParams.WRAP_CONTENT,\n                        LinearLayout.LayoutParams.WRAP_CONTENT));\n        mlp.setMargins(0, 0, 2, 0);\n\n        for (int i = 0; i < 10; i++) {\n            TextView t = new TextView(this);\n            t.setText(\"Hello\");\n            t.setBackgroundColor(Color.RED);\n            t.setSingleLine(true);\n            l.addView(t, mlp);\n        }\n\n        setContentView(l, lp);\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

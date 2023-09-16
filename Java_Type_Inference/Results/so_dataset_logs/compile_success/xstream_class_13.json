@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/so_dataset/xstream_class_13.java",
-    "java_code": "\n//ID=1372467\nimport com.thoughtworks.xstream.mapper.ClassAliasingMapper;\nimport com.thoughtworks.xstream.mapper.Mapper;\n\npublic class xstream_class_13 {\n\tpublic class MyClassAliasingMapper extends ClassAliasingMapper {\n\n\t    public MyClassAliasingMapper(Mapper wrapped) {\n\t        super(wrapped);\n\t    }\n\n\t    @Override\n\t    public Class realClass(String elementName) {\n\t        try {\n\t        } catch (Exception e) {\n\t            // do nothing we fall back on super's implementation\n\t        }\n\t        return super.realClass(elementName);\n\t    }\n\n\t    @Override\n\t    public String serializedClass(Class type) {\n\t        try {\n\t        } catch (Exception e) {\n\t            // do nothing we fall back on super's implementation\n\t        }\n\t        return super.serializedClass(type);\n\t    }\n\t}\n}\n",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

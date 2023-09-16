@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/so_dataset/JodaTime01.java",
-    "java_code": "package jodatime;\n//ID = 1714300\nimport java.util.TimeZone;\nimport org.joda.time.DateTime;\nimport org.joda.time.DateTimeZone;\nimport org.joda.time.format.DateTimeFormatter;\nimport org.joda.time.format.ISODateTimeFormat;\n\npublic class JodaTime01 {\n\n    public static void main(String[] args) {    \n     DateTimeFormatter timeParser = ISODateTimeFormat.timeParser();\n     TimeZone timeZone = TimeZone.getDefault();\n     System.out.println(timeZone.getID()); // \"Europe/London\"\n     System.out.println(timeZone.getDisplayName()); // \"Greenwich Mean Time\"\n\n        DateTimeZone defaultTimeZone = DateTimeZone.getDefault();\n        System.out.println(defaultTimeZone.getID()); //\"Europe/London\"\n        System.out.println(defaultTimeZone.getName(0L)); //\"British Summer Time\"\n\n        DateTime currentTime = new DateTime();\n        DateTimeZone currentZone = currentTime.getZone();\n        System.out.println(currentZone.getID()); //\"Europe/London\"\n        System.out.println(currentZone.getName(0L)); //\"British Summer Time\"            \n    }\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

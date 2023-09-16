@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/so_dataset/gwt_class_6.java",
-    "java_code": "\n//ID = 1523997\nimport com.google.gwt.user.client.DOM;\nimport com.google.gwt.user.client.Element;\nimport com.google.gwt.user.client.ui.Widget;\n\npublic class gwt_class_6 {\n\tpublic class TitledPanel extends Widget {\n\t\tprivate Element legend;\n\t\tprivate Widget content = null;\n\n\t\tpublic TitledPanel() {\n\t\t Element fieldset = DOM.createFieldSet();\n\t\t legend = DOM.createLegend();\n\t\t DOM.appendChild(fieldset, legend);\n\t\t setElement(fieldset);\n\t\t}\n\n\t\tpublic TitledPanel(String title) {\n\t\t this();\n\t\t setTitle(title);\n\t\t}\n\n\t\t@Override\n\t\tpublic String getTitle() {\n\t\t return DOM.getInnerHTML(legend);\n\t\t}\n\n\t\t@Override\n\t\tpublic void setTitle(String html) {\n\t\t DOM.setInnerHTML(legend, html);\n\t\t}\n\n\t\tpublic Widget getContent() {\n\t\t return content;\n\t\t}\n\n\t\tpublic void setContent(Widget content) {\n\t\t if (this.content != null) {\n\t\t  DOM.removeChild(getElement(), this.content.getElement());\n\t\t }\n\n\t\t this.content = content;\n\n\t\t DOM.appendChild(getElement(), content.getElement());\n\t\t}\n\t\t}\n}\n",
-    "stdout": "",
-    "stderr": "Note: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n",
-    "return_code": 0
-}

@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime38.java",
+    "java_code": "package jodatime;\n\nimport org.joda.time.DateTime;\nimport org.joda.time.format.DateTimeFormat;\nimport org.joda.time.format.DateTimeFormatter;\n\npublic class JodaTime38 {\n\n    public static void main(String[] args) {\n        String dateTime = \"11/15/2013 08:00:00\";\n        DateTimeFormatter dtf = DateTimeFormat.forPattern(\"MM/dd/yyyy HH:mm:ss\");\n        DateTime jodatime = dtf.parseDateTime(dateTime);\n        DateTimeFormatter dtfOut = DateTimeFormat.forPattern(\"MM/dd/yyyy\");\n        System.out.println(dtfOut.print(jodatime));\n    }\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

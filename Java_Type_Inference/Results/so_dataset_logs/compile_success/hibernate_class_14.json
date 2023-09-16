@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/so_dataset/hibernate_class_14.java",
-    "java_code": "\n//ID = 1483026\nimport java.io.Serializable;\nimport java.util.Collection;\nimport javax.persistence.*;\nimport org.hibernate.annotations.ForeignKey;\nimport org.hibernate.test.cache.Item;\n\nimport library.model.User;\npublic class hibernate_class_14 {\n\t@Entity\n\t@Table(name = \"tblPermission\")\n\tpublic class Permission implements Serializable, Cloneable {\n\n\t    private static final long serialVersionUID = 7155322069731920447L;\n\n\t    @Id\n\t    @Column(name = \"PermissionId\", length = 8, nullable = false)\n\t    private String PermissionId = \"\";\n\n\t    @ManyToOne(fetch=FetchType.LAZY)\n\t    @JoinColumn(name = \"CountyId\", nullable = false)\n\t    @ForeignKey(name=\"FK_CountyID\")\n//\t    private County county;\n\n\t    @Column(name = \"Permission\", nullable = true)\n\t    private Integer permission = 1;\n\n\t    @ManyToMany( cascade = {CascadeType.PERSIST, CascadeType.MERGE},\n\t          mappedBy = \"Permissions\",\n\t          targetEntity = Item.class )\n\t    private Collection<Item> items;\n\n\t    @ManyToMany( cascade = {CascadeType.PERSIST, CascadeType.MERGE},\n\t          mappedBy = \"Permissions\",\n\t          targetEntity = User.class )\n\t    private Collection<User> users;\n\n\t    /** Getters and Setters **/\n\t}\n\n}\n",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

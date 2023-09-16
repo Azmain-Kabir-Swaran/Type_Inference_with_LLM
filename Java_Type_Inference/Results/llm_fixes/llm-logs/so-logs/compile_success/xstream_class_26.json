@@ -1,0 +1,8 @@
+{
+    "attempt": 3,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/xstream_class_26.java",
+    "java_code": "import com.thoughtworks.xstream.converters.SingleValueConverter;\nimport java.util.ArrayList;\nimport java.util.Collection;\nimport java.util.List;\n\npublic class xstream_class_26 {\n    public static class IntegerListConverter implements SingleValueConverter {\n        public boolean canConvert(Class type) {\n            return List.class.isAssignableFrom(type);\n        }\n\n        public Object fromString(String str) {\n            Collection<Integer> collection = new ArrayList<>();\n            String[] integerStrings = str.split(\" \");\n            for (String integerString : integerStrings) {\n                collection.add(Integer.valueOf(integerString));\n            }\n            return collection;\n        }\n\n        public String toString(Object obj) {\n            List<?> collection = (List<?>) obj;\n            StringBuilder sb = new StringBuilder();\n            boolean first = true;\n            for (Object object : collection) {\n                if (first) {\n                    first = false;\n                } else {\n                    sb.append(' ');\n                }\n                sb.append(object.toString());\n            }\n            return sb.toString();\n        }\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

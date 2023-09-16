@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/hibernate_class_37.java",
+    "java_code": "import org.hibernate.HibernateException;\nimport org.hibernate.Session;\nimport org.hibernate.SessionFactory;\nimport org.hibernate.cfg.Configuration;\n\npublic class hibernate_class_37 {\n\n    public static void test(){\n        String c =\"\";\n        Session session = HibernateUtil.getSession();\n        session.beginTransaction();\n        session.save(c);\n        session.getTransaction().commit();\n\n    }\n\n    public static void main(String[] args) {\n        hibernate_class_37.test();\n\n    }\n\n    public static class HibernateUtil {\n\n        private static final SessionFactory sessionFactory;\n        static {\n            try {\n                sessionFactory = new Configuration().configure().buildSessionFactory();\n            } catch (Throwable ex) {\n                // Log exception!\n                throw new ExceptionInInitializerError(ex);\n            }\n        }\n\n        public static Session getSession()\n                throws HibernateException {\n            return sessionFactory.openSession();\n        }\n    }\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

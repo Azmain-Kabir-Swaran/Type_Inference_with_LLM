@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/so_dataset/hibernate_class_12.java",
-    "java_code": "\n//ID = 1443590\nimport javax.faces.context.FacesContext;\nimport org.hibernate.Session;\nimport org.hibernate.SessionFactory;\nimport org.hibernate.Transaction;\nimport org.hibernate.cfg.Configuration;\n\n\npublic class hibernate_class_12 {\n\tpublic void main(){\n\t\tSession session = null;\n\t\ttry {\n\n\t\t\tSessionFactory sessionFactory = new Configuration().configure()\n\t\t\t\t\t.buildSessionFactory();\n\t\t\tsession = sessionFactory.openSession();\n\n\t\t\tString id = (String) FacesContext.getCurrentInstance()\n\t\t\t\t\t.getExternalContext().getRequestParameterMap().get(\n\t\t\t\t\t\t\t\"storeId\");\n\n\t\t\tTransaction t = session.beginTransaction();\n\t\t\tt.commit();\n\t\t} catch (Exception e) {\n\t\t} finally {\n\t\t\tsession.close();\n\t\t}\n\t}\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

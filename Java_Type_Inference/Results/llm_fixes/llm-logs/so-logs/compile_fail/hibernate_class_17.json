@@ -1,0 +1,8 @@
+{
+    "attempt": 5,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/hibernate_class_17.java",
+    "java_code": "public class Main {\n    public static void main(String[] args) {\n        // Your code goes here\n    }\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/hibernate_class_17.java:1: error: class Main is public, should be declared in a file named Main.java\npublic class Main {\n       ^\n1 error\n",
+    "return_code": 1
+}

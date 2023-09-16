@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime11.java",
+    "java_code": "package jodatime;\n\nimport org.joda.time.DateTime;\nimport org.joda.time.format.DateTimeFormat;\nimport org.joda.time.format.DateTimeFormatter;\nimport java.text.ParseException;\nimport java.text.SimpleDateFormat;\n\npublic class JodaTime11 {\n    public static void main(String[] args) {\n        DateTimeFormatter dtf = DateTimeFormat.forPattern(\"EEE MMM dd HH:mm:ss z yyyy\");\n        System.out.println(dtf.parseDateTime(\"Fri Nov 11 12:13:14 JST 2010\"));\n        try {\n            System.out.println(new SimpleDateFormat(\"EEE MMM dd HH:mm:ss z yyyy\").parse(\"Fri Nov 11 12:13:14 JST 2010\"));\n        } catch (ParseException e) {\n            e.printStackTrace();\n        }\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

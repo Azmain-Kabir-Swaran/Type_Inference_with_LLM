@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/so_dataset/JodaTime34.java",
-    "java_code": "package jodatime;\n\n//ID = 10106143\nimport org.joda.time.Period;\nimport org.joda.time.format.PeriodFormat;\nimport org.joda.time.format.PeriodFormatter;\nimport java.util.Locale;\n\npublic class JodaTime34 {\n\n\tpublic static void main(String[] args) {\n\t\t// TODO Auto-generated method stub\n\t\tLocale.setDefault(Locale.GERMAN);\n\t\tfinal PeriodFormatter periodFormatter = PeriodFormat.wordBased(Locale.ENGLISH);\n\t\tfinal Period period = new Period(6, 5, 4, 3);\n\t\tfinal String s = period.toString(periodFormatter);\n\t\t// i'm expecting english to be outputted\n\t\tSystem.out.println(\"s = \" + s); // outputs german: 6 Stunden, 5 Minuten,\n\t\t\t\t\t\t\t\t\t\t// 4 Sekunden und 3 Millisekunden\n\t}\n\n}\n",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

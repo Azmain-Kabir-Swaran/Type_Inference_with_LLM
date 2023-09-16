@@ -1,0 +1,8 @@
+{
+    "attempt": 2,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/gwt_class_32.java",
+    "java_code": "import com.google.gwt.core.client.EntryPoint;\nimport com.google.gwt.core.client.GWT;\nimport com.google.gwt.http.client.*;\n\npublic class gwt_class_32 implements EntryPoint {\n    public void onModuleLoad() {\n        String url = \"http://gd.geobytes.com/gd?after=-1&variables=GeobytesCountry,GeobytesCity\";\n        RequestBuilder builder = new RequestBuilder(RequestBuilder.GET, URL.encode(url));\n        try {\n            Request request = builder.sendRequest(null, new RequestCallback() {\n                public void onError(Request request, Throwable exception) {\n                }\n\n                public void onResponseReceived(Request request, Response response) {\n                    GWT.log(response.getText() + \"Response\");\n\n                    if (200 == response.getStatusCode()) {\n                        GWT.log(response.getText());\n                    } else {\n                        GWT.log(response.getText());\n                    }\n                }\n            });\n        } catch (RequestException e) {\n            e.printStackTrace();\n        }\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

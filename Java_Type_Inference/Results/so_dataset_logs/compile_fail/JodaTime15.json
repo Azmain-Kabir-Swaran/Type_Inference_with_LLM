@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset/JodaTime15.java",
+    "java_code": "package jodatime;\npublic class JodaTime15 {\n\tpublic static void main(String[] args) \n\t{\n\t\tMutableDateTime now = new MutableDateTime();\n\t\tnow.setHourOfDay(2);\n\t\tnow.setMinuteOfHour(0);\n\t\tnow.setSecondOfMinute(0);\n\t\tnow.setMillisOfSecond(0);\n\t\tDateTime myDate = now.toDateTime();\n\t}\n}\n",
+    "stdout": "",
+    "stderr": "/home/azmain/GitHub Codes/so_dataset/JodaTime15.java:5: error: cannot find symbol\n\t\tMutableDateTime now = new MutableDateTime();\n\t\t^\n  symbol:   class MutableDateTime\n  location: class JodaTime15\n/home/azmain/GitHub Codes/so_dataset/JodaTime15.java:5: error: cannot find symbol\n\t\tMutableDateTime now = new MutableDateTime();\n\t\t                          ^\n  symbol:   class MutableDateTime\n  location: class JodaTime15\n/home/azmain/GitHub Codes/so_dataset/JodaTime15.java:10: error: cannot find symbol\n\t\tDateTime myDate = now.toDateTime();\n\t\t^\n  symbol:   class DateTime\n  location: class JodaTime15\n3 errors\n",
+    "return_code": 1
+}

@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime02.java",
+    "java_code": "import org.joda.time.DateMidnight;\nimport org.joda.time.DateTime;\nimport org.joda.time.DateTimeZone;\n\npublic class JodaTime02 {\n\n    public static void main(String[] args) {\n        DateMidnight today = new DateMidnight(2009, 2, 24);\n        DateTimeZone zone = today.getZone();\n\n        DateTime previousTransition =\n            new DateTime(zone.previousTransition(today.getMillis()));\n        \n        System.out.println(previousTransition);\n\n        DateTime nextTransition =\n            new DateTime(zone.nextTransition(today.getMillis()));\n        \n        System.out.println(nextTransition);\n    \n    }\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

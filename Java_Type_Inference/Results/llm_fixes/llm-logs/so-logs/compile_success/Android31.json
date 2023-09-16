@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android31.java",
+    "java_code": "package androidExamples;\n\npublic class Android31 {\n\n\tpublic static void main(String[] args) {\n\t\t// TODO Auto-generated method stub\n\t\tPowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);\n\t\tPowerManager.WakeLock wl = pm.newWakeLock(PowerManager.FULL_WAKE_LOCK, \"My Tag\");\n\t}\n\n\tprivate static PowerManager getSystemService(String powerService) {\n\t\t// TODO Auto-generated method stub\n\t\treturn null;\n\t}\n\n\tprivate static class PowerManager {\n\t\tpublic static final int FULL_WAKE_LOCK = 1;\n\n\t\tprivate PowerManager() {\n\t\t\t// private constructor\n\t\t}\n\n\t\tpublic WakeLock newWakeLock(int levelAndFlags, String tag) {\n\t\t\treturn new WakeLock();\n\t\t}\n\n\t\tpublic class WakeLock {\n\t\t\t// empty class\n\t\t}\n\t}\n\n\tprivate static class Context {\n\t\tpublic static final String POWER_SERVICE = \"power\";\n\n\t\tprivate Context() {\n\t\t\t// private constructor\n\t\t}\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

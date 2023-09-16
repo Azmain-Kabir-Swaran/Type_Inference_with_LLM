@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/xstream_class_10.java",
+    "java_code": "import com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.io.xml.PrettyPrintWriter;\n\nimport java.io.StringWriter;\n\npublic class xstream_class_10 {\n    private String generateResponse(final XStream xStream) {\n        StringWriter writer = new StringWriter();\n        xStream.marshal(this, new PrettyPrintWriter(writer) {\n            @Override\n            public void addAttribute(final String key, final String value) {\n                if (!key.equals(\"class\")) {\n                    super.addAttribute(key, value);\n                }\n            }\n        });\n        return writer.toString();\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

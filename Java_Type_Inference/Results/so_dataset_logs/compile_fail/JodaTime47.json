@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset/JodaTime47.java",
+    "java_code": "package jodatime;\n\npublic class JodaTime47 {\n\n\tpublic static void main(String[] args) {\n\t\tfinal DateTimeFormatter df = DateTimeFormat\n\t        .forPattern(\"EEE MMM dd HH:mm:ss 'GMT'Z yyyy\");\n\tfinal DateTime dateTime = df.withOffsetParsed()\n\t        .parseDateTime(\"Mon Aug 24 12:36:46 GMT+1000 2009\");\n\tSystem.out.println(\"dateTime = \" + dateTime);\n\t}\n\n}\n",
+    "stdout": "",
+    "stderr": "/home/azmain/GitHub Codes/so_dataset/JodaTime47.java:6: error: cannot find symbol\n\t\tfinal DateTimeFormatter df = DateTimeFormat\n\t\t      ^\n  symbol:   class DateTimeFormatter\n  location: class JodaTime47\n/home/azmain/GitHub Codes/so_dataset/JodaTime47.java:6: error: cannot find symbol\n\t\tfinal DateTimeFormatter df = DateTimeFormat\n\t\t                             ^\n  symbol:   variable DateTimeFormat\n  location: class JodaTime47\n/home/azmain/GitHub Codes/so_dataset/JodaTime47.java:8: error: cannot find symbol\n\tfinal DateTime dateTime = df.withOffsetParsed()\n\t      ^\n  symbol:   class DateTime\n  location: class JodaTime47\n3 errors\n",
+    "return_code": 1
+}

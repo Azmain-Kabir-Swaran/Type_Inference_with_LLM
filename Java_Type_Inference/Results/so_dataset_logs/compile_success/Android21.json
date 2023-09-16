@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/so_dataset/Android21.java",
-    "java_code": "package androidExamples;\n//ID = 775188\nimport android.content.Context;\nimport android.widget.ImageButton;\nimport android.widget.LinearLayout;\nimport gen.R;\npublic class Android21 {\n\n\tpublic static void main(String[] args) {\n\t\t// TODO Auto-generated method stub\n\n\t\t\t\tImageButton b2 = new ImageButton(getApplicationContext());\n\t\t\t\tb2.setBackgroundResource(R.drawable.img);\n\t\t\t\tandroid.widget.LinearLayout container = (android.widget.LinearLayout) findViewById(R.id.lay);\n\t\t\t\tcontainer.addView(b2);\n\t}\n\n\tprivate static LinearLayout findViewById(int lay) {\n\t\t// TODO Auto-generated method stub\n\t\treturn null;\n\t}\n\n\tprivate static Context getApplicationContext() {\n\t\t// TODO Auto-generated method stub\n\t\treturn null;\n\t}\n\n}\n",
-    "stdout": "",
-    "stderr": "No error (Ignored 'package R does not exist' errors)",
-    "return_code": 1
-}

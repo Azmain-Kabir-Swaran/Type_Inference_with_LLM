@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/so_dataset/Android29.java",
-    "java_code": "package androidExamples;\n//ID = 992508\nimport android.app.Service;\nimport android.content.Context;\nimport android.content.Intent;\nimport android.os.IBinder;\nimport android.os.PowerManager;\nimport android.os.PowerManager.WakeLock;\n\npublic class Android29 extends Service {\n\n\t@Override\n\tpublic IBinder onBind(Intent arg0) {\n\t\t// TODO Auto-generated method stub\n\t\treturn null;\n\t}\n\t@Override\n\tpublic void onCreate() {\n\t\tPowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);\n\t\tPowerManager.WakeLock wl = pm.newWakeLock(PowerManager.FULL_WAKE_LOCK, \"My Tag\");\n\t\twl.acquire();\n\t}\n\n\t@Override\n\tpublic void onDestroy() {\n\t\tWakeLock wl = null;\n\t\twl.release();\n\t}\n\n}\n",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

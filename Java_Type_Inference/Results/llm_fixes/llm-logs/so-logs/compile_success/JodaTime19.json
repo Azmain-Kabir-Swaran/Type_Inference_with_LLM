@@ -1,0 +1,8 @@
+{
+    "attempt": 3,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime19.java",
+    "java_code": "package jodatime;\n\nimport org.joda.time.DateTime;\nimport org.joda.time.Interval;\n\npublic class JodaTime19 {\n    public static void main(String[] args) {\n        DateTime now = DateTime.now();\n        Interval i2 = new Interval(now, now.plusMillis(1000));\n        Interval i1 = new Interval(now.minusMillis(1000), now.plusMillis(2000));\n        boolean overlapping = i2.overlaps(i1);\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}
