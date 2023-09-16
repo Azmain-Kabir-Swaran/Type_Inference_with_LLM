@@ -2,6 +2,6 @@
     "file": "/home/azmain/GitHub Codes/so_dataset/Android09.java",
     "java_code": "package androidExamples;\n//ID = 522800\nimport java.util.Timer;\nimport java.util.TimerTask;\nimport android.os.Bundle;\nimport android.widget.TextView;\nimport gen.R;\n\npublic class Android09 {\n\tfloat seconds;\n\tpublic Timer gametimer;\n\tvoid updatecount() { TextView t = (TextView)findViewById(R.id.topscore);\n\tt.setText(\"Score: 10 - Time: \"+seconds+\" seconds\");\n\tt.postInvalidate();\n\t}\n\tprivate TextView findViewById(int topscore) {\n\t\t// TODO Auto-generated method stub\n\t\treturn null;\n\t}\n\tpublic void onCreate(Bundle sis) {\n\n\t\tgametimer.schedule(new TimerTask() { public void run() {\n\t\t\tseconds+=0.1; updatecount();\n\t\t} }, 100, 100);\n\t}\n}\n",
     "stdout": "",
-    "stderr": "/home/azmain/GitHub Codes/so_dataset/Android09.java:7: error: package gen does not exist\nimport gen.R;\n          ^\n/home/azmain/GitHub Codes/so_dataset/Android09.java:12: error: package R does not exist\n\tvoid updatecount() { TextView t = (TextView)findViewById(R.id.topscore);\n\t                                                          ^\n2 errors\n",
+    "stderr": "No error (Ignored 'package R does not exist' errors)",
     "return_code": 1
 }
