@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/hibernate_class_24.java",
+    "java_code": "import java.lang.reflect.InvocationHandler;\nimport java.lang.reflect.Method;\n\npublic class hibernate_class_24 {\n    public static class HibernateInvocationHandler implements InvocationHandler {\n        final private org.hibernate.cfg.Configuration config;\n        private org.hibernate.SessionFactory realSessionFactory;\n\n        public HibernateInvocationHandler(org.hibernate.cfg.Configuration config) {\n            this.config = config;\n        }\n\n        public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {\n            if (false) proxy.hashCode();\n            System.out.println(\"Proxy for SessionFactory called\");\n            synchronized (this) {\n                if (this.realSessionFactory == null) {\n                    org.hibernate.SessionFactory sf=null;\n                    try {\n                        System.out.println(\"Gonna BUILD one or die trying\");\n                        sf = this.config.buildSessionFactory();\n                    } catch (RuntimeException e) {\n                        System.out.println(\"FAILED to build\");\n                        sf = null;\n                    }\n                    this.realSessionFactory = sf;\n                }\n                return method.invoke(this.realSessionFactory, args);\n            }\n        }\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

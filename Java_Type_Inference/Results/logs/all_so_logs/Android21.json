@@ -1,0 +1,8 @@
+{
+    "attempt": 2,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android21.java",
+    "java_code": "package androidExamples;\n\nimport android.content.Context;\nimport android.widget.ImageButton;\nimport android.widget.LinearLayout;\n\npublic class Android21 {\n\n\tpublic static void main(String[] args) {\n\n\t\tImageButton b2 = new ImageButton(getApplicationContext());\n\t\tb2.setBackgroundResource(R.drawable.img);\n\t\tLinearLayout container = findViewById(R.id.lay);\n\t\tcontainer.addView(b2);\n\t}\n\n\tprivate static LinearLayout findViewById(int lay) {\n\t\t// TODO Auto-generated method stub\n\t\treturn null;\n\t}\n\n\tprivate static Context getApplicationContext() {\n\t\t// TODO Auto-generated method stub\n\t\treturn null;\n\t}\n}",
+    "stdout": "",
+    "stderr": "No error (Ignored 'package R does not exist' errors)",
+    "return_code": 1
+}

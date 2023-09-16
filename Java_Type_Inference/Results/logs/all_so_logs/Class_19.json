@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Class_19.java",
+    "java_code": "import java.util.*;\n\nclass Test\n{\n  public static void main(String args[])\n  {\n    int[] solutionArray = { 1, 2, 3, 4, 5, 6, 16, 15, 14, 13, 12, 11 };\n\n    shuffleArray(solutionArray);\n    for (int i = 0; i < solutionArray.length; i++)\n    {\n      System.out.print(solutionArray[i] + \" \");\n    }\n    System.out.println();\n    \n  }\n\n  // Implementing Fisher\u2013Yates shuffle\n  static void shuffleArray(int[] ar)\n  {\n    Random rnd = new Random();\n    for (int i = ar.length - 1; i > 0; i--)\n    {\n      int index = rnd.nextInt(i + 1);\n      int a = ar[index];\n      ar[index] = ar[i];\n      ar[i] = a;\n    }\n  }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

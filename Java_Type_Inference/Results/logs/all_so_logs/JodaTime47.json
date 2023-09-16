@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime47.java",
+    "java_code": "import org.joda.time.DateTime;\nimport org.joda.time.format.DateTimeFormat;\nimport org.joda.time.format.DateTimeFormatter;\n\npublic class JodaTime47 {\n\n    public static void main(String[] args) {\n        final DateTimeFormatter df = DateTimeFormat\n                .forPattern(\"EEE MMM dd HH:mm:ss 'GMT'Z yyyy\");\n        final DateTime dateTime = df.withOffsetParsed()\n                .parseDateTime(\"Mon Aug 24 12:36:46 GMT+1000 2009\");\n        System.out.println(\"dateTime = \" + dateTime);\n    }\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/xstream_class_38.java",
+    "java_code": "import com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.annotations.XStreamAlias;\nimport java.util.List;\nimport java.util.ArrayList;\n\npublic class xstream_class_38 {\n    XStream xstream = new XStream();\n    \n    @XStreamAlias(\"bookdetails\")\n    public class BookDetails {\n        private int bookId;\n        private String bookName;\n        private int amount;\n    }\n\n    @XStreamAlias(\"Books\")\n    public class Books {\n        private List<BookDetails> bookDetails = new ArrayList<BookDetails>();\n    }\n\n    public BookDetails convertXml(String xml) {\n        xstream.processAnnotations(Books.class);\n        xstream.processAnnotations(BookDetails.class);\n        xstream.addImplicitCollection(Books.class, \"bookDetails\");\n        Books b = (Books) xstream.fromXML(xml);\n        return b.bookDetails.get(0);\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

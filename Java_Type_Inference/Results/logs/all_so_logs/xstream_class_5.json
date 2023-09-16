@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/xstream_class_5.java",
+    "java_code": "import java.io.FileNotFoundException;\nimport java.io.PrintWriter;\nimport com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.io.xml.DomDriver;\n\npublic class xstream_class_5 {\n    public static class Test {\n        public static void main(String[] args) throws FileNotFoundException {\n            XStream xs = new XStream(new DomDriver());\n            Foo f = new Foo(1, \"booo\", new Bar(42));\n            PrintWriter pw = new PrintWriter(\"a.xml\");\n            xs.toXML(f, pw);\n        }\n    }\n\n    public static class Bar {\n        public int id;\n\n        public Bar(int id) {\n            this.id = id;\n        }\n    }\n\n    public static class Foo {\n        public int a;\n        public String b;\n        public Bar boo;\n\n        public Foo(int a, String b, Bar c) {\n            this.a = a;\n            this.b = b;\n            this.boo = c;\n        }\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

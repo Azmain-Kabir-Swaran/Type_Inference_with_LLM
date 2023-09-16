@@ -1,0 +1,8 @@
+{
+    "attempt": 2,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android08.java",
+    "java_code": "import java.io.IOException;\nimport java.net.Inet4Address;\nimport java.net.InetAddress;\nimport java.net.Socket;\nimport java.net.UnknownHostException;\n\npublic class Android08 {\n\n    private static final String TAG = \"TAG\";\n\n    public static void main(String[] args) {\n        try {\n            InetAddress server = Inet4Address.getByName(\"thehost\");\n\n            if(server.isReachable(5000)){\n                System.out.println(\"Ping!\");\n            }\n\n            Socket clientsocket = new Socket(server, 8080);\n        } catch (UnknownHostException e) {\n            System.err.println(\"Server Not Found\");\n        } catch (IOException e) {\n            System.err.println(\"Couldn't open socket\");\n        }\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

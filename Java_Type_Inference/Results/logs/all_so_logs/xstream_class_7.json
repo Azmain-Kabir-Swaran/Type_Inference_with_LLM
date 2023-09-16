@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/xstream_class_7.java",
+    "java_code": "import com.thoughtworks.xstream.annotations.XStreamAsAttribute;\n\npublic class xstream_class_7 {\n    @XStreamAsAttribute\n    private String type;\n    private String value;\n\n    public xstream_class_7(String type, String value) {\n        this.type = type;\n        this.value = value;\n    }\n    // getters omitted \n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

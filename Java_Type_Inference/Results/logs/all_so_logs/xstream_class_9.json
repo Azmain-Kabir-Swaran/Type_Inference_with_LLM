@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/xstream_class_9.java",
+    "java_code": "import com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.io.xml.DomDriver;\n\nimport java.io.FileInputStream;\nimport java.io.FileNotFoundException;\n\npublic class xstream_class_9 {\n\tpublic static class ServerIP {\n\t    private String ip;\n\n\t    public String getIp() {\n\t        return ip;\n\t    }\n\n\t    public void setIp(String ip) {\n\t        this.ip = ip;\n\t    }\n\t}\n\n\tpublic static class ServerHandler {\n\n\t    private String fileName = \"servers.xml\";\n\t    private String path = \"J:\\\\workspace\\\\LOG730\\\\src\\\\Q3\\\\\";\n\t    private XStream xstream = new XStream(new DomDriver());\n\n\t    public void readFromXML() {\n\t        try {\n\t            FileInputStream fis = new FileInputStream(path + fileName);\n\t            ServerIP server = (ServerIP) xstream.fromXML(fis, new ServerIP());\n\t            System.out.println(\"Host: \" + server.getIp());\n\t        } catch (FileNotFoundException e) {\n\t            e.printStackTrace();\n\t        }\n\t    }\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

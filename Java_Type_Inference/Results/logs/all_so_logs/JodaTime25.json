@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime25.java",
+    "java_code": "import org.joda.time.DateTime;\nimport org.joda.time.Days;\nimport org.joda.time.LocalDateTime;\nimport org.joda.time.DateMidnight;\n\npublic class JodaTime25 \n{\n    public static int getDaysBetweenTwoDates(final LocalDateTime oldDate,\n                                             final LocalDateTime newDate) {\n        System.out.println(\"--Calculate days between: \" + oldDate.toString()\n                + \"->\" + newDate);\n        Days days = Days.daysBetween(new DateMidnight(oldDate.toDateTime()),\n                new DateMidnight(newDate.toDateTime()));\n        System.out.println(\"----DIFF: \" + days.getDays());\n        return days.getDays();\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

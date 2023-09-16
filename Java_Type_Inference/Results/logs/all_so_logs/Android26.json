@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android26.java",
+    "java_code": "package androidExamples;\n\nimport android.content.Context;\nimport android.view.KeyEvent;\nimport android.view.MotionEvent;\nimport android.view.View;\nimport android.view.View.OnTouchListener;\nimport android.widget.ScrollView;\n\npublic class Android26 extends ScrollView {\n\n    public Android26(Context context) {\n        super(context);\n    }\n\n    @Override\n    public boolean onInterceptTouchEvent(MotionEvent ev) {\n        return false;\n    }\n\n    @Override\n    public boolean onKeyDown(int keyCode, KeyEvent event) {\n        return false;\n    }\n}\n\nclass GameView extends View implements OnTouchListener {\n\n    public GameView(Context context) {\n        super(context);\n    }\n\n    public boolean onKey(View v, int keyCode, KeyEvent event) {\n        if (keyCode == KeyEvent.KEYCODE_BACK) {\n            // do stuff\n        }\n        invalidate();\n        return true;\n    }\n\n    @Override\n    public boolean onTouch(View v, MotionEvent event) {\n        return false;\n    }\n}\n",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}
