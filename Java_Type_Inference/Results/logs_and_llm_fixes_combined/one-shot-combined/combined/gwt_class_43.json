@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-one-shot/gwt_class_43.java",
+    "java_code": "package gwt;\nimport com.google.gwt.event.dom.client.MouseOutEvent;\nimport com.google.gwt.user.client.ui.Composite;\nimport com.google.gwt.event.dom.client.ClickEvent;\nimport com.google.gwt.user.client.ui.HorizontalPanel;\nimport com.google.gwt.event.dom.client.ClickHandler;\nimport com.google.gwt.user.client.ui.Widget;\nimport com.google.gwt.event.dom.client.MouseOutHandler;\nimport com.google.gwt.user.client.ui.Label;\n//ID = 3138621\n\npublic class gwt_class_43 {\n\tpublic class GroupLbl extends Composite implements ClickHandler, MouseOutHandler {\n\t\tprivate Label lbl;\n//\t\tprivate GroupLblHandler lblHandler = null;\n\t\tprivate HorizontalPanel hp;\n\n\t\tpublic void onClick(ClickEvent event) {\n\t\t\thp.setStyleName(\"background-GroupLbl\");\n\n\t\t\tObject folder = null;\n\t\t\tif (event.getSource().equals(folder) || event.getSource().equals(lbl)) {\n\n//\t\t\t\tlblHandler.onGroupLabelSelect(this);\n\t\t\t}\n\t\t}\n\n\t\t@Override\n\t\tpublic Widget getWidget() {\n\t\t\treturn hp;\n\t\t}\n\n\n\n\t\tpublic void onMouseOut(MouseOutEvent event) {\n\t\t\thp.removeStyleName(\"background-GroupLbl\");\n\t\t}\n\t}\n}",
+    "stdout": "",
+    "stderr": "Note: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n",
+    "return_code": 0
+}

@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-fix/JodaTime06.java",
+    "java_code": "package jodatime;\nimport org.joda.time.Duration;\nimport org.joda.time.Period;\nimport org.joda.time.format.PeriodFormatterBuilder;\n\npublic class JodaTime06 {\n\n\tpublic static void main(String[] args) {\n\t\tprintDuration(new Duration(5000)); // Prints \"5\" => OK\n\t\tprintDuration(new Duration(4900)); // Prints \"4\" => need \"5\"\n\t\tprintDuration(new Duration(1000)); // Prints \"1\" => OK\n\t\tprintDuration(new Duration(900));  // Prints \"0\" => need \"1\"\n\t\tprintDuration(new Duration(0));    // Prints \"0\" => OK\n\t}\n\t\n\tstatic void printDuration(Duration d) {\n\t\tPeriod p = d.toPeriod();\n\t\tSystem.out.println(new PeriodFormatterBuilder().printZeroAlways().appendSeconds().toFormatter().print(p));\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

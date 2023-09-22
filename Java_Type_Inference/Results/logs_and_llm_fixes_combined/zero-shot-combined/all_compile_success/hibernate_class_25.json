@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-zero-shot/hibernate_class_25.java",
+    "java_code": "package hibernate;\nimport javax.persistence.Id;\nimport javax.persistence.CascadeType;\nimport javax.persistence.OneToOne;\nimport javax.persistence.Entity;\nimport org.hibernate.annotations.FetchMode;\nimport javax.persistence.GeneratedValue;\nimport org.hibernate.annotations.Fetch;\n//ID = 2931936\n\npublic class hibernate_class_25{\n\t@Entity\n\tpublic class A {\n\n\t    private Integer id;\n\t    private B b;\n\n\t    public A() {\n\t        super();\n\t    }\n\n\t    @Id\n\t    @GeneratedValue\n\t    public Integer getId() {\n\t        return id;\n\t    }\n\n\t    public void setId(Integer id) {\n\t        this.id = id;\n\t    }\n\n\t    @OneToOne (cascade=CascadeType.ALL)\n\t    @Fetch(FetchMode.JOIN)\n\t    public B getB() {\n\t        return b;\n\t    }\n\n\t    public void setB(B b) {\n\t        this.b = b;\n\t    }\n\t}\n\t@Entity\n\tpublic class B {\n\n\t    private Integer id;\n\n\t    public B() {\n\t        super();\n\t    }\n\n\t    @Id\n\t    @GeneratedValue\n\t    public Integer getId() {\n\t        return id;\n\t    }\n\n\t    public void setId(Integer id) {\n\t        this.id = id;\n\t    }   \n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

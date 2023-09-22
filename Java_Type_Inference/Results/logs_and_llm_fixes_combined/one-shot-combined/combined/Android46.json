@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-one-shot/Android46.java",
+    "java_code": "package androidExamples;\nimport android.widget.Button;\nimport android.os.Bundle;\nimport android.widget.EditText;\nimport android.view.View;\nimport android.content.Intent;\nimport android.app.Activity;\n//ID = 1254832\npublic class Android46 extends Activity {\n\tprivate EditText mTextSearch; \n\t@Override\n\tprotected void onCreate(Bundle savedInstanceState) {\n\t // TODO Auto-generated method stub\n\t super.onCreate(savedInstanceState);  \n\t setContentView(R.layout.media_preview); \n\n\t mTextSearch = (EditText)findViewById(R.id.lay);  \n\t Button searchButton = (Button)findViewById(100);  \n\n\t searchButton.setOnClickListener(new View.OnClickListener(){\n\t  public void onClick(View v){    \n\t   Intent data = new Intent();    \n\t   data.putExtra(\"TITLE\", mTextSearch.getText().toString());   \n\t   setResult(RESULT_OK, data);\n\t   finish();\n\t  }\n\t });\n\t} \n\n\t@Override\n\tprotected void onSaveInstanceState(Bundle outState){\n\t super.onSaveInstanceState(outState);  \n\t}\n\t@Override\n\tprotected void onPause(){\n\t super.onPause();\n\n\t}\n\t@Override\n\tprotected void onResume(){\n\t super.onResume();  \n\t}\n\n}",
+    "stdout": "",
+    "stderr": "No error (Ignored 'package R does not exist' errors)",
+    "return_code": 1
+}

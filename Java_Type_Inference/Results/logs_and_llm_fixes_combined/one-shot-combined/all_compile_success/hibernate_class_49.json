@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/one-shot-fix/hibernate_class_49.java",
+    "java_code": "package hibernate;\nimport javax.persistence.Entity;\nimport javax.persistence.Id;\nimport javax.persistence.GeneratedValue;\nimport javax.persistence.GenerationType;\nimport javax.persistence.Version;\nimport java.io.Serializable;\n\n@Entity\npublic class hibernate_class_49 implements Serializable {\n    private static final long serialVersionUID = 1L;\n    \n    @Id\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\n    private Long id;\n    \n    private String username;\n    private String password;\n    \n    @Version\n    private Integer version;\n\n    public Long getId() {\n        return id;\n    }\n\n    public void setId(Long id) {\n        this.id = id;\n    }\n\n    public String getUsername() {\n        return username;\n    }\n\n    public void setUsername(String username) {\n        this.username = username;\n    }\n\n    public String getPassword() {\n        return password;\n    }\n\n    public void setPassword(String password) {\n        this.password = password;\n    }\n\n    public Integer getVersion() {\n        return version;\n    }\n\n    public void setVersion(Integer version) {\n        this.version = version;\n    }\n}\n",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

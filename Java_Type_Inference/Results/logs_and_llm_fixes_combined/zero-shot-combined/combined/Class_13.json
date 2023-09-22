@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-zero-shot/Class_13.java",
+    "java_code": "/*\nDate: 1/19/17\nURL: http://stackoverflow.com/questions/7143287/how-to-best-position-swing-guis\n*/\npackage common_JDK;\nimport javax.swing.SwingUtilities;\nimport javax.swing.JFrame;\nimport javax.swing.JTextArea;\nimport javax.swing.UIManager;\nclass WhereToPutTheGui {\n\n    public static void initGui() {\n        for (int ii=1; ii<4; ii++) {\n            JFrame f = new JFrame(\"Frame \" + ii);\n            f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);\n            String s =\n                \"os.name: \" + System.getProperty(\"os.name\") +\n                \"\\nos.version: \" + System.getProperty(\"os.version\");\n            f.add(new JTextArea(s,3,28));  // suggest a size\n            f.pack();\n            // Let the OS handle the positioning!\n            f.setLocationByPlatform(true);\n            f.setVisible(true);\n        }\n    }\n\n    public static void main(String[] args) {\n        SwingUtilities.invokeLater( new Runnable() {\n            public void run() {\n                try {\n                    UIManager.setLookAndFeel(\n                        UIManager.getSystemLookAndFeelClassName());\n                } catch (Exception useDefault) {}\n                initGui();\n            }\n        });\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

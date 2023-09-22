@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-zero-shot/Android43.java",
+    "java_code": "package androidExamples;\nimport org.apache.http.util.EntityUtils;\nimport java.io.IOException;\nimport org.apache.http.client.methods.HttpGet;\nimport org.apache.http.client.HttpClient;\nimport org.apache.http.impl.client.DefaultHttpClient;\nimport org.apache.http.HttpEntity;\nimport org.apache.http.HttpResponse;\nimport org.apache.http.HttpHost;\n//ID = 1200688\n\n\npublic class Android43 {\n\n\tpublic static String main(String[] args) {\n\t\tHttpHost target = new HttpHost(\"google.com\", 80);\n\tHttpGet get = new HttpGet(\"/\");\n\tString result = null;\n\tHttpEntity entity = null;\n\tHttpClient client = new DefaultHttpClient();\n\ttry {\n\t    HttpResponse response=client.execute(target, get);\n\t    entity = response.getEntity();\n\t    result = EntityUtils.toString(entity);\n\t} catch (Exception e) {\n\t    e.printStackTrace();\n\t} finally {\n\t    if (entity!=null){}\n\t     try {\n\t      entity.consumeContent();\n\t     } catch (IOException e) {}\n\t}\n\treturn result;}\n\n}",
+    "stdout": "",
+    "stderr": "Note: /home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-zero-shot/Android43.java uses or overrides a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n",
+    "return_code": 0
+}

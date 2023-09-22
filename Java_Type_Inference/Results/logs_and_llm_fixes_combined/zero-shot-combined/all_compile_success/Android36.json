@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-zero-shot/Android36.java",
+    "java_code": "package androidExamples;\nimport android.content.ContentValues;\nimport android.database.sqlite.SQLiteDatabase;\n//ID = 1105141\n\npublic class Android36 {\n\tprivate static final String KEY_NAME = \"My Key\";\n\tprivate static final String VALUE = \"My Value\";\n\tprivate static final String DATABASE_TABLE = \"DB\";\n\tprivate long insertRow(int rowParameter, String rowValue, SQLiteDatabase db){\n\t\t long res = -1;\n\t\t ContentValues settingsParameterValues = new ContentValues();\n\t\t settingsParameterValues.put(KEY_NAME, rowParameter);\n\t\t settingsParameterValues.put(VALUE, rowValue);\n\t\t if(db != null){\n\t\t  res = db.insert(DATABASE_TABLE, null, settingsParameterValues);\n\t\t }\n\t\t return res;\n\t\t}\n\tpublic static void main(String[] args) {\n\t\t// TODO Auto-generated method stub\n\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

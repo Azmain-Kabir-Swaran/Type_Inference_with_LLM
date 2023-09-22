@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-one-shot/Android47.java",
+    "java_code": "package androidExamples;\nimport org.apache.http.client.methods.HttpGet;\nimport org.apache.http.impl.client.DefaultHttpClient;\nimport org.apache.http.client.ClientProtocolException;\nimport android.widget.TextView;\nimport android.os.Bundle;\nimport android.app.Activity;\nimport java.io.IOException;\n//ID = 1266527\n\n\npublic class Android47 extends Activity {\n    /** Called when the activity is first created. */\n    @Override\n   public void onCreate(Bundle savedInstanceState) {\n    super.onCreate(savedInstanceState);\n    setContentView(R.layout.main);\n\n    DefaultHttpClient client = new DefaultHttpClient();\n\n    HttpGet method = new HttpGet(\"http://www.google.com\");\n\n    try {\n  client.execute(method);\n  TextView t = (TextView) findViewById(R.id.lay);\n  t.setText(\"Ok\");\n } catch (ClientProtocolException e) {\n  TextView t = (TextView) findViewById(R.id.lay);\n  t.setText(e.getMessage());\n } catch (IOException e) {\n  TextView t = (TextView) findViewById(R.id.lay);\n  t.setText(e.getMessage());\n }\n\n    }\n}",
+    "stdout": "",
+    "stderr": "No error (Ignored 'package R does not exist' errors)",
+    "return_code": 1
+}

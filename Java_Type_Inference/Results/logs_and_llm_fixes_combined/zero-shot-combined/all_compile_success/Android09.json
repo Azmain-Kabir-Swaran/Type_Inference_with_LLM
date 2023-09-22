@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-zero-shot/Android09.java",
+    "java_code": "package androidExamples;\nimport java.util.TimerTask;\nimport android.os.Bundle;\nimport java.util.Timer;\nimport android.widget.TextView;\n//ID = 522800\n\npublic class Android09 {\n\tfloat seconds;\n\tpublic Timer gametimer;\n\tvoid updatecount() { TextView t = (TextView)findViewById(R.id.topscore);\n\tt.setText(\"Score: 10 - Time: \"+seconds+\" seconds\");\n\tt.postInvalidate();\n\t}\n\tprivate TextView findViewById(int topscore) {\n\t\t// TODO Auto-generated method stub\n\t\treturn null;\n\t}\n\tpublic void onCreate(Bundle sis) {\n\n\t\tgametimer.schedule(new TimerTask() { public void run() {\n\t\t\tseconds+=0.1; updatecount();\n\t\t} }, 100, 100);\n\t}\n}",
+    "stdout": "",
+    "stderr": "No error (Ignored 'package R does not exist' errors)",
+    "return_code": 1
+}

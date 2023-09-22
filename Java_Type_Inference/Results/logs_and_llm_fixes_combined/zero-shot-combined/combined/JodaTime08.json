@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-zero-shot/JodaTime08.java",
+    "java_code": "package jodatime;\nimport java.util.concurrent.TimeUnit;\nimport org.joda.time.Period;\nimport org.joda.time.PeriodType;\n//ID = 4034388\n\n\npublic class JodaTime08 {\n\t public boolean testIfJodaTimePeriodsHandlesPeriodTypesOtherThanMinutesAndHours() {\n\t\t  long twentyDaysInMillis = TimeUnit.MILLISECONDS.convert(20, TimeUnit.DAYS);\n\t\t  Period twoWeeks = new Period(twentyDaysInMillis, PeriodType.weeks());\n\t\t  return (2 == twoWeeks.getWeeks()) ? true : false; \n\t\t }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

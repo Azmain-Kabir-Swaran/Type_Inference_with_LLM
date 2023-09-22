@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/one-shot-fix/Android05.java",
+    "java_code": "package androidExamples;\n\nimport android.graphics.drawable.Drawable;\nimport android.widget.TabHost;\nimport android.widget.TabHost.TabSpec;\n\npublic class Android05 {\n\n\tpublic static void main(String[] args) {\n\t\tTabHost mTabs = null;\n\t\tTabSpec ts = mTabs.newTabSpec(\"tab\");\n\t\tDrawable iconResource = null;\n\t\tts.setIndicator(\"TabTitle\", iconResource);\n\n\t\tmTabs.addTab(ts);\n\t\tmTabs.getTabWidget().removeAllViews();\n\t\tmTabs.clearAllTabs();\n\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

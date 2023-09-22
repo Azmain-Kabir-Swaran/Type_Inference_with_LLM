@@ -1,0 +1,8 @@
+{
+    "attempt": 2,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-fix/JodaTime03.java",
+    "java_code": "package jodatime;\n\nimport org.joda.time.Interval;\nimport org.joda.time.format.PeriodFormatter;\nimport org.joda.time.format.PeriodFormatterBuilder;\n\npublic class JodaTime03 {\n    public static void main(String[] args) {\n        // TODO Auto-generated method stub\n\n    }\n\n    public static String formatDuration(long start, long end) {\n        Interval interval = new Interval(start, end);\n        return getPeriodFormatter().print(interval.toPeriod()).trim();\n    }\n\n    private static PeriodFormatter getPeriodFormatter() {\n        PeriodFormatter pf = new PeriodFormatterBuilder().appendYears().appendSuffix(\"y \", \"y \").appendMonths()\n                .appendSuffix(\"m \", \"m \").appendDays().appendSuffix(\"d \", \"d \").appendHours().appendSuffix(\"h \", \"h \")\n                .appendMinutes().appendSuffix(\"m \", \"m \").appendSeconds().appendSuffix(\"s\", \"s\").toFormatter();\n\n        return pf;\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

@@ -1,0 +1,8 @@
+{
+    "attempt": 5,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/one-shot-fix/hibernate_class_25.java",
+    "java_code": "package hibernate;\n\nimport javax.persistence.Id;\nimport javax.persistence.GeneratedValue;\nimport org.hibernate.annotations.Fetch;\nimport org.hibernate.annotations.FetchMode;\nimport javax.persistence.OneToOne;\nimport javax.persistence.Entity;\nimport javax.persistence.CascadeType;\n\n@Entity\npublic class HibernateClass25 {\n\n    @Id\n    @GeneratedValue\n    private Integer id;\n\n    @OneToOne(cascade = CascadeType.ALL)\n    @Fetch(FetchMode.JOIN)\n    private B b;\n\n    public HibernateClass25() {\n        super();\n    }\n\n    public Integer getId() {\n        return id;\n    }\n\n    public void setId(Integer id) {\n        this.id = id;\n    }\n\n    public B getB() {\n        return b;\n    }\n\n    public void setB(B b) {\n        this.b = b;\n    }\n\n    @Entity\n    public static class B {\n\n        @Id\n        @GeneratedValue\n        private Integer id;\n\n        public B() {\n            super();\n        }\n\n        public Integer getId() {\n            return id;\n        }\n\n        public void setId(Integer id) {\n            this.id = id;\n        }\n    }\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/one-shot-fix/hibernate_class_25.java:12: error: class HibernateClass25 is public, should be declared in a file named HibernateClass25.java\npublic class HibernateClass25 {\n       ^\n1 error\n",
+    "return_code": 1
+}

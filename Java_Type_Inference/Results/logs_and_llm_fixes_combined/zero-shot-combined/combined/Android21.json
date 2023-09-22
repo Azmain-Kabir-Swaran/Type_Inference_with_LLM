@@ -1,0 +1,8 @@
+{
+    "attempt": 3,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-fix/Android21.java",
+    "java_code": "package androidExamples;\n\nimport android.widget.LinearLayout;\nimport android.widget.ImageButton;\nimport android.content.Context;\nimport androidExamples.R;\n\n//ID = 775188\npublic class Android21 {\n\n    public static void main(String[] args) {\n        // TODO Auto-generated method stub\n        ImageButton b2 = new ImageButton(getApplicationContext());\n        b2.setBackgroundResource(R.drawable.img);\n        LinearLayout container = (LinearLayout) findViewById(R.id.lay);\n        container.addView(b2);\n    }\n\n    private static LinearLayout findViewById(int lay) {\n        // TODO Auto-generated method stub\n        return null;\n    }\n\n    private static Context getApplicationContext() {\n        // TODO Auto-generated method stub\n        return null;\n    }\n}\n\nclass R {\n    public static final class drawable {\n        public static final int img = 0x7f020000;\n    }\n    public static final class id {\n        public static final int lay = 0x7f060000;\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

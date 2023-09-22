@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-one-shot/hibernate_class_37.java",
+    "java_code": "package hibernate;\nimport org.hibernate.Session;\nimport org.hibernate.Transaction;\nimport org.hibernate.cfg.AnnotationConfiguration;\nimport org.hibernate.HibernateException;\nimport org.hibernate.SessionFactory;\n//ID = 3534854\n\npublic class hibernate_class_37 {\n\n public static void test(){\n\t String c =\"\";\n  Session session = HibernateUtil.getSession();\n        session.beginTransaction();        \n        session.save(c);\n        session.getTransaction().commit();\n\n }\n\n /**\n  * @param args\n  */\n public static void main(String[] args) {\n  hibernate_class_37.test();\n\n }\n\n public static class HibernateUtil {\n\n private static final SessionFactory sessionFactory;\n     static {\n         try {\n             sessionFactory = new AnnotationConfiguration()\n                     .configure().buildSessionFactory();\n         } catch (Throwable ex) {\n             // Log exception!\n             throw new ExceptionInInitializerError(ex);\n         }\n     }\n\n     public static Session getSession()\n             throws HibernateException {\n         return sessionFactory.openSession();\n     }\n }\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

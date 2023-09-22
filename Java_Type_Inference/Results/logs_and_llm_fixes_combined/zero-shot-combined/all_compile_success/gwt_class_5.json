@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-zero-shot/gwt_class_5.java",
+    "java_code": "package gwt;\nimport com.google.gwt.core.client.JsArrayInteger;\nimport com.google.gwt.core.client.JsArray;\n//ID = 1482513\n\npublic class gwt_class_5 {\n\tprivate final JsArray<JsArrayInteger> popItemFromArray(\n\t\t     final JsArray<JsArrayInteger> oldArray) {\n\t\t    // the createEmpty...  method is a native method which returns eval(\"[]\")\n\t\t    JsArray<JsArrayInteger> newArray = null;\n\n\t\t    for (int i = 0; i < oldArray.length() - 1; i++) {\n\t\t     newArray.set(i, oldArray.get(i));\n\t\t    }\n\n\t\t    return newArray;\n\t\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

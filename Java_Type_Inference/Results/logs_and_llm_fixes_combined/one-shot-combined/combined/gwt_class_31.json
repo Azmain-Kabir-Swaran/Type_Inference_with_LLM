@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-one-shot/gwt_class_31.java",
+    "java_code": "package gwt;\nimport com.google.gwt.http.client.Response;\nimport com.google.gwt.http.client.RequestCallback;\nimport com.google.gwt.http.client.Request;\nimport com.google.gwt.http.client.URL;\nimport com.google.gwt.http.client.RequestBuilder;\nimport com.google.gwt.http.client.RequestException;\n//ID = 2475886\n\npublic class gwt_class_31 {\n\tpublic static void main(String arg[]) throws RequestException{\n\t\tString serverUrl = null;\n\t\tRequestBuilder requestBuilder = new RequestBuilder(RequestBuilder.POST, URL.encode(serverUrl)); //-- serverUrl is the url to which this call is posted to.\n\t\trequestBuilder.setHeader(\"Content-Type\", \"application/x-www-form-urlencoded\");\n\t\trequestBuilder.setHeader(\"Expires\",\"0\");\n\t\tString postData = null;\n\t\trequestBuilder.sendRequest(postData, new RequestCallback()\n\t\t{\n\t\t        public void onError(Request request, Throwable exception)\n\t\t        {\n\t\t            //Do nothing\n\t\t        }\n\t\t        public void onResponseReceived(Request request, Response response)\n\t\t        {\n\t\t            //sometimes when the server is restarted, I get response.getStatusCode() = 304 and the response.getText() as blank\n\t\t        }\n\t\t    }\n\t\t);\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

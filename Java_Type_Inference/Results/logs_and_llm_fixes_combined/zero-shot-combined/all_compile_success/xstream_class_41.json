@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-zero-shot/xstream_class_41.java",
+    "java_code": "package xstream;\nimport java.util.List;\nimport com.thoughtworks.xstream.io.xml.StaxDriver;\nimport com.thoughtworks.xstream.XStream;\n//ID=40922380\n\n\npublic class xstream_class_41 {\n\tpublic static void main(String arg[]){\n\t\tXStream xstream = new XStream(new StaxDriver());\n\t\txstream.alias(\"data\", DetList.class);\n\t\txstream.alias(\"i\", Details.class);\n\t\tString s = new String(\"<data>\\n\"\n\t\t           +\"\\t<i Name='asia' type='continent' id='11'></i>\\n\"\n\t\t           +\"\\t<i Name='africa' type='continent' id='12'></i>\\n\"\n\t\t           +\"\\t<i Name='japan' type='country' id='13'></i>\\n\"\n\t\t           +\"</data>\");\n\t\tSystem.out.println(s);\n\t\tDetList data = (DetList) xstream.fromXML(s);\t\n\t}\n\tpublic class DetList {\n\t    private List<Details> detlist;\n\n\t    public List<Details> getDetlist() {\n\t        return detlist;\n\t    }\n\n\t    public void setDetlist(List<Details> detlist) {\n\t        this.detlist = detlist;\n\t    }\n\t}\n\tpublic class Details {\n\n\t    private String Name;\n\t    private String type;\n\t    private String id;\n\n\t    //Getters and Setters are here.\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

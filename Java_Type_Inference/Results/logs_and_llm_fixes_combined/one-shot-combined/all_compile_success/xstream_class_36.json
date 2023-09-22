@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-one-shot/xstream_class_36.java",
+    "java_code": "package xstream;\nimport com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.io.xml.StaxDriver;\nimport java.util.Map;\nimport java.util.HashMap;\n//29466312\n\n\npublic class xstream_class_36\n{\n\tpublic class MapTest{\n\t\tprivate Map<String, String> mapList;\n\n\t\tpublic MapTest() {\n\n\t\t\tmapList= new HashMap<String, String>();\n\t\t}\n\n\t\tpublic void setServicesHealth(String id, String name) {\n\t\t\tmapList.put(id, name);\n\t\t}\n\t}\n\tpublic static void main(String arg[]){ \n\t\tMapTest services = null;\n\t\tservices.setServicesHealth(\"ID01\", \"Jack\");\n\t\tservices.setServicesHealth(\"ID02\", \"Neil\");\n\n\t\tXStream stream = new XStream(new StaxDriver());\n\t\tstream.alias(\"MapTest\", MapTest.class);\n\t\tstream.addImplicitMap(MapTest.class, \"map\", \"id\", String.class, \"name\");\n\t\tString xmlStr = stream.toXML(services);\n\t\tSystem.out.println(xmlStr);\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

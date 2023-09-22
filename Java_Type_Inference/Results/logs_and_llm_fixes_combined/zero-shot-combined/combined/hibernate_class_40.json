@@ -1,0 +1,8 @@
+{
+    "attempt": 3,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-fix/hibernate_class_40.java",
+    "java_code": "package hibernate;\n\nimport java.util.Iterator;\nimport java.util.List;\n\nimport org.hibernate.SessionFactory;\nimport org.hibernate.cfg.Configuration;\nimport org.hibernate.Session;\n\npublic class hibernate_class_40 {\n\n    public static void main(String[] args) {\n        Session session = null;\n\n        try {\n            SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();\n            session = sessionFactory.openSession();\n\n            System.out.println(\"selecting records\");\n            \n            @SuppressWarnings(\"unchecked\")\n            List<Object[]> l = session.getNamedQuery(\"getRecordsSP\").list();\n\n            for (Iterator<Object[]> it = l.iterator(); it.hasNext();) {\n                Object[] row = it.next();\n                System.out.println(row.length);\n            }\n        }\n        catch (Exception e) {\n            e.printStackTrace();\n        }\n        finally {\n            if (session != null) {\n                session.flush();\n                session.close();\n            }\n        }\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-one-shot/hibernate_class_36.java",
+    "java_code": "package hibernate;\nimport org.hibernate.Session;\nimport org.hibernate.Transaction;\nimport org.hibernate.cfg.Configuration;\nimport org.hibernate.SessionFactory;\n//ID = 3513366\n\npublic class hibernate_class_36\n{\n    public static void main(String[] args)\n    {                       \n        Session session = null;\n        SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();\n\n//        MyClass str1 = null;\n        Transaction tx = null;\n        try \n        {\n            session = sessionFactory.openSession();\n            tx = session.beginTransaction();\n//            str1 = new MyClass(\"hello\");\n//            session.save(str1);\n            tx.commit();\n        }\n        catch(Exception e)\n        {\n            e.printStackTrace();\n        }\n        finally \n        {\n            session.close();\n        }   \n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

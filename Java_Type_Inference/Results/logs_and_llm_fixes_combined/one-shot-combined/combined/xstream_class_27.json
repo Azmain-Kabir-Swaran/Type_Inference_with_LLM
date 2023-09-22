@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/one-shot-fix/xstream_class_27.java",
+    "java_code": "package xstream;\n\nimport com.thoughtworks.xstream.io.HierarchicalStreamWriter;\nimport com.thoughtworks.xstream.converters.MarshallingContext;\nimport com.thoughtworks.xstream.converters.Converter;\nimport com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.io.HierarchicalStreamReader;\nimport com.thoughtworks.xstream.converters.UnmarshallingContext;\nimport org.apache.commons.lang3.text.WordUtils;\n\npublic class xstream_class_27 {\n    \n    private static class Content {\n    }\n  \n    private static class ObjectContentConverter implements Converter {\n        XStream xStream;\n\n        private ObjectContentConverter(XStream xStream) {\n            this.xStream = xStream;\n        }\n\n        @Override\n        public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {\n            String className = WordUtils.uncapitalize(source.getClass().getSimpleName());\n            xStream.aliasField(className, Content.class, \"objectContent\");\n            xStream.marshal(source, writer);\n        }\n\n        @Override\n        public Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context) {\n            return null;\n        }\n\n        @Override\n        public boolean canConvert(Class type) {\n            return true;\n        }\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

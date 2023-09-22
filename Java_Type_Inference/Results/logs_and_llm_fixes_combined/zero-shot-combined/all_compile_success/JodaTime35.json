@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-fix/JodaTime35.java",
+    "java_code": "package jodatime;\n\nimport org.joda.time.DateTime;\nimport org.joda.time.Period;\nimport org.joda.time.ReadablePeriod;\nimport org.joda.time.format.PeriodFormatterBuilder;\nimport org.joda.time.format.PeriodFormatter;\n\nimport java.util.Date;\n\npublic class JodaTime35 {\n\n    private final static PeriodFormatter DURATION_FORMATTER = new PeriodFormatterBuilder().appendYears()\n            .appendSuffix(\"year\", \"years\").appendSeparator(\" \").appendMonths().appendSuffix(\"month\", \"months\")\n            .appendSeparator(\" \").appendDays().appendSuffix(\"day\", \"days\").appendSeparator(\" \").appendHours()\n            .appendSuffix(\"hour\", \"hours\").appendSeparator(\" \").appendMinutes().appendSuffix(\"minute\", \"minutes\")\n            .appendSeparator(\" \").appendSeconds().appendSuffix(\"second\", \"seconds\").toFormatter();\n\n    public static String format(Date start) {\n        StringBuffer result = new StringBuffer();\n        DURATION_FORMATTER.printTo(result, (ReadablePeriod) new Period(new DateTime(start), new DateTime()));\n        return result.toString();\n    }\n\n    public static String format(Date start, Date end) {\n        StringBuffer result = new StringBuffer();\n        DURATION_FORMATTER.printTo(result,\n                new Period(new DateTime(start), end == null ? new DateTime() : new DateTime(end)));\n        return result.toString();\n    }\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

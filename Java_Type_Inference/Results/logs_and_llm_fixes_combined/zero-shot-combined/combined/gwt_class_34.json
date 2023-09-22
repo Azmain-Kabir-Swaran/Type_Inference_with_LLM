@@ -1,0 +1,8 @@
+{
+    "attempt": 4,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-fix/gwt_class_34.java",
+    "java_code": "import com.google.gwt.user.client.ui.Button;\nimport com.google.gwt.user.client.ui.FormPanel;\nimport com.google.gwt.user.client.ui.RootPanel;\nimport com.google.gwt.event.dom.client.ClickHandler;\nimport com.google.gwt.event.dom.client.ClickEvent;\n\npublic class gwt_class_34 {\n\n  public static void main(String... args) {\n    FormPanel form = null;\n    Button submit = null;\n\n    form = new FormPanel();\n    form.setEncoding(FormPanel.ENCODING_MULTIPART);\n    RootPanel.get().add(form);\n\t\t\n    submit = new Button(\"OK\");\n    submit.addClickHandler(new ClickHandler() {\n      public void onClick(ClickEvent event) {\n        // button clicked confirmed\n      }\n    });\n    RootPanel.get().add(submit);\n  }\n}",
+    "stdout": "",
+    "stderr": "Note: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n",
+    "return_code": 0
+}

@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-one-shot/hibernate_class_46.java",
+    "java_code": "package hibernate;\nimport org.hibernate.Session;\nimport org.hibernate.CacheMode;\nimport org.hibernate.JDBCException;\nimport org.hibernate.HibernateException;\nimport org.hibernate.SessionFactory;\n//ID = 4302983\n\npublic class hibernate_class_46{\n\n\tpublic static final ThreadLocal session = new ThreadLocal();\n\tprivate static hibernate_class_46 me;\n\n\tstatic {\n\t    try {\n\t        me = new hibernate_class_46();\n\t    } catch (Exception e) {\n\t        e.printStackTrace();\n\t    }\n\t}\n\n\tprivate hibernate_class_46() throws HibernateException, JDBCException {\n\t}\n\n\tpublic Session currentSession() throws Exception {\n\t    Session s = (Session) session.get();\n\t    if (s != null) {\n\t        s.setCacheMode(CacheMode.REFRESH);\n\t    }\n\n\t    if (s == null) {\n\t        s =openSession();\n\n\t        session.set(s);\n\t    }\n\n\t    return s;\n\t}\n\n\n\n\tpublic void setSessionFactory(SessionFactory sessionFactory) {\n\t}\n\n\tpublic static Session openSession() {\n\t    Session session = null;\n\t    return session;\n\t}\n}",
+    "stdout": "",
+    "stderr": "Note: /home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-one-shot/hibernate_class_46.java uses unchecked or unsafe operations.\nNote: Recompile with -Xlint:unchecked for details.\n",
+    "return_code": 0
+}
