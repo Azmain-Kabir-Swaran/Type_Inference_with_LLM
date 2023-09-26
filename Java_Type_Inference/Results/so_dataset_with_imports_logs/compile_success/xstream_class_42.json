@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset_with_imports/xstream_class_42.java",
+    "java_code": "\n//ID=30288175\nimport java.util.List;\n\nimport com.thoughtworks.xstream.annotations.XStreamAlias;\nimport com.thoughtworks.xstream.annotations.XStreamImplicit;\n\npublic class xstream_class_42 {\n\t@XStreamAlias(\"addressServiceConfig\")\n\tpublic class AddressServiceConfig\n\t{\n\t    private String pathToCodeposFiles;\n\t    @XStreamImplicit(itemFieldName = \"region\")\n\t    private List<Region> regions;\n\t}\n\n\t@XStreamAlias(\"region\")\n\tpublic class Region\n\t{\n\t    private String regionName;\n\t    @XStreamImplicit(itemFieldName = \"province\")\n\t    private List<Province> provinces;\n\t}\n\n\t@XStreamAlias(\"province\")\n\tpublic class Province\n\t{\n\t    private int code;\n\n\t    private String name;\n\t}\n}\n",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

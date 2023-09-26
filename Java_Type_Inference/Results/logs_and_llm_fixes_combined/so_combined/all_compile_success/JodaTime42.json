@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime42.java",
-    "java_code": "import org.joda.time.LocalDate;\n\npublic class JodaTime42 {\n    public static final int JANUARY = 1;\n\n    public static final int DECEMBER = 12;\n\n    public static final int FIRST_OF_THE_MONTH = 1;\n\n    public final int getLastDayOfMonth(final int month, final int year) {\n        int lastDay = 0;\n\n        if ((month >= JANUARY) && (month <= DECEMBER)) {\n            LocalDate aDate = new LocalDate(year, month, FIRST_OF_THE_MONTH);\n\n            lastDay = aDate.dayOfMonth().getMaximumValue();\n        }\n        return lastDay;\n\n    }\n    public static void main(String[] args) {\n        // TODO Auto-generated method stub\n\n\n    }\n\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

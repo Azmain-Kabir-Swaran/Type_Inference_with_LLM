@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime05.java",
-    "java_code": "import org.joda.time.Chronology;\nimport org.joda.time.DateTime;\nimport org.joda.time.DateTimeZone;\nimport org.joda.time.chrono.GJChronology;\n\npublic class JodaTime05 {\n\n    public static void main(String[] args) {\n\n        DateTimeZone zone = DateTimeZone.forID(\"Europe/London\");\n        Chronology coptic = GJChronology.getInstance(zone);\n\n        DateTime dt = new DateTime(coptic);\n        DateTime minusOneDay = dt.minusDays(1);\n\n        System.out.println(minusOneDay);\n\n    }\n\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

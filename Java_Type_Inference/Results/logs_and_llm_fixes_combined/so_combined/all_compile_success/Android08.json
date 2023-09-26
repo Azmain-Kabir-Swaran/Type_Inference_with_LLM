@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android08.java",
-    "java_code": "package androidExamples;\n\nimport java.io.IOException;\nimport java.net.Inet4Address;\nimport java.net.InetAddress;\nimport java.net.Socket;\nimport java.net.UnknownHostException;\n\npublic class Android08 {\n\n\tprivate static final String TAG = \"TAG\";\n\n\tpublic static void main(String[] args) {\n\t\t// TODO Auto-generated method stub\n\n\t\ttry {\n\t\t\tInetAddress server = Inet4Address.getByName(\"thehost\");\n\t\t\t// Doesn't work either\n\t\t\t// or InetAddress server2 = Inet4Address.getByAddress(new String(\"192.168.1.30\").getBytes());\n\n\t\t\tif (server.isReachable(5000)) {\n\t\t\t\tSystem.out.println(TAG + \" Ping!\");\n\t\t\t}\n\n\t\t\tSocket clientsocket = new Socket(server, 8080);\n\t\t} catch (UnknownHostException e) {\n\t\t\tSystem.err.println(TAG + \" Server Not Found\");\n\t\t} catch (IOException e) {\n\t\t\tSystem.err.println(TAG + \" Couldn't open socket\");\n\t\t}\n\t}\n\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

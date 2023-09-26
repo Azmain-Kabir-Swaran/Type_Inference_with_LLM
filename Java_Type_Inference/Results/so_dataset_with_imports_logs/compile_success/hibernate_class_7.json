@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset_with_imports/hibernate_class_7.java",
+    "java_code": "\n//ID = 1205820\nimport org.hibernate.Session;\nimport org.hibernate.SessionFactory;\nimport org.hibernate.cfg.AnnotationConfiguration;\n\npublic class hibernate_class_7 {\n\tpublic class HibernateUtils {\n\t\tprivate final SessionFactory sessionFactory;\n\t\tprivate Session session;\n\n\t\tpublic HibernateUtils() {\n\t\t    this.sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();\n\t\t}\n\n\t\tpublic HibernateUtils(SessionFactory sessionFactory) {\n\t\t    this.sessionFactory = sessionFactory;\n\t\t}\n\n\t\t/**\n\t\t *\n\t\t * this is the function that return a session.So i'm free to implements any type of session in here.\n\t\t */\n\t\tpublic Session requestSession() {\n//\t\t        if (session != null || session.isOpen()) {\n//\t\t            return session;\n//\t\t        } else {\n\t\t        session = sessionFactory.openSession();\n\n//\t\t        }\n\t\t    return session;\n\t\t  }\n\t\t}\n}\n",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

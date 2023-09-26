@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset_with_imports/gwt_class_13.java",
+    "java_code": "\n//ID = 1692017\nimport com.google.gwt.core.client.EntryPoint;\nimport com.google.gwt.user.client.ui.AbsolutePanel;\nimport com.google.gwt.user.client.ui.Button;\nimport com.google.gwt.user.client.ui.ClickListener;\nimport com.google.gwt.user.client.ui.RootPanel;\nimport com.google.gwt.user.client.ui.Widget;\n\n@SuppressWarnings(\"deprecation\")\npublic class gwt_class_13 {\n\tpublic class ERD1 implements EntryPoint {\n\n\t\tpublic void onModuleLoad() {\n\n\t\t AbsolutePanel boundaryPanel = new AbsolutePanel();\n\t\t    boundaryPanel.setPixelSize(1000, 1000);\n\n//\t\t    final Diagram d = new Diagram(boundaryPanel);\n\n\t\t Button b = new Button();\n\t\t b.addClickListener(new ClickListener(){\n\n\t\t  public void onClick1(Widget sender) {\n\t\t  }\n\n\t\t@Override\n\t\tpublic void onClick(Widget sender) {\n\t\t\t// TODO Auto-generated method stub\n\t\t\t\n\t\t}\n\n\t\t });\n\n\t\t boundaryPanel.add(b, 10, 40);\n\n\t\t RootPanel.get().add(boundaryPanel);\n\t\t} \n\t\t}\n}\n",
+    "stdout": "",
+    "stderr": "Note: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n",
+    "return_code": 0
+}

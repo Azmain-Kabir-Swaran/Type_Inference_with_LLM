@@ -1,0 +1,85 @@
+"attempt": 9
+
+"file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-15-attempt/hibernate_class_8.java"
+
+"java_code": "
+
+package hibernate;
+
+import javax.validation.constraints.AssertTrue;
+import javax.validation.constraints.NotNull;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.Column;
+import java.util.Date;
+import javax.persistence.Transient;
+
+@MappedSuperclass
+public abstract class hibernate_class_8 {
+    private static final long serialVersionUID = 1L;
+    private Date from;
+    private Date thru;
+
+    @Transient
+    public boolean isActive() {
+        Date now = new Date();
+        boolean afterFrom = from.before(now) || from.equals(now);
+        boolean beforeThru = thru == null || thru.after(now) || thru.equals(now);
+        return afterFrom && beforeThru;
+    }
+}
+"
+
+"used_prompt": "
+
+package hibernate;
+
+import javax.validation.constraints.AssertTrue;
+import javax.validation.constraints.NotNull;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.Column;
+import java.util.Date;
+import javax.persistence.Transient;
+
+@MappedSuperclass
+public abstract class hibernate_class_8 {
+    private static final long serialVersionUID = 1L;
+    private Date from;
+    private Date thru;
+
+    @Transient
+    public boolean isActive() {
+        Date now = new Date();
+        boolean afterFrom = from.before(now) || from.equals(now);
+        boolean beforeThru = thru == null || thru.after(now) || thru.equals(now);
+        return afterFrom && beforeThru;
+    }
+
+
+You gave the above imports fix. But compiler gave this error:
+
+hibernate_class_8.java:24: error: reached end of file while parsing
+    }
+     ^
+1 error
+
+
+Now fix the error only by fixing the import statements by not using wildcard imports and must not modify code body which means do not change anything inside the class. So, it can be successfully compiled and reply with full code.
+"
+
+"stdout": ""
+
+"stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-15-attempt/hibernate_class_8.java:3: error: package javax.validation.constraints does not exist
+import javax.validation.constraints.AssertTrue;
+                                   ^
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-15-attempt/hibernate_class_8.java:4: error: package javax.validation.constraints does not exist
+import javax.validation.constraints.NotNull;
+                                   ^
+2 errors
+"
+
+"return_code": 1
+

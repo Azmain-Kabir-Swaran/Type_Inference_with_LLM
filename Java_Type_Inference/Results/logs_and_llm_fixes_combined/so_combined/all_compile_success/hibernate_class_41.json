@@ -1,8 +1,0 @@
-{
-    "attempt": 4,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/hibernate_class_41.java",
-    "java_code": "import org.hibernate.SessionFactory;\nimport org.hibernate.cfg.Configuration;\nimport org.hibernate.classic.Session;\nimport org.hibernate.Transaction;\n\npublic class hibernate_class_41 {\n    public static void main(String[] args) {\n        SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();\n        Session session = sessionFactory.openSession();\n        Transaction transaction = session.beginTransaction();\n        \n        // Code body here\n        \n        transaction.commit();\n        session.close();\n        sessionFactory.close();\n    }\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

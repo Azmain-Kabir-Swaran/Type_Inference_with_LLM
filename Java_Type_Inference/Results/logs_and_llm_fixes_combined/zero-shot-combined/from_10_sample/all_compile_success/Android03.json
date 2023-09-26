@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-zero-shot/Android03.java",
-    "java_code": "package androidExamples;\nimport com.google.android.maps.ItemizedOverlay;\nimport com.google.android.maps.GeoPoint;\nimport android.graphics.drawable.Drawable;\nimport com.google.android.maps.OverlayItem;\n//ID = 26362\n\npublic class Android03 extends ItemizedOverlay<OverlayItem>{\n\n\tpublic Android03(Drawable defaultMarker) \n\t{\n\t\tsuper(defaultMarker);\n\t\tpopulate();\n\t}\n\n\n\t@Override\n\tprotected OverlayItem createItem(int index) {\n\t\tDouble lat = (index+37.422006)*1E6;\n\t\tDouble lng = -122.084095*1E6;\n\t\tGeoPoint point = new GeoPoint(lat.intValue(), lng.intValue());\n\n\t\tOverlayItem oi = new OverlayItem(point, \"Marker\", \"Marker Text\");\n\t\treturn oi;\n\t}\n\n\t@Override\n\tpublic int size() {\n\t\treturn 5;\n\t} }",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

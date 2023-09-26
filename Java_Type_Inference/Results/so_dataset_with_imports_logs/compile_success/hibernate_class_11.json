@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset_with_imports/hibernate_class_11.java",
+    "java_code": "\n//ID = 1310603\nimport java.io.Serializable;\nimport javax.persistence.*;\n\nimport org.hibernate.annotations.ForeignKey;\n\npublic class hibernate_class_11 {\n\n\n@Entity\n@Table(name = \"User\")\npublic class User implements Serializable {\n\n    private static final long serialVersionUID = 2209767646758652729L;\n\n    @Id\n    @Column(name=\"id\", nullable = false)\n    private Integer id;\n\n    @Column(name=\"name\", length = 200, nullable = true)\n    private String name;\n\n\n    /* Getters, Setters, toString, equals & hashCode */\n}\n}\n",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

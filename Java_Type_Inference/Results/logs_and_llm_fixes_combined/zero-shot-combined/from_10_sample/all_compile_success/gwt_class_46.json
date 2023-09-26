@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-zero-shot/gwt_class_46.java",
-    "java_code": "package gwt;\nimport com.google.gwt.user.client.ui.VerticalPanel;\nimport com.google.gwt.user.client.ui.RootPanel;\nimport com.google.gwt.user.client.ui.DialogBox;\nimport com.google.gwt.user.client.ui.HTML;\n//ID = 3358063\n\npublic class gwt_class_46 {\n\tpublic static void main(String arg[]){\n\t\tVerticalPanel eventDetailWindow = new VerticalPanel();\n\n\t\t   final DialogBox dialogBox2 = new DialogBox();\n\t\t   dialogBox2.setText(\"Event Detail\");\n\t\t   dialogBox2.setAnimationEnabled(true);\n\n\t\t   final HTML serverResponse3 = new HTML(\"<b> ok, this is working</b>\");\n\t\t   serverResponse3.addStyleName(\"detailView\");\n\n\t\t   eventDetailWindow.add(serverResponse3);\n\t\t   eventDetailWindow.addStyleName(\"detailWindow\");\n\t\t   dialogBox2.setWidget(eventDetailWindow);\n\t\t   RootPanel.get(\"detailWindow\").add(eventDetailWindow);\n\t}\n\n}",
-    "stdout": "",
-    "stderr": "Note: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n",
-    "return_code": 0
-}

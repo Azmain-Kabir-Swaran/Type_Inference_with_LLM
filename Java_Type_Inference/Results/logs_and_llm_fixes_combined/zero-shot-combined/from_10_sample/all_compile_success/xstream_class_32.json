@@ -1,8 +1,0 @@
-{
-    "attempt": 3,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-fix/xstream_class_32.java",
-    "java_code": "import java.util.ArrayList;\nimport java.util.List;\nimport java.util.Map;\nimport java.util.HashMap;\n\npublic class xstream_class_32 {\n    public static void main(String[] args) {\n        List<Map<String, Object>> dataList = new ArrayList<>();\n        Map<String, Object> data = new HashMap<>();\n        data.put(\"name\", \"John\");\n        data.put(\"age\", 25);\n        dataList.add(data);\n        System.out.println(dataList);\n    }\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

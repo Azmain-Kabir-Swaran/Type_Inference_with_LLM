@@ -1,8 +1,0 @@
-{
-    "attempt": 2,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-fix/Android39.java",
-    "java_code": "import android.widget.LinearLayout;\nimport com.google.android.maps.MapActivity;\nimport android.os.Bundle;\nimport com.google.android.maps.MyLocationOverlay;\nimport android.view.View;\nimport com.google.android.maps.MapController;\nimport com.google.android.maps.MapView;\nimport com.google.android.maps.Overlay;\nimport java.util.List;\n\npublic class Android39 extends MapActivity {\n\n\tpublic void onCreate(Bundle icicle) {\n\t\tsuper.onCreate(icicle);\n\n\t\tsetContentView(R.layout.main);\n\n\t\tMapView myMapView = (MapView) findViewById(R.id.lay);\n\t\tMapController mapController = myMapView.getController();\n\n\t\tList<Overlay> overlays = myMapView.getOverlays();\n\t\tMyLocationOverlay myLocationOverlay = new MyLocationOverlay(this, myMapView);\n\t\toverlays.add(myLocationOverlay);\n\t\tmyLocationOverlay.enableMyLocation();\n\t}\n\n\tprotected boolean isRouteDisplayed() {\n\n\t\treturn false;\n\t}\n\n}",
-    "stdout": "",
-    "stderr": "No error (Ignored 'package R does not exist' errors)",
-    "return_code": 1
-}

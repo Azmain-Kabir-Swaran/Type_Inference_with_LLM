@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime07.java",
-    "java_code": "import java.text.DateFormat;\nimport java.text.SimpleDateFormat;\nimport java.util.Date;\nimport java.util.Calendar;\nimport java.text.ParseException;\nimport org.joda.time.Days;\nimport org.joda.time.DateTime;\n\npublic class JodaTime07 {\n\n\tpublic static void main(String[] args) {\n\n\t\tDateFormat formatter = new SimpleDateFormat(\"MM/dd/yyyy\");\n\n\t\tDate someDate = new Date();\n\t\tDate today = Calendar.getInstance().getTime();\n\n\t\ttry {\n\t\t\tsomeDate = formatter.parse(\"06/22/2010\");\n\t\t} catch (ParseException pe) {\n\t\t\tSystem.out.println(\"Parser Exception\");\n\t\t}\n\n\t\tint days = Days.daysBetween(new DateTime(someDate), new DateTime(today)).getDays();\n\n\t\tSystem.out.println(\" Days Between \" + someDate + \" : \" + today + \" - \" + days);\n\n\t}\n\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

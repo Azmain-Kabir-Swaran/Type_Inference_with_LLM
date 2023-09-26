@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset_with_imports/gwt_class_34.java",
+    "java_code": "\n//ID = 2598154\nimport com.google.gwt.event.dom.client.ClickEvent;\nimport com.google.gwt.event.dom.client.ClickHandler;\nimport com.google.gwt.event.shared.HandlerRegistration;\nimport com.google.gwt.user.client.DOM;\nimport com.google.gwt.user.client.ui.Button;\nimport com.google.gwt.user.client.ui.FormPanel;\nimport com.google.gwt.user.client.ui.FormPanel.SubmitEvent;\nimport com.google.gwt.user.client.ui.FormPanel.SubmitHandler;\n\npublic class gwt_class_34 {\n\tpublic static void main(String arg[]){\n\t\tFormPanel form = null;\n\t\tButton submit = null;\n\n\t\tform = FormPanel.wrap(DOM.getElementById(\"MyForm\"));\n\t\tform.setEncoding(FormPanel.ENCODING_MULTIPART);\n\n\t\tsubmit = Button.wrap(DOM.getElementById(\"OK\"));\n\t\tsubmit.addClickHandler(new ClickHandler() {\n\t\t\tpublic void onClick(ClickEvent event) {\n\t\t\t\t// button clicked confirmed\n\t\t\t}\n\t\t});\n\n\n\t\tHandlerRegistration formSubmitHandler = form.addSubmitHandler(new SubmitHandler(){\n\t\t\tpublic void onSubmit(SubmitEvent event) {\n\t\t\t}\n\t\t});\n\t}\n\n}\n",
+    "stdout": "",
+    "stderr": "Note: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n",
+    "return_code": 0
+}

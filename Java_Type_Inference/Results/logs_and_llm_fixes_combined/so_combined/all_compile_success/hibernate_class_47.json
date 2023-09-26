@@ -1,8 +1,0 @@
-{
-    "attempt": 3,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/hibernate_class_47.java",
-    "java_code": "import org.hibernate.Session;\nimport org.hibernate.SessionFactory;\nimport org.hibernate.Transaction;\nimport org.hibernate.cfg.Configuration;\n\npublic class hibernate_class_47 {\n\n    public static boolean registerEvent() {\n\n        Configuration cfg = new Configuration().configure();\n        SessionFactory sf = cfg.buildSessionFactory();\n        Transaction t = null;\n        try {\n            Session s = sf.openSession();\n            t = s.beginTransaction(); // start a new transaction\n            s.persist(\"aa\");\n            t.commit(); // commit transaction\n            return true;\n        } catch (Exception ex) {\n            System.err.println(\"Error -->\" + ex.getMessage());\n            if (t != null)\n                t.rollback(); // rollback transaction on exception\n            return false;\n        }\n    }\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

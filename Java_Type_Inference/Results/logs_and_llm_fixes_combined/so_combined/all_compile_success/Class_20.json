@@ -1,8 +1,0 @@
-{
-    "attempt": 4,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Class_20.java",
-    "java_code": "import java.util.ArrayList;\nimport java.util.List;\nimport java.util.Scanner;\n\npublic class Class_20 {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        int n = scanner.nextInt();\n        List<Integer> list = new ArrayList<>();\n        for (int i = 0; i < n; i++) {\n            list.add(scanner.nextInt());\n        }\n        scanner.close();\n        int sum = 0;\n        for (int num : list) {\n            sum += num;\n        }\n        System.out.println(sum);\n    }\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

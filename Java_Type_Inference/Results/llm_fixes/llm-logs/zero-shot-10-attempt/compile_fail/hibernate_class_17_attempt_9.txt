@@ -1,0 +1,207 @@
+"attempt": 9
+
+"file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-10-attempt/hibernate_class_17.java"
+
+"java_code": "
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.shards.ShardId;
+import org.hibernate.shards.loadbalance.RoundRobinShardLoadBalancer;
+import org.hibernate.shards.strategy.ShardStrategy;
+import org.hibernate.shards.strategy.ShardStrategyFactory;
+import org.hibernate.shards.strategy.access.SequentialShardAccessStrategy;
+import org.hibernate.shards.strategy.resolution.AllShardsShardResolutionStrategy;
+import org.hibernate.shards.strategy.selection.RoundRobinShardSelectionStrategy;
+
+import org.hibernate.shards.util.ShardConfiguration;
+import org.hibernate.shards.util.ShardedConfiguration;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class hibernate_class_17 {
+    public class SessionFactoryImpl {
+
+        private static final String SHARD_CFG_0 = "/com/hibshards/config/shard0.hibernate.cfg.xml";
+        private static final String SHARD_CFG_1 = "/com/hibshards/config/shard1.hibernate.cfg.xml";
+        private static final String SHARDED_TABLE = "com/hibshards/orm/weather.hbm.xml";
+
+        public SessionFactory createSessionFactory() {
+            Configuration prototypeConfig = new Configuration().configure(SHARD_CFG_0);
+            prototypeConfig.addResource(SHARDED_TABLE);
+
+            List<ShardConfiguration> shardConfigs = new ArrayList<>();
+            shardConfigs.add(buildShardConfig(SHARD_CFG_0));
+            shardConfigs.add(buildShardConfig(SHARD_CFG_1));
+
+            ShardStrategyFactory shardStrategyFactory = buildShardStrategyFactory();
+            ShardedConfiguration shardedConfig = new ShardedConfiguration(
+                    prototypeConfig,
+                    shardConfigs,
+                    shardStrategyFactory);
+            return shardedConfig.buildShardedSessionFactory();
+        }
+
+        private ShardStrategyFactory buildShardStrategyFactory() {
+
+            ShardStrategyFactory shardStrategyFactory = new ShardStrategyFactory() {
+                public ShardStrategy newShardStrategy(List<ShardId> shardIds) {
+                    RoundRobinShardLoadBalancer loadBalancer = new RoundRobinShardLoadBalancer(shardIds);
+                    RoundRobinShardSelectionStrategy pss = new RoundRobinShardSelectionStrategy(loadBalancer);
+                    AllShardsShardResolutionStrategy prs = new AllShardsShardResolutionStrategy(shardIds);
+                    SequentialShardAccessStrategy pas = new SequentialShardAccessStrategy();
+                    return new ShardStrategy(pss, prs, pas);
+                }
+            };
+            return shardStrategyFactory;
+        }
+
+        private ShardConfiguration buildShardConfig(String configFile) {
+            Configuration config = new Configuration().configure(configFile);
+            return new ShardConfiguration(config);
+        }
+    }
+}
+"
+
+"used_prompt": "
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.shards.ShardId;
+import org.hibernate.shards.loadbalance.RoundRobinShardLoadBalancer;
+import org.hibernate.shards.strategy.ShardStrategy;
+import org.hibernate.shards.strategy.ShardStrategyFactory;
+import org.hibernate.shards.strategy.access.SequentialShardAccessStrategy;
+import org.hibernate.shards.strategy.resolution.AllShardsShardResolutionStrategy;
+import org.hibernate.shards.strategy.selection.RoundRobinShardSelectionStrategy;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class hibernate_class_17 {
+    public class SessionFactoryImpl {
+
+        private static final String SHARD_CFG_0 = "/com/hibshards/config/shard0.hibernate.cfg.xml";
+        private static final String SHARD_CFG_1 = "/com/hibshards/config/shard1.hibernate.cfg.xml";
+        private static final String SHARDED_TABLE = "com/hibshards/orm/weather.hbm.xml";
+
+        public SessionFactory createSessionFactory() {
+            Configuration prototypeConfig = new Configuration().configure(SHARD_CFG_0);
+            prototypeConfig.addResource(SHARDED_TABLE);
+
+            List<org.hibernate.shards.util.ShardConfiguration> shardConfigs = new ArrayList<>();
+            shardConfigs.add(buildShardConfig(SHARD_CFG_0));
+            shardConfigs.add(buildShardConfig(SHARD_CFG_1));
+
+            ShardStrategyFactory shardStrategyFactory = buildShardStrategyFactory();
+            org.hibernate.shards.util.ShardedConfiguration shardedConfig = new org.hibernate.shards.util.ShardedConfiguration(
+                    prototypeConfig,
+                    shardConfigs,
+                    shardStrategyFactory);
+            return shardedConfig.buildShardedSessionFactory();
+        }
+
+        private ShardStrategyFactory buildShardStrategyFactory() {
+
+            ShardStrategyFactory shardStrategyFactory = new ShardStrategyFactory() {
+                public ShardStrategy newShardStrategy(List<ShardId> shardIds) {
+                    RoundRobinShardLoadBalancer loadBalancer = new RoundRobinShardLoadBalancer(shardIds);
+                    RoundRobinShardSelectionStrategy pss = new RoundRobinShardSelectionStrategy(loadBalancer);
+                    AllShardsShardResolutionStrategy prs = new AllShardsShardResolutionStrategy(shardIds);
+                    SequentialShardAccessStrategy pas = new SequentialShardAccessStrategy();
+                    return new ShardStrategy(pss, prs, pas);
+                }
+            };
+            return shardStrategyFactory;
+        }
+
+        private org.hibernate.shards.util.ShardConfiguration buildShardConfig(String configFile) {
+            Configuration config = new Configuration().configure(configFile);
+            return new org.hibernate.shards.util.ShardConfiguration(config);
+        }
+    }
+}
+
+You gave the above imports fix. But compiler gave this error:
+
+hibernate_class_17.java:51: error: cannot find symbol
+        private org.hibernate.shards.util.ShardConfiguration buildShardConfig(String configFile) {
+                                         ^
+  symbol:   class ShardConfiguration
+  location: package org.hibernate.shards.util
+hibernate_class_17.java:25: error: cannot find symbol
+            List<org.hibernate.shards.util.ShardConfiguration> shardConfigs = new ArrayList<>();
+                                          ^
+  symbol:   class ShardConfiguration
+  location: package org.hibernate.shards.util
+hibernate_class_17.java:30: error: cannot find symbol
+            org.hibernate.shards.util.ShardedConfiguration shardedConfig = new org.hibernate.shards.util.ShardedConfiguration(
+                                     ^
+  symbol:   class ShardedConfiguration
+  location: package org.hibernate.shards.util
+hibernate_class_17.java:30: error: cannot find symbol
+            org.hibernate.shards.util.ShardedConfiguration shardedConfig = new org.hibernate.shards.util.ShardedConfiguration(
+                                                                                                        ^
+  symbol:   class ShardedConfiguration
+  location: package org.hibernate.shards.util
+hibernate_class_17.java:45: error: ShardStrategy is abstract; cannot be instantiated
+                    return new ShardStrategy(pss, prs, pas);
+                           ^
+hibernate_class_17.java:53: error: cannot find symbol
+            return new org.hibernate.shards.util.ShardConfiguration(config);
+                                                ^
+  symbol:   class ShardConfiguration
+  location: package org.hibernate.shards.util
+6 errors
+
+
+Now fix the error only by fixing the import statements by not using wildcard imports and must not modify code body which means do not change anything inside the class. So, it can be successfully compiled and reply with full code.
+"
+
+"stdout": ""
+
+"stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-10-attempt/hibernate_class_17.java:11: error: cannot find symbol
+import org.hibernate.shards.util.ShardConfiguration;
+                                ^
+  symbol:   class ShardConfiguration
+  location: package org.hibernate.shards.util
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-10-attempt/hibernate_class_17.java:12: error: cannot find symbol
+import org.hibernate.shards.util.ShardedConfiguration;
+                                ^
+  symbol:   class ShardedConfiguration
+  location: package org.hibernate.shards.util
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-10-attempt/hibernate_class_17.java:54: error: cannot find symbol
+        private ShardConfiguration buildShardConfig(String configFile) {
+                ^
+  symbol:   class ShardConfiguration
+  location: class hibernate_class_17.SessionFactoryImpl
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-10-attempt/hibernate_class_17.java:28: error: cannot find symbol
+            List<ShardConfiguration> shardConfigs = new ArrayList<>();
+                 ^
+  symbol:   class ShardConfiguration
+  location: class hibernate_class_17.SessionFactoryImpl
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-10-attempt/hibernate_class_17.java:33: error: cannot find symbol
+            ShardedConfiguration shardedConfig = new ShardedConfiguration(
+            ^
+  symbol:   class ShardedConfiguration
+  location: class hibernate_class_17.SessionFactoryImpl
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-10-attempt/hibernate_class_17.java:33: error: cannot find symbol
+            ShardedConfiguration shardedConfig = new ShardedConfiguration(
+                                                     ^
+  symbol:   class ShardedConfiguration
+  location: class hibernate_class_17.SessionFactoryImpl
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-10-attempt/hibernate_class_17.java:48: error: ShardStrategy is abstract; cannot be instantiated
+                    return new ShardStrategy(pss, prs, pas);
+                           ^
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-10-attempt/hibernate_class_17.java:56: error: cannot find symbol
+            return new ShardConfiguration(config);
+                       ^
+  symbol:   class ShardConfiguration
+  location: class hibernate_class_17.SessionFactoryImpl
+8 errors
+"
+
+"return_code": 1
+

@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-zero-shot/Android24.java",
-    "java_code": "package androidExamples;\nimport java.util.Iterator;\nimport android.app.Activity;\nimport java.util.List;\nimport android.os.Bundle;\nimport android.util.Log;\nimport android.content.Context;\nimport android.location.LocationManager;\n//ID = 896889\n\n\npublic class Android24 extends Activity {\n    /** Called when the activity is first created. */\n    @Override\n    public void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.main);\n\n        LocationManager l =(LocationManager) getSystemService(Context.LOCATION_SERVICE);\n        List<String> li = l.getAllProviders();\n        for (Iterator<String> iterator = li.iterator(); iterator.hasNext();) {\n      String string =  iterator.next();\n      Log.d(\"gps\", string);\n     }\n        if (l.getLastKnownLocation(\"gps\")==null)\n            Log.d(\"gps\", \"null\");   \n    }\n}",
-    "stdout": "",
-    "stderr": "No error (Ignored 'package R does not exist' errors)",
-    "return_code": 1
-}

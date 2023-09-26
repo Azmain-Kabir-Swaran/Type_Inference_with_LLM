@@ -1,8 +1,0 @@
-{
-    "attempt": 3,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-fix/xstream_class_14.java",
-    "java_code": "package xstream;\n\nimport com.thoughtworks.xstream.converters.SingleValueConverter;\nimport com.thoughtworks.xstream.converters.enums.EnumSingleValueConverter;\n\npublic class xstream_class_14 {\n    public class SingleValueEnumConverter implements SingleValueConverter {\n        @SuppressWarnings(\"rawtypes\")\n        private final Class<? extends Enum> enumType;\n\n        public SingleValueEnumConverter(Class<? extends Enum> type) {\n            this.enumType = type;\n        }\n\n        public boolean canConvert(Class type) {\n            return type.equals(enumType);\n        }\n\n        public Object fromString(String value) {\n            return Enum.valueOf(enumType, value);\n        }\n\n        @Override\n        public String toString(Object obj) {\n            return ((Enum<?>) obj).name();\n        }\n    }\n}",
-    "stdout": "",
-    "stderr": "Note: /home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-fix/xstream_class_14.java uses unchecked or unsafe operations.\nNote: Recompile with -Xlint:unchecked for details.\n",
-    "return_code": 0
-}

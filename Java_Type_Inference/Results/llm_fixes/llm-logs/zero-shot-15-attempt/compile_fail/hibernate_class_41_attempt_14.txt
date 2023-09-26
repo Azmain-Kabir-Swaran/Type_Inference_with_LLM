@@ -1,0 +1,130 @@
+"attempt": 14
+
+"file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-15-attempt/hibernate_class_41.java"
+
+"java_code": "
+
+import org.hibernate.Criteria;
+import org.hibernate.Transaction;
+import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
+import com.example.util.HibernateUtil;
+
+import java.util.List;
+
+public class hibernate_class_41 {
+    public static List list(Class className, int start, int limit, String[] searchFilter) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = null;
+        try {
+            transaction = session.beginTransaction();
+
+            Criteria criteria = session.createCriteria(className);
+            criteria.setFirstResult(start);
+            criteria.setMaxResults(limit);
+
+            for (String sf : searchFilter) {
+                String[] values = null;
+                if (values == null) {
+                    if (values.length == 1) {
+                        criteria.add(Restrictions.eq(sf, values[0]));
+                    } else {
+                        criteria.add(Restrictions.in(sf, values));
+                    }
+                }
+            }
+
+            List objects = criteria.list();
+            transaction.commit();
+
+            return objects;
+        } catch (Exception e) {
+            transaction.rollback();
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+
+        return null;
+    }
+}
+"
+
+"used_prompt": "
+
+import org.hibernate.Criteria;
+import org.hibernate.Transaction;
+import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
+import hibernate.util.HibernateUtil;
+
+import java.util.List;
+
+public class hibernate_class_41 {
+    public static List list(Class className, int start, int limit, String[] searchFilter) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = null;
+        try {
+            transaction = session.beginTransaction();
+
+            Criteria criteria = session.createCriteria(className);
+            criteria.setFirstResult(start);
+            criteria.setMaxResults(limit);
+
+            for (String sf : searchFilter) {
+                String[] values = null;
+                if (values == null) {
+                    if (values.length == 1) {
+                        criteria.add(Restrictions.eq(sf, values[0]));
+                    } else {
+                        criteria.add(Restrictions.in(sf, values));
+                    }
+                }
+            }
+
+            List objects = criteria.list();
+            transaction.commit();
+
+            return objects;
+        } catch (Exception e) {
+            transaction.rollback();
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+
+        return null;
+    }
+}
+
+You gave the above imports fix. But compiler gave this error:
+
+hibernate_class_41.java:5: error: package hibernate.util does not exist
+import hibernate.util.HibernateUtil;
+                     ^
+hibernate_class_41.java:11: error: cannot find symbol
+        Session session = HibernateUtil.getSessionFactory().openSession();
+                          ^
+  symbol:   variable HibernateUtil
+  location: class hibernate_class_41
+2 errors
+
+
+Now fix the error only by fixing the import statements by not using wildcard imports and must not modify code body which means do not change anything inside the class. So, it can be successfully compiled and reply with full code.
+"
+
+"stdout": ""
+
+"stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-15-attempt/hibernate_class_41.java:5: error: package com.example.util does not exist
+import com.example.util.HibernateUtil;
+                       ^
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-15-attempt/hibernate_class_41.java:11: error: cannot find symbol
+        Session session = HibernateUtil.getSessionFactory().openSession();
+                          ^
+  symbol:   variable HibernateUtil
+  location: class hibernate_class_41
+2 errors
+"
+
+"return_code": 1
+

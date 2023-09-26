@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime40.java",
-    "java_code": "package jodatime;\n\nimport org.joda.time.DateTime;\nimport org.joda.time.Days;\n\npublic class JodaTime40 {\n\n    public static void main(String[] args) {\n        // TODO Auto-generated method stub\n        @SuppressWarnings(\"deprecation\")\n        org.joda.time.LocalDate past = new org.joda.time.LocalDate(110, 5, 20); // June 20th, 2010\n        org.joda.time.LocalDate today = new org.joda.time.LocalDate(110, 6, 24); // July 24th \n        int days = Days.daysBetween(new DateTime(past.toDate()), new DateTime(today.toDate())).getDays(); // => 34\n    }\n\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

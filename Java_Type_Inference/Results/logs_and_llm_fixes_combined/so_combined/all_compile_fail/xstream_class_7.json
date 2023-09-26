@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/so_dataset/xstream_class_7.java",
-    "java_code": "public class xstream_class_7 {\n    @XStreamAsAttribute\n    private String type;\n    private String value;\n\n    public xstream_class_7(String type, String value) {\n        this.type = type;\n        this.value = value;\n    }\n    // getters omitted \n}",
-    "stdout": "",
-    "stderr": "/home/azmain/GitHub Codes/so_dataset/xstream_class_7.java:2: error: cannot find symbol\n    @XStreamAsAttribute\n     ^\n  symbol:   class XStreamAsAttribute\n  location: class xstream_class_7\n1 error\n",
-    "return_code": 1
-}

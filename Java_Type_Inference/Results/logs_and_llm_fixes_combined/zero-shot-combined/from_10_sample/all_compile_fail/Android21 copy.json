@@ -1,8 +1,0 @@
-{
-    "attempt": 5,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-fix/Android21.java",
-    "java_code": "import android.widget.LinearLayout;\nimport android.widget.ImageButton;\nimport android.content.Context;\nimport androidExamples.R;\n\n//ID = 775188\npublic class Android21 {\n\n\tpublic static void main(String[] args) {\n\t\t// TODO Auto-generated method stub\n\n\t\tImageButton b2 = new ImageButton(getApplicationContext());\n\t\tb2.setBackgroundResource(R.drawable.img);\n\t\tLinearLayout container = (LinearLayout) findViewById(R.id.lay);\n\t\tcontainer.addView(b2);\n\t}\n\n\tprivate static LinearLayout findViewById(int lay) {\n\t\t// TODO Auto-generated method stub\n\t\treturn null;\n\t}\n\n\tprivate static Context getApplicationContext() {\n\t\t// TODO Auto-generated method stub\n\t\treturn null;\n\t}\n\n}",
-    "stdout": "",
-    "stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-fix/Android21.java:4: error: package androidExamples does not exist\nimport androidExamples.R;\n                      ^\n/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-fix/Android21.java:13: error: package R does not exist\n\t\tb2.setBackgroundResource(R.drawable.img);\n\t\t                          ^\n/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-fix/Android21.java:14: error: package R does not exist\n\t\tLinearLayout container = (LinearLayout) findViewById(R.id.lay);\n\t\t                                                      ^\n3 errors\n",
-    "return_code": 1
-}

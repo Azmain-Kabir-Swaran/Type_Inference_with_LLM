@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/so_dataset/hibernate_class_45.java",
-    "java_code": "public class hibernate_class_45\n{\n    public static void main(String[] args)\n    {\n        SessionFactory factory = new AnnotationConfiguration().configure().buildSessionFactory();\n        Session session = factory.openSession();\n        session.beginTransaction();\n\n//        Message m1 = new Message(\"Hibernated a  messages on \" + new Date());\n        session.save(\"aa\");\n        session.getTransaction().commit();\n        session.close();\n    }\n}",
-    "stdout": "",
-    "stderr": "/home/azmain/GitHub Codes/so_dataset/hibernate_class_45.java:5: error: cannot find symbol\n        SessionFactory factory = new AnnotationConfiguration().configure().buildSessionFactory();\n        ^\n  symbol:   class SessionFactory\n  location: class hibernate_class_45\n/home/azmain/GitHub Codes/so_dataset/hibernate_class_45.java:5: error: cannot find symbol\n        SessionFactory factory = new AnnotationConfiguration().configure().buildSessionFactory();\n                                     ^\n  symbol:   class AnnotationConfiguration\n  location: class hibernate_class_45\n/home/azmain/GitHub Codes/so_dataset/hibernate_class_45.java:6: error: cannot find symbol\n        Session session = factory.openSession();\n        ^\n  symbol:   class Session\n  location: class hibernate_class_45\n3 errors\n",
-    "return_code": 1
-}

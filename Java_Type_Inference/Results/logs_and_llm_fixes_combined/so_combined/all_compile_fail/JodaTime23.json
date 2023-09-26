@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/so_dataset/JodaTime23.java",
-    "java_code": "package jodatime;\npublic class JodaTime23 {\n\n\tLocalDate getNearestDayOfWeek(LocalDate ld, String day) {\n        LocalDate target = ld.dayOfWeek().setCopy(day);\n        if (ld.getDayOfWeek() > DateTimeConstants.SATURDAY) {\n            target = target.plusWeeks(1);\n        }\n        return target;\n    }\n}\n",
-    "stdout": "",
-    "stderr": "/home/azmain/GitHub Codes/so_dataset/JodaTime23.java:4: error: cannot find symbol\n\tLocalDate getNearestDayOfWeek(LocalDate ld, String day) {\n\t                              ^\n  symbol:   class LocalDate\n  location: class JodaTime23\n/home/azmain/GitHub Codes/so_dataset/JodaTime23.java:4: error: cannot find symbol\n\tLocalDate getNearestDayOfWeek(LocalDate ld, String day) {\n\t^\n  symbol:   class LocalDate\n  location: class JodaTime23\n/home/azmain/GitHub Codes/so_dataset/JodaTime23.java:5: error: cannot find symbol\n        LocalDate target = ld.dayOfWeek().setCopy(day);\n        ^\n  symbol:   class LocalDate\n  location: class JodaTime23\n/home/azmain/GitHub Codes/so_dataset/JodaTime23.java:6: error: cannot find symbol\n        if (ld.getDayOfWeek() > DateTimeConstants.SATURDAY) {\n                                ^\n  symbol:   variable DateTimeConstants\n  location: class JodaTime23\n4 errors\n",
-    "return_code": 1
-}

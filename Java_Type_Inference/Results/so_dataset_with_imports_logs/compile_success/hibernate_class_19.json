@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset_with_imports/hibernate_class_19.java",
+    "java_code": "\n//ID = 2182950\nimport org.hibernate.annotations.Index;\n\nimport javax.persistence.Column;\nimport javax.persistence.Entity;\nimport javax.persistence.GeneratedValue;\nimport javax.persistence.Id;\n\n@Entity\n@org.hibernate.annotations.Table(appliesTo = hibernate_class_19.TABLE_NAME,\n    indexes = {\n            @Index(name = \"IDX_XDN_DFN\",\n                    columnNames = {hibernate_class_19.XDN, hibernate_class_19.DFN}\n            )\n    }\n)\n\npublic class hibernate_class_19 {\n    public final static String TABLE_NAME = \"house\";\n    public final static String XDN = \"xdn\";\n    public final static String DFN = \"dfn\";\n\n    @Id\n    @GeneratedValue\n    private long Id;\n\n    @Column(name = XDN)\n    private long xdn;\n\n    @Column(name = DFN)\n    private long dfn;\n\n    @Column\n    private String address;\n\n    public long getId() {\n        return Id;\n    }\n\n    public void setId(long id) {\n        this.Id = id;\n    }\n\n    public long getXdn() {\n        return xdn;\n    }\n\n    public void setXdn(long xdn) {\n        this.xdn = xdn;\n    }\n\n    public long getDfn() {\n        return dfn;\n    }\n\n    public void setDfn(long dfn) {\n        this.dfn = dfn;\n    }\n\n    public String getAddress() {\n        return address;\n    }\n\n    public void setAddress(String address) {\n        this.address = address;\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

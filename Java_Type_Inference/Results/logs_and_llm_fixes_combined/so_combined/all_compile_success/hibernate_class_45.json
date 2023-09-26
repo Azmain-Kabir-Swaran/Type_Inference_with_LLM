@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/hibernate_class_45.java",
-    "java_code": "import org.hibernate.Session;\nimport org.hibernate.SessionFactory;\nimport org.hibernate.cfg.AnnotationConfiguration;\n\npublic class hibernate_class_45 {\n    public static void main(String[] args) {\n        SessionFactory factory = new AnnotationConfiguration().configure().buildSessionFactory();\n        Session session = factory.openSession();\n        session.beginTransaction();\n\n        session.save(\"aa\");\n        session.getTransaction().commit();\n        session.close();\n    }\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

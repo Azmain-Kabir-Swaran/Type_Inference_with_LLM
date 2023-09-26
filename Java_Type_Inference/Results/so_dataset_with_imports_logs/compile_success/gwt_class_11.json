@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset_with_imports/gwt_class_11.java",
+    "java_code": "\n//ID = 1651138\nimport com.google.gwt.core.client.EntryPoint;\nimport com.google.gwt.user.client.ui.HorizontalPanel;\nimport com.google.gwt.user.client.ui.Label;\nimport com.google.gwt.user.client.ui.RootPanel;\n\npublic class gwt_class_11 implements EntryPoint {\n    HorizontalPanel dictionaryPanel;\n    Label wordLabel;\n\n    public gwt_class_11(){\n     dictionaryPanel = new HorizontalPanel();\n     wordLabel = new Label(\"Word\");\n    }\n    @Override\n    public void onModuleLoad() {\n     dictionaryPanel.add(wordLabel);\n     RootPanel.get(\"dictionary\").add(dictionaryPanel);\n    } \n}",
+    "stdout": "",
+    "stderr": "Note: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n",
+    "return_code": 0
+}

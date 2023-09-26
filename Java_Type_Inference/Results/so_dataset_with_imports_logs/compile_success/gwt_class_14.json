@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset_with_imports/gwt_class_14.java",
+    "java_code": "\n//ID = 1738530\nimport com.google.gwt.core.client.GWT;\nimport com.google.gwt.http.client.Request;\nimport com.google.gwt.http.client.RequestBuilder;\nimport com.google.gwt.http.client.RequestCallback;\nimport com.google.gwt.http.client.Response;\nimport com.google.gwt.user.client.Window;\n\npublic class gwt_class_14 {\n\tpublic void main(String arg[]){\n\t\tRequestBuilder rb = new RequestBuilder(RequestBuilder.GET,\"http://myweb.com/test.php?id=65472\");\n\t     try {\n\t        rb.sendRequest(null, new RequestCallback() {\n\t             public void onError1(final Request request, final Throwable exception) {\n\t                 Window.alert(exception.getMessage());\n\t             }\n\t             public void onResponseReceived1(final Request request, final Response response) {\n\t                 //do something\n\t                 GWT.log(\"response: (\" + response.getText() + \")\", null);\n\t             }\n\t\t\t\t@Override\n\t\t\t\tpublic void onResponseReceived(Request request, Response response) {\n\t\t\t\t\t// TODO Auto-generated method stub\n\t\t\t\t\t\n\t\t\t\t}\n\t\t\t\t@Override\n\t\t\t\tpublic void onError(Request request, Throwable exception) {\n\t\t\t\t\t// TODO Auto-generated method stub\n\t\t\t\t\t\n\t\t\t\t}\n\t        });\n\t     } catch (final Exception e) {\n\t             Window.alert(e.getMessage());\n\t     }\t\n\t}\n\n}\n",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

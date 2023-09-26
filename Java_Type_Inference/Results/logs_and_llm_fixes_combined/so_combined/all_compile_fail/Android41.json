@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/so_dataset/Android41.java",
-    "java_code": "package androidExamples;\n\npublic class Android41 extends View {\n\tpublic Android41(Context context) {\n\t\tsuper(context);\n\t\tsetBackgroundColor(Color.RED);\n\t}\n\n\tTextView tv;\n\n\tpublic void adText(TextView tv) {\n\t\tthis.tv = tv;\n\t\ttv.setVisibility(tv.VISIBLE);\n\t}\n}\n",
-    "stdout": "",
-    "stderr": "/home/azmain/GitHub Codes/so_dataset/Android41.java:3: error: cannot find symbol\npublic class Android41 extends View {\n                               ^\n  symbol: class View\n/home/azmain/GitHub Codes/so_dataset/Android41.java:4: error: cannot find symbol\n\tpublic Android41(Context context) {\n\t                 ^\n  symbol:   class Context\n  location: class Android41\n/home/azmain/GitHub Codes/so_dataset/Android41.java:9: error: cannot find symbol\n\tTextView tv;\n\t^\n  symbol:   class TextView\n  location: class Android41\n/home/azmain/GitHub Codes/so_dataset/Android41.java:11: error: cannot find symbol\n\tpublic void adText(TextView tv) {\n\t                   ^\n  symbol:   class TextView\n  location: class Android41\n/home/azmain/GitHub Codes/so_dataset/Android41.java:6: error: cannot find symbol\n\t\tsetBackgroundColor(Color.RED);\n\t\t                   ^\n  symbol:   variable Color\n  location: class Android41\n5 errors\n",
-    "return_code": 1
-}

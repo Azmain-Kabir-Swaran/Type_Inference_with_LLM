@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/so_dataset/hibernate_class_32.java",
-    "java_code": "@Entity\n@Table(name=\"log_entries\")\n@org.hibernate.annotations.Table(appliesTo=\"log_entries\",\n    indexes = { @Index(name=\"idx\", columnNames = {\"job\", \"version\", \"schedule\", \"dttmRun\", \"pid\" } ) } )\npublic class hibernate_class_32 {\n  @Id @GeneratedValue\n  Long id;\n  String job;\n  String version;\n  String schedule;\n  String dttmRun;\n  int pid;\n  String command;\n  int duration;\n\n  // getters and setters...\n}",
-    "stdout": "",
-    "stderr": "/home/azmain/GitHub Codes/so_dataset/hibernate_class_32.java:1: error: cannot find symbol\n@Entity\n ^\n  symbol: class Entity\n/home/azmain/GitHub Codes/so_dataset/hibernate_class_32.java:2: error: cannot find symbol\n@Table(name=\"log_entries\")\n ^\n  symbol: class Table\n/home/azmain/GitHub Codes/so_dataset/hibernate_class_32.java:4: error: cannot find symbol\n    indexes = { @Index(name=\"idx\", columnNames = {\"job\", \"version\", \"schedule\", \"dttmRun\", \"pid\" } ) } )\n                 ^\n  symbol: class Index\n/home/azmain/GitHub Codes/so_dataset/hibernate_class_32.java:6: error: cannot find symbol\n  @Id @GeneratedValue\n   ^\n  symbol:   class Id\n  location: class hibernate_class_32\n/home/azmain/GitHub Codes/so_dataset/hibernate_class_32.java:6: error: cannot find symbol\n  @Id @GeneratedValue\n       ^\n  symbol:   class GeneratedValue\n  location: class hibernate_class_32\n5 errors\n",
-    "return_code": 1
-}

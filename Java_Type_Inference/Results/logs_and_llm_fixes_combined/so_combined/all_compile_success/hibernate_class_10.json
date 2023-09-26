@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/hibernate_class_10.java",
-    "java_code": "import java.io.Serializable;\nimport java.util.List;\n\nimport org.hibernate.Session;\n\npublic class hibernate_class_10 implements Serializable {\n    private String providerId;\n    private String providerName;\n\n    private static final long serialVersionUID = 81073;\n\n    public static void load(Session session, List<String> values) {\n        hibernate_class_10 ProviderInfo = new hibernate_class_10();\n\n        ProviderInfo.setProviderId(values.get(0));\n        ProviderInfo.setProviderName(values.get(1));\n\n        session.save(ProviderInfo);\n    }\n\n    public String getProviderName() {\n        return providerName;\n    }\n\n    public void setProviderName(String name) {\n        this.providerName = name;\n    }\n\n    public String getProviderId() {\n        return this.providerId;\n    }\n\n    public void setProviderId(String id) {\n        this.providerId = id;\n    }\n\n    public static void main(String[] args) {\n        // TODO Auto-generated method stub\n    }\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

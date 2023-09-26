@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/so_dataset/JodaTime36.java",
-    "java_code": "package jodatime;\n\npublic class JodaTime36 {\n\n\tpublic static void main(String[] args) {\n\t\t// TODO Auto-generated method stub\n\n\t\tPeriodFormatter pf = new PeriodFormatterBuilder().append(ISOPeriodFormat.standard()).toFormatter();\n\n\t\tPeriod period = pf.parsePeriod(\"PT01H00M\");\n\t}\n\n}\n",
-    "stdout": "",
-    "stderr": "/home/azmain/GitHub Codes/so_dataset/JodaTime36.java:8: error: cannot find symbol\n\t\tPeriodFormatter pf = new PeriodFormatterBuilder().append(ISOPeriodFormat.standard()).toFormatter();\n\t\t^\n  symbol:   class PeriodFormatter\n  location: class JodaTime36\n/home/azmain/GitHub Codes/so_dataset/JodaTime36.java:8: error: cannot find symbol\n\t\tPeriodFormatter pf = new PeriodFormatterBuilder().append(ISOPeriodFormat.standard()).toFormatter();\n\t\t                                                         ^\n  symbol:   variable ISOPeriodFormat\n  location: class JodaTime36\n/home/azmain/GitHub Codes/so_dataset/JodaTime36.java:8: error: cannot find symbol\n\t\tPeriodFormatter pf = new PeriodFormatterBuilder().append(ISOPeriodFormat.standard()).toFormatter();\n\t\t                         ^\n  symbol:   class PeriodFormatterBuilder\n  location: class JodaTime36\n/home/azmain/GitHub Codes/so_dataset/JodaTime36.java:10: error: cannot find symbol\n\t\tPeriod period = pf.parsePeriod(\"PT01H00M\");\n\t\t^\n  symbol:   class Period\n  location: class JodaTime36\n4 errors\n",
-    "return_code": 1
-}

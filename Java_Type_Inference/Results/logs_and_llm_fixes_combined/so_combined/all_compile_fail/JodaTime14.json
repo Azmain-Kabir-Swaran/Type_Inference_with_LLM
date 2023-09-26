@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/so_dataset/JodaTime14.java",
-    "java_code": "package jodatime;\n\npublic class JodaTime14 {\n\n\tpublic static void main(String[] args) {\n\t\t// TODO Auto-generated method stub\n\t\tString start = \"Sunday, January 09, 2011 6:15:00 PM\";\n\n\t\tDateTimeFormatter parser1 = \n\t\tDateTimeFormat.forPattern(\"EEEE, MMMM dd, yyyy H:mm:ss aa\");\n\n\t\tDateTime startTime = parser1.parseDateTime(start);\n\t}\n\n}\n",
-    "stdout": "",
-    "stderr": "/home/azmain/GitHub Codes/so_dataset/JodaTime14.java:9: error: cannot find symbol\n\t\tDateTimeFormatter parser1 = \n\t\t^\n  symbol:   class DateTimeFormatter\n  location: class JodaTime14\n/home/azmain/GitHub Codes/so_dataset/JodaTime14.java:10: error: cannot find symbol\n\t\tDateTimeFormat.forPattern(\"EEEE, MMMM dd, yyyy H:mm:ss aa\");\n\t\t^\n  symbol:   variable DateTimeFormat\n  location: class JodaTime14\n/home/azmain/GitHub Codes/so_dataset/JodaTime14.java:12: error: cannot find symbol\n\t\tDateTime startTime = parser1.parseDateTime(start);\n\t\t^\n  symbol:   class DateTime\n  location: class JodaTime14\n3 errors\n",
-    "return_code": 1
-}

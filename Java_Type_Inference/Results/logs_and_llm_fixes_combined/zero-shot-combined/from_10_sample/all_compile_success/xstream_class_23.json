@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-zero-shot/xstream_class_23.java",
-    "java_code": "package xstream;\nimport com.thoughtworks.xstream.io.xml.XppDriver;\nimport com.thoughtworks.xstream.annotations.XStreamAlias;\nimport com.thoughtworks.xstream.converters.javabean.JavaBeanConverter;\nimport com.thoughtworks.xstream.XStream;\n//2456470\n\npublic class xstream_class_23 {\n\t@XStreamAlias(\"test\")\n\tpublic class TestObject\n\t{\n\t    private String foo;\n\n\t    public String getFoo()\n\t    {\n\t        //return foo; -- Adjusted for EDIT#2\n\t        return foo.toLowerCase();\n\t    }\n\n\t    public void setFoo(String foo)\n\t    {\n\t        this.foo = foo;\n\t    }\n\t}\n\n\tpublic void test() throws Exception\n\t{\n\t    XStream x = new XStream(new XppDriver());\n\t    x.autodetectAnnotations(true);\n\t    x.processAnnotations(TestObject.class);\n\n\t    x.registerConverter(new JavaBeanConverter(x.getMapper()));\n\n\t    TestObject o = new TestObject();\n\t    //o.setFoo(\"bar\"); -- Adjusted for EDIT#2\n\t    o.setFoo(\"BAR\");\n\n\t    String xml = x.toXML(o);\n\n\t    System.out.println(xml);\n\n\t    /*\n\t      Expecting...\n\t        <test>\n\t          <foo>bar</foo>\n\t        </test>\n\n\t      But instead getting...\n\t        <test>\n\t          <foo/>\n\t        </test>         \n\t    */\n\t}\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

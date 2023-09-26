@@ -1,0 +1,140 @@
+"attempt": 3
+
+"file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-10-attempt/Android21.java"
+
+"java_code": "
+
+package androidExamples;
+
+import android.widget.LinearLayout;
+import android.widget.ImageButton;
+import android.content.Context;
+import androidExamples.R;
+
+public class Android21 {
+
+	public static void main(String[] args) {
+		ImageButton b2 = new ImageButton(getApplicationContext());
+		b2.setBackgroundResource(androidExamples.R.drawable.img);
+		android.widget.LinearLayout container = (android.widget.LinearLayout) findViewById(androidExamples.R.id.lay);
+		container.addView(b2);
+	}
+
+	private static android.widget.LinearLayout findViewById(int lay) {
+		return null;
+	}
+
+	private static android.content.Context getApplicationContext() {
+		return null;
+	}
+
+}
+"
+
+"used_prompt": "
+
+package androidExamples;
+
+import android.widget.LinearLayout;
+import android.widget.ImageButton;
+import android.content.Context;
+import androidExamples.R;
+
+public class Android21 {
+
+	public static void main(String[] args) {
+		ImageButton b2 = new ImageButton(getApplicationContext());
+		b2.setBackgroundResource(androidExamples.R.drawable.img);
+		android.widget.LinearLayout container = (android.widget.LinearLayout) findViewById(androidExamples.R.id.lay);
+		container.addView(b2);
+	}
+
+	private static LinearLayout findViewById(int lay) {
+		return null;
+	}
+
+	private static Context getApplicationContext() {
+		return null;
+	}
+
+}
+
+You gave the above imports fix in your attempt 1. But compiler gave this error:
+
+Android21.java:6: error: cannot find symbol
+import androidExamples.R;
+                      ^
+  symbol:   class R
+  location: package androidExamples
+Android21.java:12: error: package androidExamples.R does not exist
+		b2.setBackgroundResource(androidExamples.R.drawable.img);
+		                                          ^
+Android21.java:13: error: package androidExamples.R does not exist
+		android.widget.LinearLayout container = (android.widget.LinearLayout) findViewById(androidExamples.R.id.lay);
+		                                                                                                    ^
+3 errors
+
+
+package androidExamples;
+
+import android.widget.LinearLayout;
+import android.widget.ImageButton;
+import android.content.Context;
+import androidExamples.R;
+
+public class Android21 {
+
+	public static void main(String[] args) {
+		ImageButton b2 = new ImageButton(getApplicationContext());
+		b2.setBackgroundResource(R.drawable.img);
+		LinearLayout container = (LinearLayout) findViewById(R.id.lay);
+		container.addView(b2);
+	}
+
+	private static LinearLayout findViewById(int lay) {
+		return null;
+	}
+
+	private static Context getApplicationContext() {
+		return null;
+	}
+
+}
+
+You gave the above imports fix in your attempt 2. But compiler gave this error:
+
+Android21.java:6: error: cannot find symbol
+import androidExamples.R;
+                      ^
+  symbol:   class R
+  location: package androidExamples
+Android21.java:12: error: package R does not exist
+		b2.setBackgroundResource(R.drawable.img);
+		                          ^
+Android21.java:13: error: package R does not exist
+		LinearLayout container = (LinearLayout) findViewById(R.id.lay);
+		                                                      ^
+3 errors
+
+
+Now fix the error only by fixing the import statements by not using wildcard imports and must not modify code body which means do not change anything inside the class. So, it can be successfully compiled and reply with full code.
+"
+
+"stdout": ""
+
+"stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-10-attempt/Android21.java:6: error: cannot find symbol
+import androidExamples.R;
+                      ^
+  symbol:   class R
+  location: package androidExamples
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-10-attempt/Android21.java:12: error: package androidExamples.R does not exist
+		b2.setBackgroundResource(androidExamples.R.drawable.img);
+		                                          ^
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-10-attempt/Android21.java:13: error: package androidExamples.R does not exist
+		android.widget.LinearLayout container = (android.widget.LinearLayout) findViewById(androidExamples.R.id.lay);
+		                                                                                                    ^
+3 errors
+"
+
+"return_code": 1
+

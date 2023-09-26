@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset_with_imports/hibernate_class_45.java",
+    "java_code": "\n//ID = 4001795\nimport org.hibernate.Session;\nimport org.hibernate.SessionFactory;\nimport org.hibernate.cfg.AnnotationConfiguration;\nimport org.hibernate.cfg.Configuration;\n\nimport java.util.Date;\n\npublic class hibernate_class_45\n{\n    public static void main(String[] args)\n    {\n        SessionFactory factory = new AnnotationConfiguration().configure().buildSessionFactory();\n        Session session = factory.openSession();\n        session.beginTransaction();\n\n//        Message m1 = new Message(\"Hibernated a  messages on \" + new Date());\n        session.save(\"aa\");\n        session.getTransaction().commit();\n        session.close();\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

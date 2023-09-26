@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android37.java",
-    "java_code": "package androidExamples;\n\nimport android.app.Activity;\nimport android.app.ProgressDialog;\nimport android.os.Handler;\nimport android.os.Message;\n\npublic class Android37 extends Activity implements Runnable {\n    public ProgressDialog mProgress;\n\n    // UI has a button that when pressed calls send\n\n    public void send() {\n         mProgress = ProgressDialog.show(this, \"Please wait\", \n                      \"Please wait\", \n                      true, true);\n        Thread thread = new Thread(this);\n        thread.start();\n    }\n\n    public void run() {\n        try {\n            Thread.sleep(10000);\n        } catch (InterruptedException e) {\n            // TODO Auto-generated catch block\n            e.printStackTrace();\n        }\n        Message msg = new Message();\n        mHandler.sendMessage(msg);\n    }\n\n    private final Handler mHandler = new Handler() {\n        @Override\n        public void handleMessage(Message msg) {\n            mProgress.dismiss();\n        }\n    };\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

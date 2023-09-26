@@ -1,0 +1,184 @@
+"attempt": 10
+
+"file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-15-attempt/gwt_class_26.java"
+
+"java_code": "
+
+import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.Widget;
+import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.FormPanel;
+import com.google.gwt.event.dom.client.SubmitEvent;
+import com.google.gwt.event.dom.client.SubmitCompleteEvent;
+import com.google.gwt.event.dom.client.SubmitHandler;
+import com.google.gwt.event.dom.client.SubmitCompleteHandler;
+
+public class gwt_class_26 {
+    public static void main(String arg[]){
+        final FormPanel formPanel = new FormPanel();
+        RootPanel.get("openId").add(formPanel);
+        VerticalPanel openIdContainer = new VerticalPanel();
+        formPanel.add(openIdContainer);
+
+        TextBox url = new TextBox();
+        url.setText("https://www.google.com/accounts/o8/id");
+        url.setName("j_username");
+        openIdContainer.add(url);
+
+        formPanel.setAction("j_spring_openid_security_check");
+        formPanel.setMethod(FormPanel.METHOD_POST);
+
+        Button btn = new Button("Open ID");
+        btn.addClickHandler(new ClickHandler() {
+            public void onClick(ClickEvent event)
+            {
+                formPanel.submit();
+            }
+        });
+        openIdContainer.add(btn);        
+
+        formPanel.addSubmitHandler(new SubmitHandler() {
+            public void onSubmit(SubmitEvent event)
+            {
+                System.out.println("On Submit invoked " +event.isCancelled());
+            }
+        });
+
+        formPanel.addSubmitCompleteHandler(new SubmitCompleteHandler() {
+            public void onSubmitComplete(SubmitCompleteEvent event)
+            {
+                System.out.println("On Submit Complete invoked " + event.getResults());
+            }
+        });
+    }
+}
+"
+
+"used_prompt": "
+
+package gwt;
+
+import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.Widget;
+import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.FormPanel;
+import com.google.gwt.event.dom.client.SubmitHandler;
+import com.google.gwt.event.dom.client.SubmitCompleteHandler;
+
+public class gwt_class_26 {
+    public static void main(String arg[]){
+        final FormPanel formPanel = new FormPanel();
+        RootPanel.get("openId").add(formPanel);
+        VerticalPanel openIdContainer = new VerticalPanel();
+        formPanel.add(openIdContainer);
+
+        TextBox url = new TextBox();
+        url.setText("https://www.google.com/accounts/o8/id");
+        url.setName("j_username");
+        openIdContainer.add(url);
+
+        formPanel.setAction("j_spring_openid_security_check");
+        formPanel.setMethod(FormPanel.METHOD_POST);
+
+        Button btn = new Button("Open ID");
+        btn.addClickHandler(new ClickHandler() {
+            public void onClick(ClickEvent event)
+            {
+                formPanel.submit();
+            }
+        });
+        openIdContainer.add(btn);        
+
+        formPanel.addSubmitHandler(new com.google.gwt.event.dom.client.SubmitHandler() {
+            public void onSubmit(com.google.gwt.event.dom.client.SubmitEvent event)
+            {
+                System.out.println("On Submit invoked " +event.isCancelled());
+            }
+        });
+
+        formPanel.addSubmitCompleteHandler(new com.google.gwt.event.dom.client.SubmitCompleteHandler() {
+            public void onSubmitComplete(com.google.gwt.event.dom.client.SubmitCompleteEvent event)
+            {
+                System.out.println("On Submit Complete invoked " + event.getResults());
+            }
+        });
+    }
+}
+
+You gave the above imports fix. But compiler gave this error:
+
+gwt_class_26.java:11: error: cannot find symbol
+import com.google.gwt.event.dom.client.SubmitHandler;
+                                      ^
+  symbol:   class SubmitHandler
+  location: package com.google.gwt.event.dom.client
+gwt_class_26.java:12: error: cannot find symbol
+import com.google.gwt.event.dom.client.SubmitCompleteHandler;
+                                      ^
+  symbol:   class SubmitCompleteHandler
+  location: package com.google.gwt.event.dom.client
+gwt_class_26.java:38: error: cannot find symbol
+        formPanel.addSubmitHandler(new com.google.gwt.event.dom.client.SubmitHandler() {
+                                                                      ^
+  symbol:   class SubmitHandler
+  location: package com.google.gwt.event.dom.client
+gwt_class_26.java:45: error: cannot find symbol
+        formPanel.addSubmitCompleteHandler(new com.google.gwt.event.dom.client.SubmitCompleteHandler() {
+                                                                              ^
+  symbol:   class SubmitCompleteHandler
+  location: package com.google.gwt.event.dom.client
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+4 errors
+
+
+Now fix the error only by fixing the import statements by not using wildcard imports and must not modify code body which means do not change anything inside the class. So, it can be successfully compiled and reply with full code.
+"
+
+"stdout": ""
+
+"stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-15-attempt/gwt_class_26.java:9: error: cannot find symbol
+import com.google.gwt.event.dom.client.SubmitEvent;
+                                      ^
+  symbol:   class SubmitEvent
+  location: package com.google.gwt.event.dom.client
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-15-attempt/gwt_class_26.java:10: error: cannot find symbol
+import com.google.gwt.event.dom.client.SubmitCompleteEvent;
+                                      ^
+  symbol:   class SubmitCompleteEvent
+  location: package com.google.gwt.event.dom.client
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-15-attempt/gwt_class_26.java:11: error: cannot find symbol
+import com.google.gwt.event.dom.client.SubmitHandler;
+                                      ^
+  symbol:   class SubmitHandler
+  location: package com.google.gwt.event.dom.client
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-15-attempt/gwt_class_26.java:12: error: cannot find symbol
+import com.google.gwt.event.dom.client.SubmitCompleteHandler;
+                                      ^
+  symbol:   class SubmitCompleteHandler
+  location: package com.google.gwt.event.dom.client
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-15-attempt/gwt_class_26.java:38: error: cannot find symbol
+        formPanel.addSubmitHandler(new SubmitHandler() {
+                                       ^
+  symbol:   class SubmitHandler
+  location: class gwt_class_26
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-15-attempt/gwt_class_26.java:45: error: cannot find symbol
+        formPanel.addSubmitCompleteHandler(new SubmitCompleteHandler() {
+                                               ^
+  symbol:   class SubmitCompleteHandler
+  location: class gwt_class_26
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+6 errors
+"
+
+"return_code": 1
+

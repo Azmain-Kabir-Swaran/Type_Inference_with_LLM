@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime22.java",
-    "java_code": "import org.joda.time.DateTime;\nimport org.joda.time.format.DateTimeFormat;\nimport org.joda.time.format.DateTimeFormatter;\nimport java.text.ParseException;\nimport java.util.Date;\n\npublic class JodaTime22 {\n\n    public static void main(String[] args) {\n\n    }\n\n    public String getDateFromDateTime (Date date, Boolean display) throws ParseException {\n\n        DateTimeFormatter dtFormatter;\n\n        if (display)\n            dtFormatter = DateTimeFormat.forPattern(\"MM/dd/yyyy\");\n        else\n            dtFormatter = DateTimeFormat.forPattern(\"yyyy-MM-dd\");\n\n        DateTime dt = new DateTime(date);\n        String myDate = dt.toString(dtFormatter);\n\n        System.out.println(\"OrderDisplayUtil.java:getDateFromDateTime(\" + date + \", \" + display + \"): \" + \"myDate = \" + myDate);\n\n        return myDate;\n\n    }\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/gwt_class_22.java",
-    "java_code": "import com.google.gwt.core.client.GWT;\nimport com.google.gwt.event.dom.client.ClickEvent;\nimport com.google.gwt.event.dom.client.ClickHandler;\nimport com.google.gwt.uibinder.client.UiBinder;\nimport com.google.gwt.uibinder.client.UiField;\nimport com.google.gwt.uibinder.client.UiHandler;\nimport com.google.gwt.user.client.ui.Button;\nimport com.google.gwt.user.client.ui.Composite;\nimport com.google.gwt.user.client.ui.Label;\nimport com.google.gwt.user.client.ui.VerticalPanel;\n\npublic class gwt_class_22 extends Composite {\n\n    private static TestViewUiBinder uiBinder = GWT.create(TestViewUiBinder.class);\n\n    interface TestViewUiBinder extends UiBinder<VerticalPanel, gwt_class_22> {}\n\n    @UiField\n    Label testObjectStringLabel;\n    @UiField\n    Label innerObjectStringLabel;\n    @UiField\n    VerticalPanel listObjectsPanel;\n    @UiField\n    Button button;\n    @UiField\n    Label errorMessageLabel;\n\n    public gwt_class_22(String firstName) {\n        initWidget(uiBinder.createAndBindUi(this));\n    }\n\n    @UiHandler(\"button\")\n    void onClick(ClickEvent e) {\n\n    }\n}",
-    "stdout": "",
-    "stderr": "Note: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n",
-    "return_code": 0
-}

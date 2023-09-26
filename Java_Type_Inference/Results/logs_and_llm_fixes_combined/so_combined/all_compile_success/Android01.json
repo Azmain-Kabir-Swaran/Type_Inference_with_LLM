@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android01.java",
-    "java_code": "import android.app.Activity;\nimport android.os.Bundle;\nimport android.widget.TextView;\n\npublic class Android01 extends Activity {\n    /** Called when the activity is first created. */\n    @Override\n    public void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n\n        mTextView = new TextView(this);\n\n        if (savedInstanceState == null) {\n            mTextView.setText(\"Welcome to HelloAndroid!\");\n        } else {\n            mTextView.setText(\"Welcome back.\");\n        }\n\n        setContentView(mTextView);\n    }\n\n    private TextView mTextView = null;\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

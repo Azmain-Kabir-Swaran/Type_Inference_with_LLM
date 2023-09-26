@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/so_dataset/JodaTime30.java",
-    "java_code": "package jodatime;\npublic class JodaTime30 {\n\n\tpublic static void main(String[] args) {\n\t\tDateTimeZone dtz = DateTimeZone.forOffsetHours(0);\n\n\t\tDateTime dt = new DateTime(dtz);\n\n\t\tSystem.out.println(dt);\n\t\tSystem.out.println(dt.toDate());\n\n\t}\n\n}\n",
-    "stdout": "",
-    "stderr": "/home/azmain/GitHub Codes/so_dataset/JodaTime30.java:5: error: cannot find symbol\n\t\tDateTimeZone dtz = DateTimeZone.forOffsetHours(0);\n\t\t^\n  symbol:   class DateTimeZone\n  location: class JodaTime30\n/home/azmain/GitHub Codes/so_dataset/JodaTime30.java:5: error: cannot find symbol\n\t\tDateTimeZone dtz = DateTimeZone.forOffsetHours(0);\n\t\t                   ^\n  symbol:   variable DateTimeZone\n  location: class JodaTime30\n/home/azmain/GitHub Codes/so_dataset/JodaTime30.java:7: error: cannot find symbol\n\t\tDateTime dt = new DateTime(dtz);\n\t\t^\n  symbol:   class DateTime\n  location: class JodaTime30\n/home/azmain/GitHub Codes/so_dataset/JodaTime30.java:7: error: cannot find symbol\n\t\tDateTime dt = new DateTime(dtz);\n\t\t                  ^\n  symbol:   class DateTime\n  location: class JodaTime30\n4 errors\n",
-    "return_code": 1
-}

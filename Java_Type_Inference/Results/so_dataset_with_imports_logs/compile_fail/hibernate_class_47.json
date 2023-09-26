@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset_with_imports/hibernate_class_47.java",
+    "java_code": "//ID = 4323066\nimport org.hibernate.Session;\nimport org.hibernate.SessionFactory;\nimport org.hibernate.Transaction;\n\n\npublic class hibernate_class_47 {\n\n    public static boolean registerEvent() {\n\n         SessionFactory sf = HibernateUtil.getSessionFactory();\n         Transaction t = null;\n         try  {\n         Session s  = sf.openSession();\n         t = s.beginTransaction(); // start a new transaction\n         s.persist(\"aa\");\n         t.commit();  // commit transaction \n         return true;\n         }\n         catch(Exception ex) {\n             System.err.println(\"Error -->\"  + ex.getMessage());\n             if ( t!=null) t.rollback();  // rollback transaction on exception \n             return false;\n         }\n    }\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/GitHub Codes/so_dataset_with_imports/hibernate_class_47.java:11: error: cannot find symbol\n         SessionFactory sf = HibernateUtil.getSessionFactory();\n                             ^\n  symbol:   variable HibernateUtil\n  location: class hibernate_class_47\n1 error\n",
+    "return_code": 1
+}

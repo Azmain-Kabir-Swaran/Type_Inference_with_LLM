@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime09.java",
-    "java_code": "package jodatime;\n\nimport java.util.TimeZone;\n\nimport org.joda.time.DateTimeZone;\n\n//ID = 4057816\npublic class JodaTime09 {\n\n    public static void main(String[] args) {\n        // TODO Auto-generated method stub\n\n        final String string_from_3rd_party = \"GMT+08:00\";\n        // Works for standard Java TimeZone!\n        System.out.println(TimeZone.getTimeZone(string_from_3rd_party));\n        // Exception in thread \"main\" java.lang.IllegalArgumentException: The datetime zone id is not recognised: GMT+08:00\n        System.out.println(DateTimeZone.forID(string_from_3rd_party));\n    }\n\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

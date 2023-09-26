@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/so_dataset/JodaTime49.java",
-    "java_code": "package jodatime;\npublic class JodaTime49 {\n\n\tpublic static void main(String[] args) {\n\t\t// TODO Auto-generated method stub\n\t\tDateTimeFormatter FORMATTER = DateTimeFormat.forPattern(\"yyyy-MMM-dd\");\n\t\tDateTime dateTime = FORMATTER.parseDateTime(\"2005-nov-12\");\n\t\tLocalDate localDate = dateTime.toLocalDate();\n\t}\n\n}\n",
-    "stdout": "",
-    "stderr": "/home/azmain/GitHub Codes/so_dataset/JodaTime49.java:6: error: cannot find symbol\n\t\tDateTimeFormatter FORMATTER = DateTimeFormat.forPattern(\"yyyy-MMM-dd\");\n\t\t^\n  symbol:   class DateTimeFormatter\n  location: class JodaTime49\n/home/azmain/GitHub Codes/so_dataset/JodaTime49.java:6: error: cannot find symbol\n\t\tDateTimeFormatter FORMATTER = DateTimeFormat.forPattern(\"yyyy-MMM-dd\");\n\t\t                              ^\n  symbol:   variable DateTimeFormat\n  location: class JodaTime49\n/home/azmain/GitHub Codes/so_dataset/JodaTime49.java:7: error: cannot find symbol\n\t\tDateTime dateTime = FORMATTER.parseDateTime(\"2005-nov-12\");\n\t\t^\n  symbol:   class DateTime\n  location: class JodaTime49\n/home/azmain/GitHub Codes/so_dataset/JodaTime49.java:8: error: cannot find symbol\n\t\tLocalDate localDate = dateTime.toLocalDate();\n\t\t^\n  symbol:   class LocalDate\n  location: class JodaTime49\n4 errors\n",
-    "return_code": 1
-}

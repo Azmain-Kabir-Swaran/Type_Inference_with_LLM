@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/so_dataset/Android05.java",
-    "java_code": "package androidExamples;\n\npublic class Android05 {\n\n\tpublic static void main(String[] args) {\n\t\tTabHost mTabs = null;\n\t\tTabSpec ts = mTabs.newTabSpec(\"tab\");\n\t\tDrawable iconResource = null;\n\t\tts.setIndicator(\"TabTitle\", iconResource);\n\n\t\tmTabs.addTab(ts);\n\t\tmTabs.getTabWidget().removeAllViews();\n\t\tmTabs.clearAllTabs();\n\n\t\t// TODO Auto-generated method stub\n\n\t}\n\n}\n",
-    "stdout": "",
-    "stderr": "/home/azmain/GitHub Codes/so_dataset/Android05.java:6: error: cannot find symbol\n\t\tTabHost mTabs = null;\n\t\t^\n  symbol:   class TabHost\n  location: class Android05\n/home/azmain/GitHub Codes/so_dataset/Android05.java:7: error: cannot find symbol\n\t\tTabSpec ts = mTabs.newTabSpec(\"tab\");\n\t\t^\n  symbol:   class TabSpec\n  location: class Android05\n/home/azmain/GitHub Codes/so_dataset/Android05.java:8: error: cannot find symbol\n\t\tDrawable iconResource = null;\n\t\t^\n  symbol:   class Drawable\n  location: class Android05\n3 errors\n",
-    "return_code": 1
-}

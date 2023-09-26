@@ -1,8 +1,0 @@
-{
-    "attempt": 3,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android18.java",
-    "java_code": "import android.app.Activity;\nimport android.content.DialogInterface;\nimport android.content.Intent;\nimport android.os.Bundle;\nimport android.view.View;\nimport android.view.View.OnClickListener;\nimport android.widget.Toast;\n\npublic class Android18 extends Activity implements OnClickListener {\n    /** Called when the activity is first created. */\n    @Override\n    public void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.main);\n        this.setTitle(\"MainActivity\");\n    }\n\n    @Override\n    public void onClick(View arg0) {\n        startActivity(new Intent(this, ChildActivity.class));\n    }\n}\n\nclass ChildActivity extends Activity {\n    /** Called when the activity is first created. */\n    @Override\n    public void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.main2);\n        this.setTitle(\"ChildActivity\");\n    }\n}",
-    "stdout": "",
-    "stderr": "No error (Ignored 'package R does not exist' errors)",
-    "return_code": 1
-}

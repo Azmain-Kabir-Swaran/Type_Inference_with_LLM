@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime23.java",
-    "java_code": "import org.joda.time.LocalDate;\nimport org.joda.time.DateTimeConstants;\n\npublic class JodaTime23 {\n\t\n\tLocalDate getNearestDayOfWeek(LocalDate ld, String day) {\n\t\tLocalDate target = ld.dayOfWeek().setCopy(day);\n\t\tif (ld.getDayOfWeek() > DateTimeConstants.SATURDAY) {\n\t\t\ttarget = target.plusWeeks(1);\n\t\t}\n\t\treturn target;\n\t}\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

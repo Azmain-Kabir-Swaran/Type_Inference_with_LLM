@@ -1,0 +1,113 @@
+"attempt": 3
+
+"file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-10-attempt/Android49.java"
+
+"java_code": "
+
+package androidExamples;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.widget.LinearLayout;
+
+import com.example.R;
+
+public class Android49 extends LinearLayout {
+    public Android49(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.main, this, true);
+        setGravity(Gravity.CENTER);
+    }
+
+    public Android49(Context context) {
+        this(context, null);
+    }
+}
+"
+
+"used_prompt": "
+
+package androidExamples;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.widget.LinearLayout;
+
+import com.example.R;
+
+public class Android49 extends LinearLayout {
+    public Android49(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(com.example.R.layout.main, this, true);
+        setGravity(Gravity.CENTER);
+    }
+
+    public Android49(Context context) {
+        this(context, null);
+    }
+}
+
+You gave the above imports fix in your attempt 1. But compiler gave this error:
+
+Android49.java:9: error: package com.example does not exist
+import com.example.R;
+                  ^
+Android49.java:14: error: package com.example.R does not exist
+        ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(com.example.R.layout.main, this, true);
+                                                                                                          ^
+2 errors
+
+
+package androidExamples;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.widget.LinearLayout;
+
+import com.example.R;
+
+public class Android49 extends LinearLayout {
+    public Android49(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.main, this, true);
+        setGravity(Gravity.CENTER);
+    }
+
+    public Android49(Context context) {
+        this(context, null);
+    }
+}
+
+You gave the above imports fix in your attempt 2. But compiler gave this error:
+
+Android49.java:9: error: package com.example does not exist
+import com.example.R;
+                  ^
+Android49.java:14: error: package R does not exist
+        ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.main, this, true);
+                                                                                              ^
+2 errors
+
+
+Now fix the error only by fixing the import statements by not using wildcard imports and must not modify code body which means do not change anything inside the class. So, it can be successfully compiled and reply with full code.
+"
+
+"stdout": ""
+
+"stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-10-attempt/Android49.java:9: error: package com.example does not exist
+import com.example.R;
+                  ^
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-10-attempt/Android49.java:14: error: package R does not exist
+        ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.main, this, true);
+                                                                                              ^
+2 errors
+"
+
+"return_code": 1
+

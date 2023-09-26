@@ -1,0 +1,39 @@
+"attempt": 10
+
+"file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-15-attempt/hibernate_class_28.java"
+
+"java_code": "
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        List<String> list = new ArrayList<>();
+        list.add("Hello");
+        list.add("World");
+
+        for (String str : list) {
+            System.out.println(str);
+        }
+    }
+}
+"
+
+"used_prompt": "
+
+No valid code block found!
+"""
+Now fix the error only by fixing the import statements by not using wildcard imports and must not modify code body which means do not change anything inside the class. So, it can be successfully compiled and reply with full code.
+"
+
+"stdout": ""
+
+"stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-15-attempt/hibernate_class_28.java:4: error: class Main is public, should be declared in a file named Main.java
+public class Main {
+       ^
+1 error
+"
+
+"return_code": 1
+

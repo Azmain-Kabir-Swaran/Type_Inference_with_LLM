@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/so_dataset/JodaTime42.java",
-    "java_code": "package jodatime;\npublic class JodaTime42 {\n\tpublic static final int JANUARY = 1;\n\n\tpublic static final int DECEMBER = 12;\n\n\tpublic static final int FIRST_OF_THE_MONTH = 1;\n\n\tpublic final int getLastDayOfMonth(final int month, final int year) {\n\t    int lastDay = 0;\n\n\t    if ((month >= JANUARY) && (month <= DECEMBER)) {\n\t        LocalDate aDate = new LocalDate(year, month, FIRST_OF_THE_MONTH);\n\n\t        lastDay = aDate.dayOfMonth().getMaximumValue();\n\t    }\n\t    return lastDay;\n\t    \n\t}\n\tpublic static void main(String[] args) {\n\t\t// TODO Auto-generated method stub\n\t\t\n\n\t}\n\n}\n",
-    "stdout": "",
-    "stderr": "/home/azmain/GitHub Codes/so_dataset/JodaTime42.java:13: error: cannot find symbol\n\t        LocalDate aDate = new LocalDate(year, month, FIRST_OF_THE_MONTH);\n\t        ^\n  symbol:   class LocalDate\n  location: class JodaTime42\n/home/azmain/GitHub Codes/so_dataset/JodaTime42.java:13: error: cannot find symbol\n\t        LocalDate aDate = new LocalDate(year, month, FIRST_OF_THE_MONTH);\n\t                              ^\n  symbol:   class LocalDate\n  location: class JodaTime42\n2 errors\n",
-    "return_code": 1
-}

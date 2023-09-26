@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset_with_imports/Android06.java",
+    "java_code": "package androidExamples;\n\nimport android.view.Gravity;\nimport android.view.ViewGroup;\nimport android.widget.LinearLayout;\n\n//ID = 263507\npublic class Android06 {\n\n\tpublic static void main(String[] args) {\n\n\t\t// TODO Auto-generated method stub\n\t\t\n\t\tLinearLayout zoomView = null;\n\n\t\tzoomView.setLayoutParams(new ViewGroup.LayoutParams\n\t\t  (ViewGroup.LayoutParams.WRAP_CONTENT,\n\t\t   ViewGroup.LayoutParams.WRAP_CONTENT)); \n\n\t\tzoomView.setGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL);\n\t}\n\n}\n",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime50.java",
-    "java_code": "import org.joda.time.DateTime;\nimport org.joda.time.DateTimeConstants;\n\npublic class JodaTime50 {\n\n    public static void main(String[] args) {\n        // TODO Auto-generated method stub\n\n    }\n    //days of a month\n    public static int daysOfMonth(int year, int month) {\n        DateTime dateTime = new DateTime(year, month, 14, 12, 0, 0, 000);\n        return dateTime.dayOfMonth().getMaximumValue();\n    }\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

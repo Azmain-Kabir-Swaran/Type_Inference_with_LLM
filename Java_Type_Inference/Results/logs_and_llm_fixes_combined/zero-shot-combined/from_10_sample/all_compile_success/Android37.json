@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-zero-shot/Android37.java",
-    "java_code": "package androidExamples;\nimport android.os.Handler;\nimport android.app.ProgressDialog;\nimport android.app.Activity;\nimport android.os.Message;\n//ID = 1111980\n\npublic class Android37 extends Activity implements Runnable {\n    public ProgressDialog mProgress;\n\n    // UI has a button that when pressed calls send\n\n    public void send() {\n         mProgress = ProgressDialog.show(this, \"Please wait\", \n                      \"Please wait\", \n                      true, true);\n        Thread thread = new Thread(this);\n        thread.start();\n    }\n\n    public void run() {\n        try {\n\t\t\tThread.sleep(10000);\n\t\t} catch (InterruptedException e) {\n\t\t\t// TODO Auto-generated catch block\n\t\t\te.printStackTrace();\n\t\t}\n        Message msg = new Message();\n        mHandler.sendMessage(msg);\n    }\n\n    private final Handler mHandler = new Handler() {\n        @Override\n        public void handleMessage(Message msg) {\n            mProgress.dismiss();\n        }\n    };\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

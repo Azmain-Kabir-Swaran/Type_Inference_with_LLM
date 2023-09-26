@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/so_dataset/xstream_class_16.java",
-    "java_code": "public class xstream_class_16 {\n\tpublic static void main(String arg[]){\n\t\tXStream xstream = new XStream() {\n\t\t    @Override\n\t\t    protected MapperWrapper wrapMapper(MapperWrapper next) {\n\t\t        return new MapperWrapper(next) {\n\t\t            @Override\n\t\t            public boolean shouldSerializeMember(Class definedIn, String fieldName) {\n\t\t                if (definedIn == Object.class) {\n\t\t                    return false;\n\t\t                }\n\t\t                return super.shouldSerializeMember(definedIn, fieldName);\n\t\t            }\n\t\t        };\n\t\t    }\n\t\t};\n\t}\n}\n",
-    "stdout": "",
-    "stderr": "/home/azmain/GitHub Codes/so_dataset/xstream_class_16.java:3: error: cannot find symbol\n\t\tXStream xstream = new XStream() {\n\t\t^\n  symbol:   class XStream\n  location: class xstream_class_16\n/home/azmain/GitHub Codes/so_dataset/xstream_class_16.java:3: error: cannot find symbol\n\t\tXStream xstream = new XStream() {\n\t\t                      ^\n  symbol:   class XStream\n  location: class xstream_class_16\n2 errors\n",
-    "return_code": 1
-}

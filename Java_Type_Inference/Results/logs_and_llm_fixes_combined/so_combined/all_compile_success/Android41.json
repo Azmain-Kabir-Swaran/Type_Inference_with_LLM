@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android41.java",
-    "java_code": "package androidExamples;\n\nimport android.content.Context;\nimport android.graphics.Color;\nimport android.view.View;\nimport android.widget.TextView;\n\npublic class Android41 extends View {\n    public Android41(Context context) {\n        super(context);\n        setBackgroundColor(Color.RED);\n    }\n\n    TextView tv;\n\n    public void adText(TextView tv) {\n        this.tv = tv;\n        tv.setVisibility(tv.VISIBLE);\n    }\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

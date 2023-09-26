@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-zero-shot/JodaTime05.java",
-    "java_code": "package jodatime;\nimport org.joda.time.DateTimeZone;\nimport org.joda.time.DateTime;\nimport org.joda.time.Chronology;\nimport org.joda.time.chrono.GJChronology;\n\n\n//ID = 2182921\npublic class JodaTime05 {\n\n\tpublic static void main(String[] args) {\n\n\t\t\t\tDateTimeZone zone = DateTimeZone.forID(\"Europe/London\");\n\t\t\t\tChronology coptic = GJChronology.getInstance(zone);\n\n\t\t\t\tDateTime dt = new DateTime(coptic);\n\t\t\t\tDateTime minusOneDay = dt.minusDays(1);\n\n\t\t\t\tSystem.out.println(minusOneDay );\n\n\t}\n\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

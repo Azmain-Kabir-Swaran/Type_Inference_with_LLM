@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-zero-shot/JodaTime16.java",
-    "java_code": "package jodatime;\nimport org.joda.time.format.PeriodFormatterBuilder;\nimport org.joda.time.DateTime;\nimport org.joda.time.Period;\nimport org.joda.time.format.PeriodFormatter;\n\n//ID = 6387723\npublic class JodaTime16 {\n\tpublic static void main(String[] args) \n\t{\n\tDateTime d1 = new DateTime(2011, 6, 17, 13, 13, 5, 0) ;\n\tDateTime d2 = new DateTime(2011, 6, 17, 10, 17, 3, 0) ;\n\n\tPeriod negativePeriod = new Period(d1, d2);\n\tPeriod positivePeriod = new Period(d2, d1);\n\n\tPeriodFormatter pf = new PeriodFormatterBuilder()\n\t    .minimumPrintedDigits(2)\n\t    .appendHours()\n\t    .appendSuffix(\":\")\n\t    .rejectSignedValues(true) // Does this do anything?\n\t    .appendMinutes()\n\t    .appendSuffix(\":\")\n\t    .appendSeconds()\n\t    .toFormatter();\n\n\tSystem.out.printf(\"Negative Period: %s\\n\", pf.print(negativePeriod));\n\tSystem.out.printf(\"Positive Period: %s\\n\", pf.print(positivePeriod));\n\t}\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

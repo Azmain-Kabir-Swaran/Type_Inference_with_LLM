@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset_with_imports/JodaTime24.java",
+    "java_code": "package jodatime;\n//ID = 8525863\nimport org.joda.time.Period;\nimport org.joda.time.PeriodType;\nimport org.joda.time.format.PeriodFormat;\nimport org.joda.time.DateTime;\n\npublic class JodaTime24 {\n\n\tpublic static String getFormattedDateDifference(DateTime startDate, DateTime endDate) {\n\t    Period p = new Period(startDate, endDate,\n\t            PeriodType.standard().withSecondsRemoved().withMillisRemoved());\n\t    return PeriodFormat.getDefault().print(p);\n\t}\n}\n",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

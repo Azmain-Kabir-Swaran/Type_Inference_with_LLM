@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Class_15.java",
-    "java_code": "import java.util.HashMap;\n\npublic class Class_15 {\n    public class Employee {\n    \n        String name;\n        String mobile;\n        \n        public Employee(String name, String mobile) {\n            this.name = name;\n            this.mobile = mobile;\n        }\n    \n        @Override\n        public int hashCode() {\n            System.out.println(\"calling hascode method of Employee\");\n            String str = this.name;\n            Integer sum = 0;\n            for (int i = 0; i < str.length(); i++) {\n                sum = sum + str.charAt(i);\n            }\n            return sum;\n        }\n    \n        @Override\n        public boolean equals(Object obj) {\n            System.out.println(\"calling equals method of Employee\");\n            Employee emp = (Employee) obj;\n            if (this.mobile.equalsIgnoreCase(emp.mobile)) {\n                System.out.println(\"returning true\");\n                return true;\n            } else {\n                System.out.println(\"returning false\");\n                return false;\n            }\n        }\n    \n        public void main(String[] args) {\n            Employee emp = new Employee(\"abc\", \"hhh\");\n            Employee emp2 = new Employee(\"abc\", \"hhh\");\n            HashMap<Employee, Employee> h = new HashMap<>();\n            h.put(emp, emp);\n            h.put(emp2, emp2);\n            System.out.println(\"----------------\");\n            System.out.println(\"size of hashmap: \" + h.size());\n        }\n    }\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

@@ -1,0 +1,198 @@
+"attempt": 12
+
+"file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-15-attempt/hibernate_class_1.java"
+
+"java_code": "
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.AnnotationConfiguration;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import hibernate.UserDAO;
+import hibernate.User;
+
+public class hibernate_class_1 {
+    public class HibernateUserDAO implements UserDAO {
+
+        private SessionFactory sessionFactory;
+
+        public HibernateUserDAO() {
+            AnnotationConfiguration annotConf = new AnnotationConfiguration();
+            annotConf.addAnnotatedClass(hibernate.User.class);
+            annotConf.configure();
+            sessionFactory = annotConf.buildSessionFactory();
+        }
+
+        public void store(hibernate.User user) {
+            Session session = sessionFactory.openSession();
+            Transaction tx = session.getTransaction();
+            try {
+                tx.begin();
+                session.saveOrUpdate(user);
+                tx.commit();
+            } catch (RuntimeException e) {
+                tx.rollback();
+                throw e;
+            } finally {
+                session.close();
+            }
+        }
+
+        public hibernate.User getUser(int arg0) {
+            return null;
+        }
+
+        public hibernate.User getUserByFirstLastName(String arg0, String arg1) {
+            return null;
+        }
+
+        public hibernate.User getUserByUsername(String arg0) {
+            return null;
+        }
+
+        public int saveUser(hibernate.User arg0) {
+            return 0;
+        }
+    }
+}
+"
+
+"used_prompt": "
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.AnnotationConfiguration;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import hibernate.UserDAO;
+import hibernate.User;
+
+public class hibernate_class_1 {
+    public class HibernateUserDAO implements UserDAO {
+
+        private SessionFactory sessionFactory;
+
+        public HibernateUserDAO() {
+            AnnotationConfiguration annotConf = new AnnotationConfiguration();
+            annotConf.addAnnotatedClass(User.class);
+            annotConf.configure();
+            sessionFactory = annotConf.buildSessionFactory();
+        }
+
+        public void store(User user) {
+            Session session = sessionFactory.openSession();
+            Transaction tx = session.getTransaction();
+            try {
+                tx.begin();
+                session.saveOrUpdate(user);
+                tx.commit();
+            } catch (RuntimeException e) {
+                tx.rollback();
+                throw e;
+            } finally {
+                session.close();
+            }
+        }
+
+        public User getUser(int arg0) {
+            return null;
+        }
+
+        public User getUserByFirstLastName(String arg0, String arg1) {
+            return null;
+        }
+
+        public User getUserByUsername(String arg0) {
+            return null;
+        }
+
+        public int saveUser(User arg0) {
+            return 0;
+        }
+    }
+}
+
+You gave the above imports fix. But compiler gave this error:
+
+hibernate_class_1.java:5: error: package hibernate does not exist
+import hibernate.UserDAO;
+                ^
+hibernate_class_1.java:6: error: package hibernate does not exist
+import hibernate.User;
+                ^
+hibernate_class_1.java:9: error: cannot find symbol
+    public class HibernateUserDAO implements UserDAO {
+                                             ^
+  symbol:   class UserDAO
+  location: class hibernate_class_1
+hibernate_class_1.java:20: error: cannot find symbol
+        public void store(User user) {
+                          ^
+  symbol:   class User
+  location: class hibernate_class_1.HibernateUserDAO
+hibernate_class_1.java:35: error: cannot find symbol
+        public User getUser(int arg0) {
+               ^
+  symbol:   class User
+  location: class hibernate_class_1.HibernateUserDAO
+hibernate_class_1.java:39: error: cannot find symbol
+        public User getUserByFirstLastName(String arg0, String arg1) {
+               ^
+  symbol:   class User
+  location: class hibernate_class_1.HibernateUserDAO
+hibernate_class_1.java:43: error: cannot find symbol
+        public User getUserByUsername(String arg0) {
+               ^
+  symbol:   class User
+  location: class hibernate_class_1.HibernateUserDAO
+hibernate_class_1.java:47: error: cannot find symbol
+        public int saveUser(User arg0) {
+                            ^
+  symbol:   class User
+  location: class hibernate_class_1.HibernateUserDAO
+hibernate_class_1.java:15: error: cannot find symbol
+            annotConf.addAnnotatedClass(User.class);
+                                        ^
+  symbol:   class User
+  location: class hibernate_class_1.HibernateUserDAO
+9 errors
+
+
+Now fix the error only by fixing the import statements by not using wildcard imports and must not modify code body which means do not change anything inside the class. So, it can be successfully compiled and reply with full code.
+"
+
+"stdout": ""
+
+"stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-15-attempt/hibernate_class_1.java:5: error: package hibernate does not exist
+import hibernate.UserDAO;
+                ^
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-15-attempt/hibernate_class_1.java:6: error: package hibernate does not exist
+import hibernate.User;
+                ^
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-15-attempt/hibernate_class_1.java:9: error: cannot find symbol
+    public class HibernateUserDAO implements UserDAO {
+                                             ^
+  symbol:   class UserDAO
+  location: class hibernate_class_1
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-15-attempt/hibernate_class_1.java:20: error: package hibernate does not exist
+        public void store(hibernate.User user) {
+                                   ^
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-15-attempt/hibernate_class_1.java:35: error: package hibernate does not exist
+        public hibernate.User getUser(int arg0) {
+                        ^
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-15-attempt/hibernate_class_1.java:39: error: package hibernate does not exist
+        public hibernate.User getUserByFirstLastName(String arg0, String arg1) {
+                        ^
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-15-attempt/hibernate_class_1.java:43: error: package hibernate does not exist
+        public hibernate.User getUserByUsername(String arg0) {
+                        ^
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-15-attempt/hibernate_class_1.java:47: error: package hibernate does not exist
+        public int saveUser(hibernate.User arg0) {
+                                     ^
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-15-attempt/hibernate_class_1.java:15: error: package hibernate does not exist
+            annotConf.addAnnotatedClass(hibernate.User.class);
+                                                 ^
+9 errors
+"
+
+"return_code": 1
+

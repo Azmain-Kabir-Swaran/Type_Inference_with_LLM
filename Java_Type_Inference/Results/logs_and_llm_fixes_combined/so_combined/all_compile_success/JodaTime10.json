@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime10.java",
-    "java_code": "package jodatime;\n\nimport java.io.IOException;\nimport java.io.ObjectInputStream;\nimport java.io.ObjectOutputStream;\nimport java.io.Serializable;\n\nimport org.joda.time.DateTimeZone;\nimport org.joda.time.chrono.ISOChronology;\n\npublic class JodaTime10 {\n\n    private Object writeReplace() {\n        return new Stub(null);\n    }\n\n    private static final class Stub implements Serializable {\n        private static final long serialVersionUID = -6212696554273812441L;\n\n        private transient DateTimeZone iZone;\n\n        Stub(DateTimeZone zone) {\n            iZone = zone;\n        }\n\n        private Object readResolve() {\n            return ISOChronology.getInstance(iZone);\n        }\n\n        private void writeObject(ObjectOutputStream out) throws IOException {\n            out.writeObject(iZone);\n        }\n\n        private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {\n            iZone = (DateTimeZone) in.readObject();\n        }\n    }\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

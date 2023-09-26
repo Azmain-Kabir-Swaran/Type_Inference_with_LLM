@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-zero-shot/Android49.java",
-    "java_code": "package androidExamples;\nimport android.widget.LinearLayout;\nimport com.example.R;\nimport android.view.Gravity;\nimport android.content.Context;\nimport android.util.AttributeSet;\nimport android.view.LayoutInflater;\n//ID = 1325576\n\npublic class Android49 extends LinearLayout {\n    public Android49(Context context, AttributeSet attrs) {\n        super(context, attrs);\n        ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.main, this, true);\n        setGravity(Gravity.CENTER);\n    }\n\n    public Android49(Context context) {\n        this(context,null);\n    }\n}",
-    "stdout": "",
-    "stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-zero-shot/Android49.java:3: error: package com.example does not exist\nimport com.example.R;\n                  ^\n/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-zero-shot/Android49.java:13: error: package R does not exist\n        ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.main, this, true);\n                                                                                              ^\n2 errors\n",
-    "return_code": 1
-}

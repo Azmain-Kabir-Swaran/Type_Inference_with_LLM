@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset_with_imports/JodaTime46.java",
+    "java_code": "package jodatime;\n//id=16461361\nimport org.joda.time.DateTime;\nimport org.joda.time.DateTimeZone;\n\npublic class JodaTime46 {\n\n\tpublic static void main(String[] args) {\n\t\tDateTimeZone date = null;\n\t\t// TODO Auto-generated method stub\n\t\tDateTime dateTime = new DateTime(date);\n\t\tdateTime = dateTime.plusDays(1);\n\n\t}\n\n}\n",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

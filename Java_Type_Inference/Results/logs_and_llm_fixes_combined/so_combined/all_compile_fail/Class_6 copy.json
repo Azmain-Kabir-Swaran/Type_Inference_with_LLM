@@ -1,8 +1,0 @@
-{
-    "attempt": 5,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Class_6.java",
-    "java_code": "import java.awt.BorderLayout;\nimport java.awt.Color;\nimport java.awt.Component;\nimport java.awt.Graphics;\nimport java.awt.Graphics2D;\nimport java.awt.RenderingHints;\nimport java.awt.event.ActionEvent;\nimport java.awt.event.ActionListener;\nimport java.util.Observable;\nimport java.util.Observer;\nimport java.util.Random;\n\nimport javax.swing.Icon;\nimport javax.swing.JButton;\nimport javax.swing.JFrame;\nimport javax.swing.JLabel;\nimport javax.swing.JPanel;\nimport javax.swing.SwingUtilities;\n\npublic class Class_6 implements Runnable {\n\n    public static void main(String[] args) {\n        SwingUtilities.invokeLater(new Class_6());\n    }\n\n    @Override\n    public void run() {\n        JFrame f = new JFrame();\n        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);\n        f.add(new MainPanel());\n        f.pack();\n        f.setLocationRelativeTo(null);\n        f.setVisible(true);\n    }\n}\n",
-    "stdout": "",
-    "stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Class_6.java:30: error: cannot find symbol\n        f.add(new MainPanel());\n                  ^\n  symbol:   class MainPanel\n  location: class Class_6\n1 error\n",
-    "return_code": 1
-}

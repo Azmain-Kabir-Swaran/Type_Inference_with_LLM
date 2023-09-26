@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-zero-shot/xstream_class_11.java",
-    "java_code": "package xstream;\nimport java.util.List;\nimport com.thoughtworks.xstream.XStream;\nimport java.util.ArrayList;\nimport com.thoughtworks.xstream.converters.collections.CollectionConverter;\nimport com.thoughtworks.xstream.mapper.ClassAliasingMapper;\n//ID=1791178\n\n\npublic class xstream_class_11 {\n    public List<String> tags = new ArrayList<String>();\n    public List<String> notags = new ArrayList<String>();\n    public xstream_class_11(String tag, String tag2) {\n        tags.add(tag); tags.add(tag2);\n        notags.add(tag); notags.add(tag2);\n    }\n    public static void main(String[] args) {\n        xstream_class_11 test = new xstream_class_11(\"foo\", \"bar\");\n        XStream xstream = new XStream();\n\n        ClassAliasingMapper mapper = new ClassAliasingMapper(xstream.getMapper());\n        mapper.addClassAlias(\"tag\", String.class);\n        xstream.registerLocalConverter(\n            xstream_class_11.class,\n            \"tags\",\n            new CollectionConverter(mapper)\n        );\n\n        System.out.println(xstream.toXML(test));\n    }\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

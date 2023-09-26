@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-zero-shot/Android40.java",
-    "java_code": "package androidExamples;\nimport android.view.View.OnClickListener;\nimport android.app.Activity;\nimport android.widget.ImageView;\nimport android.os.Bundle;\nimport android.util.Log;\nimport android.widget.SlidingDrawer;\nimport android.view.View;\n//ID= 1163812\npublic class Android40 extends Activity {\n\n\tpublic static void main(String[] args) {\n\t\t// TODO Auto-generated method stub\n\n\t}\n\tpublic void onCreate(Bundle savedInstanceState) {\n\t    super.onCreate(savedInstanceState);\n\t    setContentView(R.layout.main);\n\n\t    SlidingDrawer drawer = (SlidingDrawer)findViewById(R.id.lay);\n\n\t    ImageView handle = (ImageView)findViewById(R.id.myImage);\n\t    handle.setFocusable(true);\n\n\t    handle.setOnClickListener(new OnClickListener(){\n\n\n\t  @Override\n\t  public void onClick(View v) {\n\t   // TODO Auto-generated method stub\n\t   Log.i(\"test\",\"onClick\");\n\t  }\n\n\t    });\n\n\n\t}\n}",
-    "stdout": "",
-    "stderr": "No error (Ignored 'package R does not exist' errors)",
-    "return_code": 1
-}

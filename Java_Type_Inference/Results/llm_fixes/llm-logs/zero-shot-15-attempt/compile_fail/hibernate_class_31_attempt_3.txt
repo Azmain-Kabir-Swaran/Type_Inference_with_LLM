@@ -1,0 +1,148 @@
+"attempt": 3
+
+"file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-15-attempt/hibernate_class_31.java"
+
+"java_code": "
+
+import java.util.List;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.Query;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.Session;
+
+import hibernate.Users;
+
+public class hibernate_class_31 {
+    public static List<?> getData() {
+        SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+        Session session = sessionFactory.getCurrentSession();
+        List<?> result = null;
+        try {
+            session.beginTransaction();
+            Query<?> query = session.createQuery("from Users");
+            result = query.list();
+            session.getTransaction().commit();
+            query.setReadOnly(true);
+            query.setMaxResults(50);
+            session.flush();
+            session.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+}
+"
+
+"used_prompt": "
+
+package hibernate;
+import java.util.List;
+import org.hibernate.SessionFactory;
+import org.hibernate.Query;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.Session;
+
+public class hibernate_class_31
+{
+    public static List<?> getData ()
+    {
+        SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+        Session session = sessionFactory.getCurrentSession();
+        List<?> result = null;
+        try
+        {
+            session.beginTransaction();
+            Query<?> query = session.createQuery("from Users");
+            result = query.list();
+            session.getTransaction().commit();
+            query.setReadOnly(true);
+            query.setMaxResults(50);
+            session.flush();
+            session.close();
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        return result;      
+    }
+}
+
+You gave the above imports fix in your attempt 1. But compiler gave this error:
+
+hibernate_class_31.java:18: error: type Query does not take parameters
+            Query<?> query = session.createQuery("from Users");
+                 ^
+1 error
+
+
+package hibernate;
+
+import java.util.List;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.Query;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.Session;
+
+import hibernate.Users;
+
+public class hibernate_class_31 {
+    public static List<Users> getData() {
+        SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+        Session session = sessionFactory.getCurrentSession();
+        List<Users> result = null;
+        try {
+            session.beginTransaction();
+            Query query = session.createQuery("from Users");
+            result = query.list();
+            session.getTransaction().commit();
+            query.setReadOnly(true);
+            query.setMaxResults(50);
+            session.flush();
+            session.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+}
+
+You gave the above imports fix in your attempt 2. But compiler gave this error:
+
+hibernate_class_31.java:10: error: cannot find symbol
+import hibernate.Users;
+                ^
+  symbol:   class Users
+  location: package hibernate
+hibernate_class_31.java:13: error: cannot find symbol
+    public static List<Users> getData() {
+                       ^
+  symbol:   class Users
+  location: class hibernate_class_31
+hibernate_class_31.java:16: error: cannot find symbol
+        List<Users> result = null;
+             ^
+  symbol:   class Users
+  location: class hibernate_class_31
+3 errors
+
+
+Now fix the error only by fixing the import statements by not using wildcard imports and must not modify code body which means do not change anything inside the class. So, it can be successfully compiled and reply with full code.
+"
+
+"stdout": ""
+
+"stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-15-attempt/hibernate_class_31.java:8: error: package hibernate does not exist
+import hibernate.Users;
+                ^
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-15-attempt/hibernate_class_31.java:17: error: type Query does not take parameters
+            Query<?> query = session.createQuery("from Users");
+                 ^
+2 errors
+"
+
+"return_code": 1
+

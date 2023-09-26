@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/so_dataset/gwt_class_20.java",
-    "java_code": "public class gwt_class_20 implements EntryPoint {\n\n  public void onModuleLoad() {\n    Button b = new Button(\"Click me\", new ClickHandler() {\n      public void onClick(ClickEvent event) {\n        Window.alert(\"Hello, AJAX\");\n      }\n    });\n\n    RootPanel.get().add(b);\n  }\n}",
-    "stdout": "",
-    "stderr": "/home/azmain/GitHub Codes/so_dataset/gwt_class_20.java:1: error: cannot find symbol\npublic class gwt_class_20 implements EntryPoint {\n                                     ^\n  symbol: class EntryPoint\n/home/azmain/GitHub Codes/so_dataset/gwt_class_20.java:4: error: cannot find symbol\n    Button b = new Button(\"Click me\", new ClickHandler() {\n    ^\n  symbol:   class Button\n  location: class gwt_class_20\n/home/azmain/GitHub Codes/so_dataset/gwt_class_20.java:4: error: cannot find symbol\n    Button b = new Button(\"Click me\", new ClickHandler() {\n                   ^\n  symbol:   class Button\n  location: class gwt_class_20\n/home/azmain/GitHub Codes/so_dataset/gwt_class_20.java:4: error: cannot find symbol\n    Button b = new Button(\"Click me\", new ClickHandler() {\n                                          ^\n  symbol:   class ClickHandler\n  location: class gwt_class_20\n/home/azmain/GitHub Codes/so_dataset/gwt_class_20.java:10: error: cannot find symbol\n    RootPanel.get().add(b);\n    ^\n  symbol:   variable RootPanel\n  location: class gwt_class_20\n5 errors\n",
-    "return_code": 1
-}
