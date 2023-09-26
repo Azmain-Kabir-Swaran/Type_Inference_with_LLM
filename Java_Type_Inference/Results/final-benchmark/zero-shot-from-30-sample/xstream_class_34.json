@@ -1,0 +1,24 @@
+{
+    "filename": "xstream_class_34",
+    "expected_output": [
+        "import java.util.ArrayList;",
+        "import java.util.Iterator;",
+        "import java.util.List;",
+        "import com.cloudbees.api.config.Environment;",
+        "import com.cloudbees.api.config.ParameterHolder;",
+        "import com.cloudbees.api.config.ResourceSettings;",
+        "import com.thoughtworks.xstream.XStream;",
+        "import com.thoughtworks.xstream.annotations.XStreamAlias;",
+        "import com.thoughtworks.xstream.annotations.XStreamImplicit;",
+        "import com.thoughtworks.xstream.mapper.MapperWrapper;"
+    ],
+    "predicted_output": [
+        "import com.thoughtworks.xstream.XStream;",
+        "import java.util.ArrayList;",
+        "import java.util.List;",
+        "import com.thoughtworks.xstream.annotations.XStreamImplicit;",
+        "import com.thoughtworks.xstream.annotations.XStreamAlias;",
+        "import com.thoughtworks.xstream.mapper.MapperWrapper;",
+        "import java.util.Iterator;"
+    ]
+}

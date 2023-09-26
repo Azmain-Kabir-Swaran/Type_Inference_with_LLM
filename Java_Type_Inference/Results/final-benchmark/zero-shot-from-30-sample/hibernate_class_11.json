@@ -1,0 +1,26 @@
+{
+    "filename": "hibernate_class_11",
+    "expected_output": [
+        "import java.io.Serializable;",
+        "import javax.persistence.Column;",
+        "import javax.persistence.Entity;",
+        "import javax.persistence.FetchType;",
+        "import javax.persistence.Id;",
+        "import javax.persistence.JoinColumn;",
+        "import javax.persistence.ManyToOne;",
+        "import javax.persistence.Table;",
+        "import org.apache.directory.api.ldap.aci.UserClass.UserGroup;",
+        "import org.hibernate.annotations.ForeignKey;"
+    ],
+    "predicted_output": [
+        "import java.io.Serializable;",
+        "import javax.persistence.ForeignKey;",
+        "import javax.persistence.Column;",
+        "import javax.persistence.FetchType;",
+        "import javax.persistence.Table;",
+        "import javax.persistence.Id;",
+        "import javax.persistence.Entity;",
+        "import javax.persistence.ManyToOne;",
+        "import javax.persistence.JoinColumn;"
+    ]
+}

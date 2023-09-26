@@ -1,20 +1,20 @@
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
-import com.thoughtworks.xstream.converters.MarshallingContext;
-import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.xml.MarshallingContext;
+import com.thoughtworks.xstream.io.xml.UnmarshallingContext;
 import java.util.ArrayList;
 
 public class xstream_class_37 {
+    public class FieldDtoConvertor implements Converter {
 
-    public static class FieldDtoConvertor implements Converter {
-
-        public boolean canConvert(Class<?> clazz) {
+        public boolean canConvert(Class clazz) {
             return clazz.equals(FieldDto.class);
         }
 
-        public void marshal(final Object value, final HierarchicalStreamWriter writer,
-                final MarshallingContext context) {
+        public void marshal(final Object value,
+                            final HierarchicalStreamWriter writer,
+                            final MarshallingContext context) {
             final FieldDto fieldDto = (FieldDto) value;
             for (int i = 0; i < fieldDto.getSize(); i++) {
                 writer.addAttribute(fieldDto.getAttributeName(i), fieldDto.getAttributeValue(i));
@@ -22,7 +22,8 @@ public class xstream_class_37 {
             writer.setValue(fieldDto.getText());
         }
 
-        public Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context) {
+        public Object unmarshal(HierarchicalStreamReader reader,
+                               UnmarshallingContext context) {
             FieldDto fieldDto = new FieldDto();
             for (int i = 0; i < reader.getAttributeCount(); i++) {
                 fieldDto.addAttribute(reader.getAttributeName(i), reader.getAttribute(i));
@@ -32,7 +33,7 @@ public class xstream_class_37 {
         }
     }
 
-    public static class FieldDto {
+    public class FieldDto {
         private ArrayList<String> attributeName = null;
         private ArrayList<String> attributeValue = null;
         private String text;
@@ -66,10 +67,5 @@ public class xstream_class_37 {
         public int getSize() {
             return attributeName.size();
         }
-    }
-
-    public static void main(String[] args) {
-        FieldDtoConvertor convertor = new FieldDtoConvertor();
-        // Rest of the code goes here
     }
 }

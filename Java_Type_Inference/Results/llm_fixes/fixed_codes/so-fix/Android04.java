@@ -10,7 +10,7 @@ public class Android04 extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        TextView mTextView = new TextView(this);
+        mTextView = new TextView(this);
 
         if (savedInstanceState == null) {
             mTextView.setText("Welcome to HelloAndroid!");
@@ -20,4 +20,6 @@ public class Android04 extends Activity {
 
         setContentView(mTextView);
     }
+
+    private TextView mTextView = null;
 }

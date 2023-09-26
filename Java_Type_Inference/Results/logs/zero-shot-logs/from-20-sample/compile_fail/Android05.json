@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/from-20-sample/Android05.java",
+    "java_code": "package androidExamples;\nimport android.widget.TabSpec;\nimport android.graphics.drawable.Drawable;\nimport android.widget.TabHost;\n//ID = 36881\n\npublic class Android05 {\n\n\tpublic static void main(String[] args) {\n\t\tTabHost mTabs = null;\n\t\tTabSpec ts = mTabs.newTabSpec(\"tab\");\n\t\tDrawable iconResource = null;\n\t\tts.setIndicator(\"TabTitle\", iconResource);\n\n\t\tmTabs.addTab(ts);\n\t\tmTabs.getTabWidget().removeAllViews();\n\t\tmTabs.clearAllTabs();\n\n\t\t// TODO Auto-generated method stub\n\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/code_for_compilation_test/from-20-sample/Android05.java:2: error: cannot find symbol\nimport android.widget.TabSpec;\n                     ^\n  symbol:   class TabSpec\n  location: package android.widget\n/home/azmain/code_for_compilation_test/from-20-sample/Android05.java:11: error: cannot find symbol\n\t\tTabSpec ts = mTabs.newTabSpec(\"tab\");\n\t\t^\n  symbol:   class TabSpec\n  location: class Android05\n2 errors\n",
+    "return_code": 1
+}

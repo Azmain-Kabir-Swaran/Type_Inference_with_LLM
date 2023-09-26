@@ -1,0 +1,17 @@
+{
+    "filename": "gwt_class_2",
+    "expected_output": [
+        "import com.google.gwt.core.client.GWT;",
+        "import com.google.gwt.junit.client.GWTTestCase;",
+        "import com.google.gwt.user.client.rpc.AsyncCallback;",
+        "import aQute.gwt.greeter.shared.GreetingService;",
+        "import aQute.gwt.greeter.shared.GreetingServiceAsync;"
+    ],
+    "predicted_output": [
+        "import com.google.gwt.sample.stockwatcher.client.GreetingServiceAsync;",
+        "import com.google.gwt.core.client.GWT;",
+        "import com.google.gwt.junit.client.GWTTestCase;",
+        "import com.google.gwt.user.client.rpc.AsyncCallback;",
+        "import com.google.gwt.sample.stockwatcher.client.GreetingService;"
+    ]
+}

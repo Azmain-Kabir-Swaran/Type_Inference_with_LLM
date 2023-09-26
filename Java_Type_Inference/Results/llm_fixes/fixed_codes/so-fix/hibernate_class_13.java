@@ -1,11 +1,24 @@
-import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.ForeignKey;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.persistence.Index;
+
 @Entity
 @Table(name = "tblUser")
-public class HibernateClass13 implements Serializable, Cloneable {
+public class hibernate_class_13 implements Serializable, Cloneable {
 
     @Id
     @Column(name = "CountyId", nullable = false)
@@ -16,10 +29,8 @@ public class HibernateClass13 implements Serializable, Cloneable {
     private String username;
 
     @ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumns({
-        @JoinColumn(name = "CountyId", referencedColumnName = "CountyId", nullable = false, insertable=false, updatable=false),
-        @JoinColumn(name = "Username", referencedColumnName = "Username", nullable = false, insertable=false, updatable=false)
-    })
+    @JoinColumn(name = "CountyId", nullable = false, insertable=false, updatable=false)
+    @ForeignKey(name="FK_CountyID")
     private County county;
 
     @Column(name = "Name", length = 50, nullable = true)
@@ -32,15 +43,15 @@ public class HibernateClass13 implements Serializable, Cloneable {
     private Integer role;
 
     @ManyToMany(targetEntity=Permission.class,
-            cascade={ CascadeType.PERSIST, CascadeType.MERGE })
+         cascade={ CascadeType.PERSIST, CascadeType.MERGE } )
     @JoinTable(name="tblUserPermission",
-            joinColumns = { @JoinColumn(name="CountyId", referencedColumnName = "CountyId"), @JoinColumn(name="Username", referencedColumnName = "Username") },
-            inverseJoinColumns = { @JoinColumn(name="PermissionId", referencedColumnName = "PermissionId") })
-    private Collection<Permission> permissions;
+         joinColumns = { @JoinColumn(name="Username", referencedColumnName="Username"), @JoinColumn(name="CountyId", referencedColumnName="CountyId") },
+         inverseJoinColumns = { @JoinColumn(name="PermissionId", referencedColumnName="PermissionId") })
+   private Collection<Permission> permissions;
 
     @OneToMany(fetch=FetchType.LAZY, mappedBy="county")
-    @org.hibernate.annotations.IndexColumn(name="version")
+    @Index(name="idx_version")
     private List<Version> versions;
 
-    // Getters and setters
+    /** Getters and setters **/
 }

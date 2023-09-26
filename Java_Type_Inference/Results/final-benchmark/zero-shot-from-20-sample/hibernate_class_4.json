@@ -1,0 +1,13 @@
+{
+    "filename": "hibernate_class_4",
+    "expected_output": [
+        "import org.hibernate.SessionFactory;",
+        "import org.hibernate.HibernateException;",
+        "import org.hibernate.cfg.Configuration;"
+    ],
+    "predicted_output": [
+        "import org.hibernate.cfg.Configuration;",
+        "import org.hibernate.SessionFactory;",
+        "import org.hibernate.HibernateException;"
+    ]
+}

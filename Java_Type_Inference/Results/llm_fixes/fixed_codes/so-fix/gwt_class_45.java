@@ -6,12 +6,14 @@ import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.RootPanel;
 
-public class GWTClass45 implements EntryPoint {
-    public void onModuleLoad() {
+public class gwt_class_45 implements EntryPoint {
 
+    @Override
+    public void onModuleLoad() {
         Label label = new Label("hello world");
         Button button = new Button("say something");
         button.addClickHandler(new ClickHandler() {
+            @Override
             public void onClick(ClickEvent event) {
                 Window.alert("hello again");
             }

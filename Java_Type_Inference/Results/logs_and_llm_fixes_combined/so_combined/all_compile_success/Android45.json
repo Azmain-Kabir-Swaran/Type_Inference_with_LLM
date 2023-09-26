@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android45.java",
+    "java_code": "package androidExamples;\n\nimport android.app.Activity;\nimport android.content.BroadcastReceiver;\nimport android.content.ComponentName;\nimport android.content.Context;\nimport android.content.Intent;\nimport android.content.IntentFilter;\nimport android.os.Bundle;\nimport android.util.Log;\n\npublic class Android45 extends Activity {\n\n    private static final String TAG = \"MyActivity\";\n\n    @Override\n    public void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n\n        IntentFilter intentFilter = new IntentFilter();\n        intentFilter.addAction(Intent.ACTION_SEND);\n        intentFilter.addCategory(Intent.CATEGORY_DEFAULT);\n        try {\n            intentFilter.addDataType(\"image/*\");\n        } catch (android.content.IntentFilter.MalformedMimeTypeException e) {\n            Log.e(TAG, e.toString());\n        }\n\n        Intent x = registerReceiver(new BroadcastReceiver() {\n            public void onReceive(Context context, Intent intent) {\n                Log.d(TAG, \"Received intent \" + intent);\n                intent.setComponent(new ComponentName(context, Uploader.class));\n                startActivity(intent);\n            }\n        }, intentFilter);\n\n        if (x == null)\n            Log.i(TAG, \"failed to regist a receiver\");\n        else\n            Log.i(TAG, \"registed a receiver successfully\");\n\n    }\n\n    class Uploader {\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

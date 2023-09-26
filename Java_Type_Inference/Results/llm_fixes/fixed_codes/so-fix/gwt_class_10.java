@@ -1,27 +1,36 @@
-import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.user.client.ui.FormPanel;
+import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.user.client.ui.*;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.user.client.ui.Widget;
 
-public class gwt_class_10 implements EntryPoint {
-    public void onModuleLoad(){
-        final FormPanel form = new FormPanel();
-        VerticalPanel holder = new VerticalPanel();
-        holder.add(new Label("User ID"));
-        TextBox nameTextBox = new TextBox();
-        nameTextBox.setName("userid");
-        holder.add(nameTextBox);
+public class gwt_class_10 {
+	public void main(){
+		final FormPanel form =new FormPanel();
+	    VerticalPanel holder = new VerticalPanel();
+	    holder.add(new Label("User ID"));
+	    TextBox nameTextBox = new TextBox();
+	    nameTextBox.setName("userid");
+	    holder.add(nameTextBox);
 
-        Button submitButton = new Button("Submit");
-        holder.add(submitButton);
-        form.add(holder);
+	     Button submitButton = new Button("Submit");
+	     holder.add(submitButton);
+	    form.add(holder);
 
-        submitButton.addClickHandler(new ClickHandler() {
-            public void onClick(ClickEvent event) {
-                form.submit();
-            }
-        });
+	    submitButton.addClickHandler(new ClickHandler() {
 
-        RootPanel.get().add(form);
-    }
+	    public void onClick1(Widget sender) {
+	            form.submit();
+	    }
+
+		@Override
+		public void onClick(ClickEvent event) {
+			// TODO Auto-generated method stub
+			
+		}
+	});
+	}
 }

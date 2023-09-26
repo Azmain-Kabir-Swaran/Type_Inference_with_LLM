@@ -1,10 +1,10 @@
 import com.google.gwt.user.client.ui.DialogBox;
-import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Grid;
 import com.google.gwt.user.client.ui.HTML;
+import com.google.gwt.user.client.ui.TextBox;
 
 public class gwt_class_30 {
-    static TextBox firstName = new TextBox();
+	static TextBox firstName = new TextBox();
     static TextBox surName = new TextBox();
     static DialogBox box;
 
@@ -28,6 +28,6 @@ public class gwt_class_30 {
 
         box.add(dialogGrid);
 
-        return box;
+    return box;
     }
 }

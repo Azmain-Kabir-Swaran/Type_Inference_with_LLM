@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/JodaTime04.java",
+    "java_code": "import org.joda.time.Period;\nimport org.joda.time.ReadableInstant;\nimport org.joda.time.Period;\nimport org.joda.time.ReadableInstant;\n\npublic class JodaTime04 {\n    private ReadableInstant[] startTime;\n    private ReadableInstant[] endTime;\n\n    public String foobar(int dayIndex) {\n        Period p = new Period(this.startTime[dayIndex], this.endTime[dayIndex]);\n        long hours = p.getHours();\n        long minutes = p.getMinutes();\n\n        String format = String.format(\"%%0%dd\", 2);\n\n        return Long.toString(hours)+\":\"+String.format(format, minutes);\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

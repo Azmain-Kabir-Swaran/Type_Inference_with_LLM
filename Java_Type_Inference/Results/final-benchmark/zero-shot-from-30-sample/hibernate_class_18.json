@@ -1,0 +1,11 @@
+{
+    "filename": "hibernate_class_18",
+    "expected_output": [
+        "import org.hibernate.SessionFactory;",
+        "import org.hibernate.cfg.Configuration;"
+    ],
+    "predicted_output": [
+        "import org.hibernate.cfg.Configuration;",
+        "import org.hibernate.SessionFactory;"
+    ]
+}

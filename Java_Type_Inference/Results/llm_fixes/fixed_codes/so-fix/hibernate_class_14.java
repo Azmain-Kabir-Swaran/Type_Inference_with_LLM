@@ -1,63 +1,50 @@
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Id;
-import javax.persistence.Column;
-import javax.persistence.ManyToOne;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
-import javax.persistence.CascadeType;
-import javax.persistence.FetchType;
-import javax.persistence.JoinTable;
 import java.io.Serializable;
 import java.util.Collection;
 
-public class hibernate_class_14 {
-    @Entity
-    @Table(name = "tblPermission")
-    public class Permission implements Serializable, Cloneable {
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
-        private static final long serialVersionUID = 7155322069731920447L;
+import javax.persistence.ForeignKey;
 
-        @Id
-        @Column(name = "PermissionId", length = 8, nullable = false)
-        private String PermissionId = "";
+@Entity
+@Table(name = "tblPermission")
+public class Permission implements Serializable, Cloneable {
 
-        @ManyToOne(fetch=FetchType.LAZY)
-        @JoinColumn(name = "CountyId", nullable = false)
-        private County county;
+    private static final long serialVersionUID = 7155322069731920447L;
 
-        @Column(name = "Permission", nullable = true)
-        private Integer permission = 1;
+    @Id
+    @Column(name = "PermissionId", length = 8, nullable = false)
+    private String PermissionId = "";
 
-        @ManyToMany( cascade = {CascadeType.PERSIST, CascadeType.MERGE},
-                mappedBy = "Permissions",
-                targetEntity = Item.class )
-        @JoinTable(name = "tblPermission_Item",
-                joinColumns = @JoinColumn(name = "PermissionId", referencedColumnName = "PermissionId"),
-                inverseJoinColumns = @JoinColumn(name = "ItemId", referencedColumnName = "ItemId"))
-        private Collection<Item> items;
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name = "CountyId", nullable = false)
+    @ForeignKey(name="FK_CountyID")
+    private County county;
 
-        @ManyToMany( cascade = {CascadeType.PERSIST, CascadeType.MERGE},
-                mappedBy = "Permissions",
-                targetEntity = User.class )
-        @JoinTable(name = "tblPermission_User",
-                joinColumns = @JoinColumn(name = "PermissionId", referencedColumnName = "PermissionId"),
-                inverseJoinColumns = @JoinColumn(name = "UserId", referencedColumnName = "UserId"))
-        private Collection<User> users;
+    @Column(name = "Permission", nullable = true)
+    private Integer permission = 1;
 
-        /** Getters and Setters **/
-    }
+    @ManyToMany( cascade = {CascadeType.PERSIST, CascadeType.MERGE},
+          targetEntity = Item.class )
+    @JoinTable(name = "tblPermissionItem", 
+              joinColumns = @JoinColumn(name = "PermissionId"), 
+              inverseJoinColumns = @JoinColumn(name = "ItemId"))
+    private Collection<Item> items;
 
-}
+    @ManyToMany( cascade = {CascadeType.PERSIST, CascadeType.MERGE},
+          targetEntity = User.class )
+    @JoinTable(name = "tblPermissionUser", 
+              joinColumns = @JoinColumn(name = "PermissionId"), 
+              inverseJoinColumns = @JoinColumn(name = "UserId"))
+    private Collection<User> users;
 
-class County {
-    // County implementation
-}
-
-class Item {
-    // Item implementation
-}
-
-class User {
-    // User implementation
+    /** Getters and Setters **/
 }

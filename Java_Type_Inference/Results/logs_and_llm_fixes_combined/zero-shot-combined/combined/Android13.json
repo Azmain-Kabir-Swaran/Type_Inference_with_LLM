@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-zero-shot/Android13.java",
-    "java_code": "package androidExamples;\nimport java.io.ByteArrayOutputStream;\nimport java.io.FileNotFoundException;\nimport java.io.IOException;\nimport android.net.Uri;\nimport android.content.ContentResolver;\nimport java.io.ByteArrayInputStream;\nimport android.graphics.Bitmap;\nimport android.provider.MediaStore.Images.Media;\n\n\n//ID = 559902\npublic class Android13 {\n\tpublic static void main(String[] args) {\n\t\t\tUri imageUri = null;\n\t\t\tBitmap bitmap = null;\n\t\t\ttry {\n\t\t\t\tbitmap = Media.getBitmap(getContentResolver(), imageUri);\n\t\t\t} catch (FileNotFoundException e) {\n\t\t\t\t// TODO Auto-generated catch block\n\t\t\t\te.printStackTrace();\n\t\t\t} catch (IOException e) {\n\t\t\t\t// TODO Auto-generated catch block\n\t\t\t\te.printStackTrace();\n\t\t\t}\n\t\t\tByteArrayOutputStream bytes = new ByteArrayOutputStream();\n\t\t\tbitmap.compress(Bitmap.CompressFormat.JPEG, 40, bytes);\n\t\t\tByteArrayInputStream fileInputStream = new ByteArrayInputStream(bytes.toByteArray());\n\t}\n\n\tprivate static ContentResolver getContentResolver() {\n\t\t// TODO Auto-generated method stub\n\t\treturn null;\n\t}\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

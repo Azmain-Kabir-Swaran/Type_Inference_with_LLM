@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-zero-shot/JodaTime04.java",
-    "java_code": "package jodatime;\nimport org.joda.time.Period;\nimport org.joda.time.ReadableInstant;\n//ID = 2112214\n\npublic class JodaTime04 {\n\tprivate ReadableInstant[] startTime;\n\tprivate ReadableInstant[] endTime;\n\n\tpublic String foobar(int dayIndex) {\n\t\tPeriod p = new Period(this.startTime[dayIndex], this.endTime[dayIndex]);\n\t\tlong hours = p.getHours();\n\t\tlong minutes = p.getMinutes();\n\n\t\tString format = String.format(\"%%0%dd\", 2);//Ensures that the minutes will always display as two digits.\n\n\t\treturn Long.toString(hours)+\":\"+String.format(format, minutes);\n\t}\n\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

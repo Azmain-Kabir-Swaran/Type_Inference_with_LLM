@@ -1,35 +1,23 @@
 import java.util.List;
-
 import org.hibernate.Session;
-import org.hibernate.query.Query;
-import org.hibernate.HibernateException;
-import org.hibernate.cfg.Configuration;
-import org.hibernate.SessionFactory;
+import org.hibernate.Query;
+import com.example.util.HibernateUtil;
 
 public class hibernate_class_27 {
-    private static final SessionFactory sessionFactory = buildSessionFactory();
-
-    private static SessionFactory buildSessionFactory() {
-        try {
-            return new Configuration().configure().buildSessionFactory();
-        } catch (HibernateException ex) {
-            System.err.println("Initial SessionFactory creation failed: " + ex);
-            throw new ExceptionInInitializerError(ex);
-        }
-    }
 
     public static List<ProjectAssignment> getAllResources() {
         List<ProjectAssignment> projectMasters;
 
-        try (Session session = sessionFactory.openSession()) {
-            Query<ProjectAssignment> query = session.createQuery("select distinct new hibernate_class_27.ProjectAssignment(aid, pid, userName) from ProjectAssignment", ProjectAssignment.class);
-            projectMasters = query.getResultList();
-        }
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Query query = session.createQuery("select distinct aid, pid, userName from ProjectAssignment");
+        projectMasters = (List<ProjectAssignment>) query.list();
+        session.close();
 
         return projectMasters;
     }
 
     public static class ProjectAssignment implements java.io.Serializable {
+
         private short aid;
         private String pid;
         private String userName;

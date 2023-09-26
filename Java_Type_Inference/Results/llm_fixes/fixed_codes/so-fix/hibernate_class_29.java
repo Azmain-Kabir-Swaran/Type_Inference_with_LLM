@@ -1,11 +1,10 @@
+import java.util.List;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Criteria;
 import org.hibernate.criterion.Projections;
 
-import java.util.List;
-
-public abstract class hibernate_class_29<T> {
+public abstract class hibernate_class_29<T>{
 
   private Class<T> domainClass;
 
@@ -15,11 +14,11 @@ public abstract class hibernate_class_29<T> {
     this.domainClass = domainClass;
   }
 
-  public SessionFactory getSessionFactory() {
+  public org.hibernate.SessionFactory getSessionFactory() {
     return sf;
   }
 
-  public void setSessionFactory(SessionFactory sf) {
+  public void setSessionFactory(org.hibernate.SessionFactory sf) {
     this.sf = sf;
   }
 
@@ -39,7 +38,7 @@ public abstract class hibernate_class_29<T> {
   @SuppressWarnings("unchecked")
   public List<T> findAll() {
     Criteria criteria = getSession().createCriteria(domainClass);
-    List<T> r = (List<T>) criteria.list();
+    List<T> r=(List<T>) criteria.list();
     return r;
   }
 

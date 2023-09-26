@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-zero-shot/JodaTime30.java",
-    "java_code": "package jodatime;\nimport org.joda.time.DateTimeZone;\nimport org.joda.time.DateTime;\n//ID = 9503771\n\npublic class JodaTime30 {\n\n\tpublic static void main(String[] args) {\n\t\tDateTimeZone dtz = DateTimeZone.forOffsetHours(0);\n\n\t\tDateTime dt = new DateTime(dtz);\n\n\t\tSystem.out.println(dt);\n\t\tSystem.out.println(dt.toDate());\n\n\t}\n\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

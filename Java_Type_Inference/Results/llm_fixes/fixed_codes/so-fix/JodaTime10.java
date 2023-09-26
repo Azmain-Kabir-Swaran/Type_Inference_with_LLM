@@ -1,8 +1,12 @@
 package jodatime;
 
 import org.joda.time.DateTimeZone;
+import org.joda.time.chrono.ISOChronology;
 
-import java.io.*;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 
 public class JodaTime10 {
 
@@ -20,7 +24,7 @@ public class JodaTime10 {
         }
 
         private Object readResolve() {
-            return org.joda.time.chrono.ISOChronology.getInstance(iZone);
+            return ISOChronology.getInstance(iZone);
         }
 
         private void writeObject(ObjectOutputStream out) throws IOException {
@@ -28,7 +32,7 @@ public class JodaTime10 {
         }
 
         private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
-            iZone = (DateTimeZone) in.readObject();
+            iZone = (DateTimeZone)in.readObject();
         }
     }
 }

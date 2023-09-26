@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-one-shot/xstream_class_40.java",
-    "java_code": "package xstream;\nimport com.thoughtworks.xstream.io.HierarchicalStreamWriter;\nimport com.thoughtworks.xstream.io.HierarchicalStreamReader;\nimport com.thoughtworks.xstream.converters.UnmarshallingContext;\nimport com.thoughtworks.xstream.converters.MarshallingContext;\nimport com.thoughtworks.xstream.converters.Converter;\n//ID = 39005622\n\n\npublic class xstream_class_40 implements Converter {\n\n   @SuppressWarnings(\"rawtypes\")\n   @Override\n   public boolean canConvert(Class clazz) {\n       return clazz.equals(Integer.class);\n   }\n\n   @Override\n   public void marshal(Object object, HierarchicalStreamWriter writer,\n        MarshallingContext context) {\n   }\n\n   @Override\n   public Object unmarshal(HierarchicalStreamReader reader,\n        UnmarshallingContext context) {\n      String text = (String)reader.getValue();\n      Integer number = Integer.parseInt(text.trim());\n      return number;\n   }    \n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

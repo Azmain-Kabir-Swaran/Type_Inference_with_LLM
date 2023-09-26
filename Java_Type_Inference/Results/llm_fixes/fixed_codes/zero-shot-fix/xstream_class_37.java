@@ -1,52 +1,46 @@
-package xstream;
-
-import com.thoughtworks.xstream.io.HierarchicalStreamReader;
-import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
-import com.thoughtworks.xstream.converters.Converter;
-import com.thoughtworks.xstream.converters.MarshallingContext;
-import com.thoughtworks.xstream.converters.UnmarshallingContext;
-
 import java.util.ArrayList;
 
-public class xstream_class_37 {
-    public static class FieldDtoConvertor implements Converter {
+import com.thoughtworks.xstream.convert.Converter;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+import com.thoughtworks.xstream.io.MarshallingContext;
+import com.thoughtworks.xstream.io.UnmarshallingContext;
 
-        @Override
+public class xstream_class_37 {
+    public class FieldDtoConvertor implements Converter {
+
         public boolean canConvert(Class clazz) {
             return clazz.equals(FieldDto.class);
         }
 
-        @Override
         public void marshal(final Object value,
                             final HierarchicalStreamWriter writer,
                             final MarshallingContext context) {
             final FieldDto fieldDto = (FieldDto) value;
-            for (int i = 0; i < fieldDto.getSize(); i++) {
+            for (int i = 0; i < fieldDto.getSize(); i++){
                 writer.addAttribute(fieldDto.getAttributeName(i), fieldDto.getAttributeValue(i));
             }
             writer.setValue(fieldDto.getText());
         }
 
-        @Override
         public Object unmarshal(HierarchicalStreamReader reader,
                                UnmarshallingContext context) {
             FieldDto fieldDto = new FieldDto();
-            for (int i = 0; i < reader.getAttributeCount(); i++) {
+            for (int i = 0; i < reader.getAttributeCount(); i++){
                 fieldDto.addAttribute(reader.getAttributeName(i), reader.getAttribute(i));
             }
             fieldDto.setText(reader.getValue());
             return fieldDto;
         }
     }
-
-    public static class FieldDto {
-        private ArrayList<String> attributeName;
-        private ArrayList<String> attributeValue;
+    public class FieldDto {
+        private ArrayList<String> attributeName = null;
+        private ArrayList<String> attributeValue = null;
         private String text;
 
-        public FieldDto() {
-            attributeName = new ArrayList<>();
-            attributeValue = new ArrayList<>();
+        public FieldDto(){
+            attributeName = new ArrayList<String>();
+            attributeValue = new ArrayList<String>();
         }
 
         public String getAttributeName(int index) {
@@ -70,7 +64,7 @@ public class xstream_class_37 {
             this.text = text;
         }
 
-        public int getSize() {
+        public int getSize(){
             return attributeName.size();
         }
     }

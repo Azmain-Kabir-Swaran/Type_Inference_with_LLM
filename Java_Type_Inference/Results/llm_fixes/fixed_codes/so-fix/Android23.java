@@ -1,16 +1,19 @@
+package androidExamples;
+
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
+
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Random;
-import android.widget.ArrayAdapter;
-import android.graphics.Bitmap;
-import java.net.URL;
-import java.net.HttpURLConnection;
-import android.graphics.BitmapFactory;
-import java.io.IOException;
-import java.net.MalformedURLException;
 
 public class Android23 extends Activity {
     ImageView imView;
@@ -29,18 +32,18 @@ public class Android23 extends Activity {
 
         ListView myListView = (ListView)findViewById(R.id.lay);
         final ArrayList<String> todoItems = new ArrayList<String>();
-        final ArrayAdapter<String> aa = new ArrayAdapter<String>(this,R.layout.main,todoItems);
+        final ArrayAdapter<String> aa = new ArrayAdapter<String>(this, R.layout.main, todoItems);
 
         myListView.setAdapter(aa);
         for(count = 0; count < 2; count++){
+
             todoItems.add(0, "TEST");
             downloadFile(imageUrl + Integer.toString(count) + FileType);
             aa.notifyDataSetChanged();
         }
     }
-    
-    Bitmap bmImg;
 
+    Bitmap bmImg;
     void downloadFile(String fileUrl){
         URL myFileUrl =null;
         try {
@@ -48,14 +51,13 @@ public class Android23 extends Activity {
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
-        
         try {
             HttpURLConnection conn= (HttpURLConnection)myFileUrl.openConnection();
             conn.setDoInput(true);
             conn.connect();
             int length = conn.getContentLength();
             java.io.InputStream is = conn.getInputStream();
-            
+
             bmImg = BitmapFactory.decodeStream(is);
             imViewLine.setImageBitmap(bmImg);
         } catch (IOException e) {

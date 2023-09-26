@@ -8,13 +8,13 @@ import android.widget.ArrayAdapter;
 public class Android07 extends Activity {
 
     String[] mainItems = {
-        "Inbox", "Projects", "Contexts", "Next Actions"
+            "Inbox", "Projects", "Contexts", "Next Actions"
     };
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        setContentView(R.layout.main);
+        setContentView(android.R.layout.simple_list_item_1);
 
         setListAdapter(new ArrayAdapter<String>(
                 this, android.R.layout.simple_list_item_1, mainItems));
@@ -30,4 +30,5 @@ public class Android07 extends Activity {
         // TODO Auto-generated method stub
         return null;
     }
+
 }

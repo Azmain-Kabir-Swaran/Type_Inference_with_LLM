@@ -1,18 +1,21 @@
+package hibernate;
+
 import org.hibernate.Session;
-import org.hibernate.Query;
-import java.util.List;
-import org.hibernate.cfg.Configuration;
 import org.hibernate.Transaction;
 import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
+
+import java.util.List;
 
 public class hibernate_class_31 {
-    public static List<?> getData() {
+    public static List<Users> getData() {
         SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
         Session session = sessionFactory.getCurrentSession();
-        List<?> result = null;
+        List<Users> result = null;
         try {
             session.beginTransaction();
-            Query query = session.createQuery("from Users");
+            Query<Users> query = session.createQuery("from Users", Users.class);
             result = query.list();
             session.getTransaction().commit();
             query.setReadOnly(true);
@@ -21,9 +24,7 @@ public class hibernate_class_31 {
             session.close();
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
-            sessionFactory.close();
         }
-        return result;      
+        return result;
     }
 }

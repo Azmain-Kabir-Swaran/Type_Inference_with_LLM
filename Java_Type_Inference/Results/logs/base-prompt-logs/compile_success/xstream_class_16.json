@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/xstream_class_16.java",
+    "java_code": "import com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.mapper.MapperWrapper;\nimport com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.mapper.MapperWrapper;\n\npublic class xstream_class_16 {\n    public static void main(String arg[]){\n        XStream xstream = new XStream() {\n            @Override\n            protected MapperWrapper wrapMapper(MapperWrapper next) {\n                return new MapperWrapper(next) {\n                    @Override\n                    public boolean shouldSerializeMember(Class definedIn, String fieldName) {\n                        if (definedIn == Object.class) {\n                            return false;\n                        }\n                        return super.shouldSerializeMember(definedIn, fieldName);\n                    }\n                };\n            }\n        };\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

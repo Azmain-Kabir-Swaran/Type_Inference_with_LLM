@@ -1,13 +1,13 @@
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.DataInputStream;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
-import java.io.File;
-import java.io.DataInputStream;
-import java.io.FileInputStream;
 
 public class gwt_class_39 {
-	public static class ReportsServiceImpl extends RemoteServiceServlet {
+	public class ReportsServiceImpl extends RemoteServiceServlet{
 	    public String myMethod(String s) {
 
 	        File f = new File("/excelTestFile.xls");
@@ -35,7 +35,8 @@ public class gwt_class_39 {
 	            op.flush();
 	            op.close();
 
-	        } catch (Exception ex) {
+	        }
+	        catch (Exception ex) {
 	            ex.printStackTrace();
 	        }
 

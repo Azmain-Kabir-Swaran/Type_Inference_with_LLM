@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-one-shot/Android10.java",
-    "java_code": "package androidExamples;\nimport android.util.Log;\nimport android.widget.Chronometer;\nimport android.os.SystemClock;\n//ID = 526524\npublic class Android10 {\n\n\tpublic static void main(String[] args) {\n\t\t\n\t\t// TODO Auto-generated method stub\n\t\tChronometer t = (Chronometer)findViewById(R.id.toptime);\n\t\tlong time = SystemClock.elapsedRealtime()-t.getBase();\n\t\tLog.d(null,\"Was: \"+time); //time is not the proper time for some reason - it is a random number between 0 and 50\n\t\tt.setBase(SystemClock.elapsedRealtime());\n\t\tt.start();\n\n\t}\n\n\tprivate static Chronometer findViewById(int toptime) {\n\t\t// TODO Auto-generated method stub\n\t\treturn null;\n\t}\n\n}",
-    "stdout": "",
-    "stderr": "No error (Ignored 'package R does not exist' errors)",
-    "return_code": 1
-}

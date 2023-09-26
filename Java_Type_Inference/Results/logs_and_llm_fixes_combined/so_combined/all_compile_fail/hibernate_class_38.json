@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset/hibernate_class_38.java",
+    "java_code": "public class hibernate_class_38 {\n\n    public static void main(String... args) {\n        SessionFactory sessionFact = new Configuration().configure().buildSessionFactory();\n        Session ses = sessionFact.openSession();\n        Transaction tx = ses.beginTransaction();\n        String bean =\"\";\n        ses.save(bean);\n        tx.commit();\n        ses.close();\n    }\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/GitHub Codes/so_dataset/hibernate_class_38.java:4: error: cannot find symbol\n        SessionFactory sessionFact = new Configuration().configure().buildSessionFactory();\n        ^\n  symbol:   class SessionFactory\n  location: class hibernate_class_38\n/home/azmain/GitHub Codes/so_dataset/hibernate_class_38.java:4: error: cannot find symbol\n        SessionFactory sessionFact = new Configuration().configure().buildSessionFactory();\n                                         ^\n  symbol:   class Configuration\n  location: class hibernate_class_38\n/home/azmain/GitHub Codes/so_dataset/hibernate_class_38.java:5: error: cannot find symbol\n        Session ses = sessionFact.openSession();\n        ^\n  symbol:   class Session\n  location: class hibernate_class_38\n/home/azmain/GitHub Codes/so_dataset/hibernate_class_38.java:6: error: cannot find symbol\n        Transaction tx = ses.beginTransaction();\n        ^\n  symbol:   class Transaction\n  location: class hibernate_class_38\n4 errors\n",
+    "return_code": 1
+}

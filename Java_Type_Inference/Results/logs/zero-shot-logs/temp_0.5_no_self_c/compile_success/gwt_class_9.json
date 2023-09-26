@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/zero-shot-temp-0.5/gwt_class_9.java",
+    "java_code": "package gwt;\nimport com.google.gwt.user.client.Command;\nimport com.google.gwt.user.client.ui.VerticalPanel;\nimport com.google.gwt.user.client.ui.MenuBar;\n//ID = 1624218\n\npublic class gwt_class_9 {\n\tVerticalPanel v1 = new VerticalPanel();\n\t Command comm = new Command() {\n\t  @Override\n\t  public void execute() {\n\t                       // How i know that which menu item is cliked\n\t  }\n\t };\n\n\t MenuBar menu = new MenuBar();\n\t MenuBar fileBar = new MenuBar(true);\n\t MenuBar editBar = new MenuBar(true);\n}",
+    "stdout": "",
+    "stderr": "Note: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n",
+    "return_code": 0
+}

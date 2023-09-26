@@ -1,12 +1,15 @@
 package androidExamples;
 
-import android.os.Bundle;
-import android.view.View;
-import android.view.ViewGroup.LayoutParams;
-import android.widget.LinearLayout;
 import android.app.Activity;
-import android.content.Context;
+import android.os.Bundle;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
 
+import com.google.android.maps.GeoPoint;
 import com.google.android.maps.MapActivity;
 import com.google.android.maps.MapController;
 import com.google.android.maps.MapView;
@@ -20,13 +23,9 @@ public class Android39 extends MapActivity {
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
-        LinearLayout linearLayout = new LinearLayout(this);
-        setContentView(linearLayout);
+        setContentView(R.layout.main);
 
-        MapView myMapView = new MapView(this, getString(R.string.google_maps_api_key));
-        myMapView.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
-        linearLayout.addView(myMapView);
-
+        MapView myMapView = (MapView) findViewById(R.id.lay);
         MapController mapController = myMapView.getController();
 
         List<Overlay> overlays = myMapView.getOverlays();
@@ -37,13 +36,5 @@ public class Android39 extends MapActivity {
 
     protected boolean isRouteDisplayed() {
         return false;
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        MapView myMapView = (MapView) findViewById(R.id.map);
-        myMapView.invalidate();
     }
 }

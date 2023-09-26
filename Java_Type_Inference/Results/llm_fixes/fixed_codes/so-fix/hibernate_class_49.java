@@ -1,20 +1,19 @@
 import java.io.Serializable;
 import javax.persistence.Entity;
-import javax.persistence.Id;
-import org.hibernate.annotations.NaturalId;
 import javax.persistence.Version;
+import org.hibernate.annotations.NaturalId;
 
 @Entity
 public class hibernate_class_49 implements Serializable {
+    /**
+     * 
+     */
     private static final long serialVersionUID = 1L;
-    
-    @Id
     private String username;
     private String password;
-    
-    @Version
     private Integer VERSION;
 
+    @Version
     public Integer getVERSION() {
         return VERSION;
     }
@@ -22,7 +21,7 @@ public class hibernate_class_49 implements Serializable {
     public void setVERSION(Integer vERSION) {
         VERSION = vERSION;
     }
-    
+
     @NaturalId
     public String getUsername() {
         return username;

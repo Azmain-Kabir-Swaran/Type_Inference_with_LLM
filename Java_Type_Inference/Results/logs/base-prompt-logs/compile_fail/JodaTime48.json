@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/JodaTime48.java",
+    "java_code": "import org.joda.time.DateTime;\nimport org.joda.time.DateTime;\n\npublic interface MillisProvider {\n    long getMillis();\n}\n\npublic class JodaTime48 {\n\n    private final MillisProvider millisProvider;\n    private final DateTime someDate;\n\n    public JodaTime48(MillisProvider millisProvider, DateTime someDate) {\n        this.millisProvider = millisProvider;\n        this.someDate = someDate;\n    }\n\n    public boolean isAvailable() {\n        long now = millisProvider.getMillis();\n        return (someDate.isBefore(now));\n    }\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/code_for_compilation_test/base-prompt/JodaTime48.java:4: error: class MillisProvider is public, should be declared in a file named MillisProvider.java\npublic interface MillisProvider {\n       ^\n1 error\n",
+    "return_code": 1
+}

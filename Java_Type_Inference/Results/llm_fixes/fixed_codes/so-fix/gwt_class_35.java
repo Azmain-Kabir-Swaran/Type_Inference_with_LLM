@@ -10,7 +10,7 @@ public class gwt_class_35 {
         private FlowPanel scroller;
         private final Element e;
 
-        public Scroller() {
+        public Scroller(){
             scroller = new FlowPanel();
             e = scroller.getElement();
         }
@@ -29,7 +29,7 @@ public class gwt_class_35 {
             int scrollStart = 0;
             int scrollStop = 0;
             double position = scrollStart + (progress * (scrollStop - scrollStart));
-            Unit u = Unit.PX;
+            Unit u = null;
             e.getStyle().setLeft(position, u);
         }
     }

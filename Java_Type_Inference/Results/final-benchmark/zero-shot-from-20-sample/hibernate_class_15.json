@@ -1,0 +1,21 @@
+{
+    "filename": "hibernate_class_15",
+    "expected_output": [
+        "import java.io.ByteArrayOutputStream;",
+        "import java.io.IOException;",
+        "import java.io.InputStream;",
+        "import java.sql.Blob;",
+        "import java.sql.SQLException;",
+        "import java.util.Date;",
+        "import org.hibernate.Hibernate;"
+    ],
+    "predicted_output": [
+        "import java.io.InputStream;",
+        "import java.util.Date;",
+        "import java.sql.Blob;",
+        "import java.io.ByteArrayOutputStream;",
+        "import org.hibernate.Hibernate;",
+        "import java.sql.SQLException;",
+        "import java.io.IOException;"
+    ]
+}

@@ -1,0 +1,8 @@
+{
+    "attempt": 2,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android14.java",
+    "java_code": "import java.util.ArrayList;\nimport java.util.List;\nimport java.util.Scanner;\n\npublic class Android14 {\n    public static void main(String[] args) {\n        Scanner input = new Scanner(System.in);\n        int n = input.nextInt();\n        List<Integer> list = new ArrayList<>();\n        for (int i = 0; i < n; i++) {\n            list.add(input.nextInt());\n        }\n        input.close();\n        int max = list.get(0);\n        int min = list.get(0);\n        for (int i = 1; i < n; i++) {\n            if (list.get(i) > max) {\n                max = list.get(i);\n            }\n            if (list.get(i) < min) {\n                min = list.get(i);\n            }\n        }\n        System.out.println(\"Maximum number is: \" + max);\n        System.out.println(\"Minimum number is: \" + min);\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

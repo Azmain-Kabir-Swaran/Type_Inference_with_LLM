@@ -1,0 +1,101 @@
+"attempt": 1
+
+"file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/one-shot-fix/JodaTime48.java"
+
+"java_code": "
+
+package jodatime;
+import org.joda.time.DateTime;
+import org.joda.time.MillisProvider;
+
+public class JodaTime48 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+    private final MillisProvider millisProvider;
+    private final DateTime someDate;
+
+    public JodaTime48(MillisProvider millisProvider, DateTime someDate) {
+        this.millisProvider = millisProvider;
+        this.someDate = someDate;
+    }
+
+    public boolean isAvailable() {
+        long now = millisProvider.getMillis();
+        return (someDate.isBefore(now));
+    }
+}
+"
+
+"used_prompt": "
+
+See the code below:
+"""
+package jodatime;
+import org.joda.time.DateTime;
+//id = 5622194
+
+public class JodaTime48 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+    private final MillisProvider millisProvider;
+    private final DateTime someDate;
+
+    public JodaTime48(MillisProvider millisProvider, DateTime someDate) {
+        this.millisProvider = millisProvider;
+        this.someDate = someDate;
+    }
+
+    public boolean isAvailable() {
+        long now = millisProvider.getMillis();
+        return (someDate.isBefore(now));
+    }
+}
+"""
+For the above code I got the below error log:
+"""
+JodaTime48.java:12: error: cannot find symbol
+    private final MillisProvider millisProvider;
+                  ^
+  symbol:   class MillisProvider
+  location: class JodaTime48
+JodaTime48.java:15: error: cannot find symbol
+    public JodaTime48(MillisProvider millisProvider, DateTime someDate) {
+                      ^
+  symbol:   class MillisProvider
+  location: class JodaTime48
+2 errors
+
+"""
+Now fix the error only by fixing the import statements by not using wildcard imports and must not modify code body which means do not change anything inside the class. So, it can be successfully compiled and reply with full code.
+"
+
+"stdout": ""
+
+"stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/one-shot-fix/JodaTime48.java:3: error: cannot find symbol
+import org.joda.time.MillisProvider;
+                    ^
+  symbol:   class MillisProvider
+  location: package org.joda.time
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/one-shot-fix/JodaTime48.java:12: error: cannot find symbol
+    private final MillisProvider millisProvider;
+                  ^
+  symbol:   class MillisProvider
+  location: class JodaTime48
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/one-shot-fix/JodaTime48.java:15: error: cannot find symbol
+    public JodaTime48(MillisProvider millisProvider, DateTime someDate) {
+                      ^
+  symbol:   class MillisProvider
+  location: class JodaTime48
+3 errors
+"
+
+"return_code": 1
+

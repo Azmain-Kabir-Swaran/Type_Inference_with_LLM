@@ -1,0 +1,23 @@
+{
+    "filename": "xstream_class_27",
+    "expected_output": [
+        "import org.apache.commons.lang.WordUtils;",
+        "import org.apache.http.client.fluent.Content;",
+        "import com.thoughtworks.xstream.XStream;",
+        "import com.thoughtworks.xstream.converters.Converter;",
+        "import com.thoughtworks.xstream.converters.MarshallingContext;",
+        "import com.thoughtworks.xstream.converters.UnmarshallingContext;",
+        "import com.thoughtworks.xstream.io.HierarchicalStreamReader;",
+        "import com.thoughtworks.xstream.io.HierarchicalStreamWriter;"
+    ],
+    "predicted_output": [
+        "import com.thoughtworks.xstream.XStream;",
+        "import com.thoughtworks.xstream.io.HierarchicalStreamWriter;",
+        "import com.thoughtworks.xstream.converters.Converter;",
+        "import org.apache.commons.lang3.text.WordUtils;",
+        "import xstream.Content;",
+        "import com.thoughtworks.xstream.io.HierarchicalStreamReader;",
+        "import com.thoughtworks.xstream.converters.MarshallingContext;",
+        "import com.thoughtworks.xstream.converters.UnmarshallingContext;"
+    ]
+}

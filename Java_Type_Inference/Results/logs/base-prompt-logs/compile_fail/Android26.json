@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/Android26.java",
+    "java_code": "import android.content.Context;\nimport android.view.KeyEvent;\nimport android.view.MotionEvent;\nimport android.view.View;\nimport android.widget.ScrollView;\nimport android.content.Context;\nimport android.view.KeyEvent;\nimport android.view.MotionEvent;\nimport android.view.View;\nimport android.widget.ScrollView;\n\nclass Android26 extends ScrollView {\n\n    public Android26(Context context) {\n        super(context);\n    }\n\n    @Override\n    public boolean onInterceptTouchEvent(MotionEvent ev) {\n        return false;\n    }\n\n    @Override\n    public boolean onKeyDown(int keyCode, KeyEvent event) {\n        return false;\n    }\n}\n\nclass GameView extends View implements View.OnTouchListener {\n\n    public GameView(Context context) {\n        super(context);\n    }\n\n    @Override\n    public boolean onKey(View v, int keyCode, KeyEvent event) {\n        if (keyCode == KeyEvent.KEYCODE_BACK) {\n            //do stuff\n        }\n        invalidate();\n        return true;\n    }\n\n    @Override\n    public boolean onTouch(View arg0, MotionEvent arg1) {\n        return false;\n    }\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/code_for_compilation_test/base-prompt/Android26.java:35: error: method does not override or implement a method from a supertype\n    @Override\n    ^\n1 error\n",
+    "return_code": 1
+}

@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/zero-shot-temp-0.5/gwt_class_15.java",
+    "java_code": "package gwt;\nimport com.google.gwt.http.client.RequestBuilder;\nimport com.google.gwt.http.client.Request;\nimport com.google.gwt.http.client.RequestCallback;\nimport com.google.gwt.http.client.Response;\nimport com.google.gwt.http.client.URL;\nimport com.google.gwt.http.client.RequestException;\n//ID = 1760182\n\npublic class gwt_class_15 {\n\tpublic static void main(String arg[]){\n\n\t\tRequestBuilder builder = new RequestBuilder(RequestBuilder.GET, URL.encode(\"http://localhost:8080/xxxx/yyyy\"));\n\n\t\ttry {\n\t\t       Request request = builder.sendRequest(null, new RequestCallback() {\n\t\t         public void onError(Request request, Throwable exception) {\n\t\t         }\n\n\t\t         public void onResponseReceived1(Request request, Response response) {\n\t\t         }\n\n\t\t\t\t@Override\n\t\t\t\tpublic void onResponseReceived(Request request, Response response) {\n\t\t\t\t\t// TODO Auto-generated method stub\n\t\t\t\t\t\n\t\t\t\t}\n\n\t\t       });\n\t\t     } catch (RequestException e) {\n//\t\t       possiblePages.clear(); possiblePages.addItem(\"could not connect to server\");        \n\t\t     }\n\t\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

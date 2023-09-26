@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/hibernate_class_45.java",
+    "java_code": "import org.hibernate.Session;\nimport org.hibernate.SessionFactory;\nimport org.hibernate.cfg.AnnotationConfiguration;\nimport java.util.Date;\nimport org.hibernate.Session;\nimport org.hibernate.SessionFactory;\nimport org.hibernate.cfg.AnnotationConfiguration;\nimport java.util.Date;\n\npublic class hibernate_class_45 {\n    public static void main(String[] args) {\n        SessionFactory factory = new AnnotationConfiguration().configure().buildSessionFactory();\n        Session session = factory.openSession();\n        session.beginTransaction();\n\n        Message m1 = new Message(\"Hibernated a message on \" + new Date());\n        session.save(m1);\n        session.getTransaction().commit();\n        session.close();\n    }\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/code_for_compilation_test/base-prompt/hibernate_class_45.java:16: error: cannot find symbol\n        Message m1 = new Message(\"Hibernated a message on \" + new Date());\n        ^\n  symbol:   class Message\n  location: class hibernate_class_45\n/home/azmain/code_for_compilation_test/base-prompt/hibernate_class_45.java:16: error: cannot find symbol\n        Message m1 = new Message(\"Hibernated a message on \" + new Date());\n                         ^\n  symbol:   class Message\n  location: class hibernate_class_45\n2 errors\n",
+    "return_code": 1
+}

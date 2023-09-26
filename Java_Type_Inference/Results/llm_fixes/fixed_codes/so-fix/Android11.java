@@ -1,69 +1,38 @@
 package androidExamples;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.graphics.Paint;
-import android.graphics.Point;
 import android.location.Location;
 
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.Projection;
-import com.google.android.gms.maps.model.BitmapDescriptor;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.LatLngBounds;
-import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.maps.model.Polygon;
-import com.google.android.gms.maps.model.PolygonOptions;
-import com.google.android.gms.maps.model.Polyline;
-import com.google.android.gms.maps.model.PolylineOptions;
+import com.google.android.maps.GeoPoint;
+import com.google.android.maps.MapView;
+import com.google.android.maps.MyLocationOverlay;
 
-public class Android11 implements GoogleMap.OnMapClickListener {
-
-    private GoogleMap mMap;
-    private Context mContext;
-
-    public Android11(Context context, GoogleMap map) {
-        mContext = context;
-        mMap = map;
-        mMap.setOnMapClickListener(this);
+public class Android11 extends MyLocationOverlay {
+    
+    public Android11(Context arg0, MapView arg1) {
+        super(arg0, arg1);
     }
 
     @Override
-    public void onMapClick(LatLng point) {
-        // Handle map click events
-    }
+    public void drawMyLocation(Canvas canvas, MapView mapView, Location lastFix, GeoPoint myLocation, long when) {
+        super.drawMyLocation(canvas, mapView, lastFix, myLocation, when);
 
-    private void drawMyLocation() {
-        Location myLocation = mMap.getMyLocation();
-        
-        if (myLocation != null) {
-            LatLng latLng = new LatLng(myLocation.getLatitude(), myLocation.getLongitude());
-            BitmapDescriptor icon = BitmapDescriptorFactory.fromResource(R.drawable.my_location_icon);
-            mMap.addMarker(new MarkerOptions().position(latLng).icon(icon));
-        }
-    }
-
-    private void drawDistance() {
         Location bLocation = new Location("reverseGeocoded");
         bLocation.setLatitude(FindList.gpslat);
         bLocation.setLongitude(FindList.gpslong);
-        
-        Location myLocation = mMap.getMyLocation();
-        
-        if (myLocation != null) {
-            Location aLocation = new Location("reverseGeocoded");
-            aLocation.setLatitude(myLocation.getLatitude());
-            aLocation.setLongitude(myLocation.getLongitude());
-        
-            float distance = aLocation.distanceTo(bLocation);
-            String str = "(" + String.valueOf(distance) + " meters)";
-        }
+        Location aLocation = new Location("reverseGeocoded");
+        aLocation.setLatitude(myLocation.getLatitudeE6());
+        aLocation.setLongitude(myLocation.getLongitudeE6());
+        aLocation.set(aLocation);
+        bLocation.set(bLocation);
+
+        int distance = (int) aLocation.distanceTo(bLocation);
+        String str = " (" + String.valueOf(distance) + " meters)";
     }
 
     static final class FindList {
-        public static double gpslat = 1;
-        public static double gpslong = 1;
+        public static int gpslat = 1;
+        public static int gpslong = 1;
     }
 }

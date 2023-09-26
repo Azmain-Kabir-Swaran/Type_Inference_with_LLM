@@ -1,18 +1,18 @@
-import com.google.gwt.user.client.ui.FormPanel;
-import com.google.gwt.user.client.ui.RootPanel;
-import com.google.gwt.user.client.ui.VerticalPanel;
-import com.google.gwt.user.client.ui.TextBox;
-import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.event.dom.client.SubmitEvent;
-import com.google.gwt.event.dom.client.SubmitCompleteEvent;
-import com.google.gwt.user.client.Window;
+import com.google.gwt.event.dom.client.FormHandler;
+import com.google.gwt.event.dom.client.FormSubmitCompleteEvent;
+import com.google.gwt.event.dom.client.FormSubmitEvent;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.FormPanel;
+import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.VerticalPanel;
 
 public class gwt_class_26 {
     public static void main(String arg[]){
         final FormPanel formPanel = new FormPanel();
-        RootPanel.get().add(formPanel);
+        RootPanel.get("openId").add(formPanel);
         VerticalPanel openIdContainer = new VerticalPanel();
         formPanel.add(openIdContainer);
 
@@ -31,20 +31,18 @@ public class gwt_class_26 {
                 formPanel.submit();
             }
         });
-
         openIdContainer.add(btn);        
-        formPanel.addSubmitHandler(new FormPanel.SubmitHandler() {
-            public void onSubmit(SubmitEvent event)
+
+        formPanel.addFormHandler(new FormHandler() {
+            public void onSubmit(FormSubmitEvent event)
             {
-                event.cancel();
-                Window.alert("On Submit invoked");
+                System.out.println("On Submit invoked " +event.isCancelled());
             }
-        });
-        formPanel.addSubmitCompleteHandler(new FormPanel.SubmitCompleteHandler() {
-            public void onSubmitComplete(SubmitCompleteEvent event)
+            public void onSubmitComplete(FormSubmitCompleteEvent event)
             {
-                Window.alert("On Submit Complete invoked");
+                System.out.println("On Submit Complete invoked " + event.toString());
             }
+
         });
     }
 }

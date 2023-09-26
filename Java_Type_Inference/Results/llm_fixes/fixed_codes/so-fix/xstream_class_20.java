@@ -1,11 +1,11 @@
-import com.thoughtworks.xstream.XStream;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.nio.charset.Charset;
+
+import com.thoughtworks.xstream.XStream;
 
 public class xstream_class_20 {
     @SuppressWarnings("unchecked")
@@ -20,10 +20,12 @@ public class xstream_class_20 {
             Object object = xStream.fromXML(reader);
 
             if (c.isInstance(object)) {
-                return (A) object;
+                return c.cast(object);
             }
-        } catch (Exception exp) {
-        } finally {
+        }
+        catch (Exception exp) {
+        }
+        finally {
             if (false) {
                 return null;
             }

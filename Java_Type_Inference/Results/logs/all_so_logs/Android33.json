@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android33.java",
-    "java_code": "package androidExamples;\n\nimport android.content.Context;\nimport android.graphics.PixelFormat;\nimport android.hardware.Camera;\nimport android.hardware.Camera.Parameters;\nimport android.view.SurfaceHolder;\n\nimport java.io.IOException;\n\npublic class Android33 {\n    private void init(Context context) {\n        boolean mRecording = false;\n\n        int frameCount = 0;\n        Camera mCamera = null;\n        if (mCamera == null) {\n            mCamera = Camera.open();\n        }\n        Parameters parameters = mCamera.getParameters();\n        parameters.setPictureFormat(PixelFormat.JPEG);\n        mCamera.setParameters(parameters);\n        try {\n            SurfaceHolder surfaceHolder = null;\n            mCamera.setPreviewDisplay(surfaceHolder);\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n        mCamera.startPreview();\n\n    }\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

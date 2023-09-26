@@ -7,16 +7,12 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.hardware.Camera;
 import android.hardware.Camera.PictureCallback;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Android48 {
-
-    private Camera camera;
-
     public void captureImage() {
-        camera = Camera.open();
+        Camera camera = null;
         Camera.Parameters params = camera.getParameters();
         camera.setParameters(params);
         PictureCallback jpgCallback = new PictureCallback() {
@@ -39,6 +35,7 @@ public class Android48 {
                     alert.show();
                 }
             }
+
         };
         camera.takePicture(null, null, jpgCallback);
     }

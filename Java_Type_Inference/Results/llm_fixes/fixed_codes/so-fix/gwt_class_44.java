@@ -1,21 +1,22 @@
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.core.client.RunAsyncCallback;
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.ResizeComposite;
 import com.google.gwt.user.client.ui.DockLayoutPanel;
 import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.ResizeComposite;
 import com.google.gwt.dom.client.Style.Unit;
 
-public class GwtClass44 extends ResizeComposite {
+public class gwt_class_44 extends ResizeComposite {
 
-    private static GwtClass44 instance = null;
+    private static gwt_class_44 instance = null;
 
-    public static void getInstance(final AsyncCallback<GwtClass44> callback) {
-        GWT.runAsync(new com.google.gwt.core.client.RunAsyncCallback() {
+    public static void getInstance(final AsyncCallback<gwt_class_44> callback) {
+        GWT.runAsync(new RunAsyncCallback() {
 
             @Override
             public void onSuccess() {
                 if (instance == null) {
-                    instance = new GwtClass44();
+                    instance = new gwt_class_44();
                 }
                 callback.onSuccess(instance);
             }
@@ -27,11 +28,12 @@ public class GwtClass44 extends ResizeComposite {
         });
     }
 
-    private GwtClass44() {
+    private gwt_class_44() {
         DockLayoutPanel dockLayoutPanel = new DockLayoutPanel(Unit.EM);
         dockLayoutPanel.addNorth(new Label("North!"), 7);
         dockLayoutPanel.addWest(new Label("West!"), 15);
         dockLayoutPanel.add(new Label("Center! :D"));
         initWidget(dockLayoutPanel);
     }
+
 }

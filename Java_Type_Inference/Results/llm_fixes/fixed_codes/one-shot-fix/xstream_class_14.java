@@ -1,36 +1,24 @@
-package xstream;
-
+import com.thoughtworks.xstream.converters.ConverterMatcher;
 import com.thoughtworks.xstream.converters.SingleValueConverter;
 
 public class xstream_class_14 {
-    public static class SingleValueEnumConverter implements SingleValueConverter {
-        private final Class<? extends Enum<?>> enumType;
+    public class SingleValueEnumConverter implements SingleValueConverter {
+        private final Class<?> enumType;
 
-        public SingleValueEnumConverter(Class<? extends Enum<?>> enumType) {
-            this.enumType = enumType;
+        public SingleValueEnumConverter(Class<?> type) {
+            this.enumType = type;
         }
 
         public boolean canConvert(Class<?> c) {
-            return enumType.isAssignableFrom(c);
-        }
-
-        public String toString(Object obj) {
-            return ((Enum<?>) obj).name();
+            return c.equals(enumType);
         }
 
         public Object fromString(String value) {
-            return Enum.valueOf(enumType, value);
+            return Enum.valueOf((Class<Enum>) enumType, value);
         }
 
-        @Override
         public String toString(Object obj) {
-            return ((Enum<?>) obj).name();
-        }
-
-        @Override
-        public Object fromString(String str) {
-            Class<? extends Enum<?>> enumClass = (Class<? extends Enum<?>>) enumType;
-            return Enum.valueOf(enumClass, str);
+            return obj.toString();
         }
     }
 }

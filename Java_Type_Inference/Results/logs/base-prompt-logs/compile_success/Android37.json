@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/Android37.java",
+    "java_code": "import android.app.Activity;\nimport android.app.ProgressDialog;\nimport android.os.Bundle;\nimport android.os.Handler;\nimport android.os.Message;\nimport android.app.Activity;\nimport android.app.ProgressDialog;\nimport android.os.Bundle;\nimport android.os.Handler;\nimport android.os.Message;\n\npublic class Android37 extends Activity implements Runnable {\n    public ProgressDialog mProgress;\n\n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_main);\n    }\n\n    // UI has a button that when pressed calls send\n\n    public void send() {\n        mProgress = ProgressDialog.show(this, \"Please wait\",\n                \"Please wait\",\n                true, true);\n        Thread thread = new Thread(this);\n        thread.start();\n    }\n\n    public void run() {\n        try {\n            Thread.sleep(10000);\n        } catch (InterruptedException e) {\n            e.printStackTrace();\n        }\n        Message msg = new Message();\n        mHandler.sendMessage(msg);\n    }\n\n    private final Handler mHandler = new Handler() {\n        @Override\n        public void handleMessage(Message msg) {\n            mProgress.dismiss();\n        }\n    };\n}",
+    "stdout": "",
+    "stderr": "No error (Ignored 'package R does not exist' errors)",
+    "return_code": 1
+}

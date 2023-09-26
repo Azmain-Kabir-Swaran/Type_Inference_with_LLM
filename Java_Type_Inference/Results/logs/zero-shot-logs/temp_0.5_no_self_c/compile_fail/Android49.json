@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/zero-shot-temp-0.5/Android49.java",
+    "java_code": "package androidExamples;\nimport android.content.Context;\nimport android.util.AttributeSet;\nimport android.view.Gravity;\nimport android.view.LayoutInflater;\nimport android.widget.LinearLayout;\nimport androidExamples.R;\n//ID = 1325576\n\npublic class Android49 extends LinearLayout {\n    public Android49(Context context, AttributeSet attrs) {\n        super(context, attrs);\n        ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.main, this, true);\n        setGravity(Gravity.CENTER);\n    }\n\n    public Android49(Context context) {\n        this(context,null);\n    }\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/code_for_compilation_test/zero-shot-temp-0.5/Android49.java:7: error: cannot find symbol\nimport androidExamples.R;\n                      ^\n  symbol:   class R\n  location: package androidExamples\n/home/azmain/code_for_compilation_test/zero-shot-temp-0.5/Android49.java:13: error: package R does not exist\n        ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.main, this, true);\n                                                                                              ^\n2 errors\n",
+    "return_code": 1
+}

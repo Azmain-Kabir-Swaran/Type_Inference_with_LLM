@@ -1,0 +1,8 @@
+{
+    "attempt": 3,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android38.java",
+    "java_code": "import java.util.ArrayList;\nimport java.util.List;\nimport java.util.Scanner;\n\npublic class Android38 {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        int n = scanner.nextInt();\n        List<Integer> list = new ArrayList<>();\n        for (int i = 0; i < n; i++) {\n            int num = scanner.nextInt();\n            list.add(num);\n        }\n        scanner.close();\n        for (int i = 0; i < list.size(); i++) {\n            System.out.println(list.get(i));\n        }\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

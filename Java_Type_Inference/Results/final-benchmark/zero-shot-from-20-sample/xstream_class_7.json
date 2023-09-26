@@ -1,0 +1,9 @@
+{
+    "filename": "xstream_class_7",
+    "expected_output": [
+        "import com.thoughtworks.xstream.annotations.XStreamAsAttribute;"
+    ],
+    "predicted_output": [
+        "import com.thoughtworks.xstream.annotations.XStreamAsAttribute;"
+    ]
+}

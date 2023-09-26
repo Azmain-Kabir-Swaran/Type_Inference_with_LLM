@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/from-20-sample/xstream_class_12.java",
+    "java_code": "package xstream;\nimport java.util.List;\nimport com.thoughtworks.xstream.io.HierarchicalStreamWriter;\nimport com.thoughtworks.xstream.converters.Converter;\nimport com.thoughtworks.xstream.io.HierarchicalStreamReader;\nimport com.thoughtworks.xstream.converters.MarshallingContext;\nimport com.thoughtworks.xstream.converters.UnmarshallingContext;\n//ID = 1791178\n\npublic class xstream_class_12 {\n\tpublic class ListToStringXStreamConverter implements Converter {\n\n\t\tprivate String alias;\n\n\t\tpublic ListToStringXStreamConverter(String alias) {\n\t\t    super();\n\t\t    this.alias = alias;\n\t\t}\n\n\t\t@SuppressWarnings(\"rawtypes\")\n\t\t@Override\n\t\tpublic boolean canConvert(Class type) {\n\t\t    return true;\n\t\t}\n\n\t\t@Override\n\t\tpublic void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {\n\n\t\t    @SuppressWarnings(\"unchecked\")\n\t\t    List<String> list = (List<String>)source;\n\n\t\t    for (String string : list) {\n\t\t        writer.startNode(alias);\n\t\t        writer.setValue(string);\n\t\t        writer.endNode();\n\t\t    }\n\n\t\t}\n\n\t\t@Override\n\t\tpublic Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context) {\n\t\t    throw new UnsupportedOperationException(\"ListToStringXStreamConverter does not offer suport for unmarshal operation\");\n\t\t}\n\n\t\t}\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

@@ -1,8 +1,0 @@
-{
-    "attempt": 2,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/one-shot-fix/gwt_class_2.java",
-    "java_code": "package gwt;\n\nimport com.google.gwt.junit.client.GWTTestCase;\nimport com.google.gwt.core.client.GWT;\n\npublic class gwt_class_2 extends GWTTestCase {\n\n  public String getModuleName() {\n    return \"com.google.gwt.sample.stockwatcher.StockWatcher\";\n  }\n\n  public void testSimple() {\n    assertTrue(true);\n  }\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

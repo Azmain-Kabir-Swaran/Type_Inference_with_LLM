@@ -1,24 +1,26 @@
 package hibernate;
 
 import java.util.List;
-
 import org.hibernate.Session;
+import hibernate.Event;
 
-public class Event {
-    // event properties and methods
-}
+public class hibernate_class_16 {
 
-public class HibernateClass16 {
-    public static class Events {
-        private Session hibernateSession;
+    public class Events {
+        Session hibernateSession;
 
-        public void setHibernateSession(Session hibernateSession) {
+        public void setHibernateSession(Session hibernateSession) throws Exception {
             this.hibernateSession = hibernateSession;
         }
 
+        public void sethibernateSession(Session hibernateSession) throws Exception {
+            this.hibernateSession = hibernateSession;
+        }
+
+        @SuppressWarnings("unchecked")
         public String execute() {
 
-            List<Event> events = hibernateSession.createQuery("from Event").list();
+            List<Event> events = hibernateSession.createQuery("from hibernate.Event", Event.class).list();
 
             for (Event theEvent : events) {
                 // blah blah...

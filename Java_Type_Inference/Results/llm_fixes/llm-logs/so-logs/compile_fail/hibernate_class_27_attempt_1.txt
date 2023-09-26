@@ -1,0 +1,180 @@
+"attempt": 1
+
+"file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/hibernate_class_27.java"
+
+"java_code": "
+
+import java.util.List;
+import org.hibernate.Session;
+import org.hibernate.Query;
+
+public class hibernate_class_27 {
+
+    public static List<ProjectAssignment> getAllResources() {
+        List<ProjectAssignment> projectMasters;
+
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Query query = session.createQuery("select distinct aid, pid, userName from ProjectAssignment");
+        projectMasters = (List<ProjectAssignment>) query.list();
+        session.close();
+
+        return projectMasters;
+    }
+
+    public class ProjectAssignment implements java.io.Serializable {
+
+        private short aid;
+        private String pid;
+        private String userName;
+
+        public ProjectAssignment() {
+        }
+
+        public ProjectAssignment(short aid) {
+            this.aid = aid;
+        }
+
+        public ProjectAssignment(short aid, String pid, String userName) {
+            this.aid = aid;
+            this.pid = pid;
+            this.userName = userName;
+        }
+
+        public short getAid() {
+            return this.aid;
+        }
+
+        public void setAid(short aid) {
+            this.aid = aid;
+        }
+
+        public String getPid() {
+            return this.pid;
+        }
+
+        public void setPid(String pid) {
+            this.pid = pid;
+        }
+
+        public String getUserName() {
+            return this.userName;
+        }
+
+        public void setUserName(String userName) {
+            this.userName = userName;
+        }
+    }
+}
+"
+
+"used_prompt": "
+
+See the code below:
+"""
+public class hibernate_class_27 {
+
+    public static List<ProjectAssignment> getAllResources() {
+        List<ProjectAssignment> projectMasters;
+
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Query query = session.createQuery("select distinct aid, pid, userName from ProjectAssignment");
+        projectMasters = (List<ProjectAssignment>) query.list();
+        session.close();
+
+        return projectMasters;
+    }
+    public class ProjectAssignment  implements java.io.Serializable {
+
+        private short aid;
+        private String pid;
+        private String userName;
+
+       public ProjectAssignment() {
+       }
+
+
+       public ProjectAssignment(short aid) {
+           this.aid = aid;
+       }
+       public ProjectAssignment(short aid, String pid, String userName) {
+          this.aid = aid;
+          this.pid = pid;
+          this.userName = userName;
+       }
+
+       public short getAid() {
+           return this.aid;
+       }
+
+       public void setAid(short aid) {
+           this.aid = aid;
+       }
+       public String getPid() {
+           return this.pid;
+       }
+
+       public void setPid(String pid) {
+           this.pid = pid;
+       }
+       public String getUserName() {
+           return this.userName;
+       }
+
+       public void setUserName(String userName) {
+           this.userName = userName;
+       }
+   }
+}
+"""
+For the above code I got the below error log:
+"""
+hibernate_class_27.java:3: error: cannot find symbol
+    public static List<ProjectAssignment> getAllResources() {
+                  ^
+  symbol:   class List
+  location: class hibernate_class_27
+hibernate_class_27.java:4: error: cannot find symbol
+        List<ProjectAssignment> projectMasters;
+        ^
+  symbol:   class List
+  location: class hibernate_class_27
+hibernate_class_27.java:6: error: cannot find symbol
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        ^
+  symbol:   class Session
+  location: class hibernate_class_27
+hibernate_class_27.java:6: error: cannot find symbol
+        Session session = HibernateUtil.getSessionFactory().openSession();
+                          ^
+  symbol:   variable HibernateUtil
+  location: class hibernate_class_27
+hibernate_class_27.java:7: error: cannot find symbol
+        Query query = session.createQuery("select distinct aid, pid, userName from ProjectAssignment");
+        ^
+  symbol:   class Query
+  location: class hibernate_class_27
+hibernate_class_27.java:8: error: cannot find symbol
+        projectMasters = (List<ProjectAssignment>) query.list();
+                          ^
+  symbol:   class List
+  location: class hibernate_class_27
+6 errors
+
+"""
+Now fix the error only by fixing the import statements by not using wildcard imports and must not modify code body which means do not change anything inside the class. So, it can be successfully compiled and reply with full code.
+"
+
+"stdout": ""
+
+"stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/hibernate_class_27.java:10: error: cannot find symbol
+        Session session = HibernateUtil.getSessionFactory().openSession();
+                          ^
+  symbol:   variable HibernateUtil
+  location: class hibernate_class_27
+Note: /home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/hibernate_class_27.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+1 error
+"
+
+"return_code": 1
+

@@ -1,0 +1,19 @@
+{
+    "filename": "gwt_class_7",
+    "expected_output": [
+        "import com.extjs.gxt.ui.client.widget.table.Table;",
+        "import com.google.gwt.core.client.EntryPoint;",
+        "import com.google.gwt.user.client.Timer;",
+        "import com.google.gwt.user.client.ui.Panel;",
+        "import com.google.gwt.user.client.ui.RootPanel;",
+        "import com.google.gwt.user.client.ui.VerticalPanel;"
+    ],
+    "predicted_output": [
+        "import com.google.gwt.user.client.ui.VerticalPanel;",
+        "import com.google.gwt.user.client.ui.RootPanel;",
+        "import com.google.gwt.user.client.Timer;",
+        "import com.google.gwt.user.client.ui.Table;",
+        "import com.google.gwt.core.client.EntryPoint;",
+        "import com.google.gwt.user.client.ui.Panel;"
+    ]
+}

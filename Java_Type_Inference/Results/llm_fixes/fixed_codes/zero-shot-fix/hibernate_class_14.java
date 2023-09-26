@@ -1,57 +1,57 @@
 package hibernate;
-
-import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import java.io.Serializable;
 import javax.persistence.ManyToOne;
 import javax.persistence.JoinColumn;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.FetchType;
-import java.io.Serializable;
 import java.util.Collection;
+import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.persistence.JoinTable;
+import javax.persistence.ForeignKey;
 
-@Entity
-@Table(name = "tblPermission")
-public class Permission implements Serializable, Cloneable {
+//ID = 1483026
 
-    private static final long serialVersionUID = 7155322069731920447L;
+public class hibernate_class_14 {
+    @Entity
+    @Table(name = "tblPermission")
+    public class Permission implements Serializable, Cloneable {
 
-    @Id
-    @Column(name = "PermissionId", length = 8, nullable = false)
-    private String permissionId = "";
+        private static final long serialVersionUID = 7155322069731920447L;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "CountyId", nullable = false)
-    private County county;
+        @Id
+        @Column(name = "PermissionId", length = 8, nullable = false)
+        private String PermissionId = "";
 
-    @Column(name = "Permission", nullable = true)
-    private Integer permission = 1;
+        @ManyToOne(fetch=FetchType.LAZY)
+        @JoinColumn(name = "CountyId", nullable = false)
+        @ForeignKey(name="FK_CountyID")
+//	    private County county;
 
-    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    private Collection<Item> items;
+        @Column(name = "Permission", nullable = true)
+        private Integer permission = 1;
 
-    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    private Collection<User> users;
+        @ManyToMany( cascade = {CascadeType.PERSIST, CascadeType.MERGE},
+                mappedBy = "Permissions",
+                targetEntity = hibernate_class_14.Item.class )
+        private Collection<hibernate_class_14.Item> items;
 
-    /** Getters and Setters **/
-}
+        @ManyToMany( cascade = {CascadeType.PERSIST, CascadeType.MERGE},
+                mappedBy = "Permissions",
+                targetEntity = hibernate_class_14.User.class )
+        private Collection<hibernate_class_14.User> users;
 
-@Entity
-@Table(name = "tblCounty")
-class County {
+        /** Getters and Setters **/
+    }
 
-}
+    public class Item {
+        // Item class implementation
+    }
 
-@Entity
-@Table(name = "tblItem")
-class Item {
-
-}
-
-@Entity
-@Table(name = "tblUser")
-class User {
-
+    public class User {
+        // User class implementation
+    }
 }

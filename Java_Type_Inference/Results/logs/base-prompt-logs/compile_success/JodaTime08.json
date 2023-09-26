@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/JodaTime08.java",
+    "java_code": "import org.joda.time.Period;\nimport org.joda.time.PeriodType;\nimport java.util.concurrent.TimeUnit;\nimport org.joda.time.Period;\nimport org.joda.time.PeriodType;\nimport java.util.concurrent.TimeUnit;\n\npublic class JodaTime08 {\n    public boolean testIfJodaTimePeriodsHandlesPeriodTypesOtherThanMinutesAndHours() {\n        long twentyDaysInMillis = TimeUnit.MILLISECONDS.convert(20, TimeUnit.DAYS);\n        Period twoWeeks = new Period(twentyDaysInMillis, PeriodType.weeks());\n        return (2 == twoWeeks.getWeeks()) ? true : false;\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

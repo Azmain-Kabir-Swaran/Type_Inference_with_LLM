@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/from-30-sample/hibernate_class_38.java",
+    "java_code": "package hibernate;\nimport org.hibernate.Transaction;\nimport org.hibernate.cfg.Configuration;\nimport org.hibernate.SessionFactory;\nimport org.hibernate.Session;\n//ID = 3556392\n\npublic class hibernate_class_38 {\n\n    public static void main(String... args) {\n        SessionFactory sessionFact = new Configuration().configure().buildSessionFactory();\n        Session ses = sessionFact.openSession();\n        Transaction tx = ses.beginTransaction();\n        String bean =\"\";\n        ses.save(bean);\n        tx.commit();\n        ses.close();\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

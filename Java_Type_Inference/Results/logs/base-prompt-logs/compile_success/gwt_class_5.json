@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/gwt_class_5.java",
+    "java_code": "package gwt;\nimport com.google.gwt.core.client.JsArray;\nimport com.google.gwt.core.client.JsArrayInteger;\n\nimport com.google.gwt.core.client.JsArray;\nimport com.google.gwt.core.client.JsArrayInteger;\n\npublic class gwt_class_5 {\n\tprivate final JsArray<JsArrayInteger> popItemFromArray(\n\t     final JsArray<JsArrayInteger> oldArray) {\n\t    JsArray<JsArrayInteger> newArray = JsArray.createArray().cast();\n\n\t    for (int i = 0; i < oldArray.length() - 1; i++) {\n\t     newArray.set(i, oldArray.get(i));\n\t    }\n\n\t    return newArray;\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

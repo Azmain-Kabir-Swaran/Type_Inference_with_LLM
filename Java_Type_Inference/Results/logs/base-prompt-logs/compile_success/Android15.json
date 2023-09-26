@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/Android15.java",
+    "java_code": "import android.content.Intent;\nimport android.net.Uri;\nimport android.content.Intent;\nimport android.net.Uri;\n\npublic class Android15 {\n\n    public static void main(String[] args) {\n        Intent sendIntent = new Intent(Intent.ACTION_SEND);\n        sendIntent.setType(\"image/jpeg\");\n        sendIntent.putExtra(Intent.EXTRA_SUBJECT, \"Photo\");\n        sendIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse(\"file://sdcard/dcim/Camera/filename.jpg\"));\n        sendIntent.putExtra(Intent.EXTRA_TEXT, \"Enjoy the photo\");\n        startActivity(Intent.createChooser(sendIntent, \"Email:\"));\n    }\n\n    private static void startActivity(Intent createChooser) {\n        // TODO Auto-generated method stub\n\n    }\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

@@ -1,25 +1,14 @@
 package common_JDK;
 
-import java.applet.Applet;
-import java.awt.Color;
-import java.awt.Container;
-import java.awt.Dimension;
-import java.awt.Frame;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import java.awt.image.BufferedImage;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.awt.*;
+import java.awt.event.*;
+import java.awt.image.*;
+import java.io.*;
 
 @SuppressWarnings("serial")
 public class Class_1 {
     private static void createBinaryApplet() throws IOException {
-        Applet applet = new Applet() {
+        java.applet.Applet applet = new java.applet.Applet() {
             @Override
             public void paint(Graphics g) {
                 super.paint(g);
@@ -33,9 +22,9 @@ public class Class_1 {
     }
 
     public static void main(String[] args) {
-        final Frame frame = new Frame("Applet Test");
-        frame.addWindowListener(new WindowAdapter() {
-            public void windowClosing(WindowEvent we) {
+        final java.awt.Frame frame = new java.awt.Frame("Applet Test");
+        frame.addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent we) {
                 frame.dispose();
             }
         });
@@ -43,7 +32,7 @@ public class Class_1 {
         final int prefHeight = 50;
         final int prefWidth = 50;
 
-        Container container = new Container() {
+        java.awt.Container container = new java.awt.Container() {
             @Override
             public void paint(Graphics g) {
                 super.paint(g);
@@ -68,7 +57,7 @@ public class Class_1 {
             createBinaryApplet();
 
             ObjectInputStream ois = new ObjectInputStream(new FileInputStream("applet.dat"));
-            Applet applet = (Applet) ois.readObject();
+            java.applet.Applet applet = (java.applet.Applet) ois.readObject();
             ois.close();
 
             container.add(applet);

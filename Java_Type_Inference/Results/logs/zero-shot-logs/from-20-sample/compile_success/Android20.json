@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/from-20-sample/Android20.java",
+    "java_code": "package androidExamples;\nimport android.widget.TextView;\nimport android.view.View;\nimport android.content.Context;\nimport android.view.animation.ScaleAnimation;\n\n\npublic class Android20 extends View {\n\nprivate static final int BOARD_X_OFFSET = 10;\nprivate static final int BOARD_Y_OFFSET = 10;\n\npublic Android20(Context context) {\n\t\tsuper(context);\n\t\t// TODO Auto-generated constructor stub\n\t}\n\nprivate TextView animText;\n\n\n\nprivate void animText(String text, int color, int xBlocks, int yBlocks) {\n    animText.setText(text);\n    animText.setTextColor(color);\n    animText.setVisibility(View.VISIBLE);\n    int xBlockSize = 2;\n\tfinal int x = BOARD_X_OFFSET + xBlocks * xBlockSize;\n    int yBlockSize = 2;\n\tfinal int y = BOARD_Y_OFFSET + yBlocks * yBlockSize;\n    final float SCALE_FROM = (float) 0.25;\n    final float SCALE_TO = (float) 5.0;\n    ScaleAnimation anim = new ScaleAnimation(SCALE_FROM, SCALE_TO, SCALE_FROM, SCALE_TO, x, y);\n    anim.setDuration(500);\n    animText.setAnimation(anim);\n    this.setAnimation(null);\n    startAnimation(anim);\n}\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

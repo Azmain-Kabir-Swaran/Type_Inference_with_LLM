@@ -1,0 +1,13 @@
+{
+    "filename": "gwt_class_4",
+    "expected_output": [
+        "import com.google.gwt.user.client.ui.Composite;",
+        "import com.google.gwt.user.client.ui.HTML;",
+        "import com.google.gwt.user.client.ui.VerticalSplitPanel;"
+    ],
+    "predicted_output": [
+        "import com.google.gwt.user.client.ui.HTML;",
+        "import com.google.gwt.user.client.ui.VerticalSplitPanel;",
+        "import com.google.gwt.user.client.ui.Composite;"
+    ]
+}

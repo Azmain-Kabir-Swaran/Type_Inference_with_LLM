@@ -1,18 +1,19 @@
 package androidExamples;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.HttpClient;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.HttpResponse;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URI;
 import java.net.URISyntaxException;
-import android.util.Log; // Add this line to import the Log class
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+
+import android.util.Log;
 
 public class Android17 {
-
     private void Login() {
         HttpClient httpClient = new DefaultHttpClient();
         try {
@@ -44,6 +45,7 @@ public class Android17 {
             while ((cnt = isr.read(buff, 0, length - 1)) > 0) {
                 sb.append(buff, 0, cnt);
             }
+
             response = sb.toString();
             isr.close();
         } catch (IOException ioe) {
@@ -51,11 +53,6 @@ public class Android17 {
         }
 
         return response;
-    }
-  
-    public static void main(String[] args) {
-        Android17 androidExample = new Android17();
-        androidExample.Login();
     }
 
 }

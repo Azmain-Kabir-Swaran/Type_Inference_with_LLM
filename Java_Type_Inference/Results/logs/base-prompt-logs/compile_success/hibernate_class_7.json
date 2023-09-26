@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/hibernate_class_7.java",
+    "java_code": "import org.hibernate.Session;\nimport org.hibernate.SessionFactory;\nimport org.hibernate.cfg.AnnotationConfiguration;\nimport org.hibernate.Session;\nimport org.hibernate.SessionFactory;\nimport org.hibernate.cfg.AnnotationConfiguration;\n\npublic class hibernate_class_7 {\n    public static class HibernateUtils {\n        private final SessionFactory sessionFactory;\n        private Session session;\n\n        public HibernateUtils() {\n            this.sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();\n        }\n\n        public HibernateUtils(SessionFactory sessionFactory) {\n            this.sessionFactory = sessionFactory;\n        }\n\n        public Session requestSession() {\n            session = sessionFactory.openSession();\n            return session;\n        }\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

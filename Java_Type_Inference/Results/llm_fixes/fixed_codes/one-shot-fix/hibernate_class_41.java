@@ -1,37 +1,18 @@
-import org.hibernate.*;
-import org.hibernate.criterion.Restrictions;
-import org.hibernate.Transaction;
-import org.hibernate.Criteria;
-import org.hibernate.HibernateException;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-
 import java.util.List;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.HibernateException;
+import org.hibernate.Criteria;
+import org.hibernate.criterion.Restrictions;
+
+import hibernate.HibernateUtil;
+
 public class hibernate_class_41 {
-    private static SessionFactory sessionFactory;
-
-    public static void main(String[] args) {
-        sessionFactory = buildSessionFactory();
-        Session session = sessionFactory.openSession();
-        List results = list(Object.class, 0, 10, new String[]{"searchFilter"});
-        session.close();
-    }
-
-    private static SessionFactory buildSessionFactory() {
-        try {
-            Configuration configuration = new Configuration();
-            configuration.configure("hibernate.cfg.xml");
-            sessionFactory = configuration.buildSessionFactory();
-            return sessionFactory;
-        } catch (Exception e) {
-            e.printStackTrace();
-            throw new RuntimeException("There was an error building the session factory");
-        }
-    }
-
-    @SuppressWarnings("unchecked")
-    public static List list(Class className, int start, int limit, String[] searchFilter) {
+    @SuppressWarnings("null")
+    public static List<?> list(Class<?> className, int start, int limit, String[] searchFilter) {
+        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.openSession();
         Transaction transaction = null;
         try {
@@ -52,18 +33,14 @@ public class hibernate_class_41 {
                 }
             }
 
-            List<?> objects = criteria.list();
             transaction.commit();
-
-            return objects;
-        } catch (HibernateException e) {
-            if (transaction != null) {
-                transaction.rollback();
-            }
+        } catch (Exception e) {
+            transaction.rollback();
             e.printStackTrace();
         } finally {
             session.close();
         }
+
         return null;
     }
 }

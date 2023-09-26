@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
-import java.net.URL;
 import java.net.ProtocolException;
+import java.net.URL;
 
 public class Android14 {
 
@@ -18,16 +18,16 @@ public class Android14 {
 			c.setRequestMethod("GET");
 			c.setDoOutput(true);
 			c.connect();
-			
 			String root = "root";
 			FileOutputStream f = new FileOutputStream(new File(root,"Video.mp4"));
+
 
 			InputStream in = c.getInputStream();
 
 			byte[] buffer = new byte[1024];
 			int len1 = 0;
 			while ( (len1 = in.read(buffer)) > 0 ) {
-			     f.write(buffer, 0, len1);
+			     f.write(buffer);
 			}
 			f.close();
 		} catch (MalformedURLException e) {

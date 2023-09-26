@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/gwt_class_27.java",
+    "java_code": "import com.google.gwt.core.client.EntryPoint;\nimport com.google.gwt.dom.client.Document;\nimport com.google.gwt.dom.client.NodeList;\nimport com.google.gwt.user.client.ui.Button;\nimport com.google.gwt.user.client.ui.RootPanel;\nimport com.google.gwt.core.client.EntryPoint;\nimport com.google.gwt.dom.client.Document;\nimport com.google.gwt.dom.client.NodeList;\nimport com.google.gwt.user.client.ui.Button;\nimport com.google.gwt.user.client.ui.RootPanel;\n\npublic class gwt_class_27 implements EntryPoint {\n    public void onModuleLoad() {\n        final Button sendButton = new Button(\"Send\");\n        sendButton.getElement().setId(\"button\");\n        RootPanel.get().getElement().appendChild(sendButton.getElement());\n\n        NodeList buttonElement = Document.get().getElementsByTagName(\"button\");\n        if (buttonElement != null && buttonElement.getLength() > 0) {\n            buttonElement.getItem(0).setNodeValue(\"Changed\");\n        } else {\n            GWT.log(\"Can't select button\");\n        }\n    }\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/code_for_compilation_test/base-prompt/gwt_class_27.java:22: error: cannot find symbol\n            GWT.log(\"Can't select button\");\n            ^\n  symbol:   variable GWT\n  location: class gwt_class_27\nNote: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n1 error\n",
+    "return_code": 1
+}

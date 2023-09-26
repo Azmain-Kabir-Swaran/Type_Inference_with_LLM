@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/JodaTime27.java",
+    "java_code": "import java.util.ArrayList;\nimport org.joda.time.DateTime;\nimport java.util.ArrayList;\nimport org.joda.time.DateTime;\n\npublic class JodaTime27 {\n\n    public static void main(String[] args) {\n        ArrayList<DateTime> monthStarts = new ArrayList<DateTime>();\n        int firstYear = 0;\n        int lastYear = 0;\n        for (int y = firstYear; y <= lastYear; y++) {\n            for (int m = 1; m <= 12; m++) {\n                monthStarts.add(new DateTime(y + \"-\" + m + \"-01\"));\n            }\n        }\n    }\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

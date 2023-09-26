@@ -1,13 +1,11 @@
-package androidExamples;
-
-import android.os.Bundle;
 import android.widget.LinearLayout;
 import com.google.android.maps.MapActivity;
+import android.os.Bundle;
+import com.google.android.maps.MyLocationOverlay;
+import android.view.View;
 import com.google.android.maps.MapController;
 import com.google.android.maps.MapView;
-import com.google.android.maps.MyLocationOverlay;
 import com.google.android.maps.Overlay;
-
 import java.util.List;
 
 public class Android39 extends MapActivity {
@@ -15,10 +13,9 @@ public class Android39 extends MapActivity {
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
-        // Replace "activity_main" with the correct layout file name in the setContentView method
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.main);
 
-        MapView myMapView = (MapView) findViewById(R.id.map_view);
+        MapView myMapView = (MapView) findViewById(R.id.lay);
         MapController mapController = myMapView.getController();
 
         List<Overlay> overlays = myMapView.getOverlays();
@@ -30,5 +27,4 @@ public class Android39 extends MapActivity {
     protected boolean isRouteDisplayed() {
         return false;
     }
-
 }

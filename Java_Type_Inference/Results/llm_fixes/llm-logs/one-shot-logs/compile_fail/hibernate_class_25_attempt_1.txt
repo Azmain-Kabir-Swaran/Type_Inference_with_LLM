@@ -1,0 +1,156 @@
+"attempt": 1
+
+"file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/one-shot-fix/hibernate_class_25.java"
+
+"java_code": "
+
+package hibernate;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+import javax.persistence.OneToOne;
+import javax.persistence.Entity;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
+
+public class hibernate_class_25{
+    @Entity
+    public class A {
+
+        private Integer id;
+        private B b;
+
+        public A() {
+            super();
+        }
+
+        @Id
+        @GeneratedValue
+        public Integer getId() {
+            return id;
+        }
+
+        public void setId(Integer id) {
+            this.id = id;
+        }
+
+        @OneToOne (cascade=CascadeType.ALL)
+        @Fetch(FetchMode.JOIN)
+        public B getB() {
+            return b;
+        }
+
+        public void setB(B b) {
+            this.b = b;
+        }
+    }
+    @Entity
+    public class B {
+
+        private Integer id;
+
+        public B() {
+            super();
+        }
+
+        @Id
+        @GeneratedValue
+        public Integer getId() {
+            return id;
+        }
+
+        public void setId(Integer id) {
+            this.id = id;
+        }   
+    }
+}
+"
+
+"used_prompt": "
+
+See the code below:
+"""
+package hibernate;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+import javax.persistence.OneToOne;
+import javax.persistence.Entity;
+import org.hibernate.annotations.CascadeType;
+//ID = 2931936
+
+public class hibernate_class_25{
+	@Entity
+	public class A {
+
+	    private Integer id;
+	    private B b;
+
+	    public A() {
+	        super();
+	    }
+
+	    @Id
+	    @GeneratedValue
+	    public Integer getId() {
+	        return id;
+	    }
+
+	    public void setId(Integer id) {
+	        this.id = id;
+	    }
+
+	    @OneToOne (cascade=CascadeType.ALL)
+	    @Fetch(FetchMode.JOIN)
+	    public B getB() {
+	        return b;
+	    }
+
+	    public void setB(B b) {
+	        this.b = b;
+	    }
+	}
+	@Entity
+	public class B {
+
+	    private Integer id;
+
+	    public B() {
+	        super();
+	    }
+
+	    @Id
+	    @GeneratedValue
+	    public Integer getId() {
+	        return id;
+	    }
+
+	    public void setId(Integer id) {
+	        this.id = id;
+	    }   
+	}
+}
+"""
+For the above code I got the below error log:
+"""
+hibernate_class_25.java:32: error: incompatible types: org.hibernate.annotations.CascadeType cannot be converted to javax.persistence.CascadeType
+	    @OneToOne (cascade=CascadeType.ALL)
+	                                  ^
+1 error
+
+"""
+Now fix the error only by fixing the import statements by not using wildcard imports and must not modify code body which means do not change anything inside the class. So, it can be successfully compiled and reply with full code.
+"
+
+"stdout": ""
+
+"stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/one-shot-fix/hibernate_class_25.java:32: error: incompatible types: org.hibernate.annotations.CascadeType cannot be converted to javax.persistence.CascadeType
+        @OneToOne (cascade=CascadeType.ALL)
+                                      ^
+1 error
+"
+
+"return_code": 1
+

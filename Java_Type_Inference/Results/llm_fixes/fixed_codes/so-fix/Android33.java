@@ -5,7 +5,6 @@ import android.graphics.PixelFormat;
 import android.hardware.Camera;
 import android.hardware.Camera.Parameters;
 import android.view.SurfaceHolder;
-
 import java.io.IOException;
 
 public class Android33 {
@@ -27,6 +26,5 @@ public class Android33 {
             e.printStackTrace();
         }
         mCamera.startPreview();
-
     }
 }

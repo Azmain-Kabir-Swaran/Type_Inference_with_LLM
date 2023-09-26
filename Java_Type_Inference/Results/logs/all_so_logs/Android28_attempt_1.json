@@ -1,0 +1,9 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android28.java",
+    "java_code": "package androidExamples;\n\nimport android.content.Context;\n\npublic class Android28 extends android.app.Application {\n\n    private static Android28 instance;\n\n    public Android28() {\n        instance = this;\n    }\n\n    public static Context getContext() {\n        return instance;\n    }\n\n}",
+    "used_prompt": "See the code below:\n\"\"\"\npackage androidExamples;\npublic class Android28 extends android.app.Application {\n\n    private static Android28 instance;\n\n    public Android28() {\n     instance = this;\n    }\n\n    public static Context getContext() {\n     return instance;\n    }\n\n}\n\n\"\"\"\nFor the above code I got the below error log:\n\"\"\"\nAndroid28.java:10: error: cannot find symbol\n    public static Context getContext() {\n                  ^\n  symbol:   class Context\n  location: class Android28\n1 error\n\n\"\"\"\nNow fix the error only by fixing the import statements by not using wildcard imports and must not modify code body which means do not change anything inside the class. So, it can be successfully compiled and reply with full code.",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

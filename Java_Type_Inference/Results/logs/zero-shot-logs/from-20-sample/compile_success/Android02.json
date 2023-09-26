@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/from-20-sample/Android02.java",
+    "java_code": "package androidExamples;\nimport android.os.Bundle;\nimport android.app.Activity;\n\n\n\npublic class Android02 extends Activity\n{\n    /** Called when the activity is first created. */\n    @Override\n    public void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.main);\n    }\n}",
+    "stdout": "",
+    "stderr": "No error (Ignored 'package R does not exist' errors)",
+    "return_code": 1
+}

@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/zero-shot-temp-0.5/Android08.java",
+    "java_code": "package androidExamples;\nimport java.io.IOException;\nimport java.net.Inet4Address;\nimport java.net.InetAddress;\nimport java.net.Socket;\nimport java.net.UnknownHostException;\nimport android.util.Log;\n\n\n\n//ID = 442496\npublic class Android08 {\n\n\tprivate static final String TAG = \"TAG\";\n\n\tpublic static void main(String[] args) {\n\t\t// TODO Auto-generated method stub\n\n\t\t\t\ttry {\n\t\t\t\t    InetAddress server = Inet4Address.getByName(\"thehost\");\n\t\t\t\t    //Doesn't work either\n\t\t\t\t    //or InetAddress server2 = Inet4Address.getByAddress(new String(\"192.168.1.30\").getBytes());\n\n\t\t\t\t    if(server.isReachable(5000)){\n\t\t\t\t        Log.d(TAG, \"Ping!\");\n\t\t\t\t    }\n\n\t\t\t\t    Socket clientsocket = new Socket(server, 8080);\n\t\t\t\t} catch (UnknownHostException e) {\n\t\t\t\t    Log.e(TAG, \"Server Not Found\");\n\t\t\t\t} catch (IOException e) {\n\t\t\t\t    Log.e(TAG, \"Couldn't open socket\");\n\t\t\t\t}\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

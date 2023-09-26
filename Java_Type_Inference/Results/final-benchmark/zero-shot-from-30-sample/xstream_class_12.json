@@ -1,0 +1,19 @@
+{
+    "filename": "xstream_class_12",
+    "expected_output": [
+        "import java.util.List;",
+        "import com.thoughtworks.xstream.converters.Converter;",
+        "import com.thoughtworks.xstream.converters.MarshallingContext;",
+        "import com.thoughtworks.xstream.converters.UnmarshallingContext;",
+        "import com.thoughtworks.xstream.io.HierarchicalStreamReader;",
+        "import com.thoughtworks.xstream.io.HierarchicalStreamWriter;"
+    ],
+    "predicted_output": [
+        "import java.util.List;",
+        "import com.thoughtworks.xstream.io.HierarchicalStreamWriter;",
+        "import com.thoughtworks.xstream.converters.Converter;",
+        "import com.thoughtworks.xstream.io.HierarchicalStreamReader;",
+        "import com.thoughtworks.xstream.converters.MarshallingContext;",
+        "import com.thoughtworks.xstream.converters.UnmarshallingContext;"
+    ]
+}

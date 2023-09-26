@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/JodaTime20.java",
+    "java_code": "import org.joda.time.DateTime;\nimport org.joda.time.DateTimeZone;\nimport org.joda.time.format.DateTimeFormat;\nimport org.joda.time.format.DateTimeFormatter;\nimport org.joda.time.DateTime;\nimport org.joda.time.DateTimeZone;\nimport org.joda.time.format.DateTimeFormat;\nimport org.joda.time.format.DateTimeFormatter;\n\npublic class JodaTime20 {\n\n    public static void main(String[] args) {\n        String DATE_FORMAT = \"yyyy-MM-dd HH:mm:ss\";\n        DateTimeFormatter DATETIME_FORMATTER = DateTimeFormat.forPattern(DATE_FORMAT);\n        DateTimeZone dateTimeZone = DateTimeZone.forID(\"-03:00\");\n        DateTime date = DATETIME_FORMATTER.withZone(dateTimeZone).parseDateTime(\"2000-01-01 00:00:00\");\n        System.out.println(\"Current date is: \" + date.toString());\n        DateTime convertedDate = date.toDateTime(DateTimeZone.UTC);\n        System.out.println(\"Converted date: \" + convertedDate.toString());\n    }\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

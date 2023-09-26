@@ -1,0 +1,13 @@
+{
+    "filename": "xstream_class_10",
+    "expected_output": [
+        "import java.io.StringWriter;",
+        "import com.thoughtworks.xstream.XStream;",
+        "import com.thoughtworks.xstream.io.xml.PrettyPrintWriter;"
+    ],
+    "predicted_output": [
+        "import com.thoughtworks.xstream.io.xml.PrettyPrintWriter;",
+        "import java.io.StringWriter;",
+        "import com.thoughtworks.xstream.XStream;"
+    ]
+}

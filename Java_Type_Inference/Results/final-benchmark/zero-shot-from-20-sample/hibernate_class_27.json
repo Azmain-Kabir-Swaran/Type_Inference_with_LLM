@@ -1,0 +1,14 @@
+{
+    "filename": "hibernate_class_27",
+    "expected_output": [
+        "import java.util.List;",
+        "import org.hibernate.Query;",
+        "import org.hibernate.Session;"
+    ],
+    "predicted_output": [
+        "import org.hibernate.Query;",
+        "import java.util.List;",
+        "import org.hibernate.Session;",
+        "import hibernate.HibernateUtil;"
+    ]
+}

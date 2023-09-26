@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/from-30-sample/JodaTime15.java",
+    "java_code": "package jodatime;\nimport org.joda.time.MutableDateTime;\nimport org.joda.time.DateTime;\n//5451152\n\npublic class JodaTime15 {\n\tpublic static void main(String[] args) \n\t{\n\t\tMutableDateTime now = new MutableDateTime();\n\t\tnow.setHourOfDay(2);\n\t\tnow.setMinuteOfHour(0);\n\t\tnow.setSecondOfMinute(0);\n\t\tnow.setMillisOfSecond(0);\n\t\tDateTime myDate = now.toDateTime();\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

@@ -1,16 +1,20 @@
-import java.util.Iterator;
-import java.net.MalformedURLException;
-import org.hibernate.HibernateException;
-import org.hibernate.tool.hbm2ddl.SchemaExport;
-import java.util.List;
-import org.hibernate.SessionFactory;
-import java.io.File;
-import org.hibernate.cfg.Configuration;
+package hibernate;
+
+import org.dom4j.io.SAXReader;
 import org.dom4j.DocumentException;
 import org.dom4j.Document;
+
+import java.io.File;
+import java.net.MalformedURLException;
+import java.util.Iterator;
+import java.util.List;
+
+import org.hibernate.HibernateException;
+import org.hibernate.SessionFactory;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.dom4j.io.SAXReader;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.tool.hbm2ddl.SchemaExport;
 
 public class hibernate_class_6 {
 
@@ -28,7 +32,7 @@ public class hibernate_class_6 {
         SessionFactory sessionFactory = config.buildSessionFactory();
         Session session = sessionFactory.openSession();
         Transaction tx = session.beginTransaction();
-        Session dom4jSession = session;
+        Session dom4jSession = session.getSession(org.hibernate.EntityMode.DOM4J);
 
         SAXReader saxReader = new SAXReader();
         try {
@@ -39,7 +43,7 @@ public class hibernate_class_6 {
 
             while (iter.hasNext()) {
                 Object personObj = iter.next();
-                // dom4jSession.save(Person.class.getName(), personObj);
+//                dom4jSession.save(Person.class.getName(), personObj);
             }
 
             session.flush();

@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/xstream_class_42.java",
+    "java_code": "import com.thoughtworks.xstream.annotations.XStreamAlias;\nimport com.thoughtworks.xstream.annotations.XStreamImplicit;\n\nimport java.util.List;\n\npublic class xstream_class_42 {\n    @XStreamAlias(\"addressServiceConfig\")\n    public class AddressServiceConfig {\n        private String pathToCodeposFiles;\n        @XStreamImplicit(itemFieldName = \"region\")\n        private List<Region> regions;\n    }\n\n    @XStreamAlias(\"region\")\n    public class Region {\n        private String regionName;\n        @XStreamImplicit(itemFieldName = \"province\")\n        private List<Province> provinces;\n    }\n\n    @XStreamAlias(\"province\")\n    public class Province {\n        private int code;\n        private String name;\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

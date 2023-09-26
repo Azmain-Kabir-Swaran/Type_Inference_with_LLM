@@ -10,7 +10,7 @@ public class gwt_class_28 {
     /**
      * Entry point classes define <code>onModuleLoad()</code>.
      */
-    public static class Test implements EntryPoint {
+    public class Test implements EntryPoint {
         /**
          * The message displayed to the user when the server cannot be reached or
          * returns an error.
@@ -33,19 +33,25 @@ public class gwt_class_28 {
                 Window.alert("Failed to send the message: " 
                         + e.getMessage());
             }
+
         }
 
-        static class Jazz10RequestCallback implements RequestCallback {
+        class Jazz10RequestCallback implements RequestCallback{
 
             public void onError(Request request, Throwable exception) {
-                Window.alert("Failed to send the message: "
+                    // never reach here
+            Window.alert("Failed to send the message: "
                         + exception.getMessage());
 
             }
 
             public void onResponseReceived(Request request, Response response) {
+                // render output
                 Window.alert(response.getText());
+
             }
+
+
         }
     }
 }

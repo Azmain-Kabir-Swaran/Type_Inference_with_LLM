@@ -1,13 +1,16 @@
+package androidExamples;
+
 import java.io.ByteArrayOutputStream;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
-import android.graphics.Bitmap;
 import java.io.ByteArrayInputStream;
-import android.content.Context;
-import android.content.ContentResolver;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import android.content.ContentResolver;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 
+//ID = 559902
 public class Android13 {
     public static void main(String[] args) {
         Uri imageUri = null;
@@ -25,7 +28,7 @@ public class Android13 {
     }
 
     private static ContentResolver getContentResolver() {
-        // TODO: Implement the getContentResolver method
+        // TODO Auto-generated method stub
         return null;
     }
 }

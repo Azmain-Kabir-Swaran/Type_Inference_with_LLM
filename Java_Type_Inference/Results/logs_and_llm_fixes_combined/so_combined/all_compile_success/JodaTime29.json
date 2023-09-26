@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime29.java",
+    "java_code": "import org.joda.time.DateTime;\nimport org.joda.time.format.DateTimeFormatter;\n\npublic class JodaTime29 {\n\n    private static final int FIELD_COUNT = 10;\n\n    public static void main(String[] args) {\n\n    }\n\n    public DateTime parseDateTime(final String text) {\n        DateTimeFormatter formatters[] = new DateTimeFormatter[20];\n        if (text.isEmpty()) return null;\n        int field = 0;\n        DateTime dateTime = null;\n        IllegalArgumentException exception = null;\n        for (; field < FIELD_COUNT; ++field) {\n            if (null != formatters[field]) {\n                try {\n                    dateTime = formatters[field].parseDateTime(text);\n                    break;\n                } catch (final IllegalArgumentException e) {\n                    exception = null != exception ? exception : e;\n                }\n            }\n        }\n        if (dateTime == null) {\n            throw exception;\n        }\n        return dateTime;\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

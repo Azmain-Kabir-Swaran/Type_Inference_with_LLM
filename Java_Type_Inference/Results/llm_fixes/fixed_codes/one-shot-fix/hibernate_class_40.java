@@ -12,7 +12,8 @@ public class hibernate_class_40 {
 
         Session session = null;
 
-        try {
+        try{
+
             SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
 
@@ -22,15 +23,19 @@ public class hibernate_class_40 {
             System.out.print("Done");
             List l = q.list();
 
-            for(Iterator it = l.iterator(); it.hasNext(); ) {
-                Object row[] = (Object[])it.next();
+            for(Iterator it = l.iterator(); it.hasNext();){
+                Object[] row = (Object[]) it.next();
                 System.out.println(row.length);
             }
-        } catch (Exception e) {
+
+        }
+        catch (Exception e) {
             e.printStackTrace();
-        } finally {
+        }
+        finally{
             session.flush();
             session.close();
+
         }
     }
 }

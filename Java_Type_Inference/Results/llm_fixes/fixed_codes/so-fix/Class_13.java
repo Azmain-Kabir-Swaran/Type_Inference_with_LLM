@@ -1,3 +1,5 @@
+package common_JDK;
+
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
 import javax.swing.SwingUtilities;
@@ -6,11 +8,13 @@ import javax.swing.UIManager;
 class WhereToPutTheGui {
 
     public static void initGui() {
-        for (int ii = 1; ii < 4; ii++) {
+        for (int ii=1; ii<4; ii++) {
             JFrame f = new JFrame("Frame " + ii);
             f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-            String s = "os.name: " + System.getProperty("os.name") + "\nos.version: " + System.getProperty("os.version");
-            f.add(new JTextArea(s, 3, 28));  // suggest a size
+            String s =
+                "os.name: " + System.getProperty("os.name") +
+                "\nos.version: " + System.getProperty("os.version");
+            f.add(new JTextArea(s,3,28));  // suggest a size
             f.pack();
             // Let the OS handle the positioning!
             f.setLocationByPlatform(true);
@@ -19,12 +23,12 @@ class WhereToPutTheGui {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
+        SwingUtilities.invokeLater( new Runnable() {
             public void run() {
                 try {
-                    UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-                } catch (Exception useDefault) {
-                }
+                    UIManager.setLookAndFeel(
+                        UIManager.getSystemLookAndFeelClassName());
+                } catch (Exception useDefault) {}
                 initGui();
             }
         });

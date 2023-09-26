@@ -1,0 +1,195 @@
+"attempt": 1
+
+"file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android47.java"
+
+"java_code": "
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.TextView;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+
+public class Android47 extends Activity {
+    /** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+
+        DefaultHttpClient client = new DefaultHttpClient();
+
+        HttpGet method = new HttpGet("http://www.google.com");
+
+        try {
+            client.execute(method);
+            TextView t = (TextView) findViewById(R.id.lay);
+            t.setText("Ok");
+        } catch (ClientProtocolException e) {
+            TextView t = (TextView) findViewById(R.id.lay);
+            t.setText(e.getMessage());
+        } catch (IOException e) {
+            TextView t = (TextView) findViewById(R.id.lay);
+            t.setText(e.getMessage());
+        }
+
+    }
+}
+"
+
+"used_prompt": "
+
+See the code below:
+"""
+package androidExamples;
+
+public class Android47 extends Activity {
+    /** Called when the activity is first created. */
+    @Override
+   public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.main);
+
+    DefaultHttpClient client = new DefaultHttpClient();
+
+    HttpGet method = new HttpGet("http://www.google.com");
+
+    try {
+  client.execute(method);
+  TextView t = (TextView) findViewById(R.id.lay);
+  t.setText("Ok");
+ } catch (ClientProtocolException e) {
+  TextView t = (TextView) findViewById(R.id.lay);
+  t.setText(e.getMessage());
+ } catch (IOException e) {
+  TextView t = (TextView) findViewById(R.id.lay);
+  t.setText(e.getMessage());
+ }
+
+    }
+}
+"""
+For the above code I got the below error log:
+"""
+Android47.java:3: error: cannot find symbol
+public class Android47 extends Activity {
+                               ^
+  symbol: class Activity
+Android47.java:6: error: cannot find symbol
+   public void onCreate(Bundle savedInstanceState) {
+                        ^
+  symbol:   class Bundle
+  location: class Android47
+Android47.java:5: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+Android47.java:7: error: cannot find symbol
+    super.onCreate(savedInstanceState);
+    ^
+  symbol:   variable super
+  location: class Android47
+Android47.java:8: error: package R does not exist
+    setContentView(R.layout.main);
+                    ^
+Android47.java:10: error: cannot find symbol
+    DefaultHttpClient client = new DefaultHttpClient();
+    ^
+  symbol:   class DefaultHttpClient
+  location: class Android47
+Android47.java:10: error: cannot find symbol
+    DefaultHttpClient client = new DefaultHttpClient();
+                                   ^
+  symbol:   class DefaultHttpClient
+  location: class Android47
+Android47.java:12: error: cannot find symbol
+    HttpGet method = new HttpGet("http://www.google.com");
+    ^
+  symbol:   class HttpGet
+  location: class Android47
+Android47.java:12: error: cannot find symbol
+    HttpGet method = new HttpGet("http://www.google.com");
+                         ^
+  symbol:   class HttpGet
+  location: class Android47
+Android47.java:16: error: cannot find symbol
+  TextView t = (TextView) findViewById(R.id.lay);
+  ^
+  symbol:   class TextView
+  location: class Android47
+Android47.java:16: error: cannot find symbol
+  TextView t = (TextView) findViewById(R.id.lay);
+                ^
+  symbol:   class TextView
+  location: class Android47
+Android47.java:16: error: package R does not exist
+  TextView t = (TextView) findViewById(R.id.lay);
+                                        ^
+Android47.java:18: error: cannot find symbol
+ } catch (ClientProtocolException e) {
+          ^
+  symbol:   class ClientProtocolException
+  location: class Android47
+Android47.java:19: error: cannot find symbol
+  TextView t = (TextView) findViewById(R.id.lay);
+  ^
+  symbol:   class TextView
+  location: class Android47
+Android47.java:19: error: cannot find symbol
+  TextView t = (TextView) findViewById(R.id.lay);
+                ^
+  symbol:   class TextView
+  location: class Android47
+Android47.java:19: error: package R does not exist
+  TextView t = (TextView) findViewById(R.id.lay);
+                                        ^
+Android47.java:21: error: cannot find symbol
+ } catch (IOException e) {
+          ^
+  symbol:   class IOException
+  location: class Android47
+Android47.java:22: error: cannot find symbol
+  TextView t = (TextView) findViewById(R.id.lay);
+  ^
+  symbol:   class TextView
+  location: class Android47
+Android47.java:22: error: cannot find symbol
+  TextView t = (TextView) findViewById(R.id.lay);
+                ^
+  symbol:   class TextView
+  location: class Android47
+Android47.java:22: error: package R does not exist
+  TextView t = (TextView) findViewById(R.id.lay);
+                                        ^
+20 errors
+
+"""
+Now fix the error only by fixing the import statements by not using wildcard imports and must not modify code body which means do not change anything inside the class. So, it can be successfully compiled and reply with full code.
+"
+
+"stdout": ""
+
+"stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android47.java:13: error: package R does not exist
+        setContentView(R.layout.main);
+                        ^
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android47.java:21: error: package R does not exist
+            TextView t = (TextView) findViewById(R.id.lay);
+                                                  ^
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android47.java:24: error: package R does not exist
+            TextView t = (TextView) findViewById(R.id.lay);
+                                                  ^
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android47.java:26: error: cannot find symbol
+        } catch (IOException e) {
+                 ^
+  symbol:   class IOException
+  location: class Android47
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android47.java:27: error: package R does not exist
+            TextView t = (TextView) findViewById(R.id.lay);
+                                                  ^
+Note: /home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android47.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+5 errors
+"
+
+"return_code": 1
+

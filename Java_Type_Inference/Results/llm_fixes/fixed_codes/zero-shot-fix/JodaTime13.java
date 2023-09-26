@@ -1,11 +1,11 @@
 package jodatime;
-import org.junit.Assert;
+
 import org.junit.Test;
+import org.junit.Assert;
+
 import org.joda.time.format.PeriodFormatterBuilder;
 import org.joda.time.format.PeriodFormatter;
 import org.joda.time.Period;
-
-import static org.junit.Assert.*;
 
 public class JodaTime13 {
     // ID = 4585883
@@ -15,29 +15,29 @@ public class JodaTime13 {
 
     @Test
     public void second() {
-        assertEquals("00:00:01", OurDateTimeFormatter.format(1000));
+        Assert.assertEquals("00:00:01", OurDateTimeFormatter.format(1000));
     }
 
     @Test
     public void minute() {
-        assertEquals("00:01:00", OurDateTimeFormatter.format(1000 * 60));
+        Assert.assertEquals("00:01:00", OurDateTimeFormatter.format(1000 * 60));
     }
 
     @Test
     public void hour() {
-        assertEquals("01:00:00", OurDateTimeFormatter.format(1000 * 60 * 60));
+        Assert.assertEquals("01:00:00", OurDateTimeFormatter.format(1000 * 60 * 60));
     }
 
     @Test
     public void almostMidnight() {
         final int secondsInDay = 60 * 60 * 24;
-        assertEquals("23:59:59", OurDateTimeFormatter.format(1000 * (secondsInDay - 1)));
+        Assert.assertEquals("23:59:59", OurDateTimeFormatter.format(1000 * (secondsInDay - 1)));
     }
 
     @Test
     public void twoDaysAndAHalf() {
         final int secondsInDay = 60 * 60 * 24;
-        assertEquals("12:00:00 and 2 days", OurDateTimeFormatter.format(1000 * secondsInDay * 5 / 2));
+        Assert.assertEquals("12:00:00 and 2 days", OurDateTimeFormatter.format(1000 * secondsInDay * 5 / 2));
     }
 
     public static class OurDateTimeFormatter {
@@ -54,7 +54,6 @@ public class JodaTime13 {
                 .appendSeparator(":")
                 .appendSeconds().minimumPrintedDigits(2)
                 .toFormatter();
-
 
         public static String format(long millis) {
             return dateFormat.print(new Period(millis).normalizedStandard());

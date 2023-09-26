@@ -1,0 +1,13 @@
+{
+    "filename": "gwt_class_40",
+    "expected_output": [
+        "import com.extjs.gxt.ui.client.widget.LayoutContainer;",
+        "import com.google.gwt.user.client.ui.HorizontalPanel;",
+        "import com.google.gwt.user.client.ui.Label;"
+    ],
+    "predicted_output": [
+        "import com.google.gwt.user.client.ui.Label;",
+        "import com.sencha.gxt.widget.core.client.container.LayoutContainer;",
+        "import com.google.gwt.user.client.ui.HorizontalPanel;"
+    ]
+}

@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/zero-shot-temp-0.5/gwt_class_21.java",
+    "java_code": "package gwt;\nimport com.google.gwt.user.client.ui.PopupPanel;\nimport com.google.gwt.user.client.ui.Button;\nimport com.google.gwt.user.client.ui.Widget;\nimport com.google.gwt.user.client.ui.VerticalPanel;\n//ID = 2214891\n\npublic class gwt_class_21 {\n\tprivate static class PopUpPanel extends PopupPanel{\n\n\t    Button connect = new Button(\"Connect\");\n\t    Button delete = new Button(\"Delete\");\n\t    Button detail = new Button(\"Detail\");\n\n\t    public PopUpPanel(final Widget widget){\n\t       super(true);\n\t       VerticalPanel vp = new VerticalPanel();\n\t       vp.add(connect);\n\t       vp.add(delete);\n\t       vp.add(detail);\n\n\t       setWidget(vp);\n\t    }\n\t}\n}",
+    "stdout": "",
+    "stderr": "Note: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n",
+    "return_code": 0
+}

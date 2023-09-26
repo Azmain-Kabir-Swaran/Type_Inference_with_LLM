@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/xstream_class_31.java",
-    "java_code": "import com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.annotations.XStreamAlias;\n\npublic class xstream_class_31 {\n   static String xml1 = \"<Music><type>rock</type></Music>\";\n\n   public static void main(String[] args) {\n       XStream xStream = new XStream();\n       xStream.processAnnotations(Music.class);\n       Music musicObject = (Music) xStream.fromXML(xml1);\n       System.out.println(musicObject);\n       // prints Music [type=ROCK]\n   }\n\n}\n\n@XStreamAlias(\"Music\")\nclass Music {\n   public enum genre {\n       ROCK, JAZZ\n   };\n\n   genre type;\n\n   @Override\n   public String toString() {\n       return \"Music [type=\" + type + \"]\";\n   }\n\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

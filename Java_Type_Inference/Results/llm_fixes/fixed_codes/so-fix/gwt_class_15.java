@@ -1,9 +1,9 @@
-import com.google.gwt.http.client.RequestBuilder;
 import com.google.gwt.http.client.Request;
+import com.google.gwt.http.client.RequestBuilder;
 import com.google.gwt.http.client.RequestCallback;
+import com.google.gwt.http.client.RequestException;
 import com.google.gwt.http.client.Response;
 import com.google.gwt.http.client.URL;
-import com.google.gwt.http.client.RequestException;
 
 public class gwt_class_15 {
     public static void main(String arg[]){
@@ -19,10 +19,10 @@ public class gwt_class_15 {
                     // TODO Auto-generated method stub
 
                 }
+
             });
         } catch (RequestException e) {
-            // possiblePages.clear();
-            // possiblePages.addItem("could not connect to server");
+            // possiblePages.clear(); possiblePages.addItem("could not connect to server");
         }
     }
 }

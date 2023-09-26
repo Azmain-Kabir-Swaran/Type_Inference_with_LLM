@@ -17,6 +17,7 @@ public class gwt_class_46 {
 		   eventDetailWindow.add(serverResponse3);
 		   eventDetailWindow.addStyleName("detailWindow");
 		   dialogBox2.setWidget(eventDetailWindow);
-		   RootPanel.get().add(dialogBox2);
+		   RootPanel.get("detailWindow").add(eventDetailWindow);
 	}
+
 }

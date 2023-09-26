@@ -1,26 +1,29 @@
-import java.io.Writer;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
-import com.thoughtworks.xstream.io.xml.ExtendedHierarchicalStreamWriterHelper;
+import com.thoughtworks.xstream.io.WriterWrapper;
 import com.thoughtworks.xstream.io.xml.PrettyPrintWriter;
+import com.thoughtworks.xstream.io.xml.XmlFriendlyWriter;
+
+import java.io.Writer;
 
 public class xstream_class_39 {
-    private static XStream xstream = new XStream() {
+
+    private static XStream xstream = new XStream(){
         public HierarchicalStreamWriter createWriter(Writer out) {
             return new PrettyPrintWriter(out) {
-                boolean cdata;
-                boolean isNeedUpper;
+                // Add CDATA block
+                boolean cdata;//I need to add cdata for some fields only
+                boolean isNeedUpper;//only some will need this
 
-                protected void writeText(QuickWriter writer, String text) {
+                protected void writeText(XmlFriendlyWriter writer, String text) {
                     if (cdata) {
-                        writer.write("<![CDATA[");
-                        writer.write(text);
-                        writer.write("]]>");
-                    } else if (isNeedUpper) {
-                        writer.write(text.toUpperCase());
-                    } else {
-                        writer.write(text);
+                        writer.startNode("![CDATA[");
+                        writer.setValue(text);
+                        writer.endNode();
+                    } else if (isNeedUpper){
+                        writer.setValue(text.toUpperCase());
                     }
+                    else writer.setValue(text);
                 }
             };
         }

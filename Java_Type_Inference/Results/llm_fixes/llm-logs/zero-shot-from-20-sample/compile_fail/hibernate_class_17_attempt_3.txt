@@ -1,0 +1,83 @@
+"attempt": 3
+
+"file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-from-20-sample/hibernate_class_17.java"
+
+"java_code": "
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class HibernateUtil {
+    private static final SessionFactory sessionFactory;
+
+    static {
+        try {
+            Configuration configuration = new Configuration();
+            configuration.configure("hibernate.cfg.xml");
+            sessionFactory = configuration.buildSessionFactory();
+        } catch (Throwable ex) {
+            throw new ExceptionInInitializerError(ex);
+        }
+    }
+
+    public static Session getSession() {
+        return sessionFactory.openSession();
+    }
+}
+"
+
+"used_prompt": "
+
+No valid code block found!
+
+You gave the above imports fix in your attempt 1. But compiler gave this error:
+
+hibernate_class_17.java:1: error: class, interface, or enum expected
+No valid code block found!
+^
+1 error
+
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class HibernateUtil {
+    private static final SessionFactory sessionFactory;
+
+    static {
+        try {
+            Configuration configuration = new Configuration().configure();
+            sessionFactory = configuration.buildSessionFactory();
+        } catch (Throwable ex) {
+            throw new ExceptionInInitializerError(ex);
+        }
+    }
+
+    public static Session getSession() {
+        return sessionFactory.openSession();
+    }
+}
+
+You gave the above imports fix in your attempt 2. But compiler gave this error:
+
+hibernate_class_17.java:5: error: class HibernateUtil is public, should be declared in a file named HibernateUtil.java
+public class HibernateUtil {
+       ^
+1 error
+
+
+Now fix the error only by fixing the import statements by not using wildcard imports and must not modify code body which means do not change anything inside the class. So, it can be successfully compiled and reply with full code.
+"
+
+"stdout": ""
+
+"stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-from-20-sample/hibernate_class_17.java:5: error: class HibernateUtil is public, should be declared in a file named HibernateUtil.java
+public class HibernateUtil {
+       ^
+1 error
+"
+
+"return_code": 1
+

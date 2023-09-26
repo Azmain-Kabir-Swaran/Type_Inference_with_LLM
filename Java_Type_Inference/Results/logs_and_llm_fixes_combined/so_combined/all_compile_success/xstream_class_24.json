@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/xstream_class_24.java",
+    "java_code": "import com.thoughtworks.xstream.converters.reflection.ReflectionConverter;\nimport com.thoughtworks.xstream.converters.MarshallingContext;\nimport com.thoughtworks.xstream.converters.UnmarshallingContext;\nimport com.thoughtworks.xstream.io.HierarchicalStreamReader;\nimport com.thoughtworks.xstream.io.HierarchicalStreamWriter;\nimport com.thoughtworks.xstream.mapper.Mapper;\nimport com.thoughtworks.xstream.converters.reflection.ReflectionProvider;\n\npublic class xstream_class_24 {\n    public class DetailDollarsConverter extends ReflectionConverter {\n\n        public DetailDollarsConverter(Mapper mapper,\n                                      ReflectionProvider reflectionProvider) {\n            super(mapper, reflectionProvider);\n        }\n\n        @Override\n        public void marshal(Object obj, HierarchicalStreamWriter writer,\n                            MarshallingContext context) {\n            super.marshal(obj,writer,context);\n\n            writer.startNode(\"node4\");\n            writer.setValue(Double.toString(20));\n            writer.endNode();\n        }\n\n        @Override\n        public Object unmarshal(HierarchicalStreamReader reader,\n                                UnmarshallingContext context) {\n            return super.unmarshal(reader,context);\n        }\n\n        @SuppressWarnings(\"unchecked\")\n        @Override\n        public boolean canConvert(Class clazz) {\n            Object o=null;\n            return clazz.equals(o);\n        }\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

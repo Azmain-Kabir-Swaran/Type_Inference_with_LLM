@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/gwt_class_42.java",
-    "java_code": "import com.google.gwt.core.client.EntryPoint;\nimport com.google.gwt.http.client.*;\nimport com.google.gwt.user.client.Window;\n\npublic class gwt_class_42 implements EntryPoint {\n\n    String url = \"http://localhost/phpmyadmin/tesdb3/datauser.php\";\n\n    public void LoadData() throws RequestException {\n\n        RequestBuilder builder = new RequestBuilder(RequestBuilder.GET, url);\n\n        builder.sendRequest(null, new RequestCallback() {\n            @Override\n            public void onError(Request request, Throwable exception) {\n                Window.alert(\"error \" + exception);\n            }\n\n            public void onResponseReceived(Request request,\n                                           Response response) {\n                if (Response.SC_OK == response.getStatusCode()) {\n                    Window.alert(\"ok -\" + response.getText() + \"-\" + response.getStatusCode());\n                } else {\n                    Window.alert(\"error2 -\" + response.getText() + response.getStatusText() + \"-\" + response.getStatusCode());\n                }\n            }\n        });\n    }\n\n    public void onModuleLoad() {\n        try {\n            LoadData();\n        } catch (RequestException e) {\n            e.printStackTrace();\n        }\n    }\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

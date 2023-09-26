@@ -3,6 +3,7 @@ import com.thoughtworks.xstream.io.xml.PrettyPrintWriter;
 import com.thoughtworks.xstream.XStream;
 import java.io.Writer;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+import com.thoughtworks.xstream.io.xml.XmlFriendlyWriter;
 
 public class xstream_class_39 {
 
@@ -11,25 +12,20 @@ public class xstream_class_39 {
         public HierarchicalStreamWriter createWriter(Writer out) {
             return new PrettyPrintWriter(out) {
                 // Add CDATA block
-                boolean cdata;
-                boolean isNeedUpper;
+                boolean cdata;//I need to add cdata for some fields only
+                boolean isNeedUpper;//only some will need this
 
-                public void startNode(String name, Class clazz) {
-                    super.startNode(name, clazz);
-                }
-
-                public void setValue(String text) {
+                protected void writeText(HierarchicalStreamWriter writer, String text) {
                     if (cdata) {
-                        super.setValue("<![CDATA[" + text + "]]>");
+                        writer.startNode("![CDATA[");
+                        writer.setValue(text);
+                        writer.endNode();
                     } else if (isNeedUpper) {
-                        super.setValue(text.toUpperCase());
+                        writer.startNode(text.toUpperCase());
+                        writer.endNode();
                     } else {
-                        super.setValue(text);
+                        writer.setValue(text);
                     }
-                }
-
-                public void endNode() {
-                    super.endNode();
                 }
             };
         }

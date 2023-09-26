@@ -1,0 +1,281 @@
+"attempt": 3
+
+"file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/one-shot-fix/hibernate_class_27.java"
+
+"java_code": "
+
+package hibernate;
+
+import org.hibernate.Session;
+import org.hibernate.query.Query;
+
+import java.util.List;
+
+public class hibernate_class_27 {
+
+    public static List<ProjectAssignment> getAllResources() {
+        List<ProjectAssignment> projectMasters;
+
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Query<ProjectAssignment> query = session.createQuery("select distinct aid, pid, userName from ProjectAssignment", ProjectAssignment.class);
+        projectMasters = query.list();
+        session.close();
+
+        return projectMasters;
+    }
+
+    public static class ProjectAssignment implements java.io.Serializable {
+
+        private short aid;
+        private String pid;
+        private String userName;
+
+        public ProjectAssignment() {
+        }
+
+        public ProjectAssignment(short aid) {
+            this.aid = aid;
+        }
+
+        public ProjectAssignment(short aid, String pid, String userName) {
+            this.aid = aid;
+            this.pid = pid;
+            this.userName = userName;
+        }
+
+        public short getAid() {
+            return this.aid;
+        }
+
+        public void setAid(short aid) {
+            this.aid = aid;
+        }
+
+        public String getPid() {
+            return this.pid;
+        }
+
+        public void setPid(String pid) {
+            this.pid = pid;
+        }
+
+        public String getUserName() {
+            return this.userName;
+        }
+
+        public void setUserName(String userName) {
+            this.userName = userName;
+        }
+    }
+}
+"
+
+"used_prompt": "
+
+package hibernate;
+
+import org.hibernate.Session;
+import org.hibernate.query.Query;
+
+import java.util.List;
+
+public class hibernate_class_27 {
+
+    public static List<ProjectAssignment> getAllResources() {
+        List<ProjectAssignment> projectMasters;
+
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Query<ProjectAssignment> query = session.createQuery("select distinct aid, pid, userName from ProjectAssignment", ProjectAssignment.class);
+        projectMasters = query.list();
+        session.close();
+
+        return projectMasters;
+    }
+
+    public static class ProjectAssignment implements java.io.Serializable {
+
+        private short aid;
+        private String pid;
+        private String userName;
+
+        public ProjectAssignment() {
+        }
+
+        public ProjectAssignment(short aid) {
+            this.aid = aid;
+        }
+
+        public ProjectAssignment(short aid, String pid, String userName) {
+            this.aid = aid;
+            this.pid = pid;
+            this.userName = userName;
+        }
+
+        public short getAid() {
+            return this.aid;
+        }
+
+        public void setAid(short aid) {
+            this.aid = aid;
+        }
+
+        public String getPid() {
+            return this.pid;
+        }
+
+        public void setPid(String pid) {
+            this.pid = pid;
+        }
+
+        public String getUserName() {
+            return this.userName;
+        }
+
+        public void setUserName(String userName) {
+            this.userName = userName;
+        }
+    }
+}
+
+You gave the above imports fix in your attempt 1. But compiler gave this error:
+
+hibernate_class_27.java:4: error: package org.hibernate.query does not exist
+import org.hibernate.query.Query;
+                          ^
+hibernate_class_27.java:13: error: cannot find symbol
+        Session session = HibernateUtil.getSessionFactory().openSession();
+                          ^
+  symbol:   variable HibernateUtil
+  location: class hibernate_class_27
+hibernate_class_27.java:14: error: cannot find symbol
+        Query<ProjectAssignment> query = session.createQuery("select distinct aid, pid, userName from ProjectAssignment", ProjectAssignment.class);
+        ^
+  symbol:   class Query
+  location: class hibernate_class_27
+hibernate_class_27.java:14: error: method createQuery in interface Session cannot be applied to given types;
+        Query<ProjectAssignment> query = session.createQuery("select distinct aid, pid, userName from ProjectAssignment", ProjectAssignment.class);
+                                                ^
+  required: String
+  found: String,Class<ProjectAssignment>
+  reason: actual and formal argument lists differ in length
+4 errors
+
+
+package hibernate;
+
+import org.hibernate.Session;
+import org.hibernate.query.Query;
+
+import java.util.List;
+
+public class hibernate_class_27 {
+
+    public static List<ProjectAssignment> getAllResources() {
+        List<ProjectAssignment> projectMasters;
+
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Query<ProjectAssignment> query = session.createQuery("select distinct aid, pid, userName from ProjectAssignment", ProjectAssignment.class);
+        projectMasters = query.list();
+        session.close();
+
+        return projectMasters;
+    }
+
+    public static class ProjectAssignment implements java.io.Serializable {
+
+        private short aid;
+        private String pid;
+        private String userName;
+
+        public ProjectAssignment() {
+        }
+
+        public ProjectAssignment(short aid) {
+            this.aid = aid;
+        }
+
+        public ProjectAssignment(short aid, String pid, String userName) {
+            this.aid = aid;
+            this.pid = pid;
+            this.userName = userName;
+        }
+
+        public short getAid() {
+            return this.aid;
+        }
+
+        public void setAid(short aid) {
+            this.aid = aid;
+        }
+
+        public String getPid() {
+            return this.pid;
+        }
+
+        public void setPid(String pid) {
+            this.pid = pid;
+        }
+
+        public String getUserName() {
+            return this.userName;
+        }
+
+        public void setUserName(String userName) {
+            this.userName = userName;
+        }
+    }
+}
+
+You gave the above imports fix in your attempt 2. But compiler gave this error:
+
+hibernate_class_27.java:4: error: package org.hibernate.query does not exist
+import org.hibernate.query.Query;
+                          ^
+hibernate_class_27.java:13: error: cannot find symbol
+        Session session = HibernateUtil.getSessionFactory().openSession();
+                          ^
+  symbol:   variable HibernateUtil
+  location: class hibernate_class_27
+hibernate_class_27.java:14: error: cannot find symbol
+        Query<ProjectAssignment> query = session.createQuery("select distinct aid, pid, userName from ProjectAssignment", ProjectAssignment.class);
+        ^
+  symbol:   class Query
+  location: class hibernate_class_27
+hibernate_class_27.java:14: error: method createQuery in interface Session cannot be applied to given types;
+        Query<ProjectAssignment> query = session.createQuery("select distinct aid, pid, userName from ProjectAssignment", ProjectAssignment.class);
+                                                ^
+  required: String
+  found: String,Class<ProjectAssignment>
+  reason: actual and formal argument lists differ in length
+4 errors
+
+
+Now fix the error only by fixing the import statements by not using wildcard imports and must not modify code body which means do not change anything inside the class. So, it can be successfully compiled and reply with full code.
+"
+
+"stdout": ""
+
+"stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/one-shot-fix/hibernate_class_27.java:4: error: package org.hibernate.query does not exist
+import org.hibernate.query.Query;
+                          ^
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/one-shot-fix/hibernate_class_27.java:13: error: cannot find symbol
+        Session session = HibernateUtil.getSessionFactory().openSession();
+                          ^
+  symbol:   variable HibernateUtil
+  location: class hibernate_class_27
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/one-shot-fix/hibernate_class_27.java:14: error: cannot find symbol
+        Query<ProjectAssignment> query = session.createQuery("select distinct aid, pid, userName from ProjectAssignment", ProjectAssignment.class);
+        ^
+  symbol:   class Query
+  location: class hibernate_class_27
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/one-shot-fix/hibernate_class_27.java:14: error: method createQuery in interface Session cannot be applied to given types;
+        Query<ProjectAssignment> query = session.createQuery("select distinct aid, pid, userName from ProjectAssignment", ProjectAssignment.class);
+                                                ^
+  required: String
+  found: String,Class<ProjectAssignment>
+  reason: actual and formal argument lists differ in length
+4 errors
+"
+
+"return_code": 1
+

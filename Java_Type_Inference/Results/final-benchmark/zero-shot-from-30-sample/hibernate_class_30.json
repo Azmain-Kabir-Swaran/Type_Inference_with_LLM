@@ -1,0 +1,23 @@
+{
+    "filename": "hibernate_class_30",
+    "expected_output": [
+        "import java.io.Serializable;",
+        "import javax.persistence.Basic;",
+        "import javax.persistence.Column;",
+        "import javax.persistence.Entity;",
+        "import javax.persistence.Id;",
+        "import org.hibernate.annotations.NamedQueries;",
+        "import org.hibernate.annotations.NamedQuery;",
+        "import javax.persistence.Table;"
+    ],
+    "predicted_output": [
+        "import javax.persistence.Basic;",
+        "import java.io.Serializable;",
+        "import javax.persistence.NamedQueries;",
+        "import javax.persistence.NamedQuery;",
+        "import javax.persistence.Column;",
+        "import javax.persistence.Table;",
+        "import javax.persistence.Id;",
+        "import javax.persistence.Entity;"
+    ]
+}

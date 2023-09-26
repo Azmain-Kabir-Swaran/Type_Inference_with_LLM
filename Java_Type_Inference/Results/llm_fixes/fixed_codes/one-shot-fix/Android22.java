@@ -1,14 +1,14 @@
 package androidExamples;
 
 import android.app.ListActivity;
-import android.widget.SimpleCursorAdapter;
-import android.provider.ContactsContract;
-import android.database.Cursor;
-import android.widget.TextView;
-import android.os.Bundle;
-import android.widget.ListView;
-import android.view.View;
 import android.content.Intent;
+import android.database.Cursor;
+import android.os.Bundle;
+import android.provider.ContactsContract.Contacts;
+import android.view.View;
+import android.widget.ListView;
+import android.widget.SimpleCursorAdapter;
+import android.widget.TextView;
 
 public class Android22 extends ListActivity {
 
@@ -21,13 +21,13 @@ public class Android22 extends ListActivity {
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        Cursor C = getContentResolver().query(ContactsContract.Contacts.CONTENT_URI, null, null, null, null);
+        Cursor C = getContentResolver().query(Contacts.CONTENT_URI, null, null, null, null);
         startManagingCursor(C);
 
-        String[] columns = new String[]{ContactsContract.Contacts.DISPLAY_NAME};
-        int[] names = new int[]{android.R.id.text1};
+        String[] columns = new String[]{Contacts.DISPLAY_NAME};
+        int[] names = new int[]{androidExamples.R.id.lay};
 
-        mAdapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_1, C, columns, names);
+        mAdapter = new SimpleCursorAdapter(this, androidExamples.R.layout.mycontacts, C, columns, names);
         setListAdapter(mAdapter);
     }
 
@@ -36,14 +36,9 @@ public class Android22 extends ListActivity {
         super.onListItemClick(l, v, position, id);
 
         Cursor C = (Cursor) mAdapter.getItem(position);
-        PBCONTACT = C.getString(C.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
+        PBCONTACT = C.getString(C.getColumnIndex(Contacts.DISPLAY_NAME));
 
-        Intent i = new Intent(this, Note.class);
+        Intent i = new Intent(this, androidExamples.Note.class);
         startActivityForResult(i, ACTIVITY_CREATE);
-    }
-
-    //dummy Note class to fix the compilation issue
-    private class Note {
-
     }
 }

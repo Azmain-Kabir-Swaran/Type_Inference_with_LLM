@@ -6,8 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.app.Activity;
 import android.util.Log;
-
-//ID = 1215817
+import android.webkit.MimeTypeParseException;
 
 public class Android45 extends Activity {
 
@@ -22,22 +21,23 @@ public class Android45 extends Activity {
         intentFilter.addCategory(Intent.CATEGORY_DEFAULT);
         try {
             intentFilter.addDataType("image/*");
-        } catch (IntentFilter.MalformedMimeTypeException e) {
+        } catch (MimeTypeParseException e) {
             Log.e(TAG, e.toString());
         }
 
-        BroadcastReceiver receiver = new BroadcastReceiver() {
+        Intent x = registerReceiver(new BroadcastReceiver() {
             public void onReceive(Context context, Intent intent) { 
                 Log.d(TAG, "Received intent "+intent);
                 intent.setComponent(new ComponentName(context, Uploader.class));
                 startActivity(intent);
             }
-        };
-        
-        registerReceiver(receiver, intentFilter);
+        }, intentFilter);
 
+        if (x==null)
+            Log.i(TAG, "failed to regist a receiver");
+        else
+            Log.i(TAG, "registed a receiver successfully");
     }
 
-    class Uploader {
-    }
+    class Uploader {}
 }

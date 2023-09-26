@@ -1,20 +1,21 @@
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.ParseException;
+import java.math.RoundingMode;
 import java.util.Locale;
 
 public class Class_3 {
 
-    private static final String SYMBOL_INFINITE = "\u221e";
-    private static final char SYMBOL_MINUS = '-';
-    private static final char SYMBOL_ZERO = '0';
-    private static final int DECIMAL_LEADING_GROUPS = 10;
-    private static final int EXPONENTIAL_INT_THRESHOLD = 1000000000; // After this value switch to exponential notation
+    private static final String SYMBOL_INFINITE           = "\u221e";
+    private static final char   SYMBOL_MINUS              = '-';
+    private static final char   SYMBOL_ZERO               = '0';
+    private static final int    DECIMAL_LEADING_GROUPS    = 10;
+    private static final int    EXPONENTIAL_INT_THRESHOLD = 1000000000; // After this value switch to exponential notation
     private static final double EXPONENTIAL_DEC_THRESHOLD = 0.0001; // Below this value switch to exponential notation
 
-    private DecimalFormat decimalFormat;
-    private DecimalFormat decimalFormatLong;
-    private DecimalFormat exponentialFormat;
+    private java.text.DecimalFormat decimalFormat;
+    private java.text.DecimalFormat decimalFormatLong;
+    private java.text.DecimalFormat exponentialFormat;
 
     private char groupSeparator;
 
@@ -27,7 +28,7 @@ public class Class_3 {
             throw new IllegalArgumentException("Invalid decimal places");
         }
 
-        DecimalFormatSymbols separators = new DecimalFormatSymbols(Locale.getDefault());
+        java.text.DecimalFormatSymbols separators = new java.text.DecimalFormatSymbols(Locale.getDefault());
         separators.setMinusSign(SYMBOL_MINUS);
         separators.setZeroDigit(SYMBOL_ZERO);
 
@@ -47,13 +48,13 @@ public class Class_3 {
 
         exponential.append("E0");
 
-        decimalFormat = new DecimalFormat(decimal.toString(), separators);
-        decimalFormatLong = new DecimalFormat(decimal.append("####").toString(), separators);
-        exponentialFormat = new DecimalFormat(exponential.toString(), separators);
+        decimalFormat = new java.text.DecimalFormat(decimal.toString(), separators);
+        decimalFormatLong = new java.text.DecimalFormat(decimal.append("####").toString(), separators);
+        exponentialFormat = new java.text.DecimalFormat(exponential.toString(), separators);
 
-        decimalFormat.setRoundingMode(java.math.RoundingMode.HALF_UP);
-        decimalFormatLong.setRoundingMode(java.math.RoundingMode.HALF_UP);
-        exponentialFormat.setRoundingMode(java.math.RoundingMode.HALF_UP);
+        decimalFormat.setRoundingMode(RoundingMode.HALF_UP);
+        decimalFormatLong.setRoundingMode(RoundingMode.HALF_UP);
+        exponentialFormat.setRoundingMode(RoundingMode.HALF_UP);
     }
 
     public String format(double value) {
@@ -103,4 +104,5 @@ public class Class_3 {
     private String removeGroupSeparators(String number) {
         return number.replace(String.valueOf(groupSeparator), "");
     }
+
 }

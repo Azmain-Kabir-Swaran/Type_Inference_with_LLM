@@ -1,8 +1,0 @@
-{
-    "attempt": 2,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/gwt_class_7.java",
-    "java_code": "import com.google.gwt.core.client.EntryPoint;\nimport com.google.gwt.user.client.Timer;\nimport com.google.gwt.user.client.ui.Panel;\nimport com.google.gwt.user.client.ui.RootPanel;\nimport com.google.gwt.user.client.ui.VerticalPanel;\n\npublic class gwt_class_7 implements EntryPoint {\n\n    private static final boolean WITH_TABLE = false;\n\n    private Panel panel;\n    private Timer timer;\n\n    public void onModuleLoad() {\n        RootPanel rootPanel = RootPanel.get();\n\n        this.panel = new VerticalPanel();\n        this.panel.setSize(\"100%\", \"100%\");\n\n        rootPanel.add(panel);\n\n        if (!WITH_TABLE) {\n            startUpdateTask();\n        }\n    }\n\n    private void startUpdateTask() {\n        this.timer = new Timer() {\n            public void run() {\n                // GWTMemoryIssue.this.getTableData();\n            }\n        };\n        this.timer.scheduleRepeating(2000);\n    }\n}",
-    "stdout": "",
-    "stderr": "Note: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n",
-    "return_code": 0
-}

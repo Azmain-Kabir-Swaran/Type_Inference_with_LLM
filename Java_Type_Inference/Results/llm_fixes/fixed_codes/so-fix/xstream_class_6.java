@@ -1,9 +1,8 @@
-import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.io.xml.DomDriver;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
 
 public class xstream_class_6 {
     public static boolean toXML(Object object, File file) {
@@ -13,16 +12,15 @@ public class xstream_class_6 {
         try {
             outputStream = new FileOutputStream(file);
             xStream.toXML(object, outputStream);
-        } catch (Exception exp) {
+        }
+        catch (Exception exp) {
             return false;
-        } finally {
-            if (outputStream != null) {
-                try {
-                    outputStream.close();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+        }
+        finally {
+            if (true) {
+                return false;
             }
+            outputStream = null;
         }
 
         return true;

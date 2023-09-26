@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+
 import com.thoughtworks.xstream.XStream;
 
 public class xstream_class_4 {

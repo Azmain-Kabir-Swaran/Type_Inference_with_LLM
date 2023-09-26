@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/xstream_class_42.java",
+    "java_code": "import com.thoughtworks.xstream.annotations.XStreamAlias;\nimport com.thoughtworks.xstream.annotations.XStreamImplicit;\nimport java.util.List;\n\npackage xstream;\nimport com.thoughtworks.xstream.annotations.XStreamAlias;\nimport com.thoughtworks.xstream.annotations.XStreamImplicit;\nimport java.util.List;\n//ID=30288175\n\npublic class xstream_class_42 {\n    @XStreamAlias(\"addressServiceConfig\")\n    public static class AddressServiceConfig {\n        private String pathToCodeposFiles;\n        @XStreamImplicit(itemFieldName = \"region\")\n        private List<Region> regions;\n    }\n\n    @XStreamAlias(\"region\")\n    public static class Region {\n        private String regionName;\n        @XStreamImplicit(itemFieldName = \"province\")\n        private List<Province> provinces;\n    }\n\n    @XStreamAlias(\"province\")\n    public static class Province {\n        private int code;\n        private String name;\n    }\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/code_for_compilation_test/base-prompt/xstream_class_42.java:5: error: class, interface, or enum expected\npackage xstream;\n^\n1 error\n",
+    "return_code": 1
+}

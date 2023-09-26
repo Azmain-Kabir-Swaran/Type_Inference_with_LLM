@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/gwt_class_14.java",
+    "java_code": "import com.google.gwt.core.client.EntryPoint;\nimport com.google.gwt.core.client.GWT;\nimport com.google.gwt.http.client.Request;\nimport com.google.gwt.http.client.RequestBuilder;\nimport com.google.gwt.http.client.RequestCallback;\nimport com.google.gwt.http.client.Response;\nimport com.google.gwt.user.client.Window;\n\npublic class gwt_class_14 implements EntryPoint {\n\n    public void onModuleLoad() {\n        RequestBuilder rb = new RequestBuilder(RequestBuilder.GET,\"http://myweb.com/test.php?id=65472\");\n        try {\n            rb.sendRequest(null, new RequestCallback() {\n                public void onError(final Request request, final Throwable exception) {\n                    Window.alert(exception.getMessage());\n                }\n                public void onResponseReceived(final Request request, final Response response) {\n                    //do something\n                    GWT.log(\"response: (\" + response.getText() + \")\", null);\n                }\n            });\n        } catch (final Exception e) {\n            Window.alert(e.getMessage());\n        }\n    }\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

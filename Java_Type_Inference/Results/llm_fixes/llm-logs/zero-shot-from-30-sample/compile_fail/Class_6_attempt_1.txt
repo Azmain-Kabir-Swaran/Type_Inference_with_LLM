@@ -1,0 +1,657 @@
+"attempt": 1
+
+"file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-from-30-sample/Class_6.java"
+
+"java_code": "
+
+package common_JDK;
+import java.util.Random;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
+import java.util.Observable;
+import java.util.Observer;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.*;
+/*
+ Date: 1/19/17
+ URL: http://stackoverflow.com/questions/3066590/gui-not-working-after-rewriting-to-mvc
+ */
+
+/**
+ * @see http://stackoverflow.com/q/3066590/230513
+ * 15-Mar-2011 r8 http://stackoverflow.com/questions/5274962
+ * 26-Mar-2013 r17 per comment
+ */
+public class Class_6 implements Runnable {
+
+    public static void main(String[] args) {
+        EventQueue.invokeLater(new Class_6());
+    }
+
+    @Override
+    public void run() {
+        JFrame f = new JFrame();
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.add(new MainPanel());
+        f.pack();
+        f.setLocationRelativeTo(null);
+        f.setVisible(true);
+    }
+}
+
+class MainPanel extends JPanel {
+
+    public MainPanel() {
+        super(new BorderLayout());
+        Model model = new Model();
+        View view = new View(model);
+        Control control = new Control(model, view);
+        JLabel label = new JLabel("Guess what color!", JLabel.CENTER);
+        this.add(label, BorderLayout.NORTH);
+        this.add(view, BorderLayout.CENTER);
+        this.add(control, BorderLayout.SOUTH);
+    }
+}
+
+"
+
+"used_prompt": "
+
+See the code below:
+"""
+package common_JDK;
+import java.util;
+import javax.swing;
+import java.awt.event;
+import java.awt;
+/*
+ Date: 1/19/17
+ URL: http://stackoverflow.com/questions/3066590/gui-not-working-after-rewriting-to-mvc
+ */
+
+/**
+ * @see http://stackoverflow.com/q/3066590/230513
+ * 15-Mar-2011 r8 http://stackoverflow.com/questions/5274962
+ * 26-Mar-2013 r17 per comment
+ */
+public class Class_6 implements Runnable {
+
+    public static void main(String[] args) {
+        EventQueue.invokeLater(new Class_6());
+    }
+
+    @Override
+    public void run() {
+        JFrame f = new JFrame();
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.add(new MainPanel());
+        f.pack();
+        f.setLocationRelativeTo(null);
+        f.setVisible(true);
+    }
+}
+
+class MainPanel extends JPanel {
+
+    public MainPanel() {
+        super(new BorderLayout());
+        Model model = new Model();
+        View view = new View(model);
+        Control control = new Control(model, view);
+        JLabel label = new JLabel("Guess what color!", JLabel.CENTER);
+        this.add(label, BorderLayout.NORTH);
+        this.add(view, BorderLayout.CENTER);
+        this.add(control, BorderLayout.SOUTH);
+    }
+}
+
+/**
+ * Control panel
+ */
+class Control extends JPanel {
+
+    private Model model;
+    private View view;
+    private JButton reset = new JButton("Reset");
+
+    public Control(Model model, View view) {
+        this.model = model;
+        this.view = view;
+        this.add(reset);
+        reset.addActionListener(new ButtonHandler());
+    }
+
+    private class ButtonHandler implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            String cmd = e.getActionCommand();
+            if ("Reset".equals(cmd)) {
+                model.reset();
+            }
+        }
+    }
+}
+
+/**
+ * View
+ */
+class View extends JPanel {
+
+    private static final String s = "Click a button.";
+    private Model model;
+    private ColorIcon icon = new ColorIcon(80, Color.gray);
+    private JLabel label = new JLabel(s, icon, JLabel.CENTER);
+
+    public View(Model model) {
+        super(new BorderLayout());
+        this.model = model;
+        label.setVerticalTextPosition(JLabel.BOTTOM);
+        label.setHorizontalTextPosition(JLabel.CENTER);
+        this.add(label, BorderLayout.CENTER);
+        this.add(genButtonPanel(), BorderLayout.SOUTH);
+        model.addObserver(new ModelObserver());
+    }
+
+    private JPanel genButtonPanel() {
+        JPanel panel = new JPanel();
+        for (Piece p : Piece.values()) {
+            PieceButton pb = new PieceButton(p);
+            pb.addActionListener(new ButtonHandler());
+            panel.add(pb);
+        }
+        return panel;
+    }
+
+    private class ModelObserver implements Observer {
+
+        @Override
+        public void update(Observable o, Object arg) {
+            if (arg == null) {
+                label.setText(s);
+                icon.color = Color.gray;
+            } else {
+                if ((Boolean) arg) {
+                    label.setText("Win!");
+                } else {
+                    label.setText("Keep trying.");
+                }
+            }
+        }
+    }
+
+    private class ButtonHandler implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            PieceButton pb = (PieceButton) e.getSource();
+            icon.color = pb.piece.color;
+            label.repaint();
+            model.check(pb.piece);
+        }
+    }
+
+    private static class PieceButton extends JButton {
+
+        Piece piece;
+
+        public PieceButton(Piece piece) {
+            this.piece = piece;
+            this.setIcon(new ColorIcon(16, piece.color));
+        }
+    }
+
+    private static class ColorIcon implements Icon {
+
+        private int size;
+        private Color color;
+
+        public ColorIcon(int size, Color color) {
+            this.size = size;
+            this.color = color;
+        }
+
+        @Override
+        public void paintIcon(Component c, Graphics g, int x, int y) {
+            Graphics2D g2d = (Graphics2D) g;
+            g2d.setRenderingHint(
+                RenderingHints.KEY_ANTIALIASING,
+                RenderingHints.VALUE_ANTIALIAS_ON);
+            g2d.setColor(color);
+            g2d.fillOval(x, y, size, size);
+        }
+
+        @Override
+        public int getIconWidth() {
+            return size;
+        }
+
+        @Override
+        public int getIconHeight() {
+            return size;
+        }
+    }
+}
+
+/**
+ * Model
+ */
+class Model extends Observable {
+
+    private static final Random rnd = new Random();
+    private static final Piece[] pieces = Piece.values();
+    private Piece hidden = init();
+
+    private Piece init() {
+        return pieces[rnd.nextInt(pieces.length)];
+    }
+
+    public void reset() {
+        hidden = init();
+        setChanged();
+        notifyObservers();
+    }
+
+    public void check(Piece guess) {
+        setChanged();
+        notifyObservers(guess.equals(hidden));
+    }
+}
+
+enum Piece {
+
+    Red(Color.red), Green(Color.green), Blue(Color.blue);
+    public Color color;
+
+    private Piece(Color color) {
+        this.color = color;
+    }
+}
+"""
+For the above code I got the below error log:
+"""
+Class_6.java:2: error: cannot find symbol
+import java.util;
+           ^
+  symbol:   class util
+  location: package java
+Class_6.java:3: error: package javax does not exist
+import javax.swing;
+            ^
+Class_6.java:4: error: cannot find symbol
+import java.awt.event;
+               ^
+  symbol:   class event
+  location: package java.awt
+Class_6.java:5: error: cannot find symbol
+import java.awt;
+           ^
+  symbol:   class awt
+  location: package java
+Class_6.java:33: error: cannot find symbol
+class MainPanel extends JPanel {
+                        ^
+  symbol: class JPanel
+Class_6.java:50: error: cannot find symbol
+class Control extends JPanel {
+                      ^
+  symbol: class JPanel
+Class_6.java:178: error: cannot find symbol
+class Model extends Observable {
+                    ^
+  symbol: class Observable
+Class_6.java:78: error: cannot find symbol
+class View extends JPanel {
+                   ^
+  symbol: class JPanel
+Class_6.java:54: error: cannot find symbol
+    private JButton reset = new JButton("Reset");
+            ^
+  symbol:   class JButton
+  location: class Control
+Class_6.java:180: error: cannot find symbol
+    private static final Random rnd = new Random();
+                         ^
+  symbol:   class Random
+  location: class Model
+Class_6.java:143: error: cannot find symbol
+    private static class ColorIcon implements Icon {
+                                              ^
+  symbol:   class Icon
+  location: class View
+Class_6.java:83: error: cannot find symbol
+    private JLabel label = new JLabel(s, icon, JLabel.CENTER);
+            ^
+  symbol:   class JLabel
+  location: class View
+Class_6.java:95: error: cannot find symbol
+    private JPanel genButtonPanel() {
+            ^
+  symbol:   class JPanel
+  location: class View
+Class_6.java:203: error: cannot find symbol
+    public Color color;
+           ^
+  symbol:   class Color
+  location: class Piece
+Class_6.java:205: error: cannot find symbol
+    private Piece(Color color) {
+                  ^
+  symbol:   class Color
+  location: class Piece
+Class_6.java:146: error: cannot find symbol
+        private Color color;
+                ^
+  symbol:   class Color
+  location: class ColorIcon
+Class_6.java:148: error: cannot find symbol
+        public ColorIcon(int size, Color color) {
+                                   ^
+  symbol:   class Color
+  location: class ColorIcon
+Class_6.java:154: error: cannot find symbol
+        public void paintIcon(Component c, Graphics g, int x, int y) {
+                              ^
+  symbol:   class Component
+  location: class ColorIcon
+Class_6.java:154: error: cannot find symbol
+        public void paintIcon(Component c, Graphics g, int x, int y) {
+                                           ^
+  symbol:   class Graphics
+  location: class ColorIcon
+Class_6.java:63: error: cannot find symbol
+    private class ButtonHandler implements ActionListener {
+                                           ^
+  symbol:   class ActionListener
+  location: class Control
+Class_6.java:66: error: cannot find symbol
+        public void actionPerformed(ActionEvent e) {
+                                    ^
+  symbol:   class ActionEvent
+  location: class Control.ButtonHandler
+Class_6.java:105: error: cannot find symbol
+    private class ModelObserver implements Observer {
+                                           ^
+  symbol:   class Observer
+  location: class View
+Class_6.java:108: error: cannot find symbol
+        public void update(Observable o, Object arg) {
+                           ^
+  symbol:   class Observable
+  location: class View.ModelObserver
+Class_6.java:122: error: cannot find symbol
+    private class ButtonHandler implements ActionListener {
+                                           ^
+  symbol:   class ActionListener
+  location: class View
+Class_6.java:125: error: cannot find symbol
+        public void actionPerformed(ActionEvent e) {
+                                    ^
+  symbol:   class ActionEvent
+  location: class View.ButtonHandler
+Class_6.java:133: error: cannot find symbol
+    private static class PieceButton extends JButton {
+                                             ^
+  symbol:   class JButton
+  location: class View
+Class_6.java:19: error: cannot find symbol
+        EventQueue.invokeLater(new Class_6());
+        ^
+  symbol:   variable EventQueue
+  location: class Class_6
+Class_6.java:24: error: cannot find symbol
+        JFrame f = new JFrame();
+        ^
+  symbol:   class JFrame
+  location: class Class_6
+Class_6.java:24: error: cannot find symbol
+        JFrame f = new JFrame();
+                       ^
+  symbol:   class JFrame
+  location: class Class_6
+Class_6.java:25: error: cannot find symbol
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                                   ^
+  symbol:   variable JFrame
+  location: class Class_6
+Class_6.java:36: error: cannot find symbol
+        super(new BorderLayout());
+                  ^
+  symbol:   class BorderLayout
+  location: class MainPanel
+Class_6.java:40: error: cannot find symbol
+        JLabel label = new JLabel("Guess what color!", JLabel.CENTER);
+        ^
+  symbol:   class JLabel
+  location: class MainPanel
+Class_6.java:40: error: cannot find symbol
+        JLabel label = new JLabel("Guess what color!", JLabel.CENTER);
+                           ^
+  symbol:   class JLabel
+  location: class MainPanel
+Class_6.java:40: error: cannot find symbol
+        JLabel label = new JLabel("Guess what color!", JLabel.CENTER);
+                                                       ^
+  symbol:   variable JLabel
+  location: class MainPanel
+Class_6.java:41: error: cannot find symbol
+        this.add(label, BorderLayout.NORTH);
+                        ^
+  symbol:   variable BorderLayout
+  location: class MainPanel
+Class_6.java:42: error: cannot find symbol
+        this.add(view, BorderLayout.CENTER);
+                       ^
+  symbol:   variable BorderLayout
+  location: class MainPanel
+Class_6.java:43: error: cannot find symbol
+        this.add(control, BorderLayout.SOUTH);
+                          ^
+  symbol:   variable BorderLayout
+  location: class MainPanel
+Class_6.java:54: error: cannot find symbol
+    private JButton reset = new JButton("Reset");
+                                ^
+  symbol:   class JButton
+  location: class Control
+Class_6.java:65: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+Class_6.java:180: error: cannot find symbol
+    private static final Random rnd = new Random();
+                                          ^
+  symbol:   class Random
+  location: class Model
+Class_6.java:190: error: cannot find symbol
+        setChanged();
+        ^
+  symbol:   method setChanged()
+  location: class Model
+Class_6.java:191: error: cannot find symbol
+        notifyObservers();
+        ^
+  symbol:   method notifyObservers()
+  location: class Model
+Class_6.java:195: error: cannot find symbol
+        setChanged();
+        ^
+  symbol:   method setChanged()
+  location: class Model
+Class_6.java:196: error: cannot find symbol
+        notifyObservers(guess.equals(hidden));
+        ^
+  symbol:   method notifyObservers(boolean)
+  location: class Model
+Class_6.java:82: error: cannot find symbol
+    private ColorIcon icon = new ColorIcon(80, Color.gray);
+                                               ^
+  symbol:   variable Color
+  location: class View
+Class_6.java:83: error: cannot find symbol
+    private JLabel label = new JLabel(s, icon, JLabel.CENTER);
+                               ^
+  symbol:   class JLabel
+  location: class View
+Class_6.java:83: error: cannot find symbol
+    private JLabel label = new JLabel(s, icon, JLabel.CENTER);
+                                               ^
+  symbol:   variable JLabel
+  location: class View
+Class_6.java:86: error: cannot find symbol
+        super(new BorderLayout());
+                  ^
+  symbol:   class BorderLayout
+  location: class View
+Class_6.java:88: error: cannot find symbol
+        label.setVerticalTextPosition(JLabel.BOTTOM);
+                                      ^
+  symbol:   variable JLabel
+  location: class View
+Class_6.java:89: error: cannot find symbol
+        label.setHorizontalTextPosition(JLabel.CENTER);
+                                        ^
+  symbol:   variable JLabel
+  location: class View
+Class_6.java:90: error: cannot find symbol
+        this.add(label, BorderLayout.CENTER);
+                        ^
+  symbol:   variable BorderLayout
+  location: class View
+Class_6.java:91: error: cannot find symbol
+        this.add(genButtonPanel(), BorderLayout.SOUTH);
+                                   ^
+  symbol:   variable BorderLayout
+  location: class View
+Class_6.java:92: error: cannot find symbol
+        model.addObserver(new ModelObserver());
+             ^
+  symbol:   method addObserver(View.ModelObserver)
+  location: variable model of type Model
+Class_6.java:96: error: cannot find symbol
+        JPanel panel = new JPanel();
+        ^
+  symbol:   class JPanel
+  location: class View
+Class_6.java:96: error: cannot find symbol
+        JPanel panel = new JPanel();
+                           ^
+  symbol:   class JPanel
+  location: class View
+Class_6.java:99: error: cannot find symbol
+            pb.addActionListener(new ButtonHandler());
+              ^
+  symbol:   method addActionListener(View.ButtonHandler)
+  location: variable pb of type PieceButton
+Class_6.java:107: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+Class_6.java:111: error: cannot find symbol
+                icon.color = Color.gray;
+                             ^
+  symbol:   variable Color
+  location: class View.ModelObserver
+Class_6.java:124: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+Class_6.java:139: error: cannot find symbol
+            this.setIcon(new ColorIcon(16, piece.color));
+                ^
+  symbol: method setIcon(ColorIcon)
+Class_6.java:153: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+Class_6.java:155: error: cannot find symbol
+            Graphics2D g2d = (Graphics2D) g;
+            ^
+  symbol:   class Graphics2D
+  location: class ColorIcon
+Class_6.java:155: error: cannot find symbol
+            Graphics2D g2d = (Graphics2D) g;
+                              ^
+  symbol:   class Graphics2D
+  location: class ColorIcon
+Class_6.java:157: error: cannot find symbol
+                RenderingHints.KEY_ANTIALIASING,
+                ^
+  symbol:   variable RenderingHints
+  location: class ColorIcon
+Class_6.java:158: error: cannot find symbol
+                RenderingHints.VALUE_ANTIALIAS_ON);
+                ^
+  symbol:   variable RenderingHints
+  location: class ColorIcon
+Class_6.java:163: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+Class_6.java:168: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+Class_6.java:202: error: cannot find symbol
+    Red(Color.red), Green(Color.green), Blue(Color.blue);
+        ^
+  symbol:   variable Color
+  location: class Piece
+Class_6.java:202: error: cannot find symbol
+    Red(Color.red), Green(Color.green), Blue(Color.blue);
+                          ^
+  symbol:   variable Color
+  location: class Piece
+Class_6.java:202: error: cannot find symbol
+    Red(Color.red), Green(Color.green), Blue(Color.blue);
+                                             ^
+  symbol:   variable Color
+  location: class Piece
+70 errors
+
+"""
+Now fix the error only by fixing the import statements by not using wildcard imports and must not modify code body which means do not change anything inside the class. So, it can be successfully compiled and reply with full code.
+"
+
+"stdout": ""
+
+"stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-from-30-sample/Class_6.java:51: error: cannot find symbol
+        Model model = new Model();
+        ^
+  symbol:   class Model
+  location: class MainPanel
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-from-30-sample/Class_6.java:51: error: cannot find symbol
+        Model model = new Model();
+                          ^
+  symbol:   class Model
+  location: class MainPanel
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-from-30-sample/Class_6.java:52: error: cannot find symbol
+        View view = new View(model);
+        ^
+  symbol:   class View
+  location: class MainPanel
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-from-30-sample/Class_6.java:52: error: cannot find symbol
+        View view = new View(model);
+                        ^
+  symbol:   class View
+  location: class MainPanel
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-from-30-sample/Class_6.java:53: error: cannot find symbol
+        Control control = new Control(model, view);
+        ^
+  symbol:   class Control
+  location: class MainPanel
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-from-30-sample/Class_6.java:53: error: cannot find symbol
+        Control control = new Control(model, view);
+                              ^
+  symbol:   class Control
+  location: class MainPanel
+6 errors
+"
+
+"return_code": 1
+

@@ -1,8 +1,0 @@
-{
-    "attempt": 5,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/hibernate_class_7.java",
-    "java_code": "import org.hibernate.Session;\nimport org.hibernate.SessionFactory;\nimport org.hibernate.cfg.Configuration;\n\npublic class HibernateUtils {\n    private final SessionFactory sessionFactory;\n    private Session session;\n\n    public HibernateUtils() {\n        this.sessionFactory = new Configuration().configure().buildSessionFactory();\n    }\n\n    public HibernateUtils(SessionFactory sessionFactory) {\n        this.sessionFactory = sessionFactory;\n    }\n\n    public Session requestSession() {\n        if (session != null && session.isOpen()) {\n            return session;\n        } else {\n            session = sessionFactory.openSession();\n            return session;\n        }\n    }\n\n    public static void main(String[] args) {\n        HibernateUtils hibernateUtils = new HibernateUtils();\n        Session session = hibernateUtils.requestSession();\n        // rest of the code\n    }\n}",
-    "stdout": "",
-    "stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/hibernate_class_7.java:5: error: class HibernateUtils is public, should be declared in a file named HibernateUtils.java\npublic class HibernateUtils {\n       ^\n1 error\n",
-    "return_code": 1
-}

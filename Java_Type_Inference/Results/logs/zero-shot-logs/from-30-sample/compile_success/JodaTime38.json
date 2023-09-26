@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/from-30-sample/JodaTime38.java",
+    "java_code": "package jodatime;\nimport org.joda.time.format.DateTimeFormatter;\nimport org.joda.time.format.DateTimeFormat;\nimport org.joda.time.DateTime;\n//20331163\n\npublic class JodaTime38 {\n\n\tpublic static void main(String[] args) {\n\t\t// TODO Auto-generated method stub\n\t\tString dateTime = \"11/15/2013 08:00:00\";\n\t\t// Format for input\n\t\tDateTimeFormatter dtf = DateTimeFormat.forPattern(\"MM/dd/yyyy HH:mm:ss\");\n\t\t// Parsing the date\n\t\tDateTime jodatime = dtf.parseDateTime(dateTime);\n\t\t// Format for output\n\t\tDateTimeFormatter dtfOut = DateTimeFormat.forPattern(\"MM/dd/yyyy\");\n\t\t// Printing the date\n\t\tSystem.out.println(dtfOut.print(jodatime));\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

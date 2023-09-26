@@ -1,7 +1,8 @@
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Query;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
+
 import java.util.Iterator;
 import java.util.List;
 
@@ -11,16 +12,18 @@ public class hibernate_class_40 {
 
         Session session = null;
 
-        try{
+        try {
             SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
 
             System.out.println("selecting records");
-            Query q = session.getNamedQuery("getRecordsSP");
-            List l = q.list();
+            Query<Object[]> q = session.getNamedQuery("getRecordsSP");
 
-            for(Iterator<?> it = l.iterator(); it.hasNext();) {
-                Object[] row = (Object[]) it.next();
+            System.out.print("Done");
+            List<Object[]> l = q.list();
+
+            for (Iterator<Object[]> it = l.iterator(); it.hasNext(); ) {
+                Object[] row = it.next();
                 System.out.println(row.length);
             }
 

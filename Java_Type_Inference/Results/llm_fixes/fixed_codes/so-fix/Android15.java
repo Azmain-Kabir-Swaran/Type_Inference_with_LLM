@@ -1,3 +1,5 @@
+package androidExamples;
+
 import android.content.Intent;
 import android.net.Uri;
 
@@ -11,7 +13,7 @@ public class Android15 {
 		sendIntent.putExtra(Intent.EXTRA_SUBJECT, "Photo");
 		sendIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("file://sdcard/dcim/Camera/filename.jpg"));
 		sendIntent.putExtra(Intent.EXTRA_TEXT, "Enjoy the photo");
-		startActivity(sendIntent);
+		startActivity(Intent.createChooser(sendIntent, "Email:"));
 	}
 
 	private static void startActivity(Intent createChooser) {

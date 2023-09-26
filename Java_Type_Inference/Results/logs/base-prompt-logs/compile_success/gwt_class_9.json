@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/gwt_class_9.java",
+    "java_code": "import com.google.gwt.user.client.Command;\nimport com.google.gwt.user.client.ui.MenuBar;\nimport com.google.gwt.user.client.ui.VerticalPanel;\nimport com.google.gwt.user.client.Command;\nimport com.google.gwt.user.client.ui.MenuBar;\nimport com.google.gwt.user.client.ui.VerticalPanel;\n\npublic class gwt_class_9 {\n    VerticalPanel v1 = new VerticalPanel();\n    Command comm = new Command() {\n        @Override\n        public void execute() {\n            // How i know that which menu item is cliked\n        }\n    };\n\n    MenuBar menu = new MenuBar();\n    MenuBar fileBar = new MenuBar(true);\n    MenuBar editBar = new MenuBar(true);\n}",
+    "stdout": "",
+    "stderr": "Note: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n",
+    "return_code": 0
+}

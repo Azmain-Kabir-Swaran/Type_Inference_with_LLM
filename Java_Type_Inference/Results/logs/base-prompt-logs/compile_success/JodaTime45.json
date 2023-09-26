@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/JodaTime45.java",
+    "java_code": "import org.joda.time.DateTimeZone;\nimport org.joda.time.tz.Provider;\nimport java.util.Date;\nimport java.util.HashSet;\nimport java.util.Set;\nimport java.util.TimeZone;\nimport org.joda.time.DateTimeZone;\nimport org.joda.time.tz.Provider;\n\nimport java.util.Date;\nimport java.util.HashSet;\nimport java.util.Set;\nimport java.util.TimeZone;\n\npublic class JodaTime45 {\n\n    public static class FastDateTimeZoneProvider implements Provider {\n        public final Set<String> AVAILABLE_IDS = new HashSet<String>();\n\n        public DateTimeZone getZone(String id) {\n            if (id == null) {\n                return DateTimeZone.UTC;\n            }\n\n            TimeZone tz = TimeZone.getTimeZone(id);\n            if (tz == null) {\n                return DateTimeZone.UTC;\n            }\n\n            int rawOffset = tz.getRawOffset();\n\n            //sub-optimal. could be improved to only create a new Date every few minutes\n            if (tz.inDaylightTime(new Date())) {\n                rawOffset += tz.getDSTSavings();\n            }\n\n            return DateTimeZone.forOffsetMillis(rawOffset);\n        }\n\n        public Set<String> getAvailableIDs() {\n            return AVAILABLE_IDS;\n        }\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

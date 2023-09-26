@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Class_11.java",
-    "java_code": "import java.io.BufferedWriter;\nimport java.io.File;\nimport java.io.FileWriter;\nimport java.io.IOException;\nimport javax.swing.JFileChooser;\n\npublic class Class_11 {\n\n    public static void main(String[] args) {\n        try{\n            // Create new file\n            String content = \"This is the content to write into create file\";\n            String path = \"D:\\\\a\\\\hi.txt\";\n            File file = new File(path);\n\n            // If file doesn't exists, then create it\n            if (!file.exists()) {\n                file.createNewFile();\n            }\n\n            FileWriter fw = new FileWriter(file.getAbsoluteFile());\n            BufferedWriter bw = new BufferedWriter(fw);\n\n            // Write in file\n            bw.write(content);\n\n            // Close connection\n            bw.close();\n        }\n        catch(IOException e){\n            System.out.println(e);\n        }\n        \n        JFileChooser c = new JFileChooser();\n        c.showOpenDialog(c);\n        File writeFile = c.getSelectedFile();\n        String contentToWrite = \"Input the data here to be written to your file\";\n\n        try {\n            FileWriter fw = new FileWriter(writeFile);\n            BufferedWriter bw = new BufferedWriter(fw);\n            bw.append(contentToWrite);\n            bw.append(\"hiiiii\");\n            bw.close();\n            fw.close();\n        }\n        catch (IOException exc) {\n           System.out.println(exc);\n        }\n    }\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

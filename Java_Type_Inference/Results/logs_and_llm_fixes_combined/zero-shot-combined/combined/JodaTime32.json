@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-zero-shot/JodaTime32.java",
-    "java_code": "package jodatime;\nimport org.joda.time.format.DateTimeFormatter;\nimport org.joda.time.DateTime;\n\n//ID = 9598675\n\npublic class JodaTime32 {\n\n\tpublic static void main(String[] args) {\n\t\tDateTimeFormatter dtf = null;\n\t\t// TODO Auto-generated method stub\n\t\tfinal DateTime date1 = dtf.parseDateTime(\"1979-04-29\");\n\t\tfinal DateTime date2 = dtf.parseDateTime(\"1979-05-12\");\n\t\tfinal DateTime date3 = dtf.parseDateTime(\"1979-04-02\");\n\t\tfinal DateTime date4 = dtf.parseDateTime(\"1979-04-15\");\n\t\tSystem.err.println(date1.toString());\n\t\tSystem.err.println(date2.toString());\n\t\tSystem.err.println(date3.toString());\n\t\tSystem.err.println(date4.toString());\n\t}\n\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

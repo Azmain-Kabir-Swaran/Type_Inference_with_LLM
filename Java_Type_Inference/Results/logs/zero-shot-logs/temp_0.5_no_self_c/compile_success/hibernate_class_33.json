@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/zero-shot-temp-0.5/hibernate_class_33.java",
+    "java_code": "package hibernate;\nimport org.hibernate.SessionFactory;\nimport org.hibernate.Session;\nimport org.hibernate.cfg.Configuration;\n//ID = 3332212\n\npublic class hibernate_class_33 {\n\n    private static hibernate_class_33 instance = null;\n\n    private SessionFactory sessionFactory;\n\n    public static hibernate_class_33 getInstance() {\n        if (hibernate_class_33.instance == null) {\n            hibernate_class_33.instance = new hibernate_class_33().init();\n        }\n\n        return hibernate_class_33.instance;\n    }\n\n    public SessionFactory getSessionFactory() {\n        return this.sessionFactory;\n    }\n\n    public Session getSession() {\n        return this.sessionFactory.openSession();\n    }\n\n    private hibernate_class_33 init() {\n        Configuration cfg = new Configuration();\n\n//        cfg.addClass(domain.UserClass.class);\n//        cfg.addClass(domain.User.class);\n\n        cfg.setProperties(System.getProperties());\n        cfg.configure();\n        SessionFactory sessions = cfg.buildSessionFactory();\n\n        sessionFactory = cfg.configure().buildSessionFactory();\n        return this;\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

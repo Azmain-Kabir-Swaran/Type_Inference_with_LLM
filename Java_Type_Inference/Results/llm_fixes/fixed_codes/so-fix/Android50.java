@@ -17,10 +17,10 @@ public class Android50 extends Activity {
         super.onCreate(icicle);
         setContentView(R.layout.main);
 
-        final EditText mealpricefield = (EditText) findViewById(R.id.mealprice);
-        final TextView answerfield = (TextView) findViewById(R.id.answer);
+        final EditText mealpricefield = (EditText) findViewById(R.id.editText);
+        final TextView answerfield = (TextView) findViewById(R.id.textView);
 
-        final Button button = (Button) findViewById(R.id.calculate);
+        final Button button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 try {

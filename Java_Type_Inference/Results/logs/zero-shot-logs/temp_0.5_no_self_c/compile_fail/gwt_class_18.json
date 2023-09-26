@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/zero-shot-temp-0.5/gwt_class_18.java",
+    "java_code": "package gwt;\nimport com.google.gwt.core.client.GWT;\nimport com.google.gwt.uibinder.client.UiBinder;\nimport com.google.gwt.uibinder.client.UiBinder.Widget;\nimport com.google.gwt.user.client.ui.Composite;\nimport com.google.gwt.user.client.ui.Widget;\n//ID = 2013169\n\npublic class gwt_class_18 extends Composite {\n\n    private static StackNavigatorUiBinder uiBinder = GWT.create(StackNavigatorUiBinder.class);\n\n    interface StackNavigatorUiBinder extends UiBinder<Widget, gwt_class_18> {}\n\n    public gwt_class_18() {\n        initWidget(uiBinder.createAndBindUi(this));\n    }\n\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/code_for_compilation_test/zero-shot-temp-0.5/gwt_class_18.java:4: error: cannot find symbol\nimport com.google.gwt.uibinder.client.UiBinder.Widget;\n                                              ^\n  symbol:   class Widget\n  location: interface UiBinder\nNote: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n1 error\n",
+    "return_code": 1
+}

@@ -1,8 +1,0 @@
-{
-    "attempt": 2,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime18.java",
-    "java_code": "import org.joda.time.DateTimeZone;\nimport org.joda.time.format.DateTimeFormatter;\nimport org.joda.time.format.DateTimeFormatterBuilder;\n\npublic class JodaTime18 {\n\n    // default our time zone to the machine local one.\n    private static final DateTimeZone LOCAL_TZ = DateTimeZone.getDefault();\n\n    // format of date (i.e., timestamp) is yyyy-MM-dd HH:mm:ss.S\n    private static final DateTimeFormatter YEAR_MONTH_DAY_HOUR_MINUTE_SECOND_MILLIS_FORMATTER =\n        new DateTimeFormatterBuilder()\n            .appendYear(4,4)\n            .appendLiteral('-')\n            .appendMonthOfYear(1)\n            .appendLiteral('-')\n            .appendDayOfMonth(1)\n            .appendLiteral(' ')\n            .appendHourOfDay(2)\n            .appendLiteral(':')\n            .appendMinuteOfDay(1)\n            .appendLiteral(':')\n            .appendSecondOfDay(1)\n            .appendLiteral('.')\n            .appendMillisOfDay(1)\n            .toFormatter().withZone(LOCAL_TZ);\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

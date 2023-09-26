@@ -1,0 +1,219 @@
+"attempt": 1
+
+"file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/hibernate_class_8.java"
+
+"java_code": "
+
+import java.util.Date;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.Transient;
+import javax.validation.constraints.AssertTrue;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
+import javax.persistence.Column;
+
+@MappedSuperclass
+public abstract class hibernate_class_8 {
+    private static final long serialVersionUID = 1L;
+    private Date from;
+    private Date thru;
+    
+    @Transient
+    public boolean isActive() {
+        Date now = new Date();
+        boolean afterFrom = from.before(now) || from.equals(now);
+        boolean beforeThru = thru == null || thru.after(now) || thru.equals(now);
+        return afterFrom && beforeThru;
+    }
+    
+    @AssertTrue(message = "Dates are not valid the thru date must be empty, or after the fromdate.")
+    public boolean areDatesValid() {
+        if (thru == null) {
+            return true;
+        } else {
+            return thru.after(from);
+        }
+    }
+    
+    @Temporal(TemporalType.TIMESTAMP)
+    @NotNull
+    @Column(name = "fromDate")
+    public Date getFrom() {
+        return from;
+    }
+    
+    public void setFrom(Date from) {
+        this.from = from;
+    }
+    
+    @Temporal(TemporalType.TIMESTAMP)
+    public Date getThru() {
+        return thru;
+    }
+    
+    public void setThru(Date thru) {
+        this.thru = thru;
+    }
+}
+"
+
+"used_prompt": "
+
+See the code below:
+"""
+@MappedSuperclass
+public abstract class hibernate_class_8 {
+private static final long serialVersionUID = 1L;
+private Date from;
+private Date thru;
+
+/**
+ * Determines if a model is active. A model is active if now is after or
+ * equal to from , and thru is either null, or after now, or equal to now.
+ */
+@Transient
+public boolean isActive() {
+ Date now = new Date();
+ boolean afterFrom = from.before(now) || from.equals(now);
+ boolean beforeThru = thru == null || thru.after(now)
+   || thru.equals(now);
+ return afterFrom && beforeThru;
+}
+
+@AssertTrue(message = "Dates are not valid the thru date must be empty, or after the fromdate.")
+public boolean areDatesValid() {
+ if (thru == null) {
+  return true;
+ } else {
+  return thru.after(from);
+ }
+}
+
+
+@Temporal(TemporalType.TIMESTAMP)
+@NotNull
+@Column(name = "fromDate")
+public Date getFrom() {
+ return from;
+}
+
+public void setFrom(Date from) {
+ this.from = from;
+}
+
+@Temporal(TemporalType.TIMESTAMP)
+public Date getThru() {
+ return thru;
+}
+
+public void setThru(Date thru) {
+ this.thru = thru;
+}
+}
+"""
+For the above code I got the below error log:
+"""
+hibernate_class_8.java:1: error: cannot find symbol
+@MappedSuperclass
+ ^
+  symbol: class MappedSuperclass
+hibernate_class_8.java:4: error: cannot find symbol
+private Date from;
+        ^
+  symbol:   class Date
+  location: class hibernate_class_8
+hibernate_class_8.java:5: error: cannot find symbol
+private Date thru;
+        ^
+  symbol:   class Date
+  location: class hibernate_class_8
+hibernate_class_8.java:33: error: cannot find symbol
+public Date getFrom() {
+       ^
+  symbol:   class Date
+  location: class hibernate_class_8
+hibernate_class_8.java:37: error: cannot find symbol
+public void setFrom(Date from) {
+                    ^
+  symbol:   class Date
+  location: class hibernate_class_8
+hibernate_class_8.java:42: error: cannot find symbol
+public Date getThru() {
+       ^
+  symbol:   class Date
+  location: class hibernate_class_8
+hibernate_class_8.java:46: error: cannot find symbol
+public void setThru(Date thru) {
+                    ^
+  symbol:   class Date
+  location: class hibernate_class_8
+hibernate_class_8.java:11: error: cannot find symbol
+@Transient
+ ^
+  symbol:   class Transient
+  location: class hibernate_class_8
+hibernate_class_8.java:20: error: cannot find symbol
+@AssertTrue(message = "Dates are not valid the thru date must be empty, or after the fromdate.")
+ ^
+  symbol:   class AssertTrue
+  location: class hibernate_class_8
+hibernate_class_8.java:30: error: cannot find symbol
+@Temporal(TemporalType.TIMESTAMP)
+ ^
+  symbol:   class Temporal
+  location: class hibernate_class_8
+hibernate_class_8.java:31: error: cannot find symbol
+@NotNull
+ ^
+  symbol:   class NotNull
+  location: class hibernate_class_8
+hibernate_class_8.java:32: error: cannot find symbol
+@Column(name = "fromDate")
+ ^
+  symbol:   class Column
+  location: class hibernate_class_8
+hibernate_class_8.java:41: error: cannot find symbol
+@Temporal(TemporalType.TIMESTAMP)
+ ^
+  symbol:   class Temporal
+  location: class hibernate_class_8
+hibernate_class_8.java:13: error: cannot find symbol
+ Date now = new Date();
+ ^
+  symbol:   class Date
+  location: class hibernate_class_8
+hibernate_class_8.java:13: error: cannot find symbol
+ Date now = new Date();
+                ^
+  symbol:   class Date
+  location: class hibernate_class_8
+15 errors
+
+"""
+Now fix the error only by fixing the import statements by not using wildcard imports and must not modify code body which means do not change anything inside the class. So, it can be successfully compiled and reply with full code.
+"
+
+"stdout": ""
+
+"stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/hibernate_class_8.java:4: error: package javax.validation.constraints does not exist
+import javax.validation.constraints.AssertTrue;
+                                   ^
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/hibernate_class_8.java:7: error: package javax.validation.constraints does not exist
+import javax.validation.constraints.NotNull;
+                                   ^
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/hibernate_class_8.java:24: error: cannot find symbol
+    @AssertTrue(message = "Dates are not valid the thru date must be empty, or after the fromdate.")
+     ^
+  symbol:   class AssertTrue
+  location: class hibernate_class_8
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/hibernate_class_8.java:34: error: cannot find symbol
+    @NotNull
+     ^
+  symbol:   class NotNull
+  location: class hibernate_class_8
+4 errors
+"
+
+"return_code": 1
+

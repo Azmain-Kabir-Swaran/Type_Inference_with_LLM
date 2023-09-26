@@ -1,0 +1,692 @@
+"attempt": 1
+
+"file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android42.java"
+
+"java_code": "
+
+import android.app.Activity;
+import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.graphics.PixelFormat;
+import android.media.MediaPlayer;
+import android.net.Uri;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.SurfaceHolder;
+import android.view.SurfaceView;
+import android.view.View;
+import android.webkit.URLUtil;
+import android.widget.Button;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.net.URLConnection;
+
+public class Android42 extends Activity implements MediaPlayer.OnErrorListener,
+        MediaPlayer.OnBufferingUpdateListener,
+        MediaPlayer.OnCompletionListener, MediaPlayer.OnPreparedListener, SurfaceHolder.Callback {
+
+    private static final String TAG = "MediaPreview";
+
+    private MediaPlayer mp;
+    private SurfaceView mPreview;
+    private SurfaceHolder holder;
+    private Button btnPlay;
+    private Button btnPause;
+    private Button btnReset;
+    private Button btnStop;
+
+    private String mPath;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.media_preview);
+
+        mPreview = (SurfaceView) findViewById(R.id.myImage);
+        btnPlay = (Button) findViewById(R.id.btn_play);
+        btnPause = (Button) findViewById(R.id.btn_pause);
+        btnReset = (Button) findViewById(R.id.btn_reset);
+        btnStop = (Button) findViewById(R.id.btn_stop);
+
+        getPathFromParentDialog();
+
+        btnPlay.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                playVideo();
+            }
+        });
+
+        btnPause.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                if (mp != null) {
+                    mp.pause();
+                }
+            }
+        });
+
+        btnReset.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (mp != null) {
+                    mp.seekTo(0);
+                }
+            }
+        });
+
+        btnStop.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (mp != null) {
+                    mp.stop();
+                    mp.release();
+                }
+            }
+        });
+
+        getWindow().setFormat(PixelFormat.TRANSPARENT);
+        holder = mPreview.getHolder();
+        holder.addCallback(this);
+        holder.setFixedSize(400, 300);
+    }
+
+    @Override
+    protected void onResume() {
+
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        super.onResume();
+    }
+
+    @Override
+    public boolean onError(MediaPlayer mp, int what, int extra) {
+        if (mp != null) {
+            mp.stop();
+            mp.release();
+        }
+        return false;
+    }
+
+    @Override
+    public void onBufferingUpdate(MediaPlayer mp, int percent) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public void onCompletion(MediaPlayer mp) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public void onPrepared(MediaPlayer mp) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public void surfaceChanged(SurfaceHolder holder, int format, int width,
+                               int height) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public void surfaceCreated(SurfaceHolder holder) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public void surfaceDestroyed(SurfaceHolder holder) {
+        // TODO Auto-generated method stub
+
+    }
+
+"
+
+"used_prompt": "
+
+See the code below:
+"""
+package androidExamples;
+public class Android42 extends Activity implements OnErrorListener, 
+
+OnBufferingUpdateListener,
+OnCompletionListener, OnPreparedListener, SurfaceHolder.Callback{
+
+private static final String TAG = "MediaPreview";
+
+private MediaPlayer mp;
+private SurfaceView mPreview;
+private SurfaceHolder holder;
+private Button btnPlay;
+private Button btnPause;
+private Button btnReset;
+private Button btnStop;
+
+private String mPath;
+
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.media_preview);
+
+    mPreview = (SurfaceView)findViewById(R.id.myImage);
+    btnPlay = (Button)findViewById(100);
+    btnPause = (Button)findViewById(101);
+    btnReset = (Button)findViewById(102);
+    btnStop = (Button)findViewById(103);
+
+    getPathFromParentDialog();
+
+    btnPlay.setOnClickListener(new View.OnClickListener(){
+
+        @Override
+        public void onClick(View v) {
+            playVideo();
+        }
+    });
+
+    btnPause.setOnClickListener(new View.OnClickListener(){
+
+        @Override
+        public void onClick(View v) {
+            // TODO Auto-generated method stub
+            if(mp != null){
+                mp.pause();
+            }
+        }
+    });
+
+    btnReset.setOnClickListener(new View.OnClickListener(){
+
+        @Override
+        public void onClick(View v) {
+            if(mp != null){
+                mp.seekTo(0);
+            }
+        }
+    });
+
+    btnStop.setOnClickListener(new View.OnClickListener(){
+
+        @Override
+        public void onClick(View v) {
+            if(mp != null){
+                mp.stop();
+                mp.release();
+            }
+        }
+    });
+
+    getWindow().setFormat(PixelFormat.TRANSPARENT);
+    holder = mPreview.getHolder();
+    holder.addCallback(this);
+    holder.setFixedSize(400, 300);
+}
+
+@Override
+protected void onResume() {
+
+    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+    super.onResume();
+}
+
+@Override
+public boolean onError(MediaPlayer mp, int what, int extra) {
+    if(mp != null){
+        mp.stop();
+        mp.release();
+    }
+    return false;
+}
+
+@Override
+public void onBufferingUpdate(MediaPlayer mp, int percent) {
+    // TODO Auto-generated method stub
+
+}
+
+@Override
+public void onCompletion(MediaPlayer mp) {
+    // TODO Auto-generated method stub
+
+}
+
+@Override
+public void onPrepared(MediaPlayer mp) {
+    // TODO Auto-generated method stub
+
+}
+
+@Override
+public void surfaceChanged(SurfaceHolder holder, int format, int width,
+        int height) {
+    // TODO Auto-generated method stub
+
+}
+
+@Override
+public void surfaceCreated(SurfaceHolder holder) {
+    // TODO Auto-generated method stub
+
+}
+
+@Override
+public void surfaceDestroyed(SurfaceHolder holder) {
+    // TODO Auto-generated method stub
+
+}
+
+private void playVideo() {
+    try{
+        mp = new MediaPlayer();
+        mp.setOnErrorListener(this);
+        mp.setOnBufferingUpdateListener(this);
+        mp.setOnCompletionListener(this);
+        mp.setOnPreparedListener(this);
+        mp.setAudioStreamType(2);
+
+        mp.setDisplay(mPreview.getHolder());
+        Runnable r = new Runnable(){
+            @Override
+            public void run() {
+                try{
+                    setDataSource(mPath);
+                }
+                catch(Exception ex){
+                    Log.e(TAG, ex.getMessage());
+                }
+                try {
+                    mp.prepare();
+                    Log.v(TAG, "Duration: ===> " + mp.getDuration());
+                } catch (IllegalStateException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    Log.e(TAG, e.getMessage());
+                }
+                mp.start();
+            }
+
+        };
+        new Thread(r).start();
+    }
+    catch(Exception ex){
+        String sDummy = ex.toString();
+        if(mp != null){
+            mp.stop();
+            mp.release();
+        }
+    }
+
+}
+
+private void setDataSource(String path) throws IOException {
+    if(!URLUtil.isNetworkUrl(mPath)){
+        mp.setDataSource(mPath);
+    }
+    else{
+        URL url = new URL(mPath);
+        URLConnection cn = url.openConnection();
+        cn.connect();
+        InputStream stream = cn.getInputStream();
+        if(stream == null){
+            throw new RuntimeException("stream is null");
+        }
+        File fileTemp = File.createTempFile("mediaplayerTmp", "dat");
+        String tempPath = fileTemp.getAbsolutePath();
+        FileOutputStream out = new FileOutputStream(fileTemp);
+        byte buf[] = new byte[128];
+        do{
+            int numRead = stream.read(buf);
+            if(numRead <= 0){
+                break;
+            }
+            out.write(buf, 0, numRead);
+        }while(true);
+        mp.setDataSource(tempPath);
+        try{
+            stream.close();
+        }
+        catch(Exception ex){
+            String sDummy = ex.toString();
+        }
+    }
+}
+
+private void getPathFromParentDialog()
+{
+    Intent intent = getIntent();
+    mPath = intent.getExtras().getString("Path");
+}
+}
+
+"""
+For the above code I got the below error log:
+"""
+Android42.java:2: error: cannot find symbol
+public class Android42 extends Activity implements OnErrorListener, 
+                               ^
+  symbol: class Activity
+Android42.java:2: error: cannot find symbol
+public class Android42 extends Activity implements OnErrorListener, 
+                                                   ^
+  symbol: class OnErrorListener
+Android42.java:4: error: cannot find symbol
+OnBufferingUpdateListener,
+^
+  symbol: class OnBufferingUpdateListener
+Android42.java:5: error: cannot find symbol
+OnCompletionListener, OnPreparedListener, SurfaceHolder.Callback{
+^
+  symbol: class OnCompletionListener
+Android42.java:5: error: cannot find symbol
+OnCompletionListener, OnPreparedListener, SurfaceHolder.Callback{
+                      ^
+  symbol: class OnPreparedListener
+Android42.java:5: error: package SurfaceHolder does not exist
+OnCompletionListener, OnPreparedListener, SurfaceHolder.Callback{
+                                                       ^
+Android42.java:9: error: cannot find symbol
+private MediaPlayer mp;
+        ^
+  symbol:   class MediaPlayer
+  location: class Android42
+Android42.java:10: error: cannot find symbol
+private SurfaceView mPreview;
+        ^
+  symbol:   class SurfaceView
+  location: class Android42
+Android42.java:11: error: cannot find symbol
+private SurfaceHolder holder;
+        ^
+  symbol:   class SurfaceHolder
+  location: class Android42
+Android42.java:12: error: cannot find symbol
+private Button btnPlay;
+        ^
+  symbol:   class Button
+  location: class Android42
+Android42.java:13: error: cannot find symbol
+private Button btnPause;
+        ^
+  symbol:   class Button
+  location: class Android42
+Android42.java:14: error: cannot find symbol
+private Button btnReset;
+        ^
+  symbol:   class Button
+  location: class Android42
+Android42.java:15: error: cannot find symbol
+private Button btnStop;
+        ^
+  symbol:   class Button
+  location: class Android42
+Android42.java:20: error: cannot find symbol
+protected void onCreate(Bundle savedInstanceState) {
+                        ^
+  symbol:   class Bundle
+  location: class Android42
+Android42.java:87: error: cannot find symbol
+public boolean onError(MediaPlayer mp, int what, int extra) {
+                       ^
+  symbol:   class MediaPlayer
+  location: class Android42
+Android42.java:96: error: cannot find symbol
+public void onBufferingUpdate(MediaPlayer mp, int percent) {
+                              ^
+  symbol:   class MediaPlayer
+  location: class Android42
+Android42.java:102: error: cannot find symbol
+public void onCompletion(MediaPlayer mp) {
+                         ^
+  symbol:   class MediaPlayer
+  location: class Android42
+Android42.java:108: error: cannot find symbol
+public void onPrepared(MediaPlayer mp) {
+                       ^
+  symbol:   class MediaPlayer
+  location: class Android42
+Android42.java:114: error: cannot find symbol
+public void surfaceChanged(SurfaceHolder holder, int format, int width,
+                           ^
+  symbol:   class SurfaceHolder
+  location: class Android42
+Android42.java:121: error: cannot find symbol
+public void surfaceCreated(SurfaceHolder holder) {
+                           ^
+  symbol:   class SurfaceHolder
+  location: class Android42
+Android42.java:127: error: cannot find symbol
+public void surfaceDestroyed(SurfaceHolder holder) {
+                             ^
+  symbol:   class SurfaceHolder
+  location: class Android42
+Android42.java:178: error: cannot find symbol
+private void setDataSource(String path) throws IOException {
+                                               ^
+  symbol:   class IOException
+  location: class Android42
+Android42.java:19: error: method does not override or implement a method from a supertype
+@Override
+^
+Android42.java:22: error: cannot find symbol
+    super.onCreate(savedInstanceState);
+    ^
+  symbol:   variable super
+  location: class Android42
+Android42.java:23: error: package R does not exist
+    setContentView(R.layout.media_preview);
+                    ^
+Android42.java:25: error: cannot find symbol
+    mPreview = (SurfaceView)findViewById(R.id.myImage);
+                ^
+  symbol:   class SurfaceView
+  location: class Android42
+Android42.java:25: error: package R does not exist
+    mPreview = (SurfaceView)findViewById(R.id.myImage);
+                                          ^
+Android42.java:26: error: cannot find symbol
+    btnPlay = (Button)findViewById(100);
+               ^
+  symbol:   class Button
+  location: class Android42
+Android42.java:26: error: cannot find symbol
+    btnPlay = (Button)findViewById(100);
+                      ^
+  symbol:   method findViewById(int)
+  location: class Android42
+Android42.java:27: error: cannot find symbol
+    btnPause = (Button)findViewById(101);
+                ^
+  symbol:   class Button
+  location: class Android42
+Android42.java:27: error: cannot find symbol
+    btnPause = (Button)findViewById(101);
+                       ^
+  symbol:   method findViewById(int)
+  location: class Android42
+Android42.java:28: error: cannot find symbol
+    btnReset = (Button)findViewById(102);
+                ^
+  symbol:   class Button
+  location: class Android42
+Android42.java:28: error: cannot find symbol
+    btnReset = (Button)findViewById(102);
+                       ^
+  symbol:   method findViewById(int)
+  location: class Android42
+Android42.java:29: error: cannot find symbol
+    btnStop = (Button)findViewById(103);
+               ^
+  symbol:   class Button
+  location: class Android42
+Android42.java:29: error: cannot find symbol
+    btnStop = (Button)findViewById(103);
+                      ^
+  symbol:   method findViewById(int)
+  location: class Android42
+Android42.java:33: error: package View does not exist
+    btnPlay.setOnClickListener(new View.OnClickListener(){
+                                       ^
+Android42.java:41: error: package View does not exist
+    btnPause.setOnClickListener(new View.OnClickListener(){
+                                        ^
+Android42.java:52: error: package View does not exist
+    btnReset.setOnClickListener(new View.OnClickListener(){
+                                        ^
+Android42.java:62: error: package View does not exist
+    btnStop.setOnClickListener(new View.OnClickListener(){
+                                       ^
+Android42.java:73: error: cannot find symbol
+    getWindow().setFormat(PixelFormat.TRANSPARENT);
+                          ^
+  symbol:   variable PixelFormat
+  location: class Android42
+Android42.java:73: error: cannot find symbol
+    getWindow().setFormat(PixelFormat.TRANSPARENT);
+    ^
+  symbol:   method getWindow()
+  location: class Android42
+Android42.java:79: error: method does not override or implement a method from a supertype
+@Override
+^
+Android42.java:82: error: cannot find symbol
+    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+                            ^
+  symbol:   variable ActivityInfo
+  location: class Android42
+Android42.java:83: error: cannot find symbol
+    super.onResume();
+    ^
+  symbol:   variable super
+  location: class Android42
+Android42.java:86: error: method does not override or implement a method from a supertype
+@Override
+^
+Android42.java:95: error: method does not override or implement a method from a supertype
+@Override
+^
+Android42.java:101: error: method does not override or implement a method from a supertype
+@Override
+^
+Android42.java:107: error: method does not override or implement a method from a supertype
+@Override
+^
+Android42.java:113: error: method does not override or implement a method from a supertype
+@Override
+^
+Android42.java:120: error: method does not override or implement a method from a supertype
+@Override
+^
+Android42.java:126: error: method does not override or implement a method from a supertype
+@Override
+^
+Android42.java:134: error: cannot find symbol
+        mp = new MediaPlayer();
+                 ^
+  symbol:   class MediaPlayer
+  location: class Android42
+Android42.java:149: error: cannot find symbol
+                    Log.e(TAG, ex.getMessage());
+                    ^
+  symbol: variable Log
+Android42.java:153: error: cannot find symbol
+                    Log.v(TAG, "Duration: ===> " + mp.getDuration());
+                    ^
+  symbol: variable Log
+Android42.java:157: error: cannot find symbol
+                } catch (IOException e) {
+                         ^
+  symbol: class IOException
+Android42.java:160: error: cannot find symbol
+                    Log.e(TAG, e.getMessage());
+                    ^
+  symbol: variable Log
+Android42.java:179: error: cannot find symbol
+    if(!URLUtil.isNetworkUrl(mPath)){
+        ^
+  symbol:   variable URLUtil
+  location: class Android42
+Android42.java:183: error: cannot find symbol
+        URL url = new URL(mPath);
+        ^
+  symbol:   class URL
+  location: class Android42
+Android42.java:183: error: cannot find symbol
+        URL url = new URL(mPath);
+                      ^
+  symbol:   class URL
+  location: class Android42
+Android42.java:184: error: cannot find symbol
+        URLConnection cn = url.openConnection();
+        ^
+  symbol:   class URLConnection
+  location: class Android42
+Android42.java:186: error: cannot find symbol
+        InputStream stream = cn.getInputStream();
+        ^
+  symbol:   class InputStream
+  location: class Android42
+Android42.java:190: error: cannot find symbol
+        File fileTemp = File.createTempFile("mediaplayerTmp", "dat");
+        ^
+  symbol:   class File
+  location: class Android42
+Android42.java:190: error: cannot find symbol
+        File fileTemp = File.createTempFile("mediaplayerTmp", "dat");
+                        ^
+  symbol:   variable File
+  location: class Android42
+Android42.java:192: error: cannot find symbol
+        FileOutputStream out = new FileOutputStream(fileTemp);
+        ^
+  symbol:   class FileOutputStream
+  location: class Android42
+Android42.java:192: error: cannot find symbol
+        FileOutputStream out = new FileOutputStream(fileTemp);
+                                   ^
+  symbol:   class FileOutputStream
+  location: class Android42
+Android42.java:213: error: cannot find symbol
+    Intent intent = getIntent();
+    ^
+  symbol:   class Intent
+  location: class Android42
+Android42.java:213: error: cannot find symbol
+    Intent intent = getIntent();
+                    ^
+  symbol:   method getIntent()
+  location: class Android42
+67 errors
+
+"""
+Now fix the error only by fixing the import statements by not using wildcard imports and must not modify code body which means do not change anything inside the class. So, it can be successfully compiled and reply with full code.
+"
+
+"stdout": ""
+
+"stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android42.java:149: error: reached end of file while parsing
+    }
+     ^
+1 error
+"
+
+"return_code": 1
+

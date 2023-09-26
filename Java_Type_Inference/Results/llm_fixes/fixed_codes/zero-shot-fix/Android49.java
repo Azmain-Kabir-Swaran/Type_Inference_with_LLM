@@ -6,12 +6,10 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 
-import com.example.R;
-
 public class Android49 extends LinearLayout {
     public Android49(Context context, AttributeSet attrs) {
         super(context, attrs);
-        LayoutInflater.from(context).inflate(R.layout.main, this, true);
+        ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.main, this, true);
         setGravity(Gravity.CENTER);
     }
 

@@ -6,6 +6,7 @@ import com.thoughtworks.xstream.converters.UnmarshallingContext;
 import com.thoughtworks.xstream.converters.reflection.ReflectionConverter;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+import com.thoughtworks.xstream.mapper.DefaultReflectionProvider;
 import com.thoughtworks.xstream.mapper.Mapper;
 
 import java.util.Map;
@@ -14,33 +15,47 @@ public class xstream_class_21 {
     static class MyConverter implements Converter {
 
         private final Map<String, String> attributes;
+
         private final Class<?> clazz;
+
         private final Mapper mapper;
 
-        public MyConverter(Mapper mapper, Class<?> clazz, Map<String, String> attributes) {
+        private final DefaultReflectionProvider reflectionProvider;
+
+        public MyConverter(Mapper mapper,
+                           DefaultReflectionProvider reflectionProvider, Class<?> clazz,
+                           Map<String, String> attributes) {
+            super();
             this.mapper = mapper;
-            this.clazz = clazz;
+            this.reflectionProvider = reflectionProvider;
             this.attributes = attributes;
+            this.clazz = clazz;
         }
 
         @Override
-        public boolean canConvert(Class<?> type) {
-            return clazz.isAssignableFrom(type);
+        public boolean canConvert(Class<?> cls) {
+            return cls == clazz;
         }
 
         @Override
-        public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {
-            for (Map.Entry<String, String> entry : attributes.entrySet()) {
-                writer.addAttribute(entry.getKey(), entry.getValue());
+        public void marshal(Object value, HierarchicalStreamWriter writer,
+                            MarshallingContext context) {
+            for (String key : attributes.keySet()) {
+                writer.addAttribute(key, attributes.get(key));
             }
 
-            Converter converter = new ReflectionConverter(mapper, context.getMapper());
-            converter.marshal(source, writer, context);
+            Converter converter = new ReflectionConverter(mapper,
+                    reflectionProvider);
+            Object p = null;
+            context.convertAnother(p, converter);
         }
 
         @Override
-        public Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context) {
+        public Object unmarshal(HierarchicalStreamReader arg0,
+                                UnmarshallingContext arg1) {
+            // TODO Auto-generated method stub
             return null;
         }
+
     }
 }

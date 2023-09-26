@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/xstream_class_6.java",
-    "java_code": "import com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.io.xml.DomDriver;\n\nimport java.io.File;\nimport java.io.FileOutputStream;\nimport java.io.OutputStream;\n\npublic class xstream_class_6 {\n    public static boolean toXML(Object object, File file) {\n        XStream xStream = new XStream(new DomDriver(\"UTF-8\"));\n        OutputStream outputStream = null;\n\n        try {\n            outputStream = new FileOutputStream(file);\n            xStream.toXML(object, outputStream);\n        } catch (Exception exp) {\n            return false;\n        } finally {\n            if (outputStream != null) {\n                try {\n                    outputStream.close();\n                } catch (Exception e) {\n                    e.printStackTrace();\n                }\n            }\n        }\n\n        return true;\n    }\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

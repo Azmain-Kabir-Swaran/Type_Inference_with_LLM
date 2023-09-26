@@ -3,7 +3,6 @@ import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
-import com.thoughtworks.xstream.mapper.Mapper;
 
 public class xstream_class_30 implements Converter {
 
@@ -14,7 +13,7 @@ public class xstream_class_30 implements Converter {
 
     @Override
     public Object unmarshal(HierarchicalStreamReader hierarchicalStreamReader, UnmarshallingContext unmarshallingContext) {
-        Items items = new Items();
+        xstream_class_30.Items items = new xstream_class_30.Items();
         while (hierarchicalStreamReader.hasMoreChildren()) {
             hierarchicalStreamReader.moveDown();
             final String currentAttribute = hierarchicalStreamReader.getAttribute("name");
@@ -35,11 +34,11 @@ public class xstream_class_30 implements Converter {
     }
 
     @Override
-    public boolean canConvert(Class type) {
-        return type == Items.class;
+    public boolean canConvert(Class<?> aClass) {
+        return aClass == xstream_class_30.Items.class;
     }
 
-    public class Items {
+    public static class Items {
         private String id;
         private String firstName;
         private String lastName;

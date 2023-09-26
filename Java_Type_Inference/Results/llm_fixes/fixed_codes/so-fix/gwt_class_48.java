@@ -6,7 +6,7 @@ import com.google.gwt.event.logical.shared.SelectionHandler;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.TabBar;
 
-public class GwtClass48 implements EntryPoint {
+public class gwt_class_48 implements EntryPoint {
     @Override
     public void onModuleLoad() {
         TabBar bar = new TabBar();
@@ -14,13 +14,11 @@ public class GwtClass48 implements EntryPoint {
         bar.addTab("bar");
         bar.addTab("baz");
         bar.addSelectionHandler(new SelectionHandler<Integer>() {
-            @Override
             public void onSelection(SelectionEvent<Integer> event) {
-                Window.alert("you clicked tab " + event.getSelectedItem());
+                Window.alert("you clicked tab" + event.getSelectedItem());
             }
         });
         bar.addBeforeSelectionHandler(new BeforeSelectionHandler<Integer>() {
-            @Override
             public void onBeforeSelection(BeforeSelectionEvent<Integer> event) {
                 event.cancel();
             }

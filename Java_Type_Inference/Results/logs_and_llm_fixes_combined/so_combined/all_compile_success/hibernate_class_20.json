@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/hibernate_class_20.java",
+    "java_code": "import org.hibernate.SessionFactory;\nimport org.hibernate.cfg.Configuration;\n\npublic class hibernate_class_20\n{\n    private static final SessionFactory sessionFactory;\n\n    static\n    {\n        try\n        {\n            // Create the SessionFactory from hibernate.cfg.xml\n            sessionFactory = new  Configuration().configure().buildSessionFactory();\n        } catch(Throwable e)\n        {\n            System.err.println(\"Initial sessionFactory creation failed.  \" + e);\n            throw new ExceptionInInitializerError(e);\n        }\n    }\n\n    public static SessionFactory getSessionFactory()\n    {\n        return sessionFactory;\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

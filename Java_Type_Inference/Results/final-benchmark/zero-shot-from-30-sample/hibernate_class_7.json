@@ -1,0 +1,13 @@
+{
+    "filename": "hibernate_class_7",
+    "expected_output": [
+        "import org.hibernate.Session;",
+        "import org.hibernate.SessionFactory;",
+        "import org.hibernate.cfg.AnnotationConfiguration;"
+    ],
+    "predicted_output": [
+        "import org.hibernate.cfg.AnnotationConfiguration;",
+        "import org.hibernate.SessionFactory;",
+        "import org.hibernate.Session;"
+    ]
+}

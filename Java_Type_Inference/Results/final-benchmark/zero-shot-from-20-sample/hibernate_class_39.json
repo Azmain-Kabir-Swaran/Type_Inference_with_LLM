@@ -1,0 +1,23 @@
+{
+    "filename": "hibernate_class_39",
+    "expected_output": [
+        "import java.io.Serializable;",
+        "import java.util.List;",
+        "import java.util.Map;",
+        "import org.appfuse.dao.GenericDao;",
+        "import org.appfuse.dao.SearchException;",
+        "import org.hibernate.Session;",
+        "import org.hibernate.SessionFactory;",
+        "import org.hibernate.Transaction;",
+        "import org.springframework.transaction.annotation.Transactional;"
+    ],
+    "predicted_output": [
+        "import org.hibernate.SessionFactory;",
+        "import java.util.List;",
+        "import org.springframework.transaction.annotation.Transactional;",
+        "import org.hibernate.Transaction;",
+        "import java.io.Serializable;",
+        "import java.util.Map;",
+        "import org.hibernate.Session;"
+    ]
+}

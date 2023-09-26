@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Class_17.java",
-    "java_code": "import java.text.ParseException;\nimport java.text.SimpleDateFormat;\nimport java.util.Date;\nimport java.time.temporal.TemporalAccessor;\nimport java.time.LocalDateTime;\nimport java.time.format.DateTimeFormatter;\n\npublic class Class_17 {\n\n  public static void main(String arg[]) {\n\n    try {\n\n      SimpleDateFormat sourceDateFormat = new SimpleDateFormat(\"yyyy-MM-dd HH:mm:ss\");\n\n      Date date = sourceDateFormat.parse(\"2011-01-18 00:00:00.0\");\n\n      SimpleDateFormat targetDateFormat = new SimpleDateFormat(\"yyyy-MM-dd\");\n      System.out.println(targetDateFormat.format(date));\n\n    } catch (ParseException e) {\n        e.printStackTrace();\n    }\n\n    String date = \"2011-01-18 00:00:00.0\";\n    TemporalAccessor temporal = DateTimeFormatter\n        .ofPattern(\"yyyy-MM-dd HH:mm:ss.S\")\n        .parse(date, LocalDateTime::from);\n    String output = DateTimeFormatter.ofPattern(\"yyyy-MM-dd\").format(temporal);\n    System.out.println(output);\n  }\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

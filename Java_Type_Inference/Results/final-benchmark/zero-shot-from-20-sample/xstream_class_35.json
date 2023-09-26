@@ -1,0 +1,22 @@
+{
+    "filename": "xstream_class_35",
+    "expected_output": [
+        "import org.junit.Test;",
+        "import com.thoughtworks.xstream.XStream;",
+        "import com.thoughtworks.xstream.converters.Converter;",
+        "import com.thoughtworks.xstream.converters.ConverterLookup;",
+        "import com.thoughtworks.xstream.converters.SingleValueConverter;",
+        "import com.thoughtworks.xstream.converters.reflection.ReflectionProvider;",
+        "import com.thoughtworks.xstream.mapper.Mapper;",
+        "import com.thoughtworks.xstream.mapper.MapperWrapper;"
+    ],
+    "predicted_output": [
+        "import com.thoughtworks.xstream.converters.SingleValueConverter;",
+        "import com.thoughtworks.xstream.XStream;",
+        "import com.thoughtworks.xstream.mapper.ReflectionProvider;",
+        "import com.thoughtworks.xstream.converters.ConverterLookup;",
+        "import com.thoughtworks.xstream.converters.Converter;",
+        "import com.thoughtworks.xstream.mapper.Mapper;",
+        "import com.thoughtworks.xstream.mapper.MapperWrapper;"
+    ]
+}

@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/Android06.java",
+    "java_code": "import android.view.Gravity;\nimport android.view.ViewGroup;\nimport android.widget.LinearLayout;\nimport android.view.Gravity;\nimport android.view.ViewGroup;\nimport android.widget.LinearLayout;\n\npublic class Android06 {\n\n    public static void main(String[] args) {\n\n        // TODO Auto-generated method stub\n\n        LinearLayout zoomView = new LinearLayout(null);\n\n        zoomView.setLayoutParams(new ViewGroup.LayoutParams\n                (ViewGroup.LayoutParams.WRAP_CONTENT,\n                        ViewGroup.LayoutParams.WRAP_CONTENT));\n\n        zoomView.setGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL);\n    }\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

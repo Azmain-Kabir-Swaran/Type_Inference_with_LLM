@@ -8,10 +8,8 @@ import java.util.Iterator;
 import java.util.List;
 
 public class xstream_class_34 {
-
     @XStreamAlias("config")
     public static class ConfigParameters extends ParameterHolder {
-
         @XStreamImplicit(itemFieldName = "resource")
         private List<ResourceSettings> resources;
 
@@ -31,8 +29,13 @@ public class xstream_class_34 {
             this.environments = environments;
         }
 
+        public void setEnvironment(Environment environment) {
+            deleteEnvironment(environment.getName());
+            getEnvironments().add(environment);
+        }
+
         public Environment getEnvironment(String env) {
-            for (Environment environment: getEnvironments()) {
+            for (Environment environment : getEnvironments()) {
                 if (env.equals(environment.getName()))
                     return environment;
             }
@@ -58,6 +61,11 @@ public class xstream_class_34 {
             this.resources = resources;
         }
 
+        public void setResource(ResourceSettings resource) {
+            deleteResource(resource.getName());
+            getResources().add(resource);
+        }
+
         public ResourceSettings getResource(String name) {
             for (ResourceSettings resource : getResources()) {
                 if (resource.getName().equals(name))
@@ -79,12 +87,8 @@ public class xstream_class_34 {
             XStream xstream = new XStream() {
                 protected MapperWrapper wrapMapper(MapperWrapper next) {
                     return new MapperWrapper(next) {
-                        public boolean shouldSerializeMember(Class<?> definedIn, String fieldName) {
+                        public boolean shouldSerializeMember(Class definedIn, String fieldName) {
                             return definedIn != Object.class && super.shouldSerializeMember(definedIn, fieldName);
-                        }
-
-                        public boolean shouldSerializeMember(Class<?> definedIn, String fieldName, Class<?> fieldType) {
-                            return definedIn != Object.class && super.shouldSerializeMember(definedIn, fieldName, fieldType);
                         }
                     };
                 }
@@ -98,6 +102,9 @@ public class xstream_class_34 {
             return xstream;
         }
 
+        /**
+         * Returns a string representation of XML.
+         */
         public String toXML() {
             return createXStream().toXML(this);
         }
@@ -111,3 +118,28 @@ public class xstream_class_34 {
 
     public static class ParameterHolder {
     }
+
+    public static class ResourceSettings {
+        private String name;
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+    }
+
+    public static class Environment {
+        private String name;
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+    }
+}

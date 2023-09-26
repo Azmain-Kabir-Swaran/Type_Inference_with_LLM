@@ -3,14 +3,17 @@ import android.app.Service;
 import android.os.IBinder;
 import android.content.Context;
 import android.os.PowerManager;
+import android.os.PowerManager.WakeLock;
 import android.content.Intent;
 //ID = 992508
 
 public class Android29 extends Service {
-    private PowerManager.WakeLock wl;
+
+    private WakeLock wl;
 
     @Override
     public IBinder onBind(Intent arg0) {
+        // TODO Auto-generated method stub
         return null;
     }
 
@@ -25,4 +28,5 @@ public class Android29 extends Service {
     public void onDestroy() {
         wl.release();
     }
-} 
+
+}

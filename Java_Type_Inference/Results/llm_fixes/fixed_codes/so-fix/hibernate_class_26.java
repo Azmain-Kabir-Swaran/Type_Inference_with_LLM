@@ -2,25 +2,21 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
-import org.hibernate.annotations.CascadeType;
-import javax.persistence.OneToOne;
-import java.util.List;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import org.hibernate.cfg.Configuration;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.tool.hbm2ddl.SchemaExport;
-import javax.persistence.Query;
+import org.hibernate.Query;
+import java.util.List;
 
-public class HibernateClass26 {
+public class hibernate_class_26 {
     private SessionFactory sessionFactory;
 
-    public static void main(String[] args) {
-        HibernateClass26 d = new HibernateClass26();
+    public static void main(String[] args){
+        hibernate_class_26 d = new hibernate_class_26();
         d.run3();
     }
+    public void run3(){
 
-    public void run3() {
         Session session = getSession();
         session.beginTransaction();
 
@@ -32,42 +28,48 @@ public class HibernateClass26 {
         session = getSession();
         session.beginTransaction();
 
-        Query query = session.createQuery("from A", A.class);
+        Query query = session.createQuery("from A");
         List<A> results = query.list();
-        for (int i = 0; i < results.size(); i++) {
-            System.out.println("Row " + i + " was:");
+        for (int i=0; i<results.size(); i++){
+            System.out.println("Row "+i+" was:");
             A a = results.get(i);
-            System.out.println("Result " + i);
+            System.out.println("Result "+i);
             System.out.println(a.toString());
         }
 
         session.getTransaction().commit();
-    }
 
-    public void createEntities(Session session) {
-        for (int i = 0; i < 2; i++) {
+
+    }
+    public void createEntities(Session session){
+        for (int i=0; i<2; i++){
             A a = new A();
-            B b = new B();
-            a.setB(b);
-            session.save(a);
-        }
-    }
 
-    public Session getSession() {
-        if (sessionFactory == null) {
-            Configuration config = new Configuration();
+            B b = new B();
+
+            a.setB(b);
+
+            session.save(a);
+
+        }
+
+    }
+    public Session getSession(){
+        if (sessionFactory == null){
+            AnnotationConfiguration config = new AnnotationConfiguration();
             config.addAnnotatedClass(A.class);
             config.addAnnotatedClass(B.class);
             config.configure();
-            new SchemaExport(config).create(true, true);
+            new SchemaExport(config).create(true,true);
+
             sessionFactory = config.buildSessionFactory();
         }
         Session session = sessionFactory.getCurrentSession();
+
         return session;
     }
+    public class A {
 
-    @Entity
-    public static class A {
         private Integer id;
         private B b;
 
@@ -75,8 +77,8 @@ public class HibernateClass26 {
             super();
         }
 
-        @Id
-        @GeneratedValue
+        @javax.persistence.Id
+        @javax.persistence.GeneratedValue
         public Integer getId() {
             return id;
         }
@@ -85,7 +87,7 @@ public class HibernateClass26 {
             this.id = id;
         }
 
-        @OneToOne(cascade = javax.persistence.CascadeType.ALL)
+        @javax.persistence.OneToOne (cascade=javax.persistence.CascadeType.ALL)
         @Fetch(FetchMode.JOIN)
         public B getB() {
             return b;
@@ -95,17 +97,17 @@ public class HibernateClass26 {
             this.b = b;
         }
     }
+    @javax.persistence.Entity
+    public class B {
 
-    @Entity
-    public static class B {
         private Integer id;
 
         public B() {
             super();
         }
 
-        @Id
-        @GeneratedValue
+        @javax.persistence.Id
+        @javax.persistence.GeneratedValue
         public Integer getId() {
             return id;
         }
@@ -114,4 +116,5 @@ public class HibernateClass26 {
             this.id = id;
         }
     }
+
 }

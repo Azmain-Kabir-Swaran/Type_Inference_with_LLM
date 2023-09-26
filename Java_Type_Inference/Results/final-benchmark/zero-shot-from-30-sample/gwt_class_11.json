@@ -1,0 +1,15 @@
+{
+    "filename": "gwt_class_11",
+    "expected_output": [
+        "import com.google.gwt.core.client.EntryPoint;",
+        "import com.google.gwt.user.client.ui.HorizontalPanel;",
+        "import com.google.gwt.user.client.ui.Label;",
+        "import com.google.gwt.user.client.ui.RootPanel;"
+    ],
+    "predicted_output": [
+        "import com.google.gwt.user.client.ui.Label;",
+        "import com.google.gwt.core.client.EntryPoint;",
+        "import com.google.gwt.user.client.ui.HorizontalPanel;",
+        "import com.google.gwt.user.client.ui.RootPanel;"
+    ]
+}

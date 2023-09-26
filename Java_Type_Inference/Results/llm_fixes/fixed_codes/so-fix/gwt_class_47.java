@@ -10,7 +10,8 @@ public class gwt_class_47 implements EntryPoint {
 
     @Override
     public void onModuleLoad() {
-        Widget childone = new HTML("left"), childtwo = new HTML("right");
+        Widget childone = new HTML("left");
+        Widget childtwo = new HTML("right");
         LayoutPanel p = new LayoutPanel();
         p.add(childone);
         p.add(childtwo);

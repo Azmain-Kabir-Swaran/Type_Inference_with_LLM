@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/one-shot-fix/Android13.java",
-    "java_code": "import java.io.ByteArrayOutputStream;\nimport android.graphics.BitmapFactory;\nimport android.net.Uri;\nimport android.graphics.Bitmap;\nimport java.io.ByteArrayInputStream;\nimport android.content.Context;\nimport android.content.ContentResolver;\nimport java.io.FileNotFoundException;\nimport java.io.IOException;\n\npublic class Android13 {\n    public static void main(String[] args) {\n        Uri imageUri = null;\n        Bitmap bitmap = null;\n        try {\n            bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(imageUri));\n        } catch (FileNotFoundException e) {\n            e.printStackTrace();\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n        ByteArrayOutputStream bytes = new ByteArrayOutputStream();\n        bitmap.compress(Bitmap.CompressFormat.JPEG, 40, bytes);\n        ByteArrayInputStream fileInputStream = new ByteArrayInputStream(bytes.toByteArray());\n    }\n\n    private static ContentResolver getContentResolver() {\n        // TODO: Implement the getContentResolver method\n        return null;\n    }\n}",
-    "stdout": "",
-    "stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/one-shot-fix/Android13.java:19: warning: unreachable catch clause\n        } catch (IOException e) {\n          ^\n  thrown type FileNotFoundException has already been caught\n1 warning\n",
-    "return_code": 0
-}

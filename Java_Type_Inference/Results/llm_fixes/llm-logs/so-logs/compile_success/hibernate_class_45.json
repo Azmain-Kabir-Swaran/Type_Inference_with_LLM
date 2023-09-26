@@ -1,8 +1,0 @@
-{
-    "attempt": 3,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/hibernate_class_45.java",
-    "java_code": "import org.hibernate.Session;\nimport org.hibernate.SessionFactory;\nimport org.hibernate.cfg.Configuration;\nimport java.util.Date;\n\npublic class hibernate_class_45 {\n    public static void main(String[] args) {\n        SessionFactory factory = new Configuration().configure().buildSessionFactory();\n        Session session = factory.openSession();\n        session.beginTransaction();\n\n        // Fixed code starts here\n        Message m1 = new Message();\n        m1.setText(\"Hibernated a message on \" + new Date());\n        session.save(m1);\n        // Fixed code ends here\n\n        session.getTransaction().commit();\n        session.close();\n    }\n}\n\nclass Message {\n    private String text;\n    \n    public Message() {}\n    \n    public String getText() {\n        return text;\n    }\n    \n    public void setText(String text) {\n        this.text = text;\n    }\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

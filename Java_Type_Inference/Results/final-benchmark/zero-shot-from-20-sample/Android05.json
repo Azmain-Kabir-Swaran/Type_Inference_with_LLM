@@ -1,0 +1,13 @@
+{
+    "filename": "Android05",
+    "expected_output": [
+        "import android.graphics.drawable.Drawable;",
+        "import android.widget.TabHost;",
+        "import android.widget.TabHost.TabSpec;"
+    ],
+    "predicted_output": [
+        "import android.widget.TabSpec;",
+        "import android.graphics.drawable.Drawable;",
+        "import android.widget.TabHost;"
+    ]
+}

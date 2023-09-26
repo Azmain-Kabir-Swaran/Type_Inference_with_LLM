@@ -5,13 +5,24 @@ import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.shared.HandlerRegistration;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.HasClickHandlers;
 import com.google.gwt.user.client.ui.Widget;
 
 public class gwt_class_24 {
 
-    public abstract static class AbstractNotificationWidget extends Composite implements ClickHandler {
+    public abstract class AbstractNotificationWidget extends Composite implements ClickHandler, HasClickHandlers {
 
         protected abstract String getUniqueId();
+
+        @Override
+        public HandlerRegistration addClickHandler(ClickHandler handler) {
+            return addDomHandler(handler, ClickEvent.getType());
+        }
+
+        @Override
+        public void onClick(ClickEvent event) {
+            doClick(getUniqueId());
+        }
 
         protected native void doClick(String name) /*-{
             $wnd.$("#" + name).click(function () {
@@ -20,35 +31,26 @@ public class gwt_class_24 {
             });
         }-*/;
 
-        @Override
-        public HandlerRegistration addClickHandler(ClickHandler handler) {
-            return addHandler(handler, ClickEvent.getType());
-        }
-
-        @Override
-        public void onClick(ClickEvent event) {
-            doClick(getUniqueId());
-        }
-
     }
 
-    public static class ErrorNotificationWidget extends AbstractNotificationWidget {
+    public class ErrorNotificationWidget extends AbstractNotificationWidget {
 
         private final String uniqueId;
 
         public ErrorNotificationWidget(String title, String message) {
             uniqueId = DOM.createUniqueId();
 
-            initWidget(new Widget());
+            Widget w = null;
+            initWidget(w);
 
-            getElement().setId(uniqueId);
+            this.getElement().setId(uniqueId);
 
-            addClickHandler(this);
+            this.addClickHandler(this);
         }
 
         @Override
         protected String getUniqueId() {
-            return uniqueId;
+            return this.uniqueId;
         }
     }
 }

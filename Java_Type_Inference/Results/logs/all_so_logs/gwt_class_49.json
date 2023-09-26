@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/gwt_class_49.java",
-    "java_code": "import com.google.gwt.dom.client.BodyElement;\nimport com.google.gwt.dom.client.Element;\nimport com.google.gwt.dom.client.Document;\n\nimport java.util.ArrayList;\n\npublic class gwt_class_49 {\n    private void putElementLinkIDsInList(BodyElement elt, ArrayList<String> list) {\n    }\n\n    private void rewriteLinksIterative() {\n        ArrayList<String> links = new ArrayList<>();\n        putElementLinkIDsInList(Document.get().getBody(), links);\n        for (int i = 0; i < links.size(); i++) {\n            Element elt = Document.get().getElementById(links.get(i));\n            rewriteLink(elt, \"www.example.com\");\n        }\n    }\n\n    private void rewriteLink(Element element, String sitename) {\n        String href = element.getPropertyString(\"href\");\n        if (null == href) {\n            return;\n        }\n\n        if (href.startsWith(\"http://\") && !href.startsWith(\"http://\" + sitename + \"/\")) {\n            element.setPropertyString(\"href\", \"http://\" + sitename + \"/Blocked.html\");\n        }\n    }\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

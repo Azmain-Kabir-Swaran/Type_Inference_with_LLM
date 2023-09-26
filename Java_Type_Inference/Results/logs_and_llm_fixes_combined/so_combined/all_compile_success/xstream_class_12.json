@@ -1,0 +1,8 @@
+{
+    "attempt": 3,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/xstream_class_12.java",
+    "java_code": "import com.thoughtworks.xstream.converters.Converter;\nimport com.thoughtworks.xstream.io.HierarchicalStreamWriter;\nimport com.thoughtworks.xstream.io.HierarchicalStreamReader;\nimport com.thoughtworks.xstream.converters.MarshallingContext;\nimport com.thoughtworks.xstream.converters.UnmarshallingContext;\nimport java.util.List;\n\npublic class xstream_class_12 {\n    public class ListToStringXStreamConverter implements Converter {\n\n        private String alias;\n\n        public ListToStringXStreamConverter(String alias) {\n            super();\n            this.alias = alias;\n        }\n\n        @SuppressWarnings(\"rawtypes\")\n        @Override\n        public boolean canConvert(Class type) {\n            return true;\n        }\n\n        @Override\n        public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {\n\n            @SuppressWarnings(\"unchecked\")\n            List<String> list = (List<String>)source;\n\n            for (String string : list) {\n                writer.startNode(alias);\n                writer.setValue(string);\n                writer.endNode();\n            }\n\n        }\n\n        @Override\n        public Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context) {\n            throw new UnsupportedOperationException(\"ListToStringXStreamConverter does not offer suport for unmarshal operation\");\n        }\n\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

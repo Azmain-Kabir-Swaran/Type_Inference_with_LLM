@@ -1,0 +1,14 @@
+{
+    "filename": "hibernate_class_47",
+    "expected_output": [
+        "import org.hibernate.Session;",
+        "import org.hibernate.SessionFactory;",
+        "import org.hibernate.Transaction;"
+    ],
+    "predicted_output": [
+        "import org.hibernate.Transaction;",
+        "import hibernate.HibernateUtil;",
+        "import org.hibernate.SessionFactory;",
+        "import org.hibernate.Session;"
+    ]
+}

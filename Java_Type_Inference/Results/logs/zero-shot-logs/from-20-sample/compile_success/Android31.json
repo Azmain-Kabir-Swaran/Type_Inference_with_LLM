@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/from-20-sample/Android31.java",
+    "java_code": "package androidExamples;\nimport android.os.PowerManager;\nimport android.content.Context;\n//ID = 993137\n\npublic class Android31 {\n\n\tpublic static void main(String[] args) {\n\t\t// TODO Auto-generated method stub\n\n\t\t\t\tPowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);\n\t\t\t\tPowerManager.WakeLock wl = pm.newWakeLock(PowerManager.FULL_WAKE_LOCK, \"My Tag\");\n\t}\n\n\tprivate static PowerManager getSystemService(String powerService) {\n\t\t// TODO Auto-generated method stub\n\t\treturn null;\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

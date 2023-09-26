@@ -1,33 +1,30 @@
 package hibernate;
+
 import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Version;
+import org.hibernate.annotations.NaturalId;
 import java.io.Serializable;
 
 @Entity
 public class hibernate_class_49 implements Serializable {
+    /**
+     * 
+     */
     private static final long serialVersionUID = 1L;
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    
     private String username;
     private String password;
-    
+    private Integer VERSION;
+
     @Version
-    private Integer version;
-
-    public Long getId() {
-        return id;
+    public Integer getVERSION() {
+        return VERSION;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setVERSION(Integer vERSION) {
+        VERSION = vERSION;
     }
 
+    @NaturalId
     public String getUsername() {
         return username;
     }
@@ -42,13 +39,5 @@ public class hibernate_class_49 implements Serializable {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public Integer getVersion() {
-        return version;
-    }
-
-    public void setVersion(Integer version) {
-        this.version = version;
     }
 }

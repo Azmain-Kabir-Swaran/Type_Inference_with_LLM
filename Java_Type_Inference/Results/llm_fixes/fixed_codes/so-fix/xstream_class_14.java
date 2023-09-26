@@ -1,39 +1,24 @@
 import com.thoughtworks.xstream.converters.SingleValueConverter;
-import com.thoughtworks.xstream.mapper.Mapper;
-import com.thoughtworks.xstream.mapper.MapperWrapper;
 
 public class xstream_class_14 {
-    public static class SingleValueEnumConverter implements SingleValueConverter {
-        private final Class<?> enumType;
+    public class SingleValueEnumConverter implements SingleValueConverter {
+        @SuppressWarnings("rawtypes")
+        private final Class enumType;
 
-        public SingleValueEnumConverter(Class<?> type) {
+        public SingleValueEnumConverter(Class type) {
             this.enumType = type;
         }
 
-        public boolean canConvert(Class type) {
-            return enumType.isAssignableFrom(type) && type.getEnumConstants() != null;
+        public boolean canConvert(Class c) {
+            return c.equals(enumType);
         }
 
-        public String toString(Object o) {
-            return ((Enum<?>) o).name();
+        public Object fromString(String value) {
+            return Enum.valueOf(enumType, value);
         }
 
-        public Object fromString(String s) {
-            return Enum.valueOf((Class<Enum>) enumType, s);
+        public String toString(Object obj) {
+            return obj.toString();
         }
-    }
-}
-
-public class EnumMapper extends MapperWrapper {
-
-    public EnumMapper(Mapper wrapped) {
-        super(wrapped);
-    }
-
-    public SingleValueConverter getLocalConverter(Class type) {
-        if (type.isEnum()) {
-            return new xstream_class_14.SingleValueEnumConverter(type);
-        }
-        return super.getLocalConverter(type);
     }
 }

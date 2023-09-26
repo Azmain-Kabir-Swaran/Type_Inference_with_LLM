@@ -17,10 +17,10 @@ public class gwt_class_43 {
 
 			Object folder = null;
 			if (event.getSource().equals(folder) || event.getSource().equals(lbl)) {
-
 			}
 		}
 
+		@Override
 		public Widget getWidget() {
 			return hp;
 		}

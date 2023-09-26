@@ -1,23 +1,25 @@
+import org.hibernate.Session;
+import org.hibernate.query.Query;
 import java.util.List;
 
-public class hibernate_class_16{
-
+public class hibernate_class_16 {
 
     public class Events {
-        org.hibernate.Session hibernateSession;
+        Session hibernateSession;
 
-        public void setHibernateSession(org.hibernate.Session hibernateSession) throws Exception {
+        public void setHibernateSession(Session hibernateSession) throws Exception {
             this.hibernateSession = hibernateSession;
         }
-        public void sethibernateSession(org.hibernate.Session hibernateSession) throws Exception {
+
+        public void sethibernateSession(Session hibernateSession) throws Exception {
             this.hibernateSession = hibernateSession;
         }
 
         public String execute() {
+            Query<Event> query = hibernateSession.createQuery("from hibernate_class_16.Event", Event.class);
+            List<Event> events = query.list();
 
-            List<hibernate_class_16.Event> events = hibernateSession.createQuery("from Event").list();
-
-            for (hibernate_class_16.Event theEvent : events) {
+            for (Event theEvent : events) {
                 // blah blah...
             }
 
@@ -28,5 +30,4 @@ public class hibernate_class_16{
     public class Event {
         // Event class implementation
     }
-
 }

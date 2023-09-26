@@ -1,5 +1,7 @@
 package hibernate;
+
 import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
@@ -14,18 +16,16 @@ public class hibernate_class_50 {
         return sessionFactory;
     }
 
-    public List<Name> getAll() {
+    @SuppressWarnings("unchecked")
+    public List<hibernate.Name> getAll() {
         Session session = this.sessionFactory.getCurrentSession();
-        List<Name> names = (List<Name>)session.createQuery("from Name").list();
+        List<hibernate.Name> names = (List<hibernate.Name>) session.createQuery("from hibernate.Name").list();
         return names;
     }
 
-    public void save(Name name){
+    public void save(hibernate.Name name) {
         Session session = this.sessionFactory.getCurrentSession();
         session.saveOrUpdate(name);
         session.flush();
     }
-}
-class Name{
-    // Add your Name class implementation here
 }

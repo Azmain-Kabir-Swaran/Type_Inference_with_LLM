@@ -1,6 +1,5 @@
 import java.io.IOException;
 import java.net.Inet4Address;
-import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
@@ -9,10 +8,10 @@ public class Android08 {
     private static final String TAG = "TAG";
 
     public static void main(String[] args) {
-        try {
-            InetAddress server = Inet4Address.getByName("thehost");
 
-            if(server.isReachable(5000)){
+        try {
+            java.net.InetAddress server = Inet4Address.getByName("thehost");
+            if (server.isReachable(5000)) {
                 System.out.println("Ping!");
             }
 

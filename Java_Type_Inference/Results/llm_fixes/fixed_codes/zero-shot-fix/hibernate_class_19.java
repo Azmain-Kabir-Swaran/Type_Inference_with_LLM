@@ -1,27 +1,27 @@
-package hibernate;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Column;
 import javax.persistence.Table;
 import javax.persistence.Index;
-import javax.persistence.Column;
-import org.hibernate.annotations.Table;
 
 @Entity
-@Table(name = HibernateClass19.TABLE_NAME,
-        indexes = {
-                @Index(name = "IDX_XDN_DFN", columnList = HibernateClass19.XDN + ", " + HibernateClass19.DFN)
-        }
+@Table(name = hibernate_class_19.TABLE_NAME,
+    indexes = {
+            @Index(name = "IDX_XDN_DFN",
+                    columnList = hibernate_class_19.XDN + ", " + hibernate_class_19.DFN
+            )
+    }
 )
-public class HibernateClass19 {
+
+public class hibernate_class_19 {
     public final static String TABLE_NAME = "house";
     public final static String XDN = "xdn";
     public final static String DFN = "dfn";
 
     @Id
     @GeneratedValue
-    private long id;
+    private long Id;
 
     @Column(name = XDN)
     private long xdn;
@@ -33,11 +33,11 @@ public class HibernateClass19 {
     private String address;
 
     public long getId() {
-        return id;
+        return Id;
     }
 
     public void setId(long id) {
-        this.id = id;
+        this.Id = id;
     }
 
     public long getXdn() {

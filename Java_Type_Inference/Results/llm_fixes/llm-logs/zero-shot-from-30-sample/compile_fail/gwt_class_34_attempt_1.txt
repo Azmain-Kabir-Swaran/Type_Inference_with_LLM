@@ -1,0 +1,129 @@
+"attempt": 1
+
+"file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-from-30-sample/gwt_class_34.java"
+
+"java_code": "
+
+package gwt;
+
+import com.google.gwt.user.client.DOM;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.event.dom.client.SubmitEvent;
+import com.google.gwt.event.dom.client.SubmitHandler;
+import com.google.gwt.event.shared.HandlerRegistration;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.FormPanel;
+
+//ID = 2598154
+public class gwt_class_34 {
+    public static void main(String arg[]){
+        FormPanel form = null;
+        Button submit = null;
+
+        form = FormPanel.wrap(DOM.getElementById("MyForm"));
+        form.setEncoding(FormPanel.ENCODING_MULTIPART);
+
+        submit = Button.wrap(DOM.getElementById("OK"));
+        submit.addClickHandler(new ClickHandler() {
+            public void onClick(ClickEvent event) {
+                // button clicked confirmed
+            }
+        });
+
+        HandlerRegistration formSubmitHandler = form.addSubmitHandler(new SubmitHandler(){
+            public void onSubmit(SubmitEvent event) {
+            }
+        });
+    }
+}
+"
+
+"used_prompt": "
+
+See the code below:
+"""
+package gwt;
+import com.google.gwt.user.client.DOM;
+import com.google.gwt.event.dom.client.SubmitHandler;
+import com.google.gwt.event.shared.HandlerRegistration;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.event.dom.client.SubmitEvent;
+import com.google.gwt.user.client.ui.FormPanel;
+import com.google.gwt.event.dom.client.ClickEvent;
+//ID = 2598154
+
+public class gwt_class_34 {
+	public static void main(String arg[]){
+		FormPanel form = null;
+		Button submit = null;
+
+		form = FormPanel.wrap(DOM.getElementById("MyForm"));
+		form.setEncoding(FormPanel.ENCODING_MULTIPART);
+
+		submit = Button.wrap(DOM.getElementById("OK"));
+		submit.addClickHandler(new ClickHandler() {
+			public void onClick(ClickEvent event) {
+				// button clicked confirmed
+			}
+		});
+
+
+		HandlerRegistration formSubmitHandler = form.addSubmitHandler(new SubmitHandler(){
+			public void onSubmit(SubmitEvent event) {
+			}
+		});
+	}
+
+}
+"""
+For the above code I got the below error log:
+"""
+gwt_class_34.java:3: error: cannot find symbol
+import com.google.gwt.event.dom.client.SubmitHandler;
+                                      ^
+  symbol:   class SubmitHandler
+  location: package com.google.gwt.event.dom.client
+gwt_class_34.java:7: error: cannot find symbol
+import com.google.gwt.event.dom.client.SubmitEvent;
+                                      ^
+  symbol:   class SubmitEvent
+  location: package com.google.gwt.event.dom.client
+gwt_class_34.java:28: error: cannot find symbol
+		HandlerRegistration formSubmitHandler = form.addSubmitHandler(new SubmitHandler(){
+		                                                                  ^
+  symbol:   class SubmitHandler
+  location: class gwt_class_34
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+3 errors
+
+"""
+Now fix the error only by fixing the import statements by not using wildcard imports and must not modify code body which means do not change anything inside the class. So, it can be successfully compiled and reply with full code.
+"
+
+"stdout": ""
+
+"stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-from-30-sample/gwt_class_34.java:6: error: cannot find symbol
+import com.google.gwt.event.dom.client.SubmitEvent;
+                                      ^
+  symbol:   class SubmitEvent
+  location: package com.google.gwt.event.dom.client
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-from-30-sample/gwt_class_34.java:7: error: cannot find symbol
+import com.google.gwt.event.dom.client.SubmitHandler;
+                                      ^
+  symbol:   class SubmitHandler
+  location: package com.google.gwt.event.dom.client
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-from-30-sample/gwt_class_34.java:28: error: cannot find symbol
+        HandlerRegistration formSubmitHandler = form.addSubmitHandler(new SubmitHandler(){
+                                                                          ^
+  symbol:   class SubmitHandler
+  location: class gwt_class_34
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+3 errors
+"
+
+"return_code": 1
+

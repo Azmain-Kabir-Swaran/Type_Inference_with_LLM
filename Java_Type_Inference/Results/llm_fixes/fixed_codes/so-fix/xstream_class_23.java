@@ -4,12 +4,12 @@ import com.thoughtworks.xstream.converters.javabean.JavaBeanConverter;
 import com.thoughtworks.xstream.io.xml.XppDriver;
 
 public class xstream_class_23 {
-
     @XStreamAlias("test")
-    public static class TestObject {
+    public class TestObject {
         private String foo;
 
         public String getFoo() {
+            //return foo; -- Adjusted for EDIT#2
             return foo.toLowerCase();
         }
 
@@ -18,7 +18,7 @@ public class xstream_class_23 {
         }
     }
 
-    public static void main(String[] args) throws Exception {
+    public void test() throws Exception {
         XStream x = new XStream(new XppDriver());
         x.autodetectAnnotations(true);
         x.processAnnotations(TestObject.class);
@@ -26,6 +26,7 @@ public class xstream_class_23 {
         x.registerConverter(new JavaBeanConverter(x.getMapper()));
 
         TestObject o = new TestObject();
+        //o.setFoo("bar"); -- Adjusted for EDIT#2
         o.setFoo("BAR");
 
         String xml = x.toXML(o);

@@ -1,17 +1,17 @@
 package androidExamples;
 
-import android.widget.LinearLayout;
-import android.widget.ImageButton;
 import android.content.Context;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import androidExamples.R;
+import androidExamples.R.drawable;
 
-//ID = 775188
 public class Android21 {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
         ImageButton b2 = new ImageButton(getApplicationContext());
-        b2.setBackgroundResource(R.drawable.img);
+        b2.setBackgroundResource(drawable.img);
         LinearLayout container = (LinearLayout) findViewById(R.id.lay);
         container.addView(b2);
     }
@@ -25,13 +25,5 @@ public class Android21 {
         // TODO Auto-generated method stub
         return null;
     }
-}
 
-class R {
-    public static final class drawable {
-        public static final int img = 0x7f020000;
-    }
-    public static final class id {
-        public static final int lay = 0x7f060000;
-    }
 }

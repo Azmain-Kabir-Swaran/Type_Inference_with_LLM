@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/JodaTime17.java",
+    "java_code": "import org.joda.time.DateTime;\nimport org.joda.time.format.DateTimeFormat;\nimport org.joda.time.format.DateTimeFormatter;\nimport org.joda.time.DateTime;\nimport org.joda.time.format.DateTimeFormat;\nimport org.joda.time.format.DateTimeFormatter;\n\npublic class JodaTime17 {\n\n    public static void main(String[] args) {\n        DateTimeFormatter dtf = DateTimeFormat.forPattern(\"dd-MM-yyyy HH:mm:ss.SSS z\");\n\n        String dts = dtf.print(System.currentTimeMillis());\n\n        System.out.println(dts);\n\n        DateTime dt = dtf.parseDateTime(dts);\n\n    }\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

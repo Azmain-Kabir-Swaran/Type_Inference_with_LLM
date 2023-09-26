@@ -1,6 +1,8 @@
-import android.widget.LinearLayout;
-import android.view.ViewGroup;
+package androidExamples;
+
 import android.view.Gravity;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 //ID = 263507
 public class Android06 {
@@ -9,7 +11,7 @@ public class Android06 {
 
 		// TODO Auto-generated method stub
 		
-		LinearLayout zoomView = new LinearLayout(null);
+		LinearLayout zoomView = null;
 
 		zoomView.setLayoutParams(new ViewGroup.LayoutParams
 		  (ViewGroup.LayoutParams.WRAP_CONTENT,

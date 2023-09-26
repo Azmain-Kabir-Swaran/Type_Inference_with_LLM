@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/Android10.java",
+    "java_code": "import android.os.SystemClock;\nimport android.util.Log;\nimport android.widget.Chronometer;\nimport android.os.SystemClock;\nimport android.util.Log;\nimport android.widget.Chronometer;\n\npublic class Android10 {\n\n    public static void main(String[] args) {\n\n        // TODO Auto-generated method stub\n        Chronometer t = new Chronometer(null);\n        long time = SystemClock.elapsedRealtime() - t.getBase();\n        Log.d(null, \"Was: \" + time); //time is not the proper time for some reason - it is a random number between 0 and 50\n        t.setBase(SystemClock.elapsedRealtime());\n        t.start();\n\n    }\n\n    private static Chronometer findViewById(int toptime) {\n        // TODO Auto-generated method stub\n        return null;\n    }\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

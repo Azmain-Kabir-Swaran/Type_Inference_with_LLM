@@ -1,0 +1,35 @@
+{
+    "filename": "xstream_class_33",
+    "expected_output": [
+        "import com.thoughtworks.xstream.XStream;",
+        "import com.thoughtworks.xstream.io.xml.DomDriver;",
+        "import com.thoughtworks.xstream.mapper.Mapper;",
+        "import flex.messaging.io.amf.ASObject;",
+        "import flex.messaging.io.amf.ActionMessage;",
+        "import flex.messaging.io.amf.MessageBody;",
+        "import flex.messaging.io.amf.MessageHeader;",
+        "import flex.messaging.messages.AcknowledgeMessage;",
+        "import flex.messaging.messages.AcknowledgeMessageExt;",
+        "import flex.messaging.messages.AsyncMessage;",
+        "import flex.messaging.messages.CommandMessage;",
+        "import flex.messaging.messages.CommandMessageExt;",
+        "import flex.messaging.messages.ErrorMessage;",
+        "import flex.messaging.messages.RemotingMessage;"
+    ],
+    "predicted_output": [
+        "import xstream.ASObject;",
+        "import xstream.ErrorMessage;",
+        "import com.thoughtworks.xstream.XStream;",
+        "import xstream.CommandMessageExt;",
+        "import xstream.RemotingMessage;",
+        "import xstream.MessageBody;",
+        "import com.thoughtworks.xstream.io.xml.DomDriver;",
+        "import xstream.ActionMessage;",
+        "import xstream.AcknowledgeMessage;",
+        "import xstream.AsyncMessage;",
+        "import xstream.AcknowledgeMessageExt;",
+        "import com.thoughtworks.xstream.mapper.Mapper;",
+        "import xstream.MessageHeader;",
+        "import xstream.CommandMessage;"
+    ]
+}

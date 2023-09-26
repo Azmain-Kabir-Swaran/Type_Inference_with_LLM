@@ -1,0 +1,9 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime30.java",
+    "java_code": "import org.joda.time.DateTime;\nimport org.joda.time.DateTimeZone;\n\npublic class JodaTime30 {\n\n    public static void main(String[] args) {\n        DateTimeZone dtz = DateTimeZone.forOffsetHours(0);\n\n        DateTime dt = new DateTime(dtz);\n\n        System.out.println(dt);\n        System.out.println(dt.toDate());\n\n    }\n\n}",
+    "used_prompt": "See the code below:\n\"\"\"\npackage jodatime;\npublic class JodaTime30 {\n\n\tpublic static void main(String[] args) {\n\t\tDateTimeZone dtz = DateTimeZone.forOffsetHours(0);\n\n\t\tDateTime dt = new DateTime(dtz);\n\n\t\tSystem.out.println(dt);\n\t\tSystem.out.println(dt.toDate());\n\n\t}\n\n}\n\n\"\"\"\nFor the above code I got the below error log:\n\"\"\"\nJodaTime30.java:5: error: cannot find symbol\n\t\tDateTimeZone dtz = DateTimeZone.forOffsetHours(0);\n\t\t^\n  symbol:   class DateTimeZone\n  location: class JodaTime30\nJodaTime30.java:5: error: cannot find symbol\n\t\tDateTimeZone dtz = DateTimeZone.forOffsetHours(0);\n\t\t                   ^\n  symbol:   variable DateTimeZone\n  location: class JodaTime30\nJodaTime30.java:7: error: cannot find symbol\n\t\tDateTime dt = new DateTime(dtz);\n\t\t^\n  symbol:   class DateTime\n  location: class JodaTime30\nJodaTime30.java:7: error: cannot find symbol\n\t\tDateTime dt = new DateTime(dtz);\n\t\t                  ^\n  symbol:   class DateTime\n  location: class JodaTime30\n4 errors\n\n\"\"\"\nNow fix the error only by fixing the import statements by not using wildcard imports and must not modify code body which means do not change anything inside the class. So, it can be successfully compiled and reply with full code.",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

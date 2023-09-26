@@ -1,3 +1,5 @@
+package androidExamples;
+
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
@@ -6,6 +8,9 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.util.Log;
+
+import android.webkit.MalformedURLException;
+import android.webkit.MimeTypeParseException;
 
 public class Android45 extends Activity {
 
@@ -20,7 +25,7 @@ public class Android45 extends Activity {
         intentFilter.addCategory(Intent.CATEGORY_DEFAULT);
         try {
             intentFilter.addDataType("image/*");
-        } catch (IntentFilter.MalformedMimeTypeException e) {
+        } catch (MimeTypeParseException e) {
             Log.e(TAG, e.toString());
         }
 
@@ -35,11 +40,10 @@ public class Android45 extends Activity {
         if (x == null)
             Log.i(TAG, "failed to regist a receiver");
         else
-            Log.i(TAG, "registed a receiver successfully");
+            Log.i(TAG, "registered a receiver successfully");
 
     }
 
     class Uploader {
-
     }
 }

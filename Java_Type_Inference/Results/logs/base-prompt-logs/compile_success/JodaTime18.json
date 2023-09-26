@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/JodaTime18.java",
+    "java_code": "import org.joda.time.DateTimeZone;\nimport org.joda.time.format.DateTimeFormatter;\nimport org.joda.time.format.DateTimeFormatterBuilder;\nimport org.joda.time.DateTimeZone;\nimport org.joda.time.format.DateTimeFormatter;\nimport org.joda.time.format.DateTimeFormatterBuilder;\n\npublic class JodaTime18 {\n\n    private static final DateTimeZone LOCAL_TZ = DateTimeZone.getDefault();\n\n    private static final DateTimeFormatter YEAR_MONTH_DAY_HOUR_MINUTE_SECOND_MILLIS_FORMATTER =\n            new DateTimeFormatterBuilder()\n                    .appendYear(4,4)\n                    .appendLiteral('-')\n                    .appendMonthOfYear(1)\n                    .appendLiteral('-')\n                    .appendDayOfMonth(1)\n                    .appendLiteral(' ')\n                    .appendHourOfDay(2)\n                    .appendLiteral(':')\n                    .appendMinuteOfDay(1)\n                    .appendLiteral(':')\n                    .appendSecondOfDay(1)\n                    .appendLiteral('.')\n                    .appendMillisOfDay(1)\n                    .toFormatter().withZone(LOCAL_TZ);\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

@@ -1,0 +1,541 @@
+"attempt": 1
+
+"file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Class_2.java"
+
+"java_code": "
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.TitledBorder;
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import javax.swing.UIManager;
+import javax.swing.JComboBox;
+import javax.swing.JCheckBox;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.JScrollPane;
+import javax.swing.ImageIcon;
+import javax.swing.JSplitPane;
+import javax.swing.SwingUtilities;
+import java.awt.Dimension;
+import java.awt.GridLayout;
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.awt.Graphics2D;
+import java.awt.GradientPaint;
+import java.awt.GridBagLayout;
+import java.util.Properties;
+
+public class Class_2 {
+
+    public static void main(String[] args) {
+
+        Runnable r = new Runnable() {
+
+            public void run() {
+                final JFrame frame = new JFrame("Nested Layout Example");
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+                final JPanel gui = new JPanel(new BorderLayout(5,5));
+                gui.setBorder( new TitledBorder("BorderLayout(5,5)") );
+
+                JPanel plafComponents = new JPanel(
+                    new FlowLayout(FlowLayout.RIGHT, 3,3));
+                plafComponents.setBorder(
+                    new TitledBorder("FlowLayout(FlowLayout.RIGHT, 3,3)") );
+
+                final UIManager.LookAndFeelInfo[] plafInfos =
+                    UIManager.getInstalledLookAndFeels();
+                String[] plafNames = new String[plafInfos.length];
+                for (int ii=0; ii<plafInfos.length; ii++) {
+                    plafNames[ii] = plafInfos[ii].getName();
+                }
+                final JComboBox<String> plafChooser = new JComboBox<String>(plafNames);
+                plafComponents.add(plafChooser);
+
+                final JCheckBox pack = new JCheckBox("Pack on PLAF change", true);
+                plafComponents.add(pack);
+
+                plafChooser.addActionListener( new ActionListener(){
+                    public void actionPerformed(ActionEvent ae) {
+                        int index = plafChooser.getSelectedIndex();
+                        try {
+                            UIManager.setLookAndFeel(
+                                plafInfos[index].getClassName() );
+                            SwingUtilities.updateComponentTreeUI(frame);
+                            if (pack.isSelected()) {
+                                frame.pack();
+                                frame.setMinimumSize(frame.getSize());
+                            }
+                        } catch(Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                } );
+
+                gui.add(plafComponents, BorderLayout.NORTH);
+
+                JPanel dynamicLabels = new JPanel(new BorderLayout(4,4));
+                dynamicLabels.setBorder(
+                    new TitledBorder("BorderLayout(4,4)") );
+                gui.add(dynamicLabels, BorderLayout.WEST);
+
+                final JPanel labels = new JPanel(new GridLayout(0,2,3,3));
+                labels.setBorder(
+                    new TitledBorder("GridLayout(0,2,3,3)") );
+
+                JButton addNew = new JButton("Add Another Label");
+                dynamicLabels.add( addNew, BorderLayout.NORTH );
+                addNew.addActionListener( new ActionListener(){
+
+                    private int labelCount = 0;
+
+                    public void actionPerformed(ActionEvent ae) {
+                        labels.add( new JLabel("Label " + ++labelCount) );
+                        frame.validate();
+                    }
+                } );
+
+                dynamicLabels.add( new JScrollPane(labels), BorderLayout.CENTER );
+
+                String[] header = {"Name", "Value"};
+                String[] a = new String[0];
+                Properties properties = System.getProperties();
+                String[] names = properties.stringPropertyNames().toArray(a);
+                String[][] data = new String[names.length][2];
+                for (int ii=0; ii<names.length; ii++) {
+                    data[ii][0] = names[ii];
+                    data[ii][1] = properties.getProperty(names[ii]);
+                }
+                DefaultTableModel model = new DefaultTableModel(data, header);
+                JTable table = new JTable(model);
+                try {
+                    // 1.6+
+                    table.setAutoCreateRowSorter(true);
+                } catch(Exception continuewithNoSort) {
+                }
+"
+
+"used_prompt": "
+
+See the code below:
+"""
+package common_JDK;
+
+class Class_2 {
+
+    public static void main(String[] args) {
+
+        Runnable r = new Runnable() {
+
+            public void run() {
+                final JFrame frame = new JFrame("Nested Layout Example");
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+                final JPanel gui = new JPanel(new BorderLayout(5,5));
+                gui.setBorder( new TitledBorder("BorderLayout(5,5)") );
+
+                //JToolBar tb = new JToolBar();
+                JPanel plafComponents = new JPanel(
+                    new FlowLayout(FlowLayout.RIGHT, 3,3));
+                plafComponents.setBorder(
+                    new TitledBorder("FlowLayout(FlowLayout.RIGHT, 3,3)") );
+
+                final UIManager.LookAndFeelInfo[] plafInfos =
+                    UIManager.getInstalledLookAndFeels();
+                String[] plafNames = new String[plafInfos.length];
+                for (int ii=0; ii<plafInfos.length; ii++) {
+                    plafNames[ii] = plafInfos[ii].getName();
+                }
+                final JComboBox plafChooser = new JComboBox(plafNames);
+                plafComponents.add(plafChooser);
+
+                final JCheckBox pack = new JCheckBox("Pack on PLAF change", true);
+                plafComponents.add(pack);
+
+                plafChooser.addActionListener( new ActionListener(){
+                    public void actionPerformed(ActionEvent ae) {
+                        int index = plafChooser.getSelectedIndex();
+                        try {
+                            UIManager.setLookAndFeel(
+                                plafInfos[index].getClassName() );
+                            SwingUtilities.updateComponentTreeUI(frame);
+                            if (pack.isSelected()) {
+                                frame.pack();
+                                frame.setMinimumSize(frame.getSize());
+                            }
+                        } catch(Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                } );
+
+                gui.add(plafComponents, BorderLayout.NORTH);
+
+                JPanel dynamicLabels = new JPanel(new BorderLayout(4,4));
+                dynamicLabels.setBorder(
+                    new TitledBorder("BorderLayout(4,4)") );
+                gui.add(dynamicLabels, BorderLayout.WEST);
+
+                final JPanel labels = new JPanel(new GridLayout(0,2,3,3));
+                labels.setBorder(
+                    new TitledBorder("GridLayout(0,2,3,3)") );
+
+                JButton addNew = new JButton("Add Another Label");
+                dynamicLabels.add( addNew, BorderLayout.NORTH );
+                addNew.addActionListener( new ActionListener(){
+
+                    private int labelCount = 0;
+
+                    public void actionPerformed(ActionEvent ae) {
+                        labels.add( new JLabel("Label " + ++labelCount) );
+                        frame.validate();
+                    }
+                } );
+
+                dynamicLabels.add( new JScrollPane(labels), BorderLayout.CENTER );
+
+                String[] header = {"Name", "Value"};
+                String[] a = new String[0];
+                String[] names = System.getProperties().
+                    stringPropertyNames().toArray(a);
+                String[][] data = new String[names.length][2];
+                for (int ii=0; ii<names.length; ii++) {
+                    data[ii][0] = names[ii];
+                    data[ii][1] = System.getProperty(names[ii]);
+                }
+                DefaultTableModel model = new DefaultTableModel(data, header);
+                JTable table = new JTable(model);
+                try {
+                    // 1.6+
+                    table.setAutoCreateRowSorter(true);
+                } catch(Exception continuewithNoSort) {
+                }
+                JScrollPane tableScroll = new JScrollPane(table);
+                Dimension tablePreferred = tableScroll.getPreferredSize();
+                tableScroll.setPreferredSize(
+                    new Dimension(tablePreferred.width, tablePreferred.height/3) );
+
+                JPanel imagePanel = new JPanel(new GridBagLayout());
+                imagePanel.setBorder(
+                    new TitledBorder("GridBagLayout()") );
+
+                BufferedImage bi = new BufferedImage(
+                    200,200,BufferedImage.TYPE_INT_ARGB);
+                Graphics2D g = bi.createGraphics();
+                GradientPaint gp = new GradientPaint(
+                    20f,20f,Color.red, 180f,180f,Color.yellow);
+                g.setPaint(gp);
+                g.fillRect(0,0,200,200);
+                ImageIcon ii = new ImageIcon(bi);
+                JLabel imageLabel = new JLabel(ii);
+                imagePanel.add( imageLabel, null );
+
+                JSplitPane splitPane = new JSplitPane(
+                    JSplitPane.VERTICAL_SPLIT,
+                    tableScroll,
+                    new JScrollPane(imagePanel));
+                gui.add( splitPane, BorderLayout.CENTER );
+
+                frame.setContentPane(gui);
+
+                frame.pack();
+
+                frame.setLocationRelativeTo(null);
+                try {
+                    // 1.6+
+                    frame.setLocationByPlatform(true);
+                    frame.setMinimumSize(frame.getSize());
+                } catch(Throwable ignoreAndContinue) {
+                }
+
+                frame.setVisible(true);
+            }
+        };
+        SwingUtilities.invokeLater(r);
+    }
+}
+"""
+For the above code I got the below error log:
+"""
+Class_2.java:10: error: cannot find symbol
+                final JFrame frame = new JFrame("Nested Layout Example");
+                      ^
+  symbol: class JFrame
+Class_2.java:10: error: cannot find symbol
+                final JFrame frame = new JFrame("Nested Layout Example");
+                                         ^
+  symbol: class JFrame
+Class_2.java:11: error: cannot find symbol
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                                               ^
+  symbol: variable JFrame
+Class_2.java:13: error: cannot find symbol
+                final JPanel gui = new JPanel(new BorderLayout(5,5));
+                      ^
+  symbol: class JPanel
+Class_2.java:13: error: cannot find symbol
+                final JPanel gui = new JPanel(new BorderLayout(5,5));
+                                       ^
+  symbol: class JPanel
+Class_2.java:13: error: cannot find symbol
+                final JPanel gui = new JPanel(new BorderLayout(5,5));
+                                                  ^
+  symbol: class BorderLayout
+Class_2.java:14: error: cannot find symbol
+                gui.setBorder( new TitledBorder("BorderLayout(5,5)") );
+                                   ^
+  symbol: class TitledBorder
+Class_2.java:17: error: cannot find symbol
+                JPanel plafComponents = new JPanel(
+                ^
+  symbol: class JPanel
+Class_2.java:17: error: cannot find symbol
+                JPanel plafComponents = new JPanel(
+                                            ^
+  symbol: class JPanel
+Class_2.java:18: error: cannot find symbol
+                    new FlowLayout(FlowLayout.RIGHT, 3,3));
+                        ^
+  symbol: class FlowLayout
+Class_2.java:18: error: cannot find symbol
+                    new FlowLayout(FlowLayout.RIGHT, 3,3));
+                                   ^
+  symbol: variable FlowLayout
+Class_2.java:20: error: cannot find symbol
+                    new TitledBorder("FlowLayout(FlowLayout.RIGHT, 3,3)") );
+                        ^
+  symbol: class TitledBorder
+Class_2.java:22: error: package UIManager does not exist
+                final UIManager.LookAndFeelInfo[] plafInfos =
+                               ^
+Class_2.java:23: error: cannot find symbol
+                    UIManager.getInstalledLookAndFeels();
+                    ^
+  symbol: variable UIManager
+Class_2.java:28: error: cannot find symbol
+                final JComboBox plafChooser = new JComboBox(plafNames);
+                      ^
+  symbol: class JComboBox
+Class_2.java:28: error: cannot find symbol
+                final JComboBox plafChooser = new JComboBox(plafNames);
+                                                  ^
+  symbol: class JComboBox
+Class_2.java:31: error: cannot find symbol
+                final JCheckBox pack = new JCheckBox("Pack on PLAF change", true);
+                      ^
+  symbol: class JCheckBox
+Class_2.java:31: error: cannot find symbol
+                final JCheckBox pack = new JCheckBox("Pack on PLAF change", true);
+                                           ^
+  symbol: class JCheckBox
+Class_2.java:34: error: cannot find symbol
+                plafChooser.addActionListener( new ActionListener(){
+                                                   ^
+  symbol: class ActionListener
+Class_2.java:51: error: cannot find symbol
+                gui.add(plafComponents, BorderLayout.NORTH);
+                                        ^
+  symbol: variable BorderLayout
+Class_2.java:53: error: cannot find symbol
+                JPanel dynamicLabels = new JPanel(new BorderLayout(4,4));
+                ^
+  symbol: class JPanel
+Class_2.java:53: error: cannot find symbol
+                JPanel dynamicLabels = new JPanel(new BorderLayout(4,4));
+                                           ^
+  symbol: class JPanel
+Class_2.java:53: error: cannot find symbol
+                JPanel dynamicLabels = new JPanel(new BorderLayout(4,4));
+                                                      ^
+  symbol: class BorderLayout
+Class_2.java:55: error: cannot find symbol
+                    new TitledBorder("BorderLayout(4,4)") );
+                        ^
+  symbol: class TitledBorder
+Class_2.java:56: error: cannot find symbol
+                gui.add(dynamicLabels, BorderLayout.WEST);
+                                       ^
+  symbol: variable BorderLayout
+Class_2.java:58: error: cannot find symbol
+                final JPanel labels = new JPanel(new GridLayout(0,2,3,3));
+                      ^
+  symbol: class JPanel
+Class_2.java:58: error: cannot find symbol
+                final JPanel labels = new JPanel(new GridLayout(0,2,3,3));
+                                          ^
+  symbol: class JPanel
+Class_2.java:58: error: cannot find symbol
+                final JPanel labels = new JPanel(new GridLayout(0,2,3,3));
+                                                     ^
+  symbol: class GridLayout
+Class_2.java:60: error: cannot find symbol
+                    new TitledBorder("GridLayout(0,2,3,3)") );
+                        ^
+  symbol: class TitledBorder
+Class_2.java:62: error: cannot find symbol
+                JButton addNew = new JButton("Add Another Label");
+                ^
+  symbol: class JButton
+Class_2.java:62: error: cannot find symbol
+                JButton addNew = new JButton("Add Another Label");
+                                     ^
+  symbol: class JButton
+Class_2.java:63: error: cannot find symbol
+                dynamicLabels.add( addNew, BorderLayout.NORTH );
+                                           ^
+  symbol: variable BorderLayout
+Class_2.java:64: error: cannot find symbol
+                addNew.addActionListener( new ActionListener(){
+                                              ^
+  symbol: class ActionListener
+Class_2.java:74: error: cannot find symbol
+                dynamicLabels.add( new JScrollPane(labels), BorderLayout.CENTER );
+                                       ^
+  symbol: class JScrollPane
+Class_2.java:74: error: cannot find symbol
+                dynamicLabels.add( new JScrollPane(labels), BorderLayout.CENTER );
+                                                            ^
+  symbol: variable BorderLayout
+Class_2.java:85: error: cannot find symbol
+                DefaultTableModel model = new DefaultTableModel(data, header);
+                ^
+  symbol: class DefaultTableModel
+Class_2.java:85: error: cannot find symbol
+                DefaultTableModel model = new DefaultTableModel(data, header);
+                                              ^
+  symbol: class DefaultTableModel
+Class_2.java:86: error: cannot find symbol
+                JTable table = new JTable(model);
+                ^
+  symbol: class JTable
+Class_2.java:86: error: cannot find symbol
+                JTable table = new JTable(model);
+                                   ^
+  symbol: class JTable
+Class_2.java:92: error: cannot find symbol
+                JScrollPane tableScroll = new JScrollPane(table);
+                ^
+  symbol: class JScrollPane
+Class_2.java:92: error: cannot find symbol
+                JScrollPane tableScroll = new JScrollPane(table);
+                                              ^
+  symbol: class JScrollPane
+Class_2.java:93: error: cannot find symbol
+                Dimension tablePreferred = tableScroll.getPreferredSize();
+                ^
+  symbol: class Dimension
+Class_2.java:95: error: cannot find symbol
+                    new Dimension(tablePreferred.width, tablePreferred.height/3) );
+                        ^
+  symbol: class Dimension
+Class_2.java:97: error: cannot find symbol
+                JPanel imagePanel = new JPanel(new GridBagLayout());
+                ^
+  symbol: class JPanel
+Class_2.java:97: error: cannot find symbol
+                JPanel imagePanel = new JPanel(new GridBagLayout());
+                                        ^
+  symbol: class JPanel
+Class_2.java:97: error: cannot find symbol
+                JPanel imagePanel = new JPanel(new GridBagLayout());
+                                                   ^
+  symbol: class GridBagLayout
+Class_2.java:99: error: cannot find symbol
+                    new TitledBorder("GridBagLayout()") );
+                        ^
+  symbol: class TitledBorder
+Class_2.java:101: error: cannot find symbol
+                BufferedImage bi = new BufferedImage(
+                ^
+  symbol: class BufferedImage
+Class_2.java:101: error: cannot find symbol
+                BufferedImage bi = new BufferedImage(
+                                       ^
+  symbol: class BufferedImage
+Class_2.java:102: error: cannot find symbol
+                    200,200,BufferedImage.TYPE_INT_ARGB);
+                            ^
+  symbol: variable BufferedImage
+Class_2.java:103: error: cannot find symbol
+                Graphics2D g = bi.createGraphics();
+                ^
+  symbol: class Graphics2D
+Class_2.java:104: error: cannot find symbol
+                GradientPaint gp = new GradientPaint(
+                ^
+  symbol: class GradientPaint
+Class_2.java:104: error: cannot find symbol
+                GradientPaint gp = new GradientPaint(
+                                       ^
+  symbol: class GradientPaint
+Class_2.java:105: error: cannot find symbol
+                    20f,20f,Color.red, 180f,180f,Color.yellow);
+                            ^
+  symbol: variable Color
+Class_2.java:105: error: cannot find symbol
+                    20f,20f,Color.red, 180f,180f,Color.yellow);
+                                                 ^
+  symbol: variable Color
+Class_2.java:108: error: cannot find symbol
+                ImageIcon ii = new ImageIcon(bi);
+                ^
+  symbol: class ImageIcon
+Class_2.java:108: error: cannot find symbol
+                ImageIcon ii = new ImageIcon(bi);
+                                   ^
+  symbol: class ImageIcon
+Class_2.java:109: error: cannot find symbol
+                JLabel imageLabel = new JLabel(ii);
+                ^
+  symbol: class JLabel
+Class_2.java:109: error: cannot find symbol
+                JLabel imageLabel = new JLabel(ii);
+                                        ^
+  symbol: class JLabel
+Class_2.java:112: error: cannot find symbol
+                JSplitPane splitPane = new JSplitPane(
+                ^
+  symbol: class JSplitPane
+Class_2.java:112: error: cannot find symbol
+                JSplitPane splitPane = new JSplitPane(
+                                           ^
+  symbol: class JSplitPane
+Class_2.java:113: error: cannot find symbol
+                    JSplitPane.VERTICAL_SPLIT,
+                    ^
+  symbol: variable JSplitPane
+Class_2.java:115: error: cannot find symbol
+                    new JScrollPane(imagePanel));
+                        ^
+  symbol: class JScrollPane
+Class_2.java:116: error: cannot find symbol
+                gui.add( splitPane, BorderLayout.CENTER );
+                                    ^
+  symbol: variable BorderLayout
+Class_2.java:133: error: cannot find symbol
+        SwingUtilities.invokeLater(r);
+        ^
+  symbol:   variable SwingUtilities
+  location: class Class_2
+65 errors
+
+"""
+Now fix the error only by fixing the import statements by not using wildcard imports and must not modify code body which means do not change anything inside the class. So, it can be successfully compiled and reply with full code.
+"
+
+"stdout": ""
+
+"stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Class_2.java:115: error: reached end of file while parsing
+                }
+                 ^
+1 error
+"
+
+"return_code": 1
+

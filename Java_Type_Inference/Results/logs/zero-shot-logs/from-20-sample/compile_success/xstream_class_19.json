@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/from-20-sample/xstream_class_19.java",
+    "java_code": "package xstream;\nimport com.thoughtworks.xstream.io.HierarchicalStreamWriter;\nimport com.thoughtworks.xstream.converters.Converter;\nimport com.thoughtworks.xstream.io.HierarchicalStreamReader;\nimport com.thoughtworks.xstream.converters.MarshallingContext;\nimport com.thoughtworks.xstream.converters.UnmarshallingContext;\n//11484532\n\npublic class xstream_class_19 {\n\tpublic class CustomConverter implements Converter {\n\n\t\t   public void marshal(Object source, HierarchicalStreamWriter writer,\n\t\t        MarshallingContext context) {\n\t\t     // TODO: Get annotation value from object 'source' with name of tag via Reflection.\n\t\t     // Or add a method to the AnimalConfig interface giving you tag name to put to serialization output.\n\t\t   }\n\n\t\t   public Object unmarshal(HierarchicalStreamReader reader,\n\t\t        UnmarshallingContext context) {\n\t\t     Class canConvert = null;\n\t\t\t// TODO: use reflection to create animal object based on what you xml tag you have at hahd.\n\t\t     return context.convertAnother(context.currentObject(),canConvert);\n\t\t   }\n\n\t\t   public boolean canConvert(Class type) {\n\t\t     return true;\n\t\t   }\n\t\t }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

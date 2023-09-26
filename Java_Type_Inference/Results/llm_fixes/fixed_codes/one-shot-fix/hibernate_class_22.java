@@ -1,43 +1,45 @@
+package hibernate;
+
 import org.hibernate.Session;
-import org.hibernate.query.Query;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import com.google.gson.JsonObject;
+
+import com.google.gwt.json.client.JSONObject;
 
 public class hibernate_class_22 {
-    public JsonObject check() {
+    public JSONObject check() {
         Session session = null;
-        JsonObject check = new JsonObject();
+        JSONObject check = new JSONObject();
         try {
             SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
             session = sessionFactory.openSession();
-
+    
             String username = null;
             boolean justusername = false;
             if (justusername) {
-                String hquery = "SELECT username FROM User user WHERE username = :username";
-                Query<String> query = session.createQuery(hquery, String.class);
-                query.setParameter("username", username);
+                String hquery = "Select username from User user Where username = ? ";
+                org.hibernate.query.Query<String> query = session.createQuery(hquery);
+                query.setParameter(0, username);
                 String user = query.uniqueResult();
                 if (user == null) {
-                    check.addProperty("indatabase", false);
+                    check.put("indatabase", false);
                 } else {
-                    check.addProperty("indatabase", true);
+                    check.put("indatabase", true);
                 }
-                check.addProperty("justusername", true);
+                check.put("justusername", true);
             } else {
-                String hquery = "SELECT username FROM User user WHERE username = :username AND password = :password";
-                Query<String> query = session.createQuery(hquery, String.class);
-                query.setParameter("username", username);
+                String hquery = "Select username from User user Where username = :user and password = :pass ";
+                org.hibernate.query.Query<String> query = session.createQuery(hquery);
+                query.setParameter("user", username);
                 String password = null;
-                query.setParameter("password", password);
+                query.setParameter("pass", password);
                 String user = query.uniqueResult();
                 if (user == null) {
-                    check.addProperty("indatabase", false);
+                    check.put("indatabase", false);
                 } else {
-                    check.addProperty("indatabase", true);
+                    check.put("indatabase", true);
                 }
-                check.addProperty("justusername", false);
+                check.put("justusername", false);
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());

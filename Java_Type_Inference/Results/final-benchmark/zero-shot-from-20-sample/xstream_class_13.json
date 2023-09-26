@@ -1,0 +1,11 @@
+{
+    "filename": "xstream_class_13",
+    "expected_output": [
+        "import com.thoughtworks.xstream.mapper.ClassAliasingMapper;",
+        "import com.thoughtworks.xstream.mapper.Mapper;"
+    ],
+    "predicted_output": [
+        "import com.thoughtworks.xstream.mapper.Mapper;",
+        "import com.thoughtworks.xstream.mapper.ClassAliasingMapper;"
+    ]
+}

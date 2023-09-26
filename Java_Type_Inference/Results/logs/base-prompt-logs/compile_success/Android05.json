@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/Android05.java",
+    "java_code": "import android.widget.TabHost;\nimport android.widget.TabHost.TabSpec;\nimport android.graphics.drawable.Drawable;\nimport android.widget.TabHost;\nimport android.widget.TabHost.TabSpec;\nimport android.graphics.drawable.Drawable;\n\npublic class Android05 {\n\n    public static void main(String[] args) {\n        TabHost mTabs = null;\n        TabHost.TabSpec ts = mTabs.newTabSpec(\"tab\");\n        Drawable iconResource = null;\n        ts.setIndicator(\"TabTitle\", iconResource);\n\n        mTabs.addTab(ts);\n        mTabs.getTabWidget().removeAllViews();\n        mTabs.clearAllTabs();\n\n    }\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

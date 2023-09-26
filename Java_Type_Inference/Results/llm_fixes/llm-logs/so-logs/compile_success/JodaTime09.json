@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime09.java",
-    "java_code": "import java.util.TimeZone;\nimport org.joda.time.DateTimeZone;\n\npublic class JodaTime09 {\n\n\tpublic static void main(String[] args) {\n\t\tfinal String string_from_3rd_party = \"GMT+08:00\";\n\t\tSystem.out.println(TimeZone.getTimeZone(string_from_3rd_party));\n\t\tSystem.out.println(DateTimeZone.forID(string_from_3rd_party));\n\t}\n\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

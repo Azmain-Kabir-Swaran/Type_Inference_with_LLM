@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/from-20-sample/xstream_class_26.java",
+    "java_code": "package xstream;\nimport com.thoughtworks.xstream.converters.SingleValueConverter;\nimport java.util.ArrayList;\nimport java.util.Collection;\nimport java.util.List;\n//ID=17871210\n\n\npublic class xstream_class_26 {\n\tpublic class IntegerListConverter implements SingleValueConverter {\n\t    @Override\n\t    public boolean canConvert(Class clazz) {\n\t        return List.class.isAssignableFrom(clazz);\n\t    }\n\n\t    @Override\n\t    public Object fromString(String arg0) {\n\t        Collection<Integer> collection = new ArrayList<Integer>();\n\t        String[] integerStrings = arg0.split(\" \");\n\t        for (int i = 0; i < integerStrings.length; i++) {\n\t            collection.add(Integer.valueOf(integerStrings[i]));\n\t        }\n\t        return collection;\n\t    }\n\n\t    @Override\n\t    public String toString(Object arg0) {\n\t        List collection = (List) arg0;\n\t        StringBuffer sb = new StringBuffer();\n\t        boolean first = true;\n\t        for (Object object : collection) {\n\t            if (first) {\n\t                first = false;\n\t            } else {\n\t                sb.append(' ');\n\t            }\n\t            sb.append(object.toString());\n\t        }\n\t        return sb.toString();\n\t    }\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

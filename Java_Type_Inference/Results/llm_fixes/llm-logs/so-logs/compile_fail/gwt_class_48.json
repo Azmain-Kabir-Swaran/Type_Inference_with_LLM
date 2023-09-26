@@ -1,8 +1,0 @@
-{
-    "attempt": 5,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/gwt_class_48.java",
-    "java_code": "import com.google.gwt.core.client.EntryPoint;\nimport com.google.gwt.event.logical.shared.BeforeSelectionEvent;\nimport com.google.gwt.event.logical.shared.BeforeSelectionHandler;\nimport com.google.gwt.event.logical.shared.SelectionEvent;\nimport com.google.gwt.event.logical.shared.SelectionHandler;\nimport com.google.gwt.user.client.Window;\nimport com.google.gwt.user.client.ui.TabBar;\n\npublic class GwtClass48 implements EntryPoint {\n    @Override\n    public void onModuleLoad() {\n        TabBar bar = new TabBar();\n        bar.addTab(\"foo\");\n        bar.addTab(\"bar\");\n        bar.addTab(\"baz\");\n        bar.addSelectionHandler(new SelectionHandler<Integer>() {\n            @Override\n            public void onSelection(SelectionEvent<Integer> event) {\n                Window.alert(\"you clicked tab \" + event.getSelectedItem());\n            }\n        });\n        bar.addBeforeSelectionHandler(new BeforeSelectionHandler<Integer>() {\n            @Override\n            public void onBeforeSelection(BeforeSelectionEvent<Integer> event) {\n                event.cancel();\n            }\n        });\n    }\n}",
-    "stdout": "",
-    "stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/gwt_class_48.java:9: error: class GwtClass48 is public, should be declared in a file named GwtClass48.java\npublic class GwtClass48 implements EntryPoint {\n       ^\nNote: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n1 error\n",
-    "return_code": 1
-}

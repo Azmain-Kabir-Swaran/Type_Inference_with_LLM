@@ -1,8 +1,0 @@
-{
-    "attempt": 2,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/one-shot-fix/JodaTime48.java",
-    "java_code": "public class JodaTime48 {\n    public static void main(String[] args) {\n        // Code goes here\n    }\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

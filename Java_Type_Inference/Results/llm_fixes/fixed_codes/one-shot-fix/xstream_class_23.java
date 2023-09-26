@@ -1,12 +1,14 @@
 package xstream;
+
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.thoughtworks.xstream.converters.javabean.JavaBeanConverter; // Fixed import
+import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.javabean.JavaBeanConverter;
 import com.thoughtworks.xstream.io.xml.XppDriver;
 
 public class xstream_class_23 {
     @XStreamAlias("test")
-    public static class TestObject // Added static keyword
+    public class TestObject
     {
         private String foo;
 
@@ -15,25 +17,26 @@ public class xstream_class_23 {
             return foo.toLowerCase();
         }
 
-    public void setFoo(String foo)
-    {
-        this.foo = foo;
+        public void setFoo(String foo)
+        {
+            this.foo = foo;
+        }
     }
-}
 
-public void test() throws Exception
-{
-    XStream x = new XStream(new XppDriver());
-    x.autodetectAnnotations(true);
-    x.processAnnotations(TestObject.class);
+    public void test() throws Exception
+    {
+        XStream x = new XStream(new XppDriver());
+        x.autodetectAnnotations(true);
+        x.processAnnotations(TestObject.class);
 
-    x.registerConverter(new JavaBeanConverter(x.getMapper()));
+        Converter converter = new JavaBeanConverter(x.getMapper());
+        x.registerConverter(converter);
 
-    TestObject o = new TestObject();
-    o.setFoo("BAR");
+        TestObject o = new TestObject();
+        o.setFoo("BAR");
 
-    String xml = x.toXML(o);
+        String xml = x.toXML(o);
 
-    System.out.println(xml);
+        System.out.println(xml);
     }
 }

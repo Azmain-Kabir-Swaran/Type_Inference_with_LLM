@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset/xstream_class_39.java",
+    "java_code": "public class xstream_class_39 {\n\n\tprivate static XStream xstream = new XStream(){\n\t        public HierarchicalStreamWriter createWriter(Writer out) {  \n\t            return new PrettyPrintWriter(out) {  \n\t                // Add CDATA block  \n\t                boolean cdata;//I need to add cdata for some fields only  \n\t                boolean isNeedUpper;//only some will need this\n\n\t                protected void writeText(QuickWriter writer, String text) {  \n\t                    if (cdata) {  \n\t                        writer.write(\"<![CDATA[\");  \n\t                        writer.write(text);  \n\t                        writer.write(\"]]>\");  \n\t                    } else if (isNeedUpper){  \n\t                        writer.write(text.toUpperCase());  \n\t                    }  \n\t                    else writer.write(text);\n\t                }  \n\t            };  \n\t        }  \n\t    };\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/GitHub Codes/so_dataset/xstream_class_39.java:3: error: cannot find symbol\n\tprivate static XStream xstream = new XStream(){\n\t               ^\n  symbol:   class XStream\n  location: class xstream_class_39\n/home/azmain/GitHub Codes/so_dataset/xstream_class_39.java:3: error: cannot find symbol\n\tprivate static XStream xstream = new XStream(){\n\t                                     ^\n  symbol:   class XStream\n  location: class xstream_class_39\n2 errors\n",
+    "return_code": 1
+}

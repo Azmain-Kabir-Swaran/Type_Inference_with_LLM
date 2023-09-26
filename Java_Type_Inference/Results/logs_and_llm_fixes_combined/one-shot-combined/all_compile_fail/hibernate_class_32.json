@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-one-shot/hibernate_class_32.java",
-    "java_code": "package hibernate;\nimport javax.persistence.Id;\nimport javax.persistence.GeneratedValue;\nimport javax.persistence.Table;\nimport org.hibernate.annotations.Table;\nimport javax.persistence.Index;\nimport javax.persistence.Entity;\nimport org.hibernate.annotations.Index;\nimport javax.persistence.Column;\n//ID = 3287351\n\n@Entity\n@Table(name=\"log_entries\")\n@org.hibernate.annotations.Table(appliesTo=\"log_entries\",\n    indexes = { @Index(name=\"idx\", columnNames = {\"job\", \"version\", \"schedule\", \"dttmRun\", \"pid\" } ) } )\npublic class hibernate_class_32 {\n  @Id @GeneratedValue\n  Long id;\n  String job;\n  String version;\n  String schedule;\n  String dttmRun;\n  int pid;\n  String command;\n  int duration;\n\n  // getters and setters...\n}",
-    "stdout": "",
-    "stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-one-shot/hibernate_class_32.java:5: error: a type with the same simple name is already defined by the single-type-import of Table\nimport org.hibernate.annotations.Table;\n^\n/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-one-shot/hibernate_class_32.java:6: error: cannot find symbol\nimport javax.persistence.Index;\n                        ^\n  symbol:   class Index\n  location: package javax.persistence\n2 errors\n",
-    "return_code": 1
-}

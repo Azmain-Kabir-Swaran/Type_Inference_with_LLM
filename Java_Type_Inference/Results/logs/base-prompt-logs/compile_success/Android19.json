@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/Android19.java",
+    "java_code": "import android.content.Context;\nimport android.view.View;\nimport android.view.ViewGroup;\nimport android.widget.GridView;\nimport android.widget.ImageView;\nimport android.content.Context;\nimport android.view.View;\nimport android.view.ViewGroup;\nimport android.widget.GridView;\nimport android.widget.ImageView;\n\npublic class Android19 {\n    public View getView(int position, View convertView, ViewGroup parent) {\n        ImageView imageView;\n        if (convertView == null) {\n            Context mContext = null;\n            imageView = new ImageView(mContext);\n            imageView.setLayoutParams(new GridView.LayoutParams(85, 85));\n            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);\n            imageView.setPadding(8, 8, 8, 8);\n        } else {\n            imageView = (ImageView) convertView;\n        }\n\n        int[] mThumbIds = null;\n        imageView.setImageResource(mThumbIds[position]);\n        return imageView;\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

@@ -19,9 +19,9 @@ public class Android40 extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        SlidingDrawer drawer = (SlidingDrawer) findViewById(R.id.lay);
+        SlidingDrawer drawer = (SlidingDrawer)findViewById(R.id.lay);
 
-        ImageView handle = (ImageView) findViewById(R.id.myImage);
+        ImageView handle = (ImageView)findViewById(R.id.myImage);
         handle.setFocusable(true);
 
         handle.setOnClickListener(new OnClickListener() {
@@ -29,8 +29,9 @@ public class Android40 extends Activity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                Log.i("test", "onClick");
+                Log.i("test","onClick");
             }
+
         });
     }
 }

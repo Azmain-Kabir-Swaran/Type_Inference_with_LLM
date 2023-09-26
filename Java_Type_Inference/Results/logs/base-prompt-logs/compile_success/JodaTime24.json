@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/JodaTime24.java",
+    "java_code": "import org.joda.time.DateTime;\nimport org.joda.time.Period;\nimport org.joda.time.PeriodType;\nimport org.joda.time.format.PeriodFormat;\nimport org.joda.time.DateTime;\nimport org.joda.time.Period;\nimport org.joda.time.PeriodType;\nimport org.joda.time.format.PeriodFormat;\n\npublic class JodaTime24 {\n\n    public static String getFormattedDateDifference(DateTime startDate, DateTime endDate) {\n        Period p = new Period(startDate, endDate,\n                PeriodType.standard().withSecondsRemoved().withMillisRemoved());\n        return PeriodFormat.getDefault().print(p);\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

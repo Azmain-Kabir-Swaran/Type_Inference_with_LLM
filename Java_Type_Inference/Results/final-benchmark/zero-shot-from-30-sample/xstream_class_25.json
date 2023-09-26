@@ -1,0 +1,13 @@
+{
+    "filename": "xstream_class_25",
+    "expected_output": [
+        "import com.thoughtworks.xstream.annotations.XStreamAlias;",
+        "import com.thoughtworks.xstream.annotations.XStreamConverter;",
+        "import com.thoughtworks.xstream.converters.extended.ToAttributedValueConverter;"
+    ],
+    "predicted_output": [
+        "import com.thoughtworks.xstream.converters.extended.ToAttributedValueConverter;",
+        "import com.thoughtworks.xstream.annotations.XStreamAlias;",
+        "import com.thoughtworks.xstream.annotations.XStreamConverter;"
+    ]
+}

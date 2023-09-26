@@ -9,23 +9,17 @@ import com.google.gwt.event.dom.client.KeyDownHandler;
 import com.google.gwt.event.shared.HandlerRegistration;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.ui.ComplexPanel;
-import com.google.gwt.user.client.ui.Widget;
+import com.google.gwt.user.client.ui.HasHTML;
 import com.google.gwt.user.client.ui.HasText;
+import com.google.gwt.user.client.ui.Widget;
+import com.google.gwt.event.dom.client.HasClickHandlers;
+import com.google.gwt.event.dom.client.HasKeyDownHandlers;
+import com.google.gwt.event.dom.client.HasBlurHandlers;
 
-public class GwtExample {
-    public static interface HasKeyDownHandlers {
-        HandlerRegistration addKeyDownHandler(KeyDownHandler handler);
-    }
+public class gwt_class_50 {
+    public class ListItem extends ComplexPanel implements HasText, HasHTML, HasClickHandlers, HasKeyDownHandlers, HasBlurHandlers {
+        HandlerRegistration clickHandler;
 
-    public static interface HasClickHandlers {
-        HandlerRegistration addClickHandler(ClickHandler handler);
-    }
-
-    public static interface HasBlurHandlers {
-        HandlerRegistration addBlurHandler(BlurHandler handler);
-    }
-
-    public static class ListItem extends ComplexPanel implements HasKeyDownHandlers, HasClickHandlers, HasBlurHandlers, HasText {
         public ListItem() {
             setElement(DOM.createElement("LI"));
         }
@@ -48,6 +42,14 @@ public class GwtExample {
 
         public void setId(String id) {
             DOM.setElementAttribute(getElement(), "id", id);
+        }
+
+        public String getHTML() {
+            return DOM.getInnerHTML(getElement());
+        }
+
+        public void setHTML(String html) {
+            DOM.setInnerHTML(getElement(), (html == null) ? "" : html);
         }
 
         public HandlerRegistration addClickHandler(ClickHandler handler) {

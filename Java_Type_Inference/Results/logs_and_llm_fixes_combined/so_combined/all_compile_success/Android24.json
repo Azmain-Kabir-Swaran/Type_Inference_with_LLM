@@ -1,0 +1,8 @@
+{
+    "attempt": 2,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android24.java",
+    "java_code": "import android.app.Activity;\nimport android.os.Bundle;\nimport android.widget.TextView;\n\npublic class Android24 extends Activity {\n    /** Called when the activity is first created. */\n    @Override\n    public void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        TextView tv = new TextView(this);\n        tv.setText(\"Hello, Android\");\n        setContentView(tv);\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

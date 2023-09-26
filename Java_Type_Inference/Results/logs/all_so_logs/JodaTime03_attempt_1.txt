@@ -1,0 +1,113 @@
+"attempt": 1
+
+"file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime03.java"
+
+"java_code": "
+
+import org.joda.time.Interval;
+import org.joda.time.format.PeriodFormatter;
+import org.joda.time.format.PeriodFormatterBuilder;
+
+package jodatime;
+
+public class JodaTime03 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	public static String formatDuration(long start, long end) {
+	    Interval interval = new Interval(start, end);
+	    return getPeriodFormatter().print(interval.toPeriod()).trim();
+	}
+
+	private static PeriodFormatter getPeriodFormatter() {
+	    PeriodFormatter pf = new PeriodFormatterBuilder().printZeroRarelyFirst()
+	        .appendYears().appendSuffix("y ", "y ")
+	        .appendMonths().appendSuffix("m" , "m ")
+	        .appendDays().appendSuffix("d ", "d ")
+	        .appendHours().appendSuffix("h ", "h ")
+	        .appendMinutes().appendSuffix("m ", "m ")
+	        .appendSeconds().appendSuffix("s ", "s ")
+	        .toFormatter();
+
+	    return pf;
+	}
+}
+"
+
+"used_prompt": "
+
+See the code below:
+"""
+package jodatime;
+
+public class JodaTime03 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	public static String formatDuration(long start, long end) {
+	    Interval interval = new Interval(start, end);
+	    return getPeriodFormatter().print(interval.toPeriod()).trim();
+	}
+
+	private static PeriodFormatter getPeriodFormatter() {
+	    PeriodFormatter pf = new PeriodFormatterBuilder().printZeroRarelyFirst()
+	        .appendYears().appendSuffix("y ", "y ")
+	        .appendMonths().appendSuffix("m" , "m ")
+	        .appendDays().appendSuffix("d ", "d ")
+	        .appendHours().appendSuffix("h ", "h ")
+	        .appendMinutes().appendSuffix("m ", "m ")
+	        .appendSeconds().appendSuffix("s ", "s ")
+	        .toFormatter();
+
+	    return pf;
+	}
+}
+
+"""
+For the above code I got the below error log:
+"""
+JodaTime03.java:14: error: cannot find symbol
+	private static PeriodFormatter getPeriodFormatter() {
+	               ^
+  symbol:   class PeriodFormatter
+  location: class JodaTime03
+JodaTime03.java:10: error: cannot find symbol
+	    Interval interval = new Interval(start, end);
+	    ^
+  symbol:   class Interval
+  location: class JodaTime03
+JodaTime03.java:10: error: cannot find symbol
+	    Interval interval = new Interval(start, end);
+	                            ^
+  symbol:   class Interval
+  location: class JodaTime03
+JodaTime03.java:15: error: cannot find symbol
+	    PeriodFormatter pf = new PeriodFormatterBuilder().printZeroRarelyFirst()
+	    ^
+  symbol:   class PeriodFormatter
+  location: class JodaTime03
+JodaTime03.java:15: error: cannot find symbol
+	    PeriodFormatter pf = new PeriodFormatterBuilder().printZeroRarelyFirst()
+	                             ^
+  symbol:   class PeriodFormatterBuilder
+  location: class JodaTime03
+5 errors
+
+"""
+Now fix the error only by fixing the import statements by not using wildcard imports and must not modify code body which means do not change anything inside the class. So, it can be successfully compiled and reply with full code.
+"
+
+"stdout": ""
+
+"stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime03.java:5: error: class, interface, or enum expected
+package jodatime;
+^
+1 error
+"
+
+"return_code": 1
+

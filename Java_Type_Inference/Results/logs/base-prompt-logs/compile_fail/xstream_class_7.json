@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/xstream_class_7.java",
+    "java_code": "import com.thoughtworks.xstream.annotations.XStreamAsAttribute;\n\npackage xstream;\nimport com.thoughtworks.xstream.annotations.XStreamAsAttribute;\n\npublic class xstream_class_7 {\n    @XStreamAsAttribute\n    private String type;\n    private String value;\n\n    public xstream_class_7(String type, String value) {\n        this.type = type;\n        this.value = value;\n    }\n    // getters omitted \n}",
+    "stdout": "",
+    "stderr": "/home/azmain/code_for_compilation_test/base-prompt/xstream_class_7.java:3: error: class, interface, or enum expected\npackage xstream;\n^\n1 error\n",
+    "return_code": 1
+}

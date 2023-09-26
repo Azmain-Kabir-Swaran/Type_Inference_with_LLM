@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android35.java",
-    "java_code": "import android.media.MediaRecorder;\nimport java.io.File;\nimport java.io.IOException;\n\npublic class Android35 {\n    private void recordVideoStart(){\n        MediaRecorder recorder = new MediaRecorder();\n        if(recorder != null)\n        {\n            recorder.stop();\n            recorder.release();\n        }\n        File file = new File(\"/sdcard/videoTest.3gpp\");\n        try {\n            file.createNewFile();\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n\n        recorder = new MediaRecorder();\n        recorder.setVideoSource(MediaRecorder.VideoSource.CAMERA);\n        recorder.setAudioSource(MediaRecorder.AudioSource.MIC);\n        recorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);\n        recorder.setOutputFile(file.getAbsolutePath());\n        recorder.setVideoSize(176, 144);\n        recorder.setVideoFrameRate(15);\n        recorder.setVideoEncoder(MediaRecorder.VideoEncoder.DEFAULT);\n        recorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);\n\n        try {\n            recorder.prepare();\n        } catch (IllegalStateException e) {\n            e.printStackTrace();\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n        recorder.start();\n    }\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

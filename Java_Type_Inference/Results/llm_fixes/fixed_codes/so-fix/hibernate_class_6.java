@@ -10,16 +10,16 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.boot.registry.StandardServiceRegistry;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.cfg.Environment;
 import org.hibernate.tool.hbm2ddl.SchemaExport;
+import org.hibernate.EntityMode;
 
-public class HibernateClass6 {
+public class hibernate_class_6 {
 
     public static void main(final String[] args) throws MalformedURLException {
         File baseDir = new File("C:\\workspaces\\hobby");
-        HibernateClass6 importer = new HibernateClass6();
+        hibernate_class_6 importer = new hibernate_class_6();
         Configuration config = importer.setupDb(baseDir);
 
         if (config != null) {
@@ -28,10 +28,10 @@ public class HibernateClass6 {
     }
 
     private void importContents(final File file, final Configuration config) throws MalformedURLException {
-        StandardServiceRegistry registry = new StandardServiceRegistryBuilder().configure().build();
-        SessionFactory sessionFactory = config.buildSessionFactory(registry);
-        Session session = sessionFactory.openSession();
+        SessionFactory sessionFactory = config.buildSessionFactory();
+        Session session = sessionFactory.openSession();    
         Transaction tx = session.beginTransaction();
+        Session dom4jSession = session.getSession(EntityMode.DOM4J);
 
         SAXReader saxReader = new SAXReader();
         try {
@@ -42,7 +42,7 @@ public class HibernateClass6 {
 
             while (iter.hasNext()) {
                 Object personObj = iter.next();
-                session.save(personObj);
+//                dom4jSession.save(Person.class.getName(), personObj);
             }
 
             session.flush();
@@ -57,14 +57,13 @@ public class HibernateClass6 {
 
     private Configuration setupDb(final File baseDir) throws HibernateException {
         Configuration cfg = new Configuration();
-        cfg.configure(new File(baseDir, "hibernate.cfg.xml"));
         cfg.addFile(new File(baseDir, "name/seller/rich/hobby/Person.hbm.xml"));
         cfg.addFile(new File(baseDir, "name/seller/rich/hobby/Hobby.hbm.xml"));
 
         SchemaExport export = new SchemaExport(cfg);
+
         export.setOutputFile("hobbyDB.txt");
         export.execute(false, true, false, false);
-
         return cfg;
     }
 }

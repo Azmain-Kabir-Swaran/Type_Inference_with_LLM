@@ -1,4 +1,5 @@
 package hibernate;
+
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.io.SAXReader;
@@ -7,6 +8,9 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.engine.spi.SessionImplementor;
+import org.hibernate.tool.hbm2ddl.SchemaExport;
+import org.hibernate.mapping.EntityMode;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -29,6 +33,7 @@ public class hibernate_class_6 {
         SessionFactory sessionFactory = config.buildSessionFactory();
         Session session = sessionFactory.openSession();
         Transaction tx = session.beginTransaction();
+        SessionImplementor dom4jSession = (SessionImplementor) session.getSession(org.hibernate.EntityMode.DOM4J);
 
         SAXReader saxReader = new SAXReader();
         try {
@@ -39,6 +44,7 @@ public class hibernate_class_6 {
 
             while (iter.hasNext()) {
                 Object personObj = iter.next();
+//                dom4jSession.save(Person.class.getName(), personObj);
             }
 
             session.flush();
@@ -56,6 +62,10 @@ public class hibernate_class_6 {
         cfg.addFile(new File(baseDir, "name/seller/rich/hobby/Person.hbm.xml"));
         cfg.addFile(new File(baseDir, "name/seller/rich/hobby/Hobby.hbm.xml"));
 
+        SchemaExport export = new SchemaExport(cfg);
+
+        export.setOutputFile("hobbyDB.txt");
+        export.execute(false, true, false, false);
         return cfg;
     }
 }

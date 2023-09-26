@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/gwt_class_30.java",
+    "java_code": "import com.google.gwt.user.client.ui.DialogBox;\nimport com.google.gwt.user.client.ui.Grid;\nimport com.google.gwt.user.client.ui.HTML;\nimport com.google.gwt.user.client.ui.TextBox;\n\npackage gwt;\nimport com.google.gwt.user.client.ui.DialogBox;\nimport com.google.gwt.user.client.ui.Grid;\nimport com.google.gwt.user.client.ui.HTML;\nimport com.google.gwt.user.client.ui.TextBox;\n\npublic class gwt_class_30 {\n    static TextBox firstName = new TextBox();\n    static TextBox surName = new TextBox();\n    static DialogBox box;\n\n    static public DialogBox buildNewElecPopup() {\n        DialogBox box = new DialogBox();\n        box.setAutoHideEnabled(true);\n\n        box.setText(\"Add a New Candidate\");\n        box.setAnimationEnabled(true);\n        box.setGlassEnabled(true);\n\n        Grid dialogGrid = new Grid(2, 3);\n        dialogGrid.setPixelSize(250 , 125);\n        dialogGrid.setCellPadding(10);\n        dialogGrid.setWidget(0, 0, new HTML(\"<strong>First Name</strong>\"));\n        dialogGrid.setWidget(0, 1, firstName);\n\n        dialogGrid.setWidget(1, 0, new HTML(\"<strong>Surname</strong>\"));\n        dialogGrid.setWidget(1, 1, surName);\n\n        box.add(dialogGrid);\n\n        return box;\n    }\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/code_for_compilation_test/base-prompt/gwt_class_30.java:6: error: class, interface, or enum expected\npackage gwt;\n^\n1 error\n",
+    "return_code": 1
+}

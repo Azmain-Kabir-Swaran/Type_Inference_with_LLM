@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/gwt_class_39.java",
-    "java_code": "import javax.servlet.ServletContext;\nimport javax.servlet.ServletOutputStream;\nimport javax.servlet.http.HttpServletResponse;\nimport com.google.gwt.user.server.rpc.RemoteServiceServlet;\nimport java.io.File;\nimport java.io.DataInputStream;\nimport java.io.FileInputStream;\n\npublic class gwt_class_39 {\n\tpublic static class ReportsServiceImpl extends RemoteServiceServlet {\n\t    public String myMethod(String s) {\n\n\t        File f = new File(\"/excelTestFile.xls\");\n\n\t        String filename = f.getName();\n\n\t        int length = 0;\n\n\t        try {\n\t            HttpServletResponse resp = getThreadLocalResponse();\n\t            ServletOutputStream op = resp.getOutputStream();\n\t            ServletContext context = getServletContext();\n\t            resp.setContentType(\"application/octet-stream\");\n\t            resp.setContentLength((int) f.length());\n\t            resp.setHeader(\"Content-Disposition\", \"attachment; filename*=\\\"utf-8''\" + filename + \"\");\n\n\t            byte[] bbuf = new byte[1024];\n\t            DataInputStream in = new DataInputStream(new FileInputStream(f));\n\n\t            while ((in != null) && ((length = in.read(bbuf)) != -1)) {\n\t                op.write(bbuf, 0, length);\n\t            }\n\n\t            in.close();\n\t            op.flush();\n\t            op.close();\n\n\t        } catch (Exception ex) {\n\t            ex.printStackTrace();\n\t        }\n\n\t        return \"Server says: \" + filename;\n\t    }\n\t}\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

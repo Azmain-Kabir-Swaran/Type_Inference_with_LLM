@@ -1,9 +1,5 @@
-package androidExamples;
-
 import android.content.ContentResolver;
 import android.graphics.Bitmap;
-import android.graphics.Bitmap.CompressFormat;
-
 import android.net.Uri;
 import android.provider.MediaStore;
 
@@ -20,16 +16,19 @@ public class Android13 {
         try {
             bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), imageUri);
         } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
             e.printStackTrace();
         } catch (IOException e) {
+            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         ByteArrayOutputStream bytes = new ByteArrayOutputStream();
-        bitmap.compress(CompressFormat.JPEG, 40, bytes);
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 40, bytes);
         ByteArrayInputStream fileInputStream = new ByteArrayInputStream(bytes.toByteArray());
     }
 
     private static ContentResolver getContentResolver() {
+        // TODO Auto-generated method stub
         return null;
     }
 }

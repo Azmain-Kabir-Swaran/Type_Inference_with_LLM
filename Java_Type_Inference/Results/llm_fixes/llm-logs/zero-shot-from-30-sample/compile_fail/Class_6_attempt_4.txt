@@ -1,0 +1,327 @@
+"attempt": 4
+
+"file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-from-30-sample/Class_6.java"
+
+"java_code": "
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import common_JDK.Model;
+import common_JDK.View;
+import common_JDK.Control;
+
+class Class_6 implements Runnable {
+
+    public static void main(String[] args) {
+        EventQueue.invokeLater(new Class_6());
+    }
+
+    @Override
+    public void run() {
+        JFrame f = new JFrame();
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.add(new MainPanel());
+        f.pack();
+        f.setLocationRelativeTo(null);
+        f.setVisible(true);
+    }
+}
+
+class MainPanel extends JPanel {
+
+    public MainPanel() {
+        super(new BorderLayout());
+        Model model = new Model();
+        View view = new View(model);
+        Control control = new Control(model, view);
+        JLabel label = new JLabel("Guess what color!", JLabel.CENTER);
+        this.add(label, BorderLayout.NORTH);
+        this.add(view, BorderLayout.CENTER);
+        this.add(control, BorderLayout.SOUTH);
+    }
+}
+"
+
+"used_prompt": "
+
+package common_JDK;
+import java.util.Random;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
+import java.util.Observable;
+import java.util.Observer;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.*;
+/*
+ Date: 1/19/17
+ URL: http://stackoverflow.com/questions/3066590/gui-not-working-after-rewriting-to-mvc
+ */
+
+/**
+ * @see http://stackoverflow.com/q/3066590/230513
+ * 15-Mar-2011 r8 http://stackoverflow.com/questions/5274962
+ * 26-Mar-2013 r17 per comment
+ */
+public class Class_6 implements Runnable {
+
+    public static void main(String[] args) {
+        EventQueue.invokeLater(new Class_6());
+    }
+
+    @Override
+    public void run() {
+        JFrame f = new JFrame();
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.add(new MainPanel());
+        f.pack();
+        f.setLocationRelativeTo(null);
+        f.setVisible(true);
+    }
+}
+
+class MainPanel extends JPanel {
+
+    public MainPanel() {
+        super(new BorderLayout());
+        Model model = new Model();
+        View view = new View(model);
+        Control control = new Control(model, view);
+        JLabel label = new JLabel("Guess what color!", JLabel.CENTER);
+        this.add(label, BorderLayout.NORTH);
+        this.add(view, BorderLayout.CENTER);
+        this.add(control, BorderLayout.SOUTH);
+    }
+}
+
+
+You gave the above imports fix in your attempt 1. But compiler gave this error:
+
+Class_6.java:51: error: cannot find symbol
+        Model model = new Model();
+        ^
+  symbol:   class Model
+  location: class MainPanel
+Class_6.java:51: error: cannot find symbol
+        Model model = new Model();
+                          ^
+  symbol:   class Model
+  location: class MainPanel
+Class_6.java:52: error: cannot find symbol
+        View view = new View(model);
+        ^
+  symbol:   class View
+  location: class MainPanel
+Class_6.java:52: error: cannot find symbol
+        View view = new View(model);
+                        ^
+  symbol:   class View
+  location: class MainPanel
+Class_6.java:53: error: cannot find symbol
+        Control control = new Control(model, view);
+        ^
+  symbol:   class Control
+  location: class MainPanel
+Class_6.java:53: error: cannot find symbol
+        Control control = new Control(model, view);
+                              ^
+  symbol:   class Control
+  location: class MainPanel
+6 errors
+
+
+import java.util.Random;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
+import java.util.Observable;
+import java.util.Observer;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.*;
+
+class Class_6 implements Runnable {
+
+    public static void main(String[] args) {
+        EventQueue.invokeLater(new Class_6());
+    }
+
+    @Override
+    public void run() {
+        JFrame f = new JFrame();
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.add(new MainPanel());
+        f.pack();
+        f.setLocationRelativeTo(null);
+        f.setVisible(true);
+    }
+}
+
+class MainPanel extends JPanel {
+
+    public MainPanel() {
+        super(new BorderLayout());
+        common_JDK.Model model = new common_JDK.Model();
+        common_JDK.View view = new common_JDK.View(model);
+        common_JDK.Control control = new common_JDK.Control(model, view);
+        JLabel label = new JLabel("Guess what color!", JLabel.CENTER);
+        this.add(label, BorderLayout.NORTH);
+        this.add(view, BorderLayout.CENTER);
+        this.add(control, BorderLayout.SOUTH);
+    }
+}
+
+You gave the above imports fix in your attempt 2. But compiler gave this error:
+
+Class_6.java:41: error: package common_JDK does not exist
+        common_JDK.Model model = new common_JDK.Model();
+                  ^
+Class_6.java:41: error: package common_JDK does not exist
+        common_JDK.Model model = new common_JDK.Model();
+                                               ^
+Class_6.java:42: error: package common_JDK does not exist
+        common_JDK.View view = new common_JDK.View(model);
+                  ^
+Class_6.java:42: error: package common_JDK does not exist
+        common_JDK.View view = new common_JDK.View(model);
+                                             ^
+Class_6.java:43: error: package common_JDK does not exist
+        common_JDK.Control control = new common_JDK.Control(model, view);
+                  ^
+Class_6.java:43: error: package common_JDK does not exist
+        common_JDK.Control control = new common_JDK.Control(model, view);
+                                                   ^
+6 errors
+
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+class Class_6 implements Runnable {
+
+    public static void main(String[] args) {
+        EventQueue.invokeLater(new Class_6());
+    }
+
+    @Override
+    public void run() {
+        JFrame f = new JFrame();
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.add(new MainPanel());
+        f.pack();
+        f.setLocationRelativeTo(null);
+        f.setVisible(true);
+    }
+}
+
+class MainPanel extends JPanel {
+
+    public MainPanel() {
+        super(new BorderLayout());
+        common_JDK.Model model = new common_JDK.Model();
+        common_JDK.View view = new common_JDK.View(model);
+        common_JDK.Control control = new common_JDK.Control(model, view);
+        JLabel label = new JLabel("Guess what color!", JLabel.CENTER);
+        this.add(label, BorderLayout.NORTH);
+        this.add(view, BorderLayout.CENTER);
+        this.add(control, BorderLayout.SOUTH);
+    }
+}
+
+You gave the above imports fix in your attempt 3. But compiler gave this error:
+
+Class_6.java:28: error: package common_JDK does not exist
+        common_JDK.Model model = new common_JDK.Model();
+                  ^
+Class_6.java:28: error: package common_JDK does not exist
+        common_JDK.Model model = new common_JDK.Model();
+                                               ^
+Class_6.java:29: error: package common_JDK does not exist
+        common_JDK.View view = new common_JDK.View(model);
+                  ^
+Class_6.java:29: error: package common_JDK does not exist
+        common_JDK.View view = new common_JDK.View(model);
+                                             ^
+Class_6.java:30: error: package common_JDK does not exist
+        common_JDK.Control control = new common_JDK.Control(model, view);
+                  ^
+Class_6.java:30: error: package common_JDK does not exist
+        common_JDK.Control control = new common_JDK.Control(model, view);
+                                                   ^
+6 errors
+
+
+Now fix the error only by fixing the import statements by not using wildcard imports and must not modify code body which means do not change anything inside the class. So, it can be successfully compiled and reply with full code.
+"
+
+"stdout": ""
+
+"stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-from-30-sample/Class_6.java:6: error: package common_JDK does not exist
+import common_JDK.Model;
+                 ^
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-from-30-sample/Class_6.java:7: error: package common_JDK does not exist
+import common_JDK.View;
+                 ^
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-from-30-sample/Class_6.java:8: error: package common_JDK does not exist
+import common_JDK.Control;
+                 ^
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-from-30-sample/Class_6.java:31: error: cannot find symbol
+        Model model = new Model();
+        ^
+  symbol:   class Model
+  location: class MainPanel
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-from-30-sample/Class_6.java:31: error: cannot find symbol
+        Model model = new Model();
+                          ^
+  symbol:   class Model
+  location: class MainPanel
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-from-30-sample/Class_6.java:32: error: cannot find symbol
+        View view = new View(model);
+        ^
+  symbol:   class View
+  location: class MainPanel
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-from-30-sample/Class_6.java:32: error: cannot find symbol
+        View view = new View(model);
+                        ^
+  symbol:   class View
+  location: class MainPanel
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-from-30-sample/Class_6.java:33: error: cannot find symbol
+        Control control = new Control(model, view);
+        ^
+  symbol:   class Control
+  location: class MainPanel
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-from-30-sample/Class_6.java:33: error: cannot find symbol
+        Control control = new Control(model, view);
+                              ^
+  symbol:   class Control
+  location: class MainPanel
+9 errors
+"
+
+"return_code": 1
+

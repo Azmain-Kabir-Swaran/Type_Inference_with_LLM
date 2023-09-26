@@ -12,10 +12,10 @@ public class hibernate_class_36 {
             session = sessionFactory.openSession();
             tx = session.beginTransaction();
             tx.commit();
-        } catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         } finally {
             session.close();
-        }   
+        }
     }
 }

@@ -1,12 +1,14 @@
+package androidExamples;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.io.IOException;
 
 public class Android38 {
     static String serviceDomain = "http://staging.abaqus.net";
@@ -19,7 +21,7 @@ public class Android38 {
     private String password = null;
     private DataOutputStream dataStream = null;
 
-    enum ReturnCode { noPicture, unknown, http201, http400, http401, http403, http404, http500};
+    enum ReturnCode { noPicture, unknown, http201, http400, http401, http403, http404, http500 };
 
     public Android38(String name, String password) {
         this.name = name;
@@ -77,17 +79,20 @@ public class Android38 {
                     // for now assume bad name/password
                     return ReturnCode.http401;
             } catch (MalformedURLException mue) {
+                // Log.e(Tag, "error: " + mue.getMessage(), mue);
                 System.out.println("GeoPictureUploader.uploadPicture: Malformed URL: " + mue.getMessage());
                 return ReturnCode.http400;
             } catch (IOException ioe) {
+                // Log.e(Tag, "error: " + ioe.getMessage(), ioe);
                 System.out.println("GeoPictureUploader.uploadPicture: IOE: " + ioe.getMessage());
                 return ReturnCode.http500;
             } catch (Exception e) {
+                // Log.e(Tag, "error: " + ioe.getMessage(), ioe);
                 System.out.println("GeoPictureUploader.uploadPicture: unknown: " + e.getMessage());
                 return ReturnCode.unknown;
             } else {
-                return ReturnCode.noPicture;
-            }
+            return ReturnCode.noPicture;
+        }
     }
 
     private String getResponse(HttpURLConnection conn) {
@@ -105,6 +110,7 @@ public class Android38 {
                 return "";
         } catch (Exception e) {
             System.out.println("GeoPictureUploader: biffed it getting HTTPResponse");
+            // Log.e(TAG, "GeoPictureUploader: biffed it getting HTTPResponse");
             return "";
         }
     }
@@ -113,14 +119,16 @@ public class Android38 {
         InputStream is = null;
         try {
             is = conn.getInputStream();
+            // scoop up the reply from the server
             int ch;
-            StringBuilder sb = new StringBuilder();
+            StringBuffer sb = new StringBuffer();
             while ((ch = is.read()) != -1) {
                 sb.append((char) ch);
             }
             return sb.toString();
         } catch (Exception e) {
             System.out.println("GeoPictureUploader: biffed it getting HTTPResponse");
+            // Log.e(TAG, "GeoPictureUploader: biffed it getting HTTPResponse");
         } finally {
             try {
                 if (is != null)
@@ -141,22 +149,25 @@ public class Android38 {
             dataStream.writeBytes(CRLF);
         } catch (Exception e) {
             System.out.println("GeoPictureUploader.writeFormField: got: " + e.getMessage());
+            // Log.e(TAG, "GeoPictureUploader.writeFormField: got: " + e.getMessage());
         }
     }
 
     private void writeFileField(String fieldName, String fieldValue, String type, FileInputStream fis) {
         try {
+            // opening boundary line
             dataStream.writeBytes(twoHyphens + boundary + CRLF);
             dataStream.writeBytes("Content-Disposition: form-data; name=\"" + fieldName + "\";filename=\"" + fieldValue
                     + "\"" + CRLF);
             dataStream.writeBytes("Content-Type: " + type + CRLF);
             dataStream.writeBytes(CRLF);
 
+            // create a buffer of maximum size
             int bytesAvailable = fis.available();
             int maxBufferSize = 1024;
             int bufferSize = Math.min(bytesAvailable, maxBufferSize);
             byte[] buffer = new byte[bufferSize];
-
+            // read file and write it into form...
             int bytesRead = fis.read(buffer, 0, bufferSize);
             while (bytesRead > 0) {
                 dataStream.write(buffer, 0, bufferSize);
@@ -165,9 +176,11 @@ public class Android38 {
                 bytesRead = fis.read(buffer, 0, bufferSize);
             }
 
+            // closing CRLF
             dataStream.writeBytes(CRLF);
         } catch (Exception e) {
             System.out.println("GeoPictureUploader.writeFormField: got: " + e.getMessage());
+            // Log.e(TAG, "GeoPictureUploader.writeFormField: got: " + e.getMessage());
         }
     }
 

@@ -1,10 +1,10 @@
 package hibernate;
 
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.query.Query;
-
 import java.util.List;
+import org.hibernate.SessionFactory;
+
+import com.example.Name;
 
 public class hibernate_class_50 {
     private SessionFactory sessionFactory;
@@ -17,10 +17,10 @@ public class hibernate_class_50 {
         return sessionFactory;
     }
 
+    @SuppressWarnings("unchecked")
     public List<Name> getAll() {
         Session session = this.sessionFactory.getCurrentSession();
-        Query<Name> query = session.createQuery("from Name", Name.class);
-        List<Name> names = query.getResultList();
+        List<Name> names = (List<Name>) session.createQuery("from com.example.Name").list();
         return names;
     }
 

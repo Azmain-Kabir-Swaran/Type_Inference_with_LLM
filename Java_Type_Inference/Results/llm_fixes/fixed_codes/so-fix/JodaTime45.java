@@ -1,14 +1,17 @@
-import org.joda.time.DateTimeZone;
+package jodatime;
 
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.TimeZone;
 
+import org.joda.time.DateTimeZone;
+import org.joda.time.tz.Provider;
+
 public class JodaTime45 {
 
-    public static class FastDateTimeZoneProvider implements org.joda.time.tz.Provider {
-        public final Set<String> AVAILABLE_IDS = new HashSet<>();
+    public class FastDateTimeZoneProvider implements Provider {
+        public final Set<String> AVAILABLE_IDS = new HashSet<String>();
 
         public DateTimeZone getZone(String id) {
             if (id == null) {

@@ -1,0 +1,19 @@
+{
+    "filename": "hibernate_class_40",
+    "expected_output": [
+        "import java.util.Iterator;",
+        "import java.util.List;",
+        "import org.hibernate.Query;",
+        "import org.hibernate.Session;",
+        "import org.hibernate.SessionFactory;",
+        "import org.hibernate.cfg.Configuration;"
+    ],
+    "predicted_output": [
+        "import org.hibernate.cfg.Configuration;",
+        "import org.hibernate.SessionFactory;",
+        "import java.util.List;",
+        "import java.util.Iterator;",
+        "import org.hibernate.query.Query;",
+        "import org.hibernate.Session;"
+    ]
+}

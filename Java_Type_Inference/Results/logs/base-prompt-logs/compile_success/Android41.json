@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/Android41.java",
+    "java_code": "import android.content.Context;\nimport android.graphics.Color;\nimport android.view.View;\nimport android.widget.TextView;\nimport android.content.Context;\nimport android.graphics.Color;\nimport android.view.View;\nimport android.widget.TextView;\n\npublic class Android41 extends View {\n    public Android41(Context context) {\n        super(context);\n        setBackgroundColor(Color.RED);\n    }\n\n    TextView tv;\n\n    public void adText(TextView tv) {\n        this.tv = tv;\n        tv.setVisibility(View.VISIBLE);\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

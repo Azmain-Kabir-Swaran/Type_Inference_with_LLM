@@ -1,26 +1,28 @@
-import com.thoughtworks.xstream.converters.SingleValueConverter;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
 public class xstream_class_26 {
-    public static class IntegerListConverter implements SingleValueConverter {
-        public boolean canConvert(Class type) {
-            return List.class.isAssignableFrom(type);
+    public class IntegerListConverter implements com.thoughtworks.xstream.converters.SingleValueConverter {
+        @Override
+        public boolean canConvert(Class clazz) {
+            return java.util.List.class.isAssignableFrom(clazz);
         }
 
-        public Object fromString(String str) {
-            Collection<Integer> collection = new ArrayList<>();
-            String[] integerStrings = str.split(" ");
-            for (String integerString : integerStrings) {
-                collection.add(Integer.valueOf(integerString));
+        @Override
+        public Object fromString(String arg0) {
+            Collection<Integer> collection = new ArrayList<Integer>();
+            String[] integerStrings = arg0.split(" ");
+            for (int i = 0; i < integerStrings.length; i++) {
+                collection.add(Integer.valueOf(integerStrings[i]));
             }
             return collection;
         }
 
-        public String toString(Object obj) {
-            List<?> collection = (List<?>) obj;
-            StringBuilder sb = new StringBuilder();
+        @Override
+        public String toString(Object arg0) {
+            List collection = (List) arg0;
+            StringBuffer sb = new StringBuffer();
             boolean first = true;
             for (Object object : collection) {
                 if (first) {

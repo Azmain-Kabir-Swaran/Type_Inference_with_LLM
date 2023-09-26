@@ -1,0 +1,9 @@
+{
+    "attempt": 2,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-from-30-sample/Class_2.java",
+    "java_code": "import java.util.ArrayList;\nimport java.util.List;\nimport java.util.Scanner;\n\npublic class Class_2 {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        int n = scanner.nextInt();\n        List<Integer> list = new ArrayList<>();\n        for (int i = 0; i < n; i++) {\n            list.add(scanner.nextInt());\n        }\n        scanner.close();\n        \n        for (int num : list) {\n            System.out.println(num);\n        }\n    }\n}",
+    "used_prompt": "No valid code block found!\n\nYou gave the above imports fix in your attempt 1. But compiler gave this error:\n\nClass_2.java:1: error: class, interface, or enum expected\nNo valid code block found!\n^\n1 error\n\n\nNow fix the error only by fixing the import statements by not using wildcard imports and must not modify code body which means do not change anything inside the class. So, it can be successfully compiled and reply with full code.",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

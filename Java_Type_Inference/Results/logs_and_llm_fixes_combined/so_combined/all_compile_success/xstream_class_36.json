@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/xstream_class_36.java",
+    "java_code": "import java.util.Map;\nimport java.util.HashMap;\nimport com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.io.xml.StaxDriver;\n\npublic class xstream_class_36 {\n    public class MapTest {\n        private Map<String, String> mapList;\n\n        public MapTest() {\n            mapList = new HashMap<String, String>();\n        }\n\n        public void setServicesHealth(String id, String name) {\n            mapList.put(id, name);\n        }\n    }\n\n    public static void main(String arg[]) {\n        xstream_class_36.MapTest services = null;\n        services.setServicesHealth(\"ID01\", \"Jack\");\n        services.setServicesHealth(\"ID02\", \"Neil\");\n\n        XStream stream = new XStream(new StaxDriver());\n        stream.alias(\"MapTest\", xstream_class_36.MapTest.class);\n        stream.addImplicitMap(xstream_class_36.MapTest.class, \"mapList\", \"id\", String.class, \"name\");\n        String xmlStr = stream.toXML(services);\n        System.out.println(xmlStr);\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

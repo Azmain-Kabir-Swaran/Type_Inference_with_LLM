@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/zero-shot-temp-0.5/Class_17.java",
+    "java_code": "/*\nDate: 1/19/17 - Consider later\nURL: http://stackoverflow.com/questions/4772425/change-date-format-in-a-java-string\n*/\npackage common_JDK;\nimport java.text.ParseException;\nimport java.text.SimpleDateFormat;\nimport java.util.Date;\nimport java.time.format.DateTimeFormatter;\nimport java.time.temporal.TemporalAccessor;\n\npublic class Class_17{\n\n  public static void main(String arg[]){\n\n    try{\n\n    SimpleDateFormat sourceDateFormat = new SimpleDateFormat(\"yyyy-MM-DD HH:mm:ss\");\n\n    Date date = sourceDateFormat.parse(\"2011-01-18 00:00:00.0\");\n\n\n    SimpleDateFormat targetDateFormat = new SimpleDateFormat(\"yyyy-MM-dd\");\n    System.out.println(targetDateFormat.format(date));\n\n    }catch(ParseException e){\n        e.printStackTrace();\n    }\n    String date = \"2011-01-18 00:00:00.0\";\n    TemporalAccessor temporal = DateTimeFormatter\n        .ofPattern(\"yyyy-MM-dd HH:mm:ss.S\")\n        .parse(date); // use parse(date, LocalDateTime::from) to get LocalDateTime\n    String output = DateTimeFormatter.ofPattern(\"yyyy-MM-dd\").format(temporal);\n  } \n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

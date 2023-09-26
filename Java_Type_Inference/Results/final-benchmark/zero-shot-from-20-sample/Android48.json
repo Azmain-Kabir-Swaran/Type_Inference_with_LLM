@@ -1,0 +1,25 @@
+{
+    "filename": "Android48",
+    "expected_output": [
+        "import android.app.AlertDialog;",
+        "import android.app.Dialog;",
+        "import android.content.Context;",
+        "import android.graphics.Bitmap;",
+        "import android.graphics.BitmapFactory;",
+        "import android.hardware.Camera;",
+        "import android.hardware.Camera.PictureCallback;",
+        "import android.widget.ImageView;",
+        "import android.widget.TextView;"
+    ],
+    "predicted_output": [
+        "import android.graphics.BitmapFactory;",
+        "import android.app.AlertDialog;",
+        "import android.content.Context;",
+        "import android.hardware.Camera;",
+        "import android.graphics.Bitmap;",
+        "import android.app.Dialog;",
+        "import android.widget.TextView;",
+        "import android.widget.ImageView;",
+        "import android.hardware.Camera.PictureCallback;"
+    ]
+}

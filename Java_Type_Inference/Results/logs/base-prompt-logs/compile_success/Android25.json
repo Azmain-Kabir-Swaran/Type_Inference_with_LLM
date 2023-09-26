@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/Android25.java",
+    "java_code": "import android.app.ListActivity;\nimport android.content.Context;\nimport android.database.sqlite.SQLiteDatabase;\nimport android.os.Bundle;\nimport java.util.ArrayList;\nimport android.app.ListActivity;\nimport android.content.Context;\nimport android.database.sqlite.SQLiteDatabase;\nimport android.os.Bundle;\nimport java.util.ArrayList;\n\npublic class Android25 extends ListActivity {\n    private final String MY_DATABASE_NAME = \"myCoolUserDB.db\";\n    private final String MY_DATABASE_TABLE = \"t_Users\";\n    private Context c;\n\n    @Override\n    public void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        ArrayList<String> results = new ArrayList<String>();\n        setContentView(R.layout.main);\n        SQLiteDatabase mydb = null;\n        try {\n            mydb = openOrCreateDatabase(MY_DATABASE_NAME, MODE_PRIVATE, null);\n        } catch (Exception e) {\n        }\n    }\n}",
+    "stdout": "",
+    "stderr": "No error (Ignored 'package R does not exist' errors)",
+    "return_code": 1
+}

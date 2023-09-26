@@ -1,0 +1,19 @@
+{
+    "filename": "gwt_class_12",
+    "expected_output": [
+        "import com.google.gwt.core.client.EntryPoint;",
+        "import com.google.gwt.user.client.ui.AbsolutePanel;",
+        "import com.google.gwt.user.client.ui.Label;",
+        "import com.google.gwt.user.client.ui.RootPanel;",
+        "import com.google.gwt.user.client.ui.TextBox;",
+        "import com.google.gwt.user.client.ui.VerticalPanel;"
+    ],
+    "predicted_output": [
+        "import com.google.gwt.user.client.ui.AbsolutePanel;",
+        "import com.google.gwt.core.client.EntryPoint;",
+        "import com.google.gwt.user.client.ui.VerticalPanel;",
+        "import com.google.gwt.user.client.ui.RootPanel;",
+        "import com.google.gwt.user.client.ui.TextBox;",
+        "import com.google.gwt.user.client.ui.Label;"
+    ]
+}

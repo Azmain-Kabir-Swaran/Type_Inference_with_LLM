@@ -20,7 +20,7 @@ public class Android20 extends View {
     private void animText(String text, int color, int xBlocks, int yBlocks) {
         animText.setText(text);
         animText.setTextColor(color);
-        animText.setVisibility(View.VISIBLE);
+        animText.setVisibility(android.view.View.VISIBLE);
         int xBlockSize = 2;
         final int x = BOARD_X_OFFSET + xBlocks * xBlockSize;
         int yBlockSize = 2;
@@ -29,7 +29,9 @@ public class Android20 extends View {
         final float SCALE_TO = (float) 5.0;
         ScaleAnimation anim = new ScaleAnimation(SCALE_FROM, SCALE_TO, SCALE_FROM, SCALE_TO, x, y);
         anim.setDuration(500);
-        animText.startAnimation(anim);
-        this.startAnimation(null);
+        animText.setAnimation(anim);
+        this.setAnimation(null);
+        startAnimation(anim);
     }
+
 }

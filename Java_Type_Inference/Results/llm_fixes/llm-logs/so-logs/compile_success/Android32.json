@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android32.java",
-    "java_code": "import java.io.IOException;\nimport android.os.Environment;\nimport java.io.File;\nimport android.media.MediaRecorder;\n\npublic class Android32 {\n\tpublic void start() throws IOException{\n\t\tString state = Environment.getExternalStorageState();\n\t\tif(!state.equals(Environment.MEDIA_MOUNTED))\n\t\t{\n\t\t\tthrow new IOException(\"SD card is not mounted. It is \" + state + \".\");\n\t\t}\n\t\tString path = \"Root\";\n\t\tFile directory = new File(path).getParentFile();\n\t\tif(!directory.exists() && !directory.mkdirs())\n\t\t{\n\t\t\tthrow new IOException(\"Path to file could not be created.\");\n\t\t}\n\t\t\n\t\tMediaRecorder recorder = new MediaRecorder();\n\t\trecorder.setVideoSource(MediaRecorder.VideoSource.CAMERA);\n\t\trecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);\n\t\trecorder.setVideoEncoder(MediaRecorder.VideoEncoder.H263);\n\t\trecorder.setVideoFrameRate(15);\n\t\trecorder.setVideoSize(176, 144);\n\t\trecorder.setOutputFile(path);\n\t\trecorder.prepare();\n\t\trecorder.start();\n\t}\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

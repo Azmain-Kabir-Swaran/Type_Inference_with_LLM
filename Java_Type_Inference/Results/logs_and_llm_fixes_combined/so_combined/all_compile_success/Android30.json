@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android30.java",
+    "java_code": "package androidExamples;\n\nimport org.apache.http.HttpEntity;\nimport org.apache.http.HttpResponse;\nimport org.apache.http.client.HttpClient;\nimport org.apache.http.client.methods.HttpGet;\nimport org.apache.http.impl.client.DefaultHttpClient;\nimport org.apache.http.util.EntityUtils;\nimport org.apache.http.HttpHost;\nimport java.io.IOException;\n\npublic class Android30 {\n\n    public static String main(String[] args) {\n        // TODO Auto-generated method stub\n        HttpHost target = new HttpHost(\"http://\" + ServiceWrapper.SERVER_HOST,ServiceWrapper.SERVER_PORT);\n        HttpGet get = new HttpGet(\"/list\");\n        String result=null;\n        HttpEntity entity = null;\n        HttpClient client = new DefaultHttpClient();\n        try {\n            HttpResponse response=client.execute(target, get);\n            entity = response.getEntity();\n            result = EntityUtils.toString(entity);\n        } catch (Exception e) {\n            e.printStackTrace();\n        } finally {\n            if (entity!=null)\n                try {\n                    entity.consumeContent();\n                } catch (IOException e) {}\n        }\n        return result;\n    }\n\n}\n\nclass ServiceWrapper {\n    static String SERVER_HOST = \"host\";\n    static int SERVER_PORT = 8080;\n}",
+    "stdout": "",
+    "stderr": "Note: /home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android30.java uses or overrides a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n",
+    "return_code": 0
+}

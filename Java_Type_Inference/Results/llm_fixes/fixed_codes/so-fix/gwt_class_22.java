@@ -8,26 +8,31 @@ import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.VerticalPanel;
-import com.google.gwt.user.client.ui.Widget;
 
-public class GwtClass22 extends Composite {
+public class gwt_class_22 extends Composite {
 
-    private static GwtClass22UiBinder uiBinder = GWT.create(GwtClass22UiBinder.class);
+    private static TestViewUiBinder uiBinder = GWT.create(TestViewUiBinder.class);
 
-    interface GwtClass22UiBinder extends UiBinder<Widget, GwtClass22> {}
+    interface TestViewUiBinder extends UiBinder<VerticalPanel, gwt_class_22> {}
 
-    @UiField Label testObjectStringLabel;
-    @UiField Label innerObjectStringLabel;
-    @UiField VerticalPanel listObjectsPanel;
-    @UiField Button button;
-    @UiField Label errorMessageLabel;
+    @UiField
+    Label testObjectStringLabel;
+    @UiField
+    Label innerObjectStringLabel;
+    @UiField
+    VerticalPanel listObjectsPanel;
+    @UiField
+    Button button;
+    @UiField
+    Label errorMessageLabel;
 
-    public GwtClass22(String firstName) {
+    public gwt_class_22(String firstName) {
         initWidget(uiBinder.createAndBindUi(this));
     }
 
     @UiHandler("button")
     void onClick(ClickEvent e) {
-        // your code here
+
     }
+
 }

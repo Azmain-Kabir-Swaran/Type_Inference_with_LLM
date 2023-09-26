@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/Android13.java",
+    "java_code": "import android.content.ContentResolver;\nimport android.graphics.Bitmap;\nimport android.graphics.BitmapFactory;\nimport android.net.Uri;\nimport java.io.ByteArrayInputStream;\nimport java.io.ByteArrayOutputStream;\nimport java.io.FileNotFoundException;\nimport java.io.IOException;\nimport android.content.ContentResolver;\nimport android.graphics.Bitmap;\nimport android.graphics.BitmapFactory;\nimport android.net.Uri;\n\nimport java.io.ByteArrayInputStream;\nimport java.io.ByteArrayOutputStream;\nimport java.io.FileNotFoundException;\nimport java.io.IOException;\n\npublic class Android13 {\n    public static void main(String[] args) {\n        Uri imageUri = null;\n        Bitmap bitmap = null;\n        try {\n            bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(imageUri));\n        } catch (FileNotFoundException e) {\n            e.printStackTrace();\n        }\n        ByteArrayOutputStream bytes = new ByteArrayOutputStream();\n        bitmap.compress(Bitmap.CompressFormat.JPEG, 40, bytes);\n        ByteArrayInputStream fileInputStream = new ByteArrayInputStream(bytes.toByteArray());\n    }\n\n    private static ContentResolver getContentResolver() {\n        return null;\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

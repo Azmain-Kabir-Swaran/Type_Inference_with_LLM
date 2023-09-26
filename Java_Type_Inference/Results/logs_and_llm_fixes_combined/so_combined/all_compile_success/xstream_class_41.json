@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/xstream_class_41.java",
+    "java_code": "import java.util.List;\nimport com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.io.xml.StaxDriver;\n\npublic class xstream_class_41 {\n    public static void main(String arg[]){\n        XStream xstream = new XStream(new StaxDriver());\n        xstream.alias(\"data\", DetList.class);\n        xstream.alias(\"i\", Details.class);\n        String s = new String(\"<data>\\n\"\n                   +\"\\t<i Name='asia' type='continent' id='11'></i>\\n\"\n                   +\"\\t<i Name='africa' type='continent' id='12'></i>\\n\"\n                   +\"\\t<i Name='japan' type='country' id='13'></i>\\n\"\n                   +\"</data>\");\n        System.out.println(s);\n        DetList data = (DetList) xstream.fromXML(s);    \n    }\n    public static class DetList {\n        private List<Details> detlist;\n\n        public List<Details> getDetlist() {\n            return detlist;\n        }\n\n        public void setDetlist(List<Details> detlist) {\n            this.detlist = detlist;\n        }\n    }\n    public static class Details {\n\n        private String Name;\n        private String type;\n        private String id;\n\n        //Getters and Setters are here.\n    }\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

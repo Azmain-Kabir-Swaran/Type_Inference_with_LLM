@@ -4,21 +4,25 @@ import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-
 import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.NotNull;
 
 import java.util.Date;
 
+import org.hibernate.annotations.Type;
+import javax.validation.constraints.Transient;
+
+import javax.validation.constraints.AssertTrue;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Transient;
+
 @MappedSuperclass
-public abstract class HibernateClass8 {
+public abstract class hibernate_class_8 {
     private static final long serialVersionUID = 1L;
     private Date from;
     private Date thru;
 
-    public HibernateClass8() {
-    }
-
+    @javax.validation.constraints.Transient
     public boolean isActive() {
         Date now = new Date();
         boolean afterFrom = from.before(now) || from.equals(now);
@@ -26,7 +30,7 @@ public abstract class HibernateClass8 {
         return afterFrom && beforeThru;
     }
 
-    @AssertTrue(message = "Dates are not valid; the thru date must be empty or after the from date.")
+    @AssertTrue(message = "Dates are not valid the thru date must be empty, or after the fromdate.")
     public boolean areDatesValid() {
         if (thru == null) {
             return true;

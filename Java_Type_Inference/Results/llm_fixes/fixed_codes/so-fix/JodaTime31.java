@@ -1,11 +1,11 @@
-package jodatime;
-
 import org.joda.time.DateTime;
 import org.joda.time.Weeks;
 
 public class JodaTime31 {
 
 	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
 		DateTime s = new DateTime(Long.parseLong("1330573027000")); // 2012-02-29
 		DateTime e = new DateTime(Long.parseLong("1331005027000")); // 2012-03-05   
 

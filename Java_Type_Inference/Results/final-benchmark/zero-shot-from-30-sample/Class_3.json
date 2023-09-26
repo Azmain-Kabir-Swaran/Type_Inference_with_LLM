@@ -1,0 +1,17 @@
+{
+    "filename": "Class_3",
+    "expected_output": [
+        "import java.math.RoundingMode;",
+        "import java.text.DecimalFormat;",
+        "import java.text.DecimalFormatSymbols;",
+        "import java.text.ParseException;",
+        "import java.util.Locale;"
+    ],
+    "predicted_output": [
+        "import java.math.RoundingMode;",
+        "import java.text.DecimalFormatSymbols;",
+        "import java.text.DecimalFormat;",
+        "import java.text.ParseException;",
+        "import java.util.Locale;"
+    ]
+}

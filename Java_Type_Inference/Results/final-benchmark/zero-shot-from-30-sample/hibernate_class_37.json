@@ -1,0 +1,15 @@
+{
+    "filename": "hibernate_class_37",
+    "expected_output": [
+        "import org.hibernate.HibernateException;",
+        "import org.hibernate.Session;",
+        "import org.hibernate.SessionFactory;",
+        "import org.hibernate.cfg.AnnotationConfiguration;"
+    ],
+    "predicted_output": [
+        "import org.hibernate.cfg.AnnotationConfiguration;",
+        "import org.hibernate.SessionFactory;",
+        "import org.hibernate.Session;",
+        "import org.hibernate.HibernateException;"
+    ]
+}

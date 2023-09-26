@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/hibernate_class_46.java",
+    "java_code": "package hibernate;\nimport org.hibernate.CacheMode;\nimport org.hibernate.HibernateException;\nimport org.hibernate.JDBCException;\nimport org.hibernate.Session;\nimport org.hibernate.SessionFactory;\n\nimport org.hibernate.CacheMode;\nimport org.hibernate.HibernateException;\nimport org.hibernate.JDBCException;\nimport org.hibernate.Session;\nimport org.hibernate.SessionFactory;\n\npublic class hibernate_class_46 {\n\n    public static final ThreadLocal<Session> session = new ThreadLocal<>();\n    private static hibernate_class_46 me;\n\n    static {\n        try {\n            me = new hibernate_class_46();\n        } catch (Exception e) {\n            e.printStackTrace();\n        }\n    }\n\n    private hibernate_class_46() throws HibernateException, JDBCException {\n    }\n\n    public Session currentSession() throws Exception {\n        Session s = session.get();\n        if (s != null) {\n            s.setCacheMode(CacheMode.REFRESH);\n        }\n\n        if (s == null) {\n            s = openSession();\n\n            session.set(s);\n        }\n\n        return s;\n    }\n\n    public void setSessionFactory(SessionFactory sessionFactory) {\n    }\n\n    public static Session openSession() {\n        Session session = null;\n        return session;\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

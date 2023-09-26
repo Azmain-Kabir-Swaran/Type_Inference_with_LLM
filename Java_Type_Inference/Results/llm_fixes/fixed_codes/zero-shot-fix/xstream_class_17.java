@@ -1,24 +1,21 @@
 import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
-import com.thoughtworks.xstream.io.xml.XmlFriendlyNameCoder;
-import com.thoughtworks.xstream.io.xml.XppDriver;
-import com.thoughtworks.xstream.mapper.MapperWrapper;
-import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.thoughtworks.xstream.annotations.XStreamConverter;
-import com.thoughtworks.xstream.converters.UnmarshallingContext;
-import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.io.xml.MarshallingContext;
+import com.thoughtworks.xstream.io.xml.UnmarshallingContext;
 
 public final class xstream_class_17 {
     public static void main(String[] args) {
-        XStream xstream = new XStream(new XppDriver(new XmlFriendlyNameCoder("_-", "_")));
+        XStream xstream = new XStream();
         xstream.autodetectAnnotations(true);
-        
+        xstream.registerConverter(new PositionConverter());
+
         final Position position = new Position();
-        position.title = "The Title";
-        position.startDate = "The Start Date";
-        position.endDate = "The End Date";
+        position.setTitle("The Title");
+        position.setStartDate("The Start Date");
+        position.setEndDate("The End Date");
 
         final String xml = xstream.toXML(position);
         System.out.println("Generated XML:");
@@ -26,64 +23,43 @@ public final class xstream_class_17 {
 
         final Position genPosition = (Position) xstream.fromXML(xml);
         System.out.println("Generated Position:");
-        System.out.println("\tTitle: " + genPosition.title);
-        System.out.println("\tStart Date: " + genPosition.startDate);
-        System.out.println("\tEnd Date: " + genPosition.endDate);
+        System.out.println("\tTitle: " + genPosition.getTitle());
+        System.out.println("\tStart Date: " + genPosition.getStartDate());
+        System.out.println("\tEnd Date: " + genPosition.getEndDate());
     }
-    
+
     @XStreamAlias("Position")
-    @XStreamConverter(PositionConverter.class)
     private static class Position {
+        public String getEndDate() {
+            return endDate;
+        }
+
+        public void setEndDate(String endDate) {
+            this.endDate = endDate;
+        }
+
+        public String getStartDate() {
+            return startDate;
+        }
+
+        public void setStartDate(String startDate) {
+            this.startDate = startDate;
+        }
+
+        public String getTitle() {
+            return title;
+        }
+
+        public void setTitle(String title) {
+            this.title = title;
+        }
+
         private String title;
         private String startDate;
         private String endDate;
-
-        // Getter and Setter methods
     }
 
     private static class PositionConverter implements Converter {
-        
-        public boolean canConvert(Class clazz) {
+        public boolean canConvert(Class<?> clazz) {
             return Position.class == clazz;
         }
-
-        public void marshal(Object value, HierarchicalStreamWriter writer, MarshallingContext context) {
-            Position position = (Position) value;
-            writer.startNode("Position");
-
-            writer.startNode("Title");
-            writer.setValue(position.title);
-            writer.endNode();
-
-            writer.startNode("StartDate");
-            writer.setValue(position.startDate);
-            writer.endNode();
-
-            writer.startNode("EndDate");
-            writer.setValue(position.endDate);
-            writer.endNode();
-
-            writer.endNode();
-        }
-
-        public Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context) {
-            Position position = new Position();
-            reader.moveDown();
-            String title = reader.getValue();
-            position.title = title;
-            reader.moveUp(); 
-            
-            reader.moveDown();
-            String startDate = reader.getValue();
-            position.startDate = startDate;
-            reader.moveUp(); 
-
-            reader.moveDown(); 
-            String endDate = reader.getValue();
-            position.endDate = endDate;
-            reader.moveUp(); 
-
-            return position;
-        }
-    }
-}

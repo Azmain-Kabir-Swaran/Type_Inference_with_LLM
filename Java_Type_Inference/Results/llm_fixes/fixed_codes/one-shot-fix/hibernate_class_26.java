@@ -5,12 +5,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Entity;
+import org.hibernate.tool.hbm2ddl.SchemaExport;
 import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
+import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.SessionFactory;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-import org.hibernate.boot.MetadataSources;
-import org.hibernate.boot.registry.StandardServiceRegistry;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
 public class hibernate_class_26 {
     private SessionFactory sessionFactory;
@@ -19,11 +21,13 @@ public class hibernate_class_26 {
         hibernate_class_26 d = new hibernate_class_26();
         d.run3();
     }
-
     public void run3(){
+
         Session session = getSession();
         session.beginTransaction();
+
         createEntities(session);
+
         session.getTransaction().commit();
 
         System.out.println("NOW WITH A NEW TRANSACTION");
@@ -40,38 +44,39 @@ public class hibernate_class_26 {
         }
 
         session.getTransaction().commit();
-    }
 
+
+    }
     public void createEntities(Session session){
         for (int i=0; i<2; i++){
             A a = new A();
-            B b = new B();
-            a.setB(b);
-            session.save(a);
-        }
-    }
 
+            B b = new B();
+
+            a.setB(b);
+
+            session.save(a);
+
+        }
+
+    }
     public Session getSession(){
         if (sessionFactory == null){
-            Configuration config = new Configuration();
+            AnnotationConfiguration config = new AnnotationConfiguration();
             config.addAnnotatedClass(A.class);
             config.addAnnotatedClass(B.class);
             config.configure();
-            StandardServiceRegistryBuilder registryBuilder = new StandardServiceRegistryBuilder()
-                .applySettings(config.getProperties());
-            StandardServiceRegistry registry = registryBuilder.build();
-            MetadataSources sources = new MetadataSources(registry)
-                .addAnnotatedClass(A.class)
-                .addAnnotatedClass(B.class);
-            org.hibernate.boot.Metadata metadata = sources.getMetadataBuilder().build();
-            sessionFactory = metadata.getSessionFactoryBuilder().build();
+            new SchemaExport(config).create(true,true);
+
+            sessionFactory = config.buildSessionFactory();
         }
         Session session = sessionFactory.getCurrentSession();
+
         return session;
     }
-
     @Entity
-    public static class A {
+    public class A {
+
         private Integer id;
         private B b;
 
@@ -89,7 +94,8 @@ public class hibernate_class_26 {
             this.id = id;
         }
 
-        @OneToOne
+        @OneToOne (cascade=CascadeType.ALL)
+        @Fetch(FetchMode.JOIN)
         public B getB() {
             return b;
         }
@@ -98,9 +104,9 @@ public class hibernate_class_26 {
             this.b = b;
         }
     }
-
     @Entity
-    public static class B {
+    public class B {
+
         private Integer id;
 
         public B() {
@@ -115,7 +121,7 @@ public class hibernate_class_26 {
 
         public void setId(Integer id) {
             this.id = id;
-        }
+        }   
     }
-}
 
+}

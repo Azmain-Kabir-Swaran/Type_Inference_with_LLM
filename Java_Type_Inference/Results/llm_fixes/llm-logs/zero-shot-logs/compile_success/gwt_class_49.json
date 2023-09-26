@@ -1,8 +1,0 @@
-{
-    "attempt": 3,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-fix/gwt_class_49.java",
-    "java_code": "package gwt;\n\nimport com.google.gwt.dom.client.Document;\nimport com.google.gwt.dom.client.Element;\nimport java.util.ArrayList;\nimport com.google.gwt.user.client.DOM;\nimport com.google.gwt.dom.client.BodyElement;\n\n//ID = 3954392\n\npublic class gwt_class_49 {\n    private native void putElementLinkIDsInList(BodyElement elt, ArrayList<String> list) /*-{\n        // Code goes here\n    }-*/;\n\n    private native void rewriteLink(Element element, String sitename) /*-{\n        // Code goes here\n    }-*/;\n\n    public void rewriteLinksIterative() {\n        ArrayList<String> links = new ArrayList<String>();\n        putElementLinkIDsInList(Document.get().getBody().cast(), links);\n        for (int i = 0; i < links.size(); i++) {\n            Element elt = DOM.getElementById(links.get(i));\n            rewriteLink(elt, \"www.example.com\");\n        }\n    }\n}",
-    "stdout": "",
-    "stderr": "Note: /home/azmain/snr_jars/gwt-user.jar(com/google/gwt/user/client/DOM.java) uses or overrides a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n",
-    "return_code": 0
-}

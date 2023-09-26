@@ -1,13 +1,14 @@
 package jodatime;
-import org.joda.time.Duration;
-import org.joda.time.format.PeriodFormatterBuilder;
 import org.joda.time.Period;
 import org.joda.time.ReadablePeriod;
 import org.joda.time.DateTime;
+import org.joda.time.format.PeriodFormatter;
+import org.joda.time.format.PeriodFormatterBuilder;
 import java.util.Date;
 
 public class JodaTime35 {
-    private final static org.joda.time.format.PeriodFormatter DURATION_FORMATTER = new PeriodFormatterBuilder().appendYears()
+
+    private final static PeriodFormatter DURATION_FORMATTER = new PeriodFormatterBuilder().appendYears()
             .appendSuffix("year", "years").appendSeparator(" ").appendMonths().appendSuffix("month", "months")
             .appendSeparator(" ").appendDays().appendSuffix("day", "days").appendSeparator(" ").appendHours()
             .appendSuffix("hour", "hours").appendSeparator(" ").appendMinutes().appendSuffix("minute", "minutes")
@@ -25,4 +26,5 @@ public class JodaTime35 {
                 new Period(new DateTime(start), end == null ? new DateTime() : new DateTime(end)));
         return result.toString();
     }
+
 }

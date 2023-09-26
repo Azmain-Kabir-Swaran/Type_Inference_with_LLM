@@ -9,17 +9,12 @@ public class hibernate_class_21 {
         Session session = null;
         SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
         session = sessionFactory.openSession();
-        Transaction transaction = session.beginTransaction();
-
-//        BusinessCard card = new BusinessCard();
-//        card.setId(1);
-//        card.setName("Ozgur");
-//        card.setDescription("Ac?klama");
+        Transaction transaction = session.getTransaction();
 
         try {
-            // session.save(card);
+            transaction.begin();
             transaction.commit();
-        } catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         } finally {
             session.close();

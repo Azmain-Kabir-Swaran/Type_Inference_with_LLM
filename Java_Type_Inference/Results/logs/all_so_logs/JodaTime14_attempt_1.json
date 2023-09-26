@@ -1,0 +1,9 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime14.java",
+    "java_code": "import org.joda.time.DateTime;\nimport org.joda.time.format.DateTimeFormat;\nimport org.joda.time.format.DateTimeFormatter;\n\npublic class JodaTime14 {\n\n\tpublic static void main(String[] args) {\n\t\t// TODO Auto-generated method stub\n\t\tString start = \"Sunday, January 09, 2011 6:15:00 PM\";\n\n\t\tDateTimeFormatter parser1 = \n\t\tDateTimeFormat.forPattern(\"EEEE, MMMM dd, yyyy H:mm:ss aa\");\n\n\t\tDateTime startTime = parser1.parseDateTime(start);\n\t}\n\n}",
+    "used_prompt": "See the code below:\n\"\"\"\npackage jodatime;\n\npublic class JodaTime14 {\n\n\tpublic static void main(String[] args) {\n\t\t// TODO Auto-generated method stub\n\t\tString start = \"Sunday, January 09, 2011 6:15:00 PM\";\n\n\t\tDateTimeFormatter parser1 = \n\t\tDateTimeFormat.forPattern(\"EEEE, MMMM dd, yyyy H:mm:ss aa\");\n\n\t\tDateTime startTime = parser1.parseDateTime(start);\n\t}\n\n}\n\n\"\"\"\nFor the above code I got the below error log:\n\"\"\"\nJodaTime14.java:9: error: cannot find symbol\n\t\tDateTimeFormatter parser1 = \n\t\t^\n  symbol:   class DateTimeFormatter\n  location: class JodaTime14\nJodaTime14.java:10: error: cannot find symbol\n\t\tDateTimeFormat.forPattern(\"EEEE, MMMM dd, yyyy H:mm:ss aa\");\n\t\t^\n  symbol:   variable DateTimeFormat\n  location: class JodaTime14\nJodaTime14.java:12: error: cannot find symbol\n\t\tDateTime startTime = parser1.parseDateTime(start);\n\t\t^\n  symbol:   class DateTime\n  location: class JodaTime14\n3 errors\n\n\"\"\"\nNow fix the error only by fixing the import statements by not using wildcard imports and must not modify code body which means do not change anything inside the class. So, it can be successfully compiled and reply with full code.",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

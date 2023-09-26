@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-one-shot/hibernate_class_4.java",
-    "java_code": "package hibernate;\nimport org.hibernate.cfg.Configuration;\nimport org.hibernate.HibernateException;\nimport org.hibernate.SessionFactory;\n//ID = 970573\n\npublic class hibernate_class_4 {\n    private static final SessionFactory sessionFactory;\n\n    static {\n        try {\n            sessionFactory = new Configuration ().configure ().buildSessionFactory ();\n        } catch (HibernateException he) {\n            System.err.println (he);\n            throw new ExceptionInInitializerError (he);\n        }\n    }\n\n    public static SessionFactory getSessionFactory () {\n        return sessionFactory;\n    }\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

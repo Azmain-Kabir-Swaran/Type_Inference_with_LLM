@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/gwt_class_46.java",
+    "java_code": "import com.google.gwt.user.client.ui.DialogBox;\nimport com.google.gwt.user.client.ui.HTML;\nimport com.google.gwt.user.client.ui.RootPanel;\nimport com.google.gwt.user.client.ui.VerticalPanel;\n\npublic class gwt_class_46 {\n    public static void main(String arg[]) {\n        VerticalPanel eventDetailWindow = new VerticalPanel();\n\n        final DialogBox dialogBox2 = new DialogBox();\n        dialogBox2.setText(\"Event Detail\");\n        dialogBox2.setAnimationEnabled(true);\n\n        final HTML serverResponse3 = new HTML(\"<b> ok, this is working</b>\");\n        serverResponse3.addStyleName(\"detailView\");\n\n        eventDetailWindow.add(serverResponse3);\n        eventDetailWindow.addStyleName(\"detailWindow\");\n        dialogBox2.setWidget(eventDetailWindow);\n        RootPanel.get(\"detailWindow\").add(eventDetailWindow);\n    }\n}",
+    "stdout": "",
+    "stderr": "Note: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n",
+    "return_code": 0
+}

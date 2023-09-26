@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/JodaTime36.java",
+    "java_code": "import org.joda.time.Period;\nimport org.joda.time.format.ISOPeriodFormat;\nimport org.joda.time.format.PeriodFormatter;\nimport org.joda.time.format.PeriodFormatterBuilder;\nimport org.joda.time.Period;\nimport org.joda.time.format.ISOPeriodFormat;\nimport org.joda.time.format.PeriodFormatter;\nimport org.joda.time.format.PeriodFormatterBuilder;\n\npublic class JodaTime36 {\n\n    public static void main(String[] args) {\n        PeriodFormatter pf = new PeriodFormatterBuilder().append(ISOPeriodFormat.standard()).toFormatter();\n\n        Period period = pf.parsePeriod(\"PT01H00M\");\n    }\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

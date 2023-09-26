@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/zero-shot-temp-0.5/gwt_class_23.java",
+    "java_code": "package gwt;\nimport java.util.UUID;\nimport com.google.gwt.http.client.RequestBuilder;\nimport com.google.gwt.http.client.RequestCallback;\nimport com.google.gwt.http.client.RequestException;\nimport com.google.gwt.http.client.Request;\nimport com.google.gwt.http.client.Response;\n//ID = 2279782\n\n\npublic class gwt_class_23 {\n\tpublic static void main(String arg[]){\n\t\tfinal String filename = UUID.randomUUID().toString() + \".txt\";\n\n\t\tRequestBuilder rb = new RequestBuilder(RequestBuilder.POST, \"http://localhost/upload\");\n\t\tObject selected;\n\t\trb.setRequestData(\"aaa\"); // getBody() is plain-text\n\t\trb.setHeader(\"Content-Type\", \"application/x-www-form-urlencodeddata\");\n\t\trb.setCallback(new RequestCallback() {\n\t\t    @Override\n\t\t    public void onResponseReceived(Request request, Response response) {\n                         \n\t\t    }\n\n\t\t    @Override\n\t\t    public void onError(Request request, Throwable exception) {\n\t\t        exception.printStackTrace();\n\t\t    }\n\t\t});\n\n\t\t// Checked Exceptions sucks *sigh*\n\t\ttry {\n\t\t    rb.send();\n\t\t}\n\t\tcatch (RequestException e) {\n\t\t    e.printStackTrace();\n\t\t}\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

@@ -1,0 +1,23 @@
+{
+    "filename": "hibernate_class_8",
+    "expected_output": [
+        "import java.util.Date;",
+        "import javax.persistence.Column;",
+        "import javax.persistence.MappedSuperclass;",
+        "import javax.persistence.Temporal;",
+        "import javax.persistence.TemporalType;",
+        "import javax.persistence.Transient;",
+        "import org.hibernate.validator.AssertTrue;",
+        "import org.hibernate.validator.NotNull;"
+    ],
+    "predicted_output": [
+        "import javax.persistence.MappedSuperclass;",
+        "import javax.persistence.Column;",
+        "import javax.validation.constraints.AssertTrue;",
+        "import javax.validation.constraints.NotNull;",
+        "import java.util.Date;",
+        "import javax.persistence.TemporalType;",
+        "import javax.persistence.Temporal;",
+        "import javax.persistence.Transient;"
+    ]
+}

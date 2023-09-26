@@ -1,11 +1,9 @@
 package jodatime;
-
 import org.joda.time.DateTime;
 import org.joda.time.Period;
 import org.joda.time.ReadablePeriod;
 import org.joda.time.format.PeriodFormatterBuilder;
 import org.joda.time.format.PeriodFormatter;
-
 import java.util.Date;
 
 public class JodaTime35 {

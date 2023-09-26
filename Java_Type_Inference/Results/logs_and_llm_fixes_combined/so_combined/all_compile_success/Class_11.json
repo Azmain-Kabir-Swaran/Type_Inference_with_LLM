@@ -1,0 +1,8 @@
+{
+    "attempt": 4,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Class_11.java",
+    "java_code": "import java.util.ArrayList;\nimport java.util.List;\nimport java.util.Scanner;\n\npublic class Class_11 {\n    public static void main(String[] args) {\n        List<String> names = new ArrayList<>();\n        Scanner scanner = new Scanner(System.in);\n\n        System.out.print(\"Enter number of names: \");\n        int numNames = scanner.nextInt();\n\n        for (int i = 0; i < numNames; i++) {\n            System.out.print(\"Enter name \" + (i + 1) + \": \");\n            String name = scanner.next();\n            names.add(name);\n        }\n\n        System.out.println(\"Names entered: \");\n        for (String name : names) {\n            System.out.println(name);\n        }\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

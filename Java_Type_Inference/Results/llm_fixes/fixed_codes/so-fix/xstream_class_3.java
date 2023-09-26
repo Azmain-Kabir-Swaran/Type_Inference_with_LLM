@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class xstream_class_3 {
+
     public static void main(String[] args) {
         JettisonMappedXmlDriver xmlDriver = new JettisonMappedXmlDriver();
         XStream xstream = new XStream(xmlDriver);
@@ -17,30 +18,35 @@ public class xstream_class_3 {
         messages.add(mock3);
 
         String jsonString = xstream.toXML(messages);
-        System.out.println(jsonString);
 
-        List<Object> xstreamJSONUnmarshalledMessages = (List<Object>)xstream.fromXML(jsonString);
+        //JSON list format is non-intuitive single element array with class name fields
+        System.out.println(jsonString);
+        List<Object> xstreamJSONUnmarshalledMessages = (List<Object>) xstream.fromXML(jsonString);
+        //This will print 3 messages unmarshalled
         System.out.println("XStream format JSON Number of messages unmarshalled: " + xstreamJSONUnmarshalledMessages.size());
 
-        String jsonTest = 
-              "{"+
-                "\"list\" : ["+ 
-                          "{"+
-                          "\"MockMessage\" : {"+
-                              "\"val\" : 1"+
-                          "}"+
-                      "}, {"+
-                          "\"MockMessage\" : {"+
-                              "\"val\" : 1"+
-                          "}"+
-                      "}, {"+
-                          "\"MockMessageOther\" : {"+
-                              "\"otherVal\" : 1"+
-                          "}"+
-                      "} ]"+
-                  "}";
+        //Attempt to deserialize a reasonable looking JSON string
+        String jsonTest =
+                "{" +
+                        "\"list\" : [" +
+                        "{" +
+                        "\"MockMessage\" : {" +
+                        "\"val\" : 1" +
+                        "}" +
+                        "}, {" +
+                        "\"MockMessage\" : {" +
+                        "\"val\" : 1" +
+                        "}" +
+                        "}, {" +
+                        "\"MockMessageOther\" : {" +
+                        "\"otherVal\" : 1" +
+                        "}" +
+                        "} ]" +
+                        "};";
 
-        List<Object> unmarshalledMessages = (List<Object>)xstream.fromXML(jsonTest);
+        List<Object> unmarshalledMessages = (List<Object>) xstream.fromXML(jsonTest);
+
+        //We expect 3 messages but XStream only deserializes one
         System.out.println("Normal format JSON Number of messages unmarshalled: " + unmarshalledMessages.size());
     }
 }

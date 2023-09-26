@@ -1,4 +1,5 @@
-import android.content.Context;
+package androidExamples;
+
 import android.graphics.drawable.Drawable;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
@@ -6,10 +7,9 @@ import android.widget.TabHost.TabSpec;
 public class Android05 {
 
 	public static void main(String[] args) {
-		Context context = null; // Replace null with your actual context variable
-		TabHost mTabs = new TabHost(context);
+		TabHost mTabs = null;
 		TabSpec ts = mTabs.newTabSpec("tab");
-		Drawable iconResource = null; // Replace null with your actual drawable resource
+		Drawable iconResource = null;
 		ts.setIndicator("TabTitle", iconResource);
 
 		mTabs.addTab(ts);
@@ -19,4 +19,5 @@ public class Android05 {
 		// TODO Auto-generated method stub
 
 	}
+
 }

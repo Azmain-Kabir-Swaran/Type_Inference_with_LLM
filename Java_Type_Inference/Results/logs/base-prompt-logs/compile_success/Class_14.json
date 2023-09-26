@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/Class_14.java",
+    "java_code": "import java.lang.reflect.Method;\nimport java.lang.reflect.Method;\n\npublic class Class_14 {\n\n    public static void main(String[] args) throws Exception {\n        String dogClassName = \"com.mypackage.bean.Dog\";\n        Class<?> dogClass = Class.forName(dogClassName);\n        Object dog = dogClass.newInstance();\n\n        String methodName = \"\";\n\n        methodName = \"setName\";\n        Method setNameMethod = dog.getClass().getMethod(methodName, String.class);\n        setNameMethod.invoke(dog, \"Mishka\");\n\n        methodName = \"getName\";\n        Method getNameMethod = dog.getClass().getMethod(methodName);\n        String name = (String) getNameMethod.invoke(dog);\n\n        methodName = \"printDog\";\n        Class<?>[] paramTypes = {String.class, int.class};\n        Method printDogMethod = dog.getClass().getMethod(methodName, paramTypes);\n        printDogMethod.invoke(dog, name, 3);\n    }\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

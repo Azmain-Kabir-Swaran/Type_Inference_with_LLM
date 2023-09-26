@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/gwt_class_18.java",
-    "java_code": "import com.google.gwt.core.client.GWT;\nimport com.google.gwt.uibinder.client.UiBinder;\nimport com.google.gwt.user.client.ui.Composite;\nimport com.google.gwt.user.client.ui.Widget;\n\npublic class gwt_class_18 extends Composite {\n\n    private static StackNavigatorUiBinder uiBinder = GWT.create(StackNavigatorUiBinder.class);\n\n    interface StackNavigatorUiBinder extends UiBinder<Widget, gwt_class_18> {}\n\n    public gwt_class_18() {\n        initWidget(uiBinder.createAndBindUi(this));\n    }\n\n}",
-    "stdout": "",
-    "stderr": "Note: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n",
-    "return_code": 0
-}

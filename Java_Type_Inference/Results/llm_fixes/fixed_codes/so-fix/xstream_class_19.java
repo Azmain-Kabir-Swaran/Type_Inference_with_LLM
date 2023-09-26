@@ -1,12 +1,11 @@
 import com.thoughtworks.xstream.converters.Converter;
-import com.thoughtworks.xstream.io.HierarchicalStreamReader;
-import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
 public class xstream_class_19 {
-
-    public static class CustomConverter implements Converter {
+    public class CustomConverter implements Converter {
 
         public void marshal(Object source, HierarchicalStreamWriter writer,
                             MarshallingContext context) {
@@ -24,10 +23,5 @@ public class xstream_class_19 {
         public boolean canConvert(Class type) {
             return true;
         }
-
-        public boolean canConvert(Class<?> type, boolean fromAttribute) {
-            return true;
-        }
     }
-
 }

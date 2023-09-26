@@ -1,0 +1,8 @@
+{
+    "attempt": 3,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-fix/xstream_class_40.java",
+    "java_code": "package xstream;\n\nimport com.thoughtworks.xstream.converters.Converter;\nimport com.thoughtworks.xstream.io.HierarchicalStreamReader;\nimport com.thoughtworks.xstream.io.HierarchicalStreamWriter;\nimport com.thoughtworks.xstream.converters.MarshallingContext;\nimport com.thoughtworks.xstream.converters.UnmarshallingContext;\n\npublic class xstream_class_40 implements Converter {\n\n   @Override\n   public boolean canConvert(Class clazz) {\n       return clazz.equals(Integer.class);\n   }\n\n   @Override\n   public void marshal(Object object, HierarchicalStreamWriter writer,\n        MarshallingContext context) {\n   }\n\n   @Override\n   public Object unmarshal(HierarchicalStreamReader reader,\n        UnmarshallingContext context) {\n      String text = (String)reader.getValue();\n      Integer number = Integer.parseInt(text.trim());\n      return number;\n   }    \n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

@@ -1,0 +1,17 @@
+{
+    "filename": "hibernate_class_31",
+    "expected_output": [
+        "import org.hibernate.Session;",
+        "import org.hibernate.SessionFactory;",
+        "import org.hibernate.cfg.Configuration;",
+        "import org.hibernate.Query;",
+        "import java.util.List;"
+    ],
+    "predicted_output": [
+        "import java.util.List;",
+        "import org.hibernate.query.Query;",
+        "import org.hibernate.SessionFactory;",
+        "import org.hibernate.cfg.Configuration;",
+        "import org.hibernate.Session;"
+    ]
+}

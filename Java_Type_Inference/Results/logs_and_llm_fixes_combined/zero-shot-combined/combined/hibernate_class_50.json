@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-fix/hibernate_class_50.java",
-    "java_code": "package hibernate;\nimport java.util.List;\nimport org.hibernate.Session;\nimport org.hibernate.SessionFactory;\n\npublic class hibernate_class_50 {\n    private SessionFactory sessionFactory;\n\n    public void setSessionFactory(SessionFactory sessionFactory) {\n        this.sessionFactory = sessionFactory;\n    }\n\n    public SessionFactory getSessionFactory() {\n        return sessionFactory;\n    }\n\n    public List<Name> getAll() {\n        Session session = this.sessionFactory.getCurrentSession();\n        List<Name> names = (List<Name>)session.createQuery(\"from Name\").list();\n        return names;\n    }\n\n    public void save(Name name){\n        Session session = this.sessionFactory.getCurrentSession();\n        session.saveOrUpdate(name);\n        session.flush();\n    }\n}\nclass Name{\n    // Add your Name class implementation here\n}",
-    "stdout": "",
-    "stderr": "Note: /home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-fix/hibernate_class_50.java uses unchecked or unsafe operations.\nNote: Recompile with -Xlint:unchecked for details.\n",
-    "return_code": 0
-}

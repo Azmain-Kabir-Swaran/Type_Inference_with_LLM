@@ -1,8 +1,0 @@
-{
-    "attempt": 5,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/one-shot-fix/hibernate_class_17.java",
-    "java_code": "public static void main(String[] args) {\n        // Your code here\n    }\n}",
-    "stdout": "",
-    "stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/one-shot-fix/hibernate_class_17.java:1: error: class, interface, or enum expected\npublic static void main(String[] args) {\n              ^\n1 error\n",
-    "return_code": 1
-}

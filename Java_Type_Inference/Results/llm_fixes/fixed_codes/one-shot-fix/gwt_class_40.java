@@ -2,15 +2,14 @@ package gwt;
 
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.LayoutPanel;
-import com.google.gwt.user.client.ui.Widget;
-
-//ID = 2868845
+import com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer;
+import com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData;
+import com.sencha.gxt.core.client.util.Margins;
 
 public class gwt_class_40 {
     private HorizontalPanel getSomeGWT() {
         HorizontalPanel pointsLogoPanel = new HorizontalPanel();
-        for (int i = 0; i < 350; i++) {
+        for (int i=0; i<350; i++) {
             HorizontalPanel innerContainer = new HorizontalPanel();
             innerContainer.add(new Label("some GWT text"));
             pointsLogoPanel.add(innerContainer);
@@ -18,11 +17,12 @@ public class gwt_class_40 {
         return pointsLogoPanel;
     }
 
-    private LayoutPanel getSomeGXT() {
-        final LayoutPanel pointsLogoPanel = new LayoutPanel();
-        for (int i = 0; i < 350; i++) {
-            LayoutPanel innerContainer = new LayoutPanel();
-            pointsLogoPanel.add(innerContainer);
+    private VerticalLayoutContainer getSomeGXT() {
+        VerticalLayoutContainer pointsLogoPanel = new VerticalLayoutContainer();
+        pointsLogoPanel.setLayoutOnChange(true);
+        for (int i=0; i<350; i++) {
+            VerticalLayoutContainer innerContainer = new VerticalLayoutContainer();
+            pointsLogoPanel.add(innerContainer, new VerticalLayoutData(1, -1, new Margins(5)));
         }
         return pointsLogoPanel;
     }

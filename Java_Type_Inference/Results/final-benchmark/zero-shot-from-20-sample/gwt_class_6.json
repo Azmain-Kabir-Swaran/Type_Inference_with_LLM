@@ -1,0 +1,13 @@
+{
+    "filename": "gwt_class_6",
+    "expected_output": [
+        "import com.google.gwt.user.client.DOM;",
+        "import com.google.gwt.user.client.Element;",
+        "import com.google.gwt.user.client.ui.Widget;"
+    ],
+    "predicted_output": [
+        "import com.google.gwt.user.client.Element;",
+        "import com.google.gwt.user.client.ui.Widget;",
+        "import com.google.gwt.user.client.DOM;"
+    ]
+}

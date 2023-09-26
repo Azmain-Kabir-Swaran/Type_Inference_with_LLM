@@ -1,15 +1,14 @@
-package xstream;
-
+import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
-import com.thoughtworks.xstream.converters.Converter;
-import com.thoughtworks.xstream.converters.MarshallingContext;
-import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.MarshallingContext;
+import com.thoughtworks.xstream.io.UnmarshallingContext;
 
 public class xstream_class_30 implements Converter {
+
     @Override
     public void marshal(Object o, HierarchicalStreamWriter hierarchicalStreamWriter, MarshallingContext marshallingContext) {
-        // implement logic for marshalling to XML
+        // implement logic for marshalling to xml
     }
 
     @Override
@@ -38,8 +37,7 @@ public class xstream_class_30 implements Converter {
     public boolean canConvert(Class aClass) {
         return aClass == Items.class;
     }
-
-    public static class Items {
+    public class Items {
         private String id;
         private String firstName;
         private String lastName;

@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime37.java",
+    "java_code": "import org.joda.time.DateTime;\nimport org.joda.time.DateTimeZone;\nimport org.joda.time.Days;\nimport java.util.concurrent.TimeUnit;\n\npublic class JodaTime37 {\n\n\tpublic static void main(String[] args) {\n\t\t// 5am on the 20th to 1pm on the 21st, October 2013, Brazil\n\t\tDateTimeZone BRAZIL = DateTimeZone.forID(\"America/Sao_Paulo\");\n\t\tDateTime start = new DateTime(2013, 10, 20, 5, 0, 0, BRAZIL);\n\t\tDateTime end = new DateTime(2013, 10, 21, 13, 0, 0, BRAZIL);\n\t\tSystem.out.println(getDaysBetween(start, end));\n\t\t// prints 1\n\t}\n\n\tpublic static int getDaysBetween(DateTime earlier, DateTime later) {\n\t\treturn Days.daysBetween(earlier, later).getDays();\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

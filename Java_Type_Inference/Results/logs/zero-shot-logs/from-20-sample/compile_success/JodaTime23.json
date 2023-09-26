@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/from-20-sample/JodaTime23.java",
+    "java_code": "package jodatime;\nimport org.joda.time.DateTimeConstants;\nimport org.joda.time.LocalDate;\n//ID = 8321537\n\npublic class JodaTime23 {\n\n\tLocalDate getNearestDayOfWeek(LocalDate ld, String day) {\n        LocalDate target = ld.dayOfWeek().setCopy(day);\n        if (ld.getDayOfWeek() > DateTimeConstants.SATURDAY) {\n            target = target.plusWeeks(1);\n        }\n        return target;\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

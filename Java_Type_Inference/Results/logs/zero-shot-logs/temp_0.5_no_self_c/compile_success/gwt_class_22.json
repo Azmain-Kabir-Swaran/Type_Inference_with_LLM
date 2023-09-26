@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/zero-shot-temp-0.5/gwt_class_22.java",
+    "java_code": "package gwt;\nimport com.google.gwt.user.client.ui.Composite;\nimport com.google.gwt.user.client.ui.Label;\nimport com.google.gwt.user.client.ui.VerticalPanel;\nimport com.google.gwt.user.client.ui.Button;\nimport com.google.gwt.event.dom.client.ClickEvent;\nimport com.google.gwt.event.dom.client.ClickHandler;\nimport com.google.gwt.uibinder.client.UiBinder;\nimport com.google.gwt.uibinder.client.UiField;\nimport com.google.gwt.uibinder.client.UiHandler;\nimport com.google.gwt.core.client.GWT;\n//ID = 2237142\n\npublic class gwt_class_22 extends Composite {\n\n    private static TestViewUiBinder uiBinder = GWT.create(TestViewUiBinder.class);\n\n    interface TestViewUiBinder extends UiBinder<VerticalPanel, gwt_class_22> {}\n\n    @UiField Label testObjectStringLabel;\n    @UiField Label innerObjectStringLabel;\n    @UiField VerticalPanel listObjectsPanel;\n    @UiField Button button;\n    @UiField Label errorMessageLabel;\n\n    public gwt_class_22(String firstName) {\n        initWidget(uiBinder.createAndBindUi(this));\n    }\n\n    @UiHandler(\"button\")\n    void onClick(ClickEvent e) {\n\n    }\n\n}",
+    "stdout": "",
+    "stderr": "Note: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n",
+    "return_code": 0
+}

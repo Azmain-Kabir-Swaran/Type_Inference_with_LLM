@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/Android32.java",
+    "java_code": "import java.io.File;\nimport java.io.IOException;\nimport android.media.MediaRecorder;\nimport android.os.Environment;\nimport java.io.File;\nimport java.io.IOException;\nimport android.media.MediaRecorder;\nimport android.os.Environment;\n\npublic class Android32 {\n    public void start() throws IOException {\n        String state = android.os.Environment.getExternalStorageState();\n        if (!state.equals(Environment.MEDIA_MOUNTED)) {\n            throw new IOException(\"SD card is not mounted. It is \" + state + \".\");\n        }\n        String path = \"Root\";\n        File directory = new File(path).getParentFile();\n        if (!directory.exists() && !directory.mkdirs()) {\n            throw new IOException(\"Path to file could not be created.\");\n        }\n        MediaRecorder recorder = new MediaRecorder();\n        recorder.setVideoSource(MediaRecorder.VideoSource.CAMERA);\n        recorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);\n        recorder.setVideoEncoder(MediaRecorder.VideoEncoder.H263);\n        recorder.setVideoFrameRate(15);\n        recorder.setVideoSize(176, 144);\n        recorder.setOutputFile(path);\n        recorder.prepare();\n        recorder.start();\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

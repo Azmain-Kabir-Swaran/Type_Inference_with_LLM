@@ -1,7 +1,9 @@
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
+
 import java.text.ParseException;
+import java.util.Date;
 
 public class JodaTime22 {
 
@@ -9,7 +11,7 @@ public class JodaTime22 {
 
     }
 
-    public String getDateFromDateTime(java.util.Date date, Boolean display) throws ParseException {
+    public String getDateFromDateTime(Date date, Boolean display) throws ParseException {
 
         DateTimeFormatter dtFormatter;
 

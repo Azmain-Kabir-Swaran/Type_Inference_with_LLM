@@ -1,0 +1,9 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime15.java",
+    "java_code": "package jodatime;\n\nimport org.joda.time.MutableDateTime;\nimport org.joda.time.DateTime;\n\npublic class JodaTime15 {\n    public static void main(String[] args) {\n        MutableDateTime now = new MutableDateTime();\n        now.setHourOfDay(2);\n        now.setMinuteOfHour(0);\n        now.setSecondOfMinute(0);\n        now.setMillisOfSecond(0);\n        DateTime myDate = now.toDateTime();\n    }\n}",
+    "used_prompt": "See the code below:\n\"\"\"\npackage jodatime;\npublic class JodaTime15 {\n\tpublic static void main(String[] args) \n\t{\n\t\tMutableDateTime now = new MutableDateTime();\n\t\tnow.setHourOfDay(2);\n\t\tnow.setMinuteOfHour(0);\n\t\tnow.setSecondOfMinute(0);\n\t\tnow.setMillisOfSecond(0);\n\t\tDateTime myDate = now.toDateTime();\n\t}\n}\n\n\"\"\"\nFor the above code I got the below error log:\n\"\"\"\nJodaTime15.java:5: error: cannot find symbol\n\t\tMutableDateTime now = new MutableDateTime();\n\t\t^\n  symbol:   class MutableDateTime\n  location: class JodaTime15\nJodaTime15.java:5: error: cannot find symbol\n\t\tMutableDateTime now = new MutableDateTime();\n\t\t                          ^\n  symbol:   class MutableDateTime\n  location: class JodaTime15\nJodaTime15.java:10: error: cannot find symbol\n\t\tDateTime myDate = now.toDateTime();\n\t\t^\n  symbol:   class DateTime\n  location: class JodaTime15\n3 errors\n\n\"\"\"\nNow fix the error only by fixing the import statements by not using wildcard imports and must not modify code body which means do not change anything inside the class. So, it can be successfully compiled and reply with full code.",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

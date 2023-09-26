@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/Android39.java",
+    "java_code": "package androidExamples;\nimport android.os.Bundle;\nimport android.widget.LinearLayout;\nimport com.google.android.maps.MapActivity;\nimport com.google.android.maps.MapController;\nimport com.google.android.maps.MapView;\nimport com.google.android.maps.MyLocationOverlay;\nimport com.google.android.maps.Overlay;\nimport java.util.List;\n\nimport android.os.Bundle;\nimport android.widget.LinearLayout;\n\nimport com.google.android.maps.MapActivity;\nimport com.google.android.maps.MapController;\nimport com.google.android.maps.MapView;\nimport com.google.android.maps.MyLocationOverlay;\nimport com.google.android.maps.Overlay;\n\nimport java.util.List;\n\npublic class Android39 extends MapActivity {\n\n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.main);\n\n        MapView myMapView = (MapView) findViewById(R.id.lay);\n        MapController mapController = myMapView.getController();\n\n        List<Overlay> overlays = myMapView.getOverlays();\n        MyLocationOverlay myLocationOverlay = new MyLocationOverlay(this, myMapView);\n        overlays.add(myLocationOverlay);\n        myLocationOverlay.enableMyLocation();\n    }\n\n    @Override\n    protected boolean isRouteDisplayed() {\n        return false;\n    }\n}",
+    "stdout": "",
+    "stderr": "No error (Ignored 'package R does not exist' errors)",
+    "return_code": 1
+}

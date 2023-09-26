@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/JodaTime19.java",
+    "java_code": "import org.joda.time.Instant;\nimport org.joda.time.Interval;\nimport org.joda.time.ReadableInstant;\nimport java.util.Date;\nimport org.joda.time.Instant;\nimport org.joda.time.Interval;\nimport org.joda.time.ReadableInstant;\nimport java.util.Date;\n\npublic class JodaTime19 {\n    public static void main(String[] args) {\n        Instant now = new Instant(new Date().getTime());\n        Interval i2 = new Interval(now, (ReadableInstant) null);\n        Interval i1 = new Interval(now, (ReadableInstant) null);\n        boolean overlapping = i2.overlaps(i1);\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

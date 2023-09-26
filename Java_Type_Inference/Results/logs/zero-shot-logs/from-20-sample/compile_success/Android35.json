@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/from-20-sample/Android35.java",
+    "java_code": "package androidExamples;\nimport java.io.IOException;\nimport java.io.File;\nimport android.media.MediaRecorder;\n\n\n\npublic class Android35 {\n\tprivate void recordVideoStart(){\n\t\tMediaRecorder recorder = new MediaRecorder();\n\t\tif(recorder != null)\n\t\t{\n\t\t\trecorder.stop();\n\t\t\trecorder.release();\n\t\t}\n\t\tFile file = new File(\"/sdcard/videoTest.3gpp\");\n\t\ttry {\n\t\t\tfile.createNewFile();\n\t\t} catch (IOException e) {\n\t\t\t// TODO Auto-generated catch block\n\t\t\te.printStackTrace();\n\t\t}\n\n\n\t\trecorder = new MediaRecorder();\n\t\trecorder.setVideoSource(MediaRecorder.VideoSource.CAMERA);\n\t\trecorder.setAudioSource(MediaRecorder.AudioSource.MIC);\n\t\trecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);\n\t\trecorder.setOutputFile(file.getAbsolutePath());\n\t\trecorder.setVideoSize(176, 144);\n\t\trecorder.setVideoFrameRate(15);\n\t\t//recorder.setVideoEncoder(MediaRecorder.VideoEncoder.MPEG_4_SP);\n\t\trecorder.setVideoEncoder(MediaRecorder.VideoEncoder.DEFAULT);\n\t\trecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);\n\n\n\t\ttry {\n\t\t\trecorder.prepare();\n\t\t} catch (IllegalStateException e) {\n\t\t\t// TODO Auto-generated catch block\n\t\t\te.printStackTrace();\n\t\t} catch (IOException e) {\n\t\t\t// TODO Auto-generated catch block\n\t\t\te.printStackTrace();\n\t\t}\n\t\trecorder.start();\n\t}\n\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

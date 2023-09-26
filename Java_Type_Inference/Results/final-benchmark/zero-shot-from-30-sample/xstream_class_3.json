@@ -1,0 +1,15 @@
+{
+    "filename": "xstream_class_3",
+    "expected_output": [
+        "import java.util.ArrayList;",
+        "import java.util.List;",
+        "import com.thoughtworks.xstream.XStream;",
+        "import com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver;"
+    ],
+    "predicted_output": [
+        "import java.util.ArrayList;",
+        "import com.thoughtworks.xstream.XStream;",
+        "import com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver;",
+        "import java.util.List;"
+    ]
+}

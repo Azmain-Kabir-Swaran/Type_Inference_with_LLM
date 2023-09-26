@@ -2,27 +2,33 @@ package gwt;
 
 import com.google.gwt.dom.client.Document;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import com.google.gwt.user.client.DOM;
 import com.google.gwt.dom.client.BodyElement;
-
-//ID = 3954392
+import com.google.gwt.user.client.DOM;
+import java.util.ArrayList;
 
 public class gwt_class_49 {
-    private native void putElementLinkIDsInList(BodyElement elt, ArrayList<String> list) /*-{
-        // Code goes here
-    }-*/;
+    private void putElementLinkIDsInList(BodyElement elt, ArrayList<String> list) {
+    }
 
-    private native void rewriteLink(Element element, String sitename) /*-{
-        // Code goes here
-    }-*/;
-
-    public void rewriteLinksIterative() {
+    private void rewriteLinksIterative() {
         ArrayList<String> links = new ArrayList<String>();
-        putElementLinkIDsInList(Document.get().getBody().cast(), links);
+        putElementLinkIDsInList(Document.get().getBody(), links);
         for (int i = 0; i < links.size(); i++) {
-            Element elt = DOM.getElementById(links.get(i));
+            Element elt = com.google.gwt.dom.client.Element.as(DOM.getElementById(links.get(i)));
             rewriteLink(elt, "www.example.com");
+        }
+    }
+
+    private void rewriteLink(Element element, String sitename) {
+        String href = DOM.getElementProperty((com.google.gwt.user.client.Element) element, "href");
+        if (null == href) {
+            return;
+        }
+
+        if (href.startsWith("http://")
+            && !href.startsWith("http://" + sitename + "/")) {
+            DOM.setElementProperty((com.google.gwt.user.client.Element) element, "href", "http://" + sitename
+                + "/Blocked.html");
         }
     }
 }

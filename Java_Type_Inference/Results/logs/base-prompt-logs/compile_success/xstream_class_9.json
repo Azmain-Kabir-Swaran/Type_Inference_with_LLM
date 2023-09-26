@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/xstream_class_9.java",
+    "java_code": "import com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.io.xml.DomDriver;\nimport java.io.FileInputStream;\nimport java.io.FileNotFoundException;\nimport com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.io.xml.DomDriver;\n\nimport java.io.FileInputStream;\nimport java.io.FileNotFoundException;\n\npublic class xstream_class_9 {\n    public static class ServerIP {\n        private String ip;\n\n        public String getIp() {\n            return ip;\n        }\n\n        public void setIp(String ip) {\n            this.ip = ip;\n        }\n    }\n\n    public static class ServerHandler {\n\n        private String fileName = \"servers.xml\";\n        private String path = \"J:\\\\workspace\\\\LOG730\\\\src\\\\Q3\\\\\";\n        private XStream xstream = new XStream(new DomDriver());\n\n        public void readFromXML() {\n            try {\n                FileInputStream fis = new FileInputStream(path + fileName);\n                ServerIP server = (ServerIP) xstream.fromXML(fis, new ServerIP());\n                System.out.println(\"Host: \" + server.getIp());\n            } catch (FileNotFoundException e) {\n                e.printStackTrace();\n            }\n        }\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

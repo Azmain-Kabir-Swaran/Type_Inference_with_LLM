@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/JodaTime31.java",
+    "java_code": "import org.joda.time.DateTime;\nimport org.joda.time.Weeks;\nimport org.joda.time.DateTime;\nimport org.joda.time.Weeks;\n\npublic class JodaTime31 {\n\n    public static void main(String[] args) {\n        DateTime s = new DateTime(Long.parseLong(\"1330573027000\"));\n        DateTime e = new DateTime(Long.parseLong(\"1331005027000\"));\n\n        Weeks weeks = Weeks.weeksBetween(s, e).plus(1);\n        DateTime start = new DateTime(Long.parseLong(\"1330659427000\"));\n        DateTime end = new DateTime(Long.parseLong(\"1530659427000\"));\n        DateTime finalStart = start.dayOfWeek().withMinimumValue();\n\n        DateTime finalEnd = end.dayOfWeek().withMaximumValue();\n    }\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

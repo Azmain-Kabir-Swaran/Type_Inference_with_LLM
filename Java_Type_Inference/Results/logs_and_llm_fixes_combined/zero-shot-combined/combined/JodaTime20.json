@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-zero-shot/JodaTime20.java",
-    "java_code": "package jodatime;\nimport org.joda.time.format.DateTimeFormatter;\nimport org.joda.time.format.DateTimeFormat;\nimport org.joda.time.DateTimeZone;\nimport org.joda.time.DateTime;\n//ID = 7807271\n\npublic class JodaTime20 {\n\n\tpublic static void main(String[] args) {\n\t\tString DATE_FORMAT = \"yyyy-MM-dd HH:mm:ss\";\n\t\tDateTimeFormatter DATETIME_FORMATTER = DateTimeFormat.forPattern(DATE_FORMAT);\n\t\tDateTimeZone dateTimeZone = DateTimeZone.forID(\"-03:00\");\n\t\t//date is 2000-01-01 00:00:00 -03:00\n\t\tDateTime date = DATETIME_FORMATTER.withZone(dateTimeZone).parseDateTime(\"2000-01-01 00:00:00\");\n\t\tSystem.out.println(\"Current date is: \" + date.toString());\n\t\t//now convert to UTC\n\t\tDateTime convertedDate = date.toDateTime(DateTimeZone.UTC);\n\t\tSystem.out.println(\"Converted date: \" + date.toString());\n\t\t// TODO Auto-generated method stub\n\n\t}\n\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

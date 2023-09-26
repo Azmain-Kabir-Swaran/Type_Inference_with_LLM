@@ -7,7 +7,7 @@ import android.view.View.OnClickListener;
 import android.util.Log;
 import android.widget.TabHost.TabContentFactory;
 import android.app.TabActivity;
-import android.widget.ListView; // Added import statement
+import android.widget.ListView; // Add this import statement
 
 public class Android34 extends TabActivity 
 implements TabContentFactory

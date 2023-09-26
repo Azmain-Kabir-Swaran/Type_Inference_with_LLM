@@ -6,7 +6,7 @@ import com.thoughtworks.xstream.converters.UnmarshallingContext;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
-public final class XStreamExample {
+public final class xstream_class_17 {
     public static void main(String[] args) {
         XStream xstream = new XStream();
         xstream.autodetectAnnotations(true);
@@ -30,16 +30,12 @@ public final class XStreamExample {
 
     @XStreamAlias("Position")
     private static class Position {
-        private String title;
-        private String startDate;
-        private String endDate;
-
-        public String getTitle() {
-            return title;
+        public String getEndDate() {
+            return endDate;
         }
 
-        public void setTitle(String title) {
-            this.title = title;
+        public void setEndDate(String endDate) {
+            this.endDate = endDate;
         }
 
         public String getStartDate() {
@@ -50,23 +46,27 @@ public final class XStreamExample {
             this.startDate = startDate;
         }
 
-        public String getEndDate() {
-            return endDate;
+        public String getTitle() {
+            return title;
         }
 
-        public void setEndDate(String endDate) {
-            this.endDate = endDate;
+        public void setTitle(String title) {
+            this.title = title;
         }
+
+        private String title;
+        private String startDate;
+        private String endDate;
     }
 
     private static class PositionConverter implements Converter {
-        public boolean canConvert(Class<?> clazz) {
-            return Position.class.isAssignableFrom(clazz);
+        public boolean canConvert(Class clazz) {
+            return Position.class == clazz;
         }
 
         public void marshal(Object value, HierarchicalStreamWriter writer, MarshallingContext context) {
-            Position position = (Position) value;
-            writer.startNode("Position");
+            Position position = (Position)value;
+            writer.startNode("PositionBorder");
 
             writer.startNode("Title");
             writer.setValue(position.getTitle());
@@ -85,20 +85,24 @@ public final class XStreamExample {
 
         public Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context) {
             Position position = new Position();
-            reader.moveDown(); // move down to <Title> tag
+            // move it to <PositionBorder> tag.
+            reader.moveDown();
+            // now move it to <Title> tag.
+            reader.moveDown();
             String title = reader.getValue();
             position.setTitle(title);
-            reader.moveUp(); // move back to <Position>
+            reader.moveUp(); // moves back to <PositionBorder>
 
-            reader.moveDown(); // move down to <StartDate> tag
+            reader.moveDown(); // should move down to <StartDate> tag
             String startDate = reader.getValue();
             position.setStartDate(startDate);
-            reader.moveUp(); // move back to <Position>
+            reader.moveUp(); // move back to <PositionBorder>
 
-            reader.moveDown(); // move down to <EndDate> tag
+            reader.moveDown(); // should move down to <EndDate> tag
             String endDate = reader.getValue();
             position.setEndDate(endDate);
-            reader.moveUp(); // move back to <Position>
+            reader.moveUp(); // move back to <PositionBorder>
+
 
             return position;
         }

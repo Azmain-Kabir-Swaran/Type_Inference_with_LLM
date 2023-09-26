@@ -1,8 +1,0 @@
-{
-    "attempt": 5,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-fix/xstream_class_34.java",
-    "java_code": "No valid code block found!",
-    "stdout": "",
-    "stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-fix/xstream_class_34.java:1: error: class, interface, or enum expected\nNo valid code block found!\n^\n1 error\n",
-    "return_code": 1
-}

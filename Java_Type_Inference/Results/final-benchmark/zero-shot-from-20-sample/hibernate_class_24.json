@@ -1,0 +1,15 @@
+{
+    "filename": "hibernate_class_24",
+    "expected_output": [
+        "import java.lang.reflect.InvocationHandler;",
+        "import java.lang.reflect.Method;",
+        "import org.hibernate.SessionFactory;",
+        "import org.hibernate.cfg.Configuration;"
+    ],
+    "predicted_output": [
+        "import org.hibernate.cfg.Configuration;",
+        "import org.hibernate.SessionFactory;",
+        "import java.lang.reflect.Method;",
+        "import java.lang.reflect.InvocationHandler;"
+    ]
+}

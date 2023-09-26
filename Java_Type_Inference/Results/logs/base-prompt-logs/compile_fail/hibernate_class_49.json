@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/hibernate_class_49.java",
+    "java_code": "import java.io.Serializable;\nimport javax.persistence.Entity;\nimport javax.persistence.Id;\nimport javax.persistence.Version;\nimport org.hibernate.annotations.NaturalId;\nimport java.io.Serializable;\nimport javax.persistence.Entity;\nimport javax.persistence.Id;\nimport javax.persistence.Version;\nimport org.hibernate.annotations.NaturalId;\n\n@Entity\npublic class HibernateClass49 implements Serializable {\n    private static final long serialVersionUID = 1L;\n    \n    @Id\n    private String username;\n    private String password;\n    \n    @Version\n    private Integer version;\n\n    public Integer getVersion() {\n        return version;\n    }\n\n    public void setVersion(Integer version) {\n        this.version = version;\n    }\n    \n    @NaturalId\n    public String getUsername() {\n        return username;\n    }\n\n    public void setUsername(String username) {\n        this.username = username;\n    }\n\n    public String getPassword() {\n        return password;\n    }\n\n    public void setPassword(String password) {\n        this.password = password;\n    }\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/code_for_compilation_test/base-prompt/hibernate_class_49.java:13: error: class HibernateClass49 is public, should be declared in a file named HibernateClass49.java\npublic class HibernateClass49 implements Serializable {\n       ^\n1 error\n",
+    "return_code": 1
+}

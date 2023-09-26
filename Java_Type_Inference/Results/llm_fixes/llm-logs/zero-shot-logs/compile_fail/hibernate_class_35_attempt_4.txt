@@ -1,0 +1,203 @@
+"attempt": 4
+
+"file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-fix/hibernate_class_35.java"
+
+"java_code": "
+
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.Query;
+import org.apache.log4j.BasicConfigurator;
+import java.util.Iterator;
+import java.util.List;
+
+public class hibernate_class_35 {
+    public static void main(String[] args) {
+        BasicConfigurator.configure();
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = null;
+        try {
+            transaction = session.beginTransaction();
+            Query query = session.createQuery("from vij");
+            List list = query.list();
+            for (Iterator it = list.iterator(); it.hasNext(); ) {
+            }
+            transaction.commit();
+        } catch (HibernateException e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+    }
+}
+"
+
+"used_prompt": "
+
+import org.hibernate.HibernateException;
+import java.util.Iterator;
+import java.util.List;
+import org.apache.log4j.BasicConfigurator;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+public class hibernate_class_35 {    
+    public static void main(String[] args) {
+        BasicConfigurator.configure();
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = null;
+        try {
+            transaction = session.beginTransaction();
+            Query query=session.createQuery("from vij");
+            List list=query.list();
+            for (Iterator it=list.iterator();it.hasNext();)
+            {
+            }
+            transaction.commit();
+        } catch (HibernateException e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+    }
+}
+
+You gave the above imports fix in your attempt 1. But compiler gave this error:
+
+hibernate_class_35.java:12: error: cannot find symbol
+        Session session = HibernateUtil.getSessionFactory().openSession();
+                          ^
+  symbol:   variable HibernateUtil
+  location: class hibernate_class_35
+1 error
+
+
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.query.Query;
+import org.apache.log4j.BasicConfigurator;
+
+import java.util.Iterator;
+import java.util.List;
+
+public class hibernate_class_35 {
+    public static void main(String[] args) {
+        BasicConfigurator.configure();
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = null;
+        try {
+            transaction = session.beginTransaction();
+            Query query = session.createQuery("from vij");
+            List list = query.list();
+            for (Iterator it = list.iterator(); it.hasNext(); ) {
+            }
+            transaction.commit();
+        } catch (HibernateException e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+    }
+}
+
+You gave the above imports fix in your attempt 2. But compiler gave this error:
+
+hibernate_class_35.java:4: error: package org.hibernate.query does not exist
+import org.hibernate.query.Query;
+                          ^
+hibernate_class_35.java:13: error: cannot find symbol
+        Session session = HibernateUtil.getSessionFactory().openSession();
+                          ^
+  symbol:   variable HibernateUtil
+  location: class hibernate_class_35
+hibernate_class_35.java:17: error: cannot find symbol
+            Query query = session.createQuery("from vij");
+            ^
+  symbol:   class Query
+  location: class hibernate_class_35
+3 errors
+
+
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.query.Query;
+import org.apache.log4j.BasicConfigurator;
+
+import java.util.Iterator;
+import java.util.List;
+
+public class hibernate_class_35 {
+    public static void main(String[] args) {
+        BasicConfigurator.configure();
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = null;
+        try {
+            transaction = session.beginTransaction();
+            Query<hibernate_class_35> query = session.createQuery("from vij", hibernate_class_35.class);
+            List<hibernate_class_35> list = query.list();
+            for (Iterator<hibernate_class_35> it = list.iterator(); it.hasNext(); ) {
+            }
+            transaction.commit();
+        } catch (HibernateException e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+    }
+}
+
+You gave the above imports fix in your attempt 3. But compiler gave this error:
+
+hibernate_class_35.java:4: error: package org.hibernate.query does not exist
+import org.hibernate.query.Query;
+                          ^
+hibernate_class_35.java:13: error: cannot find symbol
+        Session session = HibernateUtil.getSessionFactory().openSession();
+                          ^
+  symbol:   variable HibernateUtil
+  location: class hibernate_class_35
+hibernate_class_35.java:17: error: cannot find symbol
+            Query<hibernate_class_35> query = session.createQuery("from vij", hibernate_class_35.class);
+            ^
+  symbol:   class Query
+  location: class hibernate_class_35
+hibernate_class_35.java:17: error: method createQuery in interface Session cannot be applied to given types;
+            Query<hibernate_class_35> query = session.createQuery("from vij", hibernate_class_35.class);
+                                                     ^
+  required: String
+  found: String,Class<hibernate_class_35>
+  reason: actual and formal argument lists differ in length
+4 errors
+
+
+Now fix the error only by fixing the import statements by not using wildcard imports and must not modify code body which means do not change anything inside the class. So, it can be successfully compiled and reply with full code.
+"
+
+"stdout": ""
+
+"stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-fix/hibernate_class_35.java:12: error: cannot find symbol
+        Session session = HibernateUtil.getSessionFactory().openSession();
+                          ^
+  symbol:   variable HibernateUtil
+  location: class hibernate_class_35
+1 error
+"
+
+"return_code": 1
+

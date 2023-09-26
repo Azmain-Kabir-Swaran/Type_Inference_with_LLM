@@ -1,8 +1,0 @@
-{
-    "attempt": 2,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime44.java",
-    "java_code": "import org.joda.time.Period;\nimport org.joda.time.format.PeriodFormatter;\nimport org.joda.time.format.PeriodFormatterBuilder;\n\npublic class JodaTime44 {\n\n    public static void main(String[] args) {\n        PeriodFormatter daysHoursMinutes = new PeriodFormatterBuilder()\n                .appendDays()\n                .appendSuffix(\" day\", \" days\")\n                .appendSeparator(\" and \")\n                .appendMinutes()\n                .appendSuffix(\" minute\", \" minutes\")\n                .appendSeparator(\" and \")\n                .appendSeconds()\n                .appendSuffix(\" second\", \" seconds\")\n                .toFormatter();\n\n        Period period = Period.ZERO.plusDays(72).plusHours(24).plusMinutes(12);\n\n        System.out.println(daysHoursMinutes.print(period));\n        System.out.println(daysHoursMinutes.print(period.normalizedStandard()));\n    }\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

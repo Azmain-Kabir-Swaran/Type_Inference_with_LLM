@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/hibernate_class_18.java",
+    "java_code": "import org.hibernate.SessionFactory;\nimport org.hibernate.cfg.Configuration;\nimport org.hibernate.SessionFactory;\nimport org.hibernate.cfg.Configuration;\n\npublic class hibernate_class_18 {\n\n    private static final SessionFactory sessionFactory = buildSessionFactory();\n\n    private static SessionFactory buildSessionFactory() {\n        try {\n            // Create the SessionFactory from hibernate.cfg.xml\n            Configuration configuration = new Configuration().configure();\n\n            return configuration.buildSessionFactory();\n        }\n        catch (Throwable ex) {\n            // Make sure you log the exception, as it might be swallowed\n            System.err.println(\"Initial SessionFactory creation failed.\" + ex);\n            throw new ExceptionInInitializerError(ex);\n        }\n    }\n\n    public static SessionFactory getSessionFactory() {\n        return sessionFactory;\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

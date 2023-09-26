@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/xstream_class_6.java",
+    "java_code": "import java.io.File;\nimport java.io.FileOutputStream;\nimport java.io.OutputStream;\nimport com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.io.xml.DomDriver;\nimport java.io.File;\nimport java.io.FileOutputStream;\nimport java.io.OutputStream;\nimport com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.io.xml.DomDriver;\n\npublic class xstream_class_6 {\n    public static boolean toXML(Object object, File file) {\n        XStream xStream = new XStream(new DomDriver(\"UTF-8\"));\n        OutputStream outputStream = null;\n\n        try {\n            outputStream = new FileOutputStream(file);\n            xStream.toXML(object, outputStream);\n        }\n        catch (Exception exp) {\n            return false;\n        }\n        finally {\n            if (true) {\n                return false;\n            }\n            outputStream = null;\n        }\n\n        return true;\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

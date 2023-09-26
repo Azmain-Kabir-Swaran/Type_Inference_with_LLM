@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-one-shot/Android12.java",
-    "java_code": "package androidExamples;\nimport android.widget.TextView;\nimport android.os.Bundle;\nimport android.widget.LinearLayout;\nimport android.graphics.Color;\nimport android.app.Activity;\nimport android.view.ViewGroup;\n//ID = 549451\n\npublic class Android12 extends Activity {\n\t /** Called when the activity is first created. */\n\t @Override\n\t public void onCreate(Bundle savedInstanceState) {\n\t  super.onCreate(savedInstanceState);\n\t  LinearLayout l = new LinearLayout(this);\n\t  LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(\n\t    LinearLayout.LayoutParams.FILL_PARENT,\n\t    LinearLayout.LayoutParams.WRAP_CONTENT);\n\t  LinearLayout.LayoutParams mlp = new LinearLayout.LayoutParams(\n\t    new ViewGroup.MarginLayoutParams(\n\t      LinearLayout.LayoutParams.WRAP_CONTENT,\n\t      LinearLayout.LayoutParams.WRAP_CONTENT));\n\t  mlp.setMargins(0, 0, 2, 0);\n\n\t  for (int i = 0; i < 10; i++) {\n\t   TextView t = new TextView(this);\n\t   t.setText(\"Hello\");\n\t   t.setBackgroundColor(Color.RED);\n\t   t.setSingleLine(true);\n\t   l.addView(t, mlp);\n\t  }\n\n\t  setContentView(l, lp);\n\t }\n\t}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

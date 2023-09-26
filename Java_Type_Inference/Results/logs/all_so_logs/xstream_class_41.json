@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/xstream_class_41.java",
-    "java_code": "import java.util.List;\n\nimport com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.io.xml.StaxDriver;\n\npublic class xstream_class_41 {\n\tpublic static void main(String[] args) {\n\t\tXStream xstream = new XStream(new StaxDriver());\n\t\txstream.alias(\"data\", DetList.class);\n\t\txstream.alias(\"i\", Details.class);\n\t\tString s = new String(\"<data>\\n\" + \"\\t<i Name='asia' type='continent' id='11'></i>\\n\"\n\t\t\t\t+ \"\\t<i Name='africa' type='continent' id='12'></i>\\n\"\n\t\t\t\t+ \"\\t<i Name='japan' type='country' id='13'></i>\\n\" + \"</data>\");\n\t\tSystem.out.println(s);\n\t\tDetList data = (DetList) xstream.fromXML(s);\n\t}\n\n\tpublic static class DetList {\n\t\tprivate List<Details> detlist;\n\n\t\tpublic List<Details> getDetlist() {\n\t\t\treturn detlist;\n\t\t}\n\n\t\tpublic void setDetlist(List<Details> detlist) {\n\t\t\tthis.detlist = detlist;\n\t\t}\n\t}\n\n\tpublic static class Details {\n\n\t\tprivate String Name;\n\t\tprivate String type;\n\t\tprivate String id;\n\n\t\tpublic String getName() {\n\t\t\treturn Name;\n\t\t}\n\n\t\tpublic void setName(String name) {\n\t\t\tName = name;\n\t\t}\n\n\t\tpublic String getType() {\n\t\t\treturn type;\n\t\t}\n\n\t\tpublic void setType(String type) {\n\t\t\tthis.type = type;\n\t\t}\n\n\t\tpublic String getId() {\n\t\t\treturn id;\n\t\t}\n\n\t\tpublic void setId(String id) {\n\t\t\tthis.id = id;\n\t\t}\n\t}\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

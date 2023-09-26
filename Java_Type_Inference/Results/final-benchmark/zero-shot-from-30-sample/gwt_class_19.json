@@ -1,0 +1,14 @@
+{
+    "filename": "gwt_class_19",
+    "expected_output": [
+        "import com.extjs.gxt.ui.client.widget.VerticalPanel;",
+        "import com.extjs.gxt.ui.client.widget.button.Button;",
+        "import com.google.gwt.user.client.ui.RootPanel;"
+    ],
+    "predicted_output": [
+        "import com.google.gwt.user.client.ui.Label;",
+        "import com.google.gwt.user.client.ui.RootPanel;",
+        "import com.google.gwt.user.client.ui.Button;",
+        "import com.google.gwt.user.client.ui.VerticalPanel;"
+    ]
+}

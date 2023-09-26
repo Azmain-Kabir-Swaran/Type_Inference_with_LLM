@@ -1,12 +1,10 @@
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-
 import org.hibernate.SessionFactory;
-
-import javax.naming.InitialContext;
-
 import org.hibernate.criterion.Example;
 
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 import java.util.List;
 
 public class hibernate_class_42 {
@@ -19,7 +17,7 @@ public class hibernate_class_42 {
         try {
             return (SessionFactory) new InitialContext()
                     .lookup("java:/hibernate/SessionFactory");
-        } catch (Exception e) {
+        } catch (NamingException e) {
             log.error("Could not locate SessionFactory in JNDI", e);
             throw new IllegalStateException(
                     "Could not locate SessionFactory in JNDI");
@@ -70,41 +68,11 @@ public class hibernate_class_42 {
         }
     }
 
-//    public Empleados merge(Empleados detachedInstance) {
-//        log.debug("merging Empleados instance");
-//        try {
-//            Empleados result = (Empleados) sessionFactory.getCurrentSession()
-//                    .merge(detachedInstance);
-//            log.debug("merge successful");
-//            return result;
-//        } catch (RuntimeException re) {
-//            log.error("merge failed", re);
-//            throw re;
-//        }
-//    }
-//
-//    public Empleados findById(java.lang.Integer id) {
-//        log.debug("getting Empleados instance with id: " + id);
-//        try {
-//            Empleados instance = (Empleados) sessionFactory.getCurrentSession()
-//                    .get("com.hibernate.Empleados", id);
-//            if (instance == null) {
-//                log.debug("get successful, no instance found");
-//            } else {
-//                log.debug("get successful, instance found");
-//            }
-//            return instance;
-//        } catch (RuntimeException re) {
-//            log.error("get failed", re);
-//            throw re;
-//        }
-//    }
-
-    public List<?> findByExample() {
+    public List findByExample() {
         log.debug("finding Empleados instance by example");
         try {
             Object instance = null;
-            List<?> results = sessionFactory.getCurrentSession().createCriteria(
+            List results = sessionFactory.getCurrentSession().createCriteria(
                     "com.hibernate.Empleados").add(Example.create(instance))
                     .list();
             log.debug("find by example successful, result size: "

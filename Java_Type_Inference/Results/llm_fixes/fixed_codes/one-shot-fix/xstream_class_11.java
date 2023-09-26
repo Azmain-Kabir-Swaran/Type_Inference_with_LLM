@@ -1,10 +1,12 @@
 package xstream;
-import com.thoughtworks.xstream.converters.collections.CollectionConverter;
-import java.util.List;
+
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-import java.util.ArrayList;
+import com.thoughtworks.xstream.converters.collections.CollectionConverter;
 import com.thoughtworks.xstream.mapper.ClassAliasingMapper;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class xstream_class_11 {
     public List<String> tags = new ArrayList<String>();
@@ -24,9 +26,9 @@ public class xstream_class_11 {
         ClassAliasingMapper mapper = new ClassAliasingMapper(xstream.getMapper());
         mapper.addClassAlias("tag", String.class);
         xstream.registerLocalConverter(
-            xstream_class_11.class,
-            "tags",
-            new CollectionConverter(mapper)
+                xstream_class_11.class,
+                "tags",
+                new CollectionConverter(mapper)
         );
 
         System.out.println(xstream.toXML(test));

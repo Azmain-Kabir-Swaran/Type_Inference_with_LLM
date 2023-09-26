@@ -1,0 +1,19 @@
+{
+    "filename": "Android08",
+    "expected_output": [
+        "import java.io.IOException;",
+        "import java.net.Inet4Address;",
+        "import java.net.InetAddress;",
+        "import java.net.Socket;",
+        "import java.net.UnknownHostException;",
+        "import android.util.Log;"
+    ],
+    "predicted_output": [
+        "import java.net.InetAddress;",
+        "import android.util.Log;",
+        "import java.net.Inet4Address;",
+        "import java.io.IOException;",
+        "import java.net.Socket;",
+        "import java.net.UnknownHostException;"
+    ]
+}

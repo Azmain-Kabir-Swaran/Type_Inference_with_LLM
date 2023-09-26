@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android06.java",
+    "java_code": "import android.view.Gravity;\nimport android.view.ViewGroup;\nimport android.widget.LinearLayout;\n\npublic class Android06 {\n\n    public static void main(String[] args) {\n\n        // TODO Auto-generated method stub\n\n        LinearLayout zoomView = null;\n\n        zoomView.setLayoutParams(new ViewGroup.LayoutParams\n                (ViewGroup.LayoutParams.WRAP_CONTENT,\n                        ViewGroup.LayoutParams.WRAP_CONTENT));\n\n        zoomView.setGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL);\n    }\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

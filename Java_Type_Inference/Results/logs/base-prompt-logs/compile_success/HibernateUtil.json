@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/HibernateUtil.java",
+    "java_code": "import org.hibernate.SessionFactory;\nimport org.hibernate.cfg.Configuration;\nimport org.hibernate.SessionFactory;\nimport org.hibernate.cfg.Configuration;\n\npublic class HibernateUtil {\n    private static final SessionFactory sessionFactory;\n\n    static {\n        try {\n            sessionFactory = new Configuration().configure().buildSessionFactory();\n        } catch (Throwable e) {\n            System.err.println(\"Initial sessionFactory creation failed.  \" + e);\n            throw new ExceptionInInitializerError(e);\n        }\n    }\n\n    public static SessionFactory getSessionFactory() {\n        return sessionFactory;\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

@@ -1,12 +1,13 @@
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.CascadeType;
 import javax.persistence.OneToOne;
+
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
+import javax.persistence.CascadeType;
 
-public class hibernate_class_25 {
+public class hibernate_class_25{
     @Entity
     public class A {
 
@@ -27,7 +28,7 @@ public class hibernate_class_25 {
             this.id = id;
         }
 
-        @OneToOne(cascade = CascadeType.ALL)
+        @OneToOne (cascade=CascadeType.ALL)
         @Fetch(FetchMode.JOIN)
         public B getB() {
             return b;
@@ -37,7 +38,6 @@ public class hibernate_class_25 {
             this.b = b;
         }
     }
-
     @Entity
     public class B {
 
@@ -55,6 +55,6 @@ public class hibernate_class_25 {
 
         public void setId(Integer id) {
             this.id = id;
-        }
+        }   
     }
 }

@@ -1,13 +1,14 @@
 package jodatime;
 
+import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 import org.joda.time.Period;
 import org.joda.time.format.PeriodFormatter;
 import org.joda.time.format.PeriodFormatterBuilder;
-import org.junit.Test;
 
 public class JodaTime13 {
+    // ID = 4585883
     public static void main(String[] args) {
         // TODO Auto-generated method stub
 
@@ -44,9 +45,15 @@ public class JodaTime13 {
         public OurDateTimeFormatter() {
         }
 
-        private final static PeriodFormatter dateFormat = new PeriodFormatterBuilder().appendDays()
-                .appendSuffix(" day", " days").appendSeparator(" ").appendHours().appendSeparator(":")
-                .appendMinutes().minimumPrintedDigits(2).appendSeparator(":").appendSeconds().minimumPrintedDigits(2)
+        private final static PeriodFormatter dateFormat = new PeriodFormatterBuilder()
+                .appendDays()
+                .appendSuffix(" day", " days")
+                .appendSeparator(" ")
+                .appendHours()
+                .appendSeparator(":")
+                .appendMinutes().minimumPrintedDigits(2)
+                .appendSeparator(":")
+                .appendSeconds().minimumPrintedDigits(2)
                 .toFormatter();
 
         public static String format(long millis) {

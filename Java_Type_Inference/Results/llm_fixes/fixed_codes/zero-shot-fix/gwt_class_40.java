@@ -1,15 +1,14 @@
 package gwt;
+
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
-// ID = 2868845
-// You need to import the correct LayoutContainer class from the correct package
-import com.google.gwt.user.client.ui.Widget;
-import com.google.gwt.user.client.ui.FlowPanel;
+import com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer;
+import com.sencha.gxt.widget.core.client.container.SimpleContainer;
 
 public class gwt_class_40 {
     private HorizontalPanel getSomeGWT() {
         HorizontalPanel pointsLogoPanel = new HorizontalPanel();
-        for (int i = 0; i < 350; i++) {
+        for (int i=0; i<350; i++) {
             HorizontalPanel innerContainer = new HorizontalPanel();
             innerContainer.add(new Label("some GWT text"));
             pointsLogoPanel.add(innerContainer);
@@ -17,10 +16,11 @@ public class gwt_class_40 {
         return pointsLogoPanel;
     }
 
-    private Widget getSomeGXT() {
-        FlowPanel pointsLogoPanel = new FlowPanel();
-        for (int i = 0; i < 350; i++) {
-            FlowPanel innerContainer = new FlowPanel();
+    private SimpleContainer getSomeGXT() {
+        SimpleContainer pointsLogoPanel = new VerticalLayoutContainer();
+        pointsLogoPanel.setLayoutOnChange(true);
+        for (int i=0; i<350; i++) {
+            SimpleContainer innerContainer = new SimpleContainer();
             pointsLogoPanel.add(innerContainer);
         }
         return pointsLogoPanel;

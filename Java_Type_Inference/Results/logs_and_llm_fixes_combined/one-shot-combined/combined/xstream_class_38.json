@@ -1,7 +1,0 @@
-{
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/snippets_for_test/all-one-shot/xstream_class_38.java",
-    "java_code": "package xstream;\nimport com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.annotations.XStreamAlias;\nimport java.util.List;\nimport java.util.ArrayList;\n//ID=33088013\n\n\npublic class xstream_class_38 {\n\tXStream xstream = new XStream(); \n\t@XStreamAlias(\"bookdetails\")\n\tpublic class BookDetails\n\t{\n\t    private int bookId;\n\t    private String bookName;\n\t    private int amount;\n\t}\n\n\t@XStreamAlias(\"Books\")\n\tpublic class Books\n\t{\n\t    private List<BookDetails> bookDetails = new ArrayList<BookDetails>();\n\t}\n\n\tpublic BookDetails convertXml(String xml)\n\t{\n\t    xstream.processAnnotations(Books.class);\n\t    xstream.processAnnotations(BookDetails.class);\n\t    xstream.addImplicitCollection(Books.class, \"bookDetails\");\n\t    Books b = (Books) xstream.fromXML(xml);\n\t    // and now you can return your BookDetails element (in case you want only first one)\n\t    return b.bookDetails.get(0);\n\t}\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

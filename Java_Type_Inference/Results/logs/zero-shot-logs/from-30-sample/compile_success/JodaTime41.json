@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/from-30-sample/JodaTime41.java",
+    "java_code": "package jodatime;\nimport org.joda.time.format.DateTimeFormatter;\nimport org.joda.time.format.DateTimeFormat;\nimport org.joda.time.DateTime;\n//id=41452661\n\npublic class JodaTime41 {\n\n\tpublic static void main(String[] args) {\n\t\tDateTime dt4 = new DateTime(\"2017-01-01T10:52:07.656-10:00\");\n\t    System.out.println(\"Given Date:\"+ dt4);\n\t    DateTimeFormatter fmt = DateTimeFormat.forPattern(\"MM/DD/YYYY\");\n\t    System.out.println(\"Given Date After Date format: \"+fmt.print(dt4));\n\n\t    DateTime previousDay = dt4.minusDays(1);\n\t    System.out.println(\"Previous Day: \"+ previousDay);\n\t    System.out.println(\"Previous Date After Date format: \"+fmt.print(previousDay));\n\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

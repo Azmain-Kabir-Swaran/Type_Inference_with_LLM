@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/zero-shot-temp-0.5/JodaTime27.java",
+    "java_code": "package jodatime;\nimport java.util.ArrayList;\nimport org.joda.time.DateTime;\n//ID = 9202872\n\npublic class JodaTime27 {\n\n\tpublic static void main(String[] args) {\n\t\t// TODO Auto-generated method stub\n\t\tArrayList<DateTime> monthStarts = new ArrayList<DateTime>();\n\t\tint firstYear = 0;\n\t\tint lastYear = 0;\n\t\tfor (int y = firstYear; y <= lastYear; y++) {\n\t\t    for (int m = 1; m <= 12; m++) {\n\t\t      monthStarts.add(new DateTime(y+\"-\"+m+\"-01\"));\n\t\t    }\n\t\t  }\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

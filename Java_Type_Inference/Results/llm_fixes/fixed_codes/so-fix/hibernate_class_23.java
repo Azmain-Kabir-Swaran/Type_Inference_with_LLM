@@ -1,38 +1,31 @@
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.HibernateException;
 import org.hibernate.cfg.Configuration;
 
-public class HibernateClass23 {
+public class hibernate_class_23 {
     private static final ThreadLocal<Session> threadLocal = new ThreadLocal<Session>();
     private static Configuration configuration = new Configuration();
-    private static SessionFactory sessionFactory;
-
+    private static org.hibernate.SessionFactory sessionFactory;
+    
     static {
         try {
-            String configFile = ""; // provide the filepath of your hibernate configuration file
+            String configFile = "";
             configuration.configure(configFile);
             sessionFactory = configuration.buildSessionFactory();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        } catch (Exception e) {}
     }
-
-    private HibernateClass23() {}
-
+    
+    private hibernate_class_23() {}
+    
     public static Session getSession() throws HibernateException {
-        Session session = threadLocal.get();
+        Session session = (Session) threadLocal.get();
         if (session == null || !session.isOpen()) {
             if (sessionFactory == null) {
-                // rebuildSessionFactory();
+                //    rebuildSessionFactory();//This method basically does what the static init block does
             }
-            session = (sessionFactory != null) ? sessionFactory.openSession() : null;
+            session = (sessionFactory != null) ? sessionFactory.openSession(): null;
             threadLocal.set(session);
         }
         return session;
-    }
-
-    public static void main(String[] args) {
-        // Code to test the HibernateClass23
     }
 }

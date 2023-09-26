@@ -2,40 +2,39 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class HibernateClass33 {
+public class hibernate_class_33 {
 
-    private static HibernateClass33 instance = null;
-    private static SessionFactory sessionFactory;
+    private static hibernate_class_33 instance = null;
 
-    public static HibernateClass33 getInstance() {
-        if (instance == null) {
-            instance = new HibernateClass33().init();
+    private SessionFactory sessionFactory;
+
+    public static hibernate_class_33 getInstance() {
+        if (hibernate_class_33.instance == null) {
+            hibernate_class_33.instance = new hibernate_class_33().init();
         }
 
-        return instance;
+        return hibernate_class_33.instance;
     }
 
-    public SessionFactory getSessionFactory() {
-        return sessionFactory;
+    public org.hibernate.SessionFactory getSessionFactory() {
+        return this.sessionFactory;
     }
 
-    public Session getSession() {
-        return sessionFactory.openSession();
+    public org.hibernate.Session getSession() {
+        return this.sessionFactory.openSession();
     }
 
-    private HibernateClass33 init() {
-        Configuration cfg = new Configuration();
+    private hibernate_class_33 init() {
+        org.hibernate.cfg.Configuration cfg = new org.hibernate.cfg.Configuration();
 
-        cfg.addAnnotatedClass(UserClass.class);
-        cfg.addAnnotatedClass(User.class);
+//        cfg.addClass(domain.UserClass.class);
+//        cfg.addClass(domain.User.class);
 
         cfg.setProperties(System.getProperties());
         cfg.configure();
-        sessionFactory = cfg.buildSessionFactory();
-        return this;
-    }
+        org.hibernate.SessionFactory sessions = cfg.buildSessionFactory();
 
-    public static void main(String[] args) {
-        HibernateClass33.getInstance();
+        sessionFactory = cfg.configure().buildSessionFactory();
+        return this;
     }
 }

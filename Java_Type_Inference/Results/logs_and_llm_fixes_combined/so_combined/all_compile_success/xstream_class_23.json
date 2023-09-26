@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/xstream_class_23.java",
+    "java_code": "import com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.annotations.XStreamAlias;\nimport com.thoughtworks.xstream.converters.javabean.JavaBeanConverter;\nimport com.thoughtworks.xstream.io.xml.XppDriver;\n\npublic class xstream_class_23 {\n    @XStreamAlias(\"test\")\n    public class TestObject\n    {\n        private String foo;\n\n        public String getFoo()\n        {\n            //return foo; -- Adjusted for EDIT#2\n            return foo.toLowerCase();\n        }\n\n        public void setFoo(String foo)\n        {\n            this.foo = foo;\n        }\n    }\n\n    public void test() throws Exception\n    {\n        XStream x = new XStream(new XppDriver());\n        x.autodetectAnnotations(true);\n        x.processAnnotations(TestObject.class);\n\n        x.registerConverter(new JavaBeanConverter(x.getMapper()));\n\n        TestObject o = new TestObject();\n        //o.setFoo(\"bar\"); -- Adjusted for EDIT#2\n        o.setFoo(\"BAR\");\n\n        String xml = x.toXML(o);\n\n        System.out.println(xml);\n\n        /*\n          Expecting...\n            <test>\n              <foo>bar</foo>\n            </test>\n\n          But instead getting...\n            <test>\n              <foo/>\n            </test>         \n        */\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

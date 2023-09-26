@@ -1,22 +1,21 @@
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
-import javax.faces.context.FacesContext;
 
 public class hibernate_class_12 {
-    public static void main(String[] args) {
+    public void main() {
         Session session = null;
         try {
-            SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+            org.hibernate.cfg.Configuration configuration = new org.hibernate.cfg.Configuration().configure();
+            SessionFactory sessionFactory = configuration.buildSessionFactory();
             session = sessionFactory.openSession();
 
-            String id = (String) FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("storeId");
+            String id = (String) javax.faces.context.FacesContext.getCurrentInstance()
+                    .getExternalContext().getRequestParameterMap().get("storeId");
 
             Transaction t = session.beginTransaction();
             t.commit();
         } catch (Exception e) {
-            e.printStackTrace();
         } finally {
             session.close();
         }

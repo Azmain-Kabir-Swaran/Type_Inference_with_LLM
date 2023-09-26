@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/from-20-sample/JodaTime45.java",
+    "java_code": "package jodatime;\nimport java.util.Set;\nimport org.joda.time.DateTimeZone;\nimport java.util.Date;\nimport java.util.HashSet;\nimport org.joda.time.tz.Provider;\nimport java.util.TimeZone;\n//id = 5059663\n\n\npublic class JodaTime45 {\n\n\tpublic class FastDateTimeZoneProvider implements Provider {\n\t    public final Set<String> AVAILABLE_IDS = new HashSet<String>();\n\n\n\t    \n\n\t    public DateTimeZone getZone(String id) {\n\t        if (id == null) {\n\t            return DateTimeZone.UTC;\n\t        }\n\n\t        TimeZone tz = TimeZone.getTimeZone(id);\n\t        if (tz == null) {\n\t            return DateTimeZone.UTC;\n\t        }\n\n\t        int rawOffset = tz.getRawOffset();\n\n\t            //sub-optimal. could be improved to only create a new Date every few minutes\n\t        if (tz.inDaylightTime(new Date())) {\n\t            rawOffset += tz.getDSTSavings();\n\t        }\n\n\t        return DateTimeZone.forOffsetMillis(rawOffset);\n\t    }\n\n\t    public Set getAvailableIDs() {\n\t        return AVAILABLE_IDS;\n\t    }\n\t}\n}",
+    "stdout": "",
+    "stderr": "Note: /home/azmain/code_for_compilation_test/from-20-sample/JodaTime45.java uses unchecked or unsafe operations.\nNote: Recompile with -Xlint:unchecked for details.\n",
+    "return_code": 0
+}

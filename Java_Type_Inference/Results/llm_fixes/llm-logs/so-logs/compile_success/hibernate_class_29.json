@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/hibernate_class_29.java",
-    "java_code": "import org.hibernate.Session;\nimport org.hibernate.SessionFactory;\nimport org.hibernate.Criteria;\nimport org.hibernate.criterion.Projections;\n\nimport java.util.List;\n\npublic abstract class hibernate_class_29<T> {\n\n  private Class<T> domainClass;\n\n  private SessionFactory sf;\n\n  public hibernate_class_29(Class<T> domainClass) {\n    this.domainClass = domainClass;\n  }\n\n  public SessionFactory getSessionFactory() {\n    return sf;\n  }\n\n  public void setSessionFactory(SessionFactory sf) {\n    this.sf = sf;\n  }\n\n  public void delete(T object) {\n    getSession().delete(object);\n  }\n\n  @SuppressWarnings(\"unchecked\")\n  public T load(long id) {\n    return (T) getSession().get(domainClass, id);\n  }\n\n  public void save(T object) {\n    getSession().saveOrUpdate(object);\n  }\n\n  @SuppressWarnings(\"unchecked\")\n  public List<T> findAll() {\n    Criteria criteria = getSession().createCriteria(domainClass);\n    List<T> r = (List<T>) criteria.list();\n    return r;\n  }\n\n  public int countAll() {\n    Criteria criteria = getSession().createCriteria(domainClass);\n    criteria.setProjection(Projections.rowCount());\n    return (Integer) criteria.uniqueResult();\n  }\n\n  public Session getSession() {\n    // presumes a current session, which we have through the\n    // OpenSessionInViewFilter; doesn't work without that\n    return sf.getCurrentSession();\n  }\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

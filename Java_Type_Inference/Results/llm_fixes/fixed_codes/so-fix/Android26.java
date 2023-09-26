@@ -30,16 +30,17 @@ class GameView extends View implements OnTouchListener {
         super(context);
     }
 
+    @Override
     public boolean onKey(View v, int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-            // do stuff
+            //do stuff
         }
         invalidate();
         return true;
     }
 
     @Override
-    public boolean onTouch(View v, MotionEvent event) {
+    public boolean onTouch(View arg0, MotionEvent arg1) {
         return false;
     }
 }

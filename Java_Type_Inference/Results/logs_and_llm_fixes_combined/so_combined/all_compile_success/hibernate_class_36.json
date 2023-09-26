@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/hibernate_class_36.java",
+    "java_code": "import org.hibernate.Session;\nimport org.hibernate.SessionFactory;\nimport org.hibernate.Transaction;\nimport org.hibernate.cfg.Configuration;\n\npublic class hibernate_class_36 {\n    public static void main(String[] args) {\n        Session session = null;\n        SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();\n        Transaction tx = null;\n        try {\n            session = sessionFactory.openSession();\n            tx = session.beginTransaction();\n            tx.commit();\n        } catch (Exception e) {\n            e.printStackTrace();\n        } finally {\n            session.close();\n        }\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

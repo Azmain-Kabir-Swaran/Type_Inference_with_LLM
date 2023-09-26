@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/JodaTime25.java",
+    "java_code": "import org.joda.time.LocalDateTime;\nimport org.joda.time.Days;\nimport org.joda.time.DateMidnight;\nimport org.joda.time.LocalDateTime;\nimport org.joda.time.Days;\nimport org.joda.time.DateMidnight;\n\npublic class JodaTime25 {\n    public static int getDaysBetweenTwoDates(final LocalDateTime oldDate,\n            final LocalDateTime newDate) {\n        System.out.println(\"--Calculate days between: \" + oldDate.toString()\n                + \"->\" + newDate);\n        Days days = Days.daysBetween(new DateMidnight(oldDate.toDateTime()),\n                new DateMidnight(newDate.toDateTime()));\n        System.out.println(\"----DIFF: \" + days.size());\n        return days.size();\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

@@ -1,0 +1,17 @@
+{
+    "filename": "gwt_class_49",
+    "expected_output": [
+        "import java.util.ArrayList;",
+        "import com.google.gwt.dom.client.BodyElement;",
+        "import com.google.gwt.dom.client.Document;",
+        "import com.google.gwt.user.client.DOM;",
+        "import com.google.gwt.user.client.Element;"
+    ],
+    "predicted_output": [
+        "import java.util.ArrayList;",
+        "import com.google.gwt.dom.client.Document;",
+        "import com.google.gwt.dom.client.BodyElement;",
+        "import com.google.gwt.dom.client.DOM;",
+        "import com.google.gwt.dom.client.Element;"
+    ]
+}

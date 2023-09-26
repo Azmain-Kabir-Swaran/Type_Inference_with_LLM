@@ -1,0 +1,163 @@
+"attempt": 1
+
+"file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/hibernate_class_50.java"
+
+"java_code": "
+
+import org.hibernate.SessionFactory;
+import org.hibernate.Session;
+import java.util.List;
+
+public class hibernate_class_50 {
+    private SessionFactory sessionFactory;
+
+    public void setSessionFactory(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
+
+    public SessionFactory getSessionFactory() {
+        return sessionFactory;
+    }
+
+
+    @SuppressWarnings("unchecked")
+    public List<Name> getAll() {
+        Session session = this.sessionFactory.getCurrentSession();
+        List<Name> names = (List<Name>)session.createQuery("from Name").list();
+        return names;
+    }
+
+    public void save(Name name){
+        Session session = this.sessionFactory.getCurrentSession();
+        session.saveOrUpdate(name);
+        session.flush();
+    }
+}
+"
+
+"used_prompt": "
+
+See the code below:
+"""
+public class hibernate_class_50 {
+    private SessionFactory sessionFactory;
+
+    public void setSessionFactory(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
+
+    public SessionFactory getSessionFactory() {
+        return sessionFactory;
+    }
+
+
+    @SuppressWarnings("unchecked")
+    public List<Name> getAll() {
+        Session session = this.sessionFactory.getCurrentSession();
+        List<Name> names = (List<Name>)session.createQuery("from Name").list();
+        return names;
+    }
+
+    public void save(Name name){
+        Session session = this.sessionFactory.getCurrentSession();
+        session.saveOrUpdate(name);
+        session.flush();
+    }
+}
+
+"""
+For the above code I got the below error log:
+"""
+hibernate_class_50.java:2: error: cannot find symbol
+    private SessionFactory sessionFactory;
+            ^
+  symbol:   class SessionFactory
+  location: class hibernate_class_50
+hibernate_class_50.java:4: error: cannot find symbol
+    public void setSessionFactory(SessionFactory sessionFactory) {
+                                  ^
+  symbol:   class SessionFactory
+  location: class hibernate_class_50
+hibernate_class_50.java:8: error: cannot find symbol
+    public SessionFactory getSessionFactory() {
+           ^
+  symbol:   class SessionFactory
+  location: class hibernate_class_50
+hibernate_class_50.java:14: error: cannot find symbol
+    public List<Name> getAll() {
+           ^
+  symbol:   class List
+  location: class hibernate_class_50
+hibernate_class_50.java:14: error: cannot find symbol
+    public List<Name> getAll() {
+                ^
+  symbol:   class Name
+  location: class hibernate_class_50
+hibernate_class_50.java:20: error: cannot find symbol
+    public void save(Name name){
+                     ^
+  symbol:   class Name
+  location: class hibernate_class_50
+hibernate_class_50.java:15: error: cannot find symbol
+        Session session = this.sessionFactory.getCurrentSession();
+        ^
+  symbol:   class Session
+  location: class hibernate_class_50
+hibernate_class_50.java:16: error: cannot find symbol
+        List<Name> names = (List<Name>)session.createQuery("from Name").list();
+        ^
+  symbol:   class List
+  location: class hibernate_class_50
+hibernate_class_50.java:16: error: cannot find symbol
+        List<Name> names = (List<Name>)session.createQuery("from Name").list();
+             ^
+  symbol:   class Name
+  location: class hibernate_class_50
+hibernate_class_50.java:16: error: cannot find symbol
+        List<Name> names = (List<Name>)session.createQuery("from Name").list();
+                            ^
+  symbol:   class List
+  location: class hibernate_class_50
+hibernate_class_50.java:16: error: cannot find symbol
+        List<Name> names = (List<Name>)session.createQuery("from Name").list();
+                                 ^
+  symbol:   class Name
+  location: class hibernate_class_50
+hibernate_class_50.java:21: error: cannot find symbol
+        Session session = this.sessionFactory.getCurrentSession();
+        ^
+  symbol:   class Session
+  location: class hibernate_class_50
+12 errors
+
+"""
+Now fix the error only by fixing the import statements by not using wildcard imports and must not modify code body which means do not change anything inside the class. So, it can be successfully compiled and reply with full code.
+"
+
+"stdout": ""
+
+"stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/hibernate_class_50.java:18: error: cannot find symbol
+    public List<Name> getAll() {
+                ^
+  symbol:   class Name
+  location: class hibernate_class_50
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/hibernate_class_50.java:24: error: cannot find symbol
+    public void save(Name name){
+                     ^
+  symbol:   class Name
+  location: class hibernate_class_50
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/hibernate_class_50.java:20: error: cannot find symbol
+        List<Name> names = (List<Name>)session.createQuery("from Name").list();
+             ^
+  symbol:   class Name
+  location: class hibernate_class_50
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/hibernate_class_50.java:20: error: cannot find symbol
+        List<Name> names = (List<Name>)session.createQuery("from Name").list();
+                                 ^
+  symbol:   class Name
+  location: class hibernate_class_50
+4 errors
+"
+
+"return_code": 1
+

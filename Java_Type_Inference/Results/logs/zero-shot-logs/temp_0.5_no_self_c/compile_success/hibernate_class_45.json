@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/zero-shot-temp-0.5/hibernate_class_45.java",
+    "java_code": "package hibernate;\nimport org.hibernate.SessionFactory;\nimport org.hibernate.Session;\nimport org.hibernate.cfg.AnnotationConfiguration;\n//ID = 4001795\n\npublic class hibernate_class_45\n{\n    public static void main(String[] args)\n    {\n        SessionFactory factory = new AnnotationConfiguration().configure().buildSessionFactory();\n        Session session = factory.openSession();\n        session.beginTransaction();\n\n//        Message m1 = new Message(\"Hibernated a  messages on \" + new Date());\n        session.save(\"aa\");\n        session.getTransaction().commit();\n        session.close();\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

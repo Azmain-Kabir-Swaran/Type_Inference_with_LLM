@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/Android21.java",
+    "java_code": "import android.content.Context;\nimport android.widget.ImageButton;\nimport android.widget.LinearLayout;\nimport android.content.Context;\nimport android.widget.ImageButton;\nimport android.widget.LinearLayout;\n\npublic class Android21 {\n\n    public static void main(String[] args) {\n        ImageButton b2 = new ImageButton(getApplicationContext());\n        b2.setBackgroundResource(R.drawable.img);\n        LinearLayout container = (LinearLayout) findViewById(R.id.lay);\n        container.addView(b2);\n    }\n\n    private static LinearLayout findViewById(int lay) {\n        return null;\n    }\n\n    private static Context getApplicationContext() {\n        return null;\n    }\n\n}",
+    "stdout": "",
+    "stderr": "No error (Ignored 'package R does not exist' errors)",
+    "return_code": 1
+}

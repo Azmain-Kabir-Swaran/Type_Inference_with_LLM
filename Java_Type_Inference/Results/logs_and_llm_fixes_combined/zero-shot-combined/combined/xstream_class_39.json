@@ -1,8 +1,0 @@
-{
-    "attempt": 5,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-fix/xstream_class_39.java",
-    "java_code": "import com.thoughtworks.xstream.io.xml.XppDriver;\nimport com.thoughtworks.xstream.io.xml.PrettyPrintWriter;\nimport com.thoughtworks.xstream.XStream;\nimport java.io.Writer;\nimport com.thoughtworks.xstream.io.HierarchicalStreamWriter;\n\npublic class xstream_class_39 {\n\n    private static XStream xstream = new XStream(new XppDriver() {\n        @Override\n        public HierarchicalStreamWriter createWriter(Writer out) {\n            return new PrettyPrintWriter(out) {\n                // Add CDATA block\n                boolean cdata;\n                boolean isNeedUpper;\n\n                public void startNode(String name, Class clazz) {\n                    super.startNode(name, clazz);\n                }\n\n                public void setValue(String text) {\n                    if (cdata) {\n                        super.setValue(\"<![CDATA[\" + text + \"]]>\");\n                    } else if (isNeedUpper) {\n                        super.setValue(text.toUpperCase());\n                    } else {\n                        super.setValue(text);\n                    }\n                }\n\n                public void endNode() {\n                    super.endNode();\n                }\n            };\n        }\n    });\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

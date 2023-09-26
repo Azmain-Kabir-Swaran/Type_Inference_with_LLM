@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/xstream_class_10.java",
+    "java_code": "import java.io.StringWriter;\nimport com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.io.xml.PrettyPrintWriter;\nimport java.io.StringWriter;\nimport com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.io.xml.PrettyPrintWriter;\n\npublic class xstream_class_10 {\n    private String generateResponse(final XStream xStream) {\n        StringWriter writer = new StringWriter();\n        xStream.marshal(this, new PrettyPrintWriter(writer) {\n            @Override\n            public void addAttribute(final String key, final String value) {\n                if (!key.equals(\"class\")) {\n                    super.addAttribute(key, value);\n                }\n            }\n        });\n        return writer.toString();\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

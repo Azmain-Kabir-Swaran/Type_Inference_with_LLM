@@ -1,115 +1,24 @@
 import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.converters.Converter;
-import com.thoughtworks.xstream.io.HierarchicalStreamReader;
-import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 import com.thoughtworks.xstream.mapper.MapperWrapper;
-import com.thoughtworks.xstream.io.xml.XmlFriendlyNameCoder;
-import com.thoughtworks.xstream.io.xml.xppdom.XppDomDriver;
+import com.thoughtworks.xstream.hibernate.converter.HibernateProxyConverter;
+import com.thoughtworks.xstream.hibernate.converter.HibernatePersistentCollectionConverter;
+import com.thoughtworks.xstream.hibernate.converter.HibernatePersistentMapConverter;
+import com.thoughtworks.xstream.hibernate.converter.HibernatePersistentSortedMapConverter;
+import com.thoughtworks.xstream.hibernate.converter.HibernatePersistentSortedSetConverter;
+import com.thoughtworks.xstream.hibernate.mapper.HibernateMapper;
 
 public class xstream_class_32 {
-    static class HibernateMapper extends MapperWrapper {
-        public HibernateMapper(MapperWrapper wrapped) {
-            super(wrapped);
-        }
-
-        @Override
-        public boolean shouldSerializeMember(Class definedIn, String fieldName) {
-            return definedIn != Object.class ? super.shouldSerializeMember(definedIn, fieldName) : false;
-        }
-    }
-
-    static class HibernateProxyConverter implements Converter {
-        @Override
-        public boolean canConvert(Class type) {
-            return false;
-        }
-
-        @Override
-        public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {
-
-        }
-
-        @Override
-        public Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context) {
-            return null;
-        }
-    }
-
-    static class HibernatePersistentCollectionConverter implements Converter {
-        @Override
-        public boolean canConvert(Class type) {
-            return false;
-        }
-
-        @Override
-        public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {
-
-        }
-
-        @Override
-        public Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context) {
-            return null;
-        }
-    }
-
-    static class HibernatePersistentMapConverter implements Converter {
-        @Override
-        public boolean canConvert(Class type) {
-            return false;
-        }
-
-        @Override
-        public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {
-
-        }
-
-        @Override
-        public Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context) {
-            return null;
-        }
-    }
-
-    static class HibernatePersistentSortedMapConverter implements Converter {
-        @Override
-        public boolean canConvert(Class type) {
-            return false;
-        }
-
-        @Override
-        public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {
-
-        }
-
-        @Override
-        public Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context) {
-            return null;
-        }
-    }
-
-    static class HibernatePersistentSortedSetConverter implements Converter {
-        @Override
-        public boolean canConvert(Class type) {
-            return false;
-        }
-
-        @Override
-        public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {
-
-        }
-
-        @Override
-        public Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context) {
-            return null;
-        }
-    }
-
-    public static XStream instantiateXstreamForHibernate() {
-        XStream xstream1 = new XStream(new XppDomDriver(new XmlFriendlyNameCoder("_-", "_")));
+    public static XStream instanciateXstreamForHibernate() {
+        XStream xstream1 = new XStream() {
+            protected MapperWrapper wrapMapper(final MapperWrapper next) {
+                return new HibernateMapper(next);
+            }
+        };
         xstream1.registerConverter(new HibernateProxyConverter());
-        xstream1.registerConverter(new HibernatePersistentCollectionConverter());
-        xstream1.registerConverter(new HibernatePersistentMapConverter());
-        xstream1.registerConverter(new HibernatePersistentSortedMapConverter());
-        xstream1.registerConverter(new HibernatePersistentSortedSetConverter());
+        xstream1.registerConverter(new HibernatePersistentCollectionConverter(xstream1.getMapper()));
+        xstream1.registerConverter(new HibernatePersistentMapConverter(xstream1.getMapper()));
+        xstream1.registerConverter(new HibernatePersistentSortedMapConverter(xstream1.getMapper()));
+        xstream1.registerConverter(new HibernatePersistentSortedSetConverter(xstream1.getMapper()));
         return xstream1;
     }
 }

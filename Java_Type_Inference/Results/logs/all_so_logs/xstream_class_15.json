@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/xstream_class_15.java",
-    "java_code": "import com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.converters.collections.CollectionConverter;\nimport java.util.HashSet;\nimport com.thoughtworks.xstream.io.HierarchicalStreamWriter;\nimport com.thoughtworks.xstream.converters.MarshallingContext;\n\npublic class xstream_class_15 {\n    public static void main(String arg[]) {\n        XStream xs = new XStream();\n        xs.registerConverter(new CollectionConverter(xs.getMapper()) {\n            @Override\n            public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {\n                org.hibernate.collection.PersistentSet ps = null;\n                super.marshal(new HashSet(ps), writer, context);\n            }\n\n            @Override\n            public boolean canConvert(Class type) {\n                return type.isAssignableFrom(org.hibernate.collection.PersistentSet.class);\n            }\n        }, XStream.PRIORITY_VERY_HIGH);\n        Object processInstance = null;\n        String s = xs.toXML(processInstance);\n    }\n}",
-    "stdout": "",
-    "stderr": "Note: /home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/xstream_class_15.java uses unchecked or unsafe operations.\nNote: Recompile with -Xlint:unchecked for details.\n",
-    "return_code": 0
-}

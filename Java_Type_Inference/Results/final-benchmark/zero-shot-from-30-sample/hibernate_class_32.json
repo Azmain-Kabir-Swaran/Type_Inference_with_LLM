@@ -1,0 +1,17 @@
+{
+    "filename": "hibernate_class_32",
+    "expected_output": [
+        "import javax.persistence.Table;",
+        "import javax.persistence.GeneratedValue;",
+        "import javax.persistence.Entity;",
+        "import javax.persistence.Id;",
+        "import org.hibernate.annotations.Index;"
+    ],
+    "predicted_output": [
+        "import javax.persistence.GeneratedValue;",
+        "import javax.persistence.Index;",
+        "import javax.persistence.Table;",
+        "import javax.persistence.Id;",
+        "import javax.persistence.Entity;"
+    ]
+}

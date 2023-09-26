@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime48.java",
-    "java_code": "import org.joda.time.DateTime;\n\npublic class JodaTime48 {\n\n    private final MillisProvider millisProvider;\n    private final DateTime someDate;\n\n    public JodaTime48(MillisProvider millisProvider, DateTime someDate) {\n        this.millisProvider = millisProvider;\n        this.someDate = someDate;\n    }\n    \n    public boolean isAvailable() {\n        long now = millisProvider.getMillis();\n        return (someDate.isBefore(now));\n    }\n}\n\ninterface MillisProvider {\n    long getMillis();\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

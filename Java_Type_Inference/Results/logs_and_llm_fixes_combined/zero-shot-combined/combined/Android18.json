@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-fix/Android18.java",
-    "java_code": "package androidExamples;\n\nimport android.view.View;\nimport android.widget.Button;\nimport android.widget.Toast;\nimport android.app.Activity;\nimport android.os.Bundle;\nimport android.content.DialogInterface;\nimport android.content.Intent;\n\npublic class Android18 extends Activity implements DialogInterface.OnClickListener, View.OnClickListener {\n    private Button button;\n\n    @Override\n    public void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.main);\n        this.setTitle(\"MainActivity\");\n\n        button = findViewById(R.id.button);\n        button.setOnClickListener(this);\n    }\n\n    @Override\n    public void onClick(DialogInterface arg0, int arg1) {\n        startActivity(new Intent(this, ChildActivity.class));\n    }\n    \n    @Override\n    public void onClick(View view) {\n        if (view == button) {\n            Toast.makeText(this, \"Button clicked\", Toast.LENGTH_SHORT).show();\n        }\n    }\n}\n\nclass ChildActivity extends Activity {\n    @Override\n    public void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.main2);\n        this.setTitle(\"ChildActivity\");\n    }\n}",
-    "stdout": "",
-    "stderr": "No error (Ignored 'package R does not exist' errors)",
-    "return_code": 1
-}

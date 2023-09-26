@@ -1,7 +1,4 @@
-package com.example;
-
 import java.io.Serializable;
-
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,7 +15,7 @@ import javax.persistence.Table;
     @NamedQuery(name = "BasicUser.findByLastName", query = "SELECT b FROM BasicUser b WHERE b.lastName = :lastName"),
     @NamedQuery(name = "BasicUser.findByEmail", query = "SELECT b FROM BasicUser b WHERE b.email = :email"),
     @NamedQuery(name = "BasicUser.findByPassword", query = "SELECT b FROM BasicUser b WHERE b.password = :password")})
-public class HibernateClass30 implements Serializable {
+public class hibernate_class_30 implements Serializable {
     private static final long serialVersionUID = 1L;
     @Basic(optional = false)
     @Column(name = "First_Name")
@@ -34,6 +31,6 @@ public class HibernateClass30 implements Serializable {
     @Column(name = "Password")
     private String password;
 
-    public HibernateClass30() {
+    public hibernate_class_30() {
     }
 }

@@ -28,16 +28,14 @@ public class Android44 extends Service {
 
     public synchronized void startThread() {
         if (runner == null) {
-            runner = new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    // Add code to be executed in the thread
-                }
-            });
             android.util.Log.v("@@@@@@@@@@@@@@@@@@@@", "DoScan.startthread");
             runner.start();
         }
     }
+
+    /*
+     * use a handler in a loop cycling through most of oncreate. the scanningthread does the work, then notifies the svc's uithread
+     */
 
     public synchronized void stopThread() {
         if (runner != null) {

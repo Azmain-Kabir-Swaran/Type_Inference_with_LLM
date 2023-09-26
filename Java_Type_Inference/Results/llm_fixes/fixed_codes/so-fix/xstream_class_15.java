@@ -1,11 +1,12 @@
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.converters.collections.CollectionConverter;
-import java.util.HashSet;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+import com.thoughtworks.xstream.mapper.Mapper;
 import com.thoughtworks.xstream.converters.MarshallingContext;
+import java.util.HashSet;
 
 public class xstream_class_15 {
-    public static void main(String arg[]) {
+    public static void main(String arg[]){
         XStream xs = new XStream();
         xs.registerConverter(new CollectionConverter(xs.getMapper()) {
             @Override

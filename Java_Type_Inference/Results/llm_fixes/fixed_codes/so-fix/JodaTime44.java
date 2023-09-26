@@ -16,9 +16,10 @@ public class JodaTime44 {
                 .appendSuffix(" second", " seconds")
                 .toFormatter();
 
-        Period period = Period.ZERO.plusDays(72).plusHours(24).plusMinutes(12);
+        Period period = new Period(72, 24, 12, 0);
 
         System.out.println(daysHoursMinutes.print(period));
         System.out.println(daysHoursMinutes.print(period.normalizedStandard()));
     }
+
 }

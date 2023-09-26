@@ -1,0 +1,9 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime46.java",
+    "java_code": "package jodatime;\n\nimport org.joda.time.DateTime;\nimport org.joda.time.DateTimeZone;\n\npublic class JodaTime46 {\n\n    public static void main(String[] args) {\n        DateTimeZone date = null;\n        // TODO Auto-generated method stub\n        DateTime dateTime = new DateTime(date);\n        dateTime = dateTime.plusDays(1);\n\n    }\n\n}",
+    "used_prompt": "See the code below:\n\"\"\"\npackage jodatime;\n\npublic class JodaTime46 {\n\n\tpublic static void main(String[] args) {\n\t\tDateTimeZone date = null;\n\t\t// TODO Auto-generated method stub\n\t\tDateTime dateTime = new DateTime(date);\n\t\tdateTime = dateTime.plusDays(1);\n\n\t}\n\n}\n\n\"\"\"\nFor the above code I got the below error log:\n\"\"\"\nJodaTime46.java:6: error: cannot find symbol\n\t\tDateTimeZone date = null;\n\t\t^\n  symbol:   class DateTimeZone\n  location: class JodaTime46\nJodaTime46.java:8: error: cannot find symbol\n\t\tDateTime dateTime = new DateTime(date);\n\t\t^\n  symbol:   class DateTime\n  location: class JodaTime46\nJodaTime46.java:8: error: cannot find symbol\n\t\tDateTime dateTime = new DateTime(date);\n\t\t                        ^\n  symbol:   class DateTime\n  location: class JodaTime46\n3 errors\n\n\"\"\"\nNow fix the error only by fixing the import statements by not using wildcard imports and must not modify code body which means do not change anything inside the class. So, it can be successfully compiled and reply with full code.",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

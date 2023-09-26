@@ -3,10 +3,12 @@ import java.util.regex.Matcher;
 import java.util.List;
 import java.util.ArrayList;
 
-class Class_4 {
+class Class_4
+{
     private static Pattern twopart = Pattern.compile("(\\d+)-(\\d+)");
 
-    public static void checkString(String s) {
+    public static void checkString(String s)
+    {
         Matcher m = twopart.matcher(s);
         if (m.matches()) {
             System.out.println(s + " matches; first part is " + m.group(0) +

@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime12.java",
-    "java_code": "import java.text.ParseException;\nimport java.text.SimpleDateFormat;\nimport java.util.Date;\nimport org.joda.time.DateTime;\n\npublic class JodaTime12 {\n\n    public static void main(String[] args) {\n\n        String currentDate;\n        SimpleDateFormat myFormat = new SimpleDateFormat(\"dd/MM/yyyy HH:mm\");\n        Date date1 = null;\n        DateTime dt;\n\n        currentDate = \"27/12/2010 11:29\";\n\n        try {\n            date1 = myFormat.parse(currentDate);\n\n        } catch (ParseException ex) {\n\n            ex.printStackTrace();\n\n        }\n        dt = new DateTime(date1);\n        dt = dt.plusMinutes(30);\n\n    }\n\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

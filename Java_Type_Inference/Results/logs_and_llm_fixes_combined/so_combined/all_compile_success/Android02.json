@@ -1,0 +1,8 @@
+{
+    "attempt": 5,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android02.java",
+    "java_code": "package androidExamples;\n\nimport android.app.Activity;\nimport android.os.Bundle;\n\npublic class Android02 extends Activity\n{\n    /** Called when the activity is first created. */\n    @Override\n    public void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.main);\n    }\n}",
+    "stdout": "",
+    "stderr": "No error (Ignored 'package R does not exist' errors)",
+    "return_code": 1
+}

@@ -1,0 +1,17 @@
+{
+    "filename": "hibernate_class_41",
+    "expected_output": [
+        "import org.hibernate.Criteria;",
+        "import org.hibernate.Session;",
+        "import org.hibernate.Transaction;",
+        "import org.hibernate.criterion.Restrictions;",
+        "import org.hibernate.mapping.List;"
+    ],
+    "predicted_output": [
+        "import java.util.List;",
+        "import org.hibernate.Criteria;",
+        "import org.hibernate.Transaction;",
+        "import org.hibernate.criterion.Restrictions;",
+        "import org.hibernate.Session;"
+    ]
+}

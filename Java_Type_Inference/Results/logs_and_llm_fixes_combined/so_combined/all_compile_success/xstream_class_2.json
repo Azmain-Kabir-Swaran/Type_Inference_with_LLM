@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/xstream_class_2.java",
+    "java_code": "import java.io.BufferedReader;\nimport java.io.FileReader;\nimport java.io.IOException;\n\nimport com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.io.xml.DomDriver;\n\npublic class xstream_class_2 {\n    public static void main(String arg[]) throws IOException {\n        XStream xstream = new XStream(new DomDriver());\n        FileReader fin = new FileReader(\"path_to_file.xml\");\n        BufferedReader br = new BufferedReader(fin);\n\n        String str = null;\n        while (br.ready()) {\n            str += br.readLine() + \"\\n\";\n        }\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

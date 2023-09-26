@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/from-30-sample/xstream_class_25.java",
+    "java_code": "package xstream;\nimport com.thoughtworks.xstream.converters.extended.ToAttributedValueConverter;\nimport com.thoughtworks.xstream.annotations.XStreamAlias;\nimport com.thoughtworks.xstream.annotations.XStreamConverter;\n//12672541\n\npublic class xstream_class_25 {\n\tpublic static void main(String arg[]){\n\t\t@XStreamAlias(\"Object\")\n\t\t@XStreamConverter(value = ToAttributedValueConverter.class, strings = { \"value\" }) class ResponseObject {\n\n\t\t    @XStreamAlias(\"Type\")\n\t\t    private String type;\n\n\t\t    private String value;\n\n\t\t    public ResponseObject() {\n\t\t    }\n\n\t\t    public String getType() {\n\t\t        return type;\n\t\t    }\n\n\t\t    public String getValue() {\n\t\t        return value;\n\t\t    }\n\t\t}\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

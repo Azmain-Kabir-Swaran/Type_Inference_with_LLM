@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/hibernate_class_16.java",
+    "java_code": "package hibernate;\nimport java.util.List;\n\nimport java.util.List;\n\npublic class hibernate_class_16 {\n    public class Events {\n        org.hibernate.Session hibernateSession;\n\n        public void setHibernateSession(org.hibernate.Session hibernateSession) throws Exception {\n            this.hibernateSession = hibernateSession;\n        }\n\n        public void sethibernateSession(org.hibernate.Session hibernateSession) throws Exception {\n            this.hibernateSession = hibernateSession;\n        }\n\n        @SuppressWarnings(\"unchecked\")\n        public String execute() {\n            List<Event> events = hibernateSession.createQuery(\"from Event\").list();\n\n            for (Event theEvent : events) {\n                // blah blah...\n            }\n\n            return \"success\";\n        }\n    }\n\n    public class Event {\n        // Event class implementation\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

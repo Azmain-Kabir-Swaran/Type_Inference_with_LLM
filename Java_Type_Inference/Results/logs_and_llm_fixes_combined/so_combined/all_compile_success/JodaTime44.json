@@ -1,0 +1,8 @@
+{
+    "attempt": 5,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime44.java",
+    "java_code": "import org.joda.time.DateTime;\nimport org.joda.time.format.DateTimeFormat;\nimport org.joda.time.format.DateTimeFormatter;\n\npublic class JodaTime44 {\n    public static void main(String[] args) {\n        DateTimeFormatter formatter = DateTimeFormat.forPattern(\"yyyy-MM-dd HH:mm:ss\");\n        DateTime dateTime = formatter.parseDateTime(\"2022-01-01 12:00:00\");\n        System.out.println(dateTime);\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

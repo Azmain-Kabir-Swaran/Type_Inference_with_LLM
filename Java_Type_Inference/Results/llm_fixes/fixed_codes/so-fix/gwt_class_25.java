@@ -1,4 +1,3 @@
-import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.KeyCodes;
@@ -12,7 +11,7 @@ import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
-public class gwt_class_25 implements EntryPoint {
+public class gwt_class_25 {
     public void onModuleLoad() {
         final Button sendButton = new Button("Send");
         final TextBox nameField = new TextBox();
@@ -21,10 +20,10 @@ public class gwt_class_25 implements EntryPoint {
 
         sendButton.addStyleName("sendButton");
 
-        RootPanel.get().add(nameField);
-        RootPanel.get().add(sendButton);
-        RootPanel.get().add(errorLabel);
-        
+        RootPanel.get("nameFieldContainer").add(nameField);
+        RootPanel.get("sendButtonContainer").add(sendButton);
+        RootPanel.get("errorLabelContainer").add(errorLabel);
+
         nameField.setFocus(true);
         nameField.selectAll();
 

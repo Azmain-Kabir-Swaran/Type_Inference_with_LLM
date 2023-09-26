@@ -1,0 +1,154 @@
+"attempt": 1
+
+"file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/gwt_class_10.java"
+
+"java_code": "
+
+import com.google.gwt.user.client.ui.FormPanel;
+import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.event.dom.client.ClickListener;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.user.client.ui.Widget;
+
+public class gwt_class_10 {
+	public void main(){
+		final FormPanel form =new FormPanel();
+	    VerticalPanel holder = new VerticalPanel();
+	    holder.add(new Label("User ID"));
+	    TextBox nameTextBox = new TextBox();
+	    nameTextBox.setName("userid");
+	    holder.add(nameTextBox);
+
+	     Button submitButton = new Button("Submit");
+	     holder.add(submitButton);
+	    form.add(holder);
+
+	    submitButton.addClickListener(new ClickListener() {
+
+	    public void onClick1(Widget sender) {
+	            form.submit();
+	    }
+
+		@Override
+		public void onClick(Widget sender) {
+			// TODO Auto-generated method stub
+			
+		}
+	});
+	}
+}
+"
+
+"used_prompt": "
+
+See the code below:
+"""
+public class gwt_class_10 {
+	public void main(){
+		final FormPanel form =new FormPanel();
+	    VerticalPanel holder = new VerticalPanel();
+	    holder.add(new Label("User ID"));
+	    TextBox nameTextBox = new TextBox();
+	    nameTextBox.setName("userid");
+	    holder.add(nameTextBox);
+
+	     Button submitButton = new Button("Submit");
+	     holder.add(submitButton);
+	    form.add(holder);
+
+	    submitButton.addClickListener(new ClickListener() {
+
+	    public void onClick1(Widget sender) {
+	            form.submit();
+	    }
+
+		@Override
+		public void onClick(Widget sender) {
+			// TODO Auto-generated method stub
+			
+		}
+	});
+	}
+}
+
+"""
+For the above code I got the below error log:
+"""
+gwt_class_10.java:3: error: cannot find symbol
+		final FormPanel form =new FormPanel();
+		      ^
+  symbol:   class FormPanel
+  location: class gwt_class_10
+gwt_class_10.java:3: error: cannot find symbol
+		final FormPanel form =new FormPanel();
+		                          ^
+  symbol:   class FormPanel
+  location: class gwt_class_10
+gwt_class_10.java:4: error: cannot find symbol
+	    VerticalPanel holder = new VerticalPanel();
+	    ^
+  symbol:   class VerticalPanel
+  location: class gwt_class_10
+gwt_class_10.java:4: error: cannot find symbol
+	    VerticalPanel holder = new VerticalPanel();
+	                               ^
+  symbol:   class VerticalPanel
+  location: class gwt_class_10
+gwt_class_10.java:5: error: cannot find symbol
+	    holder.add(new Label("User ID"));
+	                   ^
+  symbol:   class Label
+  location: class gwt_class_10
+gwt_class_10.java:6: error: cannot find symbol
+	    TextBox nameTextBox = new TextBox();
+	    ^
+  symbol:   class TextBox
+  location: class gwt_class_10
+gwt_class_10.java:6: error: cannot find symbol
+	    TextBox nameTextBox = new TextBox();
+	                              ^
+  symbol:   class TextBox
+  location: class gwt_class_10
+gwt_class_10.java:10: error: cannot find symbol
+	     Button submitButton = new Button("Submit");
+	     ^
+  symbol:   class Button
+  location: class gwt_class_10
+gwt_class_10.java:10: error: cannot find symbol
+	     Button submitButton = new Button("Submit");
+	                               ^
+  symbol:   class Button
+  location: class gwt_class_10
+gwt_class_10.java:14: error: cannot find symbol
+	    submitButton.addClickListener(new ClickListener() {
+	                                      ^
+  symbol:   class ClickListener
+  location: class gwt_class_10
+10 errors
+
+"""
+Now fix the error only by fixing the import statements by not using wildcard imports and must not modify code body which means do not change anything inside the class. So, it can be successfully compiled and reply with full code.
+"
+
+"stdout": ""
+
+"stderr": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/gwt_class_10.java:6: error: cannot find symbol
+import com.google.gwt.event.dom.client.ClickListener;
+                                      ^
+  symbol:   class ClickListener
+  location: package com.google.gwt.event.dom.client
+/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/gwt_class_10.java:23: error: cannot find symbol
+	    submitButton.addClickListener(new ClickListener() {
+	                                      ^
+  symbol:   class ClickListener
+  location: class gwt_class_10
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+2 errors
+"
+
+"return_code": 1
+

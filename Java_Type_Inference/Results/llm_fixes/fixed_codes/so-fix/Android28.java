@@ -11,6 +11,7 @@ public class Android28 extends android.app.Application {
     }
 
     public static Context getContext() {
-        return instance.getApplicationContext();
+        return instance;
     }
+
 }

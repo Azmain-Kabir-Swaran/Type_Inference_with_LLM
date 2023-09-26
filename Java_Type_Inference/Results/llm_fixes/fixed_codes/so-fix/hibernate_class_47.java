@@ -1,33 +1,50 @@
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
 
 public class hibernate_class_47 {
 
     public static boolean registerEvent() {
-        SessionFactory sf = HibernateUtil.getSessionFactory();
-        Transaction t = null;
-        try  {
-            Session s  = sf.openSession();
-            t = s.beginTransaction();
-            s.persist("aa");
-            t.commit();
-            return true;
-        } catch (Exception ex) {
-            System.err.println("Error -->"  + ex.getMessage());
-            if (t != null) t.rollback();
-            return false;
-        }
-    }
 
-    public static void main(String[] args) {
-        registerEvent();
+         SessionFactory sf = HibernateUtil.getSessionFactory();
+         Transaction t = null;
+         try  {
+         Session s  = sf.openSession();
+         t = s.beginTransaction(); // start a new transaction
+         s.persist("aa");
+         t.commit();  // commit transaction 
+         return true;
+         }
+         catch(Exception ex) {
+             System.err.println("Error -->"  + ex.getMessage());
+             if ( t!=null) t.rollback();  // rollback transaction on exception 
+             return false;
+         }
     }
 }
 
 class HibernateUtil {
+
+    private static final SessionFactory sessionFactory = buildSessionFactory();
+
+    private static SessionFactory buildSessionFactory() {
+        try {
+            // Create the SessionFactory from hibernate.cfg.xml
+            return new Configuration().configure().buildSessionFactory();
+        } catch (Throwable ex) {
+            // Make sure you log the exception, as it might be swallowed
+            System.err.println("Initial SessionFactory creation failed." + ex);
+            throw new ExceptionInInitializerError(ex);
+        }
+    }
+
     public static SessionFactory getSessionFactory() {
-        // implementation of getSessionFactory method
-        return null;
+        return sessionFactory;
+    }
+
+    public static void shutdown() {
+        // Close caches and connection pools
+        getSessionFactory().close();
     }
 }

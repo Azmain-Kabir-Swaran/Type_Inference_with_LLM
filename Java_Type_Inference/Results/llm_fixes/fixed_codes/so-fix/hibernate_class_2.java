@@ -1,7 +1,12 @@
 import java.io.Serializable;
 import java.util.List;
-
-import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -11,30 +16,20 @@ public class hibernate_class_2 {
      * 
      */
     @Entity
-    @Cacheable
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     public class Part implements Serializable {
 
-        private static final long serialVersionUID = 1L;
-        
-        @Id
         private int id;
-        
-        @Column(name = "PART_NAME")
         private String name;
-        
-        @ManyToOne(cascade = javax.persistence.CascadeType.ALL)
+        private static final long serialVersionUID = 1L;
         private Part mainPart;
-        
-        @OneToMany(cascade = javax.persistence.CascadeType.ALL)
-        @JoinColumn(name = "mainPart_id", referencedColumnName = "id")
-        @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
         private List<Part> parts;
 
         public Part() {
             super();
         }
 
+        @Id
         public int getId() {
             return this.id;
         }
@@ -43,6 +38,7 @@ public class hibernate_class_2 {
             this.id = id;
         }
 
+        @Column(name = "PART_NAME")
         public String getName() {
             return this.name;
         }
@@ -51,6 +47,7 @@ public class hibernate_class_2 {
             this.name = name;
         }
 
+        @ManyToOne(cascade = CascadeType.ALL)
         public Part getMainPart() {
             return mainPart;
         }
@@ -59,6 +56,9 @@ public class hibernate_class_2 {
             this.mainPart = mainPart;
         }
 
+        @OneToMany(cascade = CascadeType.ALL)
+        @JoinColumn(name = "mainPart_id", referencedColumnName = "id")
+        @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
         public List<Part> getParts() {
             return parts;
         }
@@ -66,5 +66,6 @@ public class hibernate_class_2 {
         public void setParts(List<Part> parts) {
             this.parts = parts;
         }
+
     }
 }

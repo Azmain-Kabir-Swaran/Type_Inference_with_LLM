@@ -1,0 +1,8 @@
+{
+    "attempt": 1,
+    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/hibernate_class_25.java",
+    "java_code": "import javax.persistence.Entity;\nimport javax.persistence.Id;\nimport javax.persistence.GeneratedValue;\nimport javax.persistence.OneToOne;\nimport javax.persistence.CascadeType;\nimport org.hibernate.annotations.Fetch;\nimport org.hibernate.annotations.FetchMode;\n\npublic class hibernate_class_25{\n    @Entity\n    public class A {\n\n        private Integer id;\n        private B b;\n\n        public A() {\n            super();\n        }\n\n        @Id\n        @GeneratedValue\n        public Integer getId() {\n            return id;\n        }\n\n        public void setId(Integer id) {\n            this.id = id;\n        }\n\n        @OneToOne (cascade=CascadeType.ALL)\n        @Fetch(FetchMode.JOIN)\n        public B getB() {\n            return b;\n        }\n\n        public void setB(B b) {\n            this.b = b;\n        }\n    }\n    @Entity\n    public class B {\n\n        private Integer id;\n\n        public B() {\n            super();\n        }\n\n        @Id\n        @GeneratedValue\n        public Integer getId() {\n            return id;\n        }\n\n        public void setId(Integer id) {\n            this.id = id;\n        }   \n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

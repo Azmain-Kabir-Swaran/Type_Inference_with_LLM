@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/xstream_class_23.java",
+    "java_code": "import com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.annotations.XStreamAlias;\nimport com.thoughtworks.xstream.converters.javabean.JavaBeanConverter;\nimport com.thoughtworks.xstream.io.xml.XppDriver;\n\npackage xstream;\nimport com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.annotations.XStreamAlias;\nimport com.thoughtworks.xstream.converters.javabean.JavaBeanConverter;\nimport com.thoughtworks.xstream.io.xml.XppDriver;\n\npublic class xstream_class_23 {\n    @XStreamAlias(\"test\")\n    public static class TestObject {\n        private String foo;\n\n        public String getFoo() {\n            return foo.toLowerCase();\n        }\n\n        public void setFoo(String foo) {\n            this.foo = foo;\n        }\n    }\n\n    public static void main(String[] args) throws Exception {\n        XStream x = new XStream(new XppDriver());\n        x.autodetectAnnotations(true);\n        x.processAnnotations(TestObject.class);\n\n        x.registerConverter(new JavaBeanConverter(x.getMapper()));\n\n        TestObject o = new TestObject();\n        o.setFoo(\"BAR\");\n\n        String xml = x.toXML(o);\n\n        System.out.println(xml);\n    }\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/code_for_compilation_test/base-prompt/xstream_class_23.java:6: error: class, interface, or enum expected\npackage xstream;\n^\n1 error\n",
+    "return_code": 1
+}

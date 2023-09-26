@@ -1,63 +1,53 @@
-import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.dom.client.Document;
-import com.google.gwt.dom.client.Element;
-import com.google.gwt.event.dom.client.ClickEvent;
+package gwt;
 import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.Widget;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.DOM;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.shared.HandlerRegistration;
+import com.google.gwt.event.dom.client.HasClickHandlers;
 
-public class GwtClass24 implements EntryPoint {
-  
-  public abstract class AbstractNotificationWidget extends Composite implements ClickHandler {
+public class gwt_class_24 {
+	
+	public abstract class AbstractNotificationWidget extends Composite implements ClickHandler, HasClickHandlers {
 
-    protected abstract String getUniqueId();
+		  protected abstract String getUniqueId();
 
-    @Override
-    protected void initWidget(Widget widget) {
-      super.initWidget(widget);
-      Element element = getElement();
-      element.setId(getUniqueId());
-      element.setClassName("notification");
-      element.getStyle().setProperty("display", "none");
-    }
+		  @Override
+		  public HandlerRegistration addClickHandler(ClickHandler handler) {
+		    return addDomHandler(handler, ClickEvent.getType());
+		  }
 
-    @Override
-    protected void onAttach() {
-      super.onAttach();
-      addDomHandler(this, ClickEvent.getType());
-    }
+		  @Override
+		  public void onClick(ClickEvent event) {
+		    doClick(getUniqueId());
+		  }
 
-    @Override
-    public void onClick(ClickEvent event) {
-      doClick(getUniqueId());
-    }
+		  protected native void doClick(String name) /*-{
+		    $wnd.$("#" + name).click(function () {
+		      $wnd.$(this).slideUp("slow");
+		      $wnd.$("div", this).fadeOut("slow");
+		      });
+		  }-*/;
 
-    protected native void doClick(String name) /*-{
-      $wnd.$("#" + name).slideUp("slow");
-      $wnd.$("div", "#" + name).fadeOut("slow");
-    }-*/;
+		}
+	public class ErrorNotificationWidget extends AbstractNotificationWidget {
 
-  }
+		  private final String uniqueId;
 
-  public class ErrorNotificationWidget extends AbstractNotificationWidget {
+		  public ErrorNotificationWidget (String title, String message) {
+		    uniqueId = DOM.createUniqueId();
 
-    private final String uniqueId;
+		    Widget w = null;
+			initWidget(w);
 
-    public ErrorNotificationWidget(String title, String message) {
-      uniqueId = Document.get().createUniqueId();
-    }
+		    this.getElement().setId(uniqueId);
 
-    @Override
-    protected String getUniqueId() {
-      return uniqueId;
-    }
-
-  }
-
-  @Override
-  public void onModuleLoad() {
-    ErrorNotificationWidget errorWidget = new ErrorNotificationWidget("Error", "An error has occurred.");
-    RootPanel.get().add(errorWidget);
-  }
+		    this.addClickHandler(this);
+		  }
+		  @Override
+		  protected String getUniqueId() {
+		    return this.uniqueId;
+		  }
+	} 
 }

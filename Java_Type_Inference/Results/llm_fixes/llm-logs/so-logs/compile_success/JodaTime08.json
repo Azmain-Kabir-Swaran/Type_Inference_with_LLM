@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/JodaTime08.java",
-    "java_code": "import org.joda.time.*;\n\npublic class JodaTime08 {\n    public boolean testIfJodaTimePeriodsHandlesPeriodTypesOtherThanMinutesAndHours() {\n        long twentyDaysInMillis = org.joda.time.Duration.standardDays(20).getMillis();\n        Period twoWeeks = new Period(twentyDaysInMillis, PeriodType.weeks());\n        return (2 == twoWeeks.getWeeks()) ? true : false; \n    }\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

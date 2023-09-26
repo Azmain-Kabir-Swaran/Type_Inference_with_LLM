@@ -1,8 +1,0 @@
-{
-    "attempt": 3,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/zero-shot-fix/gwt_class_2.java",
-    "java_code": "import com.google.gwt.junit.client.GWTTestCase;\nimport com.google.gwt.user.client.rpc.AsyncCallback;\nimport com.google.gwt.core.client.GWT;\n\n// ID = 971712\n\npublic class gwt_class_2 extends GWTTestCase {\n\n  public String getModuleName() {\n    return \"com.google.gwt.sample.stockwatcher.StockWatcher\";\n  }\n\n  public void testSimple() {\n    GreetingServiceAsync greetingService = new GreetingServiceAsyncMock();\n    greetingService.greetServer(\"Bob\", new AsyncCallback<String>() {\n      public void onFailure(Throwable caught) {\n        System.out.println(caught);\n        fail(\"big time failure\");\n        finishTest();\n      }\n\n      public void onSuccess(String result) {\n        System.out.println(\"success, biatch\");\n        assertTrue(true);\n        finishTest();\n      }\n    });\n    delayTestFinish(1000);\n  }\n\n  // Mock implementation of GreetingServiceAsync\n  private static class GreetingServiceAsyncMock implements GreetingServiceAsync {\n\n    public void greetServer(String name, AsyncCallback<String> callback) {\n      // Mock response\n      String result = \"Hello, \" + name + \"!\";\n      callback.onSuccess(result);\n    }\n  }\n\n}\n\ninterface GreetingServiceAsync {\n  void greetServer(String name, AsyncCallback<String> callback);\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

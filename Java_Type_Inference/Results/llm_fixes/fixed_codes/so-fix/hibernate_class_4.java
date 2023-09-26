@@ -7,8 +7,7 @@ public class hibernate_class_4 {
 
     static {
         try {
-            Configuration configuration = new Configuration().configure();
-            sessionFactory = configuration.buildSessionFactory();
+            sessionFactory = new Configuration().configure().buildSessionFactory();
         } catch (HibernateException he) {
             System.err.println(he);
             throw new ExceptionInInitializerError(he);

@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/xstream_class_25.java",
+    "java_code": "import com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.annotations.XStreamAlias;\nimport com.thoughtworks.xstream.annotations.XStreamConverter;\nimport com.thoughtworks.xstream.converters.extended.ToAttributedValueConverter;\nimport com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.annotations.XStreamAlias;\nimport com.thoughtworks.xstream.annotations.XStreamConverter;\nimport com.thoughtworks.xstream.converters.extended.ToAttributedValueConverter;\n\n@XStreamAlias(\"Object\")\n@XStreamConverter(value = ToAttributedValueConverter.class, strings = { \"value\" })\nclass ResponseObject {\n\n    @XStreamAlias(\"Type\")\n    private String type;\n\n    private String value;\n\n    public ResponseObject() {\n    }\n\n    public String getType() {\n        return type;\n    }\n\n    public String getValue() {\n        return value;\n    }\n}\n\npublic class xstream_class_25 {\n    public static void main(String arg[]) {\n        XStream xstream = new XStream();\n        xstream.processAnnotations(ResponseObject.class);\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/code_for_compilation_test/base-prompt/gwt_class_15.java",
+    "java_code": "import com.google.gwt.http.client.Request;\nimport com.google.gwt.http.client.RequestBuilder;\nimport com.google.gwt.http.client.RequestCallback;\nimport com.google.gwt.http.client.RequestException;\nimport com.google.gwt.http.client.Response;\nimport com.google.gwt.http.client.URL;\nimport com.google.gwt.http.client.Request;\nimport com.google.gwt.http.client.RequestBuilder;\nimport com.google.gwt.http.client.RequestCallback;\nimport com.google.gwt.http.client.RequestException;\nimport com.google.gwt.http.client.Response;\nimport com.google.gwt.http.client.URL;\n\npublic class gwt_class_15 {\n    public static void main(String arg[]){\n\n        RequestBuilder builder = new RequestBuilder(RequestBuilder.GET, URL.encode(\"http://localhost:8080/xxxx/yyyy\"));\n\n        try {\n            Request request = builder.sendRequest(null, new RequestCallback() {\n                public void onError(Request request, Throwable exception) {\n                }\n\n                public void onResponseReceived(Request request, Response response) {\n                }\n            });\n        } catch (RequestException e) {\n//          possiblePages.clear(); possiblePages.addItem(\"could not connect to server\");        \n        }\n    }\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/GitHub Codes/so_dataset/xstream_class_14.java",
+    "java_code": "public class xstream_class_14 {\n\tpublic class SingleValueEnumConverter extends AbstractSingleValueConverter\n\t{\n\t    @SuppressWarnings(\"rawtypes\")\n\t\tprivate final Class enumType;\n\n\t    public SingleValueEnumConverter(Class type)\n\t    {\n\t        this.enumType = type;\n\t    }\n\n\t    public boolean canConvert(Class c)\n\t    {\n\t        return c.equals(enumType);\n\t    }\n\n\t    public Object fromString(String value)\n\t    {\n\t        return Enum.valueOf(enumType, value);\n\t    }\n\t}\n}\n",
+    "stdout": "",
+    "stderr": "/home/azmain/GitHub Codes/so_dataset/xstream_class_14.java:2: error: cannot find symbol\n\tpublic class SingleValueEnumConverter extends AbstractSingleValueConverter\n\t                                              ^\n  symbol:   class AbstractSingleValueConverter\n  location: class xstream_class_14\nNote: /home/azmain/GitHub Codes/so_dataset/xstream_class_14.java uses unchecked or unsafe operations.\nNote: Recompile with -Xlint:unchecked for details.\n1 error\n",
+    "return_code": 1
+}

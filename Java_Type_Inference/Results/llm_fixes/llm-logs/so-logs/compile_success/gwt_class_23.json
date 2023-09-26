@@ -1,8 +1,0 @@
-{
-    "attempt": 1,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/gwt_class_23.java",
-    "java_code": "import java.util.UUID;\nimport com.google.gwt.http.client.RequestBuilder;\nimport com.google.gwt.http.client.RequestCallback;\nimport com.google.gwt.http.client.RequestException;\nimport com.google.gwt.http.client.Request;\nimport com.google.gwt.http.client.Response;\n\npublic class gwt_class_23 {\n    public static void main(String arg[]){\n        final String filename = UUID.randomUUID().toString() + \".txt\";\n\n        RequestBuilder rb = new RequestBuilder(RequestBuilder.POST, \"http://localhost/upload\");\n        rb.setRequestData(\"aaa\");\n        rb.setHeader(\"Content-Type\", \"application/x-www-form-urlencodeddata\");\n        rb.setCallback(new RequestCallback() {\n            @Override\n            public void onResponseReceived(Request request, Response response) {\n                     \n            }\n\n            @Override\n            public void onError(Request request, Throwable exception) {\n                exception.printStackTrace();\n            }\n        });\n\n        try {\n            rb.send();\n        }\n        catch (RequestException e) {\n            e.printStackTrace();\n        }\n    }\n}",
-    "stdout": "",
-    "stderr": "",
-    "return_code": 0
-}

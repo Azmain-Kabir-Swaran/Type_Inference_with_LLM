@@ -1,8 +1,0 @@
-{
-    "attempt": 4,
-    "file": "/home/azmain/GitHub Codes/Type_Inference_with_LLM/Java_Type_Inference/Results/llm_fixes/fixed_codes/so-fix/Android46.java",
-    "java_code": "import android.app.Activity;\nimport android.content.Intent;\nimport android.os.Bundle;\nimport android.view.View;\nimport android.widget.Button;\nimport android.widget.EditText;\n\npublic class Android46 extends Activity {\n    private EditText mTextSearch;\n\n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.media_preview);\n\n        mTextSearch = findViewById(R.id.lay);\n        Button searchButton = findViewById(R.id.button); // Update button id\n\n        searchButton.setOnClickListener(new View.OnClickListener() {\n            @Override\n            public void onClick(View v) {\n                Intent data = new Intent();\n                data.putExtra(\"TITLE\", mTextSearch.getText().toString());\n                setResult(RESULT_OK, data);\n                finish();\n            }\n        });\n    }\n\n    @Override\n    protected void onSaveInstanceState(Bundle outState) {\n        super.onSaveInstanceState(outState);\n    }\n\n    @Override\n    protected void onPause() {\n        super.onPause();\n    }\n\n    @Override\n    protected void onResume() {\n        super.onResume();\n    }\n}",
-    "stdout": "",
-    "stderr": "No error (Ignored 'package R does not exist' errors)",
-    "return_code": 1
-}
