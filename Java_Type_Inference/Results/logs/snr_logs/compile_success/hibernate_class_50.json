@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/hibernate_class_50.java",
+    "java_code": "package hibernate;\n//ID = 4562711\n\nimport java.util.List;\nimport com.google.android.gms.plus.model.people.Person.Name;\nimport org.hibernate.Session;\nimport org.hibernate.SessionFactory;\n\npublic class hibernate_class_50 {\n\tprivate SessionFactory sessionFactory;\n\n\tpublic void setSessionFactory(SessionFactory sessionFactory) {\n\t\tthis.sessionFactory = sessionFactory;\n\t}\n\n\tpublic SessionFactory getSessionFactory() {\n\t\treturn sessionFactory;\n\t}\n\n\t@SuppressWarnings(\"unchecked\")\n\tpublic List<Name> getAll() {\n\t\tSession session = this.sessionFactory.getCurrentSession();\n\t\tList<Name> names = (List<Name>) session.createQuery(\"from Name\").list();\n\t\treturn names;\n\t}\n\n\tpublic void save(Name name) {\n\t\tSession session = this.sessionFactory.getCurrentSession();\n\t\tsession.saveOrUpdate(name);\n\t\tsession.flush();\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/JodaTime09.java",
+    "java_code": "package jodatime;\n\n//ID = 4057816\npublic class JodaTime09 {\n\n\tpublic static void main(String[] args) {\n\t\t// TODO Auto-generated method stub\n\n\t\tfinal String string_from_3rd_party = \"GMT+08:00\";\n\t\t// Works for standard Java TimeZone!\n\t\tSystem.out.println(TimeZone.getTimeZone(string_from_3rd_party));\n\t\t// Exception in thread \"main\" java.lang.IllegalArgumentException: The datetime zone id is not recognised: GMT+08:00\n\t\tSystem.out.println(DateTimeZone.forID(string_from_3rd_party));\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/snr_fixed/JodaTime09.java:11: error: cannot find symbol\n\t\tSystem.out.println(TimeZone.getTimeZone(string_from_3rd_party));\n\t\t                   ^\n  symbol:   variable TimeZone\n  location: class JodaTime09\n/home/azmain/snr_fixed/JodaTime09.java:13: error: cannot find symbol\n\t\tSystem.out.println(DateTimeZone.forID(string_from_3rd_party));\n\t\t                   ^\n  symbol:   variable DateTimeZone\n  location: class JodaTime09\n2 errors\n",
+    "return_code": 1
+}

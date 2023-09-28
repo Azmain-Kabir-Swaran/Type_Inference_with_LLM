@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/Android07.java",
+    "java_code": "package androidExamples;\n\nimport android.widget.ArrayAdapter;\nimport android.os.Bundle;\nimport android.view.View;\nimport android.app.Activity;\n\n//ID = 288044\npublic class Android07 extends Activity {\n\n\tString[] mainItems = { \"Inbox\", \"Projects\", \"Contexts\", \"Next Actions\" };\n\n\t@Override\n\tpublic void onCreate(Bundle icicle) {\n\t\tsuper.onCreate(icicle);\n\t\tsetContentView(R.layout.main);\n\n\t\tsetListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mainItems));\n\t\tregisterForContextMenu(getListView());\n\t}\n\n\tprivate void setListAdapter(ArrayAdapter<String> arrayAdapter) {\n\t\t// TODO Auto-generated method stub\n\n\t}\n\n\tprivate View getListView() {\n\t\t// TODO Auto-generated method stub\n\t\treturn null;\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "No error (Ignored 'package R does not exist' errors)",
+    "return_code": 1
+}

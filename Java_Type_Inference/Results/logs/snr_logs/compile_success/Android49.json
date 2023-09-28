@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/Android49.java",
+    "java_code": "package androidExamples;\n//ID = 1325576\n\nimport android.content.Context;\nimport android.widget.LinearLayout;\nimport android.util.AttributeSet;\nimport android.view.Gravity;\nimport android.view.LayoutInflater;\n\npublic class Android49 extends LinearLayout {\n\tpublic Android49(Context context, AttributeSet attrs) {\n\t\tsuper(context, attrs);\n\t\t((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.main, this, true);\n\t\tsetGravity(Gravity.CENTER);\n\t}\n\n\tpublic Android49(Context context) {\n\t\tthis(context, null);\n\t}\n}",
+    "stdout": "",
+    "stderr": "No error (Ignored 'package R does not exist' errors)",
+    "return_code": 1
+}

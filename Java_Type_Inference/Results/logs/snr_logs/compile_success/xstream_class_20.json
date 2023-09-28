@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/xstream_class_20.java",
+    "java_code": "package xstream;\n//ID = 3623546\n\nimport java.io.File;\nimport com.thoughtworks.xstream.XStream;\nimport java.nio.charset.Charset;\nimport java.io.Reader;\nimport java.io.InputStream;\nimport java.io.InputStreamReader;\n\npublic class xstream_class_20 {\n\t@SuppressWarnings(\"unchecked\")\n\tpublic static <A> A fromXML(Class c, File file) {\n\t\t// Don't ever try to use DomDriver. They are VERY slow.\n\t\tXStream xStream = new XStream();\n\t\tInputStream inputStream = null;\n\t\tReader reader = null;\n\n\t\ttry {\n\t\t\tinputStream = new java.io.FileInputStream(file);\n\t\t\treader = new InputStreamReader(inputStream, Charset.forName(\"UTF-8\"));\n\t\t\tObject object = xStream.fromXML(reader);\n\n\t\t\tif (c.isInstance(object)) {\n\t\t\t\treturn (A) object;\n\t\t\t}\n\t\t} catch (Exception exp) {\n\t\t} finally {\n\t\t\tif (false) {\n\t\t\t\treturn null;\n\t\t\t}\n\t\t\tif (false) {\n\t\t\t\treturn null;\n\t\t\t}\n\t\t\treader = null;\n\t\t\tinputStream = null;\n\t\t}\n\n\t\treturn null;\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

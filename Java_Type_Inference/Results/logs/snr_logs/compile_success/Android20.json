@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/Android20.java",
+    "java_code": "package androidExamples;\n\nimport android.content.Context;\nimport android.widget.TextView;\nimport android.view.animation.ScaleAnimation;\nimport android.view.View;\n\npublic class Android20 extends View {\n\n\tprivate static final int BOARD_X_OFFSET = 10;\n\tprivate static final int BOARD_Y_OFFSET = 10;\n\n\tpublic Android20(Context context) {\n\t\tsuper(context);\n\t\t// TODO Auto-generated constructor stub\n\t}\n\n\tprivate TextView animText;\n\n\tprivate void animText(String text, int color, int xBlocks, int yBlocks) {\n\t\tanimText.setText(text);\n\t\tanimText.setTextColor(color);\n\t\tanimText.setVisibility(View.VISIBLE);\n\t\tint xBlockSize = 2;\n\t\tfinal int x = BOARD_X_OFFSET + xBlocks * xBlockSize;\n\t\tint yBlockSize = 2;\n\t\tfinal int y = BOARD_Y_OFFSET + yBlocks * yBlockSize;\n\t\tfinal float SCALE_FROM = (float) 0.25;\n\t\tfinal float SCALE_TO = (float) 5.0;\n\t\tScaleAnimation anim = new ScaleAnimation(SCALE_FROM, SCALE_TO, SCALE_FROM, SCALE_TO, x, y);\n\t\tanim.setDuration(500);\n\t\tanimText.setAnimation(anim);\n\t\tthis.setAnimation(null);\n\t\tstartAnimation(anim);\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

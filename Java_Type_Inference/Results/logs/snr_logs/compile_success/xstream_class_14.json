@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/xstream_class_14.java",
+    "java_code": "package xstream;\n//ID = 3533894\n\nimport com.thoughtworks.xstream.converters.basic.AbstractSingleValueConverter;\n\npublic class xstream_class_14 {\n\tpublic class SingleValueEnumConverter extends AbstractSingleValueConverter {\n\t\t@SuppressWarnings(\"rawtypes\")\n\t\tprivate final Class enumType;\n\n\t\tpublic SingleValueEnumConverter(Class type) {\n\t\t\tthis.enumType = type;\n\t\t}\n\n\t\tpublic boolean canConvert(Class c) {\n\t\t\treturn c.equals(enumType);\n\t\t}\n\n\t\tpublic Object fromString(String value) {\n\t\t\treturn Enum.valueOf(enumType, value);\n\t\t}\n\t}\n}",
+    "stdout": "",
+    "stderr": "Note: /home/azmain/snr_fixed/xstream_class_14.java uses unchecked or unsafe operations.\nNote: Recompile with -Xlint:unchecked for details.\n",
+    "return_code": 0
+}

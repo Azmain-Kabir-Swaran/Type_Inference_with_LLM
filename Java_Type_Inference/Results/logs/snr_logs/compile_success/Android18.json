@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/Android18.java",
+    "java_code": "package androidExamples;\n\nimport android.content.DialogInterface.OnClickListener;\nimport android.os.Bundle;\nimport android.content.Intent;\nimport android.app.Activity;\nimport android.content.DialogInterface;\n\n//ID = 724419\npublic class Android18 extends Activity implements OnClickListener {\n\t/** Called when the activity is first created. */\n\t@Override\n\tpublic void onCreate(Bundle savedInstanceState) {\n\t\tsuper.onCreate(savedInstanceState);\n\t\tsetContentView(R.layout.main);\n\t\tthis.setTitle(\"MainActivity\");\n\t}\n\n\t@Override\n\tpublic void onClick(DialogInterface arg0, int arg1) {\n\t\tstartActivity(new Intent(this, ChildActivity.class));\n\n\t}\n\n}\n\nclass ChildActivity extends Activity {\n\t/** Called when the activity is first created. */\n\t@Override\n\tpublic void onCreate(Bundle savedInstanceState) {\n\t\tsuper.onCreate(savedInstanceState);\n\t\tsetContentView(R.layout.main2);\n\t\tthis.setTitle(\"ChildActivity\");\n\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "No error (Ignored 'package R does not exist' errors)",
+    "return_code": 1
+}

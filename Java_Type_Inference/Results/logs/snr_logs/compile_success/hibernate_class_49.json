@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/hibernate_class_49.java",
+    "java_code": "package hibernate;\n//ID = 4530572\n\nimport javax.persistence.Entity;\nimport org.hibernate.annotations.NaturalId;\nimport java.io.Serializable;\nimport javax.persistence.Version;\n\n@Entity\npublic class hibernate_class_49 implements Serializable {\n\t/**\n\t * \n\t */\n\tprivate static final long serialVersionUID = 1L;\n\tprivate String username;\n\tprivate String password;\n\tprivate Integer VERSION;\n\n\t@Version\n\tpublic Integer getVERSION() {\n\t\treturn VERSION;\n\t}\n\n\tpublic void setVERSION(Integer vERSION) {\n\t\tVERSION = vERSION;\n\t}\n\n\t@NaturalId\n\tpublic String getUsername() {\n\t\treturn username;\n\t}\n\n\tpublic void setUsername(String username) {\n\t\tthis.username = username;\n\t}\n\n\tpublic String getPassword() {\n\t\treturn password;\n\t}\n\n\tpublic void setPassword(String password) {\n\t\tthis.password = password;\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

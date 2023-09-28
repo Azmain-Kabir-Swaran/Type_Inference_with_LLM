@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/hibernate_class_47.java",
+    "java_code": "package hibernate;\n//ID = 4323066\n\nimport net.sf.gilead.core.hibernate.HibernateUtil;\nimport org.hibernate.Session;\nimport org.hibernate.SessionFactory;\nimport org.hibernate.Transaction;\n\npublic class hibernate_class_47 {\n\n\tpublic static boolean registerEvent() {\n\n\t\tSessionFactory sf = HibernateUtil.getSessionFactory();\n\t\tTransaction t = null;\n\t\ttry {\n\t\t\tSession s = sf.openSession();\n\t\t\tt = s.beginTransaction(); // start a new transaction\n\t\t\ts.persist(\"aa\");\n\t\t\tt.commit(); // commit transaction \n\t\t\treturn true;\n\t\t} catch (Exception ex) {\n\t\t\tSystem.err.println(\"Error -->\" + ex.getMessage());\n\t\t\tif (t != null)\n\t\t\t\tt.rollback(); // rollback transaction on exception \n\t\t\treturn false;\n\t\t}\n\t}\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/snr_fixed/hibernate_class_47.java:13: error: non-static method getSessionFactory() cannot be referenced from a static context\n\t\tSessionFactory sf = HibernateUtil.getSessionFactory();\n\t\t                                 ^\n1 error\n",
+    "return_code": 1
+}

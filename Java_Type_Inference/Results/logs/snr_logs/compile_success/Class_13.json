@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/Class_13.java",
+    "java_code": "/*\nDate: 1/19/17\nURL: http://stackoverflow.com/questions/7143287/how-to-best-position-swing-guis\n*/\npackage common_JDK;\n\nimport javax.swing.UIManager;\nimport javax.swing.SwingUtilities;\nimport javax.swing.JTextArea;\nimport javax.swing.JFrame;\n\nclass WhereToPutTheGui {\n\n\tpublic static void initGui() {\n\t\tfor (int ii = 1; ii < 4; ii++) {\n\t\t\tJFrame f = new JFrame(\"Frame \" + ii);\n\t\t\tf.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);\n\t\t\tString s = \"os.name: \" + System.getProperty(\"os.name\") + \"\\nos.version: \"\n\t\t\t\t\t+ System.getProperty(\"os.version\");\n\t\t\tf.add(new JTextArea(s, 3, 28)); // suggest a size\n\t\t\tf.pack();\n\t\t\t// Let the OS handle the positioning!\n\t\t\tf.setLocationByPlatform(true);\n\t\t\tf.setVisible(true);\n\t\t}\n\t}\n\n\tpublic static void main(String[] args) {\n\t\tSwingUtilities.invokeLater(new Runnable() {\n\t\t\tpublic void run() {\n\t\t\t\ttry {\n\t\t\t\t\tUIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());\n\t\t\t\t} catch (Exception useDefault) {\n\t\t\t\t}\n\t\t\t\tinitGui();\n\t\t\t}\n\t\t});\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

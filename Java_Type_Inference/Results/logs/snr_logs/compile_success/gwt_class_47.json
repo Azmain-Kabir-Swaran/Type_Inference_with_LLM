@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/gwt_class_47.java",
+    "java_code": "package gwt;\n//ID = 3618678\n\nimport com.google.gwt.user.client.ui.LayoutPanel;\nimport com.google.gwt.user.client.ui.RootLayoutPanel;\nimport com.google.gwt.user.client.ui.Widget;\nimport com.google.gwt.user.client.ui.HTML;\nimport com.google.gwt.core.client.EntryPoint;\nimport com.google.gwt.dom.client.Style.Unit;\n\npublic class gwt_class_47 implements EntryPoint {\n\tprivate static final Unit PCT = null;\n\n\t@Override\n\tpublic void onModuleLoad() {\n\t\tWidget childone = new HTML(\"left\"), childtwo = new HTML(\"right\");\n\t\tLayoutPanel p = new LayoutPanel();\n\t\tp.add(childone);\n\t\tp.add(childtwo);\n\t\tp.setWidgetLeftWidth(childone, 0, PCT, 50, PCT);\n\t\tp.setWidgetRightWidth(childtwo, 0, PCT, 50, PCT);\n\t\tRootLayoutPanel rp = RootLayoutPanel.get();\n\t\trp.add(p);\n\t}\n}",
+    "stdout": "",
+    "stderr": "Note: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n",
+    "return_code": 0
+}

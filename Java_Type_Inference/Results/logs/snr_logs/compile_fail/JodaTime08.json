@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/JodaTime08.java",
+    "java_code": "package jodatime;\n//ID = 4034388\n\nimport org.joda.time.Period;\nimport java.util.concurrent.TimeUnit;\n\npublic class JodaTime08 {\n\tpublic boolean testIfJodaTimePeriodsHandlesPeriodTypesOtherThanMinutesAndHours() {\n\t\tlong twentyDaysInMillis = TimeUnit.MILLISECONDS.convert(20, TimeUnit.DAYS);\n\t\tPeriod twoWeeks = new Period(twentyDaysInMillis, PeriodType.weeks());\n\t\treturn (2 == twoWeeks.getWeeks()) ? true : false;\n\t}\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/snr_fixed/JodaTime08.java:10: error: cannot find symbol\n\t\tPeriod twoWeeks = new Period(twentyDaysInMillis, PeriodType.weeks());\n\t\t                                                 ^\n  symbol:   variable PeriodType\n  location: class JodaTime08\n1 error\n",
+    "return_code": 1
+}

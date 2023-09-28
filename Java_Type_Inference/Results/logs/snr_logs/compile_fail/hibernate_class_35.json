@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/hibernate_class_35.java",
+    "java_code": "package hibernate;\n//ID = 3509824\n\nimport java.util.List;\nimport net.sf.gilead.core.hibernate.HibernateUtil;\nimport org.hibernate.Session;\nimport java.util.Iterator;\nimport org.apache.log4j.BasicConfigurator;\nimport org.hibernate.Query;\nimport org.hibernate.HibernateException;\nimport org.hibernate.Transaction;\n\npublic class hibernate_class_35 {\n\tpublic static void main(String[] args) {\n\t\tBasicConfigurator.configure();\n\t\tSession session = HibernateUtil.getSessionFactory().openSession();\n\t\tTransaction transaction = null;\n\t\ttry {\n\t\t\ttransaction = session.beginTransaction();\n\t\t\t//\t        Label label = new Label(\"vijay\");\n\t\t\tQuery query = session.createQuery(\"from vij\");\n\t\t\tList list = query.list();\n\t\t\tfor (Iterator it = list.iterator(); it.hasNext();) {\n\t\t\t\t//\t            System.out.println(label.getId());          \n\t\t\t}\n\t\t\ttransaction.commit();\n\n\t\t} catch (HibernateException e) {\n\n\t\t\tif (transaction != null) {\n\t\t\t\ttransaction.rollback();\n\t\t\t}\n\t\t\te.printStackTrace();\n\t\t} finally {\n\t\t\tsession.close();\n\t\t}\n\n\t}\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/snr_fixed/hibernate_class_35.java:16: error: non-static method getSessionFactory() cannot be referenced from a static context\n\t\tSession session = HibernateUtil.getSessionFactory().openSession();\n\t\t                               ^\n1 error\n",
+    "return_code": 1
+}

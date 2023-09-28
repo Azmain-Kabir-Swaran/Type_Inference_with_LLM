@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/hibernate_class_19.java",
+    "java_code": "package hibernate;\n//ID = 2182950\n\nimport javax.persistence.Column;\nimport javax.persistence.Entity;\nimport javax.persistence.GeneratedValue;\nimport org.hibernate.annotations.Index;\n\n@Entity\n@org.hibernate.annotations.Table(appliesTo = hibernate_class_19.TABLE_NAME, indexes = {\n\t\t@Index(name = \"IDX_XDN_DFN\", columnNames = { hibernate_class_19.XDN, hibernate_class_19.DFN }) })\n\npublic class hibernate_class_19 {\n\tpublic final static String TABLE_NAME = \"house\";\n\tpublic final static String XDN = \"xdn\";\n\tpublic final static String DFN = \"dfn\";\n\n\t@Id\n\t@GeneratedValue\n\tprivate long Id;\n\n\t@Column(name = XDN)\n\tprivate long xdn;\n\n\t@Column(name = DFN)\n\tprivate long dfn;\n\n\t@Column\n\tprivate String address;\n\n\tpublic long getId() {\n\t\treturn Id;\n\t}\n\n\tpublic void setId(long id) {\n\t\tthis.Id = id;\n\t}\n\n\tpublic long getXdn() {\n\t\treturn xdn;\n\t}\n\n\tpublic void setXdn(long xdn) {\n\t\tthis.xdn = xdn;\n\t}\n\n\tpublic long getDfn() {\n\t\treturn dfn;\n\t}\n\n\tpublic void setDfn(long dfn) {\n\t\tthis.dfn = dfn;\n\t}\n\n\tpublic String getAddress() {\n\t\treturn address;\n\t}\n\n\tpublic void setAddress(String address) {\n\t\tthis.address = address;\n\t}\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/snr_fixed/hibernate_class_19.java:18: error: cannot find symbol\n\t@Id\n\t ^\n  symbol:   class Id\n  location: class hibernate_class_19\n1 error\n",
+    "return_code": 1
+}

@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/xstream_class_24.java",
+    "java_code": "package xstream;\n//ID=2456909\n\nimport com.thoughtworks.xstream.io.HierarchicalStreamWriter;\nimport com.thoughtworks.xstream.converters.UnmarshallingContext;\nimport com.thoughtworks.xstream.converters.MarshallingContext;\nimport com.thoughtworks.xstream.io.HierarchicalStreamReader;\nimport com.thoughtworks.xstream.mapper.Mapper;\nimport com.thoughtworks.xstream.converters.reflection.ReflectionProvider;\nimport com.thoughtworks.xstream.converters.reflection.ReflectionConverter;\n\npublic class xstream_class_24 {\n\tpublic class DetailDollarsConverter extends ReflectionConverter {\n\n\t\tpublic DetailDollarsConverter(Mapper mapper, ReflectionProvider reflectionProvider) {\n\t\t\tsuper(mapper, reflectionProvider);\n\t\t}\n\n\t\t@Override\n\t\tpublic void marshal(Object obj, HierarchicalStreamWriter writer, MarshallingContext context) {\n\t\t\tsuper.marshal(obj, writer, context);\n\n\t\t\twriter.startNode(\"node4\");\n\t\t\twriter.setValue(Double.toString(20));\n\t\t\twriter.endNode();\n\t\t}\n\n\t\t@Override\n\t\tpublic Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context) {\n\t\t\treturn super.unmarshal(reader, context);\n\t\t}\n\n\t\t@SuppressWarnings(\"unchecked\")\n\t\t@Override\n\t\tpublic boolean canConvert(Class clazz) {\n\t\t\tObject o = null;\n\t\t\treturn clazz.equals(o);\n\t\t}\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

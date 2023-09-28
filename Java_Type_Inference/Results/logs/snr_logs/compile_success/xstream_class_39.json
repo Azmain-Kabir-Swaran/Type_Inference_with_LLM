@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/xstream_class_39.java",
+    "java_code": "package xstream;\n//ID = 26862650\n\nimport com.thoughtworks.xstream.io.xml.PrettyPrintWriter;\nimport com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.io.xml.XppDriver;\nimport com.thoughtworks.xstream.io.HierarchicalStreamWriter;\nimport java.io.Writer;\nimport com.thoughtworks.xstream.core.util.QuickWriter;\n\npublic class xstream_class_39 {\n\n\tprivate static XStream xstream = new XStream(new XppDriver() {\n\t\t@Override\n\t\tpublic HierarchicalStreamWriter createWriter(Writer out) {\n\t\t\treturn new PrettyPrintWriter(out) {\n\t\t\t\t// Add CDATA block  \n\t\t\t\tboolean cdata;//I need to add cdata for some fields only  \n\t\t\t\tboolean isNeedUpper;//only some will need this\n\n\t\t\t\tprotected void writeText(QuickWriter writer, String text) {\n\t\t\t\t\tif (cdata) {\n\t\t\t\t\t\twriter.write(\"<![CDATA[\");\n\t\t\t\t\t\twriter.write(text);\n\t\t\t\t\t\twriter.write(\"]]>\");\n\t\t\t\t\t} else if (isNeedUpper) {\n\t\t\t\t\t\twriter.write(text.toUpperCase());\n\t\t\t\t\t} else\n\t\t\t\t\t\twriter.write(text);\n\t\t\t\t}\n\t\t\t};\n\t\t}\n\t});\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

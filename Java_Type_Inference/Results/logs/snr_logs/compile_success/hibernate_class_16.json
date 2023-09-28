@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/hibernate_class_16.java",
+    "java_code": "package hibernate;\n\nimport java.util.List;\nimport android.provider.ContactsContract.CommonDataKinds.Event;\n\n/**\n * This class represents the data mapper for an employee to the\n * database.\n */\npublic class hibernate_class_16 {\n\n\tpublic class Events {\n\t\torg.hibernate.Session hibernateSession;\n\n\t\tpublic void setHibernateSession(org.hibernate.Session hibernateSession) throws Exception {\n\t\t\tthis.hibernateSession = hibernateSession;\n\t\t}\n\n\t\tpublic void sethibernateSession(org.hibernate.Session hibernateSession) throws Exception {\n\t\t\tthis.hibernateSession = hibernateSession;\n\t\t}\n\n\t\t@SuppressWarnings(\"unchecked\")\n\t\tpublic String execute() {\n\n\t\t\tList<Event> events = hibernateSession.createQuery(\"from Event\").list();\n\n\t\t\tfor (Event theEvent : events) {\n\t\t\t\t// blah blah...\n\t\t\t}\n\n\t\t\treturn \"success\";\n\t\t}\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

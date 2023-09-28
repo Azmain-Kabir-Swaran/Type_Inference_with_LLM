@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/xstream_class_13.java",
+    "java_code": "package xstream;\n//ID=1372467\n\nimport com.thoughtworks.xstream.mapper.Mapper;\nimport com.thoughtworks.xstream.mapper.ClassAliasingMapper;\n\npublic class xstream_class_13 {\n\tpublic class MyClassAliasingMapper extends ClassAliasingMapper {\n\n\t\tpublic MyClassAliasingMapper(Mapper wrapped) {\n\t\t\tsuper(wrapped);\n\t\t}\n\n\t\t@Override\n\t\tpublic Class realClass(String elementName) {\n\t\t\ttry {\n\t\t\t} catch (Exception e) {\n\t\t\t\t// do nothing we fall back on super's implementation\n\t\t\t}\n\t\t\treturn super.realClass(elementName);\n\t\t}\n\n\t\t@Override\n\t\tpublic String serializedClass(Class type) {\n\t\t\ttry {\n\t\t\t} catch (Exception e) {\n\t\t\t\t// do nothing we fall back on super's implementation\n\t\t\t}\n\t\t\treturn super.serializedClass(type);\n\t\t}\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

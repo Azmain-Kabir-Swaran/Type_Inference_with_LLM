@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/hibernate_class_25.java",
+    "java_code": "package hibernate;\n//ID = 2931936\n\nimport org.hibernate.annotations.Fetch;\nimport javax.persistence.Entity;\nimport javax.persistence.GeneratedValue;\nimport javax.persistence.CascadeType;\nimport javax.persistence.OneToOne;\nimport org.hibernate.FetchMode;\nimport javax.persistence.Id;\n\npublic class hibernate_class_25 {\n\t@Entity\n\tpublic class A {\n\n\t\tprivate Integer id;\n\t\tprivate B b;\n\n\t\tpublic A() {\n\t\t\tsuper();\n\t\t}\n\n\t\t@Id\n\t\t@GeneratedValue\n\t\tpublic Integer getId() {\n\t\t\treturn id;\n\t\t}\n\n\t\tpublic void setId(Integer id) {\n\t\t\tthis.id = id;\n\t\t}\n\n\t\t@OneToOne(cascade = CascadeType.ALL)\n\t\t@Fetch(FetchMode.JOIN)\n\t\tpublic B getB() {\n\t\t\treturn b;\n\t\t}\n\n\t\tpublic void setB(B b) {\n\t\t\tthis.b = b;\n\t\t}\n\t}\n\n\t@Entity\n\tpublic class B {\n\n\t\tprivate Integer id;\n\n\t\tpublic B() {\n\t\t\tsuper();\n\t\t}\n\n\t\t@Id\n\t\t@GeneratedValue\n\t\tpublic Integer getId() {\n\t\t\treturn id;\n\t\t}\n\n\t\tpublic void setId(Integer id) {\n\t\t\tthis.id = id;\n\t\t}\n\t}\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/snr_fixed/hibernate_class_25.java:34: error: incompatible types: org.hibernate.FetchMode cannot be converted to org.hibernate.annotations.FetchMode\n\t\t@Fetch(FetchMode.JOIN)\n\t\t                ^\n1 error\n",
+    "return_code": 1
+}

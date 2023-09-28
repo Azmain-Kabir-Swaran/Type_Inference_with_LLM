@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/Android04.java",
+    "java_code": "package androidExamples;\n//ID = 151777\n\nimport android.os.Bundle;\nimport android.widget.TextView;\nimport android.app.Activity;\n\npublic class Android04 extends Activity {\n\t/** Called when the activity is first created. */\n\t@Override\n\tpublic void onCreate(Bundle savedInstanceState) {\n\t\tsuper.onCreate(savedInstanceState);\n\n\t\tmTextView = new TextView(this);\n\n\t\tif (savedInstanceState == null) {\n\t\t\tmTextView.setText(\"Welcome to HelloAndroid!\");\n\t\t} else {\n\t\t\tmTextView.setText(\"Welcome back.\");\n\t\t}\n\n\t\tsetContentView(mTextView);\n\t}\n\n\tprivate TextView mTextView = null;\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

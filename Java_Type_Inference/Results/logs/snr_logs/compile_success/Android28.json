@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/Android28.java",
+    "java_code": "package androidExamples;\n\nimport android.content.Context;\n\npublic class Android28 extends android.app.Application {\n\n\tprivate static Android28 instance;\n\n\tpublic Android28() {\n\t\tinstance = this;\n\t}\n\n\tpublic static Context getContext() {\n\t\treturn instance;\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

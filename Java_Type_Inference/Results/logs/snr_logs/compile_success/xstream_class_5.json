@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/xstream_class_5.java",
+    "java_code": "package xstream;\n//ID = 3143234\n\nimport java.io.FileNotFoundException;\nimport com.thoughtworks.xstream.XStream;\nimport java.io.PrintWriter;\nimport com.thoughtworks.xstream.io.xml.DomDriver;\n\npublic class xstream_class_5 {\n\tpublic class Test {\n\t\tpublic void main(String[] args) throws FileNotFoundException {\n\t\t\tXStream xs = new XStream(new DomDriver());\n\t\t\tFoo f = new Foo(1, \"booo\", new Bar(42));\n\t\t\tPrintWriter pw = new PrintWriter(\"a.xml\");\n\t\t\txs.toXML(f, pw);\n\t\t}\n\t}\n\n\tpublic class Bar {\n\t\tpublic int id;\n\n\t\tpublic Bar(int id) {\n\t\t\tthis.id = id;\n\t\t}\n\n\t}\n\n\tpublic class Foo {\n\t\tpublic int a;\n\t\tpublic String b;\n\t\tpublic Bar boo;\n\n\t\tpublic Foo(int a, String b, Bar c) {\n\t\t\tthis.a = a;\n\t\t\tthis.b = b;\n\t\t\tthis.boo = c;\n\t\t}\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

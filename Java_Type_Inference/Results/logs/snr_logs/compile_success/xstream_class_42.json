@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/xstream_class_42.java",
+    "java_code": "package xstream;\n//ID=30288175\n\nimport com.thoughtworks.xstream.annotations.XStreamImplicit;\nimport java.util.List;\nimport com.thoughtworks.xstream.annotations.XStreamAlias;\n\npublic class xstream_class_42 {\n\t@XStreamAlias(\"addressServiceConfig\")\n\tpublic class AddressServiceConfig {\n\t\tprivate String pathToCodeposFiles;\n\t\t@XStreamImplicit(itemFieldName = \"region\")\n\t\tprivate List<Region> regions;\n\t}\n\n\t@XStreamAlias(\"region\")\n\tpublic class Region {\n\t\tprivate String regionName;\n\t\t@XStreamImplicit(itemFieldName = \"province\")\n\t\tprivate List<Province> provinces;\n\t}\n\n\t@XStreamAlias(\"province\")\n\tpublic class Province {\n\t\tprivate int code;\n\n\t\tprivate String name;\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

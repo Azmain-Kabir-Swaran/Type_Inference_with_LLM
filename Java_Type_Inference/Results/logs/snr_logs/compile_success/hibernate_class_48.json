@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/hibernate_class_48.java",
+    "java_code": "package hibernate;\n//ID = 4346254\n\nimport net.sf.gilead.core.hibernate.HibernateUtil;\nimport org.hibernate.Session;\nimport net.sf.gilead.gwt.PersistentRemoteService;\nimport aQute.gwt.greeter.shared.GreetingService;\nimport org.hibernate.SessionFactory;\nimport net.sf.gilead.core.PersistentBeanManager;\nimport net.sf.gilead.core.store.stateless.StatelessProxyStore;\nimport org.hibernate.Transaction;\n\npublic abstract class hibernate_class_48 extends PersistentRemoteService implements GreetingService {\n\n\tprivate static final long serialVersionUID = 1L;\n\tprivate HibernateUtil gileadHibernateUtil = new HibernateUtil();\n\n\tpublic hibernate_class_48() {\n\t\tSessionFactory session = null;\n\t\tgileadHibernateUtil.setSessionFactory(session);\n\n\t\tPersistentBeanManager persistentBeanManager = new PersistentBeanManager();\n\t\tpersistentBeanManager.setPersistenceUtil(gileadHibernateUtil);\n\t\tpersistentBeanManager.setProxyStore(new StatelessProxyStore());\n\n\t\tsetBeanManager(persistentBeanManager);\n\t}\n\n\tpublic String greetServer(String S) {\n\t\tSession session = gileadHibernateUtil.getSessionFactory().openSession();\n\t\tTransaction tr = session.beginTransaction();\n\t\tsession.save(S);\n\t\ttr.commit();\n\t\tsession.close();\n\t\treturn S;\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/gwt_class_2.java",
+    "java_code": "package gwt;\n//ID = 971712\n\nimport com.google.gwt.user.client.rpc.AsyncCallback;\nimport com.google.gwt.junit.client.GWTTestCase;\nimport aQute.gwt.greeter.shared.GreetingServiceAsync;\nimport aQute.gwt.greeter.shared.GreetingService;\nimport com.google.gwt.core.client.GWT;\n\n/**\n * GWT JUnit tests must extend GWTTestCase.\n */\npublic class gwt_class_2 extends GWTTestCase {\n\n\t/**\n\t * Must refer to a valid module that sources this class.\n\t */\n\tpublic String getModuleName() {\n\t\treturn \"com.google.gwt.sample.stockwatcher.StockWatcher\";\n\t}\n\n\t/**\n\t * Add as many tests as you like.\n\t */\n\tpublic void testSimple() {\n\t\tGreetingServiceAsync greetingService = GWT.create(GreetingService.class);\n\t\tgreetingService.greetServer(\"Bob\", new AsyncCallback<String>() {\n\t\t\tpublic void onFailure(Throwable caught) {\n\t\t\t\t// Show the RPC error message to the user\n\t\t\t\tSystem.out.println(caught);\n\t\t\t\tfail(\"big time failure\");\n\t\t\t\tfinishTest();\n\t\t\t}\n\n\t\t\tpublic void onSuccess(String result) {\n\t\t\t\tSystem.out.println(\"success, biatch\");\n\t\t\t\tassertTrue(true);\n\t\t\t}\n\t\t});\n\t\tdelayTestFinish(1000);\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

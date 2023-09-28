@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/Android13.java",
+    "java_code": "package androidExamples;\n\nimport java.io.FileNotFoundException;\nimport android.content.ContentResolver;\nimport java.io.ByteArrayInputStream;\nimport android.graphics.Bitmap;\nimport java.io.ByteArrayOutputStream;\nimport android.provider.MediaStore.Images.Media;\nimport java.io.IOException;\nimport android.net.Uri;\n\n//ID = 559902\npublic class Android13 {\n\tpublic static void main(String[] args) {\n\t\tUri imageUri = null;\n\t\tBitmap bitmap = null;\n\t\ttry {\n\t\t\tbitmap = Media.getBitmap(getContentResolver(), imageUri);\n\t\t} catch (FileNotFoundException e) {\n\t\t\t// TODO Auto-generated catch block\n\t\t\te.printStackTrace();\n\t\t} catch (IOException e) {\n\t\t\t// TODO Auto-generated catch block\n\t\t\te.printStackTrace();\n\t\t}\n\t\tByteArrayOutputStream bytes = new ByteArrayOutputStream();\n\t\tbitmap.compress(Bitmap.CompressFormat.JPEG, 40, bytes);\n\t\tByteArrayInputStream fileInputStream = new ByteArrayInputStream(bytes.toByteArray());\n\t}\n\n\tprivate static ContentResolver getContentResolver() {\n\t\t// TODO Auto-generated method stub\n\t\treturn null;\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

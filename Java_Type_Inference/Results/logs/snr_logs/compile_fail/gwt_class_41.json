@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/gwt_class_41.java",
+    "java_code": "package gwt;\n//ID = 2937126\n\nimport com.extjs.gxt.ui.client.widget.Composite;\nimport com.google.gwt.user.client.ui.Button;\nimport android.renderscript.Element;\nimport com.google.gwt.event.dom.client.ClickEvent;\nimport com.extjs.gxt.ui.client.widget.Label;\nimport com.extjs.gxt.ui.client.widget.VerticalPanel;\nimport com.google.gwt.event.dom.client.ClickHandler;\n\npublic class gwt_class_41 {\n\tpublic class DownloadFilePanel extends Composite {\n\n\t\tpublic DownloadFilePanel(final String fileName) {\n\n\t\t\tfinal Element downloadIframe = RootPanel.get(\"__download\").getElement();\n\n\t\t\tVerticalPanel content = new VerticalPanel();\n\t\t\tcontent.add(new Label(\"Download For this File : \" + fileName));\n\n\t\t\tButton button = new Button(\"Download\");\n\t\t\tbutton.addClickHandler(new ClickHandler() {\n\t\t\t\t@Override\n\t\t\t\tpublic void onClick(ClickEvent event) {\n\t\t\t\t\t// i do not know what to do here\n\t\t\t\t}\n\t\t\t});\n\t\t}\n\t}\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/snr_fixed/gwt_class_41.java:17: error: cannot find symbol\n\t\t\tfinal Element downloadIframe = RootPanel.get(\"__download\").getElement();\n\t\t\t                               ^\n  symbol:   variable RootPanel\n  location: class gwt_class_41.DownloadFilePanel\nNote: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n1 error\n",
+    "return_code": 1
+}

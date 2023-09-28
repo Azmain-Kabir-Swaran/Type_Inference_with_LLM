@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/hibernate_class_36.java",
+    "java_code": "package hibernate;\n//ID = 3513366\n\nimport org.hibernate.Session;\nimport org.hibernate.cfg.Configuration;\nimport org.hibernate.SessionFactory;\nimport org.hibernate.Transaction;\n\npublic class hibernate_class_36 {\n\tpublic static void main(String[] args) {\n\t\tSession session = null;\n\t\tSessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();\n\n\t\t//        MyClass str1 = null;\n\t\tTransaction tx = null;\n\t\ttry {\n\t\t\tsession = sessionFactory.openSession();\n\t\t\ttx = session.beginTransaction();\n\t\t\t//            str1 = new MyClass(\"hello\");\n\t\t\t//            session.save(str1);\n\t\t\ttx.commit();\n\t\t} catch (Exception e) {\n\t\t\te.printStackTrace();\n\t\t} finally {\n\t\t\tsession.close();\n\t\t}\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

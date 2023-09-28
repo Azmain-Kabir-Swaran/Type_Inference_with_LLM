@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/Class_11.java",
+    "java_code": "package common_JDK;\n/*\nDate: 1/19/17 - Consider later\nURL: http://stackoverflow.com/questions/2885173/how-do-i-create-a-file-and-write-to-a-file-in-java\n*/\n\nimport java.io.File;\nimport java.io.BufferedWriter;\nimport java.io.FileWriter;\nimport javax.swing.JFileChooser;\n\npublic class Class_11 {\n\n\tpublic static void main(String[] args) {\n\t\ttry {\n\t\t\t// Create new file\n\t\t\tString content = \"This is the content to write into create file\";\n\t\t\tString path = \"D:\\\\a\\\\hi.txt\";\n\t\t\tFile file = new File(path);\n\n\t\t\t// If file doesn't exists, then create it\n\t\t\tif (!file.exists()) {\n\t\t\t\tfile.createNewFile();\n\t\t\t}\n\n\t\t\tFileWriter fw = new FileWriter(file.getAbsoluteFile());\n\t\t\tBufferedWriter bw = new BufferedWriter(fw);\n\n\t\t\t// Write in file\n\t\t\tbw.write(content);\n\n\t\t\t// Close connection\n\t\t\tbw.close();\n\t\t} catch (Exception e) {\n\t\t\tSystem.out.println(e);\n\t\t}\n\n\t\tJFileChooser c = new JFileChooser();\n\t\tc.showOpenDialog(c);\n\t\tFile writeFile = c.getSelectedFile();\n\t\tString content = \"Input the data here to be written to your file\";\n\n\t\ttry {\n\t\t\tFileWriter fw = new FileWriter(writeFile);\n\t\t\tBufferedWriter bw = new BufferedWriter(fw);\n\t\t\tbw.append(content);\n\t\t\tbw.append(\"hiiiii\");\n\t\t\tbw.close();\n\t\t\tfw.close();\n\t\t} catch (Exception exc) {\n\t\t\tSystem.out.println(exc);\n\t\t}\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

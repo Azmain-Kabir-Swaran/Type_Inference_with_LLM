@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/hibernate_class_40.java",
+    "java_code": "package hibernate;\n//ID = 3681045\n\nimport java.util.List;\nimport org.hibernate.Session;\nimport java.util.Iterator;\nimport org.hibernate.cfg.Configuration;\nimport org.hibernate.Query;\nimport org.hibernate.SessionFactory;\n\npublic class hibernate_class_40 {\n\n\tpublic static void main(String[] args) {\n\n\t\tSession session = null;\n\t\t//String query = \"select example.id, example.data from Example example\";\n\n\t\ttry {\n\n\t\t\tSessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();\n\t\t\tsession = sessionFactory.openSession();\n\n\t\t\tSystem.out.println(\"selecting records\");\n\t\t\tQuery q = session.getNamedQuery(\"getRecordsSP\");\n\t\t\t//      Query q =  session.createSQLQuery(\"call getRecords\",\"\",Example.class);\n\n\t\t\tSystem.out.print(\"Done\");\n\t\t\tList l = q.list();\n\n\t\t\tfor (Iterator it = l.iterator(); it.hasNext();) {\n\t\t\t\tObject row[] = (Object[]) it.next();\n\t\t\t\tSystem.out.println(row.length);\n\t\t\t\t//      System.out.println(row[0]);\n\t\t\t\t//      System.out.println(\"ID \" + row[0]);\n\t\t\t\t//  System.out.println(\"Data \"+ row[1]);\n\t\t\t}\n\n\t\t} catch (Exception e) {\n\t\t\te.printStackTrace();\n\t\t} finally {\n\t\t\tsession.flush();\n\t\t\tsession.close();\n\n\t\t}\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

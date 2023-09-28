@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/Android21.java",
+    "java_code": "package androidExamples;\n\nimport android.content.Context;\nimport android.widget.LinearLayout;\nimport android.widget.ImageButton;\n\n//ID = 775188\npublic class Android21 {\n\n\tpublic static void main(String[] args) {\n\t\t// TODO Auto-generated method stub\n\n\t\tImageButton b2 = new ImageButton(getApplicationContext());\n\t\tb2.setBackgroundResource(R.drawable.img);\n\t\tandroid.widget.LinearLayout container = (android.widget.LinearLayout) findViewById(R.id.lay);\n\t\tcontainer.addView(b2);\n\t}\n\n\tprivate static LinearLayout findViewById(int lay) {\n\t\t// TODO Auto-generated method stub\n\t\treturn null;\n\t}\n\n\tprivate static Context getApplicationContext() {\n\t\t// TODO Auto-generated method stub\n\t\treturn null;\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "No error (Ignored 'package R does not exist' errors)",
+    "return_code": 1
+}

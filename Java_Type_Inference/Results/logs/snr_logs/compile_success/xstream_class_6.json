@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/xstream_class_6.java",
+    "java_code": "package xstream;\n//ID = 3642820\n\nimport java.io.File;\nimport java.io.OutputStream;\nimport com.thoughtworks.xstream.XStream;\nimport java.io.FileOutputStream;\nimport com.thoughtworks.xstream.io.xml.DomDriver;\n\npublic class xstream_class_6 {\n\tpublic static boolean toXML(Object object, File file) {\n\t\tXStream xStream = new XStream(new DomDriver(\"UTF-8\"));\n\t\tOutputStream outputStream = null;\n\n\t\ttry {\n\t\t\toutputStream = new FileOutputStream(file);\n\t\t\txStream.toXML(object, outputStream);\n\t\t} catch (Exception exp) {\n\t\t\treturn false;\n\t\t} finally {\n\t\t\tif (true) {\n\t\t\t\treturn false;\n\t\t\t}\n\t\t\toutputStream = null;\n\t\t}\n\n\t\treturn true;\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

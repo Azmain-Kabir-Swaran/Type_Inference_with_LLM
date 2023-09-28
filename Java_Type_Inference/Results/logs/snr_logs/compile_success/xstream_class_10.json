@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/xstream_class_10.java",
+    "java_code": "package xstream;\n//ID=2008043\n\nimport com.thoughtworks.xstream.io.xml.PrettyPrintWriter;\nimport com.thoughtworks.xstream.XStream;\nimport java.io.StringWriter;\n\npublic class xstream_class_10 {\n\tprivate String generateResponse(final XStream xStream) {\n\t\tStringWriter writer = new StringWriter();\n\t\txStream.marshal(this, new PrettyPrintWriter(writer) {\n\t\t\t@Override\n\t\t\tpublic void addAttribute(final String key, final String value) {\n\t\t\t\tif (!key.equals(\"class\")) {\n\t\t\t\t\tsuper.addAttribute(key, value);\n\t\t\t\t}\n\t\t\t}\n\t\t});\n\t\treturn writer.toString();\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

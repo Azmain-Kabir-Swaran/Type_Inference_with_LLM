@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/hibernate_class_37.java",
+    "java_code": "package hibernate;\n//ID = 3534854\n\nimport org.hibernate.Session;\nimport org.hibernate.SessionFactory;\nimport org.hibernate.HibernateException;\nimport org.hibernate.cfg.AnnotationConfiguration;\n\npublic class hibernate_class_37 {\n\n\tpublic static void test() {\n\t\tString c = \"\";\n\t\tSession session = HibernateUtil.getSession();\n\t\tsession.beginTransaction();\n\t\tsession.save(c);\n\t\tsession.getTransaction().commit();\n\n\t}\n\n\t/**\n\t * @param args\n\t */\n\tpublic static void main(String[] args) {\n\t\thibernate_class_37.test();\n\n\t}\n\n\tpublic static class HibernateUtil {\n\n\t\tprivate static final SessionFactory sessionFactory;\n\t\tstatic {\n\t\t\ttry {\n\t\t\t\tsessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();\n\t\t\t} catch (Throwable ex) {\n\t\t\t\t// Log exception!\n\t\t\t\tthrow new ExceptionInInitializerError(ex);\n\t\t\t}\n\t\t}\n\n\t\tpublic static Session getSession() throws HibernateException {\n\t\t\treturn sessionFactory.openSession();\n\t\t}\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

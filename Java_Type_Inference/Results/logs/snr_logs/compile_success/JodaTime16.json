@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/JodaTime16.java",
+    "java_code": "package jodatime;\n\nimport org.joda.time.format.PeriodFormatterBuilder;\nimport org.joda.time.DateTime;\nimport org.joda.time.format.PeriodFormatter;\nimport org.joda.time.Period;\n\n//ID = 6387723\npublic class JodaTime16 {\n\tpublic static void main(String[] args) {\n\t\tDateTime d1 = new DateTime(2011, 6, 17, 13, 13, 5, 0);\n\t\tDateTime d2 = new DateTime(2011, 6, 17, 10, 17, 3, 0);\n\n\t\tPeriod negativePeriod = new Period(d1, d2);\n\t\tPeriod positivePeriod = new Period(d2, d1);\n\n\t\tPeriodFormatter pf = new PeriodFormatterBuilder().minimumPrintedDigits(2).appendHours().appendSuffix(\":\")\n\t\t\t\t.rejectSignedValues(true) // Does this do anything?\n\t\t\t\t.appendMinutes().appendSuffix(\":\").appendSeconds().toFormatter();\n\n\t\tSystem.out.printf(\"Negative Period: %s\\n\", pf.print(negativePeriod));\n\t\tSystem.out.printf(\"Positive Period: %s\\n\", pf.print(positivePeriod));\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/gwt_class_48.java",
+    "java_code": "package gwt;\n\nimport com.google.gwt.event.logical.shared.SelectionEvent;\nimport com.google.gwt.event.logical.shared.BeforeSelectionHandler;\nimport com.google.gwt.event.logical.shared.SelectionHandler;\nimport com.google.gwt.user.client.ui.TabBar;\nimport com.google.gwt.user.client.Window;\nimport com.google.gwt.core.client.EntryPoint;\nimport com.google.gwt.event.logical.shared.BeforeSelectionEvent;\n\n//ID = 3635828\npublic class gwt_class_48 implements EntryPoint {\n\t@Override\n\tpublic void onModuleLoad() {\n\t\tTabBar bar = new TabBar();\n\t\tbar.addTab(\"foo\");\n\t\tbar.addTab(\"bar\");\n\t\tbar.addTab(\"baz\");\n\t\tbar.addSelectionHandler(new SelectionHandler() {\n\n\t\t\tpublic void onSelection(SelectionEvent event) {\n\t\t\t\t//let user know what you just did\n\t\t\t\tWindow.alert(\"you clicked tab\" + event.getSelectedItem());\n\t\t\t}\n\n\t\t});\n\t\t// Just for fun, let's disallow selection of 'bar'.\n\t\tbar.addBeforeSelectionHandler(new BeforeSelectionHandler() {\n\t\t\tpublic void onBeforeSelection(BeforeSelectionEvent event) {\n\t\t\t\tevent.cancel();\n\t\t\t}\n\n\t\t});\n\n\t}\n}",
+    "stdout": "",
+    "stderr": "Note: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\nNote: /home/azmain/snr_fixed/gwt_class_48.java uses unchecked or unsafe operations.\nNote: Recompile with -Xlint:unchecked for details.\n",
+    "return_code": 0
+}

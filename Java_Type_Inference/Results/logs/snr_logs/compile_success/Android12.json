@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/Android12.java",
+    "java_code": "package androidExamples;\n//ID = 549451\n\nimport android.widget.LinearLayout;\nimport android.view.ViewGroup;\nimport android.graphics.Color;\nimport android.os.Bundle;\nimport android.widget.TextView;\nimport android.app.Activity;\n\npublic class Android12 extends Activity {\n\t/** Called when the activity is first created. */\n\t@Override\n\tpublic void onCreate(Bundle savedInstanceState) {\n\t\tsuper.onCreate(savedInstanceState);\n\t\tLinearLayout l = new LinearLayout(this);\n\t\tLinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT,\n\t\t\t\tLinearLayout.LayoutParams.WRAP_CONTENT);\n\t\tLinearLayout.LayoutParams mlp = new LinearLayout.LayoutParams(new ViewGroup.MarginLayoutParams(\n\t\t\t\tLinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));\n\t\tmlp.setMargins(0, 0, 2, 0);\n\n\t\tfor (int i = 0; i < 10; i++) {\n\t\t\tTextView t = new TextView(this);\n\t\t\tt.setText(\"Hello\");\n\t\t\tt.setBackgroundColor(Color.RED);\n\t\t\tt.setSingleLine(true);\n\t\t\tl.addView(t, mlp);\n\t\t}\n\n\t\tsetContentView(l, lp);\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

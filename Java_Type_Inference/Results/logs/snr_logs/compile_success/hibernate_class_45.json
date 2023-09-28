@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/hibernate_class_45.java",
+    "java_code": "package hibernate;\n//ID = 4001795\n\nimport org.hibernate.Session;\nimport org.hibernate.SessionFactory;\nimport org.hibernate.cfg.AnnotationConfiguration;\n\npublic class hibernate_class_45 {\n\tpublic static void main(String[] args) {\n\t\tSessionFactory factory = new AnnotationConfiguration().configure().buildSessionFactory();\n\t\tSession session = factory.openSession();\n\t\tsession.beginTransaction();\n\n\t\t//        Message m1 = new Message(\"Hibernated a  messages on \" + new Date());\n\t\tsession.save(\"aa\");\n\t\tsession.getTransaction().commit();\n\t\tsession.close();\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

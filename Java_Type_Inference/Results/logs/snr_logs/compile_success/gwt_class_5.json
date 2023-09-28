@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/gwt_class_5.java",
+    "java_code": "package gwt;\n//ID = 1482513\n\nimport com.google.gwt.core.client.JsArray;\nimport com.google.gwt.core.client.JsArrayInteger;\n\npublic class gwt_class_5 {\n\tprivate final JsArray<JsArrayInteger> popItemFromArray(final JsArray<JsArrayInteger> oldArray) {\n\t\t// the createEmpty...  method is a native method which returns eval(\"[]\")\n\t\tJsArray<JsArrayInteger> newArray = null;\n\n\t\tfor (int i = 0; i < oldArray.length() - 1; i++) {\n\t\t\tnewArray.set(i, oldArray.get(i));\n\t\t}\n\n\t\treturn newArray;\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

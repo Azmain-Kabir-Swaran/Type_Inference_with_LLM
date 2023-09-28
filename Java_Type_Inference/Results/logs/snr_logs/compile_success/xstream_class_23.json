@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/xstream_class_23.java",
+    "java_code": "package xstream;\n//2456470\n\nimport com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.io.xml.XppDriver;\nimport com.thoughtworks.xstream.converters.javabean.JavaBeanConverter;\nimport com.thoughtworks.xstream.annotations.XStreamAlias;\n\npublic class xstream_class_23 {\n\t@XStreamAlias(\"test\")\n\tpublic class TestObject {\n\t\tprivate String foo;\n\n\t\tpublic String getFoo() {\n\t\t\t//return foo; -- Adjusted for EDIT#2\n\t\t\treturn foo.toLowerCase();\n\t\t}\n\n\t\tpublic void setFoo(String foo) {\n\t\t\tthis.foo = foo;\n\t\t}\n\t}\n\n\tpublic void test() throws Exception {\n\t\tXStream x = new XStream(new XppDriver());\n\t\tx.autodetectAnnotations(true);\n\t\tx.processAnnotations(TestObject.class);\n\n\t\tx.registerConverter(new JavaBeanConverter(x.getMapper()));\n\n\t\tTestObject o = new TestObject();\n\t\t//o.setFoo(\"bar\"); -- Adjusted for EDIT#2\n\t\to.setFoo(\"BAR\");\n\n\t\tString xml = x.toXML(o);\n\n\t\tSystem.out.println(xml);\n\n\t\t/*\n\t\t  Expecting...\n\t\t    <test>\n\t\t      <foo>bar</foo>\n\t\t    </test>\n\t\t\n\t\t  But instead getting...\n\t\t    <test>\n\t\t      <foo/>\n\t\t    </test>         \n\t\t*/\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

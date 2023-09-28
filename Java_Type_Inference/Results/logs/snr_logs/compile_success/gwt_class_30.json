@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/gwt_class_30.java",
+    "java_code": "package gwt;\n\nimport com.google.gwt.user.client.ui.DialogBox;\nimport com.google.gwt.user.client.ui.Grid;\nimport com.google.gwt.user.client.ui.TextBox;\nimport com.google.gwt.user.client.ui.HTML;\n\npublic class gwt_class_30 {\n\tstatic TextBox firstName = new TextBox();\n\tstatic TextBox surName = new TextBox();\n\tstatic DialogBox box;\n\n\tstatic public DialogBox buildNewElecPopup() {\n\n\t\tDialogBox box = new DialogBox();\n\t\tbox.setAutoHideEnabled(true);\n\n\t\tbox.setText(\"Add a New Candidate\");\n\t\tbox.setAnimationEnabled(true);\n\t\tbox.setGlassEnabled(true);\n\n\t\tGrid dialogGrid = new Grid(2, 3);\n\t\tdialogGrid.setPixelSize(250, 125);\n\t\tdialogGrid.setCellPadding(10);\n\t\tdialogGrid.setWidget(0, 0, new HTML(\"<strong>First Name</strong>\"));\n\t\tdialogGrid.setWidget(0, 1, firstName);\n\n\t\tdialogGrid.setWidget(1, 0, new HTML(\"<strong>Surname</strong>\"));\n\t\tdialogGrid.setWidget(1, 1, surName);\n\n\t\tbox.add(dialogGrid);\n\n\t\treturn box;\n\t}\n}",
+    "stdout": "",
+    "stderr": "Note: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n",
+    "return_code": 0
+}

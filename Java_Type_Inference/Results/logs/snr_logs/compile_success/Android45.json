@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/Android45.java",
+    "java_code": "package androidExamples;\n//ID = 1215817\n\nimport android.content.Context;\nimport android.content.ComponentName;\nimport android.os.Bundle;\nimport android.content.Intent;\nimport android.content.IntentFilter;\nimport android.content.IntentFilter.MalformedMimeTypeException;\nimport android.content.BroadcastReceiver;\nimport android.app.Activity;\nimport android.util.Log;\n\npublic class Android45 extends Activity {\n\n\tprivate static final String TAG = \"MyActivity\";\n\n\t@Override\n\tpublic void onCreate(Bundle savedInstanceState) {\n\t\tsuper.onCreate(savedInstanceState);\n\n\t\tIntentFilter intentFilter = new IntentFilter();\n\t\tintentFilter.addAction(Intent.ACTION_SEND);\n\t\tintentFilter.addCategory(Intent.CATEGORY_DEFAULT);\n\t\ttry {\n\t\t\tintentFilter.addDataType(\"image/*\");\n\t\t} catch (MalformedMimeTypeException e) {\n\t\t\tLog.e(TAG, e.toString());\n\t\t}\n\n\t\tIntent x = registerReceiver(new BroadcastReceiver() {\n\t\t\tpublic void onReceive(Context context, Intent intent) {\n\t\t\t\tLog.d(TAG, \"Received intent \" + intent);\n\t\t\t\tintent.setComponent(new ComponentName(context, Uploader.class));\n\t\t\t\tstartActivity(intent);\n\t\t\t}\n\t\t}, intentFilter);\n\n\t\tif (x == null)\n\t\t\tLog.i(TAG, \"failed to regist a receiver\");\n\t\telse\n\t\t\tLog.i(TAG, \"registed a receiver successfully\");\n\n\t}\n\n\tclass Uploader {\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

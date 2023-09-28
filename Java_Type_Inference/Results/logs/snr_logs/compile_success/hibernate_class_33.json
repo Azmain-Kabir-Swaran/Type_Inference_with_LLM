@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/hibernate_class_33.java",
+    "java_code": "package hibernate;\n//ID = 3332212\n\nimport org.hibernate.Session;\nimport org.hibernate.cfg.Configuration;\nimport org.hibernate.SessionFactory;\n\npublic class hibernate_class_33 {\n\n\tprivate static hibernate_class_33 instance = null;\n\n\tprivate SessionFactory sessionFactory;\n\n\tpublic static hibernate_class_33 getInstance() {\n\t\tif (hibernate_class_33.instance == null) {\n\t\t\thibernate_class_33.instance = new hibernate_class_33().init();\n\t\t}\n\n\t\treturn hibernate_class_33.instance;\n\t}\n\n\tpublic SessionFactory getSessionFactory() {\n\t\treturn this.sessionFactory;\n\t}\n\n\tpublic Session getSession() {\n\t\treturn this.sessionFactory.openSession();\n\t}\n\n\tprivate hibernate_class_33 init() {\n\t\tConfiguration cfg = new Configuration();\n\n\t\t//        cfg.addClass(domain.UserClass.class);\n\t\t//        cfg.addClass(domain.User.class);\n\n\t\tcfg.setProperties(System.getProperties());\n\t\tcfg.configure();\n\t\tSessionFactory sessions = cfg.buildSessionFactory();\n\n\t\tsessionFactory = cfg.configure().buildSessionFactory();\n\t\treturn this;\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

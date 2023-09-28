@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/Android10.java",
+    "java_code": "package androidExamples;\n\nimport android.widget.Chronometer;\nimport android.os.SystemClock;\nimport android.util.Log;\n\n//ID = 526524\npublic class Android10 {\n\n\tpublic static void main(String[] args) {\n\n\t\t// TODO Auto-generated method stub\n\t\tChronometer t = (Chronometer) findViewById(R.id.toptime);\n\t\tlong time = SystemClock.elapsedRealtime() - t.getBase();\n\t\tLog.d(null, \"Was: \" + time); //time is not the proper time for some reason - it is a random number between 0 and 50\n\t\tt.setBase(SystemClock.elapsedRealtime());\n\t\tt.start();\n\n\t}\n\n\tprivate static Chronometer findViewById(int toptime) {\n\t\t// TODO Auto-generated method stub\n\t\treturn null;\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "No error (Ignored 'package R does not exist' errors)",
+    "return_code": 1
+}

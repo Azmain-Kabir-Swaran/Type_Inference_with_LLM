@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/hibernate_class_32.java",
+    "java_code": "package hibernate;\n//ID = 3287351\n\nimport javax.persistence.Entity;\nimport javax.persistence.Table;\nimport javax.persistence.GeneratedValue;\nimport org.hibernate.annotations.Index;\nimport javax.persistence.Id;\n\n@Entity\n@Table(name = \"log_entries\")\n@org.hibernate.annotations.Table(appliesTo = \"log_entries\", indexes = {\n\t\t@Index(name = \"idx\", columnNames = { \"job\", \"version\", \"schedule\", \"dttmRun\", \"pid\" }) })\npublic class hibernate_class_32 {\n\t@Id\n\t@GeneratedValue\n\tLong id;\n\tString job;\n\tString version;\n\tString schedule;\n\tString dttmRun;\n\tint pid;\n\tString command;\n\tint duration;\n\n\t// getters and setters...\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

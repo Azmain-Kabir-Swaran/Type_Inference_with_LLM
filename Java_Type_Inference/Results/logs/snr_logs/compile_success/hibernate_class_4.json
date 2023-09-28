@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/hibernate_class_4.java",
+    "java_code": "package hibernate;\n//ID = 970573\n\nimport org.hibernate.cfg.Configuration;\nimport org.hibernate.SessionFactory;\nimport org.hibernate.HibernateException;\n\npublic class hibernate_class_4 {\n\tprivate static final SessionFactory sessionFactory;\n\n\tstatic {\n\t\ttry {\n\t\t\tsessionFactory = new Configuration().configure().buildSessionFactory();\n\t\t} catch (HibernateException he) {\n\t\t\tSystem.err.println(he);\n\t\t\tthrow new ExceptionInInitializerError(he);\n\t\t}\n\t}\n\n\tpublic static SessionFactory getSessionFactory() {\n\t\treturn sessionFactory;\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

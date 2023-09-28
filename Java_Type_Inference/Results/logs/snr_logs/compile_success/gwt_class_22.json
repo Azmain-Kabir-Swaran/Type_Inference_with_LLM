@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/gwt_class_22.java",
+    "java_code": "package gwt;\n//ID = 2237142\n\nimport com.google.gwt.uibinder.client.UiBinder;\nimport com.google.gwt.uibinder.client.UiField;\nimport com.extjs.gxt.charts.client.model.axis.Label;\nimport com.google.gwt.event.dom.client.ClickEvent;\nimport android.widget.Button;\nimport com.google.gwt.uibinder.client.UiHandler;\nimport com.google.gwt.user.client.ui.Composite;\nimport com.extjs.gxt.ui.client.widget.VerticalPanel;\nimport com.google.gwt.core.client.GWT;\n\npublic class gwt_class_22 extends Composite {\n\n\tprivate static TestViewUiBinder uiBinder = GWT.create(TestViewUiBinder.class);\n\n\tinterface TestViewUiBinder extends UiBinder<VerticalPanel, gwt_class_22> {\n\t}\n\n\t@UiField\n\tLabel testObjectStringLabel;\n\t@UiField\n\tLabel innerObjectStringLabel;\n\t@UiField\n\tVerticalPanel listObjectsPanel;\n\t@UiField\n\tButton button;\n\t@UiField\n\tLabel errorMessageLabel;\n\n\tpublic gwt_class_22(String firstName) {\n\t\tinitWidget(uiBinder.createAndBindUi(this));\n\t}\n\n\t@UiHandler(\"button\")\n\tvoid onClick(ClickEvent e) {\n\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "Note: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n",
+    "return_code": 0
+}

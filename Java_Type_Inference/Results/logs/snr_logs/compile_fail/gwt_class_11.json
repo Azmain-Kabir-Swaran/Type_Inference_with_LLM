@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/gwt_class_11.java",
+    "java_code": "package gwt;\n//ID = 1651138\n\nimport com.extjs.gxt.ui.client.widget.HorizontalPanel;\nimport com.extjs.gxt.ui.client.widget.Label;\nimport com.google.gwt.core.client.EntryPoint;\n\npublic class gwt_class_11 implements EntryPoint {\n\tHorizontalPanel dictionaryPanel;\n\tLabel wordLabel;\n\n\tpublic gwt_class_11() {\n\t\tdictionaryPanel = new HorizontalPanel();\n\t\twordLabel = new Label(\"Word\");\n\t}\n\n\t@Override\n\tpublic void onModuleLoad() {\n\t\tdictionaryPanel.add(wordLabel);\n\t\tRootPanel.get(\"dictionary\").add(dictionaryPanel);\n\t}\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/snr_fixed/gwt_class_11.java:20: error: cannot find symbol\n\t\tRootPanel.get(\"dictionary\").add(dictionaryPanel);\n\t\t^\n  symbol:   variable RootPanel\n  location: class gwt_class_11\nNote: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n1 error\n",
+    "return_code": 1
+}

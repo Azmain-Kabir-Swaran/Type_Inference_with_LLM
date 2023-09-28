@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/gwt_class_10.java",
+    "java_code": "package gwt;\n//ID = 1629323\n\nimport com.extjs.gxt.ui.client.widget.form.FormPanel;\nimport com.google.gwt.user.client.ui.Button;\nimport com.google.gwt.user.client.ui.ClickListener;\nimport com.google.gwt.user.client.ui.Widget;\nimport com.extjs.gxt.ui.client.widget.Label;\nimport com.google.gwt.user.client.ui.TextBox;\nimport com.extjs.gxt.ui.client.widget.VerticalPanel;\n\n//import com.google.gwt.user.client.ui.FormPanel;\n//import com.google.gwt.user.client.ui.VerticalPanel;\n\npublic class gwt_class_10 {\n\tpublic void main() {\n\t\tfinal FormPanel form = new FormPanel();\n\t\tVerticalPanel holder = new VerticalPanel();\n\t\tholder.add(new Label(\"User ID\"));\n\t\tTextBox nameTextBox = new TextBox();\n\t\tnameTextBox.setName(\"userid\");\n\t\tholder.add(nameTextBox);\n\n\t\tButton submitButton = new Button(\"Submit\");\n\t\tholder.add(submitButton);\n\t\tform.add(holder);\n\n\t\tsubmitButton.addClickListener(new ClickListener() {\n\n\t\t\tpublic void onClick1(Widget sender) {\n\t\t\t\tform.submit();\n\t\t\t}\n\n\t\t\t@Override\n\t\t\tpublic void onClick(Widget sender) {\n\t\t\t\t// TODO Auto-generated method stub\n\n\t\t\t}\n\t\t});\n\t}\n}",
+    "stdout": "",
+    "stderr": "Note: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n",
+    "return_code": 0
+}

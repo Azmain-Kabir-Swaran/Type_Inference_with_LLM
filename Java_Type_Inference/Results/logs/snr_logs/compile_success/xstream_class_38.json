@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/xstream_class_38.java",
+    "java_code": "package xstream;\n//ID=33088013\n\nimport java.util.List;\nimport com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.annotations.XStreamAlias;\nimport java.util.ArrayList;\n\npublic class xstream_class_38 {\n\tXStream xstream = new XStream();\n\n\t@XStreamAlias(\"bookdetails\")\n\tpublic class BookDetails {\n\t\tprivate int bookId;\n\t\tprivate String bookName;\n\t\tprivate int amount;\n\t}\n\n\t@XStreamAlias(\"Books\")\n\tpublic class Books {\n\t\tprivate List<BookDetails> bookDetails = new ArrayList<BookDetails>();\n\t}\n\n\tpublic BookDetails convertXml(String xml) {\n\t\txstream.processAnnotations(Books.class);\n\t\txstream.processAnnotations(BookDetails.class);\n\t\txstream.addImplicitCollection(Books.class, \"bookDetails\");\n\t\tBooks b = (Books) xstream.fromXML(xml);\n\t\t// and now you can return your BookDetails element (in case you want only first one)\n\t\treturn b.bookDetails.get(0);\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

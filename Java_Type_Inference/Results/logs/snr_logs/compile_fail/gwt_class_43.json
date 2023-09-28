@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/gwt_class_43.java",
+    "java_code": "package gwt;\n//ID = 3138621\n\nimport com.extjs.gxt.ui.client.widget.Composite;\nimport com.extjs.gxt.ui.client.widget.HorizontalPanel;\nimport com.google.gwt.user.client.ui.Widget;\nimport com.extjs.gxt.charts.client.model.axis.Label;\nimport com.google.gwt.event.dom.client.ClickEvent;\nimport com.google.gwt.event.dom.client.MouseOutHandler;\nimport com.google.gwt.event.dom.client.MouseOutEvent;\nimport com.google.gwt.event.dom.client.ClickHandler;\n\npublic class gwt_class_43 {\n\tpublic class GroupLbl extends Composite implements ClickHandler, MouseOutHandler {\n\t\tprivate Label lbl;\n\t\t//\t\tprivate GroupLblHandler lblHandler = null;\n\t\tprivate HorizontalPanel hp;\n\n\t\tpublic void onClick(ClickEvent event) {\n\t\t\thp.setStyleName(\"background-GroupLbl\");\n\n\t\t\tObject folder = null;\n\t\t\tif (event.getSource().equals(folder) || event.getSource().equals(lbl)) {\n\n\t\t\t\t//\t\t\t\tlblHandler.onGroupLabelSelect(this);\n\t\t\t}\n\t\t}\n\n\t\t@Override\n\t\tpublic Widget getWidget() {\n\t\t\treturn hp;\n\t\t}\n\n\t\tpublic void onMouseOut(MouseOutEvent event) {\n\t\t\thp.removeStyleName(\"background-GroupLbl\");\n\t\t}\n\t}\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/snr_fixed/gwt_class_43.java:29: error: method does not override or implement a method from a supertype\n\t\t@Override\n\t\t^\nNote: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n1 error\n",
+    "return_code": 1
+}

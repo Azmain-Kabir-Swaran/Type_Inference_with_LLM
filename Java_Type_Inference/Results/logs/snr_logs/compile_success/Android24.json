@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/Android24.java",
+    "java_code": "package androidExamples;\n//ID = 896889\n\nimport android.content.Context;\nimport java.util.List;\nimport android.os.Bundle;\nimport java.util.Iterator;\nimport android.app.Activity;\nimport android.location.LocationManager;\nimport android.util.Log;\n\npublic class Android24 extends Activity {\n\t/** Called when the activity is first created. */\n\t@Override\n\tpublic void onCreate(Bundle savedInstanceState) {\n\t\tsuper.onCreate(savedInstanceState);\n\t\tsetContentView(R.layout.main);\n\n\t\tLocationManager l = (LocationManager) getSystemService(Context.LOCATION_SERVICE);\n\t\tList<String> li = l.getAllProviders();\n\t\tfor (Iterator<String> iterator = li.iterator(); iterator.hasNext();) {\n\t\t\tString string = iterator.next();\n\t\t\tLog.d(\"gps\", string);\n\t\t}\n\t\tif (l.getLastKnownLocation(\"gps\") == null)\n\t\t\tLog.d(\"gps\", \"null\");\n\t}\n}",
+    "stdout": "",
+    "stderr": "No error (Ignored 'package R does not exist' errors)",
+    "return_code": 1
+}

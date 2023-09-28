@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/Android41.java",
+    "java_code": "package androidExamples;\n//ID = 1182620\n\nimport android.content.Context;\nimport android.graphics.Color;\nimport android.widget.TextView;\nimport android.view.View;\n\npublic class Android41 extends View {\n\tpublic Android41(Context context) {\n\t\tsuper(context);\n\t\tsetBackgroundColor(Color.RED);\n\t}\n\n\tTextView tv;\n\n\tpublic void adText(TextView tv) {\n\t\tthis.tv = tv;\n\t\ttv.setVisibility(tv.VISIBLE);\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

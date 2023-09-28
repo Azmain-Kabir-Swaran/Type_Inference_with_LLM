@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/gwt_class_44.java",
+    "java_code": "package gwt;\n//ID = 3313553\n\nimport com.google.gwt.user.client.rpc.AsyncCallback;\nimport com.google.gwt.user.client.ui.DockLayoutPanel;\nimport com.google.gwt.user.client.ui.ResizeComposite;\nimport com.extjs.gxt.ui.client.widget.Label;\nimport com.google.gwt.dom.client.Style.Unit;\nimport com.google.gwt.core.client.GWT;\nimport com.google.gwt.core.client.RunAsyncCallback;\n\npublic class gwt_class_44 extends ResizeComposite {\n\n\tprivate static gwt_class_44 instance = null;\n\n\tpublic static void getInstance(final AsyncCallback<gwt_class_44> callback) {\n\t\tGWT.runAsync(new RunAsyncCallback() {\n\n\t\t\t@Override\n\t\t\tpublic void onSuccess() {\n\t\t\t\tif (instance == null) {\n\t\t\t\t\tinstance = new gwt_class_44();\n\t\t\t\t}\n\t\t\t\tcallback.onSuccess(instance);\n\t\t\t}\n\n\t\t\t@Override\n\t\t\tpublic void onFailure(Throwable reason) {\n\t\t\t\tcallback.onFailure(reason);\n\t\t\t}\n\t\t});\n\t}\n\n\tprivate gwt_class_44() {\n\t\tDockLayoutPanel dockLayoutPanel = new DockLayoutPanel(Unit.EM);\n\t\tdockLayoutPanel.addNorth(new Label(\"North!\"), 7);\n\t\tdockLayoutPanel.addWest(new Label(\"West!\"), 15);\n\t\tdockLayoutPanel.add(new Label(\"Center! :D\"));\n\t\tinitWidget(dockLayoutPanel);\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "Note: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n",
+    "return_code": 0
+}

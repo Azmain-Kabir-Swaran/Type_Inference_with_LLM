@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/JodaTime33.java",
+    "java_code": "package jodatime;\n\nimport org.joda.time.format.PeriodFormatterBuilder;\nimport org.joda.time.Period;\n\n//ID = 9961480\npublic class JodaTime33 {\n\n\tpublic static void main(String[] args) {\n\t\t// TODO Auto-generated method stub\n\n\t\tPeriodFormatter hoursMinutesSeconds = new PeriodFormatterBuilder().appendHours().appendSuffix(\" hour\", \" hours\")\n\t\t\t\t.appendSeparator(\", \", \" and \").appendMinutes().appendSuffix(\" minute\", \" minutes\")\n\t\t\t\t.appendSeparator(\" and \").printZeroRarelyFirst().appendSeconds().appendSuffix(\" second\", \" seconds\")\n\t\t\t\t.toFormatter();\n\n\t\tSystem.out.println(hoursMinutesSeconds.print(new Period(0, 0, 0, 500)));\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/snr_fixed/JodaTime33.java:12: error: cannot find symbol\n\t\tPeriodFormatter hoursMinutesSeconds = new PeriodFormatterBuilder().appendHours().appendSuffix(\" hour\", \" hours\")\n\t\t^\n  symbol:   class PeriodFormatter\n  location: class JodaTime33\n1 error\n",
+    "return_code": 1
+}

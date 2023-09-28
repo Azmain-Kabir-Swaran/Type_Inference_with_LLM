@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/hibernate_class_11.java",
+    "java_code": "package hibernate;\n//ID = 1310603\n\nimport javax.persistence.Column;\nimport javax.persistence.Entity;\nimport javax.persistence.Table;\nimport javax.persistence.ManyToOne;\nimport javax.persistence.JoinColumn;\nimport org.hibernate.annotations.ForeignKey;\nimport javax.persistence.FetchType;\nimport javax.persistence.Id;\nimport org.apache.directory.api.ldap.aci.UserClass.UserGroup;\nimport java.io.Serializable;\n\npublic class hibernate_class_11 {\n\n\t@Entity\n\t@Table(name = \"User\")\n\tpublic class User implements Serializable {\n\n\t\tprivate static final long serialVersionUID = 2209767646758652729L;\n\n\t\t@Id\n\t\t@Column(name = \"id\", nullable = false)\n\t\tprivate Integer id;\n\n\t\t@Column(name = \"name\", length = 200, nullable = true)\n\t\tprivate String name;\n\n\t\t@ManyToOne(fetch = FetchType.EAGER)\n\t\t@JoinColumn(name = \"groupId\", nullable = false, insertable = false, updatable = false)\n\t\t@ForeignKey(name = \"FK_GroupId\")\n\t\tprivate UserGroup userGroup;\n\n\t\t/* Getters, Setters, toString, equals & hashCode */\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

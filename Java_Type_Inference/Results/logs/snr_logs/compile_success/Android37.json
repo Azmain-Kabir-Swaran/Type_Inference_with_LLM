@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/Android37.java",
+    "java_code": "package androidExamples;\n//ID = 1111980\n\nimport android.os.Message;\nimport android.os.Handler;\nimport android.app.ProgressDialog;\nimport android.app.Activity;\n\npublic class Android37 extends Activity implements Runnable {\n\tpublic ProgressDialog mProgress;\n\n\t// UI has a button that when pressed calls send\n\n\tpublic void send() {\n\t\tmProgress = ProgressDialog.show(this, \"Please wait\", \"Please wait\", true, true);\n\t\tThread thread = new Thread(this);\n\t\tthread.start();\n\t}\n\n\tpublic void run() {\n\t\ttry {\n\t\t\tThread.sleep(10000);\n\t\t} catch (InterruptedException e) {\n\t\t\t// TODO Auto-generated catch block\n\t\t\te.printStackTrace();\n\t\t}\n\t\tMessage msg = new Message();\n\t\tmHandler.sendMessage(msg);\n\t}\n\n\tprivate final Handler mHandler = new Handler() {\n\t\t@Override\n\t\tpublic void handleMessage(Message msg) {\n\t\t\tmProgress.dismiss();\n\t\t}\n\t};\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

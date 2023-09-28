@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/hibernate_class_46.java",
+    "java_code": "package hibernate;\n//ID = 4302983\n\nimport org.hibernate.JDBCException;\nimport org.hibernate.Session;\nimport org.hibernate.SessionFactory;\nimport org.hibernate.HibernateException;\nimport org.hibernate.CacheMode;\n\npublic class hibernate_class_46 {\n\n\tpublic static final ThreadLocal session = new ThreadLocal();\n\tprivate static hibernate_class_46 me;\n\n\tstatic {\n\t\ttry {\n\t\t\tme = new hibernate_class_46();\n\t\t} catch (Exception e) {\n\t\t\te.printStackTrace();\n\t\t}\n\t}\n\n\tprivate hibernate_class_46() throws HibernateException, JDBCException {\n\t}\n\n\tpublic Session currentSession() throws Exception {\n\t\tSession s = (Session) session.get();\n\t\tif (s != null) {\n\t\t\ts.setCacheMode(CacheMode.REFRESH);\n\t\t}\n\n\t\tif (s == null) {\n\t\t\ts = openSession();\n\n\t\t\tsession.set(s);\n\t\t}\n\n\t\treturn s;\n\t}\n\n\tpublic void setSessionFactory(SessionFactory sessionFactory) {\n\t}\n\n\tpublic static Session openSession() {\n\t\tSession session = null;\n\t\treturn session;\n\t}\n}",
+    "stdout": "",
+    "stderr": "Note: /home/azmain/snr_fixed/hibernate_class_46.java uses unchecked or unsafe operations.\nNote: Recompile with -Xlint:unchecked for details.\n",
+    "return_code": 0
+}

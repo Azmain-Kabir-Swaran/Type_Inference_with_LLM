@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/hibernate_class_20.java",
+    "java_code": "package hibernate;\n//ID = 2371299\n\nimport org.hibernate.SessionFactory;\nimport org.hibernate.cfg.AnnotationConfiguration;\n\npublic class hibernate_class_20 {\n\tprivate static final SessionFactory sessionFactory;\n\n\tstatic {\n\t\ttry {\n\t\t\t// Create the SessionFactory from hibernate.cfg.xml\n\t\t\tsessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();\n\t\t} catch (Throwable e) {\n\t\t\tSystem.err.println(\"Initial sessionFactory creation failed.  \" + e);\n\t\t\tthrow new ExceptionInInitializerError(e);\n\t\t}\n\t}\n\n\tpublic static SessionFactory getSessionFactory() {\n\t\treturn sessionFactory;\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/JodaTime21.java",
+    "java_code": "package jodatime;\n//ID = 7868105\n\nimport android.net.ParseException;\nimport org.joda.time.DateTimeZone;\nimport org.joda.time.LocalDateTime;\nimport org.joda.time.DateTime;\nimport java.sql.Date;\n\npublic class JodaTime21 {\n\tpublic static void main(String[] args) {\n\t\tDateFormat formatter = new SimpleDateFormat(\"yyyy-MM-dd HH:mm:ss\");\n\t\tDate dt = null;\n\t\ttry {\n\t\t\tdt = formatter.parse(\"2011-10-23 12:00:00\");\n\t\t} catch (ParseException e) {\n\t\t\t// TODO Auto-generated catch block\n\t\t\te.printStackTrace();\n\t\t}\n\t\tLocalDateTime ldt = new DateTime(dt).withZone(DateTimeZone.UTC).toLocalDateTime();\n\t\tSystem.out.println(\"Original date: \" + ldt.toDateTime().toDate().toString());\n\t\tDateTime cvtldt = ldt.toDateTime(DateTimeZone.forID(\"-05:00\"));\n\t\tSystem.out.println(\"Converted date: \" + cvtldt.toLocalDateTime().toDateTime().toDate().toString());\n\t}\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/snr_fixed/JodaTime21.java:12: error: cannot find symbol\n\t\tDateFormat formatter = new SimpleDateFormat(\"yyyy-MM-dd HH:mm:ss\");\n\t\t^\n  symbol:   class DateFormat\n  location: class JodaTime21\n/home/azmain/snr_fixed/JodaTime21.java:12: error: cannot find symbol\n\t\tDateFormat formatter = new SimpleDateFormat(\"yyyy-MM-dd HH:mm:ss\");\n\t\t                           ^\n  symbol:   class SimpleDateFormat\n  location: class JodaTime21\n2 errors\n",
+    "return_code": 1
+}

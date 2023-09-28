@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/Android19.java",
+    "java_code": "package androidExamples;\n//ID = 738817\n\nimport android.content.Context;\nimport android.widget.GridView;\nimport android.view.ViewGroup;\nimport android.view.View;\nimport android.widget.ImageView;\n\npublic class Android19 {\n\tpublic View getView(int position, View convertView, ViewGroup parent) {\n\t\tImageView imageView;\n\t\tif (convertView == null) {\n\t\t\tContext mContext = null;\n\t\t\t// if it's not recycled, initialize some attributes\n\t\t\timageView = new ImageView(mContext);\n\t\t\timageView.setLayoutParams(new GridView.LayoutParams(85, 85));\n\t\t\timageView.setScaleType(ImageView.ScaleType.CENTER_CROP);\n\t\t\timageView.setPadding(8, 8, 8, 8);\n\t\t\t//does this need imageView.onKeyDown(keyCode, event)?\n\t\t} else {\n\t\t\timageView = (ImageView) convertView;\n\t\t}\n\n\t\tint[] mThumbIds = null;\n\t\timageView.setImageResource(mThumbIds[position]);\n\t\treturn imageView;\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

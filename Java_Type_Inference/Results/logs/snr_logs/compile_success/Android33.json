@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/Android33.java",
+    "java_code": "package androidExamples;\n//ID = 1048739\n\nimport android.content.Context;\nimport android.hardware.Camera;\nimport android.hardware.Camera.Parameters;\nimport java.io.IOException;\nimport android.view.SurfaceHolder;\nimport android.graphics.PixelFormat;\n\npublic class Android33 {\n\tprivate void init(Context context) {\n\t\tboolean mRecording = false;\n\n\t\tint frameCount = 0;\n\t\tCamera mCamera = null;\n\t\tif (mCamera == null) {\n\t\t\tmCamera = Camera.open();\n\t\t}\n\t\tParameters parameters = mCamera.getParameters();\n\t\tparameters.setPictureFormat(PixelFormat.JPEG);\n\t\tmCamera.setParameters(parameters);\n\t\ttry {\n\t\t\tSurfaceHolder surfaceHolder = null;\n\t\t\tmCamera.setPreviewDisplay(surfaceHolder);\n\t\t} catch (IOException e) {\n\t\t\t// TODO Auto-generated catch block\n\t\t\te.printStackTrace();\n\t\t}\n\t\tmCamera.startPreview();\n\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

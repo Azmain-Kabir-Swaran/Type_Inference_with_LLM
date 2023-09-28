@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/Android27.java",
+    "java_code": "package androidExamples;\n//ID = 982386\n\nimport android.content.Context;\nimport android.widget.GridView;\nimport android.view.ViewGroup;\nimport android.widget.TextView;\nimport android.widget.BaseAdapter;\nimport android.view.View;\n\npublic class Android27 extends BaseAdapter {\n\n\tprivate Context context;\n\tprivate String[] texts = { \"aaa\", \"bbb\", \"ccc\", \"ddd\", \"eee\", \"fff\", \"eee\", \"hhh\", \"iii\" };\n\n\tpublic Android27(Context context) {\n\t\tthis.context = context;\n\t}\n\n\tpublic int getCount() {\n\t\treturn 9;\n\t}\n\n\tpublic Object getItem(int position) {\n\t\treturn null;\n\t}\n\n\tpublic long getItemId(int position) {\n\t\treturn 0;\n\t}\n\n\tpublic View getView(int position, View convertView, ViewGroup parent) {\n\t\tTextView tv;\n\t\tif (convertView == null) {\n\t\t\ttv = new TextView(context);\n\t\t\ttv.setLayoutParams(new GridView.LayoutParams(85, 85));\n\t\t} else {\n\t\t\ttv = (TextView) convertView;\n\t\t}\n\n\t\ttv.setText(texts[position]);\n\t\treturn tv;\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/hibernate_class_34.java",
+    "java_code": "package hibernate;\n//ID = 3332212\n\nimport org.hibernate.Session;\nimport org.hibernate.Transaction;\n\npublic class hibernate_class_34 {\n\tpublic void testUserClassAndUsers() {\n\t\tSystem.out.println(\"Testing Users and UserClasses...\");\n\n\t\tSession newSession = null;\n\n\t\tSystem.out.println(\"1 - Creating UserClasses:\");\n\t\tTransaction t1 = newSession.beginTransaction();\n\n\t\tt1.commit();\n\n\t\tSystem.out.println(\"2 - Creating Users:\");\n\t\tTransaction t2 = newSession.beginTransaction();\n\n\t\tt2.commit();\n\n\t\tSystem.out.println(\"3 - Deleting UserClass (\\\"UserClass 1\\\"):\");\n\t\tTransaction t3 = newSession.beginTransaction();\n\t\tt3.commit();\n\n\t\tnewSession.close();\n\t}\n\n\tpublic static void main(String[] args) {\n\t\thibernate_class_34 instance = new hibernate_class_34();\n\n\t\tinstance.testUserClassAndUsers();\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

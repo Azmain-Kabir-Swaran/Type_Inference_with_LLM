@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/xstream_class_15.java",
+    "java_code": "package xstream;\n//ID=328832\n\nimport com.thoughtworks.xstream.XStream;\nimport com.thoughtworks.xstream.io.HierarchicalStreamWriter;\nimport com.thoughtworks.xstream.converters.MarshallingContext;\nimport com.google.gwt.dev.util.collect.HashSet;\nimport com.thoughtworks.xstream.converters.collections.CollectionConverter;\n\npublic class xstream_class_15 {\n\tpublic static void main(String arg[]) {\n\t\tXStream xs = new XStream();\n\t\txs.registerConverter(new CollectionConverter(xs.getMapper()) {\n\t\t\t@Override\n\t\t\tpublic void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {\n\t\t\t\torg.hibernate.collection.PersistentSet ps = null;\n\t\t\t\tsuper.marshal(new HashSet(ps), writer, context);\n\t\t\t}\n\n\t\t\t@Override\n\t\t\tpublic boolean canConvert(Class type) {\n\t\t\t\treturn type.isAssignableFrom(org.hibernate.collection.PersistentSet.class);\n\t\t\t}\n\t\t}, XStream.PRIORITY_VERY_HIGH);\n\t\tObject processInstance = null;\n\t\tString s = xs.toXML(processInstance);\n\t}\n}",
+    "stdout": "",
+    "stderr": "Note: /home/azmain/snr_fixed/xstream_class_15.java uses unchecked or unsafe operations.\nNote: Recompile with -Xlint:unchecked for details.\n",
+    "return_code": 0
+}

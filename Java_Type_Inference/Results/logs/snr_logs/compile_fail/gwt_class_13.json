@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/gwt_class_13.java",
+    "java_code": "package gwt;\n//ID = 1692017\n\nimport com.google.gwt.user.client.ui.Button;\nimport com.google.gwt.user.client.ui.ClickListener;\nimport com.google.gwt.user.client.ui.Widget;\nimport com.google.gwt.core.client.EntryPoint;\nimport com.google.gwt.user.client.ui.AbsolutePanel;\n\n@SuppressWarnings(\"deprecation\")\npublic class gwt_class_13 {\n\tpublic class ERD1 implements EntryPoint {\n\n\t\tpublic void onModuleLoad() {\n\n\t\t\tAbsolutePanel boundaryPanel = new AbsolutePanel();\n\t\t\tboundaryPanel.setPixelSize(1000, 1000);\n\n\t\t\t//\t\t    final Diagram d = new Diagram(boundaryPanel);\n\n\t\t\tButton b = new Button();\n\t\t\tb.addClickListener(new ClickListener() {\n\n\t\t\t\tpublic void onClick1(Widget sender) {\n\t\t\t\t}\n\n\t\t\t\t@Override\n\t\t\t\tpublic void onClick(Widget sender) {\n\t\t\t\t\t// TODO Auto-generated method stub\n\n\t\t\t\t}\n\n\t\t\t});\n\n\t\t\tboundaryPanel.add(b, 10, 40);\n\n\t\t\tRootPanel.get().add(boundaryPanel);\n\t\t}\n\t}\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/snr_fixed/gwt_class_13.java:37: error: cannot find symbol\n\t\t\tRootPanel.get().add(boundaryPanel);\n\t\t\t^\n  symbol:   variable RootPanel\n  location: class gwt_class_13.ERD1\nNote: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n1 error\n",
+    "return_code": 1
+}

@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/Android36.java",
+    "java_code": "package androidExamples;\n//ID = 1105141\n\nimport android.database.sqlite.SQLiteDatabase;\nimport android.content.ContentValues;\n\npublic class Android36 {\n\tprivate static final String KEY_NAME = \"My Key\";\n\tprivate static final String VALUE = \"My Value\";\n\tprivate static final String DATABASE_TABLE = \"DB\";\n\n\tprivate long insertRow(int rowParameter, String rowValue, SQLiteDatabase db) {\n\t\tlong res = -1;\n\t\tContentValues settingsParameterValues = new ContentValues();\n\t\tsettingsParameterValues.put(KEY_NAME, rowParameter);\n\t\tsettingsParameterValues.put(VALUE, rowValue);\n\t\tif (db != null) {\n\t\t\tres = db.insert(DATABASE_TABLE, null, settingsParameterValues);\n\t\t}\n\t\treturn res;\n\t}\n\n\tpublic static void main(String[] args) {\n\t\t// TODO Auto-generated method stub\n\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

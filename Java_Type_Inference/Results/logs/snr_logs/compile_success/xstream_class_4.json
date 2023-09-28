@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/xstream_class_4.java",
+    "java_code": "package xstream;\n//ID = 2195369\n\nimport com.thoughtworks.xstream.XStream;\nimport java.util.ArrayList;\n\npublic class xstream_class_4 {\n\n\tpublic static void main(String[] args) {\n\t\tArrayList<Class<?>> classes = new ArrayList<Class<?>>();\n\t\tclasses.add(Integer.class);\n\t\tclasses.add(Long.class);\n\t\tclasses.add(Double.class);\n\t\tclasses.add(Float.class);\n\n\t\tArrayList<Number> numbers = new ArrayList<Number>();\n\t\tnumbers.add(new Integer(3));\n\t\tnumbers.add(new Long(3));\n\t\tnumbers.add(new Double(3));\n\t\tnumbers.add(new Float(3));\n\n\t\tXStream xml = new XStream();\n\t\txml.alias(\"inty\", Integer.class);\n\t\txml.aliasType(\"inty\", Integer.class);\n\t\txml.aliasPackage(\"jl\", \"java.lang\");\n\n\t\tSystem.out.println(xml.toXML(classes));\n\t\tSystem.out.println(xml.toXML(numbers));\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

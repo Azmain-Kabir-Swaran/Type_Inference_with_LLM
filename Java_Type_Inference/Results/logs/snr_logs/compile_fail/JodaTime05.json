@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/JodaTime05.java",
+    "java_code": "package jodatime;\n\nimport org.joda.time.chrono.GJChronology;\nimport org.joda.time.Chronology;\nimport org.joda.time.DateTime;\n\n//ID = 2182921\npublic class JodaTime05 {\n\n\tpublic static void main(String[] args) {\n\n\t\tDateTimeZone zone = DateTimeZone.forID(\"Europe/London\");\n\t\tChronology coptic = GJChronology.getInstance(zone);\n\n\t\tDateTime dt = new DateTime(coptic);\n\t\tDateTime minusOneDay = dt.minusDays(1);\n\n\t\tSystem.out.println(minusOneDay);\n\n\t}\n\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/snr_fixed/JodaTime05.java:12: error: cannot find symbol\n\t\tDateTimeZone zone = DateTimeZone.forID(\"Europe/London\");\n\t\t^\n  symbol:   class DateTimeZone\n  location: class JodaTime05\n/home/azmain/snr_fixed/JodaTime05.java:12: error: cannot find symbol\n\t\tDateTimeZone zone = DateTimeZone.forID(\"Europe/London\");\n\t\t                    ^\n  symbol:   variable DateTimeZone\n  location: class JodaTime05\n2 errors\n",
+    "return_code": 1
+}

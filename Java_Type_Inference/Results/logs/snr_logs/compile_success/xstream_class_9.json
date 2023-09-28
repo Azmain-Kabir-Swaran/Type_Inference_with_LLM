@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/xstream_class_9.java",
+    "java_code": "package xstream;\n//ID = 10740221\n\nimport java.io.FileNotFoundException;\nimport com.thoughtworks.xstream.XStream;\nimport java.io.FileInputStream;\nimport com.thoughtworks.xstream.io.xml.DomDriver;\n\npublic class xstream_class_9 {\n\tpublic class ServerIP {\n\t\tprivate String ip;\n\n\t\tpublic String getIp() {\n\t\t\treturn ip;\n\t\t}\n\n\t\tpublic void setIp(String ip) {\n\t\t\tthis.ip = ip;\n\t\t}\n\t}\n\n\tpublic class ServerHandler {\n\n\t\tprivate String fileName = \"servers.xml\";\n\t\tprivate String path = \"J:\\\\workspace\\\\LOG730\\\\src\\\\Q3\\\\\";\n\t\tprivate XStream xstream = new XStream(new DomDriver());\n\n\t\tpublic void readFromXML() {\n\t\t\ttry {\n\t\t\t\tFileInputStream fis = new FileInputStream(path + fileName);\n\t\t\t\tServerIP server = (ServerIP) xstream.fromXML(fis, new ServerIP());\n\t\t\t\tSystem.out.println(\"Host: \" + server.getIp());\n\t\t\t} catch (FileNotFoundException e) {\n\t\t\t\te.printStackTrace();\n\t\t\t}\n\t\t}\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

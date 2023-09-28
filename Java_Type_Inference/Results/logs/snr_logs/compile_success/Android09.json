@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/Android09.java",
+    "java_code": "package androidExamples;\n//ID = 522800\n\nimport android.widget.TextView;\nimport android.os.Bundle;\nimport java.util.Timer;\nimport java.util.TimerTask;\n\npublic class Android09 {\n\tfloat seconds;\n\tpublic Timer gametimer;\n\n\tvoid updatecount() {\n\t\tTextView t = (TextView) findViewById(R.id.topscore);\n\t\tt.setText(\"Score: 10 - Time: \" + seconds + \" seconds\");\n\t\tt.postInvalidate();\n\t}\n\n\tprivate TextView findViewById(int topscore) {\n\t\t// TODO Auto-generated method stub\n\t\treturn null;\n\t}\n\n\tpublic void onCreate(Bundle sis) {\n\n\t\tgametimer.schedule(new TimerTask() {\n\t\t\tpublic void run() {\n\t\t\t\tseconds += 0.1;\n\t\t\t\tupdatecount();\n\t\t\t}\n\t\t}, 100, 100);\n\t}\n}",
+    "stdout": "",
+    "stderr": "No error (Ignored 'package R does not exist' errors)",
+    "return_code": 1
+}

@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/JodaTime48.java",
+    "java_code": "package jodatime;\n//id = 5622194\n\nimport org.joda.time.DateTimeUtils.MillisProvider;\nimport org.joda.time.DateTime;\n\npublic class JodaTime48 {\n\n\tpublic static void main(String[] args) {\n\t\t// TODO Auto-generated method stub\n\n\t}\n\n\tprivate final MillisProvider millisProvider;\n\tprivate final DateTime someDate;\n\n\tpublic JodaTime48(MillisProvider millisProvider, DateTime someDate) {\n\t\tthis.millisProvider = millisProvider;\n\t\tthis.someDate = someDate;\n\t}\n\n\tpublic boolean isAvailable() {\n\t\tlong now = millisProvider.getMillis();\n\t\treturn (someDate.isBefore(now));\n\t}\n}",
+    "stdout": "",
+    "stderr": "",
+    "return_code": 0
+}

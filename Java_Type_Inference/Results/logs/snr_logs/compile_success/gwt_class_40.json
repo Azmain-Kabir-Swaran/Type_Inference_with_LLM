@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/gwt_class_40.java",
+    "java_code": "package gwt;\n//ID = 2868845\n\nimport com.extjs.gxt.ui.client.widget.HorizontalPanel;\nimport com.extjs.gxt.ui.client.widget.LayoutContainer;\nimport com.extjs.gxt.ui.client.widget.Label;\n\npublic class gwt_class_40 {\n\tprivate HorizontalPanel getSomeGWT() {\n\t\tHorizontalPanel pointsLogoPanel = new HorizontalPanel();\n\t\tfor (int i = 0; i < 350; i++) {\n\t\t\tHorizontalPanel innerContainer = new HorizontalPanel();\n\t\t\tinnerContainer.add(new Label(\"some GWT text\"));\n\t\t\tpointsLogoPanel.add(innerContainer);\n\t\t}\n\t\treturn pointsLogoPanel;\n\t}\n\n\tprivate LayoutContainer getSomeGXT() {\n\t\tLayoutContainer pointsLogoPanel = new LayoutContainer();\n\t\tpointsLogoPanel.setLayoutOnChange(true);\n\t\tfor (int i = 0; i < 350; i++) {\n\t\t\tLayoutContainer innerContainer = new LayoutContainer();\n\t\t\tpointsLogoPanel.add(innerContainer);\n\t\t}\n\t\treturn pointsLogoPanel;\n\t}\n}",
+    "stdout": "",
+    "stderr": "Note: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n",
+    "return_code": 0
+}

@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/JodaTime01.java",
+    "java_code": "package jodatime;\n//ID = 1714300\n\nimport org.joda.time.format.ISODateTimeFormat;\nimport org.joda.time.DateTimeZone;\nimport org.joda.time.format.DateTimeFormatter;\nimport org.joda.time.DateTime;\n\npublic class JodaTime01 {\n\n\tpublic static void main(String[] args) {\n\t\tDateTimeFormatter timeParser = ISODateTimeFormat.timeParser();\n\t\tTimeZone timeZone = TimeZone.getDefault();\n\t\tSystem.out.println(timeZone.getID()); // \"Europe/London\"\n\t\tSystem.out.println(timeZone.getDisplayName()); // \"Greenwich Mean Time\"\n\n\t\tDateTimeZone defaultTimeZone = DateTimeZone.getDefault();\n\t\tSystem.out.println(defaultTimeZone.getID()); //\"Europe/London\"\n\t\tSystem.out.println(defaultTimeZone.getName(0L)); //\"British Summer Time\"\n\n\t\tDateTime currentTime = new DateTime();\n\t\tDateTimeZone currentZone = currentTime.getZone();\n\t\tSystem.out.println(currentZone.getID()); //\"Europe/London\"\n\t\tSystem.out.println(currentZone.getName(0L)); //\"British Summer Time\"            \n\t}\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/snr_fixed/JodaTime01.java:13: error: cannot find symbol\n\t\tTimeZone timeZone = TimeZone.getDefault();\n\t\t^\n  symbol:   class TimeZone\n  location: class JodaTime01\n/home/azmain/snr_fixed/JodaTime01.java:13: error: cannot find symbol\n\t\tTimeZone timeZone = TimeZone.getDefault();\n\t\t                    ^\n  symbol:   variable TimeZone\n  location: class JodaTime01\n2 errors\n",
+    "return_code": 1
+}

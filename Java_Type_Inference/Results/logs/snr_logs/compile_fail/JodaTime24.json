@@ -1,0 +1,7 @@
+{
+    "file": "/home/azmain/snr_fixed/JodaTime24.java",
+    "java_code": "package jodatime;\n//ID = 8525863\n\nimport org.joda.time.DateTime;\nimport org.joda.time.Period;\n\npublic class JodaTime24 {\n\n\tpublic static String getFormattedDateDifference(DateTime startDate, DateTime endDate) {\n\t\tPeriod p = new Period(startDate, endDate, PeriodType.standard().withSecondsRemoved().withMillisRemoved());\n\t\treturn PeriodFormat.getDefault().print(p);\n\t}\n}",
+    "stdout": "",
+    "stderr": "/home/azmain/snr_fixed/JodaTime24.java:10: error: cannot find symbol\n\t\tPeriod p = new Period(startDate, endDate, PeriodType.standard().withSecondsRemoved().withMillisRemoved());\n\t\t                                          ^\n  symbol:   variable PeriodType\n  location: class JodaTime24\n/home/azmain/snr_fixed/JodaTime24.java:11: error: cannot find symbol\n\t\treturn PeriodFormat.getDefault().print(p);\n\t\t       ^\n  symbol:   variable PeriodFormat\n  location: class JodaTime24\n2 errors\n",
+    "return_code": 1
+}
