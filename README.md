@@ -101,7 +101,7 @@ ChatGPT's GPT 3.5 Turbo model was used to do the experiment. Here is a step-by-s
 
 **Step 8**: Finally, we calculated the benchmarks for [***ZS4C***](Synthesis_of_Compilable_Code/Codes/Zero-shot_ZS4C_and_Parameters_Impact_Benchmark.ipynb) and also got the result for analyzing the impact of parameter for K samples.
 
-A list wise [Matching Degree Calculation](Synthesis_of_Compilable_Code/Codes/Matching_Degree_Calculation.ipynb) for *SnR*, *BasePrompt*, *ZS4C*, *ImportStInfer*, *ImportStInfer<sub>noSC</sub>*, and *ConversationFixing* is also generated for a better comparison.
+A list wise [Matching Degree Calculation](Synthesis_of_Compilable_Code/Codes/Matching_Degree_Calculation.ipynb) is performed for *SnR*, *BasePrompt*, *ZS4C*, *ImportStInfer*, *ImportStInfer<sub>noSC</sub>*, and *ConversationFixing* for a better comparison.
 
 All the benchmarks, logs, and notebook with results can be found in [Results](Synthesis_of_Compilable_Code/Results) folder. [Average Library Length](average_library_length.sh), [Average LOC](average_loc.sh), and [Unique Library Count](unique_library_count.sh) for Stack Overflow dataset can be printed using bash command.
 
