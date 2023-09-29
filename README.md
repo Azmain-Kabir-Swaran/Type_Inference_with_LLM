@@ -103,6 +103,8 @@ ChatGPT's GPT 3.5 Turbo model was used to do the experiment. Here is a step-by-s
 
 A list wise [Matching Degree Calculation](Synthesis_of_Compilable_Code/Codes/Matching_Degree_Calculation.ipynb) for <span style="color:green">*SnR*</span>, <span style="color:green">*BasePrompt*</span>, <span style="color:green">*Z4C*</span>, <span style="color:green">*ImportStInfer*</span>, <span style="color:green">*ImportStInfer<sub>noSC</sub>*</span>, and <span style="color:green">*ConversationFixing*</span> is also generated for a better comparison.
 
+All the benchmarks, logs, and notebook with results can be found in [Results](Synthesis_of_Compilable_Code/Results) folder. [Average Library Length](average_library_length.sh), [Average LOC](average_loc.sh), and [Unique Library Count](unique_library_count.sh) for Stack Overflow dataset can be printed using bash command.
+
 ### References
 
 <a name="ref1"></a>
