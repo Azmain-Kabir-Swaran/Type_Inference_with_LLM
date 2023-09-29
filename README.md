@@ -85,6 +85,7 @@ jupyter notebook
 
 ChatGPT's GPT 3.5 Turbo model was used to do the experiment. Here is a step-by-step guideline to execute our codes.
 
+<pre>
 **Step 1**: We initially started with a [***BasePrompt***](Synthesis_of_Compilable_Code/Codes/Base_Prompt.ipynb). This file includes the benchmarks (Accuracy, F1, Recall, and Precision) and compilation rate for all 6 types of Java projects (Android, JDK, Hibernate, JodaTime, GWT, and XStream).
    
 **Step 2**: We introduced a detailed prompt with more context and counted the benchmark for [***ImportStInfer<sub>noSC</sub>***](Synthesis_of_Compilable_Code/Codes/Zero-shot_Import_Statement_Inference_with_and_without_SC.ipynb) (Import Statement Inference without Zero-shot Self-Consistency) and with Self-Consistency [***ImportStInfer***](Synthesis_of_Compilable_Code/Codes/Zero-shot_Import_Statement_Inference_with_and_without_SC.ipynb) (with Zero-shot Self-Consistency) in the same file and appended the predicted import statements to the code body. This file is using a updated prompt with more context.
@@ -100,6 +101,8 @@ ChatGPT's GPT 3.5 Turbo model was used to do the experiment. Here is a step-by-s
 **Step 7**: From the compilation fixing we received the fixed code and from there we got the fix for Stack Overflow dataset (without import statements) too. Using that we got the benchmarks for [***ConversationFixing***](Synthesis_of_Compilable_Code/Codes/Conversation_Fixing_Benchmark.ipynb).
 
 **Step 8**: Finally, we calculated the benchmarks for [***ZS4C***](Synthesis_of_Compilable_Code/Codes/Zero-shot_ZS4C_and_Parameters_Impact_Benchmark.ipynb) and also got the result for analyzing the impact of parameter for K samples.
+
+</pre>
 
 A list wise [Matching Degree Calculation](Synthesis_of_Compilable_Code/Codes/Matching_Degree_Calculation.ipynb) is performed for *SnR*, *BasePrompt*, *ZS4C*, *ImportStInfer*, *ImportStInfer<sub>noSC</sub>*, and *ConversationFixing* for a better comparison.
 
