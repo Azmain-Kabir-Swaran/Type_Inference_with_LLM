@@ -48,7 +48,7 @@
 
 ### Introduction
 
-Detailed introduction about the project/notebook. What problem does it solve? Who is it for? Any other relevant context.
+We propose a lightweight tool named ZS4C for performing Zero-shot synthesis using ChatGPT (GPT-3.5 Turbo). This tool can be highly beneficial for solving incomplete code snippet and making it compilable. We used dataset from Q&A website (e.g., Stack Overflow) and compare our result with the SOTA approach SnR to ensure it's performance.
 
 ### Requirements
 
